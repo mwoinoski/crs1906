@@ -1,0 +1,4 @@
+If you want to configure PyLint with a file, do either of the following:
+1. Have pylint generate a template config file:
+	pylint --generate-rcfile > pylintrc
+2. Rename pylintrc.demo to pylintrc
