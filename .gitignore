@@ -46,16 +46,8 @@ cover/
 nosetests.xml
 coverage.xml
 
-# Unit test temporary database files
-*.sqlite
-
 # Translations
 *.mo
-
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
 
 # Rope
 .ropeproject
