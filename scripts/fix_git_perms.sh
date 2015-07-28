@@ -1,3 +1,4 @@
+#! /usr/bin/bash
 cd /cygdrive/c/crs1906
 chown -R user:Users .git
 find .git -type d -exec chmod 755 {} ";"
