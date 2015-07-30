@@ -1,0 +1,3 @@
+Clone ticketmanor_webapp as solution
+Copy BaseDao methods to PersonDao, ActDao, and VenueDao
+Remove BaseDao
