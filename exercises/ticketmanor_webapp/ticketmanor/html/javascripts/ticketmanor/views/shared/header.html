@@ -1,0 +1,51 @@
+<nav class="nav navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ui-sref="root.home">
+        <span class="logo">TICKET MANOR</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav" ng-show="current_module">
+      <li class="dropdown"  style="margin-top: 15px;">
+        <span class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{current_module}} <span class="fa fa-chevron-down"></span></span>
+        <ul class="dropdown-menu">
+          <li ng-hide="concerts"><a ui-sref="events.show.concerts">Concerts</a></li>
+          <li ng-hide="sports"><a ui-sref="events.show.sports">Sports</a></li>
+          <li ng-hide="movies"><a ui-sref="events.show.movies">Movies</a></li>
+        </ul>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-class="{nav_margin: home_nav_margin}">
+        <li class="links fx-zoom-down fx-easing-cubic fx-speed-600" ng-show="view_cart">
+          <div class="cart-btn" ui-sref="events.show.cart">
+            <i class="fa fa-shopping-cart"></i>
+            Cart
+            <span class="cart-badge">{{cart_count}}</span>
+          </div>
+        </li>
+          <li><a ng-hide="current_user" class="links" ui-sref="events.show.login">Login</a></li>
+          <li>
+            <a ui-sref="events.show.signup" class="links" ng-hide="current_user">Sign up</a>
+          </li>
+          <li class="dropdown" ng-show="current_user">
+            <a class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{current_user.first_name}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a ui-sref="fork-us"><i class="fa fa-tachometer"></i> Account</a></li>
+              <li><a ui-sref="fork-us"><i class="fa fa-cogs"></i> Settings</a></li>           
+              <li role="separator" class="divider"></li>
+              <li><a ng-click="logout()"><i class="fa fa-sign-out"></i> Log out</a></li>
+            </ul>
+          </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
