@@ -24,6 +24,7 @@ bin/
 build/
 develop-eggs/
 dist/
+!*/bower_components/bootstrap/dist
 eggs/
 lib/
 lib64/
