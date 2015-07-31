@@ -41,7 +41,7 @@ class EventServiceRest:
     # http://docs.pylonsproject.org/projects/colander/en/latest/
 
     # Pyramid calls this method for a request like this:
-    # GET http://localhost:6543/rest/events/music/London+Symphony
+    # GET http://localhost:6543/rest/events/music.json?title=London+Symphony
     @view_config(request_method='GET',
                  route_name='rest_events')
     def get_acts(self):
@@ -54,7 +54,6 @@ class EventServiceRest:
 
         # get type from URL path: music, sports, or movies
         act_type = self._request.matchdict['type']
-        query_params['act_type'] = Act.ACT_TYPE_INV[act_type]
 
         search_type = self._request.params['event_type']
         # search_type for music/concerts is Artist, Venue, Date, or City
@@ -65,14 +64,17 @@ class EventServiceRest:
             query_params['title'] = search_terms
 
         act = self._dao.query_for_act(
-            self._request.db_session, search_type, **query_params)
+            self._request.db_session,
+            act_type=act_type,
+            search_type=search_type,
+            **query_params)
 
-        # To implement page, we can't splice acts.events directly,
+        # To implement paging, we can't splice acts.events directly
         # because SQLAlchemy is still managing the Act and will delete rows
         # from the EVENT table if we remove the associated Events from the
         # Act's events list. So we'll get the Act's data as a dictionary
         # and manipulate that instead. Pyramid can serialize either the Act
-        # or a dictionary.
+        # or a dictionary that contains the Act's data attributes.
         if act:
             act = act.__json__()
         if act and 'page' in self._request.params \
@@ -82,8 +84,12 @@ class EventServiceRest:
             act['page_size'] = int(self._request.params['page_size'])
             start = act['page'] * act['page_size']
             act['events'] = act['events'][start:start + act['page_size']]
+
         logger.debug("%s: found %d events for %s", func_name(self),
-             len(act['events']) if 'events' in act else 0, search_terms)
+            len(act['events'])
+            if act and 'events' in act and act['events'] else 0,
+            search_terms)
+
         return act
 
     # TODO: add get_event(self, event_id)

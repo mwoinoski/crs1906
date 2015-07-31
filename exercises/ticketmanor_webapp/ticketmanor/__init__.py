@@ -104,9 +104,10 @@ def add_routes(config, prefix):
     # config.add_view(UserServiceRest, attr='update_user', request_method='PUT')
     # config.add_view(UserServiceRest, attr='delete_user', request_method='DELETE')
 
-    # /rest/events/music?title=London+Symphony
+    # /rest/events/music.json?event_type=Artist&words=London+Symphony&page=1&page_size=6
     # type: music, sports, movies
-    # params: title, venue, date, city
+    # event_type for music: Artist, Venue, Date, City
+    # words: search terms
     config.add_route('rest_events', '/rest/events/{type}.json')
     config.add_route('rest_event', '/rest/events/{type}/{event_id}.json')
 

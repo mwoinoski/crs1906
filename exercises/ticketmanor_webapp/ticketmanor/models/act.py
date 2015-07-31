@@ -16,11 +16,13 @@ from sqlalchemy import (
 from sqlalchemy.orm import relationship, backref
 
 from . import Base
+from .event import Event
 
 acts_events_join_table = Table('acts_events', Base.metadata,
     Column('acts_id', Integer, ForeignKey('acts.id')),
     Column('events_id', Integer, ForeignKey('events.id'))
 )
+
 
 class Act(Base):
     """
@@ -33,33 +35,43 @@ class Act(Base):
     year = Column('year', Integer)
     notes = Column('notes', String)
     events = relationship('Event',
+                          order_by=Event.date_time,
                           secondary=acts_events_join_table,
                           backref=backref('acts', order_by='Act.id'))
 
     # Constants for Act type
+    # BONUS TODO: Python 3.4 supports enums. Replace the following class
+    # attributes with an enum named ActType.
     MOVIE = 0
     MUSIC = 1
     THEATER = 2
     SPORTS = 3
-    # TODO: In Python 3.4:
     # from enum import Enum
-    # define class ActType(Enum):
+    # class ActType(Enum):
     #     movie = 0
     #     music = 1
     #     theater = 2
     #     sports = 3
-    # act_type = ActType.music.value
+    # act_type = ActType.music.value  # get int value of enum: 1
     # int_value = 1
-    # act_enum = ActType(int_value) # ActType.music
+    # act_enum = ActType(int_value)   # get enum from int: ActType.music
 
-    ACT_TYPES = {
+    # Dictionary to map act type int values to strings
+    ACT_TYPE = {
         MOVIE: 'movie',
         MUSIC: 'music',
         THEATER: 'theater',
         SPORTS: 'sports',
     }
 
-    ACT_TYPE_INV = {v: k for k, v in ACT_TYPES.items()}
+    # Dictionary for reverse lookups of act types (strings to ints)
+    # BONUS TODO: replace the following loop with a dictionary comprehension
+    # HINT: first, modify the for loop to use the dict items() method
+    ACT_TYPE_INV = {v: k for k, v in ACT_TYPE.items()}
+    # ACT_TYPE_INV = {}
+    # for k in ACT_TYPE:
+    #     v = ACT_TYPE[k]
+    #     ACT_TYPE_INV[v] = k
 
     def __eq__(self, other):
         """Compare Act instances."""
@@ -76,7 +88,7 @@ class Act(Base):
     def __str__(self):
         """Return a human-readable representation of a Venue"""
         return "{self.id} {self.title} {act_type} {self.year} {self.notes}"\
-            .format(act_type=Act.ACT_TYPES[self.act_type], self=self)
+            .format(act_type=Act.ACT_TYPE[self.act_type], self=self)
 
     def __repr__(self):
         """Return an unambiguous String representation of a Act"""
@@ -94,7 +106,7 @@ class Act(Base):
             "id": self.id,
             "title": self.title,
             "notes": self.notes,
-            "act_type": self.ACT_TYPES[self.act_type],
+            "act_type": self.ACT_TYPE[self.act_type],
             "year": self.year,
             "events": [] if not hasattr(self, 'events')
                       else [event.__json__() for event in self.events],

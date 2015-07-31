@@ -44,77 +44,102 @@ class EventServiceRestIntegrationTest(TestCase):
         drop_db_tables(db_filename)
 
     def test_get_events_for_act_found(self):
-        url = 'http://localhost:6543/rest/events/music?title=London+Symphony&page=1&page_size=6'
+        url = 'http://localhost:6543/rest/events/music.json?' \
+              'event_type=Artist&words=Berlin+Philharmonic&page=0&page_size=6'
         headers = {'Accept': 'application/json; charset=utf8'}
-        expected_res = [
-            {'act_id': 301,
-             'act_title': 'Berlin Philharmonic',
-             'act_type': 'music',
-             'title': 'Beethoven and Brahms',
-             'image_thumbnail': '/static/images/concerts-1.png',
-             'image_banner': '/static/images/Lorem-ipsum-portland-marketing.jpg',
-             'date_time': '2015-12-25 10:00:00',
-             'venue_country': 'USA',
-             'venue_name': 'Carnegie Hall',
-             'event_id': 204,
-             'venue_city': 'New York',
-             'venue_prov_st': 'NY',
-             # 'price': '$180'  # TODO: replace when database is fixed
-             },
-            {'act_id': 301,
-             'act_title': 'Berlin Philharmonic',
-             'act_type': 'music',
-             'title': 'Beethoven and Brahms',
-             'image_thumbnail': '/static/images/concerts-1.png',
-             'image_banner': '/static/images/Lorem-ipsum-portland-marketing.jpg',
-             'date_time': '2015-12-31 20:00:00',
-             'venue_country': 'USA',
-             'venue_name': 'Auditorium Theatre',
-             'event_id': 201,
-             'venue_city': 'Chicago',
-             'venue_prov_st': 'IL',
-             # 'price': '$160'
-             },
-            {'act_id': 301,
-             'act_title': 'Berlin Philharmonic',
-             'act_type': 'music',
-             'title': 'Beethoven and Brahms',
-             'image_thumbnail': '/static/images/concerts-1.png',
-             'image_banner': '/static/images/Lorem-ipsum-portland-marketing.jpg',
-             'date_time': '2015-12-31 21:00:00',
-             'venue_country': 'USA',
-             'venue_name': 'Carnegie Hall',
-             'event_id': 203,
-             'venue_city': 'New York',
-             'venue_prov_st': 'NY',
-             # 'price': '$225'
-             },
-            {'act_id': 301,
-             'act_title': 'Berlin Philharmonic',
-             'act_type': 'music',
-             'title': 'Beethoven and Brahms',
-             'image_thumbnail': '/static/images/concerts-1.png',
-             'image_banner': '/static/images/Lorem-ipsum-portland-marketing.jpg',
-             'date_time': '2016-01-01 20:00:00',
-             'venue_country': 'USA',
-             'venue_name': 'Auditorium Theatre',
-             'event_id': 202,
-             'venue_city': 'Chicago',
-             'venue_prov_st': 'IL',
-             # 'price': '$175'
-             },
-        ]
+        expected_res = {
+            'id': 301,
+            'act_type': 'music',
+            'title': 'Berlin Philharmonic',
+            'notes': 'Beethoven and Brahms',
+            'page': 0,
+            'page_size': 6,
+            'year': 0,
+            'events': [
+                {
+                    'id': 204,
+                    'date_time': 1451055600.0,
+                    'venue': {
+                        'latitude': 40.7127,
+                        'prov_state': 'NY',
+                        'longitude': -74.0059,
+                        'name': 'Carnegie Hall',
+                        'country': 'USA',
+                        'id': 102,
+                        'street_address': '881 7th Ave, New York, NY 10019',
+                        'city': 'New York'
+                    },
+                    # 'price': '$180'  # TODO: uncomment when database schema is complete
+                    # 'image_thumbnail': '/static/images/concerts-1.png',
+                    # 'image_banner': '/static/images/concerts.jpg',
+                },
+                {
+                    'id': 201,
+                    'date_time': 1451610000.0,
+                    'venue': {
+                        'latitude': 41.8369,
+                        'prov_state': 'IL',
+                        'longitude': -87.6847,
+                        'name': 'Auditorium Theatre',
+                        'country': 'USA',
+                        'id': 101,
+                        'street_address': 'E Congress Pkwy, Chicago, IL 60605',
+                        'city': 'Chicago'
+                    },
+                    # 'price': '$160'
+                    # 'image_thumbnail': '/static/images/concerts-2.png',
+                    # 'image_banner': '/static/images/concerts.jpg',
+                },
+                {
+                    'id': 203,
+                    'date_time': 1451613600.0,
+                    'venue': {
+                        'latitude': 40.7127,
+                        'prov_state': 'NY',
+                        'longitude': -74.0059,
+                        'name': 'Carnegie Hall',
+                        'country': 'USA',
+                        'id': 102,
+                        'street_address': '881 7th Ave, New York, NY 10019',
+                        'city': 'New York'
+                    },
+                    # 'price': '$225'
+                    # 'image_thumbnail': '/static/images/concerts-3.png',
+                    # 'image_banner': '/static/images/concerts.jpg',
+                },
+                {
+                    'id': 202,
+                    'date_time': 1451696400.0,
+                    'venue': {
+                        'latitude': 41.8369,
+                        'prov_state': 'IL',
+                        'longitude': -87.6847,
+                        'name': 'Auditorium Theatre',
+                        'country': 'USA',
+                        'id': 101,
+                        'street_address': 'E Congress Pkwy, Chicago, IL 60605',
+                        'city': 'Chicago'
+                    },
+                    # 'price': '$175'
+                    # 'image_thumbnail': '/static/images/concerts-4.png',
+                    # 'image_banner': '/static/images/concerts.jpg',
+                },
+            ]
+        }
 
         res = self.testapp.get(url, headers=headers, status=200)
 
         res_list = json.loads(str(res.body, 'utf-8'))
-        for e in res_list:  # TODO: delete when database is fixed
+        for e in res_list['events']:  # TODO: delete when database schema is complete
             del e['price']
+            del e['image_thumbnail']
+            del e['image_banner']
         self.maxDiff = None
         self.assertEqual(expected_res, res_list)
 
     def test_get_events_for_act_not_found(self):
-        url = 'http://localhost:6543/rest/events/music?title=Never+Heard+Of+Them'
+        url = 'http://localhost:6543/rest/events/music.json?' \
+              'event_type=Artist&words=Never+Heard+Of+Them&page=0&page_size=6'
         headers = {'Accept': 'application/json; charset=utf8'}
 
         res = self.testapp.get(url, headers=headers, status=200)

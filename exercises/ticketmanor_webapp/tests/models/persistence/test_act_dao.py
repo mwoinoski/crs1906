@@ -58,88 +58,87 @@ class ActDaoTest(TestCase):
         act = self.act_dao.get(301, self.session)
 
         self.assertEqual(301, act.id)
-        self.assertEquals('London Symphony', act.title)
+        self.assertEquals('Berlin Philharmonic', act.title)
         self.assertEquals('Beethoven and Brahms', act.notes)
-        self.assertEquals(1, act.type)
+        self.assertEquals(1, act.act_type)
         self.assertEqual(4, len(act.events))
-        venues = sorted([ev.venue for ev in act.events],
-                        key=lambda v: v.id)
-        self.assertEqual(201, act.events[0].id)
-        self.assertEqual(101, venues[0].id)
-        self.assertEqual(202, act.events[1].id)
-        self.assertEqual(101, venues[1].id)
+        # An Act's Events are sorted by their date_time
+        self.assertEqual(204, act.events[0].id)
+        self.assertEqual(102, act.events[0].venue.id)
+        self.assertEqual(201, act.events[1].id)
+        self.assertEqual(101, act.events[1].venue.id)
         self.assertEqual(203, act.events[2].id)
-        self.assertEqual(102, venues[2].id)
-        self.assertEqual(204, act.events[3].id)
-        self.assertEqual(102, venues[3].id)
+        self.assertEqual(102, act.events[2].venue.id)
+        self.assertEqual(202, act.events[3].id)
+        self.assertEqual(101, act.events[3].venue.id)
 
     def test_get_act_by_type_and_title_music_found(self):
-        act = self.act_dao.query_for_act(Act.MUSIC, 'Wynton Marsalis', self.session)
+        act = self.act_dao.query_for_act(self.session, act_type='music',
+             search_type='Artist', title='Wynton Marsalis')
 
         self.assertEqual(304, act.id)
         self.assertEquals('Wynton Marsalis', act.title)
         self.assertEquals('Sketches of Spain', act.notes)
-        self.assertEquals(Act.MUSIC, act.type)
+        self.assertEquals(Act.MUSIC, act.act_type)
         self.assertEqual(1, len(act.events))
         self.assertEqual(201, act.events[0].id)
         self.assertEqual(101, act.events[0].venue.id)
 
     def test_get_act_by_type_and_title_movie_found(self):
-        act = self.act_dao.query_for_act(Act.MOVIE, 'Wynton Marsalis', self.session)
+        act = self.act_dao.query_for_act(self.session, act_type='movie',
+             search_type='Title', title='Wynton Marsalis')
 
         self.assertEqual(305, act.id)
         self.assertEquals('Wynton Marsalis', act.title)
         self.assertEquals('The History of Jazz', act.notes)
-        self.assertEquals(Act.MOVIE, act.type)
+        self.assertEquals(Act.MOVIE, act.act_type)
         self.assertEqual(1, len(act.events))
         self.assertEqual(205, act.events[0].id)
         self.assertEqual(103, act.events[0].venue.id)
 
     def test_get_act_by_type_and_title_music_multiple_events(self):
-        act = self.act_dao.query_for_act(
-            Act.MUSIC, 'London Symphony', self.session)
+        act = self.act_dao.query_for_act(self.session, act_type='music',
+            search_type='Artist', title='Berlin Philharmonic')
 
         self.assertEqual(301, act.id)
-        self.assertEquals('London Symphony', act.title)
+        self.assertEquals('Berlin Philharmonic', act.title)
         self.assertEquals('Beethoven and Brahms', act.notes)
-        self.assertEquals(1, act.type)
+        self.assertEquals(1, act.act_type)
         self.assertEqual(4, len(act.events))
-        venues = sorted([ev.venue for ev in act.events],
-                        key=lambda v: v.id)
-        self.assertEqual(201, act.events[0].id)
-        self.assertEqual(101, venues[0].id)
-        self.assertEqual(202, act.events[1].id)
-        self.assertEqual(101, venues[1].id)
+        # events are sorted by their date_time
+        self.assertEqual(204, act.events[0].id)
+        self.assertEqual(102, act.events[0].venue.id)
+        self.assertEqual(201, act.events[1].id)
+        self.assertEqual(101, act.events[1].venue.id)
         self.assertEqual(203, act.events[2].id)
-        self.assertEqual(102, venues[2].id)
-        self.assertEqual(204, act.events[3].id)
-        self.assertEqual(102, venues[3].id)
+        self.assertEqual(102, act.events[2].venue.id)
+        self.assertEqual(202, act.events[3].id)
+        self.assertEqual(101, act.events[3].venue.id)
 
     def test_get_act_and_events_found(self):
         act = self.act_dao.get_act_and_events(301, self.session)
 
         self.assertEqual(301, act.id)
-        self.assertEquals('London Symphony', act.title)
+        self.assertEquals('Berlin Philharmonic', act.title)
         self.assertEquals('Beethoven and Brahms', act.notes)
-        self.assertEquals(1, act.type)
+        self.assertEquals(1, act.act_type)
         self.assertEqual(4, len(act.events))
-        venues = sorted([ev.venue for ev in act.events],
-                        key=lambda v: v.id)
-        self.assertEqual(201, act.events[0].id)
-        self.assertEqual(101, venues[0].id)
-        self.assertEqual(202, act.events[1].id)
-        self.assertEqual(101, venues[1].id)
+        # events are sorted by their date_time
+        self.assertEqual(204, act.events[0].id)
+        self.assertEqual(102, act.events[0].venue.id)
+        self.assertEqual(201, act.events[1].id)
+        self.assertEqual(101, act.events[1].venue.id)
         self.assertEqual(203, act.events[2].id)
-        self.assertEqual(102, venues[2].id)
-        self.assertEqual(204, act.events[3].id)
-        self.assertEqual(102, venues[3].id)
+        self.assertEqual(102, act.events[2].venue.id)
+        self.assertEqual(202, act.events[3].id)
+        self.assertEqual(101, act.events[3].venue.id)
 
     def test_get_act_not_found(self):
         self.assertRaises(PersistenceError, self.act_dao.delete, 999, self.session)
 
     def test_add_act_ok(self):
         act = Act(id=399, title='Joey Alexander', notes='Giant Steps',
-                  type=1, year=2016)
+                  act_type=1, year=2016)
 
         self.act_dao.add(act, self.session)
         self.session.commit()
@@ -150,7 +149,7 @@ class ActDaoTest(TestCase):
 
     def test_update_act_ok(self):
         act = Act(id=304, title='Wynton Marsalis', notes='My Favorite Things',
-                  type=2, year=2015)
+                  act_type=2, year=2015)
 
         self.act_dao.update(act, self.session)
         self.session.commit()
@@ -175,8 +174,8 @@ class ActDaoTest(TestCase):
 
     def populate_db_tables(self):
         execute_insert(db_filename, 'acts',
-            # id, notes, title, type, year
-            (301, 'Beethoven and Brahms', 'London Symphony', Act.MUSIC, 0),
+            # id, notes, title, act_type, year
+            (301, 'Beethoven and Brahms', 'Berlin Philharmonic', Act.MUSIC, 0),
             (302, 'Unplugged', 'Eric Clapton', Act.MUSIC, 0),
             (303, 'Gershwin Rhapsody in Blue', 'New York Philharmonic', Act.MUSIC, 0),
             (304, 'Sketches of Spain', 'Wynton Marsalis', Act.MUSIC, 0),
