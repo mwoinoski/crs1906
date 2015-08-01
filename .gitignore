@@ -1,3 +1,6 @@
+# PyCharm config
+*/.idea/
+
 # Temp scripts
 */scripts/scratch*
 */scripts/temp*
@@ -5,15 +8,15 @@ backups/
 
 # Virtual environments
 *_venv
-*/Lib
-*/Include
-*/Scripts
+*/Lib/
+*/Include/
+*/Scripts/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 
-# MySQL Workbendch
+# MySQL Workbench
 *.mwb
 
 # C extensions

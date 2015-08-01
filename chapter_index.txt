@@ -1,10 +1,10 @@
 Chapter 1. Object-Oriented Programming
-Chapter 2. Design Patterns I
+Chapter 2. Design Patterns in Python
 Chapter 3. Unit Testing and Mocking
 Chapter 4. Error Detection and Debugging Techniques
-Chapter 5. Improving Python Application Performance: profiling, monitoring, PyPy
+Chapter 5. Improving Python Application Performance
 Chapter 6. Design Patterns II
-Chapter 7. Extending Python: ctypes, C extension modules, Cython
+Chapter 7. Extending Python
 Chapter 8. Module and Application Installation and Distribution
 Chapter 9. Concurrent Execution
 Chapter 10. Python REST Web Services
