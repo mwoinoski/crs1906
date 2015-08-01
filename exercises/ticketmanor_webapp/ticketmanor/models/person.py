@@ -96,9 +96,9 @@ class Person(Base):
         # But we'll have to flatten the JSON value (which has a nested Address object)
         # so we can assign the Address attributes to the Person.
         json_copy = dict(json_dict)
+
         # First, deal with JSON null values
-        json_sanitized = {k: (v if v is not None and v != 'null' else None)
-                          for (k, v) in json_copy.items()}
+        json_sanitized = Person.sanitize_json(json_copy)
         # Remove the Person's nested Address object
         address_json = json_copy.pop("address", None)
         # Flatten the JSON dictionary's nested Address member
@@ -106,6 +106,11 @@ class Person(Base):
             json_sanitized.update(**address_json)
         # Now assign all attributes to the Person
         self.__dict__.update(**json_sanitized)
+
+    @staticmethod
+    def sanitize_json(json_copy):
+        return {k: (None if v == 'null' else v)
+                   for (k, v) in json_copy.items()}
 
     def __json__(self, request):
         """

@@ -61,9 +61,14 @@ class Address:
         }
 
     def from_json(self, json_value):
-        json_sanitized = {k: (v if v is not None and v != 'null' else None) for (k,v) in json_value.items()}
-        address = json_value.pop("address", None)
+        # BONUS TODO: replace the following loop with a dictionary comprehension
+        # json_sanitized = {}
+        # for k in json_copy:
+        #     v = json_copy[k]
+        #     if v == 'null':
+        #         v = None
+        #     json_sanitized[k] = v
+        json_sanitized = {k: (None if v == 'null' else v)
+                          for k, v in json_value.items()}
         self.__dict__.update(**json_sanitized)
-        if address is not None:
-            self.address.from_json(address)
 

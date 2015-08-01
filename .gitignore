@@ -23,8 +23,8 @@ __pycache__/
 bin/
 build/
 develop-eggs/
-dist/
-!*/bower_components/bootstrap/dist
+#dist/
+!*/bower_components/bootstrap/dist/*  # TODO: fix this
 eggs/
 lib/
 lib64/
