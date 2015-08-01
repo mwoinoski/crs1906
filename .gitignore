@@ -1,5 +1,5 @@
-# PyCharm config
-*/.idea/
+# PyCharm workspace config
+.idea/
 
 # Temp scripts
 */scripts/scratch*
@@ -8,9 +8,9 @@ backups/
 
 # Virtual environments
 *_venv
-*/Lib/
-*/Include/
-*/Scripts/
+Lib/
+Include/
+Scripts/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
