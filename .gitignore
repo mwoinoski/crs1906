@@ -1,3 +1,6 @@
+# PyCharm workspace config
+.idea/
+
 # Temp scripts
 */scripts/scratch*
 */scripts/temp*
@@ -5,15 +8,15 @@ backups/
 
 # Virtual environments
 *_venv
-*/Lib
-*/Include
-*/Scripts
+Lib/
+Include/
+Scripts/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 
-# MySQL Workbendch
+# MySQL Workbench
 *.mwb
 
 # C extensions
@@ -23,8 +26,8 @@ __pycache__/
 bin/
 build/
 develop-eggs/
-dist/
-!*/bower_components/bootstrap/dist
+#dist/
+!*/bower_components/bootstrap/dist/*  # TODO: fix this
 eggs/
 lib/
 lib64/
