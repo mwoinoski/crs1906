@@ -18,8 +18,8 @@ from test_support.db_utils import (
 )
 from ticketmanor.models.venue import Venue
 from ticketmanor.models.persistence.venue_dao import VenueDao
-# The following import for Event is required.
-# Without it, SQLAlchemy raises exceptions.
+# The following import for Event is required. PyCharm flags it as unused, but
+# without it, SQLAlchemy raises exceptions.
 from ticketmanor.models.event import Event
 
 # SQLAlchemy can't connect to an in-memory SQLite database, so we'll

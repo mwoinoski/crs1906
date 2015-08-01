@@ -1,3 +1,9 @@
+"""
+package script for models package.
+
+Defines classes and functions required for interacting with SQLAlchemy.
+"""
+
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from sqlalchemy.ext.declarative import declarative_base

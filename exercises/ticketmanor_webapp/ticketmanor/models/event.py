@@ -36,7 +36,7 @@ class Event(Base):
 
     def __eq__(self, other):
         """Compare Event instances."""
-        return isinstance(other, Event) and \
+        return isinstance(other, self.__class__) and \
             other.id == self.id and \
             other.date_time == self.date_time and \
             other.venue_id == self.venue_id

@@ -15,8 +15,10 @@ from .person import Person
 
 
 class Member(Person):
-    """Model class for Member
     """
+    Model class for Member
+    """
+
     __tablename__ = 'members'
     id = Column('id', Integer, ForeignKey('people.id'), primary_key=True)
     profile_photo = Column('profilephoto', LargeBinary)

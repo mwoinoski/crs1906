@@ -33,13 +33,8 @@ class Venue(Base):
     # To map one-to-one, use this: relationship('Event', uselist=False, backref='venue')
 
     def __eq__(self, other):
-        """Compare Person instances."""
-        # Because the Person's Address is declared as a composite,
-        # you must compare the address attributes of the Persons.
-        # Don't delegate the address comparison to
-        # Address.__eq__(), because SQLAlchemy may create a
-        # dictionary to hold the values rather than an Address.
-        return isinstance(other, Venue) and \
+        """Compare Venue instances."""
+        return isinstance(other, self.__class__) and \
             other.id == self.id and \
             other.name == self.name and \
             other.street_address == self.street_address and \

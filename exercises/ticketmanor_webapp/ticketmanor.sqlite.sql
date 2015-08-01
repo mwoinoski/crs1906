@@ -74,6 +74,11 @@ INSERT INTO acts VALUES (156,NULL,'Blue Jays vs Mets',3,0);
 INSERT INTO acts VALUES (157,NULL,'Red Sox vs Maple Leafs',3,0);
 INSERT INTO acts VALUES (158,NULL,'Blackhawks vs Canucks',3,0);
 INSERT INTO acts VALUES (159,NULL,'Real Madrid vs Barcelona',3,0);
+INSERT INTO acts VALUES (301,'Beethoven and Brahms','Berlin Philharmonic',1,0);
+INSERT INTO acts VALUES (302,'Unplugged','Eric Clapton',1,0);
+INSERT INTO acts VALUES (303,'Gershwin Rhapsody in Blue','New York Philharmonic',1,0);
+INSERT INTO acts VALUES (304,'Sketches of Spain','Wynton Marsalis',1,0);
+INSERT INTO acts VALUES (305,'The Standard','Take 6',1,0);
 
 CREATE TABLE acts_events (
   acts_id bigint(20) NOT NULL,
@@ -81,6 +86,16 @@ CREATE TABLE acts_events (
   FOREIGN KEY (events_id) REFERENCES events (id),
   FOREIGN KEY (acts_id) REFERENCES acts (id)
 );
+
+INSERT INTO acts_events VALUES (302,501);
+INSERT INTO acts_events VALUES (302,502);
+INSERT INTO acts_events VALUES (303,501);
+INSERT INTO acts_events VALUES (304,501);
+INSERT INTO acts_events VALUES (305,505);
+INSERT INTO acts_events VALUES (301,501);
+INSERT INTO acts_events VALUES (301,502);
+INSERT INTO acts_events VALUES (301,503);
+INSERT INTO acts_events VALUES (301,504);
 
 CREATE TABLE admin (
   id INTEGER PRIMARY KEY,
@@ -271,6 +286,11 @@ INSERT INTO events VALUES (201,'2015-01-01 20:00:00.000',1,154);
 INSERT INTO events VALUES (202,'2015-01-01 20:00:00.000',164,159);
 INSERT INTO events VALUES (203,'2015-01-01 20:00:00.000',1,154);
 INSERT INTO events VALUES (204,'2015-01-01 20:00:00.000',160,155);
+INSERT INTO events VALUES (501,'2015-12-31 20:00:00',401,NULL);
+INSERT INTO events VALUES (502,'2016-01-01 20:00:00',401,NULL);
+INSERT INTO events VALUES (503,'2015-12-31 21:00:00',402,NULL);
+INSERT INTO events VALUES (504,'2015-12-25 10:00:00',402,NULL);
+INSERT INTO events VALUES (505,'2016-01-01 10:00:00',402,NULL);
 
 CREATE TABLE feedbackform (
   id INTEGER PRIMARY KEY,
@@ -380,3 +400,5 @@ INSERT INTO venues VALUES (161,NULL,NULL,NULL,NULL,'Candlestick Park',NULL,NULL)
 INSERT INTO venues VALUES (162,NULL,NULL,NULL,NULL,'Maple Leaf Gardens',NULL,NULL);
 INSERT INTO venues VALUES (163,NULL,NULL,NULL,NULL,'United Centre',NULL,NULL);
 INSERT INTO venues VALUES (164,NULL,NULL,NULL,NULL,'London Palladium',NULL,NULL);
+INSERT INTO venues VALUES (401,'Chicago','USA',41.8369,-87.6847,'Auditorium Theatre','IL','E Congress Pkwy, Chicago, IL 60605');
+INSERT INTO venues VALUES (402,'New York','USA',40.7127,-74.0059,'Carnegie Hall','NY','881 7th Ave, New York, NY 10019');

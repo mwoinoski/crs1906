@@ -9,7 +9,9 @@ from .person import Person
 
 
 class Customer(Person):
-    """Model class for Customer
     """
+    Model class for Customer
+    """
+
     __tablename__ = 'customers'
     id = Column('id', Integer, ForeignKey('people.id'), primary_key=True)

@@ -23,6 +23,7 @@ class Person(Base):
     """
     Model class for Person
     """
+
     __tablename__ = 'people'
     id = Column('id', Integer, primary_key=True)  # autoincrement=True by default
     first_name = Column('firstname', String)
@@ -52,9 +53,9 @@ class Person(Base):
         # Because the Person's Address is declared as a composite,
         # you must compare the address attributes of the Persons.
         # Don't delegate the address comparison to
-        # Address.__eq__(), because SQLAlchemy may create a
-        # dictionary to hold the values rather than an Address.
-        return isinstance(other, Person) and \
+        # Address.__eq__(), because SQLAlchemy may create a proxy
+        # to hold the values rather than an Address.
+        return isinstance(other, self.__class__) and \
             other.id == self.id and \
             other.first_name == self.first_name and \
             other.middles == self.middles and \

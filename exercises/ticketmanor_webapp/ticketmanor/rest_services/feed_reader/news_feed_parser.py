@@ -21,28 +21,28 @@ class NewsFeedParser(metaclass=ABCMeta):
     """
 
     def get_news(self, news_type, max_items=0):
-        """A Template method. Returns latest news for every news website."""
-        # Call subclass method to get URL
+        """A Template method. Returns latest news for a news website."""
+
+        # Call subclass method to get the URL of the news feed
         url = self.get_url(news_type)
+
+        # Call base class method to get the raw content from the URL
         raw_content = self.get_raw_content(url)
+
         # Call subclass method to parse content
-        content = self.parse_content(raw_content)
-        cropped = self.crop(content, max_items)
-        return cropped
+        content = self.parse_content(raw_content, max_items)
+        return content
 
     @abstractmethod
     def get_url(self, news_type):
         pass
 
+    # This method could be static here in the base class, but we'll leave it
+    # defined as an instance method so subclasses can override it if needed.
+    # noinspection PyMethodMayBeStatic
     def get_raw_content(self, url):
         return urllib.request.urlopen(url).read()
 
     @abstractmethod
     def parse_content(self, content):
         pass
-
-    def crop(self, parsed_content, max_items):
-        content = parsed_content
-        if max_items > 0:
-            content = parsed_content[:max_items]
-        return content

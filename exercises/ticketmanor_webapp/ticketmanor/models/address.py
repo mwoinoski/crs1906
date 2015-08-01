@@ -28,7 +28,7 @@ class Address:
 
     def __eq__(self, other):
         """Composite class must define __eq__"""
-        return isinstance(other, Address) and \
+        return isinstance(other, self.__class__) and \
             other.street == self.street and \
             other.city == self.city and \
             other.state == self.state and \
