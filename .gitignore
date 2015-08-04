@@ -54,6 +54,7 @@ logs/
 .cache
 .noseids
 cover/
+htmlcov/
 nosetests.xml
 coverage.xml
 
