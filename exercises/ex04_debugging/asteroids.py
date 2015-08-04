@@ -30,7 +30,7 @@ t.ht()
 t.speed(0)
 t.goto(0, screenMaxY - 20)
 t.color('grey')
-t.write("Turtles in Space!!", align="center", font=("Arial", 20))
+t.write("Asteroids!!", align="center", font=("Arial", 20))
 t.goto(0, screenMaxY - 33)
 t.write("Use the arrow keys to move, 'x' to fire, 'q' to quit", align="center")
 t.goto(0, 0)
@@ -123,7 +123,7 @@ class SpaceShip(Turtle):
         self.dy = dy
         self.screen = screen
         self.bullets = []
-        self.shape("turtle")
+        self.shape("ship")
 
     def move(self):
         x = self.xcor()
@@ -183,6 +183,8 @@ def intersect(object1, object2):
     radius1 = object1.getRadius()
     radius2 = object2.getRadius()
 
+    # The following if statement could be written as 
+    # return dist <= radius1+radius2
     return dist <= radius1 + radius2
 
 
@@ -218,7 +220,7 @@ def play():
     gameover = False
     for asteroid in asteroids:
         asteroid.move()
-        if intersect(ship, asteroid):
+        if intersect(ship, gameover):
             turtle.color('red')
             turtle.write("BOOM!!!", font=("Arial", 30), align="center")
             gameover = True

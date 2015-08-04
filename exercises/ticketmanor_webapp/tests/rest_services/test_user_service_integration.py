@@ -7,7 +7,7 @@ __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 import os
 import json
 
-from unittest import TestCase
+import unittest
 from webtest import TestApp
 from ticketmanor import main
 from test_support.db_utils import (
@@ -23,7 +23,7 @@ from test_support.db_utils import (
 db_filename = 'ticketmanor_db.sqlite'
 
 
-class UserServiceRestIntegrationTest(TestCase):
+class UserServiceRestIntegrationTest(unittest.TestCase):
     """
     Integration tests for UserServiceRest
     """
@@ -124,3 +124,6 @@ class UserServiceRestIntegrationTest(TestCase):
             (124, 'New Paltz', 'USA', '12345', 'NY', '123 Main St',
                 'mike@jazz.com', 'Mike', 'Woinoski', '')
         )
+
+if __name__ == '__main__':
+    unittest.main()

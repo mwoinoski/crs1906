@@ -130,6 +130,5 @@ class UserServiceRestTest(TestCase):
         with self.assertRaises(HTTPNotFound):
             user_service.delete_user()
 
-
 if __name__ == '__main__':
     main()

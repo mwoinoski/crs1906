@@ -1,0 +1,255 @@
+Total elements: 250000
+0.00% complete4.00% complete8.00% complete12.00% complete16.00% complete20.00% complete24.00% complete28.00% complete32.00% complete36.00% complete40.00% complete44.00% complete48.00% complete52.00% complete56.00% complete60.00% complete64.00% complete68.00% complete72.00% complete76.00% complete80.00% complete84.00% complete88.00% complete92.00% complete96.00% complete
+Main took 0:00:07.448242
+Total sum of elements (for validation): 731119
+Couldn't import Image or numpy: No module named 'numpy'
+         3823192 function calls (3823122 primitive calls) in 7.998 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    4.596    4.596    7.449    7.449 mandelbrot.py:10(calculate_z_serial)
+  3564676    2.851    0.000    2.851    0.000 {built-in method abs}
+        1    0.302    0.302    7.982    7.982 mandelbrot.py:26(calc)
+   251026    0.187    0.000    0.187    0.000 {method 'append' of 'list' objects}
+      142    0.011    0.000    0.011    0.000 {built-in method stat}
+        1    0.008    0.008    7.998    7.998 mandelbrot.py:1(<module>)
+        8    0.008    0.001    0.008    0.001 {built-in method loads}
+      123    0.003    0.000    0.023    0.000 <frozen importlib._bootstrap>:2016(find_spec)
+        1    0.003    0.003    0.003    0.003 {built-in method sum}
+      490    0.002    0.000    0.003    0.000 <frozen importlib._bootstrap>:52(<listcomp>)
+        1    0.002    0.002    0.002    0.002 {built-in method load_dynamic}
+       12    0.002    0.000    0.028    0.002 <frozen importlib._bootstrap>:1902(_get_spec)
+      506    0.001    0.000    0.001    0.000 {method 'join' of 'str' objects}
+      490    0.001    0.000    0.006    0.000 <frozen importlib._bootstrap>:50(_path_join)
+      208    0.001    0.000    0.001    0.000 {built-in method hasattr}
+        8    0.001    0.000    0.001    0.000 {method 'read' of '_io.FileIO' objects}
+       20    0.001    0.000    0.001    0.000 {method 'find_loader' of 'zipimport.zipimporter' objects}
+      142    0.001    0.000    0.012    0.000 <frozen importlib._bootstrap>:68(_path_stat)
+      191    0.001    0.000    0.001    0.000 {method 'lower' of 'str' objects}
+        8    0.001    0.000    0.011    0.001 <frozen importlib._bootstrap>:1534(get_code)
+        1    0.001    0.001    0.001    0.001 numbers.py:32(Complex)
+       12    0.001    0.000    0.001    0.000 <frozen importlib._bootstrap>:1423(find_spec)
+       67    0.001    0.000    0.001    0.000 cp1252.py:18(encode)
+      996    0.001    0.000    0.001    0.000 {method 'rstrip' of 'str' objects}
+      583    0.001    0.000    0.001    0.000 {method 'format' of 'str' objects}
+       30    0.001    0.000    0.001    0.000 {built-in method print}
+      496    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:518(_verbose_message)
+       14    0.000    0.000    0.030    0.002 <frozen importlib._bootstrap>:2147(_find_spec)
+       21    0.000    0.000    0.002    0.000 {built-in method __build_class__}
+       24    0.000    0.000    0.000    0.000 {built-in method OpenKey}
+        9    0.000    0.000    0.001    0.000 datetime.py:302(__new__)
+        8    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:1621(get_data)
+     14/4    0.000    0.000    0.048    0.012 <frozen importlib._bootstrap>:2234(_find_and_load)
+      321    0.000    0.000    0.000    0.000 {built-in method isinstance}
+        5    0.000    0.000    0.001    0.000 abc.py:132(__new__)
+      152    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:1870(_path_importer_cache)
+        1    0.000    0.000    0.000    0.000 optparse.py:230(set_parser)
+      260    0.000    0.000    0.000    0.000 {built-in method getattr}
+       20    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:1887(_legacy_get_spec)
+        2    0.000    0.000    0.000    0.000 {built-in method init_builtin}
+      123    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:30(_relax_case)
+       67    0.000    0.000    0.000    0.000 {built-in method charmap_encode}
+        8    0.000    0.000    0.008    0.001 <frozen importlib._bootstrap>:654(_compile_bytecode)
+      166    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+       14    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:261(__enter__)
+        1    0.000    0.000    0.002    0.002 datetime.py:5(<module>)
+       14    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:274(_get_module_lock)
+       14    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:172(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1853(_path_hooks)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:599(_validate_bytecode_header)
+      9/1    0.000    0.000    7.998    7.998 {built-in method exec}
+       28    0.000    0.000    0.000    0.000 {built-in method allocate_lock}
+     14/4    0.000    0.000    0.048    0.012 <frozen importlib._bootstrap>:2207(_find_and_load_unlocked)
+        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap>:2061(_fill_cache)
+       24    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x00000000617F3190}
+       34    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:790(__init__)
+        1    0.000    0.000    0.000    0.000 datetime.py:616(date)
+     11/3    0.000    0.000    0.036    0.012 <frozen importlib._bootstrap>:1186(_load_unlocked)
+       14    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:257(__init__)
+        5    0.000    0.000    0.000    0.000 abc.py:135(<setcomp>)
+     14/4    0.000    0.000    0.034    0.008 <frozen importlib._bootstrap>:2264(_handle_fromlist)
+       12    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:1408(_search_registry)
+       14    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:192(acquire)
+       17    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:56(_path_split)
+      160    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1401(_open_registry)
+       50    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:2120(__enter__)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1019(init_module_attrs)
+       50    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:2124(__exit__)
+       75    0.000    0.000    0.000    0.000 {built-in method len}
+       14    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:217(release)
+        1    0.000    0.000    0.024    0.024 Image.py:27(<module>)
+       16    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:437(cache_from_source)
+       64    0.000    0.000    0.000    0.000 {built-in method release_lock}
+        3    0.000    0.000    0.000    0.000 optparse.py:563(__init__)
+       42    0.000    0.000    0.000    0.000 abc.py:9(abstractmethod)
+        3    0.000    0.000    0.000    0.000 optparse.py:612(_set_attrs)
+        3    0.000    0.000    0.000    0.000 abc.py:194(__subclasscheck__)
+        9    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:2011(_get_spec)
+      8/3    0.000    0.000    0.036    0.012 <frozen importlib._bootstrap>:1465(exec_module)
+       12    0.000    0.000    0.000    0.000 {built-in method any}
+       43    0.000    0.000    0.000    0.000 {built-in method setattr}
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+       45    0.000    0.000    0.000    0.000 {built-in method divmod}
+       15    0.000    0.000    0.000    0.000 _weakrefset.py:36(__init__)
+       11    0.000    0.000    0.002    0.000 <frozen importlib._bootstrap>:78(_path_is_mode_type)
+        9    0.000    0.000    0.000    0.000 {built-in method is_builtin}
+        9    0.000    0.000    0.000    0.000 {built-in method round}
+        9    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:884(spec_from_file_location)
+       23    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 optparse.py:205(__init__)
+        8    0.000    0.000    0.000    0.000 {built-in method _fix_co_filename}
+        3    0.000    0.000    0.000    0.000 optparse.py:994(add_option)
+       16    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:45(_r_long)
+        3    0.000    0.000    0.000    0.000 optparse.py:591(_set_opt_strings)
+       17    0.000    0.000    0.000    0.000 {method 'rsplit' of 'str' objects}
+       50    0.000    0.000    0.000    0.000 {built-in method acquire_lock}
+        3    0.000    0.000    0.002    0.001 <frozen importlib._bootstrap>:1156(_load_backward_compatible)
+     14/3    0.000    0.000    0.036    0.012 <frozen importlib._bootstrap>:313(_call_with_frames_removed)
+        2    0.000    0.000    0.000    0.000 {built-in method now}
+       16    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:824(cached)
+       12    0.000    0.000    0.028    0.002 <frozen importlib._bootstrap>:1934(find_spec)
+        9    0.000    0.000    0.002    0.000 <frozen importlib._bootstrap>:534(_check_name_wrapper)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1287(load_module)
+       14    0.000    0.000    0.000    0.000 {built-in method getcwd}
+        5    0.000    0.000    0.000    0.000 datetime.py:646(__new__)
+        1    0.000    0.000    0.001    0.001 optparse.py:1177(__init__)
+        1    0.000    0.000    0.000    0.000 {built-in method listdir}
+        3    0.000    0.000    0.000    0.000 _weakrefset.py:58(__iter__)
+       28    0.000    0.000    0.000    0.000 {built-in method get_ident}
+       14    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1266(find_spec)
+        5    0.000    0.000    0.000    0.000 os.py:628(__getitem__)
+       95    0.000    0.000    0.000    0.000 {method 'partition' of 'str' objects}
+       14    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:268(__exit__)
+        1    0.000    0.000    0.002    0.002 <frozen importlib._bootstrap>:1708(load_module)
+      4/1    0.000    0.000    0.034    0.034 {built-in method __import__}
+       10    0.000    0.000    0.002    0.000 <frozen importlib._bootstrap>:87(_path_isfile)
+        3    0.000    0.000    0.000    0.000 abc.py:151(register)
+       11    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1000(__init__)
+        3    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:739(__exit__)
+        3    0.000    0.000    0.000    0.000 datetime.py:1300(__new__)
+        1    0.000    0.000    0.000    0.000 numbers.py:294(Integral)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1099(create)
+        1    0.000    0.000    0.000    0.000 numbers.py:147(Real)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:129(_new_module)
+        5    0.000    0.000    0.000    0.000 os.py:696(encodekey)
+        1    0.000    0.000    0.000    0.000 gettext.py:353(find)
+        1    0.000    0.000    0.000    0.000 gettext.py:111(_expand_lang)
+        5    0.000    0.000    0.000    0.000 datetime.py:252(_check_date_fields)
+        1    0.000    0.000    0.000    0.000 optparse.py:1305(get_default_values)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1591(__init__)
+        1    0.000    0.000    0.000    0.000 datetime.py:1808(timezone)
+        4    0.000    0.000    0.000    0.000 _collections_abc.py:419(get)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:147(__exit__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:859(spec_from_loader)
+        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap>:2090(<setcomp>)
+        3    0.000    0.000    0.000    0.000 _weakrefset.py:26(__exit__)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:546(_requires_builtin_wrapper)
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1336(find_spec)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1979(__init__)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:732(__enter__)
+       12    0.000    0.000    0.000    0.000 {built-in method is_frozen}
+        1    0.000    0.000    0.000    0.000 gettext.py:459(dgettext)
+        1    0.000    0.000    0.002    0.002 numbers.py:6(<module>)
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:148(<genexpr>)
+       32    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:742(<genexpr>)
+        8    0.000    0.000    0.000    0.000 __future__.py:77(__init__)
+        6    0.000    0.000    0.000    0.000 _weakrefset.py:81(add)
+        5    0.000    0.000    0.000    0.000 os.py:690(check_str)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1631(path_stats)
+        1    0.000    0.000    0.000    0.000 optparse.py:1354(parse_args)
+        6    0.000    0.000    0.000    0.000 _weakrefset.py:70(__contains__)
+        6    0.000    0.000    0.000    0.000 {built-in method issubclass}
+       14    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:288(cb)
+        1    0.000    0.000    0.000    0.000 optparse.py:1263(set_usage)
+        1    0.000    0.000    0.000    0.000 datetime.py:283(timedelta)
+        3    0.000    0.000    0.000    0.000 _weakrefset.py:20(__enter__)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:842(parent)
+       16    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:2102(path_hook_for_FileFinder)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1726(is_package)
+        1    0.000    0.000    0.000    0.000 optparse.py:1234(_add_help_option)
+      8/3    0.000    0.000    0.036    0.012 <frozen importlib._bootstrap>:1122(_exec)
+        3    0.000    0.000    0.000    0.000 optparse.py:582(_check_opt_strings)
+        1    0.000    0.000    0.000    0.000 optparse.py:824(__init__)
+        1    0.000    0.000    0.000    0.000 optparse.py:371(__init__)
+        5    0.000    0.000    0.000    0.000 datetime.py:45(_days_in_month)
+        5    0.000    0.000    0.000    0.000 datetime.py:263(_check_time_fields)
+        3    0.000    0.000    0.000    0.000 datetime.py:1832(_create)
+        4    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 optparse.py:1406(_process_args)
+        1    0.000    0.000    0.000    0.000 numbers.py:267(Rational)
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1985(<genexpr>)
+        6    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 optparse.py:919(__init__)
+        1    0.000    0.000    0.000    0.000 gettext.py:393(translation)
+        3    0.000    0.000    0.000    0.000 optparse.py:967(_check_conflict)
+        8    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 _weakrefset.py:16(__init__)
+        3    0.000    0.000    0.000    0.000 datetime.py:40(_days_before_year)
+        1    0.000    0.000    0.000    0.000 optparse.py:1229(_create_option_list)
+        3    0.000    0.000    0.000    0.000 optparse.py:674(_check_dest)
+        1    0.000    0.000    0.000    0.000 locale.py:373(normalize)
+        3    0.000    0.000    0.000    0.000 optparse.py:631(_check_action)
+        5    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 datetime.py:485(__neg__)
+        3    0.000    0.000    0.000    0.000 optparse.py:586(<listcomp>)
+        3    0.000    0.000    0.000    0.000 optparse.py:637(_check_type)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:728(__init__)
+        3    0.000    0.000    0.000    0.000 _weakrefset.py:52(_commit_removals)
+        5    0.000    0.000    0.000    0.000 datetime.py:275(_check_tzinfo_arg)
+        3    0.000    0.000    0.000    0.000 optparse.py:695(_check_nargs)
+        1    0.000    0.000    0.000    0.000 optparse.py:1244(_populate_option_list)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1729(<genexpr>)
+        3    0.000    0.000    0.000    0.000 optparse.py:704(_check_callback)
+        6    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1616(get_filename)
+        1    0.000    0.000    0.000    0.000 __init__.py:14(<module>)
+        1    0.000    0.000    0.000    0.000 gettext.py:497(gettext)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:850(has_location)
+        3    0.000    0.000    0.000    0.000 optparse.py:689(_check_const)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:141(__init__)
+        3    0.000    0.000    0.000    0.000 {method 'remove' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:92(_path_isdir)
+        1    0.000    0.000    0.000    0.000 {built-in method max}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:144(__enter__)
+        3    0.000    0.000    0.000    0.000 optparse.py:661(_check_choice)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1697(__init__)
+        3    0.000    0.000    0.000    0.000 {method '__subclasses__' of 'type' objects}
+        3    0.000    0.000    0.000    0.000 {method '__subclasshook__' of 'object' objects}
+        1    0.000    0.000    0.000    0.000 datetime.py:909(tzinfo)
+        1    0.000    0.000    0.000    0.000 __future__.py:76(_Feature)
+        1    0.000    0.000    0.000    0.000 optparse.py:1348(_get_args)
+        1    0.000    0.000    0.000    0.000 optparse.py:1254(_init_parsing_state)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1311(is_package)
+        1    0.000    0.000    0.000    0.000 optparse.py:930(_create_option_mappings)
+        1    0.000    0.000    0.000    0.000 optparse.py:946(set_conflict_handler)
+        1    0.000    0.000    0.000    0.000 optparse.py:1299(_get_all_options)
+        1    0.000    0.000    0.000    0.000 Image.py:38(_imaging_not_installed)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 Image.py:34(DecompressionBombWarning)
+        1    0.000    0.000    0.000    0.000 {built-in method min}
+        1    0.000    0.000    0.000    0.000 optparse.py:951(set_description)
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 optparse.py:1393(check_values)
+        1    0.000    0.000    0.000    0.000 {method 'reverse' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 ImageMode.py:17(<module>)
+        1    0.000    0.000    0.000    0.000 Image.py:1983(ImageTransformHandler)
+        2    0.000    0.000    0.000    0.000 datetime.py:1002(__new__)
+        1    0.000    0.000    0.000    0.000 _util.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 datetime.py:978(time)
+        1    0.000    0.000    0.000    0.000 ImageMode.py:23(ModeDescriptor)
+        1    0.000    0.000    0.000    0.000 Image.py:1978(ImagePointHandler)
+        1    0.000    0.000    0.000    0.000 _util.py:22(deferred_error)
+        1    0.000    0.000    0.000    0.000 Image.py:1942(_ImageCrop)
+        1    0.000    0.000    0.000    0.000 {built-in method sorted}
+        1    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 Image.py:446(_E)
+        1    0.000    0.000    0.000    0.000 datetime.py:1290(datetime)
+        1    0.000    0.000    0.000    0.000 Image.py:481(Image)
+        1    0.000    0.000    0.000    0.000 _binary.py:14(<module>)
+        1    0.000    0.000    0.000    0.000 numbers.py:12(Number)
+
+

@@ -33,21 +33,21 @@ __version__ = "$Revision: 1.7 $"[11:-2]
 import sys
 import traceback
 import unittest
+from abc import abstractmethod, ABCMeta
 
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import filedialog
 from tkinter import simpledialog
 
-
-
-
 ##############################################################################
 # GUI framework classes
 ##############################################################################
 
-class BaseGUITestRunner(object):
-    """Subclass this class to create a GUI TestRunner that uses a specific
+
+class BaseGUITestRunner(metaclass=ABCMeta):
+    """
+    Subclass this class to create a GUI TestRunner that uses a specific
     windowing toolkit. The class takes care of running tests in the correct
     manner, and making callbacks to the derived class to obtain information
     or signal that events have occurred.
@@ -59,23 +59,25 @@ class BaseGUITestRunner(object):
         self.__rollbackImporter = RollbackImporter()
         self.test_suite = None
 
-        #test discovery variables
+        # test discovery variables
         self.directory_to_read = ''
         self.top_level_dir = ''
         self.test_file_glob_pattern = 'test*.py'
 
         self.initGUI(*args, **kwargs)
 
+    @abstractmethod
     def errorDialog(self, title, message):
-        "Override to display an error arising from GUI usage"
+        """Override to display an error arising from GUI usage"""
         pass
 
+    @abstractmethod
     def getDirectoryToDiscover(self):
-        "Override to prompt user for directory to perform test discovery"
+        """Override to prompt user for directory to perform test discovery"""
         pass
 
     def runClicked(self):
-        "To be called in response to user choosing to run a test"
+        """To be called in response to user choosing to run a test"""
         if self.running: return
         if not self.test_suite:
             self.errorDialog("Test Discovery", "You discover some tests first!")
@@ -89,7 +91,7 @@ class BaseGUITestRunner(object):
         self.notifyStopped()
 
     def stopClicked(self):
-        "To be called in response to user stopping the running of a test"
+        """To be called in response to user stopping the running of a test"""
         if self.currentResult:
             self.currentResult.stop()
 
@@ -104,7 +106,8 @@ class BaseGUITestRunner(object):
             # specified (indicated by empty string) as discover() explicitly
             # checks for a 'None' to determine if no tld has been specified
             top_level_dir = self.top_level_dir or None
-            tests = unittest.defaultTestLoader.discover(directory, self.test_file_glob_pattern, top_level_dir)
+            tests = unittest.defaultTestLoader.discover(
+                directory, self.test_file_glob_pattern, top_level_dir)
             self.test_suite = tests
         except:
             exc_type, exc_value, exc_tb = sys.exc_info()
@@ -116,41 +119,52 @@ class BaseGUITestRunner(object):
 
     # Required callbacks
 
+    @abstractmethod
     def notifyTestsDiscovered(self, test_suite):
-        "Override to display information about the suite of discovered tests"
+        """Override to display information about the suite of discovered tests"""
         pass
 
+    @abstractmethod
     def notifyRunning(self):
-        "Override to set GUI in 'running' mode, enabling 'stop' button etc."
+        """Override to set GUI in 'running' mode, enabling 'stop' button etc."""
         pass
 
+    @abstractmethod
     def notifyStopped(self):
-        "Override to set GUI in 'stopped' mode, enabling 'run' button etc."
+        """Override to set GUI in 'stopped' mode, enabling 'run' button etc."""
         pass
 
+    @abstractmethod
     def notifyTestFailed(self, test, err):
-        "Override to indicate that a test has just failed"
+        """Override to indicate that a test has just failed"""
         pass
 
+    @abstractmethod
     def notifyTestErrored(self, test, err):
-        "Override to indicate that a test has just errored"
+        """Override to indicate that a test has just errored"""
         pass
 
+    @abstractmethod
     def notifyTestSkipped(self, test, reason):
-        "Override to indicate that test was skipped"
+        """Override to indicate that test was skipped"""
         pass
 
+    @abstractmethod
     def notifyTestFailedExpectedly(self, test, err):
-        "Override to indicate that test has just failed expectedly"
+        """Override to indicate that test has just failed expectedly"""
         pass
 
+    @abstractmethod
     def notifyTestStarted(self, test):
-        "Override to indicate that a test is about to run"
+        """Override to indicate that a test is about to run"""
         pass
 
+    @abstractmethod
     def notifyTestFinished(self, test):
-        """Override to indicate that a test has finished (it may already have
-           failed or errored)"""
+        """
+        Override to indicate that a test has finished (it may already have
+        failed or errored)
+        """
         pass
 
 
@@ -188,7 +202,8 @@ class GUITestResult(unittest.TestResult):
 
 
 class RollbackImporter:
-    """This tricky little class is used to make sure that modules under test
+    """
+    This tricky little class is used to make sure that modules under test
     will be reloaded the next time they are imported.
     """
     def __init__(self):
@@ -243,8 +258,10 @@ class DiscoverSettingsDialog(simpledialog.Dialog):
         self.top_level_dir = self.dirVar.get()
         self.test_file_glob_pattern = self.testPatternVar.get()
 
+
 class TkTestRunner(BaseGUITestRunner):
-    """An implementation of BaseGUITestRunner using Tkinter.
+    """
+    An implementation of BaseGUITestRunner using Tkinter.
     """
     def initGUI(self, root, initialTestName):
         """Set up the GUI inside the given root window. The test name entry
@@ -255,7 +272,7 @@ class TkTestRunner(BaseGUITestRunner):
         self.statusVar = tk.StringVar()
         self.statusVar.set("Idle")
 
-        #tk vars for tracking counts of test result types
+        # tk vars for tracking counts of test result types
         self.runCountVar = tk.IntVar()
         self.failCountVar = tk.IntVar()
         self.errorCountVar = tk.IntVar()
@@ -370,15 +387,15 @@ class TkTestRunner(BaseGUITestRunner):
         self.errorInfo = []
         while self.errorListbox.size():
             self.errorListbox.delete(0)
-        #Stopping seems not to work, so simply disable the start button
-        #self.stopGoButton.config(command=self.stopClicked, text="Stop")
+        # Stopping seems not to work, so simply disable the start button
+        # self.stopGoButton.config(command=self.stopClicked, text="Stop")
         self.stopGoButton.config(state=tk.DISABLED)
         self.progressBar.setProgressFraction(0.0)
         self.top.update_idletasks()
 
     def notifyStopped(self):
         self.stopGoButton.config(state=tk.DISABLED)
-        #self.stopGoButton.config(command=self.runClicked, text="Start")
+        # self.stopGoButton.config(command=self.runClicked, text="Start")
         self.statusVar.set("Idle")
 
     def notifyTestStarted(self, test):
@@ -402,7 +419,6 @@ class TkTestRunner(BaseGUITestRunner):
     def notifyTestFailedExpectedly(self, test, err):
         super(TkTestRunner, self).notifyTestFailedExpectedly(test, err)
         self.expectFailCountVar.set(1 + self.expectFailCountVar.get())
-
 
     def notifyTestFinished(self, test):
         self.remainingCountVar.set(self.remainingCountVar.get() - 1)
@@ -463,6 +479,7 @@ class ProgressBar(tk.Frame):
         self.text = self.canvas.create_text(totalWidth/2, height/2,
                                             anchor=tk.CENTER,
                                             text=percentString)
+
 
 def main(initialTestName=""):
     root = tk.Tk()

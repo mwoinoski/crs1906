@@ -20,8 +20,8 @@ requires = [
     'zope.sqlalchemy',
     'waitress',
     'nose',
-    'pytest',
     'pytest-cov',
+    'pytest',
     'WebTest',      # Runs a WSGI application for integration tests
     'Sphinx',       # Generates documentation from docstrings in source code
 ]

@@ -12,7 +12,7 @@ def calculate_z_serial(q, maxiter, z):
     output = [0] * len(q)
     for i in range(len(q)):
         if i % 10000 == 0:
-            # print out some progress info since it is so slow...
+            # print out some progress info because it is so slow...
             print("\r%0.2f%% complete" % (1.0/len(q) * i * 100), end='')
         for iteration in range(maxiter):
             z[i] = z[i]*z[i] + q[i]
@@ -23,7 +23,7 @@ def calculate_z_serial(q, maxiter, z):
     return output
 
 
-def calc(show_output):
+def calc(maxiter, w, h, show_output):
     """Make a list of x and y values which will represent q"""
     x_step = (float(x2 - x1) / float(w)) * 2
     y_step = (float(y1 - y2) / float(h)) * 2
@@ -87,7 +87,7 @@ if __name__ == "__main__":
         # we can show_output for Python, not for PyPy
         is_not_pypy = sys.version.find('PyPy') < 0
         if not options.profile_calc:
-            calc(is_not_pypy and options.display)
+            calc(maxiter, w, h, is_not_pypy and options.display)
         else:
             import cProfile
             cProfile.run('calc(is_not_pypy and options.display)')
