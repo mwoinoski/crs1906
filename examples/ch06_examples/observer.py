@@ -5,6 +5,7 @@ observer.py - Example of Observer design pattern.
 from abc import ABCMeta, abstractmethod
 import itertools
 
+
 class Subject(metaclass=ABCMeta):
     def __init__(self):
         self._observers = set()
@@ -25,10 +26,12 @@ class Subject(metaclass=ABCMeta):
         for observer in self._observers:
             observer.update(self)
 
+
 class Observer(metaclass=ABCMeta):
     @abstractmethod
     def update(self, observable):
         pass
+
 
 class ConcreteSubject(Subject):
     def __init__(self, value=None):
@@ -46,6 +49,7 @@ class ConcreteSubject(Subject):
             self._state = value
             self.observer_notify()
 
+
 class ConcreteObserver(Observer):
     def __init__(self, name):
         super().__init__()
@@ -54,6 +58,7 @@ class ConcreteObserver(Observer):
     def update(self, subject):
         print('{}.update() called, subject state = {}'
               .format(self._name, subject.state))
+
 
 def main():
     initial_state = 1
