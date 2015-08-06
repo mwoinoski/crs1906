@@ -45,10 +45,15 @@ class RssNewsFeedParser(NewsFeedParser):
             parsed_item['title'] = title_node.childNodes[0].nodeValue
         except IndexError:
             parsed_item['title'] = ""
-        parsed_item['content'] = ""
-        parsed_item['image_banner'] = ""
-        parsed_item['image_thumbnail'] = ""
         try:
+            link_node = node.getElementsByTagName('link')[0]
+            parsed_item['link'] = link_node.childNodes[0].nodeValue
+        except IndexError:
+            parsed_item['link'] = ""
+        try:
+            parsed_item['content'] = ""
+            parsed_item['image_banner'] = ""
+            parsed_item['image_thumbnail'] = ""
             description_node = node.getElementsByTagName('description')[0]
             desc_raw = description_node.childNodes[0].nodeValue
             desc_html = html_unescape(desc_raw)
@@ -62,11 +67,6 @@ class RssNewsFeedParser(NewsFeedParser):
                 parsed_item['content'] = re.sub(r'</?b>', '', match.group(1))
         except IndexError:
             pass
-        try:
-            link_node = node.getElementsByTagName('link')[0]
-            parsed_item['link'] = link_node.childNodes[0].nodeValue
-        except IndexError:
-            parsed_item['link'] = ""
         try:
             pub_date_node = node.getElementsByTagName('pubDate')[0]
             parsed_item['date_time'] = pub_date_node.childNodes[0].nodeValue

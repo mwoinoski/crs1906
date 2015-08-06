@@ -163,24 +163,27 @@
       <hr class="hr_line">
       <div class="row">
         <div ng-repeat="news in news.list">
-          <div ui-sref="events.show.news({event_type: 'concerts', news_id: news.id})" class="news-link">
+          <div class="news-link">
+          <!--<div ui-sref="events.show.news({event_type: 'concerts', news_id: news.id})" class="news-link">--><!--MW 2015-08-04-->
             <div class="col-md-6 col-sm-12 col-xs-12">
-              <div class="thumbnail news">
-                <table>
-                  <tr>
-                    <td>
-                      <img ng-src="{{news.image_thumbnail}}" class="news-img">
-                    </td>
-                    <td class="news-content-thumb">
-                      <div class="news-title">{{ news.title }}</div>
-                      <div class="news-date">{{ news.date | date: 'MMM d, y h:mm a'}}</div>
-                      <div>{{ news.content | characters: 155: false }}</div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div> 
-          </div>  
+              <a ng-href="{{news.link}}" target="_blank"> <!--MW 2015-08-04-->
+                <div class="thumbnail news">
+                  <table>
+                    <tr>
+                      <td>
+                        <img ng-src="{{news.image_thumbnail}}" class="news-img">
+                      </td>
+                      <td class="news-content-thumb">
+                        <div class="news-title">{{news.title}}</div>
+                        <div class="news-date">{{ news.date | date: 'MMM d, y h:mm a'}}</div><!--MW TODO: date not displayed-->
+                        <div>{{ news.content | characters: 155: false }}</div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>   
       </div>
       <!-- <div class="pull-right">
