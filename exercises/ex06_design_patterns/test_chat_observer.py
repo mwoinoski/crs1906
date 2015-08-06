@@ -1,14 +1,11 @@
 """
-Unit tests for chat_observer_demo.py
+Unit tests for chat_client.py
 """
 
 __author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
 
-from ticketmanor.rest_services.chat_observer_demo import (
-    ChatHost,
-    ChatClient,
-    ChatMessage,
-)
+from chat_client import ChatClient
+from chat_room import ChatRoom, ChatMessage
 
 
 def test_two_chat_clients():
@@ -22,7 +19,7 @@ def test_two_chat_clients():
         ChatMessage('client1', 'message 6'),
     ]
 
-    chat_host = ChatHost()
+    chat_host = ChatRoom()
     chat_client1 = ChatClient('client1', chat_host)
     chat_client2 = ChatClient('client2', chat_host)
     chat_client3 = ChatClient('client3', chat_host)
