@@ -1,11 +1,12 @@
 """
 FeedReader class reads various feeds (for example, RSS, AtomPub).
 """
-from ticketmanor import util
 
 __author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
 
-from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import RssNewsFeedParser
+from .rss_news_feed_parser import (
+    RssNewsFeedParser,
+)
 
 
 class FeedReader:
@@ -14,8 +15,11 @@ class FeedReader:
         self._news_feed_parser = news_feed_parser()
 
     def get_news(self, news_type, max_items=0):
-        """Get news items of type news_type
+        """
+        Get news items of type news_type
 
         If max_items > 0, return no more than max_items news items.
-        Otherwise, returns all news items"""
+        Otherwise, returns all news items
+        """
+        # MW TODO: for ex9.1: time.sleep(1)
         return self._news_feed_parser.get_news(news_type, max_items)

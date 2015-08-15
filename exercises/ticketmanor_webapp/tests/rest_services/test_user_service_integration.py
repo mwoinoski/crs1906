@@ -113,7 +113,6 @@ class UserServiceRestIntegrationTest(unittest.TestCase):
 
     def test_delete_user_not_found(self):
         url = 'http://localhost:6543/rest/users/nobody@nowhere.com'
-        headers = {'Accept': 'application/json; charset=utf8'}
 
         res = self.testapp.delete(url, headers=headers, status=404)
 

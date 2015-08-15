@@ -92,9 +92,10 @@ def add_routes(config, prefix):
     # config.add_route('add_user_form', '/add_user_form')
     # config.add_route('add_user', '/add_user')
 
+    # http://localhost:6543/rest/events/concerts/news/news.json
     config.add_route('get_news', '/rest/news/{news_type}.json')
     config.add_route('get_news_item', '/rest/news/{news_type}/{item_id}.json')
-    # http://localhost:6543/rest/events/concerts/news/news.json
+    config.add_route('get_all_news', '/rest/news.json')
 
     config.add_route('rest_users_email', '/rest/users/{email}')
     config.add_route('rest_users', '/rest/users')

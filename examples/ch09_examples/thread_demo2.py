@@ -1,29 +1,29 @@
 """
 threading_demo2.py - threading demo from Chapter 9
 
-Defines a Thread subclass
+Creates a Thread instance directly, calls a method.
 """
 
 from threading import Thread
 from zipfile import ZipFile, ZIP_DEFLATED
 
 
-class AsyncZip(Thread):
-    """Thread subclass that zips a file"""
+class Zipper:
+    def __init__(self, name):
+        self.name = name
 
-    def __init__(self, infile, outfile):
-        super().__init__()
-        self.infile = infile
-        self.outfile = outfile
+    def zip_it(self, infile, outfile):
+        print('Zipper {} is zipping {} to {}...'
+              .format(self.name, infile, outfile))
+        f = ZipFile(outfile, 'w', ZIP_DEFLATED)
+        f.write(infile)
+        f.close()
+        print('Finished', infile)
 
-    def run(self):
-        with ZipFile(self.outfile, 'w', ZIP_DEFLATED) as f:
-            f.write(self.infile)
-        print('Finished child_process zip of:', self.infile)
-
-
-# Create an instance of the Thread subclass
-background = AsyncZip('inventory.csv', 'inventory.zip')
+zip_instance = Zipper('my_zip')
+# create a Thread instance that will call the zip_it method, passing args tuple
+background = Thread(target=Zipper.zip_it,
+                    args=(zip_instance, 'inventory.csv', 'inventory.zip'))
 
 background.start()  # start the Thread executing
 
