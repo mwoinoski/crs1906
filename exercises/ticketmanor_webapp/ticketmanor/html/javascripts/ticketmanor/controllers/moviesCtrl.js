@@ -14,7 +14,7 @@ ticketmanor_controllers.controller('moviesCtrl',['$scope', '$rootScope', '$state
     $rootScope.sports = false;
     $scope.search_param = true;
     $scope.arrows = false;
-    $scope.page_size = 6;
+    $scope.page_size = 4;
     $scope.page = 0;
 
     // change Movies search input's placeholder text when search term changes

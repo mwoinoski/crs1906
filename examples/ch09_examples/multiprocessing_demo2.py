@@ -17,9 +17,8 @@ class AsyncZip(Process):
         self.outfile = outfile
 
     def run(self):
-        f = ZipFile(self.outfile, 'w', ZIP_DEFLATED)
-        f.write(self.infile)
-        f.close()
+        with ZipFile(self.outfile, 'w', ZIP_DEFLATED) as f:
+            f.write(self.infile)
         print('Finished child_process zip of:', self.infile)
 
 

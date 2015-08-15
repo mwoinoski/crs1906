@@ -1,8 +1,12 @@
+syntax: glob
+
+.hgignore
+
+# admin script
+push_to_all.py
+
 # PyCharm workspace config
 .idea/
-
-# Mecurial repositories
-.hg/
 
 # Temp scripts
 */scripts/scratch*
@@ -30,7 +34,6 @@ bin/
 build/
 develop-eggs/
 #dist/
-!*/bower_components/bootstrap/dist/*  # TODO: fix this
 eggs/
 lib/
 lib64/

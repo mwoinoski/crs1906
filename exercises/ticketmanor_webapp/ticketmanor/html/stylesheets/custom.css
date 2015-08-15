@@ -229,8 +229,8 @@ body {
 .search-moves {
   border: 1px solid #ddd;
   background-color: rgb(247, 247, 247);
-  height: 230px;
-  padding-top: 100px;
+  height: 210px;
+  padding-top: 90px;
   margin-bottom: 20px;
   border-radius: 4px;
   cursor: pointer;
@@ -413,7 +413,7 @@ body {
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
   .scroll-pills {
-    width: 140px; 
+    min-width: 200px;
   }
 }
 

@@ -13,7 +13,7 @@ ticketmanor_controllers.controller('sportsCtrl',['$scope', '$rootScope', '$state
     $rootScope.concerts = false;
     $scope.search_param = true;
     $scope.arrows = false;
-    $scope.page_size = 6;
+    $scope.page_size = 4;
     $scope.page = 0;
 
     //MW 2015-07-28 change Sports search input's placeholder text when search term changes

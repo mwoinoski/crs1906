@@ -31,7 +31,10 @@ Install software:
 	Python 3.3.5
 		Run python-3.3.5.amd64.msi
 		Run pywin32-219.win-amd64-py3.3.exe
-		Add to PATH: C:\python\python-3.3\;C:\python\python-3.3\Scripts\;C:\python\python-3.3\Tools\Scripts\;C:\software\tcl\bin;
+	Python 3.4.3
+		Run python-3.4.3.amd64.msi
+		*TODO* Run pywin32-219.win-amd64-py3.4.exe
+		Add to PATH: C:\python\python-3.4\;C:\python\python-3.4\Scripts\;C:\python\python-3.4\Tools\Scripts\;C:\software\tcl\bin;
 	MySQL: install:
 		MySQL Server x64
 		MySQL Workbench x64
@@ -71,6 +74,7 @@ Install software:
 		pip install "mod_wsgi-4.4.11+ap24vc10-cp33-none-win_amd64.whl"
 		cd C:\Users\user\Downloads\mysql-connector-python-2.0.4
 		pip setup.py install
+	Mercurial
 
 To run Pyramid web app on Apache httpd with mod_wsgi:
 	python setup.py sdist	

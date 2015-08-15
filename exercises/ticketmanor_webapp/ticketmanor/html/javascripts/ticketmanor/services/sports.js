@@ -36,7 +36,7 @@ angular.module('ticketmanor').service('sports', ['$http', '$stateParams', '$root
         } else {
           sports.list.page_back = page-1;
         }
-        sports.list.events = response.events.splice(page*page_size, 6);
+        sports.list.events = response.events.splice(page*page_size, page_size);
     }).error(function(response) {
       toastr.error('Something went wrong');
     });

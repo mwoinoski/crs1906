@@ -6,12 +6,12 @@ Creates a Thread instance directly.
 
 
 from threading import Thread
-import zipfile
+from zipfile import ZipFile, ZIP_DEFLATED
+
 
 def zip_it(infile, outfile):
-    f = zipfile.ZipFile(outfile, 'w', zipfile.ZIP_DEFLATED)
-    f.write(infile)
-    f.close()
+    with ZipFile(outfile, 'w', ZIP_DEFLATED) as f:
+        f.write(infile)
     print('Finished', infile)
 
 # create a Thread instance that will call zip_it, passing args tuple

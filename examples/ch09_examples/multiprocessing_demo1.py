@@ -10,9 +10,8 @@ from zipfile import ZipFile, ZIP_DEFLATED
 
 
 def zip_it(infile, outfile):
-    f = ZipFile(outfile, 'w', ZIP_DEFLATED)
-    f.write(infile)
-    f.close()
+    with ZipFile(outfile, 'w', ZIP_DEFLATED) as f:
+        f.write(infile)
     print('Finished', infile)
 
 # On Windows the subprocesses will import (i.e. execute) the main module

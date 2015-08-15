@@ -36,7 +36,7 @@ angular.module('ticketmanor').service('movies', ['$http', '$stateParams', '$root
         } else {
           movies.list.page_back = page-1;
         }
-        movies.list.events = response.events.splice(page*page_size, 6);
+        movies.list.events = response.events.splice(page*page_size, page_size);
     }).error(function(response) {
       toastr.error('Something went wrong');
     });

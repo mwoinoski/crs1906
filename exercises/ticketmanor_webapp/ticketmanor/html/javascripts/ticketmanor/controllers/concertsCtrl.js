@@ -15,7 +15,7 @@ ticketmanor_controllers.controller('concertsCtrl',['$scope', '$rootScope', '$sta
     $rootScope.movies = false;
     $scope.search_param = true;
     $scope.arrows = false;
-    $scope.page_size = 6;
+    $scope.page_size = 4;
     $scope.page = 0;
     $scope.Math = window.Math;  // required to use JavaScript Math functions
 

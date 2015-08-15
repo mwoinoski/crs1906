@@ -5,7 +5,7 @@ Defines a Thread subclass
 """
 
 from threading import Thread
-import zipfile
+from zipfile import ZipFile, ZIP_DEFLATED
 import time
 import sys
 
@@ -24,9 +24,8 @@ class AsyncZip(Thread):
             sys.stdout.write(".")
             sys.stdout.flush()
         sys.stdout.write('\n')
-        f = zipfile.ZipFile(self.outfile, 'w', zipfile.ZIP_DEFLATED)
-        f.write(self.infile)
-        f.close()
+        with ZipFile(self.outfile, 'w', ZIP_DEFLATED) as f:
+            f.write(self.infile)
         print('Finished child_process zip of:', self.infile)
 
 

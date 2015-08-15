@@ -54,7 +54,8 @@
             <h2 class="search-results">Search results</h2>
           </div>
           <div class="col-md-6">
-            <div class="pull-right pages">{{((page-1)*page_size)+1}}-{{page*page_size}} of {{sports.list.events_length}}</div>
+            <div class="pull-right pages">{{((page-1)*page_size)+1}}-
+              {{page*page_size < sports.list.events_length ? page*page_size : sports.list.events_length }} of {{sports.list.events_length}}</div>
           </div>
         </div>
         <hr class="hr_line" style="margin-top:0px;">
@@ -73,20 +74,19 @@
                     <div ng-repeat="sport in sports.list.events" class="scroll-pills">
                       <div class="thumbnail pull-center fx-bounce-right fx-speed-800" 
                         ng-show="sports_list"
-                        ui-sref="events.show.event({event_type: 'sports', event_id: sport.id})"
-                        >
+                        ui-sref="events.show.event({event_type: 'sports', event_id: sport.id})">
                         <img ng-src="{{sport.image_thumbnail}}" class="news-img">
-                        <div class="">{{sport.venue_country}}</div>
-                        <div class="">{{sport.venue_city}}</div>
-                        <div class="">{{sport.venue_name}}</div>
+                        <div class="">{{sport.title}}</div>
                         <div class="">{{sport.date_time | date: 'medium'}}</div>
+                        <div class="">{{sport.venue.name}}</div>
+                        <div class="">{{sport.venue.city}}</div>
                         <div class="price">{{sport.price}}</div>
                       </div>
                     </div>
                   </td>
                   <td width="1%">
                     <div class="pull-right search-moves" 
-                      ng-hide="page*page_size == sports.list.events_length"
+                      ng-hide="page*page_size >= sports.list.events_length"
                       ng-click="search(sports, page, arrows)">
                       <i class="fa fa-chevron-right scroll-arrows"></i>
                     </div>
@@ -103,7 +103,8 @@
             <h2 class="search-results">Search results</h2>
           </div>
           <div class="col-md-5 col-sm-3 col-sx-12 alignment-right">
-            <div class="pages">{{((page-1)*page_size)+1}}-{{page*page_size}} of {{sports.list.events_length}}</div>
+            <div class="pages">{{((page-1)*page_size)+1}}-
+              {{page*page_size < sports.list.events_length ? page*page_size : sports.list.events_length }} of {{sports.list.events_length}}</div>
           </div>
           <div class="col-md-1 col-sm-2 col-xs-12 alignment-right">
             <div class="btn-group btn-group-xs" role="group" style="margin-top: 12px;">
@@ -115,7 +116,7 @@
               </button>
               <button type="button" 
                 class="btn btn-default"
-                ng-disabled="page_size*page == sports.list.events_length"
+                ng-disabled="page_size*page >= sports.list.events_length"
                 ng-click="search(sports, page, arrows)">
                 <i class="fa fa-forward scroll-arrows-sm"></i>
               </button>
@@ -156,6 +157,7 @@
       <div ng-repeat="news in news.list">
         <div ui-sref="events.show.news({event_type: 'sports', news_id: news.id})" class="news-link">
           <div class="col-md-6">
+            <a ng-href="{{news.link}}" target="_blank"> <!--MW 2015-08-04-->
             <div class="thumbnail news">
               <table>
                 <tr>
@@ -170,6 +172,7 @@
                 </tr>
               </table>
             </div>
+            </a>
           </div>
         </div> 
       </div>   

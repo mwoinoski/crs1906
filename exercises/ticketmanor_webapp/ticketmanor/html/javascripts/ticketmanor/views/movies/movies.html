@@ -9,7 +9,8 @@
                 <div class="input-group input-width">
                   <input type="text" class="form-control" style="width:60%;"
                          placeholder={{movies_search_placeholder}}
-                         ng-model="movie.single.words">
+                         ng-model="movie.single.words"
+                         ng-enter="search(movie, movie.list.page_back, arrows)">
                   <!-- MW 2015-07-28 change placeholder text when menu item changes -->
                   <select class="input-group-addon form-control" 
                     style="width:20%;"
@@ -54,7 +55,8 @@
             <h2 class="search-results">Search results</h2>
           </div>
           <div class="col-md-6">
-            <div class="pull-right pages">{{((page-1)*page_size)+1}}-{{page*page_size}} of {{movies.list.events_length}}</div>
+            <div class="pull-right pages">{{((page-1)*page_size)+1}}-
+              {{page*page_size < movies.list.events_length ? page*page_size : movies.list.events_length }} of {{movies.list.events_length}}</div>
           </div>
         </div>
         <hr class="hr_line" style="margin-top:0px;">
@@ -73,20 +75,19 @@
                     <div ng-repeat="movie in movies.list.events" class="scroll-pills">
                       <div class="thumbnail pull-center fx-bounce-right fx-speed-800" 
                         ng-show="movies_list"
-                        ui-sref="events.show.event({event_type: 'movies', event_id: movie.id})"
-                        >
+                        ui-sref="events.show.event({event_type: 'movies', event_id: movie.id})">
                         <img ng-src="{{movie.image_thumbnail}}" class="news-img">
-                        <div class="">{{movie.venue_country}}</div>
-                        <div class="">{{movie.venue_city}}</div>
-                        <div class="">{{movie.venue_name}}</div>
+                        <div class="">{{movie.title}}</div>
                         <div class="">{{movie.date_time | date: 'medium'}}</div>
+                        <div class="">{{movie.venue.name}}</div>
+                        <div class="">{{movie.venue.city}}</div>
                         <div class="price">{{movie.price}}</div>
                       </div>
                     </div>
                   </td>
                   <td width="1%">
                     <div class="pull-right search-moves" 
-                        ng-hide="page*page_size == movies.list.events_length"
+                        ng-hide="page*page_size >= movies.list.events_length"
                         ng-click="search(movies, page, arrows)">
                       <i class="fa fa-chevron-right scroll-arrows"></i>
                     </div>
@@ -103,7 +104,8 @@
             <h2 class="search-results">Search results</h2>
           </div>
           <div class="col-md-5 col-sm-3 col-sx-12 alignment-right">
-            <div class="pages">{{((page-1)*page_size)+1}}-{{page*page_size}} of {{movies.list.events_length}}</div>
+            <div class="pages">{{((page-1)*page_size)+1}}-
+              {{page*page_size < movies.list.events_length ? page*page_size : movies.list.events_length }} of {{movies.list.events_length}}</div>
           </div>
           <div class="col-md-1 col-sm-2 col-xs-12 alignment-right">
             <div class="btn-group btn-group-xs" role="group" style="margin-top: 12px;">
@@ -115,7 +117,7 @@
               </button>
               <button type="button" 
                 class="btn btn-default"
-                ng-disabled="page_size*page == movies.list.events_length"
+                ng-disabled="page_size*page >= movies.list.events_length"
                 ng-click="search(movies, page, arrows)">
                 <i class="fa fa-forward scroll-arrows-sm"></i>
               </button>
@@ -156,6 +158,7 @@
       <div ng-repeat="news in news.list">
         <div ui-sref="events.show.news({event_type: 'movies', news_id: news.id})" class="news-link">
           <div class="col-md-6">
+            <a ng-href="{{news.link}}" target="_blank"> <!--MW 2015-08-04-->
             <div class="thumbnail news">
               <table>
                 <tr>
@@ -170,7 +173,8 @@
                 </tr>
               </table>
             </div>
-          </div>  
+            </a>
+          </div>
         </div> 
       </div>   
     </div>

@@ -2,6 +2,7 @@
 fibonacci.py -
 """
 
+
 def fib(n):
     # from http://en.literateprograms.org/Fibonacci_numbers_(Python)
     if n == 0:
@@ -24,14 +25,15 @@ def main():
     for i in range(20):
         fib_seq(i)
 
+
 if __name__ == '__main__':
     print("Starting fibonacci...")
     main()
     # from timeit import timeit
     # loops = 100
-    # best_time = timeit("main()",
+    # total_time = timeit("main()",
     #                    setup="from __main__ import main",
     #                    number=loops)
-    # print('Called main() {} times in {:.3} seconds'
-    #       .format(loops, best_time))
+    # print('Called main() {} times, average time was {:.3} seconds'
+    #       .format(loops, total_time/loops))
     print("Done.")
