@@ -6,10 +6,11 @@ Creates a Thread instance directly.
 
 
 from threading import Thread
-import zipfile
+from zipfile import ZipFile, ZIP_DEFLATED
+
 
 def zip_it(infile, outfile):
-    f = zipfile.ZipFile(outfile, 'w', zipfile.ZIP_DEFLATED)
+    f = ZipFile(outfile, 'w', ZIP_DEFLATED)
     f.write(infile)
     f.close()
     print('Finished', infile)

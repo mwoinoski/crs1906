@@ -4,18 +4,19 @@ Simple (very simple!) socket-based chat server.
 
 __author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
 
-from socketserver import BaseRequestHandler, ThreadingTCPServer
+from threading import Lock
 import sys
+from socketserver import BaseRequestHandler, ThreadingTCPServer
 
 
 class ChatServer(BaseRequestHandler):
+    chat_sockets_lock = Lock()
     chat_sockets = set()
 
     def handle(self):
         print('Got connection from', self.client_address)
-
-        # Note: this code is not thread-safe. We'll fix that in chapter 9.
-        ChatServer.chat_sockets.add(self.request)
+        with ChatServer.chat_sockets_lock:
+            ChatServer.chat_sockets.add(self.request)
         while True:
             # wait for message from chat room proxy
             msg = self.request.recv(8192)
@@ -24,15 +25,17 @@ class ChatServer(BaseRequestHandler):
                 self.request.close()
                 break
             # broadcast chat_msg to all other clients
-            for socket in ChatServer.chat_sockets:
-                if socket != self.request:
-                    self.request.send(msg)
+            with ChatServer.chat_sockets_lock:
+                for socket in ChatServer.chat_sockets:
+                    if socket != self.request:
+                        self.request.send(msg)
 
     @classmethod
     def shutdown(cls):
-        for socket in cls.chat_sockets:
-            socket.shutdown()
-            socket.close()
+        with cls.chat_sockets_lock:
+            for socket in cls.chat_sockets:
+                socket.shutdown()
+                socket.close()
 
 
 def main():
