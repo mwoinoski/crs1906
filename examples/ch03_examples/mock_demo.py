@@ -19,8 +19,7 @@ class TestBusinessObject(TestCase):
 
         # create a mock for the DAO itself
         mock_dao = Mock(spec=UserDao)
-        # create a mock for the DAO's query_user method
-        mock_dao.query_user = Mock()
+        # create a mock for the DAO's query_user method and
         # set the return value of the mock method
         mock_dao.query_user.return_value = expected_result
 

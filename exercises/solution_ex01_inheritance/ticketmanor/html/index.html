@@ -1,0 +1,50 @@
+    <!DOCTYPE html>
+    <html ng-app="ticketmanor" ng-controller="AuthCtrl">
+    <head>
+        <title update-title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="javascripts/bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="javascripts/bower_components/bootstrap/dist/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="javascripts/bower_components/bootstrap/dist/css/bootstrap-theme.css.map">
+        <link rel="stylesheet" href="javascripts/bower_components/bootstrap/dist/css/bootstrap.css.map">
+        <link rel="stylesheet" href="stylesheets/cantarell.css">
+        <link rel="stylesheet" href="javascripts/bower_components/Font-Awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="javascripts/bower_components/angular-toastr/dist/angular-toastr.css">
+        <link rel="stylesheet" href="stylesheets/custom.css">
+        <link rel="stylesheet" href="stylesheets/concerts.css">
+        <link rel="stylesheet" href="stylesheets/sports.css">
+        <link rel="stylesheet" href="stylesheets/movies.css">
+        <script src="javascripts/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="javascripts/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="javascripts/bower_components/gsap/src/minified/TweenMax.min.js"></script>        
+        <script src="javascripts/bower_components/angular/angular.js"></script>
+        <script src="javascripts/bower_components/angular-truncate/src/truncate.js"></script>
+        <script src="javascripts/bower_components/angular-animate/angular-animate.js"></script>
+        <script src="javascripts/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="javascripts/bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+        <script src="javascripts/bower_components/ngFx/dist/ngFx.js"></script>
+        <script src="javascripts/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="javascripts/ticketmanor/controllers/app.js"></script>
+        <script src="javascripts/ticketmanor/controllers/homeCtrl.js"></script>
+        <script src="javascripts/ticketmanor/controllers/eventShowCtrl.js"></script>
+        <script src="javascripts/ticketmanor/controllers/AuthCtrl.js"></script>
+        <script src="javascripts/ticketmanor/controllers/concertsCtrl.js"></script>
+        <script src="javascripts/ticketmanor/controllers/sportsCtrl.js"></script>
+        <script src="javascripts/ticketmanor/controllers/moviesCtrl.js"></script>
+        <script src="javascripts/ticketmanor/controllers/newsCtrl.js"></script>
+        <script src="javascripts/ticketmanor/controllers/eventCtrl.js"></script>
+        <script src="javascripts/ticketmanor/controllers/cartCtrl.js"></script>
+        <script src="javascripts/ticketmanor/controllers/chatCtrl.js"></script>
+        <script src="javascripts/ticketmanor/services/users.js"></script>
+        <script src="javascripts/ticketmanor/services/concerts.js"></script>
+        <script src="javascripts/ticketmanor/services/sports.js"></script>
+        <script src="javascripts/ticketmanor/services/movies.js"></script>
+        <script src="javascripts/ticketmanor/services/cart.js"></script>
+        <script src="javascripts/ticketmanor/services/chat.js"></script>
+        <script src="javascripts/ticketmanor/directives/titles_directive.js"></script>
+    </head>
+    <body>
+        <div ui-view="container" ng-controller="cartCtrl"></div>
+    </body> 
+</html>

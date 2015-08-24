@@ -1,0 +1,14 @@
+.concerts-header {
+  background: url(/static/images/concerts.jpeg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 250px;
+}
+.concerts-search {
+  margin-top: 8%;
+}
+.input-width {
+  width: 100%;
+  display: inline-flex;
+}

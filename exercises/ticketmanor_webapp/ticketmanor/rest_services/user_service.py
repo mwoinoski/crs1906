@@ -8,7 +8,7 @@ from ticketmanor.models.persistence import PersistenceError
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from pyramid.view import view_config, notfound_view_config, view_defaults
-from pyramid.httpexceptions import HTTPNotFound
+from pyramid.httpexceptions import HTTPNotFound, HTTPInternalServerError
 import logging
 from ..util.utils import func_name
 from ..models.persistence.person_dao import PersonDao
@@ -59,10 +59,15 @@ class UserServiceRest:
         logger.debug("%s: request body = %s", func_name(self), json_body)
         new_user = Person()
         new_user.from_json(json_body)
-        self._dao.add(new_user, self._request.db_session)
-        return Response(
-            status_int=201,
-            content_type='application/json; charset=UTF-8')
+        try:
+            self._dao.add(new_user, self._request.db_session)
+            return Response(
+                status_int=201,
+                content_type='application/json; charset=UTF-8')
+        except Exception:
+            msg = "Could not add user {}".format(new_user)
+            logger.exception(msg)
+            raise HTTPInternalServerError(msg)
 
     @view_config(request_method='PUT',
                  route_name='rest_users')
@@ -75,8 +80,8 @@ class UserServiceRest:
         new_user.from_json(json_body)
         try:
             self._dao.update(new_user, self._request.db_session)
-        except Exception as e:
-            logger.debug("Problem updating Person " + str(new_user), exc_info=True)
+        except Exception:
+            logger.exception("Problem updating Person {}".format(new_user))
             raise HTTPNotFound()
         return Response(status_int=202)
 

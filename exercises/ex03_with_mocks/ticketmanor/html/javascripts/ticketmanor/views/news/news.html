@@ -1,0 +1,40 @@
+<div ng-controller="newsCtrl">
+  <div class="container">
+    <div class="row">
+      <div style="font-size: 15px; margin-left: 12px; margin-top:15px;"> Home / News / {{news.single.title}}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="thumbnail" style="margin: 2% 0%;">
+          <div class="news-content">
+            <div class="news-title-main">{{news.single.title}}</div>
+            <div class="news-date">
+              {{news.single.author }}, {{news.single.date | date: 'MMM d, y h:mm a'}}
+            </div>
+            <div class="news-banner">
+              <img ng-src="{{news.single.image_banner}}" class="news-banner-image">
+            </div>
+            <div class="">{{news.single.content}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style="margin: 3% 0%;">
+          <div class="related-posts">
+            RELATED POSTS
+          </div>
+          <div class="row">
+            <div class="col-md-6" ng-repeat="related in news.single.related_posts">
+              <div class="thumbnail pull-center relared-container"
+                ui-sref="events.show.news({event_type: event_type, news_id: related.id})">
+                <img ng-src="{{related.image_thumbnail}}" class="related-img">
+                <div class="news-title">{{related.title}}</div>
+                <div>{{related.content | characters : 100 }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

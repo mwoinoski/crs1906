@@ -1,0 +1,187 @@
+<div ng-controller="moviesCtrl">
+  <div class="pull-center">
+    <div class="movies-header">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 concerts-search search-bg">
+          <div class="row">
+            <div class="col-md-10">
+              <form role="form" name="movies_search_form">
+                <div class="input-group input-width">
+                  <input type="text" class="form-control" style="width:60%;"
+                         placeholder={{movies_search_placeholder}}
+                         ng-model="movie.single.words"
+                         ng-enter="search(movie, movie.list.page_back, arrows)">
+                  <!-- MW 2015-07-28 change placeholder text when menu item changes -->
+                  <select class="input-group-addon form-control" 
+                    style="width:20%;"
+                    ng-model="movie.single.event_type"
+                    ng-init="movie.single.event_type = 'Artist'"
+                    ng-change="update_movies_search_placeholder(movie.single.event_type)"> <!--MW 2015-07-28-->
+                      <option value="Artist">Title, actor, or director</option>
+                      <option value="Venue">Menu of available movies</option>
+                      <option value="Date">Date of release</option>
+                      <option value="City">City</option>
+                  </select>
+                  <select class="input-group-addon form-control" 
+                    style="width:20%;"
+                    ng-model="movie.single.location"
+                    ng-init="movie.single.location = options[0]">
+                      <option value="">Location</option>
+                      <option value="SE">SWEDEN</option>
+                      <option value="UK">UK</option>
+                      <option value="US">USA</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-default btn-block" 
+                ng-click="search(movie, page, search_param)">
+                <i class="glyphicon glyphicon-search"></i>
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- list of movies news -->
+  <div class="events">
+    <div class="fx-fade-right fx-easing-cubic fx-speed-1000" ng-show="movies_view">
+      <div class="search_scroll">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="search-results">Search results</h2>
+          </div>
+          <div class="col-md-6">
+            <div class="pull-right pages">{{((page-1)*page_size)+1}}-
+              {{page*page_size < movies.list.events_length ? page*page_size : movies.list.events_length }} of {{movies.list.events_length}}</div>
+          </div>
+        </div>
+        <hr class="hr_line" style="margin-top:0px;">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="fx-fade-right fx-easing-cubic fx-speed-1000 scroll-container">
+              <table>
+                <tr>
+                  <td width="1%">
+                    <div class="pull-left search-moves" ng-hide="page == 1"
+                        ng-click="search(movies, movies.list.page_back, arrows)">
+                      <i class="fa fa-chevron-left scroll-arrows"></i>
+                    </div>
+                  </td>
+                  <td width="98%" class="pull-center">                  
+                    <div ng-repeat="movie in movies.list.events" class="scroll-pills">
+                      <div class="thumbnail pull-center fx-bounce-right fx-speed-800" 
+                        ng-show="movies_list"
+                        ui-sref="events.show.event({event_type: 'movies', event_id: movie.id})">
+                        <img ng-src="{{movie.image_thumbnail}}" class="news-img">
+                        <div class="">{{movie.title}}</div>
+                        <div class="">{{movie.date_time | date: 'medium'}}</div>
+                        <div class="">{{movie.venue.name}}</div>
+                        <div class="">{{movie.venue.city}}</div>
+                        <div class="price">{{movie.price}}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td width="1%">
+                    <div class="pull-right search-moves" 
+                        ng-hide="page*page_size >= movies.list.events_length"
+                        ng-click="search(movies, page, arrows)">
+                      <i class="fa fa-chevron-right scroll-arrows"></i>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search_pills">
+        <div class="row">
+          <div class="col-md-6 col-sm-7 col-xs-12">
+            <h2 class="search-results">Search results</h2>
+          </div>
+          <div class="col-md-5 col-sm-3 col-sx-12 alignment-right">
+            <div class="pages">{{((page-1)*page_size)+1}}-
+              {{page*page_size < movies.list.events_length ? page*page_size : movies.list.events_length }} of {{movies.list.events_length}}</div>
+          </div>
+          <div class="col-md-1 col-sm-2 col-xs-12 alignment-right">
+            <div class="btn-group btn-group-xs" role="group" style="margin-top: 12px;">
+              <button type="button" 
+                class="btn btn-default"
+                ng-disabled="page == 1"
+                ng-click="search(movies, movies.list.page_back, arrows)">
+                <i class="fa fa-backward scroll-arrows-sm"></i>
+              </button>
+              <button type="button" 
+                class="btn btn-default"
+                ng-disabled="page_size*page >= movies.list.events_length"
+                ng-click="search(movies, page, arrows)">
+                <i class="fa fa-forward scroll-arrows-sm"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr class="hr_line">
+        <div class="row">
+          <div ng-repeat="movie in movies.list.events">
+            <div class="col-md-4 col-sm-6 col-xs-12 fx-bounce-right fx-speed-800" 
+            ng-show="movies_list"
+            ui-sref="events.show.event({event_type: 'movies', event_id: movie.id})">
+              <div class="thumbnail news" style="margin:5px;">
+                <table>
+                  <tr>
+                    <td>
+                      <img ng-src="{{movie.image_thumbnail}}" class="news-img">
+                    </td>
+                    <td class="news-content-thumb">
+                      <div>{{movie.venue_country}}</div>
+                      <div>{{movie.venue_city}}</div>
+                      <div>{{movie.venue_name}}</div>
+                      <div>{{movie.date_time | date: 'MMM d, y h:mm a'}}</div>
+                      <div class="price">{{movie.price}}</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="hr_line">
+      </div>
+    </div>
+    <h2 class="pull-center heading">News</h2>
+    <hr class="hr_line">
+    <div class="row">
+      <div ng-repeat="news in news.list">
+        <div ui-sref="events.show.news({event_type: 'movies', news_id: news.id})" class="news-link">
+          <div class="col-md-6">
+            <a ng-href="{{news.link}}" target="_blank"> <!--MW 2015-08-04-->
+            <div class="thumbnail news">
+              <table>
+                <tr>
+                  <td>
+                    <img ng-src="{{news.image_thumbnail}}" class="news-img">
+                  </td>
+                  <td class="news-content-thumb">
+                    <div class="news-title">{{ news.title }}</div>
+                    <div class="news-date">{{ news.date | date: 'MMM d, y h:mm a'}}</div>
+                    <div>{{ news.content | characters: 155: false }}</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            </a>
+          </div>
+        </div> 
+      </div>   
+    </div>
+    <!-- <div class="pull-right">
+      <a ui-sref="events.show.movies" class="label label-info">Show more 
+      <i class="fa fa-caret-square-o-right"></i>
+      </a>
+    </div> -->
+  </div>
+</div>

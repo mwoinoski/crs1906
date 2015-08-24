@@ -4,7 +4,7 @@ Read All News page.
 """
 from threading import Thread
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import queue
 from .feed_reader import (
@@ -55,4 +55,3 @@ class AllNewsFeedReader:
     def worker(self, results, news_type, max_items):
         news = self.feed_reader.get_news(news_type, max_items)
         results.put((news_type, news))
-

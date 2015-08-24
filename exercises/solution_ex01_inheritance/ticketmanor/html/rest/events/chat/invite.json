@@ -1,0 +1,58 @@
+{ 
+  "chat_user": "Shyam",
+  "conversations": [
+    {
+      "name": "Shyam",
+      "image_thumbnail": "../images/concerts-1.png",
+      "message": "Hi",
+      "time": "8:15 AM"
+    },
+    {
+      "name": "Alex",
+      "image_thumbnail": "../images/concerts-5.png",
+      "message": "Hello",
+      "time": "8:16 AM"
+    },
+    {
+      "name": "Alex",
+      "image_thumbnail": "../images/concerts-5.png",
+      "message": "How r u",
+      "time": "8:16 AM"
+    },
+    {
+      "name": "Shyam",
+      "image_thumbnail": "../images/concerts-1.png",
+      "message": "Fine, thank you",
+      "time": "8:16 AM"
+    },
+    {
+      "name": "Shyam",
+      "image_thumbnail": "../images/concerts-1.png",
+      "message": "What about u?",
+      "time": "8:16 AM"
+    },
+    {
+      "name": "Alex",
+      "image_thumbnail": "../images/concerts-5.png",
+      "message": "good",
+      "time": "8:16 AM"
+    }
+  ],
+  "attendees": [
+    {
+      "name": "Shyam",
+      "image_thumbnail": "../images/concerts-1.png",
+      "status": "online"
+    },
+    {
+      "name": "Alex",
+      "image_thumbnail": "../images/concerts-5.png",
+      "status": "online"
+    },
+    {
+      "name": "Gopi",
+      "image_thumbnail": "../images/concerts-3.png",
+      "status": "offline"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="" style="margin: 2% 0%;">
+        <div class="news-content">
+          <div ng-show="cart.list.line_items">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="title">CHECKOUT SUMMARY</span></div>
+              <div class="panel-body">
+                <table class="table table-hover">
+                  <tr class="cart-header">
+                    <td width="60%">ITEM</td>
+                    <td width="10%" class="pull-center">QTY</td>
+                    <td width="15%" class="pull-center">PRICE</td>
+                    <td width="15%" class="pull-center">SUBTOTAL</td>
+                  </tr>
+                  <tr ng-repeat="item in cart.list.line_items">
+                    <td>
+                      <table>
+                        <tr>
+                          <td>
+                            <img ng-src="{{item.image_thumbnail}}" class="news-img"
+                              style="margin-right: 10px;">
+                          </td>
+                          <td>
+                            <a class="event-title" ui-sref="events.show.event({event_type: cart.list.event_type, event_id: item.id })" target="_blank">
+                              {{ item.title }}
+                            </a>
+                            <div>{{ item.date_time | date: 'MMM d, y h:mm a' }}</div>
+                            <div>{{ item.venue_name }}</div>
+                            <div>{{ item.venue_country }}</div>
+                            <div>{{ item.venue_city }}</div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="pull-center">
+                      <span class="qty">{{ item.qty }}</span>
+                    </td>
+                    <td class="pull-center">{{ item.price }}</td>
+                    <td class="price pull-center">{{ item.sub_total }}</td>
+                  </tr>
+                </table>
+                <div class="total">Estimated Total: {{cart.list.estimated_cost}}</div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="title">PAYMENT INFORMATION</span></div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-offset-4 col-md-4 thumbnail" style="padding: 1.5%;">
+                    <form name="checkout_form" role="form" novalidate>
+                      <div class="form-group">
+                        <div class="form-group" ng-class="{'has-error' : checkout_form.card_num.$invalid && (!checkout_form.card_num.$pristine || submitted)}">
+                          <input type="text" class="form-control" 
+                            name="card_num" 
+                            placeholder="Card Number" 
+                            id="card_num" 
+                            ng-model="card.card_num"
+                            ng-pattern="/^[0-9]*$/"
+                            ng-maxlength="16"
+                            required
+                          >
+                          <div class="help-block" ng-show="checkout_form.card_num.$error.pattern && (!checkout_form.card_num.$pristine || submitted)">
+                          Invalid card number.</div>
+                          <div class="help-block" ng-show="checkout_form.card_num.$error.maxlength && (!checkout_form.card_num.$pristine || submitted)">Card number is taking more than 16 characters. </div>
+                          <div class="help-block" ng-show="checkout_form.card_num.$error.required   && (!checkout_form.card_num.$pristine || submitted)"> Card number is required. 
+                          </div>
+                        </div>
+                      </div>                  
+                      <div class="form-group">
+                        <div class="row form-row">
+                          <div class="col-md-6 col-sm-6">
+                            <div class="form-group" ng-class="{'has-error' : checkout_form.expiry_date.$invalid  && (!checkout_form.expiry_date.$pristine || submitted)}">
+                              <input type="text" class="form-control" 
+                                name="expiry_date"
+                                placeholder="mm/yyyy" 
+                                ng-model="card.expiry_date"
+                                ng-pattern="/^[0-1][0-9]/[0-9][0-9][0-9][0-9]$/"
+                                required>
+                              <div class="help-block" ng-show="checkout_form.expiry_date.$error.pattern && (!checkout_form.expiry_date.$pristine || submitted)">Invalid expiry date.
+                              </div>
+                              <div class="help-block" ng-show="checkout_form.expiry_date.$error.required && (!checkout_form.expiry_date.$pristine || submitted)"> Expiry date is required. 
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-5">
+                            <div class="form-group" ng-class="{'has-error' : checkout_form.cvv.$invalid && (!checkout_form.cvv.$pristine || submitted)}">
+                              <input type="text" class="form-control" 
+                                name="cvv"
+                                placeholder="CVV" 
+                                ng-model="card.cvv"
+                                ng-minlength="3"
+                                ng-maxlength="3" 
+                                ng-pattern="/^[0-9]*$/"
+                                required>
+                              </select>
+                              <div class="help-block" ng-show="checkout_form.cvv.$error.minlength && (!checkout_form.cvv.$pristine || submitted)">CVV should be 3 characters. </div>
+                              <div class="help-block" ng-show="checkout_form.cvv.$error.maxlength && (!checkout_form.cvv.$pristine || submitted)">CVV is taking more than 3 characters. </div>
+                              <div class="help-block" ng-show="checkout_form.cvv.$error.pattern && (!checkout_form.cvv.$pristine || submitted)">
+                              Invalid CVV number.</div>
+                              <div class="help-block" ng-show="checkout_form.cvv.$error.required && (!checkout_form.cvv.$pristine || submitted)"> CVV is required.</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-group" ng-class="{'has-error' : checkout_form.name.$invalid && (!checkout_form.name.$pristine || submitted)}">
+                          <input type="text" class="form-control" 
+                            name="name" 
+                            placeholder="Name on card" 
+                            id="name" 
+                            ng-model="card.name" required>
+                          <div class="help-block" ng-show="checkout_form.name.$error.required   && (!checkout_form.name.$pristine || submitted)"> Name is required. 
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <button type="button" class="btn btn-default btn-block" 
+                      ng-click="payment(card, cart.list.estimated_cost)" 
+                      ng-disabled="checkout_form.$invalid">
+                      Pay
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div ng-hide="cart.list.line_items">
+            <div class="alert-ticketmanor">Oops there are no items in checkout</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
