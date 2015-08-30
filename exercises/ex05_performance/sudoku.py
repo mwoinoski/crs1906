@@ -16,8 +16,13 @@
 import os
 import time
 import sys
-# TODO: import functions from measure module
-# from measure import measure, get_function_stats
+
+# TODO: import the measure and get_function_stats methods from the
+# measure module.
+...
+
+# BONUS TODO: import the measure and get_function_stats methods and
+# the decorator_enabled variable from the measure_configurable module.
 
 TRIPLETS = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 
@@ -200,8 +205,9 @@ class Sudoku:
                 answer += "   ---   ---   ---\n"
         return answer
 
-    # TODO: add measure decorator to this method
-    # @measure
+    # TODO: add the measure decorator to this method
+    # HINT: see slide 5-7
+    ...
     def check(self, level=0):
         self._changed = True
         while self._changed:
@@ -325,8 +331,8 @@ class Sudoku:
                             if row not in rows_for_x:
                                 self.cell_exclude(row, col, x)
 
-    # TODO: add measure decorator to this function
-    # @measure
+    # TODO: add the measure decorator to this function
+    ...
     def one_level_supposition(self):
         """
         Probably what is known as 'Nishio', try a number and see if it leads to
@@ -366,8 +372,8 @@ class Sudoku:
                             assert False, "All possible values for square (%i,%i) fail" \
                                 % (row, col)
 
-    # TODO: add measure decorator to this function
-    # @measure
+    # TODO: add the measure decorator to this function
+    ...
     def two_level_supposition(self):
         progress = True
         while progress:
@@ -434,7 +440,6 @@ if __name__ == "__main__":
                         print("Trying level two", end=' ')
                         solution.check(level=3)
                     if solution.solved():
-                        # print(" - Done") #MW
                         score += 1
                     else:
                         print("- Failed")
@@ -455,10 +460,10 @@ if __name__ == "__main__":
             print("\nSolution:\n")
             print(solution)
 
-            # TODO: print function stats returned by get_function_stats()
-            # print('{:^53}'.format('Function Call Stats'))
-            # print('{:24s} {:>8s}  {:22s}'
-            #       .format('Function name', 'Calls', 'Avg Time (seconds)'))
-            # print('-' * 53)
-            # for stats in get_function_stats():
-            #     print('{:24s} {:8d}  {:13.6f}'.format(*stats))
+            # TODO: call the get_function_stats() function and print the stats
+            # for all decorated functions
+            ...
+
+
+            # BONUS TODO: call get_function_stats() only if
+            # decorator_enabled is true

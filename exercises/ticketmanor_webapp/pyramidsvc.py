@@ -1,6 +1,12 @@
 """
 Script to register a Pyramid-based web app running on the CherryPy web server
-as a Windows service.
+as a Windows service. See http://www.cherrypy.org/
+    pip install cherrypy
+
+Requires PyWin32. To install in a virtual env, you need to run easy_install
+(not pip) and point directly to the PyWin32 installer:
+    easy_install C:\\Users\\user\\Downloads\\pywin32-219.win-amd64-py3.4.exe
+Ignore the SyntaxError mapi/demos/mapisend.py. It won't affect the install.
 
 You can register the service with the system by running:
     python pyramidsvc.py install
@@ -10,12 +16,9 @@ Microsoft Management Console or by running:
     python pyramidsvc.py start
 
 If you want your service to start automatically you can run:
-    python pyramidsvc.py update --start=auto
+    python pyramidsvc.py --startup=auto update
 
 From http://pyramid-cookbook.readthedocs.org/en/latest/deployment/windows.html
-
-CherryPy: http://www.cherrypy.org/
-pip install cherrypy
 """
 
 # Uncomment the next import line to get print to show up or see early 
@@ -27,14 +30,12 @@ pip install cherrypy
 import win32serviceutil
 
 PORT_TO_BIND = 80
-CONFIG_FILE = 'production.ini'
-SERVER_NAME = 'www.pyramid.example'
+CONFIG_FILE = 'development.ini'
+SERVER_NAME = 'www.ticketmanor'
 
-SERVICE_NAME = "PyramidWebService"
-SERVICE_DISPLAY_NAME = "Pyramid Web Service"
-SERVICE_DESCRIPTION = """This will be displayed as a description \
-of the serivice in the Services snap-in for the Microsoft \
-Management Console."""
+SERVICE_NAME = "TicketManor"
+SERVICE_DISPLAY_NAME = "TicketManor Web App"
+SERVICE_DESCRIPTION = "TicketManor Web App demo for Python course 1906"
 
 class PyWebService(win32serviceutil.ServiceFramework):
     """Python Web Service."""

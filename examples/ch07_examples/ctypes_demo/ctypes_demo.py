@@ -4,14 +4,14 @@ ctypes_demo.py - Demo of calling C functions using ctypes module
 
 from ctypes import cdll, c_int, cast, POINTER
 import array
-import os
+from os.path import abspath, join, split
 
 # .dll file is located in the current directory.
-# To build the DLL, run:  mingw32-make
+# To build the DLL, run:  make
 
 library = 'primes.dll'
 
-library = os.path.join(*(os.path.split(__file__)[:-1] + (library,)))
+library = join(*(split(abspath(__file__))[:-1] + (library,)))
 print("Loading DLL from " + library)
 
 library_mod = cdll.LoadLibrary(library)
@@ -19,7 +19,7 @@ library_mod = cdll.LoadLibrary(library)
 # The type of ctypes.cdll is ctypes.LibraryLoader. If you reference an
 # attribute with the same name as a DLL, the LibraryLoader loads the DLL.
 # So the following can replace the call to LoadLibrary:
-# library_mod = ctypes.cdll.primes
+# library_mod = cdll.primes
 
 # int is_prime(int)
 is_prime = library_mod.is_prime  # assign function reference to a variable
@@ -44,9 +44,9 @@ primes_c.restype = c_int
 how_many = 10000
 # create a ctype array for the buffer argument to primes_c().
 ctypes_array_class = c_int * how_many
-print("type of ctypes_array_class is {}".format(type(ctypes_array_class)))
+print("type of ctypes_array_class is", type(ctypes_array_class))
 ctypes_array = ctypes_array_class()
-print("type of ctypes_array is {}".format(type(ctypes_array)))
+print("type of ctypes_array is", type(ctypes_array))
 
 # We could combine the previous two statements into one:
 # ctypes_array = (c_int * how_many)()

@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="" style="margin: 2% 0%;">
+        <div class="news-content">
+          <div ng-show="cart.list.line_items">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="title">CART LIST</span></div>
+              <div class="panel-body">
+                <table class="table table-hover">
+                  <tr class="cart-header">
+                    <td width="60%">ITEM</td>
+                    <td width="10%" class="pull-center">QTY</td>
+                    <td width="15%" class="pull-center">PRICE</td>
+                    <td width="15%" class="pull-center">SUBTOTAL</td>
+                  </tr>
+                  <tr ng-repeat="item in cart.list.line_items">
+                    <td>
+                      <table>
+                        <tr>
+                          <td>
+                            <img ng-src="{{item.image_thumbnail}}" class="news-img"
+                              style="margin-right: 10px;">
+                          </td>
+                          <td>
+                            <a class="event-title" ui-sref="events.show.event({event_type: cart.list.event_type, event_id: item.id })" target="_blank">
+                              {{ item.title }}
+                            </a>
+                            <div>{{ item.date_time | date: 'MMM d, y h:mm a' }}</div>
+                            <div>{{ item.venue_name }}</div>
+                            <div>{{ item.venue_country }}</div>
+                            <div>{{ item.venue_city }}</div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="pull-center">
+                      <i class="fa fa-minus-circle minus" ng-click="remove_qty($index)"></i>
+                      <span class="qty">{{ item.qty }}</span>
+                      <i class="fa fa-plus-circle plus" ng-click="add_qty($index)"></i>
+                    </td>
+                    <td class="pull-center">{{ item.price }}</td>
+                    <td class="price pull-center">{{ item.sub_total }}</td>
+                  </tr>
+                </table>
+                <div class="total">Estimated Total: {{cart.list.estimated_cost}}</div>
+                <div class="order">
+                  <button class="add-cart-btn" ui-sref="root.home">
+                    <i class="fa fa-arrow-circle-left"></i>
+                    Continue shopping
+                  </button>
+                  <button class="add-cart-btn" ng-click="checkout()">Check out</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div ng-hide="cart.list.line_items">
+            <div class="alert-ticketmanor">Oops there are no items in cart</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

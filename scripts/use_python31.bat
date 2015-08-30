@@ -1,2 +1,2 @@
 @echo off
-use_python_ver 3.1
+use_python_ver python-3.1

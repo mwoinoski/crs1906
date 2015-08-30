@@ -1,6 +1,8 @@
 # Makefile
-# Run make from MinGW:
-#    mingw32-make all
+# Default goal is all
+# GNU make is installed under \cygwin\bin.
+# To build the DLL for primes, run "make" from a command prompt:
+#    make
 
 SRC=primes_c.c primes_main.c
 OBJ=$(SRC:.c=.o) # replaces the .c from SRC with .o

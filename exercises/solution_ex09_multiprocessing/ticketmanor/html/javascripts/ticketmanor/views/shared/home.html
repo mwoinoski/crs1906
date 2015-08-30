@@ -1,0 +1,37 @@
+<div ng-controller="homeCtrl">
+    <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+    <section>
+        <div class="row fx-zoom-up" ng-show="show_content">
+            <div class="col-md-12">
+                <section>    
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                        <h1 class="header-headings main-heading fx-zoom-up">
+                          Purchase tickets for your event
+                        </h1>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12 col-xs-12 pull-center">
+                        <i class="fa fa-chevron-down down-arrow"></i>
+                      </div>
+                    </div>                           
+                </section>
+            </div>
+        </div>
+        <section>
+            <div class="event-pills-row">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 pull-center pill fx-bounce-left fx-speed-1000" ng-repeat="event in events">
+                        <div class="event-pill" ui-sref="{{event.ui_state}}">
+                            <i class="{{event.icon}} pill-icon"></i>{{event.name}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="copy fx-bounce-left" ng-show="show_copy_right">
+            Copyright <i class="fa fa-copyright"></i> 2015 TicketManor.com. All rights reserved.
+        </div>
+    </section>
+</div>

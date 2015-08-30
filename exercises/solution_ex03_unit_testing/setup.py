@@ -50,7 +50,7 @@ requires = [
 
 setup(name='Exercise_3_1_Solution',
       version='1.0.0',
-      description='TicketManor',
+      description='Exercise 3.1 Solution',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
           "Programming Language :: Python",

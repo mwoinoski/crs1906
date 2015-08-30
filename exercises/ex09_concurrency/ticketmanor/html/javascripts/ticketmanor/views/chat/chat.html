@@ -1,0 +1,149 @@
+<div class="news-content">
+  <h3 class="pull-center heading" style="margin-top: 0px">Welcome To TicketManor Chat</h3>
+  <div ng-show="welcome_view">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 thumbnail" style="padding: 10px;">
+        <form name="chat_welcome_form">
+          <div class="form-group">
+            <label>Name <i class="glyphicon glyphicon-asterisk required_feild"></i></label>
+            <div class="form-group" ng-class="{'has-error' : chat_welcome_form.name.$invalid && (!chat_welcome_form.name.$pristine || submitted)}">
+              <input type="text" name="name" ng-model="chat_welcome.name" 
+                class="form-control" required>
+              <div class="help-block" ng-show="chat_welcome_form.name.$error.required && (!chat_welcome_form.name.$pristine || submitted)">Name is required. 
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email <i class="glyphicon glyphicon-asterisk required_feild"></i></label>
+            <div class="form-group" ng-class="{'has-error' : chat_welcome_form.email.$invalid && (!chat_welcome_form.email.$pristine || submitted)}">
+              <input type="email" name="email" ng-model="chat_welcome.email" 
+                class="form-control" required>
+              <div class="help-block" ng-show="chat_welcome_form.email.$error.required && (!chat_welcome_form.email.$pristine || submitted)">Email is required. 
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-default" 
+            ng-disabled="chat_welcome_form.$invalid"
+            ng-click="welcome(chat_welcome)">Start Chat</button>
+          <button class="btn btn-default" ng-click="close()">Close</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div ng-show="chat_view">
+    <p class="pull-center">You are now connected with our associate
+    <span class="heading title">Alex !</span></p>
+    <hr class="hr_line" style="margin-top: 10px; margin-bottom: 2px;">
+    <div class="chat-conversation" style="padding: 10px 20px;">
+      <div class="row" ng-repeat="conversation in chat.list.conversations">
+        <table>
+          <tr>
+            <td style="vertical-align: top;">
+              <img class="chat-thumb" src="{{conversation.image_thumbnail}}">
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>
+                    <span class="chat-name">{{conversation.name}}</span>
+                    <span class="time">{{conversation.time}}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="pull-left chat-message">{{conversation.message}}</span>  
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <hr class="hr_line" style="margin-top: 5px; margin-bottom: 10px;">
+      </div>
+    </div>
+    <div class="chat-footer">
+      <div class="panel panel-default" style="margin-bottom: 8px;">
+        <div class="panel-heading attendees">
+          ATTENDEES
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-10 col-sm-10 col-xs-10">
+              <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-4" 
+                  ng-repeat="attendee in chat.list.attendees">
+                  <table>
+                    <tr>
+                      <td>
+                        <img ng-src="{{attendee.image_thumbnail}}" class="chat-thumb">
+                        <span ng-show="attendee.status == 'online'">
+                          <i class="fa fa-circle online"> online</i>
+                        </span>
+                        <span ng-show="attendee.status == 'offline'">
+                          <i class="fa fa-circle offline"> offline</i>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="chat-name-attendees">{{attendee.name}}</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2">
+              <button class="btn btn-default pull-right" type="button" 
+                ng-click="isCollapsed = !isCollapsed">
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="row fx-fade-right fx-easing-cubic fx-speed-1000" ng-show="isCollapsed">
+            <div class="col-md-11 col-sm-11 col-xs-10">
+              <form name="invite_form">
+                <div class="form-group" ng-class="{'has-error' : invite_form.email.$invalid && (!invite_form.email.$pristine || submitted)}">
+                  <input type="text" name="email" class="form-control" ng-model="invite_email" 
+                    placeholder="Email" required>
+                <div class="help-block" ng-show="invite_form.email.$error.required && (!invite_form.email.$pristine || submitted)">Email is required.</div>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-2">
+              <button class="btn btn-default pull-right"
+               type="button"
+               ng-disabled="invite_form.$invalid"
+               ng-click="envite(invite_email)">
+                Invite
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="alert-ticketmanor-chat">
+        <div class="row">
+          <div class="col-md-11 col-sm-11 col-xs-10">
+            <form name="chat_form" ng-enter="send(message, chat.list.chat_user)">
+              <textarea class="form-control" rows="3" ng-model="message"></textarea>
+            </form>
+          </div>
+          <div class="col-md-1 col-sm-1 col-xs-2">
+            <div class="row">
+              <div class="col-md-8" style="padding: 2px;">
+                <button class="btn btn-default" type="button" ng-click="send(message, chat.list.chat_user)">
+                  Send 
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8" style="padding: 2px;">
+                <button class="btn btn-default" type="button" ng-click="close()">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

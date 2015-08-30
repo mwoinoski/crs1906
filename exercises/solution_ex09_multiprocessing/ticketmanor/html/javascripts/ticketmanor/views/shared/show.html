@@ -1,0 +1,50 @@
+<div ng-controller="eventCtrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div style="font-size: 15px; margin-top:15px;"> Home / Events / {{event.single.title}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="thumbnail" style="margin: 2% 0%;">
+          <div class="news-content">
+            <div class="pull-right">
+              <div class="price">Price: {{event.single.price}}</div>
+              <button class="add-cart-btn" ng-click="add_to_cart(event.single.id)">
+                <i class="fa fa-cart-plus"></i>
+                 Add to cart
+              </button>
+            </div>
+            <div class="news-title-main">{{event.single.title}}</div>
+            <div class="news-date">
+              {{event.single.date_time | date: 'MMM d, y h:mm a'}}
+            </div>
+            <div class="news-banner">
+              <img ng-src="{{event.single.image_banner}}" class="news-banner-image">
+            </div>
+            <div class="">{{event.single.content}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style="margin: 3% 0%;">
+          <div class="related-posts">
+            RELATED EVENTS
+          </div>
+          <div class="row">
+            <div class="col-md-6" ng-repeat="related in event.single.related_events">
+              <div class="thumbnail pull-center relared-container" 
+              ui-sref="events.show.event({event_type: event_type, event_id: related.id})">
+                <img ng-src="{{related.image_thumbnail}}" class="related-img">
+                <div class="event-title">{{related.title}}</div>
+                <div class="price">{{related.price}}</div>
+                <div>{{related.content | characters : 100 }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

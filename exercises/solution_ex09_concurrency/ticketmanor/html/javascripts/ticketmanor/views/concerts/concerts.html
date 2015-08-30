@@ -1,0 +1,199 @@
+<div ng-controller="concertsCtrl">
+  <div class="pull-center">
+    <div class="concerts-header">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 concerts-search search-bg">
+          <div class="row">
+            <div class="col-md-10">
+              <form role="form" name="concerts_search_form">
+                <div class="input-group input-width">
+                  <input type="text" class="form-control" style="width:60%;"
+                         placeholder={{concerts_search_placeholder}}
+                         ng-model="concerts.single.words"
+                         ng-enter="search(concerts, concerts.list.page_back, arrows)">
+                  <!-- ng-enter is a custom directive defined in concert.js-->
+                  <!-- MW 2015-07-28 FIXME: change placeholder text when menu item changes -->
+                  <select class="input-group-addon form-control"
+                    style="width:20%;"
+                    ng-model="concerts.single.event_type"
+                    ng-init="concerts.single.event_type = 'Artist'"
+                    ng-change="update_concerts_search_placeholder(concerts.single.event_type)"> <!--MW 2015-07-28-->
+                      <option value="Artist">Artist</option>
+                      <option value="Venue">Venue</option>
+                      <option value="Date">Date</option>
+                      <option value="City">City</option>
+                  </select>
+                  <select class="input-group-addon form-control" 
+                    style="width:20%;"
+                    ng-model="concerts.single.location"
+                    ng-init="concerts.single.location = options[0]">
+                      <option value="">Location</option>
+                      <!-- FIXME: populate menu from JSON with ng-options attribute. MW 2015-07-28
+                           ng-options="item.code as item.name for item in location_menu_options"
+                           Also see controllers/concertsCtrl.js -->
+                      <option value="SE">SWEDEN</option>
+                      <option value="UK">UK</option>
+                      <option value="US">USA</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-default btn-block" 
+                ng-click="search(concerts, page, search_param)">
+                <i class="glyphicon glyphicon-search"></i>
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- list of music news -->
+  <div ng-view="news">
+    <div class="events">
+      <div class="fx-fade-right fx-easing-cubic fx-speed-1000" ng-show="concerts_view">
+        <div class="search_scroll">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="search-results">Search results</h2>
+            </div>
+            <div class="col-md-6">
+              <!--<div class="pull-right pages">{{((page-1)*page_size)+1}} - {{Math.min(page*page_size,concerts.list.events_length)}} of {{concerts.list.events_length}}</div>-->
+              <div class="pull-right pages">{{((page-1)*page_size)+1}}-
+              {{page*page_size < concerts.list.events_length ? page*page_size : concerts.list.events_length }} of {{concerts.list.events_length}}</div>
+            </div>
+          </div>
+          <hr class="hr_line" style="margin-top:0px;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="fx-fade-right fx-easing-cubic fx-speed-1000 scroll-container">
+                <table>
+                  <tr>
+                    <td width="1%">
+                      <div class="pull-left search-moves" ng-hide="page == 1"
+                        ng-click="search(concerts, page, arrows)">
+                        <!--search() is defined as $scope.search in concertsCtrl.js-->
+                        <i class="fa fa-chevron-left scroll-arrows"
+                        ></i>
+                      </div>
+                    </td>
+                    <td width="98%" class="pull-center">
+                      <div ng-repeat="concert in concerts.list.events" class="scroll-pills">
+                        <div class="thumbnail pull-center fx-bounce-right fx-speed-800" 
+                          ng-show="concerts_list" 
+                          ui-sref="events.show.event({event_type: 'concerts', event_id: concert.event_id})">
+                          <img ng-src="{{concert.image_thumbnail}}" class="news-img">
+                          <div>{{concerts.title}}</div>
+                          <div>{{concerts.description}}</div>
+                          <div>{{concert.date_time | date: 'MMM d, y h:mm a'}}</div>
+                          <div>{{concert.venue.name}}</div>
+                          <div>{{concert.venue.city}}</div>
+                          <div class="price">{{concert.price}}</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td width="1%">
+                      <div class="pull-right search-moves" 
+                        ng-hide="page_size*page >= concerts.list.events_length"
+                        ng-click="search(concerts, page, arrows)">
+                        <i class="fa fa-chevron-right scroll-arrows"></i>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <hr class="hr_line">
+            </div>
+          </div>
+        </div>
+        <div class="search_pills">
+          <div class="row">
+            <div class="col-md-6 col-sm-7 col-xs-12">
+              <h2 class="search-results">Search results</h2>
+            </div>
+            <div class="col-md-5 col-sm-3 col-sx-12 alignment-right">
+              <div class="pages">{{((page-1)*page_size)+1}}-
+              {{page*page_size < concerts.list.events_length ? page*page_size : concerts.list.events_length }} of {{concerts.list.events_length}}</div>
+            </div>
+            <div class="col-md-1 col-sm-2 col-xs-12 alignment-right">
+              <div class="btn-group btn-group-xs" role="group" style="margin-top: 12px;">
+                <button type="button" 
+                  class="btn btn-default"
+                  ng-disabled="page == 1"
+                  ng-click="search(concerts, concerts.list.page_back, arrows)">
+                  <i class="fa fa-backward scroll-arrows-sm"></i>
+                </button>
+                <button type="button" 
+                  class="btn btn-default"
+                  ng-disabled="page_size*page >= concerts.list.events_length"
+                  ng-click="search(concerts, page, arrows)">
+                  <i class="fa fa-forward scroll-arrows-sm"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <hr class="hr_line">
+          <div class="row">
+            <div ng-repeat="concert in concerts.list.events">
+              <div class="col-md-4 col-sm-6 col-xs-12 fx-bounce-right fx-speed-800" 
+              ng-show="concerts_list"
+              ui-sref="events.show.event({event_type: 'concerts', event_id: concert.id})">
+                <div class="thumbnail news" style="margin:5px;">
+                  <table>
+                    <tr>
+                      <td>
+                        <img ng-src="{{concert.image_thumbnail}}" class="news-img">
+                      </td>
+                      <td class="news-content-thumb">
+                        <div>{{concert.venue_country}}</div>
+                        <div>{{concert.venue_city}}</div>
+                        <div>{{concert.venue_name}}</div>
+                        <div>{{concert.date_time | date: 'MMM d, y h:mm a'}}</div>
+                        <div class="price">{{concert.price}}</div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="hr_line">
+        </div>
+      </div>
+      <h2 class="pull-center heading">News</h2>
+      <hr class="hr_line">
+      <div class="row">
+        <div ng-repeat="news in news.list">
+          <div class="news-link">
+          <!--<div ui-sref="events.show.news({event_type: 'concerts', news_id: news.id})" class="news-link">--><!--MW 2015-08-04-->
+            <div class="col-md-6 col-sm-12 col-xs-12">
+              <a ng-href="{{news.link}}" target="_blank"> <!--MW 2015-08-04-->
+                <div class="thumbnail news">
+                  <table>
+                    <tr>
+                      <td>
+                        <img ng-src="{{news.image_thumbnail}}" class="news-img">
+                      </td>
+                      <td class="news-content-thumb">
+                        <div class="news-title">{{news.title}}</div>
+                        <div class="news-date">{{ news.date | date: 'MMM d, y h:mm a'}}</div><!--MW FIXME: date not displayed-->
+                        <div>{{ news.content | characters: 155: false }}</div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>   
+      </div>
+      <!-- <div class="pull-right">
+        <a ui-sref="events.show.concerts" class="label label-info">Show more 
+        <i class="fa fa-caret-square-o-right"></i>
+        </a>
+      </div> -->
+    </div>
+  </div>
+</div>
