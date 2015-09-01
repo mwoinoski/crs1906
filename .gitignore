@@ -2,22 +2,19 @@
 exercises.zip
 
 # PyCharm workspace config
-.idea/
+# .idea/
 
 # Mecurial repositories
 .hg/
 
-# Temp scripts
-*/scripts/scratch*
-*/scripts/temp*
-backups/
+# Backup directories
+#backups/
 
 # pypiserver package directory
 pypiserver_packages/
 
 # Virtual environments
-venv*
-*venv
+*venv*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -33,8 +30,9 @@ __pycache__/
 bin/
 build/
 develop-eggs/
-#dist/
-!*/bower_components/bootstrap/dist/*  # TODO: fix this
+# Don't include dist: javascript for ticketmanor has a required dist directory
+# # TODO: this was supposed to exclude/include the JS dist dir but it doesn't work
+#!*/bower_components/bootstrap/dist/*  
 eggs/
 lib/
 lib64/
