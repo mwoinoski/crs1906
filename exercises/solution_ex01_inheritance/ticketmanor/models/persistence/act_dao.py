@@ -18,7 +18,7 @@ class ActDao(BaseDao):
     Persistence methods for Act instances.
     """
 
-    # TODO: define the __init__() method
+    # TODO: define the __init__() method, with one parameter, self
     def __init__(self):
 
         # TODO: in the __init__() method, call the superclass's __init__(),

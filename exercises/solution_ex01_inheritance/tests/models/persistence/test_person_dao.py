@@ -1,14 +1,13 @@
 """
 Integration tests for PersonDao.
 """
-from ticketmanor.models.persistence import PersistenceError
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import os
 from sqlalchemy.orm import sessionmaker
-
 from unittest import TestCase
+
 from ticketmanor import engine_from_config
 from test_support.db_utils import (
     create_db_tables,
@@ -18,8 +17,10 @@ from test_support.db_utils import (
 )
 from ticketmanor.models.person import Person
 from ticketmanor.models.persistence.person_dao import PersonDao
-# The following import for Event is required. PyCharm flags it as unused, but
-# without it, SQLAlchemy raises exceptions.
+from ticketmanor.models.persistence import PersistenceError
+# The following import for Event is required. PyCharm flags it as
+# unused, but without it, SQLAlchemy raises exceptions.
+from ticketmanor.models.event import Event
 
 
 # SQLAlchemy can't connect to an in-memory SQLite database, so we'll
@@ -38,6 +39,9 @@ class PersonDaoTest(TestCase):
 
     def test_get_person_found(self):
 
+        # TODO: note the call to PersonDao.get() to fetch the data for an
+        # instance of an Person with a specific email
+        # (no code change required)
         person = self.person_dao.get('hsimpson@gmail.com', self.session)
 
         self.assertEqual(101, person.id)
@@ -63,6 +67,8 @@ class PersonDaoTest(TestCase):
                         email='wallace@wandg.com', first_name='Wallace',
                         middles='Peter', last_name='Sallis')
 
+        # TODO: note the call to PersonDao.add() to insert a database record
+        # (no code changes required)
         self.person_dao.add(person, self.session)
 
         self.session.commit()
@@ -77,6 +83,8 @@ class PersonDaoTest(TestCase):
                         email='wallace@wandg.com', first_name='Wallace',
                         middles='Dwight', last_name='Schultz')
 
+        # TODO: note the call to PersonDao.update() to update a database record
+        # (no code changes required)
         self.person_dao.update(person, self.session)
 
         self.session.commit()
@@ -89,6 +97,8 @@ class PersonDaoTest(TestCase):
 
     def test_delete_person_found(self):
 
+        # TODO: note the call to ActDao.delete() to delete a database record
+        # (no code changes required)
         self.person_dao.delete('hsimpson@gmail.com', self.session)
 
         self.session.commit()
@@ -121,6 +131,9 @@ class PersonDaoTest(TestCase):
         engine = engine_from_config(settings, 'sqlalchemy.')
         Session = sessionmaker(bind=engine)
         self.session = Session()
+
+        # TODO: note that an instance of PersonDao is stored in self.person_dao
+        # (no code change required)
         self.person_dao = PersonDao()
 
     def tearDown(self):

@@ -1,14 +1,15 @@
 """
 DAO for Venue.
 """
-from sqlalchemy.orm import joinedload
-from ticketmanor.models.persistence import PersistenceError
-from ticketmanor.models.persistence.base_dao import BaseDao
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
-from ...models.venue import Venue
+from sqlalchemy.orm import joinedload
+
 from ticketmanor.models.persistence import PersistenceError
+from ticketmanor.models.persistence.base_dao import BaseDao
+from ticketmanor.models.persistence import PersistenceError
+from ticketmanor.models.venue import Venue
 
 
 # TODO: make the VenueDao class a subclass of BaseDao
@@ -17,7 +18,7 @@ class VenueDao(BaseDao):
     Persistence methods for Venue instances.
     """
 
-    # TODO: define the __init__() method
+    # TODO: define the __init__() method, with one parameter, self
     def __init__(self):
 
         # TODO: in the __init__() method, call the superclass's __init__(),

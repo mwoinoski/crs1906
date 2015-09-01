@@ -19,8 +19,8 @@ from test_support.db_utils import (
 from ticketmanor.models.act import Act
 from ticketmanor.models.persistence.act_dao import ActDao
 
-# The following imports for Event and Venue are required.
-# Without them, SQLAlchemy raises exceptions.
+# The following imports for Event and Venue is required. PyCharm flags them as
+# unused, but without them, SQLAlchemy raises exceptions.
 from ticketmanor.models.event import Event
 from ticketmanor.models.venue import Venue
 
@@ -41,9 +41,6 @@ class ActDaoTest(TestCase):
 
     def test_get_act_found(self):
 
-        # TODO: note the call to ActDao.get() to fetch the data for an
-        # instance of an Act with a specific id
-        # (no code change required)
         act = self.act_dao.get(301, self.session)
 
         self.assertEqual(301, act.id)
@@ -63,9 +60,6 @@ class ActDaoTest(TestCase):
 
     def test_get_act_by_type_and_title_music_found(self):
 
-        # TODO: note the call to ActDao.query_for_act() to search for Acts
-        # that match the given search criteria
-        # (no code change required)
         act = self.act_dao.query_for_act(
             self.session, act_type='music',
             search_type='Artist', title='Wynton Marsalis')
@@ -140,8 +134,6 @@ class ActDaoTest(TestCase):
         act = Act(id=399, title='Joey Alexander', notes='Giant Steps',
                   act_type=1, year=2016)
 
-        # TODO: note the call to ActDao.add() to insert a database record
-        # (no code changes required)
         self.act_dao.add(act, self.session)
 
         self.session.commit()
@@ -154,8 +146,6 @@ class ActDaoTest(TestCase):
         act = Act(id=304, title='Wynton Marsalis', notes='My Favorite Things',
                   act_type=2, year=2015)
 
-        # TODO: note the call to ActDao.update() to update a database record
-        # (no code changes required)
         self.act_dao.update(act, self.session)
 
         self.session.commit()
@@ -169,8 +159,6 @@ class ActDaoTest(TestCase):
 
     def test_delete_act_found(self):
 
-        # TODO: note the call to ActDao.delete() to delete a database record
-        # (no code changes required)
         self.act_dao.delete(303, self.session)
 
         self.session.commit()
@@ -202,9 +190,6 @@ class ActDaoTest(TestCase):
         engine = engine_from_config(settings, 'sqlalchemy.')
         Session = sessionmaker(bind=engine)
         self.session = Session()
-
-        # TODO: note that an instance of ActDao is stored in self.act_dao
-        # (no code change required)
         self.act_dao = ActDao()
 
     def tearDown(self):

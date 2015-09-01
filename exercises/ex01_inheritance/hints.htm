@@ -1,0 +1,58 @@
+<html>
+<body>
+<h2>Hints for Exercise 1.1</h2>
+
+<h3>person_dao.py</h3>
+
+<font color="grey"><pre># TODO: make the PersonDao class a subclass of BaseDao</pre></font>
+<font color="blue"><pre>class PersonDao(BaseDao):</pre></font>
+<p></p>
+<font color="grey"><pre>    # TODO: define the __init__() method, with one parameter, self</pre></font>
+<font color="blue"><pre>    def __init__(self):</pre></font>
+<font color="grey"><pre>        # TODO: call the superclass's __init__(), passing two arguments:</pre></font>
+<font color="grey"><pre>        # 1. the class of the entity that will be persisted (Person)</pre></font>
+<font color="grey"><pre>        # 2. the name of the entity's ID field ('email')</pre></font>
+<font color="blue"><pre>        super().__init__(Person, 'email')</pre></font>
+
+<h3>base_dao.py</h3>
+
+<font color="grey"><pre>    def get(self, id_value, db_session):</pre></font>
+<font color="grey"><pre>        # TODO: in the next statement, make the following changes:</pre></font>
+<font color="grey"><pre>        # 1. replace Person with the value of the DAO's _entity_class attribute</pre></font>
+<font color="grey"><pre>        #    (note: there are 2 occurrences of Person)</pre></font>
+<font color="grey"><pre>        # 2. replace 'email' with the value of the DAO's _id_attr attribute</pre></font>
+<font color="blue"><pre>        entity = db_session.query(self._entity_class)\</pre></font>
+<font color="blue"><pre>                           .filter(getattr(self._entity_class,</pre></font>
+<font color="blue"><pre>                                           self._id_attr) == id_value)\</pre></font>
+<font color="blue"><pre>                           .first()</pre></font>
+<font color="grey"><pre>        return entity</pre></font>
+
+<h3>venue_dao.py</h3>
+
+<font color="grey"><pre># TODO: make the VenueDao class a subclass of BaseDao</pre></font>
+<font color="blue"><pre>class VenueDao(BaseDao):</pre></font>
+<p></p>
+<font color="grey"><pre>    # TODO: define the __init__() method</pre></font>
+<font color="blue"><pre>    def __init__(self):</pre></font>
+
+<font color="grey"><pre>        # TODO: in the __init__() method, call the superclass's __init__(),</pre></font>
+<font color="grey"><pre>        # passing two arguments:</pre></font>
+<font color="grey"><pre>        # 1. the class of the entity that will be persisted (Venue)</pre></font>
+<font color="grey"><pre>        # 2. the name of the entity's ID field ('id')</pre></font>
+<font color="blue"><pre>        super().__init__(Venue, 'id')</pre></font>
+
+<h3>act_dao.py</h3>
+
+<font color="grey"><pre># TODO: make the ActDao class a subclass of BaseDao</pre></font>
+<font color="blue"><pre>class ActDao(BaseDao):</pre></font>
+<p></p>
+<font color="grey"><pre>    # TODO: define the __init__() method</pre></font>
+<font color="blue"><pre>    def __init__(self):</pre></font>
+<font color="grey"><pre>        # TODO: in the __init__() method, call the superclass's __init__(),</pre></font>
+<font color="grey"><pre>        # passing two arguments:</pre></font>
+<font color="grey"><pre>        # 1. the class of the entity that will be persisted (Act)</pre></font>
+<font color="grey"><pre>        # 2. the name of the entity's ID field ('id')</pre></font>
+<font color="blue"><pre>        super().__init__(Act, 'id')</pre></font>
+
+</body>
+</html>

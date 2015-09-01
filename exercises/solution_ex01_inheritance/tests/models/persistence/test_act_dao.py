@@ -7,7 +7,6 @@ __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import os
 from sqlalchemy.orm import sessionmaker
-
 from unittest import TestCase
 from ticketmanor import engine_from_config
 from test_support.db_utils import (
@@ -19,8 +18,8 @@ from test_support.db_utils import (
 from ticketmanor.models.act import Act
 from ticketmanor.models.persistence.act_dao import ActDao
 
-# The following imports for Event and Venue are required.
-# Without them, SQLAlchemy raises exceptions.
+# The following imports for Event and Venue is required. PyCharm flags them as
+# unused, but without them, SQLAlchemy raises exceptions.
 from ticketmanor.models.event import Event
 from ticketmanor.models.venue import Venue
 

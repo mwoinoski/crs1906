@@ -17,14 +17,13 @@ class VenueDao:
     Persistence methods for Venue instances.
     """
 
-    # TODO: define the __init__() method
-
-
+    # TODO: define the __init__() method, with one parameter, self
+    def ...
         # TODO: in the __init__() method, call the superclass's __init__(),
         # passing two arguments:
         # 1. the class of the entity that will be persisted (Venue)
         # 2. the name of the entity's ID field ('id')
-
+        ...
 
     @classmethod
     def get_venue_by_name(cls, venue_name, db_session):

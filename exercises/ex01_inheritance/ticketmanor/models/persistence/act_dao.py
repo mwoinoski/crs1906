@@ -18,14 +18,14 @@ class ActDao:
     Persistence methods for Act instances.
     """
 
-    # TODO: define the __init__() method
-
+    # TODO: define the __init__() method, with one parameter, self
+    def ...
 
         # TODO: in the __init__() method, call the superclass's __init__(),
         # passing two arguments:
         # 1. the class of the entity that will be persisted (Act)
         # 2. the name of the entity's ID field ('id')
-
+        ...
 
     def query_for_act(self, db_session, *, act_type, search_type, **kwargs):
         """

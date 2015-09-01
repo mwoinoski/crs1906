@@ -15,7 +15,8 @@ class PersonDao:
     Persistence methods for Person instances.
     """
 
-    def __init__(self):
+    # TODO: define the __init__() method, with one parameter, self
+    def ...
         # TODO: call the superclass's __init__(), passing two arguments:
         # 1. the class of the entity that will be persisted (Person)
         # 2. the name of the entity's ID field ('email')
