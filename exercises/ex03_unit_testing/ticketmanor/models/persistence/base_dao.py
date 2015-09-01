@@ -2,7 +2,7 @@
 BaseDao is the base class for DAOs for all entities.
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import logging
 from ...util.utils import func_name

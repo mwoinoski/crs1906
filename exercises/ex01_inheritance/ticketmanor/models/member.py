@@ -2,7 +2,7 @@
 Member model class
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 # TODO: import the Person class from the person module
 from ticketmanor.models.person import Person

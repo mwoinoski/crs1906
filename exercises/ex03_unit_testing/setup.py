@@ -48,9 +48,9 @@ requires = [
     'Sphinx',       # Generates documentation from docstrings in source code
 ]
 
-setup(name='Exercise_3_1_Solution',
+setup(name='Exercise_3_1',
       version='1.0.0',
-      description='TicketManor',
+      description='Exercise 3.1',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
           "Programming Language :: Python",
@@ -60,7 +60,7 @@ setup(name='Exercise_3_1_Solution',
           "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
       ],
       author='Mike Woinoski',
-      author_email='michaelw@articulatedesign.us.com',
+      author_email='mike@articulatedesign.us.com',
       url='',
       keywords='web wsgi bfg pylons pyramid',
       packages=find_packages(),

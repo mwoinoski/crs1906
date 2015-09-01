@@ -2,7 +2,7 @@
 Unit tests for RssNewsFeedParser class.
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import unittest
 from unittest import TestCase, skip
@@ -10,9 +10,7 @@ from itertools import zip_longest
 from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import (
     RssNewsFeedParser,
 )
-from ticketmanor.rest_services.feed_reader.feed_reader_exception import (
-    FeedReaderException,
-)
+from ticketmanor.rest_services.feed_reader import FeedReaderException
 
 # TODO: note the value of the xml_input variable. This is a simulated XML RSS
 # news feed that will be used as input when testing AtomNewsFeedParser methods.

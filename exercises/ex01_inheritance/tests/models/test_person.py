@@ -5,7 +5,7 @@
    python -m unittest tests/models/test_person.py
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import unittest
 

@@ -11,9 +11,9 @@ Converted to Python 3 by running:
 from abc import ABCMeta, abstractmethod
 import urllib.request
 from xml.dom import minidom
-from ticketmanor.rest_services.feed_reader.news_type import NewsType
-from ticketmanor.rest_services.feed_reader.feed_reader_exception import (
-    FeedReaderException
+from ticketmanor.rest_services.feed_reader import (
+    NewsType,
+    FeedReaderException,
 )
 
 
@@ -37,7 +37,7 @@ class NewsFeedParser(metaclass=ABCMeta):
 
         if news_type not in NewsType.__members__:
             raise FeedReaderException(
-                news_type + ' is not a recognized news type')
+                '"{}" is not a recognized news type'.format(news_type))
 
         url = self.get_url(news_type)
 

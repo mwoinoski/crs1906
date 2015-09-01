@@ -5,7 +5,7 @@ from sqlalchemy.orm import joinedload
 from ticketmanor.models.persistence import PersistenceError
 from ticketmanor.models.persistence.base_dao import BaseDao
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import logging
 from ...util.utils import func_name

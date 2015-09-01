@@ -1,6 +1,7 @@
 """
 Pyramid View Callable for requests related to user management.
 """
+
 import json
 from pyramid.response import Response
 from ticketmanor.models.persistence import PersistenceError
@@ -10,6 +11,7 @@ __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 from pyramid.view import view_config, notfound_view_config, view_defaults
 from pyramid.httpexceptions import HTTPNotFound, HTTPInternalServerError
 import logging
+import re
 from ..util.utils import func_name
 from ..models.persistence.person_dao import PersonDao
 from ..models.person import Person
@@ -18,7 +20,6 @@ logger = logging.getLogger(__name__)
 
 
 @view_defaults(renderer='json')
-
 # TODO: you'll be testing the UserServiceRest class.
 # (no code change required)
 class UserServiceRest:
@@ -38,13 +39,15 @@ class UserServiceRest:
         # (no code change required)
         self._dao = dao()  # construct DAO instance and inject
 
-    @view_config(request_method='GET', route_name='rest_users_email')
+    def get_user_json(self):
+        email = self._request.matchdict['email']
+        return self.get_user(email)
 
+    @view_config(request_method='GET', route_name='rest_users_email')
     # TODO: you will be testing this get_user() method.
     # (no code change required)
-    def get_user(self):
+    def get_user(self, email):
         """Fetch a Person by searching for the registered email address."""
-        email = self._request.matchdict['email']
         logger.debug("%s: email = %s", func_name(self), email)
 
         # TODO: note the call to the DAO's get() method.
@@ -62,7 +65,6 @@ class UserServiceRest:
         return person
 
     @view_config(request_method='POST', route_name='rest_users')
-
     # TODO: you will be testing this add_user() method.
     # (no code change required)
     def add_user(self):
@@ -113,4 +115,4 @@ class UserServiceRest:
             self._dao.delete(email, self._request.db_session)
         except PersistenceError:
             raise HTTPNotFound()
-        return Response(status_int=202)
+        return Response(status_int=204)

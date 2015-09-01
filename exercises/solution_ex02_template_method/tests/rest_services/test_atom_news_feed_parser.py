@@ -2,10 +2,13 @@
 Unit tests for AtomNewsFeedParser class.
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest import TestCase, main
-from ticketmanor.rest_services.feed_reader.atom_news_feed_parser import AtomNewsFeedParser
+from itertools import zip_longest
+from ticketmanor.rest_services.feed_reader.atom_news_feed_parser import (
+    AtomNewsFeedParser,
+)
 
 
 class TestAtomNewsFeedParser(TestCase):
@@ -14,64 +17,35 @@ class TestAtomNewsFeedParser(TestCase):
     def test_get_news_music(self):
         feed_reader = AtomNewsFeedParser()
 
-        result = feed_reader.parse_xml_content(parse_content_input)
+        actual = feed_reader.parse_xml_content(xml_input)
 
-        for i, news_item in enumerate(result, start=0):
-            self.assertTrue(parse_content_results[i]['title'],
-                            news_item['title'])
-            self.assertTrue(parse_content_results[i]['date_time'],
-                            news_item['date_time'])
-            self.assertTrue(parse_content_results[i]['image_thumbnail'],
-                            news_item['image_thumbnail'])
-            self.assertTrue(parse_content_results[i]['image_banner'],
-                            news_item['image_banner'])
-            self.assertTrue(parse_content_results[i]['content'],
-                            news_item['content'])
-        self.assertEqual(2, i)
+        for expected_result, actual_result in zip_longest(expected, actual):
+            self.assertEquals(expected_result, actual_result)
 
     def test_get_news_max_items_1(self):
         feed_reader = AtomNewsFeedParser()
 
-        result = feed_reader.parse_xml_content(parse_content_input, max_items=1)
+        actual = feed_reader.parse_xml_content(xml_input, max_items=1)
 
-        for i, news_item in enumerate(result, start=0):
-            self.assertTrue(parse_content_results[i]['title'],
-                            news_item['title'])
-            self.assertTrue(parse_content_results[i]['date_time'],
-                            news_item['date_time'])
-            self.assertTrue(parse_content_results[i]['image_thumbnail'],
-                            news_item['image_thumbnail'])
-            self.assertTrue(parse_content_results[i]['image_banner'],
-                            news_item['image_banner'])
-            self.assertTrue(parse_content_results[i]['content'],
-                            news_item['content'])
-        self.assertEqual(0, i)
+        for expected_result, actual_result in zip_longest(expected[:1], actual):
+            self.assertEquals(expected_result, actual_result)
 
     def test_get_news_max_items_2(self):
         feed_reader = AtomNewsFeedParser()
 
-        result = feed_reader.parse_xml_content(parse_content_input, max_items=2)
+        actual = feed_reader.parse_xml_content(xml_input, max_items=2)
 
-        for i, news_item in enumerate(result, start=0):
-            self.assertTrue(parse_content_results[i]['title'],
-                            news_item['title'])
-            self.assertTrue(parse_content_results[i]['date_time'],
-                            news_item['date_time'])
-            self.assertTrue(parse_content_results[i]['image_thumbnail'],
-                            news_item['image_thumbnail'])
-            self.assertTrue(parse_content_results[i]['image_banner'],
-                            news_item['image_banner'])
-            self.assertTrue(parse_content_results[i]['content'],
-                            news_item['content'])
-        self.assertEqual(1, i)
+        for expected_result, actual_result in zip_longest(expected[:2], actual):
+            self.assertEquals(expected_result, actual_result)
 
-parse_content_input = \
+xml_input = \
     '<feed>' \
         '<entry>' \
             '<title>The Othello of Soul Music - Wall Street Journal</title>' \
             '<updated>2015-08-19T07:00:08Z</updated>' \
+            '<link type="text/html" href="http://news.google.com/news/url/1"></link>' \
             '<content>' \
-                '&lt;img src="https://t0.gstatic.com/images?q=tbn:...&gt;' \
+                '&lt;img src="https://t0.gstatic.com/images?q=tbn:..."&gt;' \
                 '&lt;div class="lh"&gt;&lt;br&gt;&lt;br&gt;&lt;font&gt;' \
                 'Otis Redding is the Othello of soul &lt;b&gt;music&lt;/b&gt;' \
                 '...&lt;/font&gt;' \
@@ -80,8 +54,9 @@ parse_content_input = \
         '<entry>' \
             '<title>Second Item</title>' \
             '<updated>2015-08-19T08:00:08Z</updated>' \
+            '<link type="text/html" href="http://news.google.com/news/url/2"></link>' \
             '<content>' \
-                '&lt;img src="https://t0.gstatic.com/images?q=tbn:...&gt;' \
+                '&lt;img src="https://t0.gstatic.com/images?q=tbn:..."&gt;' \
                 '&lt;div class="lh"&gt;&lt;br&gt;&lt;br&gt;&lt;font&gt;' \
                 'Second item content...&lt;/font&gt;' \
             '</content>' \
@@ -89,27 +64,31 @@ parse_content_input = \
         '<entry>' \
             '<title>Third Item</title>' \
             '<updated>2015-08-19T09:00:08Z</updated>' \
+            '<link type="text/html" href="http://news.google.com/news/url/3"></link>' \
             '<content>' \
-                '&lt;img src="https://t0.gstatic.com/images?q=tbn:...&gt;' \
+                '&lt;img src="https://t0.gstatic.com/images?q=tbn:..."&gt;' \
                 '&lt;div class="lh"&gt;&lt;br&gt;&lt;br&gt;&lt;font&gt;' \
                 'Third item content...&lt;/font&gt;' \
             '</content>' \
         '</entry>' \
     '</feed>'
 
-parse_content_results = [
+expected = [
     {'title': 'The Othello of Soul Music - Wall Street Journal',
-     'date_time': 'Fri, 29 May 2015 18:14:00 GMT',
+     'date_time': 'Wed, 19 Aug 2015 07:00:08 GMT',
+     'link': 'http://news.google.com/news/url/1',
      'image_thumbnail': 'https://t0.gstatic.com/images?q=tbn:...',
      'image_banner': 'https://t0.gstatic.com/images?q=tbn:...',
      'content': 'Otis Redding is the Othello of soul music...'},
     {'title': 'Second Item',
-     'date_time': 'Fri, 29 May 2015 19:25:00 GMT',
+     'date_time': 'Wed, 19 Aug 2015 08:00:08 GMT',
+     'link': 'http://news.google.com/news/url/2',
      'image_thumbnail': 'https://t0.gstatic.com/images?q=tbn:...',
      'image_banner': 'https://t0.gstatic.com/images?q=tbn:...',
      'content': 'Second item content...'},
     {'title': 'Third Item',
-     'date_time': 'Fri, 29 May 2015 20:36:00 GMT',
+     'date_time': 'Wed, 19 Aug 2015 09:00:08 GMT',
+     'link': 'http://news.google.com/news/url/3',
      'image_thumbnail': 'https://t0.gstatic.com/images?q=tbn:...',
      'image_banner': 'https://t0.gstatic.com/images?q=tbn:...',
      'content': 'Third item content...'},

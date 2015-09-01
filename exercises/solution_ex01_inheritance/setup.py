@@ -2,7 +2,29 @@ __author__ = 'Mike Woinoski mike@articulatedesign.us.com'
 
 import os
 
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, Command
+from glob import glob
+import shutil
+
+
+class CleanCommand(Command):
+    """Command class that will be used by 'setup.py clean'"""
+    user_options = []
+
+    def initialize_options(self):
+        self.cwd = None
+
+    def finalize_options(self):
+        self.cwd = os.getcwd()
+
+    def run(self):
+        assert os.getcwd() == self.cwd, 'Must be in package root: ' + self.cwd
+        for pattern in ['build', 'dist', '*.egg-info', '*.pyc', '*.tgz']:
+            for name in glob(pattern):
+                if os.path.isdir(name):
+                    shutil.rmtree(name)
+                else:
+                    os.remove(name)
 
 here = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(here, 'README.txt')) as f:
@@ -38,7 +60,7 @@ setup(name='Exercise_1_1_Solution',
           "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
       ],
       author='Mike Woinoski',
-      author_email='michaelw@articulatedesign.us.com',
+      author_email='mike@articulatedesign.us.com',
       url='',
       keywords='web wsgi bfg pylons pyramid',
       packages=find_packages(),
@@ -46,6 +68,7 @@ setup(name='Exercise_1_1_Solution',
       zip_safe=False,
       test_suite='ticketmanor',
       install_requires=requires,
+      cmdclass={'clean': CleanCommand},  # use CleanCommand class defined above
       entry_points="""\
       [paste.app_factory]
       main = ticketmanor:main

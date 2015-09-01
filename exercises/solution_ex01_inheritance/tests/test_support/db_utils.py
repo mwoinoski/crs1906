@@ -2,7 +2,7 @@
 Database utility functions.
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import sys
 import sqlite3

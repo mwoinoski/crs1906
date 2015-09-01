@@ -21,9 +21,23 @@ import json
 import requests
 
 # if you want the test cases to run in a different order, assign a new function
-# for comparing method names to the TestLoader's sortTestMethodsUsing attribute.
-# unittest.defaultTestLoader.sortTestMethodsUsing = \
-#     lambda x, y: -1 if x < y else 1 if x > y else 0
+# for comparing method names to TestLoader's sortTestMethodsUsing attribute:
+#     unittest.defaultTestLoader.sortTestMethodsUsing = \
+#         lambda x, y: -1 if x < y else 1 if x > y else 0
+
+user_ned = {
+    "email": "ned.flanders@gmail.com",
+    "first_name": "Ned",
+    "middles": "Abraham",
+    "last_name": "Flanders",
+    "address": {
+        "country": "USA",
+        "post_code": "97478",
+        "street": "125 Maple St",
+        "state": "OR",
+        "city": "Springfield"
+    }
+}
 
 user_miles = {
     "email": "miles@jazz.com",
@@ -36,30 +50,50 @@ user_miles = {
         "city": "New York",
         "post_code": "10012",
         "state": "NY"
-    },
+    }
 }
 
+# TODO: note that base_url will be used for all REST requests
+# (no code change required)
 base_url = 'http://localhost/rest/users'
 
 
-def test_020_get_user_found():
-    url = '{}/{}'.format(base_url, 'miles@jazz.com')
-    headers = {'Accept': 'application/json'}
+def test_get_user_found():
+    # TODO: you'll look up a user with GET request like this:
+    # GET http://localhost/rest/users/ned.flanders@gmail.com
+    # The GET request will return JSON data.
+    # (no code change required)
 
-    r = requests.get(url, headers=headers)
+    email = 'ned.flanders@gmail.com'
 
-    actual_result = r.json  # converts JSON in response to a Python dictionary
+    # TODO: build the URL for the GET request from base_url and email
+    # HINT: see slide 10-32
+    url = ...
+
+    # TODO: set the HTTP Accept header to 'application/json'
+    http_headers = ...
+
+    # TODO: send the GET request and store the result in a variable named 'r'
+    # HINT: you don't need to send authorization credentials.
+    r = ...
+
+    # TODO: get the JSON from the response body and assign it to a variable
+    # named 'actual_result'
+    actual_result = ...
+
     print('GET {} status {}, response = {}'
           .format(url, r.status_code, actual_result))
 
-    # update our test user with the auto-generated id
-    user_miles['id'] = actual_result['id']
+    # update our test user with the id by the database
+    user_ned['id'] = actual_result['id']
 
+    # TODO: note the assertions that test the result of the REST request
+    # (no code change required)
     assert r.status_code == 200
-    assert actual_result == user_miles
+    assert actual_result == user_ned
 
 
-def test_020_get_user_not_found():
+def test_get_user_not_found():
     url = '{}/{}'.format(base_url, 'nobody@nowhere.com')
     headers = {'Accept': 'application/json'}
 
@@ -68,56 +102,79 @@ def test_020_get_user_not_found():
     assert r.status_code == 404
 
 
-def test_010_add_user_ok():
-    url = base_url
-    http_headers = {'Content-type': 'application/json'}
+def test_add_user_ok():
+    # TODO: you'll add a new user with a POST request like this:
+    # POST http://localhost/rest/users
+    # { "email": "miles@jazz.com", "first_name": "Miles", etc. }
+    # (no code change required)
 
-    json_data = json.dumps(user_miles)
+    # TODO: set the url to base_url
+    ...
 
-    r = requests.post(url, headers=http_headers, data=json_data)
+    # TODO: set the HTTP Accept header to 'application/json'
+    ...
 
-    print('POST {} status {}'.format(url, r.status_code))
+    # TODO: convert the dictionary named user_miles to a JSON string
+    # HINT: see slide 10-33
+    ...
 
+    # TODO: send the POST request and store the result in a variable named 'r'
+    # HINT: you don't need to send authorization credentials.
+    # HINT: pass the JSON string as the data argument
+    r = ...
+
+    print('POST status {}'.format(r.status_code))
+
+    # TODO: note the assertion that tests the result of the REST request
+    # (no code change required)
     assert r.status_code == 201
 
 
-def test_030_update_user_ok():
-    url = base_url
+def test_update_user_ok():
     user_miles['middles'] = 'Dewey'
     user_miles['address']['zipcode'] = '10013'
 
-    r = requests.put_json(url, data=user_miles)
+    # TODO: you'll update an existing user with a PUT request like this:
+    # PUT http://localhost/rest/users
+    # { "email": "miles@jazz.com", "first_name": "Miles", etc. }
+    # (no code change required)
 
-    print('PUT {} status {}, response = {}'
-          .format(url, r.status_code, r.json))
+    # TODO: set the url to base_url
+    ...
 
+    # TODO: send the PUT request and store the result in a variable named 'r'
+    # HINT: you don't need to send authorization credentials.
+    # HINT: pass the JSON string as the data argument.
+    # HINT: see slide 10-34
+    r = ...
+
+    print('PUT status {}'.format(r.status_code))
+
+    # TODO: note the assertion that tests the result of the REST request
+    # (no code change required)
     assert r.status_code == 202
-    assert r.json == user_miles
-
-    # Verify user was updated
-    url = '{}/{}'.format(base_url, 'miles@jazz.com')
-    http_headers = {'Accept': 'application/json'}
-    r = requests.get(url, headers=http_headers)
-    assert r.status_code == 200
-    assert r.json == user_miles
 
 
-def test_040_delete_user_found():
-    url = '{}/{}'.format(base_url, 'miles@jazz.com')
+def test_delete_user_found():
+    # TODO: you'll delete a user with DELETE request like this:
+    # DELETE http://localhost/rest/users/ned.flanders@gmail.com
+    # (no code change required)
 
-    r = requests.delete(url)
+    # TODO: build the URL for the GET request from base_url and email
+    ...
 
-    print('DELETE {} status {}'.format(url, r.status_code))
+    # TODO: send the DELETE request and store the result in a variable 'r'
+    # HINT: you don't need to send authorization credentials.
+    r = ...
 
+    print('DELETE status {}'.format( r.status_code))
+
+    # TODO: note the assertion that tests the result of the REST request
+    # (no code change required)
     assert r.status_code == 204
 
-    # Verify user was deleted
-    http_headers = {'Accept': 'application/json'}
-    r = requests.get(url, headers=http_headers)
-    assert r.status_code == 404
 
-
-def test_040_delete_user_not_found():
+def test_delete_user_not_found():
     url = '{}/{}'.format(base_url, 'nobody@nowhere.com')
 
     r = requests.delete(url)

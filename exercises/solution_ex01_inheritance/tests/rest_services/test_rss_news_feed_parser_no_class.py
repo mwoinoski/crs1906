@@ -2,7 +2,7 @@
 Unit tests for RssNewsFeedParser class defined with no TestCase subclass.
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from itertools import zip_longest
 from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import RssNewsFeedParser
@@ -15,7 +15,7 @@ RssNewsFeedParser.get_raw_content = lambda self, url: parse_content_input
 def test_parse_content():
     feed_reader = RssNewsFeedParser()
 
-    actual = feed_reader.parse_content(parse_content_input)
+    actual = feed_reader.parse_xml_content(parse_content_input)
 
     # By using itertools.zip_longest(), assertEquals() will eventually fail
     # if the lists are not the same length
@@ -26,7 +26,7 @@ def test_parse_content():
 def test_parse_content_max_items_1():
     feed_reader = RssNewsFeedParser()
 
-    actual = feed_reader.parse_content(parse_content_input, max_items=1)
+    actual = feed_reader.parse_xml_content(parse_content_input, max_items=1)
 
     for expected_result, actual_result in zip_longest(expected[:1], actual):
         assert expected_result == actual_result
@@ -35,7 +35,7 @@ def test_parse_content_max_items_1():
 def test_parse_content_max_items_2():
     feed_reader = RssNewsFeedParser()
 
-    actual = feed_reader.parse_content(parse_content_input, max_items=2)
+    actual = feed_reader.parse_xml_content(parse_content_input, max_items=2)
 
     for expected_result, actual_result in zip_longest(expected[:2], actual):
         assert expected_result == actual_result
@@ -56,7 +56,7 @@ def test_parse_content_items_missing():
         }
     ]
 
-    actual_results = feed_reader.parse_content(minimal_input)
+    actual_results = feed_reader.parse_xml_content(minimal_input)
 
     assert minimal_results == actual_results
 

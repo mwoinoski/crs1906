@@ -56,9 +56,12 @@ def pi_async():
     # call multiprocessing.cpu_count() for number of (virtual) CPU cores
     
     chunk_size = total_samples//ntasks  # divide work into 4 chunks
-    
-    # with ThreadPoolExecutor(max_workers=ntasks) as executor:
-    with ProcessPoolExecutor() as executor:
+
+    # TODO: replace ProcessPoolExecutor with ThreadPoolExecutor
+    # HINT: add ThreadPoolExecutor constructor argument max_workers=4
+    # HINT: see slide 9-43
+    # with ProcessPoolExecutor() as executor:
+    with ThreadPoolExecutor(max_workers=ntasks) as executor:
         # spawn 4 processes. Each one calls sample_multiple() chunk_size times
         futures = [executor.submit(sample_multiple, chunk_size)
                    for _ in range(ntasks)]
@@ -74,6 +77,7 @@ def pi_async():
 if __name__ == '__main__':
     print('pi_async() returned {}'.format(pi_async()))
 
+    # TODO: add calls to timeit here
     from timeit import timeit
 
     time = timeit('pi_async()',

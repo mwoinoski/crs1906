@@ -9,8 +9,13 @@
 */scripts/temp*
 backups/
 
+# pypiserver package directory
+pypiserver_packages/
+
 # Virtual environments
 venv/
+venv27/
+venv34/
 *_venv
 Lib/
 Include/

@@ -2,7 +2,7 @@
 test_act.py - Unit tests for Act class
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest import TestCase
 from ticketmanor.models.act import Act

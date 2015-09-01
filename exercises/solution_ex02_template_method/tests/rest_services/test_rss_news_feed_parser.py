@@ -1,13 +1,15 @@
 """
 Unit tests for RssNewsFeedParser class.
 """
-from itertools import zip_longest
-from unittest.case import skip
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest import TestCase, main, skip
-from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import RssNewsFeedParser
+from itertools import zip_longest
+from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import (
+    RssNewsFeedParser,
+)
+from ticketmanor.rest_services.feed_reader import FeedReaderException
 
 
 class TestRssNewsFeedParser(TestCase):
@@ -21,12 +23,12 @@ class TestRssNewsFeedParser(TestCase):
         We discuss monkey patching in the second section of the Unit Testing
         chapter.
         """
-        RssNewsFeedParser.get_raw_content = lambda self, url: parse_content_input
+        RssNewsFeedParser.get_raw_content = lambda self, url: xml_input
 
     def test_parse_content(self):
         feed_reader = RssNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(parse_content_input)
+        actual = feed_reader.parse_xml_content(xml_input)
 
         # By using itertools.zip_longest(), assertEquals() will eventually fail
         # if the lists are not the same length
@@ -36,7 +38,7 @@ class TestRssNewsFeedParser(TestCase):
     def test_parse_content_max_items_1(self):
         feed_reader = RssNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(parse_content_input, max_items=1)
+        actual = feed_reader.parse_xml_content(xml_input, max_items=1)
 
         for expected_result, actual_result in zip_longest(expected[:1], actual):
             self.assertEquals(expected_result, actual_result)
@@ -44,7 +46,7 @@ class TestRssNewsFeedParser(TestCase):
     def test_parse_content_max_items_2(self):
         feed_reader = RssNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(parse_content_input, max_items=2)
+        actual = feed_reader.parse_xml_content(xml_input, max_items=2)
 
         for expected_result, actual_result in zip_longest(expected[:2], actual):
             self.assertEquals(expected_result, actual_result)
@@ -94,8 +96,13 @@ class TestRssNewsFeedParser(TestCase):
         for expected_result, actual_result in zip_longest(expected[:2], actual):
             self.assertEquals(expected_result, actual_result)
 
+    def test_get_news_invalid_news_type(self):
+        feed_reader = RssNewsFeedParser()
+        with self.assertRaises(FeedReaderException):
+            feed_reader.get_news('pluto')
 
-parse_content_input = \
+
+xml_input = \
     '<rss>' \
         '<item>' \
             '<title>The Othello of Soul Music - Wall Street Journal</title>' \

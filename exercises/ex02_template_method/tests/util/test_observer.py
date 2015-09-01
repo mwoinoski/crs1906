@@ -2,7 +2,7 @@
 Unit tests for Observer and Observable classes
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest import TestCase
 from unittest.mock import Mock

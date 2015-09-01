@@ -11,6 +11,10 @@ Converted to Python 3 by running:
 from abc import ABCMeta, abstractmethod
 import urllib.request
 from xml.dom import minidom
+from ticketmanor.rest_services.feed_reader import (
+    NewsType,
+    FeedReaderException,
+)
 
 
 # BONUS TODO: make NewsFeedParser an abstract base class
@@ -25,6 +29,10 @@ class NewsFeedParser(metaclass=ABCMeta):
 
     def get_news(self, news_type, max_items=0):
         """Return latest news for a news website."""
+
+        if news_type not in NewsType.__members__:
+            raise FeedReaderException(
+                '"{}" is not a recognized news type'.format(news_type))
 
         # TODO: note the call to the subclass's override of
         # the get_url() method to get the URL of the news feed.

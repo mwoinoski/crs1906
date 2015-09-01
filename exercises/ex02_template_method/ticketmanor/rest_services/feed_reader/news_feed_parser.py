@@ -11,6 +11,10 @@ Converted to Python 3 by running:
 from abc import ABCMeta, abstractmethod
 import urllib.request
 from xml.dom import minidom
+from ticketmanor.rest_services.feed_reader import (
+    NewsType,
+    FeedReaderException,
+)
 
 
 # BONUS TODO: make NewsFeedParser an abstract base class
@@ -23,11 +27,12 @@ class NewsFeedParser:
 
     # TODO: paste methods from rss_news_feed_parser here
 
+
     # BONUS TODO: define get_url() as an abstract method
 
     # BONUS TODO: define parse_item() as an abstract method
 
-    # BONUS TODO 2: convert parse_item() into a generator function that yields
+    # BONUS TODO 2: convert parse_xml_content() into a generator function that yields
     # a single parsed item each time it's called.
     # HINT: delete the parse_content list completely. Instead of appending
     # each parsed item to a list, yield it from the generator.

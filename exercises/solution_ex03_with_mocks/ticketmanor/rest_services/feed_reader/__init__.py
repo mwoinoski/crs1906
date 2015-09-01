@@ -1,6 +1,6 @@
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
-from enum import Enum, unique
+from enum import Enum
 
 
 class FeedReaderException(Exception):
@@ -8,10 +8,10 @@ class FeedReaderException(Exception):
     pass
 
 
-@unique
 class NewsType(Enum):
     """Valid news types for news feeds"""
-    music = 0,
+    concerts = 0,
+    music = 0,  # duplicate value ok
     sports = 1,
     theater = 2,
     movies = 3

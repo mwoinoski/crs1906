@@ -9,7 +9,7 @@ import inspect
 import json
 
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 # Define table that maps characters to HTML entities.
 # Use a list of tuples instead of a dictionary to ensure that amp is

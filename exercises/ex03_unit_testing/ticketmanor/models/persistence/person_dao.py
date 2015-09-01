@@ -2,7 +2,7 @@
 DAO for Person.
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import logging
 from ...models.person import Person

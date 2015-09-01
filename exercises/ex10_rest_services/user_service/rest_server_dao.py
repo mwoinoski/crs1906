@@ -1,97 +1,139 @@
 """
 rest_server_dao.py - DAO for REST server in rest_server.py
 """
+
 import re
 import sqlite3
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 
-tasks = [
+users = [
     {
-        'id': 1,
-        'title': 'Teach cat Spanish',
-        'description': 'Needs to work on irregular verbs',
-        'done': False
+        "email": "ned.flanders@gmail.com",
+        "first_name": "Ned",
+        "middles": "Abraham",
+        "last_name": "Flanders",
+        "address": {
+            "street": "125 Maple St",
+            "post_code": "97478",
+            "city": "Springfield",
+            "state": "OR",
+            "country": "USA",
+        }
     },
     {
-        'id': 2,
-        'title': 'Untangle Gordian knot',
-        'description': 'Remember what happened last time',
-        'done': False
-    }
+        "email": "monty.burns@burns.com",
+        "first_name": "Montgomery",
+        "middles": "Flint",
+        "last_name": "Burns",
+        "address": {
+            "street": "1 Hill St",
+            "post_code": "97478",
+            "city": "Springfield",
+            "state": "OR",
+            "country": "USA",
+        }
+    },
 ]
-
-_next_task_id = len(tasks) + 1
 
 
 def get_password(username):
-    pw = None
-    if re.match(r'^[A-Za-z0-9._-]+$', username):  # validate username
-        conn = sqlite3.connect('rest_server.sqlite')
-        c = conn.cursor()
-        c.execute('SELECT password FROM users WHERE username=?', (username,))
-        pw = c.fetchone()  # TODO: add decryption
-        pw = pw[0] if len(pw) > 0 else None
-    return pw
+    # pw = None
+    # if re.match(r'^[A-Za-z0-9._-]+$', username):  # validate username
+    #     conn = sqlite3.connect('rest_server.sqlite')
+    #     c = conn.cursor()
+    #     c.execute('SELECT password FROM users WHERE username=?', (username,))
+    #     pw = c.fetchone()  # FIXME: add decryption
+    #     pw = pw[0] if len(pw) > 0 else None
+    # return pw
+    return 'studentpw'
 
 
-def get_all_tasks():
-    # tasks = []
+def get_all_users():
+    # users = []
     # conn = sqlite3.connect('rest_server.db')
     # c = conn.cursor()
-    # for row in c.execute('SELECT * FROM todo_tasks'):
-    #     tasks.append(_make_task(row))
-    return tasks
+    # for row in c.execute('SELECT * FROM todo_users'):
+    #     users.append(_make_user(row))
+    return users
 
-def _make_task(row):
-    return {'id': row[0],
-            'title': row[1],
-            'description': row[2],
-            'done': row[3] != 0}
 
-def get_task(task_id):
+# def _make_user(row):
+#     return {
+#         "email": row[0],
+#         "first_name": row[1],
+#         "middles": row[2],
+#         "last_name": row[3],
+#         "address": {
+#             "street": row[4],
+#             "post_code": row[5],
+#             "city": row[6],
+#             "state": row[7],
+#             "country": row[8],
+#         }
+#     }
+
+
+def get_user(email):
     # conn = sqlite3.connect('rest_server.db')
     # c = conn.cursor()
-    # c.execute('SELECT * FROM todo_tasks')
-    # task_list = c.fetchone()
-    task_list = [t for t in tasks if t['id'] == task_id]
-    return task_list[0] if len(task_list) > 0 else None
+    # c.execute('SELECT * FROM todo_users')
+    # user_list = c.fetchone()
+    user_list = [t for t in users if t['email'] == email]
+    return user_list[0] if len(user_list) > 0 else None
 
 
-def create_task(title, description, done):
+def create_user(email, first_name, middles, last_name, street, post_code,
+                city, state, country):
     # conn = sqlite3.connect('rest_server.db')
     # c = conn.cursor()
-    # c.execute("""INSERT INTO todo_tasks VALUES (?, ?, ?)""",
+    # c.execute("""INSERT INTO todo_users VALUES (?, ?, ?)""",
     #           (title, description, 1 if done else 0))
-    # TODO: sanitize inputs
-    global _next_task_id
-    task = {
-        'id': _next_task_id,
-        'title': title,
-        'description': description,
-        'done': done
+    # FIXME: sanitize inputs
+    user = {
+        "email": email,
+        "first_name": first_name,
+        "middles": middles,
+        "last_name": last_name,
+        "address": {
+            "street": street,
+            "post_code": post_code,
+            "city": city,
+            "state": state,
+            "country": country,
+        }
     }
-    _next_task_id += 1
-    tasks.append(task)
-    return task
+    users.append(user)
+    return user
 
 
-def update_task(task_id, title, description, done):
-    task = get_task(task_id)
-    if task is not None:
-        if title is not None:
-            task['title'] = title
-        if description is not None:
-            task['description'] = description
-        if done is not None:
-            task['done'] = done
-    return task
+def update_user(email, first_name, middles, last_name, street, post_code,
+                city, state, country):
+    user = get_user(email)
+    if user is not None:
+        if first_name is not None:
+            user['first_name'] = first_name
+        if middles is not None:
+            user['middles'] = middles
+        if last_name is not None:
+            user['last_name'] = last_name
+        if street is not None:
+            user['address']['street'] = street
+        if post_code is not None:
+            user['address']['post_code'] = post_code
+        if city is not None:
+            user['address']['city'] = city
+        if state is not None:
+            user['address']['state'] = state
+        if country is not None:
+            user['address']['country'] = country
+    return user
 
 
-def delete_task(task_id):
-    task_list = [t for t in tasks if t['id'] == task_id]
-    if len(task_list) != 0:
-        tasks.remove(task_list[0])
+def delete_user(email):
+    user_list = [t for t in users if t['email'] == email]
+    if len(user_list) != 0:
+        users.remove(user_list[0])
         return True
     return False

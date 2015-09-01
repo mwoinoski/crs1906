@@ -132,4 +132,8 @@ class AllNewsFeedReader:
         # TODO: put the typed_news object on results_q
         ...
 
+        # To compare performance with the serial version of ticketmanor,
+        # add a pause to this method:
+        # import time; time.sleep(2)
+
         # TODO: complete the remaining steps in the get_news() method

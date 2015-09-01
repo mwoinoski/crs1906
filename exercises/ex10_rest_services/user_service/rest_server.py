@@ -2,9 +2,11 @@
 rest_server.py - Simple REST server based on Flask.
 """
 
+# TODO: note the Flask imports
+# (no code change required)
 from flask import (Flask, jsonify, abort, request, make_response, url_for,
                    Response)
-from flask.ext.httpauth import HTTPBasicAuth
+from flask.ext.httpauth import HTTPBasicAuth  # ignore the PyCharm error here
 
 import rest_server_dao
 
@@ -13,12 +15,17 @@ app = Flask(__name__, static_url_path="")
 auth = HTTPBasicAuth()
 
 
+# TODO: note the definition of the Flask authentication callback function
+# (no code change required)
 @auth.get_password
 def get_password(username):
     """Callback function that returns the password for username"""
     return rest_server_dao.get_password(username)
 
 
+# TODO: note the definition of the Flask error handler for requests without
+# valid login credentials
+# (no code change required)
 @auth.error_handler
 def unauthorized():
     return make_response(jsonify({'error': 'Unauthorized access'}), 401)
@@ -38,86 +45,173 @@ def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
 
-def make_public_user(user):
-    """Add a uri attribute to a user.
-
-    The client uses the user's uri to perform operations on the user by
-    accessing the uri with HTTP GET, PUT, or DELETE."""
-    new_user = {}
-    for field in user:
-        if field == 'id':
-            new_user['uri'] = url_for('get_user', user_id=user['id'],
-                                      _external=True)
-        else:
-            new_user[field] = user[field]
-    return new_user
-
-
+# TODO: note the setting of the base URI
+# (no code change required)
 BASE_URI = '/rest/users'
 
 
-@app.route(BASE_URI, methods=['GET'])
-@auth.login_required
+# TODO: add a Flask decorator here so that a GET request to BASE_URI is mapped
+# to the get_users() method below
+# HINT: see slide 10-26
+...
+# TODO: add decorator that specifies the request must include valid credentials
+...
 def get_users():
     app.logger.info('Getting all users')
-    users = [make_public_user(user)
-             for user in rest_server_dao.get_all_users()]
-    return jsonify({'users': users})
+
+    # TODO: note how we delegate the look up of the users to a DAO and
+    # assign the list of users to the variable 'users'
+    # (no code change required)
+    users = rest_server_dao.get_all_users()
+
+    # TODO: return a jsonified dictionary with key of 'users' and value of
+    # the users list
+    # HINT: see slide 10-22
+    return ...
 
 
-@app.route(BASE_URI + '/<user_id>', methods=['GET'])
-@auth.login_required
-def get_user(user_id):
-    app.logger.info('Getting user %d', user_id)
-    user = rest_server_dao.get_user(user_id)
-    if user is None:
-        abort(404)
-    return jsonify({'user': make_public_user(user)})
+# TODO: add a Flask decorator here so that a GET request
+# to BASE_URI+'/<email>' is mapped to the get_user() method below.
+# HINT: the type of email is string, not int
+# HINT: see slide 10-23
+...
+# TODO: add decorator that specifies the request must include valid credentials
+...
+def get_user(email):
+    app.logger.info('Getting user %s', email)
+
+    # TODO: note how we delegate the look up of the user to a DAO and
+    # assign the user to the variable 'user'
+    # (no code change required)
+    user = rest_server_dao.get_user(email)
+
+    # TODO: if user is None, abort with HTTP status 404
+    if ...
+
+    # TODO: return a jsonified dictionary with key of 'user' and value of
+    # the user
+    return ...
 
 
-@app.route(BASE_URI, methods=['POST'])
-@auth.login_required
+# TODO: add a decorator so a POST request to BASE_URI is mapped create_users()
+# HINT: see slide 10-24
+...
+# TODO: add decorator that specifies the request must include valid credentials
+...
 def create_user():
-    if not request.json or 'title' not in request.json:
-        abort(400)
-    title = request.json['title']
-    desc = request.json.get('description', '')
-    done = False
-    app.logger.info('Creating user "%s", "%s", %d', title, desc, done)
-    user = rest_server_dao.create_user(title, desc, done)
-    return jsonify({'user': make_public_user(user)}), 201  # 201 == Created
+    # TODO: add a test to ensure that the request body contains JSON and
+    # the JSON has a member named 'email'. Abort with status 400 if the
+    # test fails.
+    if ...
+
+    # TODO: get the email from the request JSON and assign it to a variable
+    # named 'email'
+    email = ...
+    app.logger.info('Creating user %s', email)
+
+    # TODO: note how we get the rest of the input data from the request
+    # (no code change required)
+    first_name = request.json.get('first_name', '')
+    middles = request.json.get('middles', '')
+    last_name = request.json.get('last_name', '')
+    street = request.json['address'].get('street', '')
+    post_code = request.json['address'].get('post_code', '')
+    city = request.json['address'].get('city', '')
+    state = request.json['address'].get('state', '')
+    country = request.json['address'].get('country', '')
+
+    # TODO: note how we delegate the creation of the user to a DAO and
+    # assign the new user to the variable 'user'
+    # (no code change required)
+    user = rest_server_dao.create_user(email, first_name, middles, last_name,
+                                       street, post_code, city, state, country)
+
+    # TODO: return two values:
+    # 1. a jsonified dictionary with key of 'user' and value of the new user
+    # 2. HTTP status 201
+    return ...
 
 
-@app.route(BASE_URI + '/<user_id>', methods=['PUT'])
-@auth.login_required
-def update_user(user_id):
-    if not request.json:
-        abort(400)
-    if 'title' in request.json and not isinstance(request.json['title'], str):
-        abort(400)
-    if 'description' in request.json \
-            and not isinstance(request.json['description'], str):
-        abort(400)
-    if 'done' in request.json and not isinstance(request.json['done'], bool):
-        abort(400)
-    title = request.json.get('title')
-    desc = request.json.get('description')
-    done = request.json.get('done')
-    app.logger.info('Updating user %d (s" "%s" %s)',
-                    user_id, title, desc, '' if done is None else str(done))
-    user = rest_server_dao.update_user(user_id, title, desc, done)
-    if user is None:
+# TODO: add a Flask decorator here so that a PUT request
+# to BASE_URI+'/<email>' is mapped to the update_user() method below.
+...
+# TODO: add decorator that specifies the request must include valid credentials
+...
+def update_user(email):
+    # TODO: add a test to ensure that the request body contains JSON.
+    # Abort with status 400 if the test fails.
+    ...
+
+    # TODO: get the email from the request JSON and assign it to a variable
+    # named 'email'
+    email = ...
+    app.logger.info('Updating user %s', email)
+
+    # TODO: note how we get the rest of the input data from the request
+    # (no code change required)
+    first_name = request.json.get('first_name', '')
+    middles = request.json.get('middles', '')
+    last_name = request.json.get('last_name', '')
+    street = request.json['address'].get('street', '')
+    post_code = request.json['address'].get('post_code', '')
+    city = request.json['address'].get('city', '')
+    state = request.json['address'].get('state', '')
+    country = request.json['address'].get('country', '')
+
+    # TODO: note how we delegate the update of the user to a DAO and
+    # assign the modified user to the variable 'user'
+    # (no code change required)
+    user = rest_server_dao.update_user(email, first_name, middles, last_name,
+                                       street, post_code, city, state, country)
+
+    # TODO: if user is None, abort with HTTP status 404
+    ...
+
+    # TODO: return two values:
+    # 1. a jsonified dictionary with key of 'user' and value of the new user
+    # 2. HTTP status 202
+    ...
+
+
+# TODO: add a Flask decorator here so that a DELETE request
+# to BASE_URI+'/<email>' is mapped to the delete_user() method below.
+...
+# TODO: add decorator that specifies the request must include valid credentials
+...
+def delete_user(email):
+    app.logger.info('Deleting user %s', email)
+
+    # TODO: note how we delegate the deletion of the user to a DAO.
+    # (no code change required)
+    if not rest_server_dao.delete_user(email):
+        app.logger.error("User %s not found, can't delete", email)
         abort(404)
-    return jsonify({'user': make_public_user(user)}), 202  # 202 == Accepted
+
+    # TODO: return HTTP response 204
+    # HINT: see slide 10-25
+    ...
 
 
-@app.route(BASE_URI + '/<user_id>', methods=['DELETE'])
-@auth.login_required
-def delete_user(user_id):
-    app.logger.info('Deleting user %d', user_id)
-    if not rest_server_dao.delete_user(user_id):
-        abort(404)
-    return Response(status=204)  # 204 == No Content
+def make_public_user(user):
+    """
+    Add a uri attribute to a task.
+
+    The client uses the task's URI to perform operations on the task by
+    accessing the uri with HTTP GET, PUT, or DELETE. This is a more RESTful
+    technique than relying on a primary key from the database, because the
+    URI does not need to map directly to an implementation artifact. The URI
+    is simply a hyperlink; if the location of the task later changes, the
+    client can still use the original URI, and the service can map the URI to
+    the new resource location.
+    """
+    new_user = {}
+    for field in user:
+        if field == 'email':
+            # Add a uri field to the returned record.
+            new_user['uri'] = url_for('get_user', email=user['email'],
+                                      _external=True)
+        new_user[field] = user[field]
+    return new_user
 
 
 if __name__ == '__main__':

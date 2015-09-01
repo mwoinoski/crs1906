@@ -69,7 +69,7 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
                         'street_address': '881 7th Ave, New York, NY 10019',
                         'city': 'New York'
                     },
-                    # 'price': '$180'  # TODO: uncomment when database schema is complete
+                    # 'price': '$180'  # FIXME: uncomment when database schema is complete
                     # 'image_thumbnail': '/static/images/concerts-1.png',
                     # 'image_banner': '/static/images/concerts.jpg',
                 },
@@ -130,7 +130,7 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
         res = self.testapp.get(url, headers=headers, status=200)
 
         res_list = json.loads(str(res.body, 'utf-8'))
-        for e in res_list['events']:  # TODO: delete when database schema is complete
+        for e in res_list['events']:  # FIXME: delete when database schema is complete
             del e['price']
             del e['image_thumbnail']
             del e['image_banner']

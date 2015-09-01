@@ -48,9 +48,9 @@ requires = [
     'Sphinx',       # Generates documentation from docstrings in source code
 ]
 
-setup(name='Exercise_3_1',
+setup(name='Exercise_3_2',
       version='1.0.0',
-      description='Exercise 3.1',
+      description='Exercise 3.2',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
           "Programming Language :: Python",

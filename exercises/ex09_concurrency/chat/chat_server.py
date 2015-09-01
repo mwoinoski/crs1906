@@ -15,13 +15,11 @@ class ChatServer(BaseRequestHandler):
 
     Each ChatServer instance handles a single client conversation.
     """
-    chat_sockets_lock = Lock()
     chat_sockets = set()
 
     def handle(self):
         print('Got connection from', self.client_address)
-        with ChatServer.chat_sockets_lock:
-            ChatServer.chat_sockets.add(self.request)
+        ChatServer.chat_sockets.add(self.request)
         try:
             while True:
                 # wait for message from chat client or chat room proxy
@@ -29,26 +27,23 @@ class ChatServer(BaseRequestHandler):
                 if not msg:  # client closed socket
                     break
                 # broadcast msg to all other clients
-                with ChatServer.chat_sockets_lock:
-                    for socket in ChatServer.chat_sockets:
-                        if socket != self.request:  # don't send msg to sender
-                            socket.send(msg)
+                for socket in ChatServer.chat_sockets:
+                    if socket != self.request:  # don't send msg to sender
+                        socket.send(msg)
         except ConnectionError:  # client terminated abruptly
             pass
         finally:
             # the client closed the connection, so we'll remove the client's
             # socket from the chat_sockets set
-            with ChatServer.chat_sockets_lock:
-                ChatServer.chat_sockets.remove(self.request)
+            ChatServer.chat_sockets.remove(self.request)
             if self.request:
                 self.request.close()
 
     @classmethod
     def shutdown(cls):
-        with cls.chat_sockets_lock:
-            for socket in cls.chat_sockets:
-                if socket:
-                    socket.close()
+        for socket in cls.chat_sockets:
+            if socket:
+                socket.close()
 
 
 @atexit.register

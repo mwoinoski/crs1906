@@ -6,7 +6,7 @@ Unit tests for Address
    python -m unittest ticketmanor/tests/person_test.py
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import unittest
 

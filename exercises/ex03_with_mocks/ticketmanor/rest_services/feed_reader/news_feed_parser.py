@@ -34,7 +34,7 @@ class NewsFeedParser(metaclass=ABCMeta):
 
         if news_type not in NewsType.__members__:
             raise FeedReaderException(
-                news_type + ' is not a recognized news type')
+                '"{}" is not a recognized news type'.format(news_type))
 
         url = self.get_url(news_type)
 

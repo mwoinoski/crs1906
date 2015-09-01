@@ -22,7 +22,7 @@ from ticketmanor.rest_services.feed_reader.news_feed_parser import (
 
 # TODO: make AtomNewsFeedParser a subclass of NewsFeedParser
 class AtomNewsFeedParser:
-    """Parses a AtomPub news feed"""
+    """Parses an AtomPub news feed"""
     feed_type = 'atom'
 
     def __init__(self):
@@ -91,7 +91,7 @@ class AtomNewsFeedParser:
             match = re.match(r'.*?<div class="lh">.*?<br>.*?<br>.*?'
                              r'<font[^>]*>(.*?)</font>.*', desc_html)
             if match:
-                parsed_item['content'] = match.group(1)
+                parsed_item['content'] = re.sub(r'</?b>', '', match.group(1))
         except IndexError:
             pass
         try:

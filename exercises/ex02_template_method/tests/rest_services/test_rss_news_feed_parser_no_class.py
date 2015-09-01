@@ -2,7 +2,7 @@
 Unit tests for RssNewsFeedParser class defined with no TestCase subclass.
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from itertools import zip_longest
 from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import RssNewsFeedParser

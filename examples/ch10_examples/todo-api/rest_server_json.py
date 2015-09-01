@@ -5,7 +5,8 @@ http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flas
 
 from flask import (Flask, jsonify, abort, request, make_response, url_for,
                    Response)
-from flask.ext.httpauth import HTTPBasicAuth
+from flask.ext.httpauth import HTTPBasicAuth  # ignore PyCharm error
+# pip install Flask-HTTPAuth
 
 import rest_server_dao
 
@@ -41,21 +42,6 @@ def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
 
-def make_public_task(task):
-    """Add a uri attribute to a task.
-
-    The client uses the task's uri to perform operations on the task by
-    accessing the uri with HTTP GET, PUT, or DELETE."""
-    new_task = {}
-    for field in task:
-        if field == 'id':
-            new_task['uri'] = url_for('get_task', task_id=task['id'],
-                                      _external=True)
-        else:
-            new_task[field] = task[field]
-    return new_task
-
-
 BASE_URI = '/todo/api/v1.0/tasks'
 
 
@@ -63,8 +49,7 @@ BASE_URI = '/todo/api/v1.0/tasks'
 @auth.login_required
 def get_tasks():
     app.logger.info('Getting all tasks')
-    tasks = [make_public_task(task)
-             for task in rest_server_dao.get_all_tasks()]
+    tasks = rest_server_dao.get_all_tasks()
     return jsonify({'tasks': tasks})
 
 
@@ -75,7 +60,7 @@ def get_task(task_id):
     task = rest_server_dao.get_task(task_id)
     if task is None:
         abort(404)
-    return jsonify({'task': make_public_task(task)})
+    return jsonify({'task': task})
 
 
 @app.route(BASE_URI, methods=['POST'])
@@ -88,7 +73,7 @@ def create_task():
     done = False
     app.logger.info('Creating task "%s", "%s", %d', title, desc, done)
     task = rest_server_dao.create_task(title, desc, done)
-    return jsonify({'task': make_public_task(task)}), 201  # 201 == Created
+    return jsonify({'task': task}), 201  # 201 == Created
 
 
 @app.route(BASE_URI + '/<int:task_id>', methods=['PUT'])
@@ -111,7 +96,7 @@ def update_task(task_id):
     task = rest_server_dao.update_task(task_id, title, desc, done)
     if task is None:
         abort(404)
-    return jsonify({'task': make_public_task(task)}), 202  # 202 == Accepted
+    return jsonify({'task': task}), 202  # 202 == Accepted
 
 
 @app.route(BASE_URI + '/<int:task_id>', methods=['DELETE'])
@@ -121,6 +106,28 @@ def delete_task(task_id):
     if not rest_server_dao.delete_task(task_id):
         abort(404)
     return Response(status=204)  # 204 == No Content
+
+
+def make_public_task(task):
+    """
+    Add a uri attribute to a task.
+
+    The client uses the task's URI to perform operations on the task by
+    accessing the uri with HTTP GET, PUT, or DELETE. This is a more RESTful
+    technique than relying on a primary key from the database, because the
+    URI does not need to map directly to an implementation artifact. The URI
+    is simply a hyperlink; if the location of the task later changes, the
+    client can still use the original URI, and the service can map the URI to
+    the new resource location.
+    """
+    new_task = {}
+    for field in task:
+        if field == 'id':
+            new_task['uri'] = url_for('get_task', task_id=task['id'],
+                                      _external=True)
+        else:
+            new_task[field] = task[field]
+    return new_task
 
 
 if __name__ == '__main__':

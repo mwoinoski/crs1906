@@ -6,7 +6,7 @@ Unit tests for Customer
    python -m unittest ticketmanor/tests/customer_test.py
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import unittest
 

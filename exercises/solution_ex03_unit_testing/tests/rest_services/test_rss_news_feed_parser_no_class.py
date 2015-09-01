@@ -2,7 +2,7 @@
 Unit tests for RssNewsFeedParser class defined with no TestCase subclass.
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from nose.tools import raises
 from itertools import zip_longest

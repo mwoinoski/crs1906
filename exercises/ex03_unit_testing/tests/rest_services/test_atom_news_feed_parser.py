@@ -2,7 +2,7 @@
 Unit tests for AtomNewsFeedParser class.
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest import TestCase, main
 from itertools import zip_longest
