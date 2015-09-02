@@ -13,9 +13,9 @@ RssNewsFeedParser.get_raw_content = lambda self, url: parse_content_input
 
 
 def test_parse_content():
-    feed_reader = RssNewsFeedParser()
+    feed_parser = RssNewsFeedParser()
 
-    actual = feed_reader.parse_xml_content(parse_content_input)
+    actual = feed_parser.parse_xml_content(parse_content_input)
 
     # By using itertools.zip_longest(), assertEquals() will eventually fail
     # if the lists are not the same length
@@ -24,25 +24,25 @@ def test_parse_content():
 
 
 def test_parse_content_max_items_1():
-    feed_reader = RssNewsFeedParser()
+    feed_parser = RssNewsFeedParser()
 
-    actual = feed_reader.parse_xml_content(parse_content_input, max_items=1)
+    actual = feed_parser.parse_xml_content(parse_content_input, max_items=1)
 
     for expected_result, actual_result in zip_longest(expected[:1], actual):
         assert expected_result == actual_result
 
 
 def test_parse_content_max_items_2():
-    feed_reader = RssNewsFeedParser()
+    feed_parser = RssNewsFeedParser()
 
-    actual = feed_reader.parse_xml_content(parse_content_input, max_items=2)
+    actual = feed_parser.parse_xml_content(parse_content_input, max_items=2)
 
     for expected_result, actual_result in zip_longest(expected[:2], actual):
         assert expected_result == actual_result
 
 
 def test_parse_content_items_missing():
-    feed_reader = RssNewsFeedParser()
+    feed_parser = RssNewsFeedParser()
 
     minimal_input = '<rss><item></item></rss>'
     minimal_results = [
@@ -56,33 +56,33 @@ def test_parse_content_items_missing():
         }
     ]
 
-    actual_results = feed_reader.parse_xml_content(minimal_input)
+    actual_results = feed_parser.parse_xml_content(minimal_input)
 
     assert minimal_results == actual_results
 
 
 def test_get_news_music():
-    feed_reader = RssNewsFeedParser()
+    feed_parser = RssNewsFeedParser()
 
-    actual = feed_reader.get_news('music')
+    actual = feed_parser.get_news('music')
 
     for expected_result, actual_result in zip_longest(expected, actual):
         assert expected_result == actual_result
 
 
 def test_get_news_max_items_1():
-    feed_reader = RssNewsFeedParser()
+    feed_parser = RssNewsFeedParser()
 
-    actual = feed_reader.get_news('music', max_items=1)
+    actual = feed_parser.get_news('music', max_items=1)
 
     for expected_result, actual_result in zip_longest(expected[:1], actual):
         assert expected_result == actual_result
 
 
 def test_get_news_max_items_2():
-    feed_reader = RssNewsFeedParser()
+    feed_parser = RssNewsFeedParser()
 
-    actual = feed_reader.get_news('music', max_items=2)
+    actual = feed_parser.get_news('music', max_items=2)
 
     for expected_result, actual_result in zip_longest(expected[:2], actual):
         assert expected_result == actual_result

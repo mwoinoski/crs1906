@@ -31,7 +31,7 @@ class TestFeedReader(TestCase):
         # parser's get_news(), which is a mock that we created in the previous
         # statement. The parser's get_news() will return the value of the
         # "expected" list.
-        news = self.feed_reader.get_news("music")
+        news = self.feed_reader.fetch_news_items("music")
 
         for expected_result, actual_result in zip_longest(expected, news):
             self.assertEqual(expected_result, actual_result)
@@ -39,7 +39,7 @@ class TestFeedReader(TestCase):
     def test_get_news_max_items_1(self):
         self.feed_reader._news_feed_parser.get_news.return_value = expected[:1]
 
-        news = self.feed_reader.get_news("music", max_items=1)
+        news = self.feed_reader.fetch_news_items("music", max_items=1)
 
         for expected_result, actual_result in zip_longest(expected[:1], news):
             self.assertEqual(expected_result, actual_result)
@@ -47,7 +47,7 @@ class TestFeedReader(TestCase):
     def test_get_news_max_items_2(self):
         self.feed_reader._news_feed_parser.get_news.return_value = expected[:2]
 
-        news = self.feed_reader.get_news("music", max_items=2)
+        news = self.feed_reader.fetch_news_items("music", max_items=2)
 
         for expected_result, actual_result in zip_longest(expected[:2], news):
             self.assertEqual(expected_result, actual_result)

@@ -10,7 +10,7 @@ from sqlalchemy.orm import sessionmaker
 
 from unittest import TestCase
 from ticketmanor import engine_from_config
-from test_support.db_utils import (
+from tests.test_support.db_utils import (
     create_db_tables,
     drop_db_tables,
     execute_select,

@@ -2,14 +2,15 @@
 Unit tests for Observer and Observable classes
 """
 
+from unittest import TestCase
+from unittest.mock import Mock, call
+
+from ticketmanor.util.observer import Subject, Observer
+
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
-from unittest import TestCase
-from unittest.mock import Mock
 
-from ticketmanor.util.observer import Observable, Observer
-
-class SimpleObservable(Observable):
+class SimpleSubject(Subject):
     pass
 
 
@@ -17,28 +18,29 @@ class ObserverTest(TestCase):
     """Unit tests for Observer"""
 
     def test_no_observers(self):
-        observable = SimpleObservable()
+        subject = SimpleSubject()
 
-        observable.notify_observers()
+        subject.observer_notify()
 
     def test_one_observer(self):
-        observable = SimpleObservable()
+        subject = SimpleSubject()
         observer1 = Mock(Observer)
-        observable.add_observer(observer1)
-        observable.add_observer(observer1)
+        subject.observer_attach(observer1)  # Observer.update() called here
 
-        observable.notify_observers()
+        subject.observer_notify()  # Observer.update() called here again
 
-        observer1.notify.assert_called_once_with(observable)
+        observer1.update.assert_has_calls([call(subject), call(subject)])
 
     def test_two_observers(self):
-        observable = SimpleObservable()
+        subject = SimpleSubject()
         observer1 = Mock(Observer)
-        observable.add_observer(observer1)
+        subject.observer_attach(observer1)
         observer2 = Mock(Observer)
-        observable.add_observer(observer2)
+        subject.observer_attach(observer2)
 
-        observable.notify_observers()
+        subject.observer_notify()
 
-        observer1.notify.assert_called_once_with(observable)
-        observer2.notify.assert_called_once_with(observable)
+        # Observer.update() called at Subject.observer_attach() and
+        # Subject.observer_notify()
+        observer1.update.assert_has_calls([call(subject), call(subject)])
+        observer2.update.assert_has_calls([call(subject), call(subject)])

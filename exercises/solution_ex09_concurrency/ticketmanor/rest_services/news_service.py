@@ -34,7 +34,7 @@ class NewsServiceView:
         logger.debug("%s: news_type = %s, max_items = %s",
                      func_name(self), news_type, max_items)
 
-        news_items = self._news_reader.get_news(news_type, max_items)
+        news_items = self._news_reader.fetch_news_items(news_type, max_items)
 
         for id, news_item in enumerate(news_items):
             news_item['id'] = id
@@ -52,7 +52,7 @@ class NewsServiceView:
         logger.debug("%s: news_type = %s, item_id = %s",
                      func_name(self), news_type, item_id)
 
-        news_items = self._news_reader.get_news(news_type)
+        news_items = self._news_reader.fetch_news_items(news_type)
 
         id = int(item_id)
         return news_items[id if id < len(news_items) else 0]

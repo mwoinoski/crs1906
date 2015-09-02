@@ -37,4 +37,3 @@ wheel==0.24.0
 zope.deprecation==4.1.2
 zope.interface==4.1.2
 zope.sqlalchemy==0.7.6
-zope.sqlalchemy==0.7.6

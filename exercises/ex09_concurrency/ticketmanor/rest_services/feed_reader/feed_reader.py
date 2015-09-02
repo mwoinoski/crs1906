@@ -25,7 +25,7 @@ class FeedReader:
         """
         self._news_feed_parser = news_feed_parser()
 
-    def get_news(self, news_type, max_items=0):
+    def fetch_news_items(self, news_type, max_items=0):
         """
         Get news items of type news_type.
 
