@@ -92,6 +92,15 @@ angular.module('ticketmanor', ['ui.router', 'ui.router.state', 'toastr', 'ngFx',
       }
     }
   })
+  .state('events.show.all_news', {
+    url: '/news',
+    data : { pageTitle: 'TicketManor | All News' },
+    views: {
+    'events': {
+      templateUrl: "javascripts/ticketmanor/views/news/all_news.html"
+      }
+    }
+  })
   .state('events.show.news', {
     url: '/:event_type/news/:news_id',
     data : { pageTitle: 'TicketManor | News' },
