@@ -41,9 +41,9 @@ class UserServiceRest:
     @view_config(request_method='GET',
                  route_name='rest_users_email',
                  renderer='json')
-    def get_user_json(self):
+    def get_user(self):
         email = self._request.matchdict['email']
-        return self.get_user(email)
+        return self.get_user_by_email(email)
 
     # FIXME: if this method is defined, requests without an Accept header
     # are always sent to it
@@ -55,7 +55,7 @@ class UserServiceRest:
     #     user = self.get_user(email)
     #     return UserServiceRest.user_to_xml(user)
 
-    def get_user(self, email):
+    def get_user_by_email(self, email):
         """Fetch a Person by searching for the registered email address."""
         logger.debug("%s: email = %s", func_name(self), email)
         try:

@@ -142,7 +142,7 @@ class UserServiceRestTest(TestCase):
 
         response = user_service.delete_user()
 
-        self.assertEqual(202, response.status_int)
+        self.assertEqual(204, response.status_int)
 
     def test_delete_user_not_found(self):
         request = pyramid_testing.DummyRequest()

@@ -34,5 +34,5 @@ class AllNewsFeedReader:
         }
 
     def worker(self, news_type, max_items):
-        sleep(2)  # pause, to simulate a slow response (needed for ex 9.2)
+        sleep(1)  # pause, to simulate a slow response (needed for ex 9.2)
         return self.feed_reader.fetch_news_items(news_type, max_items)
