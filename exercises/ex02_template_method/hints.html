@@ -1,0 +1,81 @@
+<html>
+<body>
+<h2>Hints for Exercise 2.1</h2>
+
+<h3>rss_news_feed_parser.py</h3>
+
+<font color="grey"><pre># TODO: make RssNewsFeedParser a subclass of NewsFeedParser</font>
+<font color="blue">class RssNewsFeedParser(NewsFeedParser):</pre></font>
+<p></p>
+<font color="grey"><pre>        # TODO: call the superclass's __init__() method. Pass the value
+        # of the item_element_name data attribute as an argument.</font>
+<font color="blue">        super().__init__(self.item_element_name)</pre></font>
+
+<h3>news_feed_parser.py</h3>
+
+<font color="grey"><pre>    # TODO: paste methods from rss_news_feed_parser here</font>
+
+<font color="blue">    def get_news(self, news_type, max_items=0):
+        """Return latest news for a news website."""
+
+        if news_type not in NewsType.__members__:
+            raise FeedReaderException(
+                '"{}" is not a recognized news type'.format(news_type))
+
+	</font><font color="grey">...</font><font color="blue">
+
+    def get_raw_content(self, url):
+        """Get the XML content at the given URL"""
+        return urllib.request.urlopen(url).read()
+
+    def parse_xml_content(self, raw_content, max_items=0):
+	</font><font color="grey">...</font></pre>
+
+<h3>atom_news_feed_parser.py</h3>
+
+<font color="grey"><pre># TODO: make AtomNewsFeedParser a subclass of NewsFeedParser</font>
+<font color="blue">class AtomNewsFeedParser(NewsFeedParser):</pre></font>
+<p></p>
+
+<font color="grey"><pre>        # TODO: call the superclass's __init__() method. Pass the value
+        # of the item_element_name data attribute as an argument.</font>
+<font color="blue">        super().__init__(self.item_element_name)</pre></font>
+
+
+<h2>Hints for Exercise 2.1 Bonus 1</h2>
+
+<h3>news_feed_parser.py</h3>
+
+<font color="grey"><pre># BONUS TODO: make NewsFeedParser an abstract base class</font>
+<font color="blue">class NewsFeedParser(metaclass=ABCMeta):</pre></font>
+<p></p>
+
+<font color="grey"><pre>    # BONUS TODO: define get_url() as an abstract method</font>
+<font color="blue">    @abstractmethod
+    def get_url(self, news_type):
+        pass</pre></font>
+<p></p>
+
+<font color="grey"><pre>    # BONUS TODO: define parse_item() as an abstract method</font>
+<font color="blue">    @abstractmethod
+    def parse_item(self, item_node):
+        pass</pre></font>
+
+<h2>Hints for Exercise 2.1 Bonus 2</h2>
+
+<h3>news_feed_parser.py</h3>
+
+<font color="grey"><pre>        # BONUS TODO 2: convert this method into a generator function that yields
+        # a single parsed item each time it's called.
+
+<font color="blue">        for i, item_node in enumerate(
+                dom.getElementsByTagName(self.item_element_name), start=1):
+            parsed_item = self.parse_item(item_node)
+            yield parsed_item
+            if i &gt;= max_items &gt; 0:
+                break
+        return</pre></font>
+
+
+</body>
+</html>

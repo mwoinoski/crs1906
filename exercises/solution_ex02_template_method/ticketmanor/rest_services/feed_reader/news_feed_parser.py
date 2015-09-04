@@ -5,7 +5,7 @@ Adapted from examples in "Learning Python Design Patterns Code"
 by Gennadiy Zlobin.
 
 Converted to Python 3 by running:
-    python PYTHON_HOME/Tools/Scripts/2to3.py -w news_parser.py
+    python PYTHON_HOME/Tools/Scripts/2to3.py -w news_feed_parser.py
 """
 
 from abc import ABCMeta, abstractmethod

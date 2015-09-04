@@ -21,10 +21,6 @@ import sys
 # measure module.
 # from measure import measure, get_function_stats
 
-# BONUS TODO: import the measure and get_function_stats methods and
-# the decorator_enabled variable from the measure_configurable module.
-from measure_configurable import measure, get_function_stats, decorator_enabled
-
 TRIPLETS = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 
 # Row/Col/3x3 iteration list, each is nine lists of nine (row,col) pairs

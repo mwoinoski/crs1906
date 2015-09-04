@@ -19,11 +19,11 @@ class ChatClient(Observer):
         # argument.
         super().__init__(chat_room)
 
-        # TODO: initialize a data attribute named "client_name" with the
+        # TODO: initialize a data attribute named `client_name` with the
         # client_name parameter.
         self.client_name = client_name
 
-        # TODO: initialize a data attribute named "chat_room" with the
+        # TODO: initialize a data attribute named `chat_room` with the
         # chat_room parameter.
         self.chat_room = chat_room
 
@@ -38,11 +38,11 @@ class ChatClient(Observer):
     # In addition to the "self" parameter, update() will have a second
     # parameter that is a ChatMessage object.
     def update(self, chat_msg):
-        # TODO: assign the ChatMessage's id attribute to a variable named "id"
+        # TODO: assign the ChatMessage's id attribute to a variable named `id`
         id = chat_msg.id
 
         # TODO: assign the ChatMessage's value attribute to a variable named
-        # "value"
+        # `value`
         value = chat_msg.value
 
         # TODO: note the use of the ChatMessage's id and value in the following
@@ -62,19 +62,20 @@ def main():
         from chat_room import ChatRoom
 
         # TODO: create a ChatRoom() object and assign it to a variable
-        # named chat_room
+        # named `chat_room`
         chat_room = ChatRoom()
 
         # BONUS TODO: import ChatRoomProxy from the chat_room_proxy module
         # from chat_room_proxy import ChatRoomProxy
+
         # BONUS TODO: create a ChatRoomProxy() object and assign it to a variable
-        # named chat_room
+        # named `chat_room`
         # chat_room = ChatRoomProxy()
 
         client_name = input("What's your name? ")
 
         # TODO: create a ChatClient object and assign it to a variable named
-        # "chat_client". The ChatClient constructor takes two arguments:
+        # `chat_client`. The ChatClient constructor takes two arguments:
         # 1. client_name
         # 2. chat_room
         chat_client = ChatClient(client_name, chat_room)

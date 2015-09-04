@@ -27,7 +27,7 @@ class RssNewsFeedParser:
         self.item_element_name = 'item'
         # TODO: call the superclass's __init__() method. Pass the value
         # of the item_element_name data attribute as an argument.
-
+        ...
 
     # TODO: cut the get_news() method out of this class and paste it
     # into the NewsFeedParser class.

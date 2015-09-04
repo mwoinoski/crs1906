@@ -1,15 +1,14 @@
 syntax: glob
 
-# Virtual environments
-py27venv
-py34venv
-pypiserver_packages
-
 # admin script
 push_to_all.py
 
 # PyCharm workspace config
 .idea/
+
+# PyDev workspace config
+.project
+.pydevproject
 
 # Temp scripts
 */scripts/scratch*

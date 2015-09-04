@@ -9,9 +9,7 @@ from itertools import zip_longest
 from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import (
     RssNewsFeedParser,
 )
-from ticketmanor.rest_services.feed_reader.feed_reader_exception import (
-    FeedReaderException,
-)
+from ticketmanor.rest_services.feed_reader import FeedReaderException
 
 
 xml_input = \
@@ -86,13 +84,13 @@ expected = [
 # 2. Delete the "self" argument from the copied functions.
 # 3. Replace calls to self.assertEqual() with the assert statement.
 #    HINT: see slide 3-18
-
+...
 
 
 # TODO: copy the test_get_news_invalid_news_type() method from
 # test_rss_news_feed_parser.py and paste it here. Modify it to use the
 # nose.tools.raises decorator to verify that a FeedReaderException is raised.
-
+...
 
 
 def test_get_news_max_items_1():

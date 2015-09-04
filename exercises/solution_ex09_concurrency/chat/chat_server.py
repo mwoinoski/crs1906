@@ -45,7 +45,7 @@ class ChatServer(BaseRequestHandler):
 
     @classmethod
     def shutdown(cls):
-        with cls.chat_sockets_lock:
+        with cls.chat_sockets_lock:  # TODO
             for socket in cls.chat_sockets:
                 if socket:
                     socket.close()

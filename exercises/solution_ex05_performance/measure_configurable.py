@@ -36,7 +36,6 @@ except KeyError:
 _function_stats = {}
 
 
-# MW FIXME: fix this
 def measure(func):
     """
     Decorator that accumulates number of calls and average run time of each

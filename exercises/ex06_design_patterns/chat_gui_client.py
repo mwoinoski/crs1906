@@ -83,7 +83,7 @@ class ChatClientGui:
 
 def main():
     # TODO: create a ChatRoom instance and assign it to a variable named
-    # "chat_host"
+    # `chat_host`
     ...
 
     # TODO: note the chat_host argument to the ChatClientGui constructor for

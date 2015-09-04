@@ -32,7 +32,7 @@ class ChatRoom(Subject):
         # HINT: see slide 1-26
         super().__init__()
 
-        # TODO: initialize a data attribute named "messages" with an empty list
+        # TODO: initialize a data attribute named `messages` with an empty list
         self.messages = []
 
     # TODO: note the definition of the add_message() method. Chat clients

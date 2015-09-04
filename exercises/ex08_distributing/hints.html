@@ -1,0 +1,57 @@
+<html>
+<body>
+
+<h2>Hints for Exercise 8.1 Bonus</h2>
+
+<h3>tz.py</h3>
+
+<font color="grey"><pre># TODO: add a docstring that describes this module. This string will be
+# displayed when you execute help(tz) from a Python interpreter.</pre></font>
+<font color="blue"><pre>"""
+Defines a simple wrapper for pytz functions.
+"""</pre></font>
+<p></p>
+
+<font color="grey"><pre># TODO: set the variable `__author__` to a string with your name. This will 
+# also be displayed by help(tz)</pre></font>
+<font color="blue"><pre>__author__ = 'Happy Pythonista (hpythonista@python.org)'</pre></font>
+
+
+<h3>setup.py</h3>
+
+<font color="grey"><pre># TODO: import setup and find_packages from the setuptools module</pre></font>
+<font color="blue"><pre><font color="blue"><pre>from setuptools import setup, find_packages</pre></font></pre></font>
+<p></p>
+
+<pre><font color="grey">setup(</font>
+<font color="blue">    name='simple_tz',</font><font color="grey">  # TODO: set the package name to 'simple_tz'</font>
+<font color="blue">    version='1.0.0',</font><font color="grey">   # TODO: set `version` to '1.0.0'</font>
+<font color="blue">    description='Wrapper for pytz functions', </font><font color="grey"> # TODO: set `description` to a string</font>
+<font color="blue">    platforms=['all'],</font><font color="grey">  # TODO: set `platforms` to a list with one string element 'all'</font>
+<font color="blue">    install_requires=['pytz'],</font><font color="grey">  # TODO: set `install_requires` to a list with one string element 'pytz'</font>
+<font color="blue">    author='Happy Pythonista',</font><font color="grey">  # TODO: set `author` to a string with your name</font>
+<font color="blue">    author_email='hpythonista@python.org',</font><font color="grey">  # TODO: set `author_email` to a string</font></pre>
+
+<h3>setup.cfg</h3>
+
+<font color="grey"><pre># TODO: add a section header for bdist_wheel</pre></font>
+<font color="blue"><pre>[bdist_wheel]</pre></font>
+<p></p>
+
+<font color="grey"><pre># TODO: set the value of universal to 1</pre></font>
+<font color="blue"><pre>universal=1</pre></font>
+
+<h2>Hints for Exercise 8.1 Bonus (Set up a local repository)</h2>
+
+<font color="blue"><pre>cd \crs1906\exercises\ex08_distributing
+mkdir pypiserver_packages
+copy simple_tz\dist\*.whl pypiserver_packages
+copy simple_tz\dist\*.zip pypiserver_packages
+pypi-server -p 8888 pypiserver_packages</pre></font>
+
+<h2>Hints for Exercise 8.1 Bonus (Modernize a Python 2 script)</h2>
+
+<font color="blue"><pre>python-modernize -w sudoku.py</pre></font>
+
+</body>
+</html>

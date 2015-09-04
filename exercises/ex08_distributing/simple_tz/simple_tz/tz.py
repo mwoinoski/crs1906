@@ -2,8 +2,8 @@
 # displayed when you execute help(tz) from a Python interpreter.
 ...
 
-# TODO: set __author__ to a string with your name. This will also be displayed
-# by help(tz)
+# TODO: set the variable `__author__` to a string with your name. This will
+# also be displayed by help(tz)
 ...
 
 import re

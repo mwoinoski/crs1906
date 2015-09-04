@@ -26,12 +26,12 @@ concert news is {'title': 'Best concert ever!'}
 class AllNewsFeedReader:
     """Reads news feeds for music, concerts, and sports"""
 
-    # TODO: note the initialization of the feed_reader attribute
+    # TODO: note the initialization of the `feed_reader` attribute
     # (no code change required)
     def __init__(self):
         self.feed_reader = FeedReader()
 
-    # TODO: note that the get_news() methods downloads news of all types.
+    # TODO: note that the get_news() method downloads news of all types.
     # (no code change required)
     def get_news(self, max_items=0):
         """
@@ -55,12 +55,12 @@ class AllNewsFeedReader:
         # TODO: comment out the 5 lines of code above this comment
 
         # TODO: create a Queue to hold the news from each thread. Assign
-        # the Queue to a variable named results_q
+        # the Queue to a variable named `results_q`
         # HINT: see slide 9-30
         ...
 
-        # TODO: assign an empty list to the variable named news_thread.
-        # The news_thread list will contain references to the Thread objects
+        # TODO: assign an empty list to the variable named `news_threads`.
+        # The `news_threads` list will contain references to the Thread objects
         # that are downloading the news.
         ...
 
@@ -71,14 +71,14 @@ class AllNewsFeedReader:
             # HINT: see slide 9-18
             ...
 
-            # TODO: Append the new thread to the new_threads list
+            # TODO: Append the new thread to the `news_threads` list
             ...
 
             # TODO: Start the new thread
             # HINT: see slide 9-17
             ...
 
-        # TODO: use a "for" loop to process each thread on the news_threads
+        # TODO: use a `for` loop to process each thread on the `news_threads`
         # list
         for ...
             # TODO: wait for the thread to complete by calling
@@ -86,40 +86,43 @@ class AllNewsFeedReader:
             # HINT: see slide 9-17
             ...
 
-        # TODO: scroll to the definition of the method named "worker" below and
+        # TODO: scroll to the definition of the method named `worker` below and
         # complete the TODO steps there.
-        # When you are finished with worker, complete the remaining steps in
+        # When you are finished with `worker`, complete the remaining steps in
         # this method.
 
+        # TODO: note the definition of the dictionary named `all_news`
+        # (no code change required)
         all_news = {}
 
-        # TODO: loop over results_q
+        # TODO: loop over `results_q`
         # HINT: see slide 9-31
         while ...
-            # TODO: get the thread's result (a TypedNews object) from results_q
+            # TODO: get the thread's result (a TypedNews object) from
+            # `results_q` and assign it to a variable named `typed_news`
+            typed_news = ...
+
+            # TODO: add the data in `typed_news` to the `all_news` dictionary
+            # key: the `news_type` attribute of `typed_news`
+            # value: the `news` attribute of `typed_news`
             ...
 
-            # TODO: add the data in typed_news to the all_news dictionary
-            # key: the news_type attribute of typed_news
-            # value: the news attribute of typed_news
-            ...
-
-        # TODO: return the all_news dictionary
+        # TODO: return the `all_news` dictionary
         return ...
 
-    # TODO: note the parameters of the worker method.
+    # TODO: note the parameters of the `worker` method.
     # (no code change required)
     def worker(self, results_q, news_type, max_items):
         """
-        Download one type of news and add it to results_q.
+        Download one type of news and add it to `results_q`.
 
         :param self: the current AllNewsFeedReader object
         :param results_q: a Queue of TypedNews instances
         :param news_type: a string with the type of news to download
         :param max_items: maximum number of news items to download
         """
-        # TODO: use self.feed_reader to get news of the given news_type and
-        # assign the result to a variable named 'news'
+        # TODO: use `self.feed_reader` to get news of the given `news_type` and
+        # assign the result to a variable named `news`
         # HINT: this statement is exactly the same as a statement in the
         # original code that you commented out earlier.
         ...
@@ -129,11 +132,11 @@ class AllNewsFeedReader:
         # HINT: see the definition of TypedNews at the beginning of this file.
         ...
 
-        # TODO: put the typed_news object on results_q
+        # TODO: put the typed_news object on `results_q`
         ...
 
         # To compare performance with the serial version of ticketmanor,
         # add a pause to this method:
-        # import time; time.sleep(2)
+        # import time; time.sleep(1)
 
         # TODO: complete the remaining steps in the get_news() method

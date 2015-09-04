@@ -40,10 +40,24 @@ from tkinter import messagebox
 from tkinter import filedialog
 from tkinter import simpledialog
 
+# TODO: import the logging package
+# HINT: see slide 4-9
+...
+
+# TODO: import the logging.config package
+# HINT: see slide 4-15
+...
+
+# TODO: read the logging config from the file logging.conf
+...
+
+# TODO: create a Logger instance and assign it to a variable named `logger`.
+# Give the Logger the name 'unittestgui'
+...
+
 ##############################################################################
 # GUI framework classes
 ##############################################################################
-
 
 class BaseGUITestRunner(metaclass=ABCMeta):
     """
@@ -53,6 +67,9 @@ class BaseGUITestRunner(metaclass=ABCMeta):
     or signal that events have occurred.
     """
     def __init__(self, *args, **kwargs):
+        # TODO: log an info message that says the class constructor was called.
+        ...
+
         self.currentResult = None
         self.running = 0
         self.__rollbackImporter = None
@@ -105,7 +122,15 @@ class BaseGUITestRunner(metaclass=ABCMeta):
             # Explicitly use 'None' value if no top level directory is
             # specified (indicated by empty string) as discover() explicitly
             # checks for a 'None' to determine if no tld has been specified
+
             top_level_dir = self.top_level_dir or None
+            # TODO: log a debug-level message with the value of top_level_dir
+            # Note that top_level_dir is set in the previous statement.
+            ...
+
+            if top_level_dir:
+                sys.path.append(top_level_dir)
+                top_level_dir = None
             tests = unittest.defaultTestLoader.discover(
                 directory, self.test_file_glob_pattern, top_level_dir)
             self.test_suite = tests
@@ -177,10 +202,18 @@ class GUITestResult(unittest.TestResult):
         self.callback = callback
 
     def addError(self, test, err):
+        # TODO: log an error message with the value of the `test`
+        # parameter.
+        ...
+
         unittest.TestResult.addError(self, test, err)
         self.callback.notifyTestErrored(test, err)
 
     def addFailure(self, test, err):
+        # TODO: log an warning message with the value of the `test`
+        # parameter.
+        ...
+
         unittest.TestResult.addFailure(self, test, err)
         self.callback.notifyTestFailed(test, err)
 

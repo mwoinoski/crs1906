@@ -42,13 +42,13 @@ with codecs.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 # TODO: note the call to the setup() function
 setup(
-    ...,  # TODO: set the package name to simple_tz
-    ...,  # TODO: set version to '1.0.0'
-    ...,  # TODO: add a description
-    ...,  # TODO: set platforms to a list with one string element 'all'
-    ...,  # TODO: set install_requires to a list with one string element 'pytz'
-    ...,  # TODO: set author to a string with your name
-    author_email='hpythonista@python.org',  # TODO: set the author_email to a string
+    ...,  # TODO: set the package name to 'simple_tz'
+    ...,   # TODO: set `version` to '1.0.0'
+    ...,  # TODO: set `description` to a string
+    ...,  # TODO: set `platforms` to a list with one string element 'all'
+    ...,  # TODO: set `install_requires` to a list with one string element 'pytz'
+    ...,  # TODO: set `author` to a string with your name
+    ...,  # TODO: set `author_email` to a string
     # TODO: review the remaining keyword arguments
     # (no code change required)
     long_description=long_description,

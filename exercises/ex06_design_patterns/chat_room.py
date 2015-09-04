@@ -32,7 +32,7 @@ class ChatRoom:
         # HINT: see slide 1-26
         ...
 
-        # TODO: initialize a data attribute named "messages" with an empty list
+        # TODO: initialize a data attribute named `messages` with an empty list
         ...
 
     # TODO: note the definition of the add_message() method. Chat clients

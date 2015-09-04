@@ -151,7 +151,7 @@ class TestRssNewsFeedParser(TestCase):
 
         actual = feed_reader.get_news('music')
 
-        # By using itertools.zip_longest(), assertEquals() will eventually fail
+        # By using itertools.zip_longest(), assertEqual() will eventually fail
         # if the lists are not the same length
         for expected_result, actual_result in zip_longest(expected, actual):
             self.assertEqual(expected_result, actual_result)
@@ -162,7 +162,7 @@ class TestRssNewsFeedParser(TestCase):
         actual = feed_reader.get_news('music', max_items=1)
 
         for expected_result, actual_result in zip_longest(expected[:1], actual):
-            self.assertEquals(expected_result, actual_result)
+            self.assertEqual(expected_result, actual_result)
 
     def test_get_news_max_items_2(self):
         feed_reader = RssNewsFeedParser()
@@ -170,7 +170,7 @@ class TestRssNewsFeedParser(TestCase):
         actual = feed_reader.get_news('music', max_items=2)
 
         for expected_result, actual_result in zip_longest(expected[:2], actual):
-            self.assertEquals(expected_result, actual_result)
+            self.assertEqual(expected_result, actual_result)
 
     def test_parse_content(self):
         feed_reader = RssNewsFeedParser()
@@ -178,7 +178,7 @@ class TestRssNewsFeedParser(TestCase):
         actual = feed_reader.parse_xml_content(xml_input)
 
         for expected_result, actual_result in zip_longest(expected, actual):
-            self.assertEquals(expected_result, actual_result)
+            self.assertEqual(expected_result, actual_result)
 
     def test_parse_content_max_items_1(self):
         feed_reader = RssNewsFeedParser()
@@ -186,7 +186,7 @@ class TestRssNewsFeedParser(TestCase):
         actual = feed_reader.parse_xml_content(xml_input, max_items=1)
 
         for expected_result, actual_result in zip_longest(expected[:1], actual):
-            self.assertEquals(expected_result, actual_result)
+            self.assertEqual(expected_result, actual_result)
 
     def test_parse_content_max_items_2(self):
         feed_reader = RssNewsFeedParser()
@@ -194,7 +194,7 @@ class TestRssNewsFeedParser(TestCase):
         actual = feed_reader.parse_xml_content(xml_input, max_items=2)
 
         for expected_result, actual_result in zip_longest(expected[:2], actual):
-            self.assertEquals(expected_result, actual_result)
+            self.assertEqual(expected_result, actual_result)
 
     def test_parse_content_items_missing(self):
         feed_reader = RssNewsFeedParser()
@@ -213,7 +213,7 @@ class TestRssNewsFeedParser(TestCase):
 
         actual_results = feed_reader.parse_xml_content(minimal_input)
 
-        self.assertEquals(minimal_results, actual_results)
+        self.assertEqual(minimal_results, actual_results)
 
     @classmethod
     def setUpClass(cls):

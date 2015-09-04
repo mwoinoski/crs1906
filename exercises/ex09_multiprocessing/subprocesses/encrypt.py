@@ -9,7 +9,7 @@ import sys
 from time import sleep
 
 # TODO: import Process from the multiprocessing module
-from multiprocessing import Process
+...
 
 
 # TODO: note the run_openssl() function. This function will be the target
@@ -42,11 +42,10 @@ def main():
         # HINT: remember to pass file and env to the Process
         # HINT: see slide 9-38
         # run_openssl(file, env)
-        child_process = Process(target=run_openssl,
-                                args=(file, env))
+        ...
 
         # TODO: start the Process instance
-        child_process.start()
+        ...
 
 
 if __name__ == '__main__':

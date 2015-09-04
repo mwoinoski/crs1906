@@ -2,30 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70e0d77d-87d5-4171-8978-d07aabaaf4dd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/.hgignore" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/.hgignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.hgignore" afterPath="$PROJECT_DIR$/.hgignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/controllers/app.js" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/controllers/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/rest_services/feed_reader/feed_reader.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/rest_services/feed_reader/feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/html/index.html" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/controllers/newsCtrl.js" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/controllers/newsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/rest_services/news_service.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/rest_services/news_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/requirements.txt" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/models/persistence/test_act_dao.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/models/persistence/test_act_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/rest_services/test_event_service_integration.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/rest_services/test_event_service_integration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/rest_services/test_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/util/test_observer.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/util/test_observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/models/persistence/test_person_dao.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/models/persistence/test_person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/rest_services/test_user_service.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/rest_services/test_user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/rest_services/test_user_service_integration.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/rest_services/test_user_service_integration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/models/persistence/test_venue_dao.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/tests/models/persistence/test_venue_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/rest_services/user_service.py" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\ex01_inheritance\hints.htm" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex01_inheritance/.hgignore" afterPath="$PROJECT_DIR$/../ex01_inheritance/.hgignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/requirements.txt" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex04_debugging/unittestgui.py" afterPath="$PROJECT_DIR$/../solution_ex04_debugging/unittestgui.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_concurrency/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex09_concurrency/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_with_mocks/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex03_with_mocks/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex04_debugging/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex04_debugging/.idea/workspace.xml" />
     </list>
     <ignored path="ticketmanor_webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +37,20 @@
     <favorites_list name="ticketmanor_webapp" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="test_rss_news_feed_parser_no_class.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser_no_class.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.01863354">
+              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+              <folding>
+                <element signature="e#144#177#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -147,7 +152,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -212,16 +216,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="rest_services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticketmanor_webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticketmanor_webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -243,6 +266,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="647" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myIpythonEnabled" value="false" />
@@ -634,13 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser_no_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_support/db_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -792,7 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -933,7 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36918303">
           <caret line="21" column="37" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -941,7 +956,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33402276">
           <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser_no_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.01863354">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding>
+            <element signature="e#144#177#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

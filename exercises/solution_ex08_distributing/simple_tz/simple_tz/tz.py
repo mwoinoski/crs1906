@@ -4,8 +4,8 @@
 Defines a simple wrapper for pytz functions.
 """
 
-# TODO: set __author__ to a string with your name. This will also be displayed
-# by help(tz)
+# TODO: set the variable `__author__` to a string with your name. This will
+# also be displayed by help(tz)
 __author__ = 'Happy Pythonista (hpythonista@python.org)'
 
 import re

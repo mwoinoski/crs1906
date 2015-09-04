@@ -29,7 +29,7 @@ class AtomNewsFeedParser:
         self.item_element_name = 'entry'
         # TODO: call the superclass's __init__() method. Pass the value
         # of the item_element_name data attribute as an argument.
-
+        ...
 
     # TODO: delete the get_news() method from this class.
     def get_news(self, news_type, max_items=0):

@@ -6,6 +6,10 @@ push_to_all.py
 # PyCharm workspace config
 .idea/
 
+# PyDev workspace config
+.project
+.pydevproject
+
 # Temp scripts
 */scripts/scratch*
 */scripts/temp*

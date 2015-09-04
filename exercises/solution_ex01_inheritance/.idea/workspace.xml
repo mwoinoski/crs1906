@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3a00f0c-5917-486c-873d-3e9fb7bb4334" name="Default" comment="" />
+    <list default="true" id="c3a00f0c-5917-486c-873d-3e9fb7bb4334" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/persistence/act_dao.py" afterPath="$PROJECT_DIR$/ticketmanor/models/persistence/act_dao.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/persistence/base_dao.py" afterPath="$PROJECT_DIR$/ticketmanor/models/persistence/base_dao.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py" afterPath="$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/models/persistence/test_act_dao.py" afterPath="$PROJECT_DIR$/tests/models/persistence/test_act_dao.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/models/persistence/test_person_dao.py" afterPath="$PROJECT_DIR$/tests/models/persistence/test_person_dao.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/persistence/venue_dao.py" afterPath="$PROJECT_DIR$/ticketmanor/models/persistence/venue_dao.py" />
+    </list>
     <ignored path="solution_ex01_inheritance.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +28,18 @@
     <favorites_list name="solution_ex01_inheritance" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="act.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/Exercise_1_1_Solution-1.0.0-py3.4.egg/ticketmanor/models/act.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36028537">
+              <caret line="70" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -45,6 +64,8 @@
         <option value="$PROJECT_DIR$/ticketmanor/scripts/func_stats.py" />
         <option value="$PROJECT_DIR$/ticketmanor/models/act.py" />
         <option value="$PROJECT_DIR$/ticketmanor/models/address.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/venv/Lib/site-packages/Exercise_1_1_Solution-1.0.0-py3.4.egg/ticketmanor/models/act.py" />
       </list>
     </option>
   </component>
@@ -52,10 +73,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="582" />
-    <option name="y" value="34" />
-    <option name="width" value="960" />
-    <option name="height" value="1126" />
+    <option name="x" value="17" />
+    <option name="y" value="66" />
+    <option name="width" value="915" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -402,10 +423,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="582" y="34" width="960" height="1126" extended-state="0" />
-    <editor active="false" />
+    <frame x="17" y="66" width="915" height="1000" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2494577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2622577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -686,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/member.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticketmanor/models/customer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4718101">
@@ -721,17 +735,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/person.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80667835">
-          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.08028335">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketmanor/scripts/func_stats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14938489">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.501771">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketmanor/models/member.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12042503">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketmanor/models/person.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20070839">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/Exercise_1_1_Solution-1.0.0-py3.4.egg/ticketmanor/models/address.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8595041">
+          <caret line="73" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/Exercise_1_1_Solution-1.0.0-py3.4.egg/ticketmanor/models/act.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36028537">
+          <caret line="70" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

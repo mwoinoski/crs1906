@@ -4,6 +4,8 @@ from optparse import OptionParser
 from ctypes import Structure, c_int, c_double
 
 # TODO: import calc_z_ser from the calc_z_ser_ext_mod extension module
+# Note: ignore the error message from PyCharm. It doesn't recognize
+# C extension modules.
 ...
 
 # TODO: import array from the array module
