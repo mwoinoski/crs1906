@@ -96,6 +96,7 @@ class TestRssNewsFeedParser(TestCase):
         for expected_result, actual_result in zip_longest(expected[:2], actual):
             self.assertEquals(expected_result, actual_result)
 
+    @skip
     def test_get_news_invalid_news_type(self):
         feed_reader = RssNewsFeedParser()
         with self.assertRaises(FeedReaderException):

@@ -5,13 +5,15 @@ Read All News page.
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
-# from threading import Thread
-# import queue
-from multiprocessing import Process  # TODO
-import multiprocessing  # TODO
+from threading import Thread
+import queue
 
+import concurrent.futures
 from collections import namedtuple
 from .feed_reader import FeedReader
+
+# TODO: import ThreadPoolExecutor from concurrent.futures
+from concurrent.futures import ThreadPoolExecutor
 
 TypedNews = namedtuple('TypedNews', 'news_type news')
 
@@ -23,27 +25,45 @@ class AllNewsFeedReader:
         self.feed_reader = FeedReader()
 
     def get_news(self, max_items=0):
-        """
-        Get news items of all news types.
+        """Get news items of all news types."""
 
-        :param: max_items: if max_items > 0, return no more than max_items
-        news items. Otherwise, return all news items.
-        :return dictionary of news items.
-        """
-        # results_q = queue.Queue()
-        results_q = multiprocessing.Queue()  # TODO
+        results_q = queue.Queue()
 
         news_threads = []
-        for news_type in 'concerts', 'sports', 'movies':
-            # background = Thread(target=AllNewsFeedReader.worker,
-            background = Process(target=AllNewsFeedReader.worker,  # TODO
-                                 args=(self, results_q,
-                                       news_type, max_items))
-            news_threads.append(background)
-            background.start()
 
-        for thread in news_threads:
-            thread.join()
+        # TODO: wrap the `for` loop in a `with` statement that initializes
+        # a ThreadPoolExecutor. Pass the argument max_workers=4 to the
+        # ThreadPoolExecutor constructor.
+        # HINT: see slide 9-43
+        with ThreadPoolExecutor(max_workers=4) as executor:
+            for news_type in 'concerts', 'sports', 'movies':
+                # TODO: replace the call to the Thread constructor with a
+                # call to executor.submit().
+                # Arguments to submit: AllNewsFeedReader.worker, self,
+                #                      results_q, news_type, max_items
+                # Assign the Future returned by submit to the variable
+                # `background`
+                background = executor.submit(AllNewsFeedReader.worker, self,
+                                             results_q, news_type, max_items)
+                # background = Thread(target=AllNewsFeedReader.worker,
+                #                     args=(self, results_q,
+                #                           news_type, max_items))
+                news_threads.append(background)
+
+                # TODO: delete the call to background.start()
+                # background.start()
+
+        # TODO: in the following `for` statement, replace `news_threads` with
+        # a call to concurrent.futures.as_completed(news_threads)
+        # HINT: see slide 9-47
+        for thread in concurrent.futures.as_completed(news_threads):
+        # for thread in news_threads:
+            # TODO: replace the call to thread.join() with `pass`
+            pass
+            # thread.join()
+
+        # TODO: note that the remainder of the code is unchanged.
+        # (no code changes required)
 
         all_news = {}
 
@@ -54,14 +74,7 @@ class AllNewsFeedReader:
         return all_news
 
     def worker(self, results_q, news_type, max_items):
-        """
-        Download one type of news and add it to results_q.
-
-        :param self: the current AllNewsFeedReader object
-        :param results_q: a Queue of TypedNews instances
-        :param news_type: a string with the type of news to download
-        :param max_items: maximum number of news items to download
-        """
-        news = self.feed_reader.get_news(news_type, max_items)
+        """Download one type of news and add it to results_q."""
+        news = self.feed_reader.fetch_news_items(news_type, max_items)
         typed_news = TypedNews(news_type, news)
         results_q.put(typed_news)

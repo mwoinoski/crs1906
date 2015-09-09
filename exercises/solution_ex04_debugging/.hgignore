@@ -1,5 +1,7 @@
 syntax: glob
 
+unittestgui.log
+
 # admin script
 push_to_all.py
 

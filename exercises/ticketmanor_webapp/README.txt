@@ -4,10 +4,12 @@ TicketManor README
 Getting Started
 ---------------
 
-- cd <directory containing this file>
+> cd <directory containing this file>
 
-- %VENV%/Scripts/python setup.py develop
+> venv/Scripts/activate
 
-- %VENV%/Scripts/pserve development.ini --reload
+> python setup.py develop
 
-- View a welcome page at http://localhost:6543/
+> pserve development.ini --reload
+
+- View welcome page at http://localhost:6543/static/#/home

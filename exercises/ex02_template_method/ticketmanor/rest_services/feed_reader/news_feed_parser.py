@@ -18,6 +18,7 @@ from ticketmanor.rest_services.feed_reader import (
 
 
 # BONUS TODO: make NewsFeedParser an abstract base class
+# HINT: see slide 2-13
 class NewsFeedParser:
 
     # TODO: note the definition of the NewsFeedParser __init__() method.
@@ -37,3 +38,12 @@ class NewsFeedParser:
     # HINT: delete the parse_content list completely. Instead of appending
     # each parsed item to a list, yield it from the generator.
 
+
+# Run news_feed_parser to verify NewsFeedParser is abstract
+if __name__ == '__main__':
+    try:
+        parser = NewsFeedParser(None)
+        import sys
+        print("ERROR: NewsFeedParser is not abstract", file=sys.stderr)
+    except TypeError:
+        print("Success: NewsFeedParser is abstract")

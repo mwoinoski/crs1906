@@ -106,9 +106,13 @@ class UserServiceRestTest(TestCase):
         request.db_session = None
         request.matchdict['email'] = 'nobody@gmail.com'
         user_service = UserServiceRest(None, request, dao=MagicMock)
+
+        # TODO: note that we program the mock DAO's get() method to raise
+        # a PersistenceError
+        # (no code change required)
         user_service._dao.get = MagicMock(side_effect=PersistenceError())
 
-        # TODO: call the user_service get_user() method.
+    	# TODO: call the user_service get_user() method.
         ...
 
 

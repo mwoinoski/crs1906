@@ -97,3 +97,13 @@ class NewsFeedParser(metaclass=ABCMeta):
     @abstractmethod
     def parse_item(self, item_node):
         pass
+
+
+# Run news_feed_parser to verify NewsFeedParser is abstract
+if __name__ == '__main__':
+    try:
+        parser = NewsFeedParser(None)
+        import sys
+        print("ERROR: NewsFeedParser is not abstract", file=sys.stderr)
+    except TypeError:
+        print("Success: NewsFeedParser is abstract")

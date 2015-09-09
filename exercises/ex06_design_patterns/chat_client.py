@@ -65,12 +65,15 @@ def main():
         # named `chat_room`
         ...
 
+        # BONUS TODO: comment out the two statements above (the import of
+	# ChatRoom and the setting of `chat_room`
+
         # BONUS TODO: import ChatRoomProxy from the chat_room_proxy module
-        # from chat_room_proxy import ChatRoomProxy
+        ...
 
         # BONUS TODO: create a ChatRoomProxy() object and assign it to a variable
         # named `chat_room`
-        # chat_room = ChatRoomProxy()
+        ...
 
         client_name = input("What's your name? ")
 

@@ -91,14 +91,14 @@ def pi_async():
     futures = set()
 
     # TODO: write a `with` statement to use a ProcessPoolExecutor.
-    # with ThreadPoolExecutor(max_workers=ntasks) as executor:
+    # with ThreadPoolExecutor(max_workers=4) as executor:
     with ProcessPoolExecutor() as executor:
         # TODO: set up a `for` loop that executes 4 times.
         for _ in range(4):
             # TODO: for each loop iteration, use a Process to execute
             # sample_multiple with the argument chunk_size.
             # Save the returned Future in a local variable.
-            future = executor.submit(sample_multiple, chunk_size);
+            future = executor.submit(sample_multiple, chunk_size)
 
             # TODO: add the returned Future to the `futures` set.
             futures.add(future)
@@ -133,7 +133,8 @@ if __name__ == '__main__':
     print('pi_async() returned {}'.format(pi_async()))
     print('pi_serial() returned {}'.format(pi_serial()))
 
-    # add calls to timeit here
+    # Add calls to timeit here
+
     from timeit import timeit
 
     time = timeit('pi_async()',

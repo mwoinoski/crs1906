@@ -2,270 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="834cd2ce-708a-4d83-8462-e25ee9d59bb4" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\crs1906\exercises\ex03_unit_testing\ticketmanor\rest_services\feed_reader\feed_reader_exception.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\crs1906\exercises\ex03_unit_testing\ticketmanor\rest_services\feed_reader\news_type.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\crs1906\exercises\solution_ex03_unit_testing\ticketmanor\rest_services\feed_reader\feed_reader_exception.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\crs1906\exercises\solution_ex03_unit_testing\ticketmanor\rest_services\feed_reader\news_type.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\crs1906\exercises\solution_ex07_extending_python\mandelbrot_ctypes\ctypes_minimal.py" afterPath="" />
-      <change type="MOVED" beforePath="C:\crs1906\exercises\ex08_distributing\backup\sudoku.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_distributing/backup/sudoku.py" />
-      <change type="MOVED" beforePath="C:\crs1906\exercises\ex08_distributing\simple_tz\MANIFEST.in" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_distributing/simple_tz/MANIFEST.in" />
-      <change type="MOVED" beforePath="C:\crs1906\exercises\ex08_distributing\simple_tz\README.rst" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_distributing/simple_tz/README.rst" />
-      <change type="MOVED" beforePath="C:\crs1906\exercises\ex08_distributing\simple_tz\docs\documentation.rst" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_distributing/simple_tz/docs/documentation.rst" />
-      <change type="MOVED" beforePath="C:\crs1906\exercises\ex08_distributing\simple_tz\setup.cfg" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_distributing/simple_tz/setup.cfg" />
-      <change type="MOVED" beforePath="C:\crs1906\exercises\ex08_distributing\simple_tz\setup.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_distributing/simple_tz/setup.py" />
-      <change type="MOVED" beforePath="C:\crs1906\exercises\ex08_distributing\simple_tz\simple_tz\__init__.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_distributing/simple_tz/simple_tz/__init__.py" />
-      <change type="MOVED" beforePath="C:\crs1906\exercises\ex08_distributing\simple_tz\simple_tz\tz.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_distributing/simple_tz/simple_tz/tz.py" />
-      <change type="MOVED" beforePath="C:\crs1906\exercises\ex08_distributing\simple_tz\tests\test_tz.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_distributing/simple_tz/tests/test_tz.py" />
-      <change type="MOVED" beforePath="C:\crs1906\exercises\ex08_distributing\sudoku.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_distributing/sudoku.py" />
-      <change type="MOVED" beforePath="C:\crs1906\exercises\ex08_distributing\sudoku_input.txt" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_distributing/sudoku_input.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.gitignore" afterPath="$PROJECT_DIR$/../../.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/util/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/util/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/persistence/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/persistence/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/util/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/util/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/persistence/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/persistence/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/rest_services/feed_reader/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/rest_services/feed_reader/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/util/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/util/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/rest_services/feed_reader/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/rest_services/feed_reader/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/persistence/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/persistence/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/util/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/util/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/persistence/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/persistence/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/util/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/util/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/persistence/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/persistence/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/util/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/util/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/__init__.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/__init__.py" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\hints.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/README.txt" afterPath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/README.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/act_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/act_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/persistence/act_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/persistence/act_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/persistence/act_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/persistence/act_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/persistence/act_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/persistence/act_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/persistence/act_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/persistence/act_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/persistence/act_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/persistence/act_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/address.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/address.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/address.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/address.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/address.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/address.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_concurrency/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex09_concurrency/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/base_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/base_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/persistence/base_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/persistence/base_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/persistence/base_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/persistence/base_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/persistence/base_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/persistence/base_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/persistence/base_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/persistence/base_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/persistence/base_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/persistence/base_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch10_examples/.idea/ch10_examples.iml" afterPath="$PROJECT_DIR$/../ch10_examples/.idea/ch10_examples.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_concurrency/chat/chat_server.py" afterPath="$PROJECT_DIR$/../../exercises/ex09_concurrency/chat/chat_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/chat/chat_server.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/chat/chat_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/test_support/db_utils.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/test_support/db_utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/test_support/db_utils.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/test_support/db_utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/test_support/db_utils.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/test_support/db_utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/test_support/db_utils.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/test_support/db_utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/test_support/db_utils.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/test_support/db_utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/test_support/db_utils.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/test_support/db_utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/development.ini" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/development.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/development.ini" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/development.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/development.ini" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/development.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_multiprocessing/subprocesses/encrypt.py" afterPath="$PROJECT_DIR$/../../exercises/ex09_multiprocessing/subprocesses/encrypt.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/subprocesses/encrypt.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/subprocesses/encrypt.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/rest_services/feed_reader/feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/rest_services/feed_reader/feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/ticketmanor/rest_services/feed_reader/feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/ticketmanor/rest_services/feed_reader/feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/customer.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/customer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/../../exercises/ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/member.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/member.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/member.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/member.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/member.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/member.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch10_examples/.idea/misc.xml" afterPath="$PROJECT_DIR$/../ch10_examples/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/util/observer.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/util/observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/util/observer.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/util/observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/util/observer.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/util/observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/util/observer.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/util/observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/util/observer.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/util/observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/util/observer.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/util/observer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/person.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/person.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/person_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/persistence/person_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/persistence/person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/persistence/person_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/persistence/person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/persistence/person_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/persistence/person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/persistence/person_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/persistence/person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/persistence/person_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/persistence/person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_multiprocessing/pi_monte_carlo/pi.py" afterPath="$PROJECT_DIR$/../../exercises/ex09_multiprocessing/pi_monte_carlo/pi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/pi_monte_carlo/pi.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/pi_monte_carlo/pi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/production.ini" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/production.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/production.ini" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/production.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/production.ini" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/production.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/push_to_all.py" afterPath="$PROJECT_DIR$/../../exercises/push_to_all.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/pyramidsvc.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/pyramidsvc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/pyramidsvc.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/pyramidsvc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/pyramidsvc.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/pyramidsvc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/pyramidsvc.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/pyramidsvc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/pyramidsvc.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/pyramidsvc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/pyramidsvc.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/pyramidsvc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/pyramidsvc.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/pyramidsvc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/pyramidsvc.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/pyramidsvc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/pyramidsvc.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/pyramidsvc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/pyramidsvc.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/pyramidsvc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/requirements.txt" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/requirements.txt" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex10_rest_services/user_service/rest_server.py" afterPath="$PROJECT_DIR$/../../exercises/ex10_rest_services/user_service/rest_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex10_rest_services/user_service/rest_server_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex10_rest_services/user_service/rest_server_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch10_examples/todo-api/rest_server_json.py" afterPath="$PROJECT_DIR$/../ch10_examples/todo-api/rest_server_json.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/setup.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/setup.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/setup.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/setup.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/setup.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/setup.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/setup.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/setup.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/models/test_act.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/models/test_act.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/models/test_act.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/models/test_act.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/models/test_act.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/models/test_act.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/models/test_act.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/models/test_act.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/models/test_act.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/models/test_act.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/models/test_act.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/models/test_act.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/models/test_address.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/models/test_address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/models/test_address.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/models/test_address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/models/test_address.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/models/test_address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/models/test_address.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/models/test_address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/models/test_address.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/models/test_address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/models/test_address.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/models/test_address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/rest_services/test_atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/rest_services/test_atom_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/rest_services/test_atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/rest_services/test_atom_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_atom_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/rest_services/test_atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/rest_services/test_atom_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/rest_services/test_atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/rest_services/test_atom_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_atom_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/models/test_customer.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/models/test_customer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/models/test_customer.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/models/test_customer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/models/test_customer.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/models/test_customer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/models/test_customer.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/models/test_customer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/models/test_customer.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/models/test_customer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/models/test_customer.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/models/test_customer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/rest_services/test_event_service_integration.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/rest_services/test_event_service_integration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/rest_services/test_event_service_integration.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/rest_services/test_event_service_integration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_event_service_integration.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_event_service_integration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/rest_services/test_event_service_integration.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/rest_services/test_event_service_integration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/rest_services/test_event_service_integration.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/rest_services/test_event_service_integration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_event_service_integration.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_event_service_integration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/rest_services/test_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/rest_services/test_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/rest_services/test_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/rest_services/test_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/models/test_member.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/models/test_member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/models/test_member.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/models/test_member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/models/test_member.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/models/test_member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/models/test_member.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/models/test_member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/models/test_member.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/models/test_member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/models/test_member.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/models/test_member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/util/test_observer.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/util/test_observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/util/test_observer.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/util/test_observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/util/test_observer.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/util/test_observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/util/test_observer.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/util/test_observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/util/test_observer.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/util/test_observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/util/test_observer.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/util/test_observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/models/test_person.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/models/test_person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/models/test_person.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/models/test_person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/models/test_person.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/models/test_person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/models/test_person.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/models/test_person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/models/test_person.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/models/test_person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/models/test_person.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/models/test_person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex10_rest_services/user_service/test_rest_server.py" afterPath="$PROJECT_DIR$/../../exercises/ex10_rest_services/user_service/test_rest_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch10_examples/todo-api/test_rest_server_json_integration.py" afterPath="$PROJECT_DIR$/../ch10_examples/todo-api/test_rest_server_json_integration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex10_rest_services/test_user_rest_service_json.py" afterPath="$PROJECT_DIR$/../../exercises/ex10_rest_services/test_user_rest_service_json.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex10_rest_services/test_user_rest_service_xml.py" afterPath="$PROJECT_DIR$/../../exercises/ex10_rest_services/test_user_rest_service_xml.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/rest_services/test_user_service.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/rest_services/test_user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/rest_services/test_user_service.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/rest_services/test_user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_user_service.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/rest_services/test_user_service.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/rest_services/test_user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/rest_services/test_user_service.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/rest_services/test_user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_user_service.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/util/test_util.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/util/test_util.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/util/test_util.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/tests/util/test_util.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/util/test_util.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/util/test_util.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/util/test_util.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/util/test_util.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/util/test_util.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/tests/util/test_util.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/util/test_util.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/util/test_util.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor_pylint.html" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor_pylint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor_pylint.html" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor_pylint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../scripts/use_python33x86.bat" afterPath="$PROJECT_DIR$/../../scripts/use_python33x86.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" afterPath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/rest_services/user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/rest_services/user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/rest_services/user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/rest_services/user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/ticketmanor/rest_services/user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/ticketmanor/rest_services/user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/ticketmanor/rest_services/user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/util/utils.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/util/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/util/utils.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/util/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/util/utils.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/util/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/util/utils.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/util/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/util/utils.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/util/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/util/utils.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/util/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/venue_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/venue_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/persistence/venue_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/models/persistence/venue_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/persistence/venue_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/models/persistence/venue_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/persistence/venue_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/persistence/venue_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/persistence/venue_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/models/persistence/venue_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/persistence/venue_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/models/persistence/venue_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch10_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch10_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/workspace.xml" />
     </list>
     <ignored path="ch01_examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -285,7 +38,18 @@
     <favorites_list name="ch01_examples" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="simple_counter.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/simple_counter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20070839">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -326,9 +90,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="283" />
-    <option name="y" value="101" />
-    <option name="width" value="928" />
+    <option name="x" value="168" />
+    <option name="y" value="81" />
+    <option name="width" value="924" />
     <option name="height" value="1006" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -354,7 +118,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -376,10 +139,11 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ch02_examples" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -634,13 +398,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="283" y="101" width="928" height="1006" extended-state="0" />
+    <frame x="168" y="81" width="924" height="1006" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26292136" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26410836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32647058" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -652,7 +417,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2857143" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45371428" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -967,7 +731,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simple_counter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20094563">
+        <state vertical-scroll-proportion="0.20070839">
           <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
           <folding />
         </state>

@@ -1,0 +1,9 @@
+<div style="text-align:right;">
+  <div ng-click="open_popup('/#/chat')" ng-hide="chat_button">
+    <img src="/static/images/chat-button.png" height="120px" style="margin-bottom: -650px; cursor: pointer;">
+  </div>
+</div>
+<div style="margin-top: -20px">
+  <div style="margin-top: 20px" ng-show="chat_button"></div>
+  <div ui-view="events"></div>
+</div>

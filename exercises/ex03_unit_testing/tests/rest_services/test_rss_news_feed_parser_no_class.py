@@ -81,6 +81,7 @@ expected = [
 # TODO:
 # 1. Copy the test_get_news_music() and test_get_news_music_max_items_1()
 #    methods from test_rss_news_feed_parser.py and paste them here.
+#    (Be sure to un-indent the function definitions)
 # 2. Delete the "self" argument from the copied functions.
 # 3. Replace calls to self.assertEqual() with the assert statement.
 #    HINT: see slide 3-18

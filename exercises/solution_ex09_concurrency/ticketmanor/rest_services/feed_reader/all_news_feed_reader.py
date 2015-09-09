@@ -43,13 +43,13 @@ class AllNewsFeedReader:
         """
 
         # TODO: Note that the following code waits for each call to the
-        # feed_reader's get_news() method to complete before calling the method
-        # for the next news type.
+        # feed_reader's fetch_news_items() method to complete before calling the
+        # method for the next news type.
         # You will improve the code's performance by creating a thread for each
         # news type so you can download all three news types concurrently.
         # all_news = {}
         # for news_type in 'concerts', 'sports', 'movies':
-        #     news = self.feed_reader.get_news(news_type, max_items)
+        #     news = self.feed_reader.fetch_news_items(news_type, max_items)
         #     all_news[news_type] = news
         # return all_news
         # TODO: comment out the 5 lines of code above this comment
@@ -123,11 +123,11 @@ class AllNewsFeedReader:
         :param news_type: a string with the type of news to download
         :param max_items: maximum number of news items to download
         """
-        # TODO: use `self.feed_reader` to get news of the given `news_type` and
-        # assign the result to a variable named `news`
+        # TODO: use `self.feed_reader` to fetch news of the given `news_type`
+        # and assign the result to a variable named `news`
         # HINT: this statement is exactly the same as a statement in the
         # original code that you commented out earlier.
-        news = self.feed_reader.get_news(news_type, max_items)
+        news = self.feed_reader.fetch_news_items(news_type, max_items)
 
         # TODO: create a TypedNews object and save the result in a local
         # variable.

@@ -41,12 +41,12 @@ class RssNewsFeedParser:
         # (no code changes required)
         url = self.get_url(news_type)
 
-        # TODO: note the call to a base class method to get the raw XML content
+        # TODO: note the call to a superclass method to get the raw XML content
         # from the URL.
         # (no code changes required)
         raw_content = self.get_raw_content(url)
 
-        # TODO: note the call to the base class parse_xml_content() method
+        # TODO: note the call to the superclass parse_xml_content() method
         # to parse the raw XML.
         # (no code changes required)
         content = self.parse_xml_content(raw_content, max_items)
@@ -54,7 +54,7 @@ class RssNewsFeedParser:
         return content
 
     # TODO: note that the get_url() method will be called by the
-    # base class's template method.
+    # superclass's template method.
     # (no code changes required)
     def get_url(self, news_type):
         """Implementation of abstract method"""
@@ -83,33 +83,40 @@ class RssNewsFeedParser:
         :return: list of news items. Each news item is a dictionary with
         keys title, link, content, date_time, image_banner, and image_thumbnail
         """
+        dom = minidom.parseString(raw_content)
 
-        # BONUS TODO: convert this method into a generator function that yields
+        # BONUS TODO 2: convert this method into a generator function that yields
         # a single parsed item each time it's called.
         # HINT: delete the parse_content list completely. Instead of appending
         # each parsed item to a list, yield it from the generators.
 
+        # TODO: note the definition of the list named `parsed_content`.
+        # (no code change required)
         parsed_content = []
-        dom = minidom.parseString(raw_content)
 
+        # TODO: note the assignment of `item_node` on the `for` loop below.
+        # (no code change required)
         for i, item_node in enumerate(
                 dom.getElementsByTagName(self.item_element_name), start=1):
 
-            # TODO: call the subclass's override of the parse_item() method
-            # and save the return value in a new variable
+            # TODO: call the subclass's override of the parse_item() method,
+            # passing item_node as the parameter.
+            # Save the return value in a new variable of parse_item() in a 
+            # local variable named `parsed_item`.
             parsed_item = ...
 
-            # TODO: append the item returned by the call to parse_item() to
-            # the list name parsed_content
+            # TODO: append parsed_item to parsed_content
             ...
 
             if i >= max_items > 0:
                 break
 
+        # TODO: note that the method returns `parsed_content`
+        # (no code change required)
         return parsed_content
 
     # TODO: note that the parse_item() method will be called by the
-    # base class's template method.
+    # superclass's template method.
     # (no code changes required)
     def parse_item(self, item_node):
         """Implementation of a method called from NewsFeedParser"""

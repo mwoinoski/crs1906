@@ -35,7 +35,7 @@ class FeedReader:
 
         # TODO: note the call to the feed parser's get_news() method.
         # Because this uses the "production" RssNewsFeedParser, it's
-        # impossible to predict what it will return, so it's impossible to
+        # impossible to predict what it will return, so it's difficult to
         # write a unit test for fetch_news_items() that can consistently
         # verify the result.
         # (no code change required)

@@ -18,9 +18,10 @@ from test_support.db_utils import (
 from ticketmanor.models.person import Person
 from ticketmanor.models.persistence.person_dao import PersonDao
 from ticketmanor.models.persistence import PersistenceError
-# The following import for Event is required. PyCharm flags it as
-# unused, but without it, SQLAlchemy raises exceptions.
+# The following imports for Event and Venue required. PyCharm flags them as
+# unused, but without them, SQLAlchemy raises exceptions.
 from ticketmanor.models.event import Event
+from ticketmanor.models.venue import Venue
 
 
 # SQLAlchemy can't connect to an in-memory SQLite database, so we'll

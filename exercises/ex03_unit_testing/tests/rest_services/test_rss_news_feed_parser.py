@@ -84,6 +84,7 @@ expected = [
 
 
 # TODO: make TestRssNewsFeedParser a subclass of unittest.TestCase
+# HINT: see slide 3-9
 class TestRssNewsFeedParser:
     """Unit tests for RssNewsFeedParser"""
 
@@ -195,24 +196,6 @@ class TestRssNewsFeedParser:
         for expected_result, actual_result in zip_longest(expected[:2], actual):
             self.assertEqual(expected_result, actual_result)
 
-    def test_parse_content_items_missing(self):
-        feed_reader = RssNewsFeedParser()
-
-        minimal_input = '<rss><item></item></rss>'
-        minimal_results = [
-            {
-                'title': '',
-                'link': '',
-                'date_time': '',
-                'image_thumbnail': '',
-                'image_banner': '',
-                'content': ''
-            }
-        ]
-
-        actual_results = feed_reader.parse_xml_content(minimal_input)
-
-        self.assertEqual(minimal_results, actual_results)
 
     @classmethod
     def setUpClass(cls):

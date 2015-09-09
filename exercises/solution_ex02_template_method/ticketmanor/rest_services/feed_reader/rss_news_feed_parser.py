@@ -41,12 +41,12 @@ class RssNewsFeedParser(NewsFeedParser):
     #     # (no code changes required)
     #     url = self.get_url(news_type)
     #
-    #     # TODO: note the call to a base class method to get the raw XML content
+    #     # TODO: note the call to a superclass method to get the raw XML content
     #     # from the URL.
     #     # (no code changes required)
     #     raw_content = self.get_raw_content(url)
     #
-    #     # TODO: note the call to the base class parse_xml_content() method
+    #     # TODO: note the call to the superclass parse_xml_content() method
     #     # to parse the raw XML.
     #     # (no code changes required)
     #     content = self.parse_xml_content(raw_content, max_items)
@@ -54,7 +54,7 @@ class RssNewsFeedParser(NewsFeedParser):
     #     return content
 
     # TODO: note that the get_url() method will be called by the
-    # base class's template method.
+    # superclass's template method.
     # (no code changes required)
     def get_url(self, news_type):
         """Implementation of abstract method"""
@@ -83,8 +83,9 @@ class RssNewsFeedParser(NewsFeedParser):
     #     :return: list of news items. Each news item is a dictionary with
     #     keys title, link, content, date_time, image_banner, and image_thumbnail
     #     """
-    #     parsed_content = []
     #     dom = minidom.parseString(raw_content)
+    #
+    #     parsed_content = []
     #
     #     for i, item_node in enumerate(
     #             dom.getElementsByTagName(self.item_element_name), start=1):
@@ -103,7 +104,7 @@ class RssNewsFeedParser(NewsFeedParser):
     #     return parsed_content
 
     # TODO: note that the parse_item() method will be called by the
-    # base class's template method.
+    # superclass's template method.
     # (no code changes required)
     def parse_item(self, item_node):
         """Implementation of a method called from NewsFeedParser"""

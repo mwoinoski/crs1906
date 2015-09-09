@@ -27,8 +27,8 @@ library_mod = cdll.LoadLibrary(library)
 # (no code change required)
 class COMPLEX(Structure):
     _fields_ = [
-        ("real", c_double),  # defines a field named "real" of type double
-        ("imag", c_double)   # defines a field named "imag" of type double
+        ("real", c_double),  # defines a field named `real` of type double
+        ("imag", c_double)   # defines a field named `imag` of type double
     ]
 
 # area of space to investigate
@@ -41,7 +41,7 @@ def calculate_z_serial(q, maxiter):
     # TODO: note the descriptions of the parameters to calculate_z_serial:
     """
     :param q: list of built-in complex objects. The Python complex class
-        defines two data attributes, "real" and "imag"
+        defines two data attributes, `real` and `imag`
     :param maxiter: maximum number of loops
     """
 
@@ -80,7 +80,7 @@ def calculate_z_serial(q, maxiter):
 
     # TODO: create an array of COMPLEX by calling the constructor for the
     # array class that you just created.
-    # Assign the array to a variable named "complex_array"
+    # Assign the array to a variable named `complex_array`
     complex_array = complex_array_class()
 
     # TODO: create a new array class for the second argument to the C function.
@@ -90,7 +90,7 @@ def calculate_z_serial(q, maxiter):
 
     # TODO: create an array of c_int by calling the constructor for the
     # array class that you just created.
-    # Assign the array to a variable named "output_array"
+    # Assign the array to a variable named `output_array`
     output_array = int_array_class()
 
     for index in range(len_q):

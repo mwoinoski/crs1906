@@ -1,4 +1,8 @@
 <html>
+<head>
+    <title>Ex 1.1 Hints</title>
+    <link rel="stylesheet" type="text/css" href="../../css/simple.css">
+</head>
 <body>
 <h2>Hints for Exercise 1.1</h2>
 
@@ -6,7 +10,7 @@
 
 <font color="grey"><pre># TODO: make the PersonDao class a subclass of BaseDao</font>
 <font color="blue">class PersonDao(BaseDao):</pre></font>
-<p></p>
+
 <font color="grey"><pre>    # TODO: define the __init__() method, with one parameter, self</font>
 <font color="blue">    def __init__(self):</pre></font>
 <font color="grey"><pre>        # TODO: call the superclass's __init__(), passing two arguments:
@@ -31,7 +35,7 @@
 
 <font color="grey"><pre># TODO: make the VenueDao class a subclass of BaseDao</font>
 <font color="blue">class VenueDao(BaseDao):</pre></font>
-<p></p>
+
 <font color="grey"><pre>    # TODO: define the __init__() method</font>
 <font color="blue">    def __init__(self):</pre></font>
 
@@ -45,7 +49,7 @@
 
 <font color="grey"><pre># TODO: make the ActDao class a subclass of BaseDao</font>
 <font color="blue">class ActDao(BaseDao):</pre></font>
-<p></p>
+
 <font color="grey"><pre>    # TODO: define the __init__() method</font>
 <font color="blue">    def __init__(self):</pre></font>
 <font color="grey"><pre>        # TODO: in the __init__() method, call the superclass's __init__(),
@@ -57,34 +61,92 @@
 
 <h2>Hints for Exercise 1.1 Bonus 1</h2>
 
-<h3>person.py</h3>
+<h3>customer.py</h3>
 
-<font color="grey"><pre>    # TODO: define an __init__() method. The argument list to __init__() should
-    # include all the arguments that are duplicated in the Customer and Member
-    # classes' __init__() methods.</pre></font>
-<font color="blue"><pre>    def __init__(self, first_name, last_name, email, middles=None,
+<pre><font color="grey"># TODO: import the User class from the ticketmanor.models.user module</font>
+<font color="blue">from ticketmanor.models.user import User</font></pre>
+
+
+<pre><font color="grey"># TODO: make Customer a subclass of User</font>
+<font color="blue">class Customer(User):</font></pre>
+
+<pre><font color="grey">    def __init__(self, first_name, last_name, email, middles=None,
                  street=None, city=None, state=None, country=None,
-                 post_code=None):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.email = email
-        self.middles = middles
-        self.street = street
-        self.city = city
-        self.state = state
-        self.country = country
-        self.post_code = post_code</pre></font>
+                 post_code=None, customer_id=None):
+
+        # TODO: call the superclass __init__() method, passing the
+        # appropriate arguments</font>
+<font color="blue">        super().__init__(first_name, last_name, email, middles, street, city,
+             state, country, post_code)</font></pre>
+
+<pre><font color="grey">        # TODO: save any remaining arguments in data attributes of the
+        # current Customer object</font>
+<font color="blue">        self.customer_id = customer_id</font></pre>
+
+<pre><font color="grey">    # TODO: copy all the methods below this comment and paste them into the
+    # User class
+
+    # TODO: Modify the methods here to reference Customer-specific attributes
+    # when necessary, while delegating as much work as possible to superclass
+    # methods.
+    </font><font color="blue">
+    def __eq__(self, other):
+        return super().__eq__(other) and \
+            other.customer_id == self.customer_id
+
+    def __str__(self):
+        return super().__str__() + ' ' + self.customer_id
+
+    def __repr__(self):
+        return super().__repr_() + \
+        ",customer_id={self.customer_id}".format(self=self)</font></pre>
+
+<h3>user.py</h3>
+
+<pre><font color="grey">    # TODO: paste methods from Customer class here</font>
+<font color="blue">    def name(self):
+        middle_name = self.middles + " " if self.middles is not None else ""
+        return "{self.first_name} {}{self.last_name}"\
+            .format(middle_name, self=self)
+
+    def __eq__(self, other):
+        """Compare User instances."""
+        return isinstance(other, self.__class__) and \
+            other.first_name == self.first_name and \
+            other.middles == self.middles and \
+            other.last_name == self.last_name and \
+            other.email == self.email and \
+            other.street == self.street and \
+            other.city == self.city and \
+            other.state == self.state and \
+            other.country == self.country and \
+            other.post_code == self.post_code
+
+    def __ne__(self, other):
+        """Compare User instances."""
+        return not self.__eq__(other)
+
+    def __str__(self):
+        """Return a human-readable representation of a User"""
+        return self.name + " " + self.email
+
+    def __repr__(self):
+        """Return an unambiguous String representation of a User"""
+        return "id={self.id},first_name='{self.first_name}'," \
+            "middles='{self.middles}',last_name='{self.last_name}'," \
+            "email='{self.email}',street='{self.street}'," \
+            "city='{self.city}',state='{self.state}'," \
+            "country='{self.country}',post_code='{self.post_code}'," \
+            .format(self=self)</font></pre>
 
 
 <h3>member.py</h3>
 
-<font color="grey"><pre># TODO: import the Person class from the person module</font>
-<font color="blue">from ticketmanor.models.person import Person</pre></font>
-<p></p>
+<font color="grey"><pre># TODO: import the User class from the ticketmanor.models.user module</font>
+<font color="blue">from ticketmanor.models.user import User</pre></font>
 
-<font color="grey"><pre># TODO: make Member a subclass of Person</font>
-<font color="blue">class Member(Person):</pre></font>
-<p></p>
+<font color="grey"><pre># TODO: make Member a subclass of User</font>
+<font color="blue">class Member(User):</pre></font>
 
 <font color="grey"><pre>        # TODO: call the superclass __init__() method, passing the
         # appropriate arguments</font>
@@ -92,30 +154,27 @@
                          state, country, post_code)</pre></font>
 
 <font color="grey"><pre>        # TODO: save the remaining arguments in data attributes of the
-        # current Member object</font>
+        # current Member object
+        # TODO: for any argument that you passed to the superclass constructor,
+        # delete its attribute assignment from the next block of statements.</font>
 <font color="blue">        self.nick_name = nick_name
         self.profile_photo = profile_photo</pre></font>
-<p></p>
 
-<font color="grey"><pre>    # TODO: Modify the methods here to delegate as much work as possible to
-    # your Person methods
-    # HINT: you will be able to delete some methods completely; others can
-    # override the superclass methods and then call the superclass methods to
-    # do part of the work.</pre></font>
-
-<font color="blue"><pre>    def __eq__(self, other):
+<font color="grey"><pre>
+    # TODO: Modify the methods here to reference Member-specific attributes
+    # when necessary, while delegating as much work as possible to superclass
+    # methods.</font><font color="blue">
+    def __eq__(self, other):
         """Compare Member instances."""
         return super().__eq__(other) and \
             other.nick_name == self.nick_name and \
-            other.profile_photo == self.profile_photo</pre></font>
-<p></p>
+            other.profile_photo == self.profile_photo
 
-<font color="blue"><pre>    def __str__(self):
+    def __str__(self):
         """Return a human-readable representation of a Member"""
-        return super().__str__() + ' ' + self.nick_name</pre></font>
-<p></p>
+        return super().__str__() + ' ' + self.nick_name
 
-<font color="blue"><pre>    def __repr__(self):
+    def __repr__(self):
         """Return an unambiguous String representation of a Member"""
         return super().__repr_() + \
             ",nick_name={self.nick_name},profile_photo={self.profile_photo}" \

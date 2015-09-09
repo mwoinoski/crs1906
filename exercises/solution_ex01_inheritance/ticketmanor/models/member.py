@@ -4,14 +4,14 @@ Member model class
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
-# TODO: import the Person class from the person module
-from ticketmanor.models.person import Person
+# TODO: import the User class from the ticketmanor.models.user module
+from ticketmanor.models.user import User
 # Note that a relative import also works:
-# from .person import Person
+# from .user import User
 
 
-# TODO: make Member a subclass of Person
-class Member(Person):
+# TODO: make Member a subclass of User
+class Member(User):
     """
     Model class for Member
     """
@@ -25,13 +25,15 @@ class Member(Person):
         super().__init__(first_name, last_name, email, middles, street, city,
                          state, country, post_code)
 
-        # TODO: save the remaining arguments in data attributes of the
-        # current Member object
+        # TODO: save any remaining arguments in data attributes of the
+        # current Customer object
+        # TODO: for any argument that you passed to the superclass constructor,
+        # delete its attribute assignment from the next block of statements.
         self.nick_name = nick_name
         self.profile_photo = profile_photo
 
     # TODO: Modify the methods here to delegate as much work as possible to
-    # your Person methods
+    # your User methods
     # HINT: you will be able to delete some methods completely; others can
     # override the superclass methods and then call the superclass methods to
     # do part of the work.

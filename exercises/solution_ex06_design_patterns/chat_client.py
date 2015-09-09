@@ -59,18 +59,21 @@ def main():
     chat_room = None
     try:
         # TODO: import ChatRoom from the chat_room module
-        from chat_room import ChatRoom
+        # from chat_room import ChatRoom
 
         # TODO: create a ChatRoom() object and assign it to a variable
         # named `chat_room`
-        chat_room = ChatRoom()
+        # chat_room = ChatRoom()
+
+        # BONUS TODO: comment out the two statements above (the import of
+	# ChatRoom and the setting of `chat_room`
 
         # BONUS TODO: import ChatRoomProxy from the chat_room_proxy module
-        # from chat_room_proxy import ChatRoomProxy
+        from chat_room_proxy import ChatRoomProxy
 
         # BONUS TODO: create a ChatRoomProxy() object and assign it to a variable
         # named `chat_room`
-        # chat_room = ChatRoomProxy()
+        chat_room = ChatRoomProxy()
 
         client_name = input("What's your name? ")
 

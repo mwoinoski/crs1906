@@ -1,4 +1,8 @@
 <html>
+<head>
+    <title>Ex 4.1 Hints</title>
+    <link rel="stylesheet" type="text/css" href="../../css/simple.css">
+</head>
 <body>
 <h2>Hints for Exercise 4.1</h2>
 
@@ -6,44 +10,47 @@
 
 <font color="grey"><pre># TODO: import the logging package</font>
 <font color="blue">import logging</pre></font>
-<p></p>
+
 
 <font color="grey"><pre># TODO: import the logging.config package</font>
 <font color="blue">import logging.config</pre></font>
-<p></p>
+
 
 <font color="grey"><pre># TODO: read the logging config from the file logging.conf</font>
 <font color="blue">logging.config.fileConfig('logging.conf')</pre></font>
-<p></p>
+
 
 <font color="grey"><pre># TODO: create a Logger instance and assign it to a variable named `logger`.
 # Give the Logger the name 'unittestgui'</font>
 <font color="blue">logger = logging.getLogger('unittestgui')</pre></font>
-<p></p>
+
 
 <font color="grey"><pre>    ...
     def __init__(self, *args, **kwargs):
         # TODO: log an info message that says the class constructor was called.</font>
 <font color="blue">        logger.info("%s constructor called", self.__class__.__name__)</pre></font>
-<p></p>
 
-<font color="grey"><pre>            top_level_dir = self.top_level_dir or None
+
+<font color="grey"><pre>            ...
+	    top_level_dir = self.top_level_dir or None
             # TODO: log a debug-level message with the value of top_level_dir
             # Note that top_level_dir is set in the previous statement.</font>
 <font color="blue">            logger.debug('top_level_dir = %s', top_level_dir)</pre></font>
-<p></p>
+
 
 <font color="grey"><pre>    def addError(self, test, err):
         # TODO: log an error message with the value of the `test`
         # parameter.</font>
-<font color="blue">        logger.error('Error in test %s', test)</pre></font>
-<p></p>
+<font color="blue">        logger.error('Error in test %s', test)</font>
+<font color="grey">        ...</pre></font>
+
 
 <font color="grey"><pre>    def addFailure(self, test, err):
         # TODO: log an warning message with the value of the `test`
         # parameter.</font>
-<font color="blue">        logger.warning('Failure in test %s', test)</pre></font>
-<p></p>
+<font color="blue">        logger.warning('Failure in test %s', test)</font>
+<font color="grey">        ...</pre></font>
+
 
 
 </body>

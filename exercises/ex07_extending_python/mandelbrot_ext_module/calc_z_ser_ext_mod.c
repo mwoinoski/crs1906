@@ -5,8 +5,8 @@
 /* int calc_z_ser(struct complex * q, int * output, int len_q, int maxiter) */
 /*
  * TODO: note the definition of the py_calc_z_ser() function.
- * T
-   (no code change required) */
+ * (no code change required) 
+ */
 static PyObject *py_calc_z_ser(PyObject *self, PyObject *args) {
   PyObject *q, *output;
   int len_q, maxiter, result = 0;

@@ -13,7 +13,7 @@ Returns: array of doubles
 
 # TODO: now complete the remaining steps in mandelbrot_cython.py
 
-# You can gain a little speed by adding type defintions to parameters and
+# You can gain a little speed by adding type definitions to parameters and
 # local variables, as in this example:
 # import array
 # def calculate_z_serial(list q, int maxiter):

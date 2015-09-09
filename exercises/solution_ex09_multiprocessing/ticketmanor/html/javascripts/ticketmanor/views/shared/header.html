@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" ui-sref="root.home">
-        <span class="logo">Exercise 9.2 Solution</span>
+        <span class="logo">EXERCISE 9.2 SOLUTION</span>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -31,21 +31,30 @@
             <span class="cart-badge">{{cart_count}}</span>
           </div>
         </li>
-          <li><a ng-hide="current_user" class="links" ui-sref="events.show.login">Login</a></li>
-          <li>
-            <a ui-sref="events.show.signup" class="links" ng-hide="current_user">Sign up</a>
-          </li>
-          <li class="dropdown" ng-show="current_user">
-            <a class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{current_user.first_name}}<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a ui-sref="fork-us"><i class="fa fa-tachometer"></i> Account</a></li>
-              <li><a ui-sref="fork-us"><i class="fa fa-cogs"></i> Settings</a></li>           
-              <li role="separator" class="divider"></li>
-              <li><a ng-click="logout()"><i class="fa fa-sign-out"></i> Log out</a></li>
-            </ul>
-          </li>
+        <li>
+          <a ui-sref="events.show.login" class="links" ng-hide="current_user">
+            Login
+          </a>
+        </li>
+        <li>
+          <a ui-sref="events.show.signup" class="links" ng-hide="current_user">
+            Sign up
+          </a>
+        </li>
+        <li>
+          <a class="links" ui-sref="events.show.all_news">
+            News
+          </a>
+        </li>
+        <li class="dropdown" ng-show="current_user">
+          <a class="dropdown-toggle links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{current_user.first_name}}<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a ui-sref="fork-us"><i class="fa fa-tachometer"></i> Account</a></li>
+            <li><a ui-sref="fork-us"><i class="fa fa-cogs"></i> Settings</a></li>           
+            <li role="separator" class="divider"></li>
+            <li><a ng-click="logout()"><i class="fa fa-sign-out"></i> Log out</a></li>
+          </ul>
         </li>
       </ul>
-    </div>
-  </div>
+    </div>  </div>
 </nav>

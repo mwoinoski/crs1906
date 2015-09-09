@@ -4,19 +4,14 @@ Customer model class
 
 __author__ = 'Mike Woinoski mike@articulatedesign.us.com'
 
-# TODO: Edit person.py and create a new class named Person
-
-# TODO: Copy the methods name(), __eq__(), __ne__(), __str__(), and __repr__()
-# from this file to your new Person class
-
-# TODO: import the Person class from the person module
-from ticketmanor.models.person import Person
+# TODO: import the User class from the ticketmanor.models.user module
+from ticketmanor.models.user import User
 # Note that a relative import also works:
-# from .person import Person
+# from .user import User
 
 
-# TODO: make Customer a subclass of Person
-class Customer(Person):
+# TODO: make Customer a subclass of User
+class Customer(User):
     """
     Model class for Customer
     """
@@ -32,13 +27,15 @@ class Customer(Person):
 
         # TODO: save any remaining arguments in data attributes of the
         # current Customer object
+        # TODO: for any argument that you passed to the superclass constructor,
+        # delete its attribute assignment from the next block of statements.
         self.customer_id = customer_id
 
-    # TODO: copy all the methods below this comment and paste them into your
-    # new Person class
+    # TODO: copy all the methods below this comment and paste them into the
+    # User class
 
-    # TODO: after copying these methods to your Person class, modify the
-    # methods here to delegate as much work as possible to the Person methods
+    # TODO: after copying these methods to the User class, modify the
+    # methods here to delegate as much work as possible to the User methods.
     # HINT: you will be able to delete some methods completely; others can
     # override the superclass methods and then call the superclass methods to
     # do part of the work.
