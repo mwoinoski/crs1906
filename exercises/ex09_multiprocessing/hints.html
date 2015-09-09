@@ -59,21 +59,6 @@ Replace the ProcessPoolExecutor with a ThreadPoolExecuter: </font><font color="b
     with ThreadPoolExecutor(max_workers=4) as executor:  
 </pre></font>
 
-<h2>Hints for Exercise 9.2 Bonus (Managing parallel subprocesses)</h2>
-
-<h3>encrypt.py</h3>
-
-<font color="grey"><pre># TODO: import Process from the multiprocessing module</font>
-<font color="blue">from multiprocessing import Process</pre></font>
-
-<font color="grey"><pre>    for file in sys.argv[1:]:
-        # TODO: create a Process instance to execute the run_openssl() function</font><font color="blue">
-        child_process = Process(target=run_openssl,
-                                args=(file, env))</pre></font>
-
-<font color="grey"><pre>        # TODO: start the Process instance</font>
-<font color="blue">        child_process.start()</pre></font>
-
 <h2>Hints for Exercise 9.2 Bonus (Compare concurrent and parallelized news feed readers)</h2>
 
 <h3>all_news_feed_reader.py</h3>
