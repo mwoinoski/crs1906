@@ -2,42 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0619d9d4-7862-4cda-91c2-c441bea3b450" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\crs1906\exercises\hints.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/README.txt" afterPath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/README.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/act.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/act.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/act_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/act_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/persistence/act_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/persistence/act_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/address.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/address.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/base_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/base_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/customer.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/customer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/customer.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/customer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/ex01_inheritance.iml" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/ex01_inheritance.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/scripts/func_stats.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/scripts/func_stats.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/../../exercises/ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/hints.html" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/hints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/hints.html" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/hints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_multiprocessing/hints.html" afterPath="$PROJECT_DIR$/../../exercises/ex09_multiprocessing/hints.html" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\ex09_multiprocessing\subprocesses\decrypt.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\ex09_multiprocessing\subprocesses\encrypt.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\ex09_multiprocessing\subprocesses\in1.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\ex09_multiprocessing\subprocesses\in1_copy.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\ex09_multiprocessing\subprocesses\in2.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\ex09_multiprocessing\subprocesses\in2_copy.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\ex09_multiprocessing\subprocesses\in3.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\ex09_multiprocessing\subprocesses\in3_copy.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\solution_ex09_multiprocessing\subprocesses\decrypt.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\solution_ex09_multiprocessing\subprocesses\encrypt.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\solution_ex09_multiprocessing\subprocesses\in1.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\solution_ex09_multiprocessing\subprocesses\in1_copy.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\solution_ex09_multiprocessing\subprocesses\in2.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\solution_ex09_multiprocessing\subprocesses\in2_copy.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\solution_ex09_multiprocessing\subprocesses\in3.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\crs1906\exercises\solution_ex09_multiprocessing\subprocesses\in3_copy.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_concurrency/.idea/ex09_concurrency.iml" afterPath="$PROJECT_DIR$/../../exercises/ex09_concurrency/.idea/ex09_concurrency.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_multiprocessing/.idea/ex09_multiprocessing.iml" afterPath="$PROJECT_DIR$/../../exercises/ex09_multiprocessing/.idea/ex09_multiprocessing.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../index.html" afterPath="$PROJECT_DIR$/../../index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/member.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/member.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/person.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/person.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/models/person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/person_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/models/persistence/test_person_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/tests/models/persistence/test_person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/models/persistence/test_person_dao.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/models/persistence/test_person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/venue_dao.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/models/persistence/venue_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch01_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch01_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_multiprocessing/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../exercises/ex09_multiprocessing/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/.idea/solution_ex09_concurrency.iml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/.idea/solution_ex09_concurrency.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/.idea/solution_ex09_multiprocessing.iml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/.idea/solution_ex09_multiprocessing.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch03_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch03_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch07_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch10_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch10_examples/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex07_extending_python/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex07_extending_python/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_concurrency/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex09_concurrency/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_multiprocessing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex09_multiprocessing/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_concurrency/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_multiprocessing/.idea/workspace.xml" />
     </list>
     <ignored path="ch02_examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,10 +91,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
-    <option name="y" value="91" />
-    <option name="width" value="928" />
-    <option name="height" value="1006" />
+    <option name="x" value="282" />
+    <option name="width" value="880" />
+    <option name="height" value="959" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -113,6 +119,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -133,11 +140,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ch01_examples" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -362,14 +368,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="91" width="928" height="1006" extended-state="0" />
+    <frame x="282" y="0" width="880" height="959" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2483146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24821852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32914287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32729468" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990867" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />

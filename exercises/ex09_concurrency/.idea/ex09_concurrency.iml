@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/chat" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ticketmanor" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/subprocesses" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.4.3 virtualenv at C:\crs1906\exercises\ex09_concurrency\venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

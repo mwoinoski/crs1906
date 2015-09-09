@@ -38,10 +38,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="283" />
-    <option name="y" value="101" />
+    <option name="x" value="282" />
     <option name="width" value="880" />
-    <option name="height" value="1006" />
+    <option name="height" value="959" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -107,7 +106,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="283" y="101" width="880" height="1006" extended-state="0" />
+    <frame x="282" y="0" width="880" height="959" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25771973" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -170,7 +169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56198347">
           <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>

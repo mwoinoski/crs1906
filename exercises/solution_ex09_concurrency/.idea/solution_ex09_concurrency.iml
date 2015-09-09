@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ticketmanor" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/chat" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/subprocesses" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

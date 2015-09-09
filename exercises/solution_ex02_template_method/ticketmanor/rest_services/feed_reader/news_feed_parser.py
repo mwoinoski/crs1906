@@ -72,26 +72,50 @@ class NewsFeedParser(metaclass=ABCMeta):
         """
         dom = minidom.parseString(raw_content)
 
+        # TODO: note the definition of the list named `parsed_content`.
+        # (no code change required)
+        parsed_content = []
+
+        # TODO: note the assignment of `item_node` on the `for` loop below.
+        # (no code change required)
+        for i, item_node in enumerate(
+                dom.getElementsByTagName(self.item_element_name), start=1):
+
+            # TODO: call the subclass's override of the parse_item() method,
+            # passing item_node as the parameter.
+            # Save the return value in a new variable of parse_item() in a
+            # local variable named `parsed_item`.
+            parsed_item = self.parse_item(item_node)
+
+            # TODO: append parsed_item to parsed_content
+            parsed_content.append(parsed_item)
+
+            if i >= max_items > 0:
+                break
+
+        # TODO: note that the method returns `parsed_content`
+        # (no code change required)
+        return parsed_content
+
         # BONUS TODO 2: convert this method into a generator function that yields
         # a single parsed item each time it's called.
         # HINT: delete the parse_content list completely. Instead of appending
         # each parsed item to a list, yield it from the generator.
 
-        for i, item_node in enumerate(
-                dom.getElementsByTagName(self.item_element_name), start=1):
+        # NOTE: a generator can't be serialized as JSON, so don't use it for
+        # the TicketManor application
 
-            # TODO: call the subclass's override of the parse_item() method
-            # and save the return value in a new variable
-            parsed_item = self.parse_item(item_node)
-
-            # TODO: append the item returned by the call to parse_item() to
-            # the list name parsed_content
-            yield parsed_item
-
-            if i >= max_items > 0:
-                break
-
-        return
+        # for i, item_node in enumerate(
+        #         dom.getElementsByTagName(self.item_element_name), start=1):
+        #     # Get the parsed news item
+        #     parsed_item = self.parse_item(item_node)
+        #     # Yield each item from the generator function
+        #     yield parsed_item
+        #
+        #     if i >= max_items > 0:
+        #         break
+        # # At this point, there's nothing else to return
+        # return
 
     # BONUS TODO: define parse_item() as an abstract method
     @abstractmethod
