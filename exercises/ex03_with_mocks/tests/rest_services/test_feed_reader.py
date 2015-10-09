@@ -10,6 +10,7 @@ from itertools import zip_longest
 from ticketmanor.rest_services.feed_reader.feed_reader import FeedReader
 from ticketmanor.rest_services.feed_reader import FeedReaderException
 from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import (
+    NewsFeedParser,
     RssNewsFeedParser,
 )
 
@@ -19,20 +20,20 @@ class TestFeedReader(TestCase):
 
     # This test method creates a Mock news feed parser
     def test_fetch_news_items_music(self):
-        # TODO: create a Mock news feed parser object and assign it to a local
+        # TODO: create a mock RssNewsFeedParser object and assign it to a local
         # variable named `mock_news_feed_parser`
-        # HINT: see slide 3-40
+        # HINT: see slide 3-36
         mock_news_feed_parser = ...
 
-        # TODO: assign the return value of the mock's get_news() method to a
-        # local variable named `expected` 
+        # TODO: set the return value of the mock's get_news() method to the
+        # value of the variable `expected` (defined at the end of the file)
         ...
 
         # TODO: create a FeedReader instance and assign it to a local variable
         # named `feed_reader`
         feed_reader = ...
 
-        # TODO: set the feed_reader.news_feed_parser attribute to
+        # TODO: set the feed_reader.news_feed_parser attribute to the
         # mock_news_feed_parser
         ...
 
@@ -50,14 +51,14 @@ class TestFeedReader(TestCase):
 
     # This test method uses a Mock news feed parser to raise an exception
     def test_fetch_news_items_raise_FeedReaderException(self):
-        # TODO: create a Mock news feed parser object and assign it to a local
+        # TODO: create a mock RssNewsFeedParser object and assign it to a local
         # variable named `mock_news_feed_parser`
         mock_news_feed_parser = ...
 
         # TODO: create a new Mock and assign it to the mock feed parser's
         # `get_news` attribute. The new Mock should have a side effect of
         # raising a FeedReaderException.
-        # HINT: see slide 3-42
+        # HINT: see slide 3-39
         ...
 
         # TODO: create a FeedReader instance and assign it to a local variable
@@ -88,14 +89,14 @@ class TestFeedReader(TestCase):
     # two arguments:
     # 1. the class to be mocked (RssNewsFeedParser)
     # 2. the name of the method to be mocked, as a string ('get_news')
-    # HINT: see slide 3-43
+    # HINT: see slide 3-40
     ...
     # TODO: note the second argument to the method, which will receive the Mock
     # object for the mocked method.
     # (no code change required)
-    def test_get_news_with_patch(self, mock_get_news_method):
+    def test_fetch_news_items_max_items_1(self, mock_get_news_method):
         # TODO: set the return value of the mocked method to the `expected`
-	# variable (defined later)
+        # variable (defined at the end of the file)
         ...
 
         # TODO: note the call to the FeedReader constructor. The call to the
@@ -108,7 +109,11 @@ class TestFeedReader(TestCase):
         # will call the Mock's get_news(), which you programmed to return
         # `expected`
         # (no code change required)
-        news = feed_reader.fetch_news_items("music")
+        news = feed_reader.fetch_news_items("music", 1)
+
+        # TODO: verify that mock_get_news_method was called with
+        # arguments "music" and 1
+        ...
 
         for expected_result, actual_result in zip_longest(expected, news):
             self.assertEqual(expected_result, actual_result)
@@ -133,13 +138,11 @@ class TestFeedReader(TestCase):
         mock_news_feed_parser.get_news.return_value = expected
 
         feed_reader = FeedReader()
-        # TODO: Add a print() statement to RssNewsFeedParser.__init__() to
-        # verify that the constructor is never called.
 
         news = feed_reader.fetch_news_items("music", 2)
 
         # TODO: verify the mock_news_feed_parser.get_news method was called
-        # arguments "music" and 2
+        # with arguments "music" and 2
         # HINT: see slide 3-41
         ...
 

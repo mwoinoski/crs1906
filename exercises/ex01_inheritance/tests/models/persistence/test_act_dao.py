@@ -1,14 +1,13 @@
 """
 Integration tests for ActDao.
 """
-from ticketmanor.models.persistence import PersistenceError
-
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import os
+import sys
 from sqlalchemy.orm import sessionmaker
-
-from unittest import TestCase
+from unittest import TestCase, main
+from unittest.mock import patch
 from ticketmanor import engine_from_config
 from test_support.db_utils import (
     create_db_tables,
@@ -18,7 +17,8 @@ from test_support.db_utils import (
 )
 from ticketmanor.models.act import Act
 from ticketmanor.models.persistence.act_dao import ActDao
-
+from ticketmanor.models.persistence.base_dao import BaseDao
+from ticketmanor.models.persistence import PersistenceError
 # The following imports for Event and Venue is required. PyCharm flags them as
 # unused, but without them, SQLAlchemy raises exceptions.
 from ticketmanor.models.event import Event
@@ -36,8 +36,54 @@ class ActDaoTest(TestCase):
     """
 
     # -------------------------------------------------------------------------
+    #                        Set Up and Tear Down Methods
+    # -------------------------------------------------------------------------
+
+    def setUp(self):
+        if os.path.exists(db_filename):
+            os.remove(db_filename)
+        create_db_tables(db_filename)
+        self.populate_db_tables()
+
+        settings = {'sqlalchemy.url': 'sqlite:///' + db_filename}
+        # Create the SQLAlchemy DB Engine
+        engine = engine_from_config(settings, 'sqlalchemy.')
+        Session = sessionmaker(bind=engine)
+        self.session = Session()
+        self.act_dao = ActDao()
+
+    def tearDown(self):
+        self.session.close_all()
+        drop_db_tables(db_filename)
+
+    # -------------------------------------------------------------------------
     #                              Test Cases
     # -------------------------------------------------------------------------
+
+    def test_extends_base_dao(self):
+        self.assertTrue(issubclass(ActDao, BaseDao),
+                        'ActDao should be a subclass of BaseDao')
+
+    @patch.object(BaseDao, '__init__')
+    def test_calls_super_init(self, mock_init_method):
+        ActDao()
+        try:
+            mock_init_method.assert_called_once_with(Act, 'id')
+        except:
+            print('\nERROR: Act.__init__() should call super().__init__()',
+                  file=sys.stderr)
+            raise
+
+    @patch.object(BaseDao, 'get')
+    def test_get_calls_superclass_method(self, mock_get_method):
+        self.act_dao.get('hsimpson@gmail.com', self.session)
+        try:
+            mock_get_method.assert_called_once_with('hsimpson@gmail.com',
+                                                    self.session)
+        except:
+            print('\nERROR: Act should delegate get() call to BaseDao',
+                  file=sys.stderr)
+            raise
 
     def test_get_act_found(self):
 
@@ -172,31 +218,6 @@ class ActDaoTest(TestCase):
             PersistenceError, self.act_dao.delete, 999, self.session)
 
     # -------------------------------------------------------------------------
-    #                        Set Up and Tear Down Methods
-    # -------------------------------------------------------------------------
-
-    @classmethod
-    def tearDownClass(cls):
-        """Called once, before the first test case is run"""
-        os.remove(db_filename)
-
-    def setUp(self):
-        """Called before each test case"""
-        create_db_tables(db_filename)
-        self.populate_db_tables()
-
-        settings = {'sqlalchemy.url': 'sqlite:///' + db_filename}
-        # Create the SQLAlchemy DB Engine
-        engine = engine_from_config(settings, 'sqlalchemy.')
-        Session = sessionmaker(bind=engine)
-        self.session = Session()
-        self.act_dao = ActDao()
-
-    def tearDown(self):
-        self.session.close_all()
-        drop_db_tables(db_filename)
-
-    # -------------------------------------------------------------------------
     #                              Utility Methods
     # -------------------------------------------------------------------------
 
@@ -235,3 +256,6 @@ class ActDaoTest(TestCase):
             (103, 'Kingston', 'USA', 42.7127, -73.0059, 'Kingston Cinema 6',
              'NY', '1205 Ulster Ave, Kingston NY 12401')
         )
+
+if __name__ == '__main__':
+    main()

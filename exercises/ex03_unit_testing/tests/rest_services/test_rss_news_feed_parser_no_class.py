@@ -84,7 +84,7 @@ expected = [
 #    (Be sure to un-indent the function definitions)
 # 2. Delete the "self" argument from the copied functions.
 # 3. Replace calls to self.assertEqual() with the assert statement.
-#    HINT: see slide 3-18
+#    HINT: see slide 3-19
 ...
 
 

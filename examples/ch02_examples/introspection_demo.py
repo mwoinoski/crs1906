@@ -2,31 +2,33 @@
 introspection_demo.py - Example of introspection from Chapter 2
 """
 
-def print_docstrings(arg, spacing=20, collapse=True):
-    """Print method names and their docstrings."""
 
-    def fmt_str(s):  # local function definition
-        return " ".join(s.split()) if collapse else s
-        # We could replace this function def with an expression:
-        # fmt_str = lambda s: " ".join(s.split()) if collapse else lambda s: s
+def print_docstrings(arg):
+    """Prints method names and their docstrings"""
 
-    method_list = [method for method in dir(arg)
-                   if callable(getattr(arg, method))]
+    method_names = [method for method in dir(arg)
+                    if callable(getattr(arg, method))]
 
-    docstrings = ["{} {}".format(method.ljust(spacing),
-                                 fmt_str(str(getattr(arg, method).__doc__)))
-                  for method in method_list]
+    # Split docstrings to remove any newlines, then re-join using blanks
+    docstrings = ['{} {}'.format(name.ljust(20),
+                                 ' '.join(getattr(arg, name).__doc__.split()))
+                  for name in method_names]
 
-    print("\n".join(docstrings))
+    # Print docstrings from all methods
+    print('\n'.join(docstrings))
 
 
 class MyClass:
-    def foo(self):
-        """Foo function"""
+    def do_work(self):
+        """Do work for the class."""
         pass
 
-    def bar(self):
-        """Bar function"""
+    def clean_up(self):
+        """
+        Clean up after work is complete.
+
+        Client should call this method to indicate when it's finished.
+        """
         pass
 
 print_docstrings(MyClass)

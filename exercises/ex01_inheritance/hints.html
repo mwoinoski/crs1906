@@ -8,88 +8,109 @@
 
 <h3>person_dao.py</h3>
 
-<font color="grey"><pre># TODO: make the PersonDao class a subclass of BaseDao</font>
-<font color="blue">class PersonDao(BaseDao):</pre></font>
+<font color="grey"><pre>
+# TODO: make the PersonDao class a subclass of BaseDao </font><font color="blue">
+class PersonDao(BaseDao):
+</pre></font>
 
-<font color="grey"><pre>    # TODO: define the __init__() method, with one parameter, self</font>
-<font color="blue">    def __init__(self):</pre></font>
-<font color="grey"><pre>        # TODO: call the superclass's __init__(), passing two arguments:
+<font color="grey"><pre>
+    # TODO: define the __init__() method, with one parameter, self </font><font color="blue">
+    def __init__(self): </font><font color="grey">
+	# TODO: call the superclass's __init__(), passing two arguments:
         # 1. the class of the entity that will be persisted (Person)
-        # 2. the name of the entity's ID field ('email')</font>
-<font color="blue">        super().__init__(Person, 'email')</pre></font>
+        # 2. the name of the entity's ID field ('email') </font><font color="blue">
+	super().__init__(Person, 'email')
+</pre></font>
 
 <h3>base_dao.py</h3>
 
-<font color="grey"><pre>    def get(self, id_value, db_session):
+<font color="grey"><pre>
+    def get(self, id_value, db_session):
         # TODO: in the next statement, make the following changes:
         # 1. replace Person with the value of the DAO's _entity_class attribute
         #    (note: there are 2 occurrences of Person)
-        # 2. replace 'email' with the value of the DAO's _id_attr attribute</font>
-<font color="blue">        entity = db_session.query(self._entity_class)\
+        # 2. replace 'email' with the value of the DAO's _id_attr attribute </font><font color="blue">
+	entity = db_session.query(self._entity_class)\
                            .filter(getattr(self._entity_class,
                                            self._id_attr) == id_value)\
                            .first()</font>
-<font color="grey">        return entity</pre></font>
+<font color="grey">        return entity
+</pre></font>
 
 <h3>venue_dao.py</h3>
 
-<font color="grey"><pre># TODO: make the VenueDao class a subclass of BaseDao</font>
-<font color="blue">class VenueDao(BaseDao):</pre></font>
+<font color="grey"><pre>
+# TODO: make the VenueDao class a subclass of BaseDao </font><font color="blue">
+class VenueDao(BaseDao):
+</pre></font>
 
-<font color="grey"><pre>    # TODO: define the __init__() method</font>
-<font color="blue">    def __init__(self):</pre></font>
+<font color="grey"><pre>
+    # TODO: define the __init__() method </font><font color="blue">
+    def __init__(self):
+</pre></font>
 
-<font color="grey"><pre>        # TODO: in the __init__() method, call the superclass's __init__(),
+<font color="grey"><pre>
+	# TODO: in the __init__() method, call the superclass's __init__(),
         # passing two arguments:
         # 1. the class of the entity that will be persisted (Venue)
-        # 2. the name of the entity's ID field ('id')</font>
-<font color="blue">        super().__init__(Venue, 'id')</pre></font>
+        # 2. the name of the entity's ID field ('id') </font><font color="blue">
+	super().__init__(Venue, 'id')
+</pre></font>
 
 <h3>act_dao.py</h3>
 
-<font color="grey"><pre># TODO: make the ActDao class a subclass of BaseDao</font>
-<font color="blue">class ActDao(BaseDao):</pre></font>
+<font color="grey"><pre>
+# TODO: make the ActDao class a subclass of BaseDao </font><font color="blue">
+class ActDao(BaseDao):
+</pre></font>
 
-<font color="grey"><pre>    # TODO: define the __init__() method</font>
-<font color="blue">    def __init__(self):</pre></font>
-<font color="grey"><pre>        # TODO: in the __init__() method, call the superclass's __init__(),
+<font color="grey"><pre>
+    # TODO: define the __init__() method </font><font color="blue">
+    def __init__(self): </font><font color="grey">
+	# TODO: in the __init__() method, call the superclass's __init__(),
         # passing two arguments:
         # 1. the class of the entity that will be persisted (Act)
-        # 2. the name of the entity's ID field ('id')</font>
-<font color="blue">        super().__init__(Act, 'id')</pre></font>
+        # 2. the name of the entity's ID field ('id') </font><font color="blue">
+	super().__init__(Act, 'id')
+</pre></font>
 
 
 <h2>Hints for Exercise 1.1 Bonus 1</h2>
 
 <h3>customer.py</h3>
 
-<pre><font color="grey"># TODO: import the User class from the ticketmanor.models.user module</font>
-<font color="blue">from ticketmanor.models.user import User</font></pre>
+<font color="grey"><pre>
+# TODO: import the User class from the ticketmanor.models.user module </font><font color="blue">
+from ticketmanor.models.user import User
+</pre></font>
 
 
-<pre><font color="grey"># TODO: make Customer a subclass of User</font>
-<font color="blue">class Customer(User):</font></pre>
-
-<pre><font color="grey">    def __init__(self, first_name, last_name, email, middles=None,
+<font color="grey"><pre>
+# TODO: make Customer a subclass of User </font><font color="blue">
+class Customer(User): </font><font color="grey">
+    def __init__(self, first_name, last_name, email, middles=None,
                  street=None, city=None, state=None, country=None,
                  post_code=None, customer_id=None):
 
         # TODO: call the superclass __init__() method, passing the
-        # appropriate arguments</font>
-<font color="blue">        super().__init__(first_name, last_name, email, middles, street, city,
-             state, country, post_code)</font></pre>
+        # appropriate arguments </font><font color="blue">
+	super().__init__(first_name, last_name, email, middles, street, city,
+             state, country, post_code)
+</pre></font>
 
-<pre><font color="grey">        # TODO: save any remaining arguments in data attributes of the
-        # current Customer object</font>
-<font color="blue">        self.customer_id = customer_id</font></pre>
+<font color="grey"><pre>
+	# TODO: save any remaining arguments in data attributes of the
+        # current Customer object </font><font color="blue">
+	self.customer_id = customer_id
+</pre></font>
 
-<pre><font color="grey">    # TODO: copy all the methods below this comment and paste them into the
+<font color="grey"><pre>
+    # TODO: copy all the methods below this comment and paste them into the
     # User class
 
     # TODO: Modify the methods here to reference Customer-specific attributes
     # when necessary, while delegating as much work as possible to superclass
-    # methods.
-    </font><font color="blue">
+    # methods.  </font><font color="blue">
     def __eq__(self, other):
         return super().__eq__(other) and \
             other.customer_id == self.customer_id
@@ -99,12 +120,14 @@
 
     def __repr__(self):
         return super().__repr_() + \
-        ",customer_id={self.customer_id}".format(self=self)</font></pre>
+        ",customer_id={self.customer_id}".format(self=self)
+</pre></font>
 
 <h3>user.py</h3>
 
-<pre><font color="grey">    # TODO: paste methods from Customer class here</font>
-<font color="blue">    def name(self):
+<font color="grey"><pre>
+    # TODO: paste methods from Customer class here </font><font color="blue">
+    def name(self):
         middle_name = self.middles + " " if self.middles is not None else ""
         return "{self.first_name} {}{self.last_name}"\
             .format(middle_name, self=self)
@@ -137,28 +160,37 @@
             "email='{self.email}',street='{self.street}'," \
             "city='{self.city}',state='{self.state}'," \
             "country='{self.country}',post_code='{self.post_code}'," \
-            .format(self=self)</font></pre>
+            .format(self=self)
+</pre></font>
 
 
 <h3>member.py</h3>
 
-<font color="grey"><pre># TODO: import the User class from the ticketmanor.models.user module</font>
-<font color="blue">from ticketmanor.models.user import User</pre></font>
+<font color="grey"><pre>
+# TODO: import the User class from the ticketmanor.models.user module </font><font color="blue">
+from ticketmanor.models.user import User
+</pre></font>
 
-<font color="grey"><pre># TODO: make Member a subclass of User</font>
-<font color="blue">class Member(User):</pre></font>
+<font color="grey"><pre>
+# TODO: make Member a subclass of User </font><font color="blue">
+class Member(User):
+</pre></font>
 
-<font color="grey"><pre>        # TODO: call the superclass __init__() method, passing the
-        # appropriate arguments</font>
-<font color="blue">        super().__init__(first_name, last_name, email, middles, street, city,
-                         state, country, post_code)</pre></font>
+<font color="grey"><pre>
+	# TODO: call the superclass __init__() method, passing the
+        # appropriate arguments </font><font color="blue">
+	super().__init__(first_name, last_name, email, middles, street, city,
+                         state, country, post_code)
+</pre></font>
 
-<font color="grey"><pre>        # TODO: save the remaining arguments in data attributes of the
+<font color="grey"><pre>
+	# TODO: save the remaining arguments in data attributes of the
         # current Member object
         # TODO: for any argument that you passed to the superclass constructor,
-        # delete its attribute assignment from the next block of statements.</font>
-<font color="blue">        self.nick_name = nick_name
-        self.profile_photo = profile_photo</pre></font>
+        # delete its attribute assignment from the next block of statements. </font><font color="blue">
+	self.nick_name = nick_name
+        self.profile_photo = profile_photo
+</pre></font>
 
 <font color="grey"><pre>
     # TODO: Modify the methods here to reference Member-specific attributes
@@ -178,33 +210,40 @@
         """Return an unambiguous String representation of a Member"""
         return super().__repr_() + \
             ",nick_name={self.nick_name},profile_photo={self.profile_photo}" \
-            .format(self=self)</pre></font>
+            .format(self=self)
+</pre></font>
 
 
 <h2>Hints for Exercise 1.1 Bonus (Gain experience with dictionary comprehensions)</h2>
 
 <h3>func_stats.py</h3>
 
-<font color="grey"><pre>    # BONUS TODO: convert the "for" loop below into a list comprehension</font>
-<font color="blue">    sorted_stat_list = sorted(_function_stats.items(),
+<font color="grey"><pre>
+    # BONUS TODO: convert the "for" loop below into a list comprehension </font><font color="blue">
+    sorted_stat_list = sorted(_function_stats.items(),
                               key=lambda stats: stats[0])
 
     stat_list = [(name, calls, total_time/calls if calls &gt; 0 else 0)
-                 for name, (calls, total_time) in sorted_stat_list]</font></pre>
+                 for name, (calls, total_time) in sorted_stat_list]
+</pre></font>
 
 
 <h3>address.py</h3>
 
-<font color="grey"><pre>        # BONUS TODO: replace the following loop with a dictionary comprehension</font>
-<font color="blue">        json_sanitized = {k: (None if v == 'null' else v)
+<font color="grey"><pre>
+	# BONUS TODO: replace the following loop with a dictionary comprehension </font><font color="blue">
+	json_sanitized = {k: (None if v == 'null' else v)
                           for k, v in json_value.items()}
-        self.__dict__.update(**json_sanitized)</pre></font>
+        self.__dict__.update(**json_sanitized)
+</pre></font>
 
 <h3>act.py</h3>
 
-<font color="grey"><pre>    # BONUS TODO: replace the following loop with a dictionary comprehension
-    # HINT: first, modify the for loop to use the dict items() method</font>
-<font color="blue">    ACT_TYPE_INV = {v: k for k, v in ACT_TYPE.items()}</pre></font>
+<font color="grey"><pre>
+    # BONUS TODO: replace the following loop with a dictionary comprehension
+    # HINT: first, modify the for loop to use the dict items() method </font><font color="blue">
+    ACT_TYPE_INV = {v: k for k, v in ACT_TYPE.items()}
+</pre></font>
 
 </body>
 </html>

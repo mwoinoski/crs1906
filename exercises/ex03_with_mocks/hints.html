@@ -8,135 +8,181 @@
 
 <h3>test_feed_reader.py</h3>
 
-
-<font color="grey"><pre>    def test_fetch_news_items_music(self):
-        # TODO: create a Mock news feed parser object and assign it to a local
-        # variable named `mock_news_feed_parser`</font>
-<font color="blue">        mock_news_feed_parser = Mock()</pre></font>
-
-
-<font color="grey"><pre>        # TODO: assign the return value of the mock's get_news() method to a
-        # local variable named `expected`</font>
-<font color="blue">        mock_news_feed_parser.get_news.return_value = expected</pre></font>
+<font color="grey"><pre>
+    def test_fetch_news_items_music(self):
+        # TODO: create a mock RssNewsFeedParser object and assign it to a local
+        # variable named `mock_news_feed_parser` </font><font color="blue">
+        mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: create a FeedReader instance and assign it to a local variable
-        # named `feed_reader`</font>
-<font color="blue">        feed_reader = FeedReader()</pre></font>
+<font color="grey"><pre>
+        # TODO: set the return value of the mock's get_news() method to the
+        # value of the variable `expected` (defined at the end of the file) </font><font color="blue">
+	mock_news_feed_parser.get_news.return_value = expected
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: set feed_reader.news_feed_parser attribute to
-        # mock_news_feed_parser</font>
-<font color="blue">        feed_reader.news_feed_parser = mock_news_feed_parser</pre></font>
+<font color="grey"><pre>
+	# TODO: create a FeedReader instance and assign it to a local variable
+        # named `feed_reader` </font><font color="blue">
+	feed_reader = FeedReader()
+</pre></font>
 
 
-<font color="grey"><pre>    def test_fetch_news_items_raise_FeedReaderException(self):
+<font color="grey"><pre>
+	# TODO: set feed_reader.news_feed_parser attribute to
+        # mock_news_feed_parser </font><font color="blue">
+	feed_reader.news_feed_parser = mock_news_feed_parser
+</pre></font>
+
+
+<font color="grey"><pre>
+    def test_fetch_news_items_raise_FeedReaderException(self):
+        # TODO: create a mock RssNewsFeedParser object and assign it to a local
+        # variable named `mock_news_feed_parser` </font><font color="blue">
+	mock_news_feed_parser = Mock(spec=RssNewsFeedParser) </font><font color="grey">
+
         # TODO: create a new Mock and assign it to the mock feed parser's
         # `get_news` attribute. The new Mock should have a side effect of
-        # raising a FeedReaderException. </font>
-<font color="blue">        mock_news_feed_parser = Mock()</pre></font>
+        # raising a FeedReaderException.  </font><font color="blue">
+        mock_news_feed_parser.get_news.side_effect = FeedReaderException() 
+</pre></font>
+
+<font color="grey"><pre>
+	# TODO: create a FeedReader instance and assign it to a local variable
+        # named `feed_reader` </font><font color="blue">
+	feed_reader = FeedReader()
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: create a new Mock and assign it to the mock feed parser's
-        # `get_news` attribute. The new Mock should have a side effect of
-        # raising a FeedReaderException.</font>
-<font color="blue">        mock_news_feed_parser.get_news = Mock(side_effect=FeedReaderException())</pre></font>
+<font color="grey"><pre>
+	# TODO: set the feed_reader.news_feed_parser attribute to
+        # mock_news_feed_parser </font><font color="blue">
+	feed_reader.news_feed_parser = mock_news_feed_parser
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: create a FeedReader instance and assign it to a local variable
-        # named `feed_reader`</font>
-<font color="blue">        feed_reader = FeedReader()</pre></font>
-
-
-<font color="grey"><pre>        # TODO: set the feed_reader.news_feed_parser attribute to
-        # mock_news_feed_parser</font>
-<font color="blue">        feed_reader.news_feed_parser = mock_news_feed_parser</pre></font>
-
-
-<font color="grey"><pre>        # TODO: call the feed_reader's fetch_news_items() method and save the
+<font color="grey"><pre>
+	# TODO: call the feed_reader's fetch_news_items() method and save the
         # return value in a variable named `news`. (Pass any string as the
-        # argument to fetch_news_items())</font>
-<font color="blue">        news = feed_reader.fetch_news_items('quack')</pre></font>
+        # argument to fetch_news_items()) </font><font color="blue">
+	news = feed_reader.fetch_news_items('quack')
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: assert that the `news` variable is an instance of list.
-        # HINT: use the built-in isinstance() function</font>
-<font color="blue">        self.assertTrue(isinstance(news, list))</pre></font>
+<font color="grey"><pre>
+	# TODO: assert that the `news` variable is an instance of list.
+        # HINT: use the built-in isinstance() function </font><font color="blue">
+	self.assertTrue(isinstance(news, list))
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: assert that the length of the `news` list is 0</font>
-<font color="blue">        self.assertEqual(0, len(news))</pre></font>
+<font color="grey"><pre>
+	# TODO: assert that the length of the `news` list is 0 </font><font color="blue">
+	self.assertEqual(0, len(news))
+</pre></font>
 
 
-<font color="grey"><pre>    # TODO: use @patch.object to create a Mock. @patch.object will take
+<font color="grey"><pre>
+    # TODO: use @patch.object to create a Mock. @patch.object will take
     # two arguments:
     # 1. the class to be mocked (RssNewsFeedParser)
-    # 2. the name of the method to be mocked, as a string ('get_news')</font>
-<font color="blue">    @patch.object(RssNewsFeedParser, 'get_news')</font>
-<font color="grey">    def test_get_news_max_items_1(self, mock_get_news_method):
+    # 2. the name of the method to be mocked, as a string ('get_news') </font><font color="blue">
+    @patch.object(RssNewsFeedParser, 'get_news') </font><font color="grey">
+    def test_get_news_max_items_1(self, mock_get_news_method):
         # TODO: set the return value of the mocked method to the `expected`
-        # variable (defined later)</font>
-<font color="blue">        mock_get_news_method.return_value = expected</pre></font>
+        # variable (defined at the end of the file) </font><font color="blue">
+	mock_get_news_method.return_value = expected </font><font color="grey">
 
-<pre><font color="grey">        ...
+        ...
+        # TODO: verify that mock_get_news_method was called with
+        # arguments "music" and 1 </font><font color="blue">
+        mock_get_news_method.assert_called_once_with("music", 1)
+</pre></font>
+
+<pre>
+<font color="grey">
+    @patch('ticketmanor.rest_services.feed_reader.feed_reader.RssNewsFeedParser')
+    def test_fetch_news_items_max_items_2(self, mock_news_feed_parser_class):
+	...
         # TODO: verify the mock_news_feed_parser.get_news method was called
-        # arguments "music" and 2
-        # HINT: see slide 3-41</font>
-<font color="blue">        mock_news_feed_parser.get_news.assert_called_with("music", 2)</font></pre>
+	# arguments "music" and 2 </font><font color="blue">
+	mock_news_feed_parser.get_news.assert_called_with("music", 2)
+</font></pre>
 
 <h2>Hints for Exercise 3.2 Bonus</h2>
 
 <h3>test_user_service.py</h3>
 
-<font color="grey"><pre>        # TODO: pass MagicMock as the DAO class to the UserServiceRest
-        # constructor.</font>
-<font color="blue">        user_service = UserServiceRest(None, request, dao=MagicMock)</pre></font>
+<font color="grey"><pre>
+	# TODO: pass MagicMock as the DAO class to the UserServiceRest
+        # constructor.  </font><font color="blue">
+	user_service = UserServiceRest(None, request, dao=MagicMock)
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: program the mock DAO's get() method to have a side effect of
-        # raising a PersistenceError</font>
-<font color="blue">        user_service._dao.get = MagicMock(side_effect=PersistenceError())</pre></font>
+<font color="grey"><pre>
+	# TODO: program the mock DAO's get() method to have a side effect of
+        # raising a PersistenceError </font><font color="blue">
+	user_service._dao.get = MagicMock(side_effect=PersistenceError())
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: assert that an HTTPNotFound exception is raised when you call
-        # the user_service's get_user() method.</font>
-<font color="blue">        with self.assertRaises(HTTPNotFound):
-            user_service.get_user()</pre></font>
+<font color="grey"><pre>
+	# TODO: assert that an HTTPNotFound exception is raised when you call
+        # the user_service's get_user() method.  </font><font color="blue">
+	with self.assertRaises(HTTPNotFound):
+            user_service.get_user()
+</pre></font>
 
-<font color="grey"><pre>        # TODO: pass MagicMock as the DAO class to the UserServiceRest
-        # constructor.</font>
-<font color="blue">        user_service = UserServiceRest(None, request, dao=MagicMock)</pre></font>
-
-
-<font color="grey"><pre>        # TODO: program the mock DAO's get() method to have a side effect of
-        # raising a ValueError.</font>
-<font color="blue">        user_service._dao.get = MagicMock(side_effect=ValueError())</pre></font>
-
-
-<font color="grey"><pre>        # TODO: assert that a ValueError is raised when you call
-        # the user_service's get_user() method.</font>
-<font color="blue">        with self.assertRaises(ValueError):
-            user_service.get_user()</pre></font>
-
-<font color="grey"><pre>    # TODO: use the @nose.tools.raises decorator to verify that this test
-    # raises an HTTPNotFound exception.</font>
-<font color="blue">    @raises(HTTPNotFound)</font>
-<font color="grey">    def test_get_not_found_with_decorator(self):</pre></font>
+<font color="grey"><pre>
+	# TODO: pass MagicMock as the DAO class to the UserServiceRest
+        # constructor.  </font><font color="blue">
+	user_service = UserServiceRest(None, request, dao=MagicMock)
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: call the user_service get_user() method.</font>
-<font color="blue">        user_service.get_user()</pre></font>
+<font color="grey"><pre>
+	# TODO: program the mock DAO's get() method to have a side effect of
+        # raising a ValueError.  </font><font color="blue">
+	user_service._dao.get = MagicMock(side_effect=ValueError())
+</pre></font>
 
-<font color="grey"><pre>        # TODO: assert that an HTTPInternalServerError is raised when you call
+
+<font color="grey"><pre>
+	# TODO: assert that a ValueError is raised when you call
+        # the user_service's get_user() method.  </font><font color="blue">
+	with self.assertRaises(ValueError):
+            user_service.get_user()
+</pre></font>
+
+<font color="grey"><pre>
+    # TODO: use the @nose.tools.raises decorator to verify that this test
+    # raises an HTTPNotFound exception.  </font><font color="blue">
+    @raises(HTTPNotFound) </font><font color="grey">    def test_get_not_found_with_decorator(self):
+</pre></font>
+
+
+<font color="grey"><pre>
+	# TODO: call the user_service get_user() method.  </font><font color="blue">
+	user_service.get_user()
+</pre></font>
+
+<font color="grey"><pre>
+	# TODO: assert that an HTTPInternalServerError is raised when you call
         # the user_service's add_user() method, and that the exception's
-        # message includes the string 'Could not add'</font>
-<font color="blue">        with self.assertRaisesRegex(HTTPInternalServerError, r'Could not add'):
-            user_service.add_user()</pre></font>
+        # message includes the string 'Could not add' </font><font color="blue">
+	with self.assertRaisesRegex(HTTPInternalServerError, r'Could not add'):
+            user_service.add_user()
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: assert that the mock DAO's add() method was called once, with
-        # any two arguments.</font>
-<font color="blue">        user_service._dao.add.assert_called_once(ANY, ANY)</pre></font>
+<font color="grey"><pre>
+	# TODO: assert that the mock DAO's add() method was called once, with
+        # any two arguments.  </font><font color="blue">
+	user_service._dao.add.assert_called_once(ANY, ANY)
+</pre></font>
 
 </body>
 </html>

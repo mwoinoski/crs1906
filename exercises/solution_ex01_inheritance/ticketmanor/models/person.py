@@ -18,6 +18,8 @@ from sqlalchemy.orm import composite
 from . import Base
 from .address import Address
 
+# TODO: note the definition of the Person class.
+# (no code changes required)
 
 class Person(Base):
     """

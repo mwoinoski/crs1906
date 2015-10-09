@@ -17,10 +17,6 @@ import os
 import time
 import sys
 
-# TODO: import the measure and get_function_stats methods from the
-# measure module.
-# from measure import measure, get_function_stats
-
 TRIPLETS = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 
 # Row/Col/3x3 iteration list, each is nine lists of nine (row,col) pairs
@@ -202,9 +198,6 @@ class Sudoku:
                 answer += "   ---   ---   ---\n"
         return answer
 
-    # TODO: add the measure decorator to this method
-    # HINT: see slide 5-7
-    @measure
     def check(self, level=0):
         self._changed = True
         while self._changed:
@@ -328,8 +321,6 @@ class Sudoku:
                             if row not in rows_for_x:
                                 self.cell_exclude(row, col, x)
 
-    # TODO: add the measure decorator to this function
-    @measure
     def one_level_supposition(self):
         """
         Probably what is known as 'Nishio', try a number and see if it leads to
@@ -369,8 +360,6 @@ class Sudoku:
                             assert False, "All possible values for square (%i,%i) fail" \
                                 % (row, col)
 
-    # TODO: add the measure decorator to this function
-    @measure
     def two_level_supposition(self):
         progress = True
         while progress:
@@ -456,16 +445,3 @@ if __name__ == "__main__":
             print(Sudoku.line_to_puzzle(line_copy))
             print("\nSolution:\n")
             print(solution)
-
-            # TODO: call the get_function_stats() function and print the stats
-            # for all decorated functions
-            if decorator_enabled:
-                print('{:^53}'.format('Function Call Stats'))
-                print('{:24s} {:>8s}  {:22s}'
-                      .format('Function name', 'Calls', 'Avg Time (seconds)'))
-                print('-' * 53)
-                for stats in get_function_stats():
-                    print('{:24s} {:8d}  {:13.6f}'.format(*stats))
-
-            # BONUS TODO: call get_function_stats() only if
-            # decorator_enabled is true

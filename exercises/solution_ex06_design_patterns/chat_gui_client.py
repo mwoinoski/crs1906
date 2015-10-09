@@ -31,18 +31,6 @@ class ChatClientGui(Observer):
         self.client_name = client_name
         self.chat_room = chat_room
 
-    def callback(self, event):
-        # TODO: note how we get the message text from the GUI's entry field.
-        # (no code change required)
-        message = self.entry_field.get()
-        self.entry_field.delete(0, tk.END)
-        print('got message ' + message)
-        self.add_text('(me) ' + message + '\n')
-
-        # TODO: call the ChatClientGui's new_message() method to send the text
-        # from the entry field to the chat room
-        self.new_message(message)
-
     def create_widgets(self, name, window):
         if window != root:
             window = tk.Toplevel(root)
@@ -67,6 +55,19 @@ class ChatClientGui(Observer):
     # TODO: copy the new_message() method from ChatClient here
     def new_message(self, message):
         self.chat_room.add_message(self.client_name, message)
+
+    def callback(self, event):
+        # TODO: note how we get the message text from the GUI's entry field.
+        # (no code change required)
+        message = self.entry_field.get()
+
+        self.entry_field.delete(0, tk.END)
+        print('got message ' + message)
+        self.add_text('(me) ' + message + '\n')
+
+        # TODO: call the ChatClientGui's new_message() method to send the text
+        # from the entry field to the chat room
+        self.new_message(message)
 
     # TODO: note that the update() method parameter list and the first 3 lines
     # of code are exactly the same as in the plain ChatClient class.

@@ -18,10 +18,10 @@ class Subject(metaclass=ABCMeta):
     def observers(self):
         return list(self._observers)
 
-    def observer_attach(self, observer, *observers):
+    def observer_attach(self, obs, *observers):
         """Add an observers to the list of observers"""
-        for observer in (observer,) + observers:
-            self._observers.add(observer)
+        for obs in (obs,) + observers:
+            self._observers.add(obs)
 
     def observer_detach(self, observer):
         """Remove an Observer from this Subject's set of Observers"""
@@ -29,8 +29,8 @@ class Subject(metaclass=ABCMeta):
 
     def observer_notify(self, data):
         """Notify all Observers"""
-        for observer in self._observers:
-            observer.update(data)
+        for obs in self._observers:
+            obs.update(data)
 
 
 class Observer(metaclass=ABCMeta):

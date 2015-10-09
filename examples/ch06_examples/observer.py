@@ -10,10 +10,10 @@ class Subject(metaclass=ABCMeta):
     def __init__(self):
         self._observers = set()
 
-    def observer_attach(self, observer, *observers):
-        for observer in (observer,) + observers:
-            self._observers.add(observer)
-            observer.update(self)  # observer gets current value of observered
+    def observer_attach(self, obs, *observers):
+        for obs in (obs,) + observers:
+            self._observers.add(obs)
+            obs.update(self)  # observer gets current value of observered
 
         # if observers is potentially a very large collection,
         # use itertools.chain() instead of tuple concatentation:
@@ -23,8 +23,8 @@ class Subject(metaclass=ABCMeta):
         self._observers.discard(observer)
 
     def observer_notify(self):
-        for observer in self._observers:
-            observer.update(self)
+        for obs in self._observers:
+            obs.update(self)
 
 
 class Observer(metaclass=ABCMeta):

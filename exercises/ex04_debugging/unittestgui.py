@@ -33,6 +33,7 @@ __version__ = "$Revision: 1.7 $"[11:-2]
 import sys
 import traceback
 import unittest
+from pathlib import Path
 from abc import abstractmethod, ABCMeta
 
 import tkinter as tk
@@ -54,6 +55,8 @@ from tkinter import simpledialog
 # TODO: create a Logger instance and assign it to a variable named `logger`.
 # Give the Logger the name 'unittestgui'
 ...
+
+init_dir = Path.cwd() / 'sample_unit_tests'
 
 ##############################################################################
 # GUI framework classes
@@ -283,7 +286,7 @@ class DiscoverSettingsDialog(simpledialog.Dialog):
         return None
 
     def selectDirClicked(self, master):
-        dir_path = filedialog.askdirectory(parent=master)
+        dir_path = filedialog.askdirectory(parent=master, initialdir=init_dir)
         if dir_path:
             self.dirVar.set(dir_path)
 
@@ -318,7 +321,7 @@ class TkTestRunner(BaseGUITestRunner):
         self.createWidgets()
 
     def getDirectoryToDiscover(self):
-        return filedialog.askdirectory()
+        return filedialog.askdirectory(initialdir=init_dir)
 
     def settingsClicked(self):
         d = DiscoverSettingsDialog(self.top, self.top_level_dir, self.test_file_glob_pattern)

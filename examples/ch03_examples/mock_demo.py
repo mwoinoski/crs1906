@@ -58,7 +58,7 @@ class TestBusinessObject(TestCase):
 
         mock_dao = Mock(spec=UserDao)
         # Configure the mock query_user method to raise a DB error
-        mock_dao.query_user = Mock(side_effect=sqlite3.Error('SQL error'))
+        mock_dao.query_user.side_effect = sqlite3.Error('SQL error')
 
         bus_obj = BusinessObject('mock_demo')
         bus_obj.user_dao = mock_dao

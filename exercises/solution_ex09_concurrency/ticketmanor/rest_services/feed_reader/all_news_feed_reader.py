@@ -6,21 +6,37 @@ Read All News page.
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from threading import Thread
-import queue
-from collections import namedtuple
 from .feed_reader import FeedReader
 
-# TODO: Note the definition of the named tuple TypedNews.
-# (no code change required)
-TypedNews = namedtuple('TypedNews', 'news_type news')
 
-""" TODO: You'll use TypedNews in the methods below. Example:
->>> news_type = 'concert'
->>> news = {'title': 'Best concert ever!'}
->>> typed_news = TypedNews(news_type, news)
->>> print(typed_news.news_type, 'news is', typed_news.news)
-concert news is {'title': 'Best concert ever!'}
-"""
+# TODO: make the NewsThread class a subclass of Thread.
+class NewsThread(Thread):
+
+    # TODO: note the arguments to the NewsThread constructor
+    # (no code change required)
+    def __init__(self, feed_reader, news_type, max_items):
+        """Initialize a NewsThread.
+
+        :param feed_reader a FeedReader instance
+        :param news_type: a string with the type of news to download
+        :param max_items: maximum number of news items to download
+        """
+        super().__init__()
+        # TODO: note that `self.feed_reader` is an instance of FeedReader
+        # (no code change required)
+        self.feed_reader = feed_reader
+        self.news_type = news_type
+        self.max_items = max_items
+        self.news = None
+
+    # TODO: define a run() method that overloads the superclass run() method.
+    def run(self):
+        """Download one type of news and store it in self.news"""
+
+        # TODO: use `self.feed_reader` to fetch news of the given
+        # `news_type` and assign the result to `self.news`
+        self.news = self.feed_reader.fetch_news_items(self.news_type,
+                                                      self.max_items)
 
 
 class AllNewsFeedReader:
@@ -34,44 +50,22 @@ class AllNewsFeedReader:
     # TODO: note that the get_news() method downloads news of all types.
     # (no code change required)
     def get_news(self, max_items=0):
-        """
-        Get news items of all news types.
+        """Get news items of all news types.
 
         :param: max_items: if max_items > 0, return no more than max_items
         news items. Otherwise, return all news items.
         :return dictionary of news items.
         """
-
-        # TODO: Note that the following code waits for each call to the
-        # feed_reader's fetch_news_items() method to complete before calling the
-        # method for the next news type.
-        # You will improve the code's performance by creating a thread for each
-        # news type so you can download all three news types concurrently.
-        # all_news = {}
-        # for news_type in 'concerts', 'sports', 'movies':
-        #     news = self.feed_reader.fetch_news_items(news_type, max_items)
-        #     all_news[news_type] = news
-        # return all_news
-        # TODO: comment out the 5 lines of code above this comment
-
-        # TODO: create a Queue to hold the news from each thread. Assign
-        # the Queue to a variable named `results_q`
-        # HINT: see slide 9-30
-        results_q = queue.Queue()
-
         # TODO: assign an empty list to the variable named `news_threads`.
-        # The `news_threads` list will contain references to the Thread objects
-        # that are downloading the news.
+        # The `news_threads` list will contain references to NewsThread
+        # instances that are downloading the news.
         news_threads = []
 
         for news_type in 'concerts', 'sports', 'movies':
-            # TODO: Create a thread to download one type of news.
-            # target: AllNewsFeedReader.worker (you'll write this method soon)
-            # args: self, results_q, news_type, max_items
-            # HINT: see slide 9-18
-            background = Thread(target=AllNewsFeedReader.worker,
-                                args=(self, results_q,
-                                      news_type, max_items))
+            # TODO: Create an instance of NewsThread to download one type of news.
+            # Constructor arguments: self.feed_reader, news_type, max_items
+            # HINT: see slide 9-
+            background = NewsThread(self.feed_reader, news_type, max_items)
 
             # TODO: Append the new thread to the `news_threads` list
             news_threads.append(background)
@@ -79,6 +73,10 @@ class AllNewsFeedReader:
             # TODO: Start the new thread
             # HINT: see slide 9-17
             background.start()
+
+        # TODO: note the definition of the dictionary named `all_news`
+        # (no code change required)
+        all_news = {}
 
         # TODO: use a `for` loop to process each thread on the `news_threads`
         # list
@@ -88,57 +86,10 @@ class AllNewsFeedReader:
             # HINT: see slide 9-17
             thread.join()
 
-        # TODO: scroll to the definition of the method named `worker` below and
-        # complete the TODO steps there.
-        # When you are finished with `worker`, complete the remaining steps in
-        # this method.
-
-        # TODO: note the definition of the dictionary named `all_news`
-        # (no code change required)
-        all_news = {}
-
-        # TODO: loop over `results_q`
-        # HINT: see slide 9-31
-        while not results_q.empty():
-            # TODO: get the thread's result (a TypedNews object) from
-            # `results_q` and assign it to a variable named `typed_news`
-            typed_news = results_q.get_nowait()
-
-            # TODO: add the data in `typed_news` to the `all_news` dictionary
-            # key: the `news_type` attribute of `typed_news`
-            # value: the `news` attribute of `typed_news`
-            all_news[typed_news.news_type] = typed_news.news
+            # TODO: Add the thread's news to the `all_news` dictionary.
+            # key: the thread's `news_type` attribute
+            # value: the thread's `news` attribute
+            all_news[thread.news_type] = thread.news
 
         # TODO: return the `all_news` dictionary
         return all_news
-
-    # TODO: note the parameters of the `worker` method.
-    # (no code change required)
-    def worker(self, results_q, news_type, max_items):
-        """
-        Download one type of news and add it to `results_q`.
-
-        :param self: the current AllNewsFeedReader object
-        :param results_q: a Queue of TypedNews instances
-        :param news_type: a string with the type of news to download
-        :param max_items: maximum number of news items to download
-        """
-        # TODO: use `self.feed_reader` to fetch news of the given `news_type`
-        # and assign the result to a variable named `news`
-        # HINT: this statement is exactly the same as a statement in the
-        # original code that you commented out earlier.
-        news = self.feed_reader.fetch_news_items(news_type, max_items)
-
-        # TODO: create a TypedNews object and save the result in a local
-        # variable.
-        # HINT: see the definition of TypedNews at the beginning of this file.
-        typed_news = TypedNews(news_type, news)
-
-        # TODO: put the typed_news object on `results_q`
-        results_q.put(typed_news)
-
-        # To compare performance with the serial version of ticketmanor,
-        # add a pause to this method:
-        # import time; time.sleep(1)
-
-        # TODO: complete the remaining steps in the get_news() method

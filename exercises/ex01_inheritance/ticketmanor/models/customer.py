@@ -44,7 +44,8 @@ class Customer:
     # HINT: you will be able to delete some methods completely; others can
     # override the superclass methods and then call the superclass methods to
     # do part of the work.
-    # HINT: add a reference to self.customer_id to __eq__() and __repr__()
+    # HINT: be sure that __eq__(), __str__() and __repr__() all reference
+    # self.customer_id
 
     def name(self):
         middle_name = self.middles + " " if self.middles is not None else ""
@@ -62,7 +63,8 @@ class Customer:
             other.city == self.city and \
             other.state == self.state and \
             other.country == self.country and \
-            other.post_code == self.post_code
+            other.post_code == self.post_code and \
+            other.customer_id == self.customer_id
 
     def __ne__(self, other):
         """Compare Customer instances."""
@@ -79,4 +81,5 @@ class Customer:
             "email='{self.email}',street='{self.street}'," \
             "city='{self.city}',state='{self.state}'," \
             "country='{self.country}',post_code='{self.post_code}'," \
+            "customer_id='{self.customer_id}'" \
             .format(self=self)

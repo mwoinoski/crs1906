@@ -5,11 +5,12 @@
    python -m unittest test_person.py
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
-
 import unittest
 
 from person import Person
+
+__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+
 
 class PersonTestCase(unittest.TestCase):
     """Unit tests for Person"""
@@ -24,17 +25,19 @@ class PersonTestCase(unittest.TestCase):
     def test_eq_instances_equal(self):
         p1 = Person("John", "Quincy", "Adams")
         p2 = Person("John", "Quincy", "Adams")
-        self.assertEqual(p1, p2)
+        self.assertTrue(p1 == p2)
+        # OR: self.assertEqual(p1, p2)  # assertEqual() calls p1.__eq__(p2)
 
     def test_eq_instances_not_equal(self):
         p1 = Person("John", None, "Adams")
         p2 = Person("John", "Quincy", "Adams")
-        self.assertNotEqual(p1, p2)  # calls Person.__ne__()
+        self.assertTrue(p1 != p2)
+        # OR: self.assertNotEqual(p1, p2)  # assertNotEqual() calls p1.__ne__(p2)
 
     def test_eq_new_instances_equal(self):
         p1 = Person(None, None, None)
         p2 = Person(None, None, None)
-        self.assertEqual(p1, p2)  # calls Person.__eq__()
+        self.assertEqual(p1, p2)  # assertEqual() calls p1.__eq__(p2)
 
 if __name__ == '__main__':
     unittest.main()

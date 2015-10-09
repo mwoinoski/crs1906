@@ -60,35 +60,38 @@ class ChatServer(BaseRequestHandler): </font><font color="blue">
 <h3>all_news_feed_reader.py</h3>
 
 <font color="grey"><pre>
-        # all_news = {}
-        # for news_type in 'concerts', 'sports', 'movies':
-        #     news = self.feed_reader.get_news(news_type, max_items)
-        #     all_news[news_type] = news
-        # return all_news
-        # TODO: comment out the 5 lines of code above this comment
+# TODO: make the NewsThread class a subclass of Thread. </font><font color="blue">
+class NewsThread(Thread):
 </pre></font>
 
 <font color="grey"><pre>
-        # TODO: create a Queue to hold the news from each thread. Assign
-        # the Queue to a variable named `results_q` </font><font color="blue">
-        results_q = queue.Queue()
+    # TODO: define a run() method that overloads the superclass run() method. </font><font color="blue">
+    def run(self):
 </pre></font>
 
 <font color="grey"><pre>
+        # TODO: use `self.feed_reader` to fetch news of the given
+        # `news_type` and assign the result to `self.news` </font><font color="blue">
+        self.news = self.feed_reader.fetch_news_items(self.news_type,
+                                                      self.max_items)
+</pre></font>
+
+<font color="grey"><pre>
+class AllNewsFeedReader:
+    ...
+    def get_news(self, max_items=0):
+
         # TODO: assign an empty list to the variable named `news_threads`.
-        # The `news_threads` list will contain references to the Thread objects
-        # that are downloading the news. </font><font color="blue">
+        # The `news_threads` list will contain references to NewsThread
+        # instances that are downloading the news. </font><font color="blue">
         news_threads = []
 </pre></font>
 
 <font color="grey"><pre>
         for news_type in 'concerts', 'sports', 'movies':
-            # TODO: Create a thread to download one type of news.
-            # target: AllNewsFeedReader.worker (you'll write this method soon)
-            # args: self, results_q, news_type, max_items </font><font color="blue">
-            background = Thread(target=AllNewsFeedReader.worker,
-                                args=(self, results_q,
-                                      news_type, max_items))
+            # TODO: Create an instance of NewsThread to download one type of news.
+            # Constructor arguments: self.feed_reader, news_type, max_items </font><font color="blue">
+            background = NewsThread(self.feed_reader, news_type, max_items)
 </pre></font>
 
 <font color="grey"><pre>
@@ -102,49 +105,27 @@ class ChatServer(BaseRequestHandler): </font><font color="blue">
 </pre></font>
 
 <font color="grey"><pre>
+        all_news = {}
+
         # TODO: use a `for` loop to process each thread on the `news_threads`
         # list </font><font color="blue">
-        for thread in news_threads: </font><font color="grey">
+        for thread in news_threads:
+</pre></font>
 
+<font color="grey"><pre>
             # TODO: wait for the thread to complete by calling
             # the thread's join() method </font><font color="blue">
             thread.join()
 </pre></font>
 
 <font color="grey"><pre>
-        # TODO: loop over `results_q` </font><font color="blue">
-        while not results_q.empty(): </font><font color="grey">
-
-            # TODO: get the thread's result (a TypedNews object) from
-            # `results_q` and assign it to a variable named `typed_news` </font><font color="blue">
-            typed_news = results_q.get_nowait()
-</pre></font>
-
-
-<font color="grey"><pre>
-            # TODO: add the data in `typed_news` to the `all_news` dictionary
-            # key: the `news_type` attribute of `typed_news`
-            # value: the `news` attribute of `typed_news` </font><font color="blue">
-            all_news[typed_news.news_type] = typed_news.news
+            # TODO: Add the thread's news to the `all_news` dictionary. </font><font color="blue">
+            all_news[thread.news_type] = thread.news
 </pre></font>
 
 <font color="grey"><pre>
         # TODO: return the `all_news` dictionary </font><font color="blue">
         return all_news
-</pre></font>
-
-<font color="grey"><pre>
-    def worker(self, results_q, news_type, max_items):
-        # TODO: use `self.feed_reader` to fetch news of the given `news_type`
-        # and assign the result to a variable named `news` </font><font color="blue">
-        news = self.feed_reader.fetch_news_items(news_type, max_items) </font><font color="grey">
-
-        # TODO: create a TypedNews object and save the result in a local
-        # variable. </font><font color="blue">
-        typed_news = TypedNews(news_type, news) </font><font color="grey">
-
-        # TODO: put the typed_news object on `results_q` </font><font color="blue">
-        results_q.put(typed_news)
 </pre></font>
 
 </body>

@@ -29,60 +29,66 @@ Summary = collections.namedtuple("Summary", "todo copied scaled canceled")
 
 
 def main():
-    size, smooth, source, target, concurrency = handle_commandline()
+    size, smooth, src_dir, dest_dir, num_procs = handle_commandline()
     Qtrac.report("starting...")
-    summary = scale(size, smooth, source, target, concurrency)
-    summarize(summary, concurrency)
+    summary = scale(size, smooth, src_dir, dest_dir, num_procs)
+    summarize(summary, num_procs)
 
 
 def handle_commandline():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-c", "--concurrency", type=int,
-            default=multiprocessing.cpu_count(),
-            help="specify the concurrency (for debugging and "
-                "timing) [default: %(default)d]")
-    parser.add_argument("-s", "--size", default=45, type=int,
-            help="make a scaled image that fits the given dimension "
-                "[default: %(default)d]")
-    parser.add_argument("-S", "--smooth", action="store_true",
-            help="use smooth scaling (slow but good for text)")
-    parser.add_argument("source",
-            help="the directory containing the original .xpm images")
-    parser.add_argument("target",
-            help="the directory for the scaled .xpm images")
+    parser.add_argument(
+        "-n", "--num_procs", type=int,
+        default=multiprocessing.cpu_count(),
+        help="specify the concurrency (for debugging and "
+             "timing) [default: %(default)d]")
+    parser.add_argument(
+        "-s", "--size", default=45, type=int,
+        help="make a scaled image that fits the given dimension "
+             "[default: %(default)d]")
+    parser.add_argument(
+        "-S", "--smooth", action="store_true",
+        help="use smooth scaling (slow but good for text)")
+    parser.add_argument(
+        "source",
+        help="the directory containing the original .xpm images")
+    parser.add_argument(
+        "dest",
+        help="the directory for the scaled .xpm images")
     args = parser.parse_args()
-    source = os.path.abspath(args.source)
-    target = os.path.abspath(args.target)
-    if source == target:
-        args.error("source and target must be different")
-    if not os.path.exists(args.target):
-        os.makedirs(target)
-    return args.size, args.smooth, source, target, args.concurrency
+    src_dir = os.path.abspath(args.source)
+    dest_dir = os.path.abspath(args.dest)
+    if src_dir == dest_dir:
+        args.error("source and destination directories must be different")
+    if not os.path.exists(args.dest):
+        os.makedirs(dest_dir)
+    return args.size, args.smooth, src_dir, dest_dir, args.num_procs
 
 
-def scale(size, smooth, source, target, concurrency):
+def scale(size, smooth, src_dir, dest_dir, num_procs):
     canceled = False
     jobs = multiprocessing.JoinableQueue()
     results = multiprocessing.Queue()
-    create_processes(size, smooth, jobs, results, concurrency)
-    todo = add_jobs(source, target, jobs)
+    create_processes(size, smooth, jobs, results, num_procs)
+    todo = add_jobs(src_dir, dest_dir, jobs)
     try:
         jobs.join()
-    except KeyboardInterrupt: # May not work on Windows
+    except KeyboardInterrupt: # catch Ctrl-C (may not work on Windows)
         Qtrac.report("canceling...")
         canceled = True
     copied = scaled = 0
-    while not results.empty(): # Safe because all jobs have finished
+    while not results.empty():  # Safe because all jobs have finished
         result = results.get_nowait()
         copied += result.copied
         scaled += result.scaled
     return Summary(todo, copied, scaled, canceled)
 
 
-def create_processes(size, smooth, jobs, results, concurrency):
-    for _ in range(concurrency):
-        process = multiprocessing.Process(target=worker, args=(size,
-                smooth, jobs, results))
+def create_processes(size, smooth, jobs, results, num_procs):
+    for _ in range(num_procs):
+        process = multiprocessing.Process(
+            target=worker,
+            args=(size, smooth, jobs, results))
         process.daemon = True
         process.start()
 
@@ -90,11 +96,11 @@ def create_processes(size, smooth, jobs, results, concurrency):
 def worker(size, smooth, jobs, results):
     while True:
         try:
-            sourceImage, targetImage = jobs.get()
+            scr_image, dest_image = jobs.get()
             try:
-                result = scale_one(size, smooth, sourceImage, targetImage)
+                result = scale_one(size, smooth, scr_image, dest_image)
                 Qtrac.report("{} {}".format("copied" if result.copied else
-                        "scaled", os.path.basename(result.name)))
+                             "scaled", os.path.basename(result.name)))
                 results.put(result)
             except Image.Error as err:
                 Qtrac.report(str(err), True)
@@ -102,37 +108,37 @@ def worker(size, smooth, jobs, results):
             jobs.task_done()
 
 
-def add_jobs(source, target, jobs):
-    for todo, name in enumerate(os.listdir(source), start=1):
-        sourceImage = os.path.join(source, name)
-        targetImage = os.path.join(target, name)
-        jobs.put((sourceImage, targetImage))
+def add_jobs(src_dir, dest_dir, jobs):
+    for todo, name in enumerate(os.listdir(src_dir), start=1):
+        scr_image = os.path.join(src_dir, name)
+        dest_image = os.path.join(dest_dir, name)
+        jobs.put((scr_image, dest_image))
     return todo
 
 
-def scale_one(size, smooth, sourceImage, targetImage):
-    oldImage = Image.from_file(sourceImage)
-    if oldImage.width <= size and oldImage.height <= size:
-        oldImage.save(targetImage)
-        return Result(1, 0, targetImage)
+def scale_one(size, smooth, scr_image, dest_image):
+    old_image = Image.from_file(scr_image)
+    if old_image.width <= size and old_image.height <= size:
+        old_image.save(dest_image)
+        return Result(1, 0, dest_image)
     else:
         if smooth:
-            scale = min(size / oldImage.width, size / oldImage.height)
-            newImage = oldImage.scale(scale)
+            scale = min(size / old_image.width, size / old_image.height)
+            new_image = old_image.scale(scale)
         else:
-            stride = int(math.ceil(max(oldImage.width / size,
-                                       oldImage.height / size)))
-            newImage = oldImage.subsample(stride)
-        newImage.save(targetImage)
-        return Result(0, 1, targetImage)
+            stride = int(math.ceil(max(old_image.width / size,
+                                       old_image.height / size)))
+            new_image = old_image.subsample(stride)
+        new_image.save(dest_image)
+        return Result(0, 1, dest_image)
 
 
-def summarize(summary, concurrency):
+def summarize(summary, num_procs):
     message = "copied {} scaled {} ".format(summary.copied, summary.scaled)
     difference = summary.todo - (summary.copied + summary.scaled)
     if difference:
         message += "skipped {} ".format(difference)
-    message += "using {} processes".format(concurrency)
+    message += "using {} processes".format(num_procs)
     if summary.canceled:
         message += " [canceled]"
     Qtrac.report(message)

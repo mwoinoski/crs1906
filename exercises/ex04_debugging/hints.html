@@ -8,50 +8,83 @@
 
 <h3>unittestgui.py</h3>
 
-<font color="grey"><pre># TODO: import the logging package</font>
-<font color="blue">import logging</pre></font>
+<font color="grey"><pre>
+# TODO: import the logging package </font><font color="blue">
+import logging
+</pre></font>
 
 
-<font color="grey"><pre># TODO: import the logging.config package</font>
-<font color="blue">import logging.config</pre></font>
+<font color="grey"><pre>
+# TODO: import the logging.config package </font><font color="blue">
+import logging.config
+</pre></font>
 
 
-<font color="grey"><pre># TODO: read the logging config from the file logging.conf</font>
-<font color="blue">logging.config.fileConfig('logging.conf')</pre></font>
+<font color="grey"><pre>
+# TODO: read the logging config from the file logging.conf </font><font color="blue">
+logging.config.fileConfig('logging.conf')
+</pre></font>
 
 
-<font color="grey"><pre># TODO: create a Logger instance and assign it to a variable named `logger`.
-# Give the Logger the name 'unittestgui'</font>
-<font color="blue">logger = logging.getLogger('unittestgui')</pre></font>
+<font color="grey"><pre>
+# TODO: create a Logger instance and assign it to a variable named `logger`.
+# Give the Logger the name 'unittestgui' </font><font color="blue">
+logger = logging.getLogger('unittestgui')
+</pre></font>
 
 
-<font color="grey"><pre>    ...
+<font color="grey"><pre>
+    ...
     def __init__(self, *args, **kwargs):
-        # TODO: log an info message that says the class constructor was called.</font>
-<font color="blue">        logger.info("%s constructor called", self.__class__.__name__)</pre></font>
+        # TODO: log an info message that says the class constructor was called. </font><font color="blue">
+	logger.info("%s constructor called", self.__class__.__name__)
+</pre></font>
 
 
-<font color="grey"><pre>            ...
+<font color="grey"><pre>
+	    ...
 	    top_level_dir = self.top_level_dir or None
             # TODO: log a debug-level message with the value of top_level_dir
-            # Note that top_level_dir is set in the previous statement.</font>
-<font color="blue">            logger.debug('top_level_dir = %s', top_level_dir)</pre></font>
+            # Note that top_level_dir is set in the previous statement. </font><font color="blue">
+	    logger.debug('top_level_dir = %s', top_level_dir)
+</pre></font>
 
 
-<font color="grey"><pre>    def addError(self, test, err):
+<font color="grey"><pre>
+    def addError(self, test, err):
         # TODO: log an error message with the value of the `test`
-        # parameter.</font>
-<font color="blue">        logger.error('Error in test %s', test)</font>
-<font color="grey">        ...</pre></font>
+        # parameter. </font><font color="blue">
+	logger.error('Error in test %s', test) </font><font color="grey">
+	...
+</pre></font>
 
 
-<font color="grey"><pre>    def addFailure(self, test, err):
+<font color="grey"><pre>
+    def addFailure(self, test, err):
         # TODO: log an warning message with the value of the `test`
-        # parameter.</font>
-<font color="blue">        logger.warning('Failure in test %s', test)</font>
-<font color="grey">        ...</pre></font>
+        # parameter. </font><font color="blue">
+	logger.warning('Failure in test %s', test) </font><font color="grey">
+	...
+</pre></font>
 
 
+<h3>logger.conf</h3>
+
+Edit logging.conf and change the logging level of the unittestgui logger to WARNING.
+
+<font color="grey"><pre>
+[logger_unittestgui] </font><font color="blue">
+level=WARNING
+</pre></font>
+
+<h3>asteroids.py</h3>
+
+On line 223, the call to <tt>intersect()</tt> is passing the argument <tt>gameover</tt> 
+instead of <tt>asteroid</tt>.  Line 223 should look like this:
+
+<font color="blue"><pre>
+          if intersect(ship, asteroid):
+</pre></font>
 
 </body>
 </html>

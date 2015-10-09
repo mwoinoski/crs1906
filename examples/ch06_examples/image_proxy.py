@@ -24,9 +24,9 @@ class ConcreteImage(Image):
         return 'ConcreteImage("{}")'.format(self.path)
 
 
-class ImageProxy(Image):
+class LazyLoadingImage(Image):
     def __init__(self, path):  # don't load image yet
-        print('ImageProxy.__init__("{}")'.format(path))
+        print('LazyLoadingImage.__init__("{}")'.format(path))
         self.path = path
         self.concrete_image = None
         
@@ -37,7 +37,7 @@ class ImageProxy(Image):
         return self.concrete_image.get_content()  
 
     def __repr__(self):
-        return 'ImageProxy("{}")'.format(self.path)
+        return 'LazyLoadingImage("{}")'.format(self.path)
 
 
 class ImageClient:
@@ -57,12 +57,13 @@ class ImageClient:
         return 'ImageClient({})'.format(self.image)
 
 
-def main(show_it):
-    proxy = ImageProxy('LargeMagellanicCloud.jpg')
+def main():
+    proxy = LazyLoadingImage('LargeMagellanicCloud.jpg')
     client = ImageClient(proxy)
-    if show_it:
+
+    if len(sys.argv) > 1 and sys.argv[1] == '--display-image':
         client.display_image()
 
 
 if __name__ == '__main__':
-    main(len(sys.argv) > 1 and sys.argv[1] == '--display-image')
+    main()

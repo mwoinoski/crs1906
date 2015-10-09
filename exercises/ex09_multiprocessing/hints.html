@@ -59,7 +59,7 @@ Replace the ProcessPoolExecutor with a ThreadPoolExecuter: </font><font color="b
     with ThreadPoolExecutor(max_workers=4) as executor:  
 </pre></font>
 
-<h2>Hints for Exercise 9.2 Bonus (Compare concurrent and parallelized news feed readers)</h2>
+<h2>Hints for Exercise 9.2 Bonus (Using a ThreadPooExecutor in a news feed reader)</h2>
 
 <h3>all_news_feed_reader.py</h3>
 
@@ -69,29 +69,69 @@ from concurrent.futures import ThreadPoolExecutor
 </pre></font>
 
 <font color="grey"><pre>
+class AllNewsFeedReader:
+    ...
+    def get_news(self, max_items=0):
+        # TODO: assign an empty list to the variable `news_futures` </font><font color="blue">
+        news_futures = []
+</pre></font>
+
+<font color="grey"><pre>
         # TODO: wrap the `for` loop in a `with` statement that initializes
         # a ThreadPoolExecutor. Pass the argument max_workers=4 to the
         # ThreadPoolExecutor constructor.  </font><font color="blue">
-        with ThreadPoolExecutor(max_workers=4) as executor: </font><font color="grey">
+        with ThreadPoolExecutor(max_workers=4) as executor:
+</pre></font>
+
+<font color="grey"><pre>
             for news_type in 'concerts', 'sports', 'movies':
-                # TODO: replace the call to the Thread constructor with a
-                # call to executor.submit().
-                # Arguments to submit: AllNewsFeedReader.worker, self,
-                #                      results_q, news_type, max_items
-                # Assign the Future returned by submit to the variable
-                # `background` </font><font color="blue">
-                background = executor.submit(AllNewsFeedReader.worker, self,
-                                             results_q, news_type, max_items) </font><font color="grey">
-                news_threads.append(background)
 
-                # TODO: delete the call to background.start() </font><font color="blue">
-                # background.start() </font><font color="grey">
+                # TODO: create an instance of NewsReader and assign it to a
+                # local variable named `news_reader` </font><font color="blue">
+                news_reader = NewsReader(self.feed_reader, news_type, max_items)
+</pre></font>
 
-        # TODO: in the following `for` statement, replace `news_threads` with
-        # a call to concurrent.futures.as_completed(news_threads) </font><font color="blue">
-        for thread in concurrent.futures.as_completed(news_threads): </font><font color="grey">
-            # TODO: replace the call to thread.join() with `pass` </font><font color="blue">
-            pass
+<font color="grey"><pre>
+                # TODO: call executor.submit() to execute the NewsReader's
+                # get_news() method.
+                # Arguments to submit: NewsReader.get_news, news_reader
+                # Assign the Future returned by submit to a local variable.  </font><font color="blue">
+                future = executor.submit(NewsReader.get_news, news_reader)
+</pre></font>
+
+<font color="grey"><pre>
+                # TODO: append the Future to the `news_futures` list </font><font color="blue">
+                news_futures.append(future)
+</pre></font>
+
+<font color="grey"><pre>
+        # TODO: initialize the `all_news` variable with an empty dictionary
+        # (no code change required) </font><font color="blue">
+        all_news = {}
+</pre></font>
+
+<font color="grey"><pre>
+        # TODO: use a `for` to loop over the result of a call to
+        # concurrent.futures.as_completed(news_futures) </font><font color="blue">
+        for future in concurrent.futures.as_completed(news_futures):
+</pre></font>
+
+<font color="grey"><pre>
+            # TODO: assign the result of the Future to a variable named
+            # `news_reader` </font><font color="blue">
+            news_reader = future.result()
+</pre></font>
+
+<font color="grey"><pre>
+            # TODO: Add the NewsReader's news to the `all_news` dictionary.
+            # key: the news_reader's `news_type` attribute
+            # value: the news_reader's `news` attribute </font><font color="blue">
+            all_news[news_reader.news_type] = news_reader.news
+</pre></font>
+
+<font color="grey"><pre>
+        # TODO: return the `all_news` dictionary </font><font color="blue">
+        return all_news
 </pre></font>
 
 </body>

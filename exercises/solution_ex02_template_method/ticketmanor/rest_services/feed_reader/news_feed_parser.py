@@ -97,25 +97,24 @@ class NewsFeedParser(metaclass=ABCMeta):
         # (no code change required)
         return parsed_content
 
-        # BONUS TODO 2: convert this method into a generator function that yields
-        # a single parsed item each time it's called.
-        # HINT: delete the parse_content list completely. Instead of appending
-        # each parsed item to a list, yield it from the generator.
-
-        # NOTE: a generator can't be serialized as JSON, so don't use it for
-        # the TicketManor application
-
-        # for i, item_node in enumerate(
-        #         dom.getElementsByTagName(self.item_element_name), start=1):
-        #     # Get the parsed news item
-        #     parsed_item = self.parse_item(item_node)
-        #     # Yield each item from the generator function
-        #     yield parsed_item
-        #
-        #     if i >= max_items > 0:
-        #         break
-        # # At this point, there's nothing else to return
-        # return
+    # BONUS TODO 2: convert the parse_xml_content() function  into a
+    # generator function that yields a single parsed item each time it's
+    # called.
+    # HINT: delete the parse_content list completely. Instead of appending
+    # each parsed item to a list, yield it from the generator.
+    # def parse_xml_content(self, raw_content, max_items=0):
+    #     dom = minidom.parseString(raw_content)
+    #     for i, item_node in enumerate(
+    #             dom.getElementsByTagName(self.item_element_name), start=1):
+    #         # Get the parsed news item
+    #         parsed_item = self.parse_item(item_node)
+    #         # Yield each item from the generator function
+    #         yield parsed_item
+    #
+    #         if i >= max_items > 0:
+    #             break
+    #     # At this point, there's nothing else to return
+    #     return
 
     # BONUS TODO: define parse_item() as an abstract method
     @abstractmethod
@@ -128,6 +127,6 @@ if __name__ == '__main__':
     try:
         parser = NewsFeedParser(None)
         import sys
-        print("ERROR: NewsFeedParser is not abstract", file=sys.stderr)
+        print("\nERROR: NewsFeedParser is not abstract", file=sys.stderr)
     except TypeError:
-        print("Success: NewsFeedParser is abstract")
+        print("\nSuccess: NewsFeedParser is abstract")

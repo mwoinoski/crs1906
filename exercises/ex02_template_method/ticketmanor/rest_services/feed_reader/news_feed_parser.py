@@ -33,8 +33,9 @@ class NewsFeedParser:
 
     # BONUS TODO: define parse_item() as an abstract method
 
-    # BONUS TODO 2: convert parse_xml_content() into a generator function that yields
-    # a single parsed item each time it's called.
+    # BONUS TODO 2: convert the parse_xml_content() function  into a
+    # generator function that yields a single parsed item each time it's
+    # called.
     # HINT: delete the parse_content list completely. Instead of appending
     # each parsed item to a list, yield it from the generator.
 
@@ -44,6 +45,6 @@ if __name__ == '__main__':
     try:
         parser = NewsFeedParser(None)
         import sys
-        print("ERROR: NewsFeedParser is not abstract", file=sys.stderr)
+        print("\nERROR: NewsFeedParser is not abstract", file=sys.stderr)
     except TypeError:
-        print("Success: NewsFeedParser is abstract")
+        print("\nSuccess: NewsFeedParser is abstract")

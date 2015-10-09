@@ -34,11 +34,14 @@ class Customer(User):
     # TODO: copy all the methods below this comment and paste them into the
     # User class
 
-    # TODO: after copying these methods to the User class, modify the
-    # methods here to delegate as much work as possible to the User methods.
+    # TODO: Modify the methods here to reference Customer-specific attributes
+    # when necessary, while delegating as much work as possible to superclass
+    # methods.
     # HINT: you will be able to delete some methods completely; others can
     # override the superclass methods and then call the superclass methods to
     # do part of the work.
+    # HINT: be sure that __eq__(), __str__() and __repr__() all reference
+    # self.customer_id
 
     def __eq__(self, other):
         """Compare Customer instances."""
@@ -70,7 +73,8 @@ class Customer(User):
     #         other.city == self.city and \
     #         other.state == self.state and \
     #         other.country == self.country and \
-    #         other.post_code == self.post_code
+    #         other.post_code == self.post_code and \
+    #         other.customer_id == self.customer_id
     #
     # def __ne__(self, other):
     #     """Compare Customer instances."""
@@ -87,4 +91,5 @@ class Customer(User):
     #         "email='{self.email}',street='{self.street}'," \
     #         "city='{self.city}',state='{self.state}'," \
     #         "country='{self.country}',post_code='{self.post_code}'," \
+    #         "customer_id='{self.customer_id}'" \
     #         .format(self=self)

@@ -48,7 +48,7 @@ requires = [
     'Sphinx',       # Generates documentation from docstrings in source code
 ]
 
-setup(name='Exercise 3.2 Solution',
+setup(name='Exercise_3_2_Solution',
       version='1.0.0',
       description='Exercise 3.2 Solution',
       long_description=README + '\n\n' + CHANGES,

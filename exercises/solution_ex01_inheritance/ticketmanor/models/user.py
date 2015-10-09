@@ -23,7 +23,8 @@ class User(Person):
         self.country = country
         self.post_code = post_code
 
-    # TODO: paste methods from Customer class here
+    # TODO: paste methods from Customer class here. After pasting the
+    # methods, remove any references to Customer-specific attributes.
 
     def name(self):
         middle_name = self.middles + " " if self.middles is not None else ""

@@ -6,5 +6,7 @@ python -c "import os, re; path=os.environ['PATH']; path=re.sub(r';C:\\python\\jy
 
 set /p PATH= < %tempfile%
 path
+echo.
+python --version
 del %tempfile%
 prompt $P$_$+$G

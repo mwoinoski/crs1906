@@ -66,7 +66,7 @@ def main():
         ...
 
         # BONUS TODO: comment out the two statements above (the import of
-	# ChatRoom and the setting of `chat_room`
+        # ChatRoom and the setting of `chat_room`
 
         # BONUS TODO: import ChatRoomProxy from the chat_room_proxy module
         ...

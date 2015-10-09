@@ -24,9 +24,9 @@ class ConcreteImage(Image):
         return 'ConcreteImage("{}")'.format(self.path)
 
 
-class ImageProxy(Image):
+class LazyLoadingImage(Image):
     def __init__(self, path):  # don't load image yet
-        print('ImageProxy.__init__("{}")'.format(path))
+        print('LazyLoadingImage.__init__("{}")'.format(path))
         self.path = path
         self.concrete_image = None
         
@@ -37,7 +37,7 @@ class ImageProxy(Image):
         return self.concrete_image.get_content()  
 
     def __repr__(self):
-        return 'ImageProxy("{}")'.format(self.path)
+        return 'LazyLoadingImage("{}")'.format(self.path)
 
 
 class ImageClient:
@@ -71,7 +71,7 @@ class ObjectFactory:
 
 
 def main(show_it):
-    ObjectFactory.register(ConcreteImage, ImageProxy)
+    ObjectFactory.register(ConcreteImage, LazyLoadingImage)
 
     print('Getting instance of ConcreteImage')    
     image = ObjectFactory.get_instance(ConcreteImage,

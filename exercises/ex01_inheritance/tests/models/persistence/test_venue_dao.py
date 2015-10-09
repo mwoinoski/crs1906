@@ -1,14 +1,14 @@
 """
 Integration tests for VenueDao.
 """
-from ticketmanor.models.persistence import PersistenceError
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import os
+import sys
 from sqlalchemy.orm import sessionmaker
-
-from unittest import TestCase
+from unittest import TestCase, main
+from unittest.mock import patch
 from ticketmanor import engine_from_config
 from test_support.db_utils import (
     create_db_tables,
@@ -18,6 +18,8 @@ from test_support.db_utils import (
 )
 from ticketmanor.models.venue import Venue
 from ticketmanor.models.persistence.venue_dao import VenueDao
+from ticketmanor.models.persistence.base_dao import BaseDao
+from ticketmanor.models.persistence import PersistenceError
 # The following import for Event is required. PyCharm flags it as unused, but
 # without it, SQLAlchemy raises exceptions.
 from ticketmanor.models.event import Event
@@ -33,8 +35,54 @@ class VenueDaoTest(TestCase):
     """
 
     # -------------------------------------------------------------------------
+    #                        Set Up and Tear Down Methods
+    # -------------------------------------------------------------------------
+
+    def setUp(self):
+        if os.path.exists(db_filename):
+            os.remove(db_filename)
+        create_db_tables(db_filename)
+        self.populate_db_tables()
+
+        settings = {'sqlalchemy.url': 'sqlite:///' + db_filename}
+        # Create the SQLAlchemy DB Engine
+        engine = engine_from_config(settings, 'sqlalchemy.')
+        Session = sessionmaker(bind=engine)
+        self.session = Session()
+        self.venue_dao = VenueDao()
+
+    def tearDown(self):
+        self.session.close_all()
+        drop_db_tables(db_filename)
+
+    # -------------------------------------------------------------------------
     #                              Test Cases
     # -------------------------------------------------------------------------
+
+    def test_extends_base_dao(self):
+        self.assertTrue(issubclass(VenueDao, BaseDao),
+                        'VenueDao should be a subclass of BaseDao')
+
+    @patch.object(BaseDao, '__init__')
+    def test_calls_super_init(self, mock_init_method):
+        VenueDao()
+        try:
+            mock_init_method.assert_called_once_with(Venue, 'id')
+        except:
+            print('\nERROR: Venue.__init__() should call super().__init__()',
+                  file=sys.stderr)
+            raise
+
+    @patch.object(BaseDao, 'get')
+    def test_get_calls_superclass_method(self, mock_get_method):
+        self.venue_dao.get('hsimpson@gmail.com', self.session)
+        try:
+            mock_get_method.assert_called_once_with('hsimpson@gmail.com',
+                                                    self.session)
+        except:
+            print('\nERROR: Venue should delegate get() call to BaseDao',
+                  file=sys.stderr)
+            raise
 
     def test_get_venue_found(self):
 
@@ -136,29 +184,6 @@ class VenueDaoTest(TestCase):
                           self.session)
 
     # -------------------------------------------------------------------------
-    #                        Set Up and Tear Down Methods
-    # -------------------------------------------------------------------------
-
-    @classmethod
-    def tearDownClass(cls):
-        os.remove(db_filename)
-
-    def setUp(self):
-        create_db_tables(db_filename)
-        self.populate_db_tables()
-
-        settings = {'sqlalchemy.url': 'sqlite:///' + db_filename}
-        # Create the SQLAlchemy DB Engine
-        engine = engine_from_config(settings, 'sqlalchemy.')
-        Session = sessionmaker(bind=engine)
-        self.session = Session()
-        self.venue_dao = VenueDao()
-
-    def tearDown(self):
-        self.session.close_all()
-        drop_db_tables(db_filename)
-
-    # -------------------------------------------------------------------------
     #                              Utility Methods
     # -------------------------------------------------------------------------
 
@@ -175,3 +200,6 @@ class VenueDaoTest(TestCase):
             (102, 'New York', 'USA', 40.7127, -74.0059, 'Carnegie Hall',
              'NY', '881 7th Ave, New York, NY 10019')
         )
+
+if __name__ == '__main__':
+    main()

@@ -6,64 +6,11 @@
 <body>
 <h2>Hints for Exercise 5.1</h2>
 
-<h3>sudoku.py</h3>
-
-<pre><font color="grey"># TODO: import the measure and get_function_stats methods from the
-# measure module.</font>
-<font color="blue">from measure import measure, get_function_stats</font>
-<font color="grey">...</font></pre>
-
-<font color="grey"><pre>    # TODO: add the measure decorator to this method</font>
-<font color="blue">    @measure</font>
-<font color="grey">    def check(self, level=0):
-    ...</pre></font>
-
-<font color="grey"><pre>    # TODO: add the measure decorator to this function</font>
-<font color="blue">    @measure</font>
-<font color="grey">    def one_level_supposition(self):
-    ...</pre></font>
-
-<font color="grey"><pre>    # TODO: add the measure decorator to this function</font>
-<font color="blue">    @measure</font>
-<font color="grey">    def two_level_supposition(self):
-    ...</pre></font>
-
-<font color="grey"><pre>            # TODO: call the get_function_stats() function and print the stats
-            # for all decorated functions</font>
-<font color="blue">            print('{:^53}'.format('Function Call Stats'))
-            print('{:24s} {:&gt;8s}  {:22s}'
-                  .format('Function name', 'Calls', 'Avg Time (seconds)'))
-            print('-' * 53)
-            for stats in get_function_stats():
-                print('{:24s} {:8d}  {:13.6f}'.format(*stats))</pre></font>
-
-<h2>Hints for Exercise 5.1 Bonus</h2>
-
-<h3>sudoku.py</h3>
-
-<font color="grey"><pre>            # BONUS TODO: call get_function_stats() only if
-            # decorator_enabled is true</font>
-<font color="blue">            if decorator_enabled:</font>
-<font color="grey">                print('{:^53}'.format('Function Call Stats'))
-                print('{:24s} {:&gt;8s}  {:22s}'
-                      .format('Function name', 'Calls', 'Avg Time (seconds)'))
-                print('-' * 53)
-                for stats in get_function_stats():
-                    print('{:24s} {:8d}  {:13.6f}'.format(*stats))</pre></font>
-
-
-<h2>Hints for Exercise 5.1 Bonus (Configuring a decorator with a configuration file)</h2>
-
-<h3>sudoku.py</h3>
-
-<font color="grey"><pre># BONUS TODO: import the measure and get_function_stats methods and
-# the decorator_enabled variable from the measure_configurable module.</font>
-<font color="blue">from measure_configurable import measure, get_function_stats, decorator_enabled</pre></font>
-
-
 <h2>Hints for Exercise 5.1 Bonus (Comparing performance of different coding techniques)</h2>
 
-<font color="blue"><pre>python -m cProfile -s tottime  func_stats.py</pre></font>
+<font color="blue"><pre>
+python -m cProfile -s tottime  func_stats.py
+</pre></font>
 
 </body>
 </html>

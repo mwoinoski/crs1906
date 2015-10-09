@@ -18,6 +18,8 @@ from sqlalchemy.orm import composite
 from . import Base
 from .address import Address
 
+# TODO: note the definition of the Person class.
+# (no code changes required)
 
 class Person(Base):
     """
@@ -25,7 +27,7 @@ class Person(Base):
     """
 
     __tablename__ = 'people'
-    id = Column('id', Integer, primary_key=True)  # autoincrement=True by default
+    id = Column('id', Integer, primary_key=True)  # default autoincrement=True
     first_name = Column('firstname', String)
     middles = Column('middles', String)
     last_name = Column('lastname', String)
@@ -77,10 +79,12 @@ class Person(Base):
 
     def __repr__(self):
         """Return an unambiguous String representation of a Person"""
-        return "id={self.id},first_name='{self.first_name}',middles='{self.middles}'," \
-               "last_name='{self.last_name}',email='{self.email}',street='{self.street}'," \
-               "city='{self.city}',state='{self.state}',country='{self.country}'," \
-               "post_code='{self.post_code}'".format(self=self)
+        return "id={self.id},first_name='{self.first_name}'," \
+               "middles='{self.middles}',last_name='{self.last_name}'," \
+               "email='{self.email}',street='{self.street}'," \
+               "city='{self.city}',state='{self.state}'," \
+               "country='{self.country}',post_code='{self.post_code}'"\
+               .format(self=self)
 
     def from_json(self, json_dict):
         """
@@ -91,11 +95,12 @@ class Person(Base):
         :type json_dict:
             dictionary
         """
-        # In this class, because Address is a composite object, self.address is an
-        # instance of SQLAlchemy InstanceState class, which magically passes certain
-        # Person attributes through to a nested dictionary that holds Address attributes.
-        # But we'll have to flatten the JSON value (which has a nested Address object)
-        # so we can assign the Address attributes to the Person.
+        # In this class, because Address is a composite object, self.address is
+        # an instance of SQLAlchemy InstanceState class, which magically passes
+        # certain Person attributes through to a nested dictionary that holds
+        # Address attributes. But we'll have to flatten the JSON value (which
+        # has a nested Address object) so we can assign the Address attributes
+        # to the Person.
         json_copy = dict(json_dict)
 
         # First, deal with JSON null values
@@ -128,6 +133,6 @@ class Person(Base):
             "address": self.address
         }
 
-# TODO: map subclasses to support polymorphic queries. See:
+# FIXME: map subclasses to support polymorphic queries. See:
 # https://groups.google.com/forum/#!topic/sqlalchemy/GJvbhXsxwuo
 # http://docs.sqlalchemy.org/en/latest/orm/inheritance.html#basic-control-of-which-tables-are-queried

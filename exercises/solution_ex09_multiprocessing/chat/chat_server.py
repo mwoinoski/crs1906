@@ -45,7 +45,7 @@ class ChatServer(BaseRequestHandler):
 
     @classmethod
     def shutdown(cls):
-        with cls.chat_sockets_lock:
+        with cls.chat_sockets_lock:  # TODO
             for socket in cls.chat_sockets:
                 if socket:
                     socket.close()
@@ -64,9 +64,14 @@ if __name__ == '__main__':
         port = 20000
         # Allow server to rebind to previously used port number.
         ThreadingTCPServer.allow_reuse_address = True
-        # Start server listening at localhost. ThreadingTCPServer spawns a new
-        # thread to handle each connection request.
+
+        # TODO: note that the ChatServer class is passed as an argument to the
+        # ThreadingTCPServer constructor. For each connection request from a
+        # chat client, ThreadingTCPServer will spawn a new thread that executes
+        # the ChatServer.handle() method. In the next exercise step, you will
+        # ensure that ChatServer.handle() is thread-safe.
         server = ThreadingTCPServer(('', port), ChatServer)
+
         print('Starting ChatServer at port {}...'.format(port))
         server.serve_forever()
     except KeyboardInterrupt:  # catch Ctrl-c

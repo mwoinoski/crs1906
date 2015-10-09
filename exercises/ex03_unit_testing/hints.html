@@ -8,84 +8,107 @@
 
 <h3>test_rss_news_feed_parser.py</h3>
 
-<font color="grey"><pre># TODO: make TestRssNewsFeedParser a subclass of unittest.TestCase</font>
-<font color="blue">class TestRssNewsFeedParser(TestCase):</pre></font>
+<font color="grey"><pre>
+# TODO: make TestRssNewsFeedParser a subclass of unittest.TestCase </font><font color="blue">
+class TestRssNewsFeedParser(TestCase):
+</pre></font>
 
-<font color="grey"><pre>    # TODO: Define a test method named test_get_news_music</pre></font>
-<font color="blue"><pre>    def test_get_news_music(self):</pre></font>
-<font color="grey"><pre>        # TODO: in the test_get_news_music method, create an instance of
-        # RssNewsFeedParser and save a reference to it in a local variable</font>
-<font color="blue">        feed_reader = RssNewsFeedParser()</pre></font>
+<font color="grey"><pre>
+    # TODO: Define a test method named test_get_news_music </font><font color="blue">
+    def test_get_news_music(self): </font><font color="grey">
+	# TODO: in the test_get_news_music method, create an instance of
+        # RssNewsFeedParser and save a reference to it in a local variable </font><font color="blue">
+	feed_reader = RssNewsFeedParser()
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO:
+<font color="grey"><pre>
+	# TODO:
         # 1. call the feed reader's get_news() method, passing 'music' as the
         #    argument
-        # 2. save the list returned by the method in a local variable</font>
-<font color="blue">        actual = feed_reader.get_news('music')</pre></font>
+        # 2. save the list returned by the method in a local variable </font><font color="blue">
+	actual = feed_reader.get_news('music')
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: add a method call that asserts the length of the returned list
-        # is equal to 3</font>
-<font color="blue">        self.assertEqual(3, len(actual))</pre></font>
+<font color="grey"><pre>
+	# TODO: add a method call that asserts the length of the returned list
+        # is equal to 3 </font><font color="blue">
+	self.assertEqual(3, len(actual))
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: loop over the list returned by get_news(). For each item on
+<font color="grey"><pre>
+	# TODO: loop over the list returned by get_news(). For each item on
         # the list, call an assert method that verifies the item is equal to
-        # the corresponding item on the list named "expected".</font>
-<font color="blue">        for i in range(3):
-            self.assertEqual(expected[i], actual[i])</pre></font>
+        # the corresponding item on the list named "expected".  </font><font color="blue">
+	for i in range(3):
+            self.assertEqual(expected[i], actual[i])
+</pre></font>
 
 
-<font color="grey"><pre>    # TODO: Define a test method named test_get_news_music_max_items_1</font>
-<font color="blue">    def test_get_news_music_max_items_1(self):</pre></font>
-<font color="grey"><pre>        # TODO: in the test_get_news_music_max_items_1 method, create an
+<font color="grey"><pre>
+    # TODO: Define a test method named test_get_news_music_max_items_1 </font><font color="blue">
+    def test_get_news_music_max_items_1(self): </font><font color="grey">
+	# TODO: in the test_get_news_music_max_items_1 method, create an
         # instance of RssNewsFeedParser and save a reference to it in a
-        # local variable.</font>
-<font color="blue">        feed_reader = RssNewsFeedParser()</pre></font>
+        # local variable.  </font><font color="blue">
+	feed_reader = RssNewsFeedParser()
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO:
+<font color="grey"><pre>
+	# TODO:
         # 1. call the feed reader's get_news() method, passing
         #    news_type='music' and max_items=1 as the arguments.
-        # 2. save the list returned by the method in a local variable</font>
-<font color="blue">        actual = feed_reader.get_news('music', max_items=1)</pre></font>
+        # 2. save the list returned by the method in a local variable </font><font color="blue">
+	actual = feed_reader.get_news('music', max_items=1)
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: verify that the returned list has length 1 and that the
-        # returned news item is equal to the first item on the "expected" list.</font>
-<font color="blue">        self.assertEqual(1, len(actual))
-        self.assertEqual(expected[0], actual[0])</pre></font>
+<font color="grey"><pre>
+	# TODO: verify that the returned list has length 1 and that the
+        # returned news item is equal to the first item on the "expected" list.  </font><font color="blue">
+	self.assertEqual(1, len(actual))
+        self.assertEqual(expected[0], actual[0])
+</pre></font>
 
 
-<font color="grey"><pre>    # TODO: Define a test method named test_get_news_invalid_news_type</font>
-<font color="blue">    def test_get_news_invalid_news_type(self):</pre></font>
-<font color="grey"><pre>        # TODO: in the test_get_news_invalid_news_type method, create an
+<font color="grey"><pre>
+    # TODO: Define a test method named test_get_news_invalid_news_type </font><font color="blue">
+    def test_get_news_invalid_news_type(self): </font><font color="grey">
+	# TODO: in the test_get_news_invalid_news_type method, create an
         # instance of RssNewsFeedParser and save a reference to it in a
-        # local variable.</font>
-<font color="blue">        feed_reader = RssNewsFeedParser()</pre></font>
+        # local variable.  </font><font color="blue">
+	feed_reader = RssNewsFeedParser()
+</pre></font>
 
 
-<font color="grey"><pre>        # TODO: Call an assert method to verify that if you call the
+<font color="grey"><pre>
+	# TODO: Call an assert method to verify that if you call the
         # feed reader's get_news() method with an invalid news type argument
-        # (for example, 'pluto'), the method raises a FeedReaderException.</font>
-<font color="blue">        with self.assertRaises(FeedReaderException):
-            feed_reader.get_news('pluto')</pre></font>
+        # (for example, 'pluto'), the method raises a FeedReaderException.  </font><font color="blue">
+	with self.assertRaises(FeedReaderException):
+            feed_reader.get_news('pluto')
+</pre></font>
 
 
-<font color="grey"><pre>    # TODO: call unittest.main()</font>
-<font color="blue">    unittest.main()</pre></font>
+<font color="grey"><pre>
+    # TODO: call unittest.main() </font><font color="blue">
+    unittest.main()
+</pre></font>
 
 <h3>test_rss_news_feed_parser_no_class.py</h3>
 
-<font color="grey"><pre># TODO:
+<font color="grey"><pre>
+# TODO:
 # 1. Copy the test_get_news_music() and test_get_news_music_max_items_1()
 #    methods from test_rss_news_feed_parser.py and paste them here.
 # 2. Delete the "self" argument from the copied functions.
-# 3. Replace calls to self.assertEqual() with the assert statement.</font>
+# 3. Replace calls to self.assertEqual() with the assert statement.
+</font><font color="blue">
 
-
-<font color="blue">def test_get_news_music():
+def test_get_news_music():
     feed_reader = RssNewsFeedParser()
 
     actual = feed_reader.get_news('music')
@@ -102,17 +125,20 @@ def test_get_news_music_max_items_1():
     actual = feed_reader.get_news('music', max_items=1)
 
     assert 1 == len(actual)
-    assert expected[0] == actual[0]</pre></font>
+    assert expected[0] == actual[0]
+</pre></font>
 
 
-<font color="grey"><pre># TODO: copy the test_get_news_invalid_news_type() method from
+<font color="grey"><pre>
+# TODO: copy the test_get_news_invalid_news_type() method from
 # test_rss_news_feed_parser.py and paste it here. Modify it to use the
-# nose.tools.raises decorator to verify that a FeedReaderException is raised.</font>
-<font color="blue">@raises(FeedReaderException)
+# nose.tools.raises decorator to verify that a FeedReaderException is raised.  </font><font color="blue">
+@raises(FeedReaderException)
 def test_get_news_invalid_news_type():
     feed_reader = RssNewsFeedParser()
 
-    feed_reader.get_news('pluto')</pre></font>
+    feed_reader.get_news('pluto')
+</pre></font>
 
 
 <h2>Hints for Exercise 3.1 Bonus (Achieving 100% test coverage)</h2>
@@ -121,10 +147,11 @@ def test_get_news_invalid_news_type():
 
 Add a test method that passes a minimal XML document to parse_xml_content():
 
-<font color="blue"><pre>    def test_parse_content_items_missing(self):
+<pre><font color="blue">
+    def test_parse_content_items_missing(self):
         feed_reader = RssNewsFeedParser()
 
-        minimal_input = '<rss><item></item></rss>'
+        minimal_input = '&lt;rss&gt;&lt;item&gt;&lt;/item&gt;&lt;/rss&gt;'
         minimal_results = [
             {
                 'title': '',

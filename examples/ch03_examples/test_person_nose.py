@@ -5,9 +5,10 @@
    nosetests test_person_nose.py
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
-
 from person import Person
+from unittest.case import skip
+
+__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
 
 
 def test_init():
@@ -37,6 +38,8 @@ def test_eq_new_instances_equal():
 
     assert p1 == p2  # calls Person.__eq__()
 
+
+@skip
 def test_eq_new_instances_equal_fail():
     p1 = Person(None, None, None)
     p2 = Person(None, None, None)

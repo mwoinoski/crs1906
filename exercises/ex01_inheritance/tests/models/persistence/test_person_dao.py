@@ -5,8 +5,10 @@ Integration tests for PersonDao.
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import os
+import sys
 from sqlalchemy.orm import sessionmaker
-from unittest import TestCase
+from unittest import TestCase, main
+from unittest.mock import patch
 
 from ticketmanor import engine_from_config
 from test_support.db_utils import (
@@ -17,6 +19,7 @@ from test_support.db_utils import (
 )
 from ticketmanor.models.person import Person
 from ticketmanor.models.persistence.person_dao import PersonDao
+from ticketmanor.models.persistence.base_dao import BaseDao
 from ticketmanor.models.persistence import PersistenceError
 # The following imports for Event and Venue required. PyCharm flags them as
 # unused, but without them, SQLAlchemy raises exceptions.
@@ -35,14 +38,56 @@ class PersonDaoTest(TestCase):
     """
 
     # -------------------------------------------------------------------------
+    #                        Set Up and Tear Down Methods
+    # -------------------------------------------------------------------------
+
+    def setUp(self):
+        if os.path.exists(db_filename):
+            os.remove(db_filename)
+        create_db_tables(db_filename)
+        self.populate_db_tables()
+
+        settings = {'sqlalchemy.url': 'sqlite:///' + db_filename}
+        # Create the SQLAlchemy DB Engine
+        engine = engine_from_config(settings, 'sqlalchemy.')
+        Session = sessionmaker(bind=engine)
+        self.session = Session()
+        self.person_dao = PersonDao()
+
+    def tearDown(self):
+        self.session.close_all()
+        drop_db_tables(db_filename)
+
+    # -------------------------------------------------------------------------
     #                              Test Cases
     # -------------------------------------------------------------------------
 
-    def test_get_person_found(self):
+    def test_extends_base_dao(self):
+        self.assertTrue(issubclass(PersonDao, BaseDao),
+                        'PersonDao should be a subclass of BaseDao')
 
-        # TODO: note the call to PersonDao.get() to fetch the data for an
-        # instance of an Person with a specific email
-        # (no code change required)
+    @patch.object(BaseDao, '__init__')
+    def test_calls_super_init(self, mock_init_method):
+        PersonDao()
+        try:
+            mock_init_method.assert_called_once_with(Person, 'email')
+        except:
+            print('\nERROR: Person.__init__() should call super().__init__()',
+                  file=sys.stderr)
+            raise
+
+    @patch.object(BaseDao, 'get')
+    def test_get_calls_superclass_method(self, mock_get_method):
+        self.person_dao.get('hsimpson@gmail.com', self.session)
+        try:
+            mock_get_method.assert_called_once_with('hsimpson@gmail.com',
+                                                    self.session)
+        except:
+            print('\nERROR: Person should delegate get() call to BaseDao',
+                  file=sys.stderr)
+            raise
+
+    def test_get_person_found(self):
         person = self.person_dao.get('hsimpson@gmail.com', self.session)
 
         self.assertEqual(101, person.id)
@@ -68,8 +113,6 @@ class PersonDaoTest(TestCase):
                         email='wallace@wandg.com', first_name='Wallace',
                         middles='Peter', last_name='Sallis')
 
-        # TODO: note the call to PersonDao.add() to insert a database record
-        # (no code changes required)
         self.person_dao.add(person, self.session)
 
         self.session.commit()
@@ -84,8 +127,6 @@ class PersonDaoTest(TestCase):
                         email='wallace@wandg.com', first_name='Wallace',
                         middles='Dwight', last_name='Schultz')
 
-        # TODO: note the call to PersonDao.update() to update a database record
-        # (no code changes required)
         self.person_dao.update(person, self.session)
 
         self.session.commit()
@@ -97,9 +138,6 @@ class PersonDaoTest(TestCase):
         self.assertEqual('Schultz', rows[0][8])
 
     def test_delete_person_found(self):
-
-        # TODO: note the call to ActDao.delete() to delete a database record
-        # (no code changes required)
         self.person_dao.delete('hsimpson@gmail.com', self.session)
 
         self.session.commit()
@@ -116,32 +154,6 @@ class PersonDaoTest(TestCase):
                           self.session)
 
     # -------------------------------------------------------------------------
-    #                        Set Up and Tear Down Methods
-    # -------------------------------------------------------------------------
-
-    @classmethod
-    def tearDownClass(cls):
-        os.remove(db_filename)
-
-    def setUp(self):
-        create_db_tables(db_filename)
-        self.populate_db_tables()
-
-        settings = {'sqlalchemy.url': 'sqlite:///' + db_filename}
-        # Create the SQLAlchemy DB Engine
-        engine = engine_from_config(settings, 'sqlalchemy.')
-        Session = sessionmaker(bind=engine)
-        self.session = Session()
-
-        # TODO: note that an instance of PersonDao is stored in self.person_dao
-        # (no code change required)
-        self.person_dao = PersonDao()
-
-    def tearDown(self):
-        self.session.close_all()
-        drop_db_tables(db_filename)
-
-    # -------------------------------------------------------------------------
     #                              Utility Methods
     # -------------------------------------------------------------------------
 
@@ -152,3 +164,6 @@ class PersonDaoTest(TestCase):
             (102, 'Springfield', 'USA', '54321', 'OR', '125 Python St',
              'nflanders@gmail.com', 'Ned', 'Flanders', 'Micah'),
         )
+
+if __name__ == '__main__':
+    main()

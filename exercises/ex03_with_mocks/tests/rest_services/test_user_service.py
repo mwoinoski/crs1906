@@ -64,12 +64,12 @@ class UserServiceRestTest(TestCase):
 
         # TODO: program the mock DAO's get() method to have a side effect of
         # raising a PersistenceError
-        # HINT: see slide 3-42
+        # HINT: see slide 3-39
         ...
 
         # TODO: assert that an HTTPNotFound exception is raised when you call
         # the user_service's get_user() method.
-        # HINT: see slide 3-41
+        # HINT: see slide 3-38
         ...
 
 
@@ -99,7 +99,7 @@ class UserServiceRestTest(TestCase):
 
     # TODO: use the @nose.tools.raises decorator to verify that this test
     # raises an HTTPNotFound exception.
-    # HINT: see slide 3-24
+    # HINT: see slide 3-22
     ...
     def test_get_not_found_with_decorator(self):
         request = pyramid_testing.DummyRequest()
@@ -141,7 +141,7 @@ class UserServiceRestTest(TestCase):
         # TODO: assert that an HTTPInternalServerError is raised when you call
         # the user_service's add_user() method, and that the exception's
         # message includes the string 'Could not add'
-        # HINT: see slide 3-42
+        # HINT: see slide 3-39
         ...
 
 
@@ -179,7 +179,7 @@ class UserServiceRestTest(TestCase):
 
         response = user_service.delete_user()
 
-        self.assertEqual(202, response.status_int)
+        self.assertEqual(204, response.status_int)
 
     def test_delete_user_not_found(self):
         request = pyramid_testing.DummyRequest()
