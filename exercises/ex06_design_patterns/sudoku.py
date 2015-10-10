@@ -203,7 +203,7 @@ class Sudoku:
         return answer
 
     # TODO: add the measure decorator to this method using the `@` syntax
-    # HINT: see slide 6-17
+    # HINT: see slide 6-18
     ...
     def check(self, level=0):
         self._changed = True
