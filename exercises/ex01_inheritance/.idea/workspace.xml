@@ -64,8 +64,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="144" />
-    <option name="y" value="4" />
+    <option name="y" value="2" />
     <option name="width" value="911" />
     <option name="height" value="981" />
   </component>
@@ -171,7 +170,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../examples/ch02_examples" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -534,7 +533,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="144" y="4" width="911" height="981" extended-state="0" />
+    <frame x="0" y="2" width="911" height="981" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29209623" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

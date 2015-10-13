@@ -92,16 +92,17 @@ class TestRestServer(unittest.TestCase):
         self.assertEqual(expected, xml)
 
     def test_parse_task_xml(self):
-        xml = '<task><title>Task title</title>' +\
-              '<description>Task description</description>' +\
-              '<done>False</done></task>'
+        xml = '<task>' +\
+                  '<title>Task title</title>' +\
+                  '<description>Task description</description>' +\
+                  '<done>False</done>' +\
+              '</task>'
 
         title, desc, done = rest_server_xml.parse_task_xml(xml)
 
         self.assertEqual('Task title', title)
         self.assertEqual('Task description', desc)
         self.assertEqual(False, done)
-
 
     def test_parse_task_xml_no_elements(self):
         xml = '<task></task>'

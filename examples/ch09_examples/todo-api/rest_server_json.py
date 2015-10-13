@@ -91,7 +91,7 @@ def update_task(task_id):
     title = request.json.get('title')
     desc = request.json.get('description')
     done = request.json.get('done')
-    app.logger.info('Updating task %d (s" "%s" %s)',
+    app.logger.info('Updating task %d ("%s" "%s" %s)',
                     task_id, title, desc, '' if done is None else str(done))
     task = rest_server_dao.update_task(task_id, title, desc, done)
     if task is None:

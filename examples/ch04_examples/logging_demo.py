@@ -20,8 +20,9 @@ logger.debug('Module name = %s', __name__)
 
 logger.info('Program started at %s', time.strftime('%X %x'))
 
-(total, used, free) = shutil.disk_usage('/')
-logger.warning('Root dir is %d%% full', 100*used/total)
+total, used, free = shutil.disk_usage('/')
+if used / total > 0.9:
+    logger.warning('Root dir is %d%% full', 100*used/total)
 
 # Set logging level to INFO: only INFO messages and higher will be logged
 logger.setLevel(logging.INFO)

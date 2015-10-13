@@ -14,11 +14,11 @@ print('{} reverse generator function {}'.format('-'*10, '-'*10))
 for char in reverse('golf'):
     print(char)
 
-print('{} double generator function {}'.format('-'*10, '-'*10))
+print('{} double_it generator function {}'.format('-'*10, '-'*10))
 
-def double(data):
+def double_it(data):
     for index in range(0, len(data)):
         yield data[index]
 
-for num in double([10, 20, 30, 40]):
+for num in double_it([10, 20, 30, 40]):
     print(num)

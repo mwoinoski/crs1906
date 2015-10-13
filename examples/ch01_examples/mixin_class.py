@@ -2,9 +2,13 @@
 mixin_class.py - Example of a mixin class
 """
 
+
 class ComparableMixin(object):
     """This class has methods which use `<=` and `==`,
     but this class does NOT implement those methods."""
+    def __init__(self):
+        print('ComparableMixin.__init__')
+
     def __ne__(self, other):
         return not (self == other)
 
@@ -19,6 +23,7 @@ class ComparableMixin(object):
 
 class SimpleCounter:
     def __init__(self, start):
+        print('SimpleCounter.__init__')
         self._count = start
 
     def increment(self, incr=1):
@@ -40,6 +45,7 @@ class UpAndDownCounter(SimpleCounter, ComparableMixin):
     """UpAndDownCounter uses multiple inheritance with ComparableMixin"""
 
     def __init__(self, start, min_value=0):
+        print('UpAndDownCounter.__init__')
         super().__init__(start)
         self._min = min_value
 

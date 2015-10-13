@@ -1,10 +1,12 @@
+
 """
-subprocess_example.py - subprocess module examples from Chapter 9
+subprocess_example.py - subprocess module examples from Chapter 8
 """
 
 import subprocess
 import platform
 import time
+import sys
 
 
 def ex1():
@@ -16,13 +18,15 @@ def ex2():
 
 
 def ex3():
-    open('a.bak', 'w'); open('b.bak', 'w'); open('c.bak', 'w')
+    for name in ['a', 'b', 'c']:
+        open(name + '.bak', 'w')
 
     from glob import glob
     files = ' '.join(glob('*.bak'))
     subprocess.call('echo ' + files)
 
-    subprocess.call('del *.bak', shell=True)  # Windows
+    # Some Windows commands
+    subprocess.call('del *.bak', shell=True)
 
 
 def ex4():
@@ -41,23 +45,25 @@ def ex4():
 
 
 def ex5():
-    host = 'google.com'
-    option = '-n' if platform.system() == 'Windows' else '-c'
-    status = 0
-    try:
-        result = subprocess.run(['ping', option, '1', host],
-                                check=True, stdout=subprocess.PIPE)
-        output = result.stdout
-    except subprocess.CalledProcessError as exc:
-        status = exc.returncode
-        output = exc.output
+    major, minor, *_ = sys.version_info
+    if major > 3 or major == 3 and minor >= 5:
+        host = 'google.com'
+        option = '-n' if platform.system() == 'Windows' else '-c'
+        status = 0
+        try:
+            result = subprocess.run(['ping', option, '1', host],
+                                    check=True, stdout=subprocess.PIPE)
+            output = result.stdout
+        except subprocess.CalledProcessError as exc:
+            status = exc.returncode
+            output = exc.output
 
-    print('ping exit status = {}, output = {}'
-          .format(status, output.decode('utf-8')))
+        print('ping exit status = {}, output = {}'
+              .format(status, output.decode('utf-8')))
 
 
 def ex6():
-    proc = subprocess.Popen(['admin_script'])
+    proc = subprocess.Popen(['admin_script.bat'])
     while proc.poll() is None:
         print('Still working...')
         # do some time-consuming work here; we'll fake it with sleep
@@ -74,3 +80,12 @@ def ex7():
                             stdout=subprocess.PIPE)
     for line in sort.stdout:
         print('\t', line.decode('utf-8').strip())
+
+if __name__ == '__main__':
+    ex1()
+    ex2()
+    ex3()
+    ex4()
+    ex5()
+    ex6()
+    ex7()

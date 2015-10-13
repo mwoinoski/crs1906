@@ -5,7 +5,7 @@
    nosetests test_person_nose_fail.py
 """
 
-from person import Person
+from person_buggy import Person
 from unittest.case import skip
 
 __author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
@@ -14,7 +14,7 @@ __author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
 def test_init():
     person = Person("John", "Quincy", "Adams")
 
-    assert ("John", None, "Adams") == \
+    assert ("John", "Quincy", "Adams") == \
            (person.first_name, person.middle_name, person.last_name)
 
 

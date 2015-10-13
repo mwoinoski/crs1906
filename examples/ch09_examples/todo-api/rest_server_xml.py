@@ -140,8 +140,9 @@ def parse_task_xml(xml_str):
     title = task.findtext('./title')
     desc = task.findtext('./description')
     done = task.findtext('./done')
-    if done:  # if done is None, don't convert to bool
-        done = True if done == 'True' else False
+    # if done is None, just return it
+    if done:
+        done = (done == 'True')
     return title, desc, done
 
 
