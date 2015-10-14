@@ -1,5 +1,5 @@
 """
-ping_threaded.py - Multi-threaded ping example from Chapter 9
+ping_threaded.py - Multi-threaded ping example from Chapter 8
 
 author: Noah Gift
 """

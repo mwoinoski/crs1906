@@ -1,5 +1,5 @@
 """
-double_list.py - Example of custom indexing from Chapter 1
+double_list.py - Example of custom indexing from Chapter 2
 """
 
 class DoubleList:

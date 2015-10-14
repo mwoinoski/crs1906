@@ -1,5 +1,5 @@
 """
-generator_expr.py - Example of generator expressions from Chapter 1
+generator_expr.py - Example of generator expressions from Chapter 2
 """
 
 powers = [2, 4, 8, 16, 32]

@@ -1,5 +1,5 @@
 """
-sched_demo.py - demo of sched module from Chapter 9
+sched_demo.py - demo of sched module from Chapter 8
 """
 
 import sched, time

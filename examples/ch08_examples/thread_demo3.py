@@ -1,5 +1,5 @@
 """
-threading_demo3.py - threading demo from Chapter 9
+threading_demo3.py - threading demo from Chapter 8
 
 Defines a Thread subclass
 """

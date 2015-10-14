@@ -1,5 +1,5 @@
 """
-thumbnail_image_list.py - Example of custom indexing from Chapter 1
+thumbnail_image_list.py - Example of custom iteration from Chapter 2
 """
 
 
@@ -34,6 +34,5 @@ paths = 'image1', 'image2', 'image3'
 image_list = ImageList([Image(p) for p in paths])
 
 for image in image_list:
-    print(image)  # prints 'thumbnail for imageN'
-
+    print(image)  # prints 'thumbnail for imageN'2
 print(image_list[1])  # prints 'full size image for image2'

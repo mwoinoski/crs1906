@@ -1,5 +1,5 @@
 """
-multiprocessing_demo1.py - multiprocessing demo from Chapter 9
+multiprocessing_demo1.py - multiprocessing demo from Chapter 8
 
 Creates a Process instance directly.
 """

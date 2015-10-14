@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4425131-2e5a-44db-a7d7-741e990a6d99" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ch03_examples/person_buggy.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_at_decorator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_monkey_patch.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ch03_examples/test_person_fail.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch02_examples/generator_expr.py" afterPath="$PROJECT_DIR$/../ch02_examples/generator_expr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch02_examples/http_server.py" afterPath="$PROJECT_DIR$/../ch02_examples/http_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch04_examples/logging_demo.py" afterPath="$PROJECT_DIR$/../ch04_examples/logging_demo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch04_examples/logging_demo_config_file.py" afterPath="$PROJECT_DIR$/../ch04_examples/logging_demo_config_file.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch01_examples/mixin_class.py" afterPath="$PROJECT_DIR$/../ch01_examples/mixin_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch02_examples/reverse_generator.py" afterPath="$PROJECT_DIR$/../ch02_examples/reverse_generator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch03_examples/test_person_nose_fail.py" afterPath="$PROJECT_DIR$/../ch03_examples/test_person_nose_fail.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch01_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch01_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch02_examples/thumbnail _image_list.py" afterPath="$PROJECT_DIR$/../ch02_examples/thumbnail _image_list.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch02_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch02_examples/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch03_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch03_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" />
     </list>
     <ignored path="ch10_examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,9 +64,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="width" value="958" />
-    <option name="height" value="959" />
+    <option name="y" value="2" />
+    <option name="width" value="911" />
+    <option name="height" value="981" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -106,6 +91,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -141,11 +127,10 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ch08_examples" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -350,10 +335,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="958" height="959" extended-state="0" />
+    <frame x="0" y="2" width="911" height="981" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2347826" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23367697" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />

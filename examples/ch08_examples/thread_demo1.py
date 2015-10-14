@@ -1,5 +1,5 @@
 """
-threading_demo1.py - threading demo from Chapter 9
+threading_demo1.py - threading demo from Chapter 8
 
 Creates a Thread instance directly.
 """

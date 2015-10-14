@@ -1,5 +1,5 @@
 """
-threading_demo2.py - threading demo from Chapter 9
+threading_demo2.py - threading demo from Chapter 8
 
 Creates a Thread instance directly, calls a method.
 """

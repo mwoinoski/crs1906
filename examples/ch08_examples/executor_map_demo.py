@@ -1,5 +1,5 @@
 """
-executor_map_demo.py - Demo of Executor.map() from Chapter 9
+executor_map_demo.py - Demo of Executor.map() from Chapter 8
 """
 
 import os

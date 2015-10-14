@@ -1,5 +1,5 @@
 """
-reverse_generator.py - Example of generator function from Chapter 1
+reverse_generator.py - Example of generator function from Chapter 2
 """
 
 def reverse(data):

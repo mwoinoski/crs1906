@@ -1,5 +1,5 @@
 """
-reverse.py - Demo of Iterator design pattern from Chapter 1
+reverse.py - Demo of Iterator design pattern from Chapter 2
 """
 
 

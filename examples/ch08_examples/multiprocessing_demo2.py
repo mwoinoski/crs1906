@@ -1,5 +1,5 @@
 """
-multiprocessing_demo2.py - multiprocessing demo from Chapter 9
+multiprocessing_demo2.py - multiprocessing demo from Chapter 8
 
 Defines a Process subclass
 """
