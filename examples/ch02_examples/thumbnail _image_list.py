@@ -1,5 +1,5 @@
 """
-thumbnail_image_list.py - Example of custom indexing from Chapter 1
+thumbnail_image_list.py - Example of custom iteration from Chapter 2
 """
 
 
