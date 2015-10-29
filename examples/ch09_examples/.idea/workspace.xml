@@ -2,34 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c6ac7f4-3337-4255-9285-b01a769b62f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ch08_examples/admin_script.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ch03_examples/person_buggy.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_at_decorator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_monkey_patch.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ch03_examples/test_person_fail.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ch08_examples/thread_demo4.py" />
-      <change type="MOVED" beforePath="C:\crs1906\examples\ch09_examples\todo-api\test_rest_server_json_integration.py" afterPath="$PROJECT_DIR$/todo-api/test_rest_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch02_examples/generator_expr.py" afterPath="$PROJECT_DIR$/../ch02_examples/generator_expr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch02_examples/http_server.py" afterPath="$PROJECT_DIR$/../ch02_examples/http_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch04_examples/logging_demo.py" afterPath="$PROJECT_DIR$/../ch04_examples/logging_demo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch04_examples/logging_demo_config_file.py" afterPath="$PROJECT_DIR$/../ch04_examples/logging_demo_config_file.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch01_examples/mixin_class.py" afterPath="$PROJECT_DIR$/../ch01_examples/mixin_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo-api/rest_server_json.py" afterPath="$PROJECT_DIR$/todo-api/rest_server_json.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo-api/rest_server_xml.py" afterPath="$PROJECT_DIR$/todo-api/rest_server_xml.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch02_examples/reverse_generator.py" afterPath="$PROJECT_DIR$/../ch02_examples/reverse_generator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch08_examples/subprocess_demos.py" afterPath="$PROJECT_DIR$/../ch08_examples/subprocess_demos.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch03_examples/test_person_nose_fail.py" afterPath="$PROJECT_DIR$/../ch03_examples/test_person_nose_fail.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo-api/test_rest_server_xml.py" afterPath="$PROJECT_DIR$/todo-api/test_rest_server_xml.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch01_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch01_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch02_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch02_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch03_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch03_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amount_to_json.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo-api/test_rest_server.py" afterPath="$PROJECT_DIR$/todo-api/test_rest_server.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch07_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" />
     </list>
     <ignored path="ch12_examples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,11 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="rest_server_json.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="amount_to_json.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/amount_to_json.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rest_server_json.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todo-api/rest_server_json.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25531915">
-              <caret line="93" column="41" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#126#229#0" expanded="true" />
               </folding>
@@ -66,27 +52,16 @@
         <entry file="file://$PROJECT_DIR$/todo-api/test_rest_server.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#73#88#0" expanded="true" />
-                <element signature="e#1640#1683#0" expanded="false" />
-                <element signature="e#1730#2406#0" expanded="false" />
-                <element signature="e#2449#2965#0" expanded="false" />
-                <element signature="e#3007#3367#0" expanded="false" />
-                <element signature="e#3409#3762#0" expanded="false" />
-                <element signature="e#3807#3846#0" expanded="false" />
-                <element signature="e#3898#4262#0" expanded="false" />
+                <element signature="e#1639#1682#0" expanded="false" />
+                <element signature="e#1729#2405#0" expanded="false" />
+                <element signature="e#2448#2964#0" expanded="false" />
+                <element signature="e#3006#3366#0" expanded="false" />
+                <element signature="e#3408#3761#0" expanded="false" />
+                <element signature="e#3806#3845#0" expanded="false" />
+                <element signature="e#3897#4261#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rest_server_xml.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todo-api/rest_server_xml.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -116,10 +91,11 @@
         <option value="$PROJECT_DIR$/todo-api/rest_server_dao.py" />
         <option value="$PROJECT_DIR$/todo-api/test_rest_server_xml_integration.py" />
         <option value="$PROJECT_DIR$/todo-api/test_rest_server_json_integration.py" />
-        <option value="$PROJECT_DIR$/todo-api/test_rest_server.py" />
         <option value="$PROJECT_DIR$/todo-api/rest_server_json.py" />
         <option value="$PROJECT_DIR$/todo-api/test_rest_server_xml.py" />
         <option value="$PROJECT_DIR$/todo-api/rest_server_xml.py" />
+        <option value="$PROJECT_DIR$/amount_to_json.py" />
+        <option value="$PROJECT_DIR$/todo-api/test_rest_server.py" />
       </list>
     </option>
   </component>
@@ -127,9 +103,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="width" value="958" />
-    <option name="height" value="959" />
+    <option name="x" value="604" />
+    <option name="width" value="911" />
+    <option name="height" value="981" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -193,7 +169,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../exercises/ex09_rest_services" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -213,7 +189,24 @@
       <recent name="C:\crs1906\examples\ch12_examples\todo-api" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_rest_server_xml">
+  <component name="RunManager" selected="Python tests.Unittests in test_rest_server">
+    <configuration default="false" name="Run amount_to_json" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ch09_examples" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/amount_to_json.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="false" name="Run rest_server_json" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -295,23 +288,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="rest_server_xml" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/todo-api" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ch09_examples" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/todo-api/rest_server_xml.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -437,19 +413,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Run rest_server_json" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_rest_server_xml_integration" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_rest_server_xml" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_rest_server" />
-      <item index="4" class="java.lang.String" itemvalue="Python.rest_server_xml" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Run amount_to_json" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Run rest_server_json" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_rest_server_xml_integration" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_rest_server_xml" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_rest_server" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_rest_server_xml" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_rest_server_xml_integration" />
-        <item index="2" class="java.lang.String" itemvalue="Python.rest_server_xml" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_rest_server" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Run rest_server_json" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_rest_server" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Run rest_server_json" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Run amount_to_json" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_rest_server_xml" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_rest_server_xml_integration" />
       </list>
     </recent_temporary>
   </component>
@@ -467,27 +443,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="958" height="959" extended-state="0" />
+    <frame x="604" y="0" width="911" height="981" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29782608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29667813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32769045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33978236" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39782345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33804476" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32769045" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39782345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -523,18 +499,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/todo-api/rest_server_xml_minidom.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/todo-api/rest_server_v2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -850,28 +819,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/todo-api/test_rest_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding>
-            <element signature="e#73#88#0" expanded="true" />
-            <element signature="e#1640#1683#0" expanded="false" />
-            <element signature="e#1730#2406#0" expanded="false" />
-            <element signature="e#2449#2965#0" expanded="false" />
-            <element signature="e#3007#3367#0" expanded="false" />
-            <element signature="e#3409#3762#0" expanded="false" />
-            <element signature="e#3807#3846#0" expanded="false" />
-            <element signature="e#3898#4262#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/todo-api/test_rest_server_xml.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -879,7 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31914893">
           <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -887,17 +837,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo-api/test_rest_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#1639#1682#0" expanded="false" />
+            <element signature="e#1729#2405#0" expanded="false" />
+            <element signature="e#2448#2964#0" expanded="false" />
+            <element signature="e#3006#3366#0" expanded="false" />
+            <element signature="e#3408#3761#0" expanded="false" />
+            <element signature="e#3806#3845#0" expanded="false" />
+            <element signature="e#3897#4261#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/todo-api/rest_server_json.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25531915">
-          <caret line="93" column="41" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#126#229#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amount_to_json.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

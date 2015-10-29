@@ -5,7 +5,6 @@ test_rest_server.py - Integration tests for rest_server_json.py
 import unittest
 import requests
 
-
 base_url = 'http://localhost:5000/todo/api/v1.0/tasks'
 
 
