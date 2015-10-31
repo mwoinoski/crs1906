@@ -40,7 +40,7 @@ class HttpRequestProcessor(BaseHTTPRequestHandler):
             self.get_request_line()
             if self.parse_request():
                 if self.command in ('GET', 'POST'):
-                    # A real HTTP server would handle PUT, DELETE, etc.
+                    # A real HTTP server would also handle PUT, DELETE, etc.
 
                     # TODO: note call of generic get_request_data()
                     request_data = self.get_request_data()

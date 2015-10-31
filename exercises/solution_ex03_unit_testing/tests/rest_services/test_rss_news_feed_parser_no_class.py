@@ -190,5 +190,3 @@ RssNewsFeedParser.get_raw_content = lambda self, url: xml_input
 
 # TODO: note that there is no call to unittest.main().
 # (no code changes required)
-
-

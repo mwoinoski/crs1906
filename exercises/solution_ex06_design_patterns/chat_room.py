@@ -9,6 +9,9 @@ from observer import Subject
 from collections import namedtuple
 
 # TODO: Note the definition of the named tuple ChatMessage.
+# A named tuple is basically a one-line class definition. It's an easy way to
+# group several data values so they can be accessed by name instead of numeric
+# index.
 # (no code change required)
 ChatMessage = namedtuple('ChatMessage', 'id value')
 
@@ -28,8 +31,7 @@ class ChatRoom(Subject):
     """
 
     def __init__(self):
-        # TODO: call the superclass constructor
-        # HINT: see slide 1-26
+        # TODO: call the superclass constructor, passing no arguments
         super().__init__()
 
         # TODO: initialize a data attribute named `messages` with an empty list

@@ -40,13 +40,6 @@ from measure import measure, get_function_stats </font><font color="grey">
 <font color="grey"><pre>
     # TODO: add the measure decorator to this function </font><font color="blue">
     @measure </font><font color="grey">
-    def check_for_last_in_row_col_3x3(self):
-    ...
-</pre></font>
-
-<font color="grey"><pre>
-    # TODO: add the measure decorator to this function </font><font color="blue">
-    @measure </font><font color="grey">
     def overlapping_3x3_and_row_or_col(self):
     ...
 </pre></font>
@@ -80,7 +73,7 @@ class ChatRoom(Subject):
 
 <font color="grey"><pre>
     def __init__(self):
-        # TODO: call the superclass constructor </font><font color="blue">
+        # TODO: call the superclass constructor, passing no arguments </font><font color="blue">
 	super().__init__()
 </pre></font>
 
@@ -198,17 +191,13 @@ class ChatClientGui(Observer):
 </pre></font>
 
 <font color="grey"><pre>
+    def __init__(self, client_name, window, chat_room):
+        self.create_widgets(client_name, window)
 	# TODO: copy the 3 lines of code from the body of the
         # ChatClient __init__() method here </font><font color="blue">
 	super().__init__(chat_room)
         self.client_name = client_name
         self.chat_room = chat_room
-</pre></font>
-
-<font color="grey"><pre>
-	# TODO: call the ChatClientGui's new_message() method to send the text
-        # from the entry field to the chat room </font><font color="blue">
-	self.new_message(message)
 </pre></font>
 
 <font color="grey"><pre>
@@ -218,6 +207,15 @@ class ChatClientGui(Observer):
 </pre></font>
 
 <font color="grey"><pre>
+    def callback(self, event):
+        ...
+	# TODO: call the ChatClientGui's new_message() method to send the text
+        # from the entry field to the chat room </font><font color="blue">
+	self.new_message(message)
+</pre></font>
+
+<font color="grey"><pre>
+def main():
     # TODO: create a ChatRoom instance and assign it to a variable named
     # `chat_host` </font><font color="blue">
     chat_host = ChatRoom()
@@ -241,6 +239,8 @@ class ChatRoomProxy(ChatRoom):
 </pre></font>
 
 <font color="grey"><pre>
+        def receive_loop():
+                        ...
 			# TODO: call the chat_client's update() method,
                         # passing the argument deserialized_msg </font><font color="blue">
 			chat_client.update(deserialized_msg)

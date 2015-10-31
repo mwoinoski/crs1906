@@ -1,5 +1,7 @@
 """
-subprocess_openssl.py - run multiple openssl processes
+subprocess_openssl.py - run multiple openssl processes.
+
+You must run this script from the command line so it can read a password.
 """
 
 import subprocess
@@ -11,9 +13,11 @@ def run_openssl(data, pw):
     """Use openssl to encrypt some data"""
     env = os.environ.copy()
     env['password'] = pw
+    print("About to write", data)
     proc = subprocess.Popen(
         ['openssl', 'enc', '-aes', '-pass', 'env:password'],
         env=env, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    print("Writing", data)
     proc.stdin.write(data)
     proc.stdin.flush()
     return proc
@@ -37,7 +41,9 @@ def raw_data():
 pw = getpass.getpass()  # prompts and reads without echoing input
 procs = []
 
+print("About to start")
 for data in raw_data():
+    print("About to call run_openssl with", data)
     proc = run_openssl(data, pw)
     procs.append(proc)
 

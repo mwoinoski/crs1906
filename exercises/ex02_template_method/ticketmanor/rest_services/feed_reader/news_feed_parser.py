@@ -5,7 +5,7 @@ Adapted from examples in "Learning Python Design Patterns Code"
 by Gennadiy Zlobin.
 
 Converted to Python 3 by running:
-    python PYTHON_HOME/Tools/Scripts/2to3.py -w news_parser.py
+    python PYTHON_HOME/Tools/Scripts/2to3.py -w news_feed_parser.py
 """
 
 from abc import ABCMeta, abstractmethod
@@ -18,7 +18,7 @@ from ticketmanor.rest_services.feed_reader import (
 
 
 # BONUS TODO: make NewsFeedParser an abstract base class
-# HINT: see slide 2-14
+# HINT: see slide 2-16
 class NewsFeedParser:
 
     # TODO: note the definition of the NewsFeedParser __init__() method.
@@ -32,12 +32,6 @@ class NewsFeedParser:
     # BONUS TODO: define get_url() as an abstract method
 
     # BONUS TODO: define parse_item() as an abstract method
-
-    # BONUS TODO 2: convert the parse_xml_content() function  into a
-    # generator function that yields a single parsed item each time it's
-    # called.
-    # HINT: delete the parse_content list completely. Instead of appending
-    # each parsed item to a list, yield it from the generator.
 
 
 # Run news_feed_parser to verify NewsFeedParser is abstract

@@ -99,7 +99,7 @@ def pi_async():
     futures = set()
 
     # TODO: write a `with` statement to use a ProcessPoolExecutor.
-    # with ThreadPoolExecutor(max_workers=4) as executor:
+    # with ThreadPoolExecutor(max_workers=ntasks) as executor:
     with ProcessPoolExecutor() as executor:
 
         # TODO: set up a `for` loop that executes `ntasks` times.

@@ -91,6 +91,7 @@ expected = [
 # TODO: copy the test_get_news_invalid_news_type() method from
 # test_rss_news_feed_parser.py and paste it here. Modify it to use the
 # nose.tools.raises decorator to verify that a FeedReaderException is raised.
+# HINT: see slide 3-22
 ...
 
 
@@ -139,26 +140,6 @@ def test_parse_content_max_items_2():
 
     for expected_result, actual_result in zip_longest(expected[:2], actual):
         assert expected_result == actual_result
-
-
-def test_parse_content_items_missing():
-    feed_reader = RssNewsFeedParser()
-
-    minimal_input = '<rss><item></item></rss>'
-    minimal_results = [
-        {
-            'title': '',
-            'link': '',
-            'date_time': '',
-            'image_thumbnail': '',
-            'image_banner': '',
-            'content': ''
-        }
-    ]
-
-    actual_results = feed_reader.parse_xml_content(minimal_input)
-
-    assert minimal_results == actual_results
 
 
 # Monkey patch RssNewsFeedParser.get_raw_content.

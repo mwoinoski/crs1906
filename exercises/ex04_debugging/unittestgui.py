@@ -526,6 +526,9 @@ def main(initialTestName=""):
 
 
 if __name__ == '__main__':
+    with (Path.cwd() / 'unittestgui.log').open('a') as f:
+        f.write('\n=============== Starting unittestgui.py ==============\n')
+
     if len(sys.argv) == 2:
         main(sys.argv[1])
     else:

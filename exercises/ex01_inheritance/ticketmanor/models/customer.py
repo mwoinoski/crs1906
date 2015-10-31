@@ -19,11 +19,12 @@ class Customer:
 
         # TODO: call the superclass __init__() method, passing the
         # appropriate arguments
-        # TODO: save any remaining arguments in data attributes of the
-        # current Customer object
+
 
         # TODO: for any argument that you passed to the superclass constructor,
         # delete its attribute assignment from the next block of statements.
+        # Save any remaining arguments in data attributes of the current
+        # Customer object.
         self.first_name = first_name
         self.last_name = last_name
         self.email = email

@@ -70,7 +70,6 @@ class AllNewsFeedReader:
                 ...
 
         # TODO: initialize the `all_news` variable with an empty dictionary
-        # (no code change required)
         all_news = ...
 
         # TODO: use a `for` to loop over the result of a call to

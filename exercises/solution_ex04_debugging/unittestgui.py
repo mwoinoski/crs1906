@@ -42,11 +42,9 @@ from tkinter import filedialog
 from tkinter import simpledialog
 
 # TODO: import the logging package
-# HINT: see slide 4-9
 import logging
 
 # TODO: import the logging.config package
-# HINT: see slide 4-15
 import logging.config
 
 # TODO: read the logging config from the file logging.conf

@@ -48,7 +48,7 @@ class VenueDao(BaseDao):
     # TODO: Note that the following methods are the same as the methods that
     # you pasted into the BaseDao class.
 
-    # TODO: delete the methods below this comment.
+    # TODO: delete all the methods below this comment.
 
     # def get(self, id_value, db_session):
     #     entity = db_session.query(Venue)\

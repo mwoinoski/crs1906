@@ -25,7 +25,7 @@ class ChatServer(BaseRequestHandler): </font><font color="blue">
                     for socket in ChatServer.chat_sockets:
                         if socket != self.request:
                             socket.send(msg)
-        except ConnectionError: 
+        except ConnectionError:
             pass
         finally: </font><font color="blue">
             with ChatServer.chat_sockets_lock: </font><font color="grey">
@@ -44,16 +44,56 @@ class ChatServer(BaseRequestHandler): </font><font color="blue">
 
 <h3>encrypt.py</h3>
 
-<font color="grey"><pre># TODO: import Process from the multiprocessing module</font>
-<font color="blue">from multiprocessing import Process</pre></font>
+<font color="grey"><pre>
+# TODO: import the subprocess module </font><font color="blue">
+import subprocess
+</pre></font>
 
-<font color="grey"><pre>    for file in sys.argv[1:]:
-        # TODO: create a Process instance to execute the run_openssl() function</font><font color="blue">
-        child_process = Process(target=run_openssl,
-                                args=(file, env))</pre></font>
+<font color="grey"><pre>
+def run_openssl(file, environ):
+    ...
+                # TODO: call subprocess.Popen() to launch a process running
+                # openssl to encrypt the input file.
+                # For the `stdin` argument, pass in_file
+                # For the `stdout` argument, pass out_file
+                # Assign the returned Popen instance to a local variable.  </font><font color="blue">
+                proc = subprocess.Popen(
+                    ['openssl', 'enc', '-e', '-aes256', '-pass', 'env:password'],
+                    env=environ, stdin=in_file, stdout=out_file)
+</pre></font>
 
-<font color="grey"><pre>        # TODO: start the Process instance</font>
-<font color="blue">        child_process.start()</pre></font>
+<font color="grey"><pre>
+                # TODO: return the Popen instance </font><font color="blue">
+                return proc
+</pre></font>
+
+<font color="grey"><pre>
+    # TODO: initialize a local variable named `procs` with an empty list </font><font color="blue">
+    procs = []
+</pre></font>
+
+<font color="grey"><pre>
+    for file in sys.argv[1:]:
+        # TODO: Call run_openssl(), passing arguments file and environ
+        # Save the returned Popen instance in a local variable.  </font><font color="blue">
+        proc = run_openssl(file, environ)
+</pre></font>
+
+<font color="grey"><pre>
+        # TODO: append the Popen instance to the `procs` list </font><font color="blue">
+        procs.append(proc)
+</pre></font>
+
+<font color="grey"><pre>
+    # TODO: loop over all the Popen instances in the `procs` list </font><font color="blue">
+    for proc in procs:
+</pre></font>
+
+<font color="grey"><pre>
+        # TODO: for each Popen instance, call the communicate() method to wait
+        # for the process to complete.  </font><font color="blue">
+        proc.communicate()
+</pre></font>
 
 <h2>Hints for Exercise 8.1 Bonus (Write a multithreaded RSS feed reader)</h2>
 

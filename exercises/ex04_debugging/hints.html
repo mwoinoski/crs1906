@@ -77,6 +77,14 @@ Edit logging.conf and change the logging level of the unittestgui logger to WARN
 level=WARNING
 </pre></font>
 
+Modify the file_formatter configuration to add a timestamp to log messages.
+
+<font color="grey"><pre>
+[formatter_file_formatter] </font><font color="blue">
+format=%(asctime)s|%(name)s|%(levelname)s|%(message)s
+</pre></font>
+
+
 <h3>asteroids.py</h3>
 
 On line 223, the call to <tt>intersect()</tt> is passing the argument <tt>gameover</tt> 

@@ -71,7 +71,7 @@
 <font color="grey"><pre>
 Replace the ProcessPoolExecutor with a ThreadPoolExecuter: </font><font color="blue">
 
-    with ThreadPoolExecutor(max_workers=4) as executor:  
+    with ThreadPoolExecutor(max_workers=ntasks) as executor:  
 </pre></font>
 
 
@@ -121,8 +121,7 @@ class AllNewsFeedReader:
 </pre></font>
 
 <font color="grey"><pre>
-        # TODO: initialize the `all_news` variable with an empty dictionary
-        # (no code change required) </font><font color="blue">
+        # TODO: initialize the `all_news` variable with an empty dictionary </font><font color="blue">
         all_news = {}
 </pre></font>
 
