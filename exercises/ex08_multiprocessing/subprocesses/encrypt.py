@@ -45,7 +45,7 @@ def main():
     for file in sys.argv[1:]:
         # TODO: create a Process instance to execute the run_openssl() function
         # HINT: remember to pass file and env to the Process
-        # HINT: see slide 9-38
+        # HINT: see slide 8-31
         ...
 
         # TODO: start the Process instance
