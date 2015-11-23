@@ -7,7 +7,7 @@ from threading import Thread
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from time import sleep
-from .feed_reader import (
+from ticketmanor.rest_services.feed_reader.feed_reader import (
     FeedReader,
 )
 
@@ -24,11 +24,11 @@ class AllNewsFeedReader:
         If max_items > 0, return no more than max_items news items.
         Otherwise, return all news items.
         """
-        music_news = self.worker('music', max_items)
+        concert_news = self.worker('concerts', max_items)
         sports_news = self.worker('sports', max_items)
         movie_news = self.worker('movies', max_items)
         return {
-            'music': music_news,
+            'concerts': concert_news,
             'sports': sports_news,
             'movie': movie_news
         }
