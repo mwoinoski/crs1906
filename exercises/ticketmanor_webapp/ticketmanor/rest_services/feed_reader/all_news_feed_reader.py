@@ -28,7 +28,7 @@ class AllNewsFeedReader:
         sports_news = self.worker('sports', max_items)
         movie_news = self.worker('movies', max_items)
         return {
-            'concerts': concert_news,
+            'music': concert_news,
             'sports': sports_news,
             'movie': movie_news
         }
