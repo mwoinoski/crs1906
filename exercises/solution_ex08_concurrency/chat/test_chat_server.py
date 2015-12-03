@@ -37,12 +37,17 @@ def test_three_chat_clients():
 
     # Send chat messages to the server from each "client"
     chat_client1.add_message('client1', 'message 1')
+    time.sleep(0.001)
     chat_client2.add_message('client2', 'message 2')
+    time.sleep(0.001)
     chat_client3.add_message('client3', 'message 3')
+    time.sleep(0.001)
     chat_client3.add_message('client3', 'message 4')
+    time.sleep(0.001)
     chat_client2.add_message('client2', 'message 5')
+    time.sleep(0.001)
     chat_client1.add_message('client1', 'message 6')
-    time.sleep(0.2)
+    time.sleep(0.001)
 
     chat_client1.shutdown()
     chat_client2.shutdown()
