@@ -2,7 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beda3a6f-337e-4804-893b-33f6893268cb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch01_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch01_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch03_examples/person.py" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/person.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch03_examples/person_buggy.py" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/person_buggy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch05_examples/string_cat_demo.py" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/string_cat_demo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch07_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch07_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch09_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch09_examples/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex01_inheritance/tests/models/test_person.py" afterPath="$PROJECT_DIR$/../ex01_inheritance/tests/models/test_person.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_with_mocks/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex03_with_mocks/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex05_performance/.idea/misc.xml" afterPath="$PROJECT_DIR$/../ex05_performance/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex05_performance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex05_performance/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex06_design_patterns/.idea/misc.xml" afterPath="$PROJECT_DIR$/../ex06_design_patterns/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex06_design_patterns/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex06_design_patterns/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex09_rest_services/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex09_rest_services/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/tests/models/test_person.py" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/tests/models/test_person.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/misc.xml" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex04_debugging/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex04_debugging/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex05_performance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex05_performance/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_client.py" afterPath="$PROJECT_DIR$/chat_client.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_gui_client.py" afterPath="$PROJECT_DIR$/chat_gui_client.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_room.py" afterPath="$PROJECT_DIR$/chat_room.py" />
@@ -120,8 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -142,11 +173,13 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../solution_ex07_distributing" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -154,8 +187,9 @@
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <console-settings sdk-home="C:\python\python-3.4\python.exe">
+      <console-settings module-name="solution_ex06_design_patterns" sdk-home="C:\python\python-3.4\python.exe">
         <option name="mySdkHome" value="C:\python\python-3.4\python.exe" />
+        <option name="myModuleName" value="solution_ex06_design_patterns" />
       </console-settings>
     </option>
     <option name="myIpythonEnabled" value="false" />
@@ -369,12 +403,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="165" y="3" width="908" height="981" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25632185" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25632185" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958803" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286219" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278302" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -399,6 +433,42 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/observer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat_room.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#168#196#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat_gui_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="e#135#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/observer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -678,6 +748,7 @@
     </entry>
   </component>
   <component name="hg4idea.settings">
+    <option name="CHECK_INCOMING_OUTGOING" value="true" />
     <option name="RECENT_HG_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
 </project>

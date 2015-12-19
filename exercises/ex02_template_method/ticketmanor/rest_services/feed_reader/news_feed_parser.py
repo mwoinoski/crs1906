@@ -31,6 +31,7 @@ class NewsFeedParser:
 
     # BONUS TODO: define get_url() as an abstract method
 
+
     # BONUS TODO: define parse_item() as an abstract method
 
 

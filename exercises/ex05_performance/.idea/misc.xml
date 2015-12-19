@@ -27,14 +27,6 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.4.3 (C:\python\python-3.4\python.exe)" project-jdk-type="Python SDK" />
-  <component name="PyConsoleOptionsProvider">
-    <option name="myPythonConsoleState">
-      <console-settings sdk-home="C:\python\python-3.4\python.exe">
-        <option name="mySdkHome" value="C:\python\python-3.4\python.exe" />
-      </console-settings>
-    </option>
-    <option name="myIpythonEnabled" value="false" />
-  </component>
   <component name="masterDetails">
     <states>
       <state key="ScopeChooserConfigurable.UI">

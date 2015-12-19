@@ -16,11 +16,6 @@ from ticketmanor.models.address import Address
 class PersonTestCase(unittest.TestCase):
     """Unit tests for Person"""
 
-    def test_eq_new_instances_eq(self):
-        p1 = Person(None, None, None)
-        p2 = Person(None, None, None)
-        self.assertEqual(p1, p2)
-
     def test_eq_instances_eq(self):
         p1 = self.create_person()
         p2 = self.create_person()

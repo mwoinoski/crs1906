@@ -5,6 +5,9 @@ from chapter 5
 
 from simple_profiler import measure
 
+##############################################################################
+# String concatenation examples
+##############################################################################
 
 @measure
 def to_lower_string_concatenation(lines):
@@ -33,11 +36,28 @@ def to_lower_appending_strings_to_list(lines):
     return ''.join(r)
 
 
+##############################################################################
+# Examples of passing data aggregates to functions
+##############################################################################
+
+@measure
+def to_lower_one_call(lines):
+    """One call to to_lower(): fast"""
+    return to_lower_append_all_lines_in_function(lines)
+
+
+def to_lower_append_all_lines_in_function(lines):
+    r = []
+    for line in lines:
+        r.append(line.lower())
+    return ''.join(r)
+
+
 @measure
 def to_lower_many_calls(lines):
     """Many calls to to_lower_append_line_to_buffer(): slow
 
-    Compare this method's performance with to_lower_appending_strings_to_list(),
+    Compare this method's performance with to_lower_append_all_lines_in_function(),
     which uses a similar technique but avoids extra method calls"""
     r = []
     for line in input_lines:
@@ -57,8 +77,11 @@ if __name__ == '__main__':
 
     input_lines = all_lines[1:10000]
 
+    print("String concatenation demo:")
     to_lower_string_concatenation(input_lines)
     to_lower_joining_individual_strings(input_lines)
     to_lower_appending_strings_to_list(input_lines)
-    print()
+
+    print("\nFunction call overhead demo:")
+    to_lower_one_call(input_lines)
     to_lower_many_calls(input_lines)
