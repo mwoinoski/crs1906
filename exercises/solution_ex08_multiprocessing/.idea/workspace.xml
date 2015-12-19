@@ -57,7 +57,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/news_service.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/news_service.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/user_service.py" />
     </list>
-    <ignored path="solution_ex09_multiprocessing.iws" />
+    <ignored path="solution_ex08_multiprocessing.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,7 +72,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="solution_ex09_multiprocessing" />
+    <favorites_list name="solution_ex08_multiprocessing" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -118,12 +118,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../solution_ex09_multiprocessing/subprocesses/encrypt.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_multiprocessing/subprocesses/decrypt.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_multiprocessing/ticketmanor/rest_services/feed_reader/all_news_feed_reader_with_queues.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_multiprocessing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_multiprocessing/chat/chat_server.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_multiprocessing/pi_monte_carlo/pi.py" />
+        <option value="$PROJECT_DIR$/subprocesses/encrypt.py" />
+        <option value="$PROJECT_DIR$/subprocesses/decrypt.py" />
+        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader_with_queues.py" />
+        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
+        <option value="$PROJECT_DIR$/chat/chat_server.py" />
+        <option value="$PROJECT_DIR$/pi_monte_carlo/pi.py" />
       </list>
     </option>
   </component>
@@ -210,12 +210,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../solution_ex09_rest_services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../ex09_multiprocessing/pi_monte_carlo/pi.py" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/pi_monte_carlo/pi.py" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -229,8 +229,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\crs1906\exercises\solution_ex09_multiprocessing\ticketmanor\rest_services\feed_reader" />
-      <recent name="C:\crs1906\exercises\solution_ex09_multiprocessing\subprocesses" />
+      <recent name="C:\crs1906\exercises\solution_ex08_multiprocessing\ticketmanor\rest_services\feed_reader" />
+      <recent name="C:\crs1906\exercises\solution_ex08_multiprocessing\subprocesses" />
     </key>
   </component>
   <component name="RunManager" selected="Python.Run pi">
@@ -279,7 +279,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex09_multiprocessing" />
+      <module name="solution_ex08_multiprocessing" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -294,7 +294,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex09_multiprocessing" />
+      <module name="solution_ex08_multiprocessing" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -313,7 +313,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex09_multiprocessing" />
+      <module name="solution_ex08_multiprocessing" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -332,7 +332,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex09_multiprocessing" />
+      <module name="solution_ex08_multiprocessing" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -353,7 +353,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex09_multiprocessing" />
+      <module name="solution_ex08_multiprocessing" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -375,7 +375,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex09_multiprocessing" />
+      <module name="solution_ex08_multiprocessing" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />

@@ -9,6 +9,7 @@ import atexit
 from socketserver import BaseRequestHandler, ThreadingTCPServer
 
 
+# TODO: determine if the code in the ChatServer class is thread-safe
 class ChatServer(BaseRequestHandler):
     """
     ChatServer instances are created by ThreadingTCPServer.

@@ -46,7 +46,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_service/test_rest_server.py" afterPath="$PROJECT_DIR$/user_service/test_rest_server.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" />
     </list>
-    <ignored path="solution_ex10_rest_services.iws" />
+    <ignored path="solution_ex09_rest_services.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,7 +61,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="solution_ex10_rest_services" />
+    <favorites_list name="solution_ex09_rest_services" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -97,11 +97,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../solution_ex10_rest_services/test_user_rest_service_xml.py" />
-        <option value="$PROJECT_DIR$/../solution_ex10_rest_services/user_service/rest_server_dao.py" />
-        <option value="$PROJECT_DIR$/../solution_ex10_rest_services/user_service/test_rest_server.py" />
-        <option value="$PROJECT_DIR$/../solution_ex10_rest_services/test_user_rest_service_json.py" />
-        <option value="$PROJECT_DIR$/../solution_ex10_rest_services/user_service/rest_server.py" />
+        <option value="$PROJECT_DIR$/test_user_rest_service_xml.py" />
+        <option value="$PROJECT_DIR$/user_service/rest_server_dao.py" />
+        <option value="$PROJECT_DIR$/user_service/test_rest_server.py" />
+        <option value="$PROJECT_DIR$/test_user_rest_service_json.py" />
+        <option value="$PROJECT_DIR$/user_service/rest_server.py" />
       </list>
     </option>
   </component>
@@ -180,7 +180,7 @@
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../ex10_rest_services/user_service/rest_server.py" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/user_service/rest_server.py" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -220,7 +220,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex10_rest_services" />
+      <module name="solution_ex09_rest_services" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -235,7 +235,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex10_rest_services" />
+      <module name="solution_ex09_rest_services" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -254,7 +254,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex10_rest_services" />
+      <module name="solution_ex09_rest_services" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -273,7 +273,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex10_rest_services" />
+      <module name="solution_ex09_rest_services" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -294,7 +294,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex10_rest_services" />
+      <module name="solution_ex09_rest_services" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -316,7 +316,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex10_rest_services" />
+      <module name="solution_ex09_rest_services" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />

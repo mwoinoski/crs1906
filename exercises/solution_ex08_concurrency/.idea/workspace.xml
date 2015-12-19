@@ -2,41 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45d2b48b-5e46-4f65-9aed-10915c1986b5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch05_examples/mandelbrot.prof" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/mandelbrot.prof" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch01_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch01_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch03_examples/person.py" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch03_examples/person_buggy.py" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/person_buggy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch04_examples/simple_crypt.py" afterPath="$PROJECT_DIR$/../../examples/ch04_examples/simple_crypt.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch05_examples/string_cat_demo.py" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/string_cat_demo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch06_examples/observer.py" afterPath="$PROJECT_DIR$/../../examples/ch06_examples/observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex01_inheritance/hints.html" afterPath="$PROJECT_DIR$/../ex01_inheritance/hints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/ex02_template_method.iml" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/ex02_template_method.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/misc.xml" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_concurrency/chat/test_chat_server.py" afterPath="$PROJECT_DIR$/../ex08_concurrency/chat/test_chat_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/persistence/person_dao.py" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/persistence/person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_user_service.py" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/feed_reader.py" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex04_debugging/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex04_debugging/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex04_debugging/asteroids.py" afterPath="$PROJECT_DIR$/../solution_ex04_debugging/asteroids.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex04_debugging/logging.conf" afterPath="$PROJECT_DIR$/../solution_ex04_debugging/logging.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex05_performance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex05_performance/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_concurrency/chat/chat_server.py" afterPath="$PROJECT_DIR$/../ex08_concurrency/chat/chat_server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_concurrency/hints.html" afterPath="$PROJECT_DIR$/../ex08_concurrency/hints.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex09_rest_services/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex09_rest_services/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat/chat_server.py" afterPath="$PROJECT_DIR$/chat/chat_server.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat/test_chat_server.py" afterPath="$PROJECT_DIR$/chat/test_chat_server.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/development.ini" afterPath="$PROJECT_DIR$/development.ini" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production.ini" afterPath="$PROJECT_DIR$/production.ini" />
@@ -48,10 +19,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/news/all_news.html" afterPath="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/news/all_news.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ticketmanor_webapp/tests/rest_services/test_event_service_integration.py" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/tests/rest_services/test_event_service_integration.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" />
     </list>
-    <ignored path="solution_ex09_concurrency.iws" />
+    <ignored path="solution_ex08_concurrency.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,7 +37,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="solution_ex09_concurrency" />
+    <favorites_list name="solution_ex08_concurrency" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
@@ -142,27 +113,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/rest_services/feed_reader/feed_reader.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_concurrency/chat/chat_client.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_concurrency/chat/observer.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_concurrency/chat/test_chat_server.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_concurrency/chat/chat_room.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_concurrency/chat/chat_room_proxy.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/rest_services/user_service.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_concurrency/chat/chat_server.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_concurrency/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_concurrency/subprocesses/decrypt.py" />
-        <option value="$PROJECT_DIR$/../solution_ex09_concurrency/subprocesses/encrypt.py" />
+        <option value="$PROJECT_DIR$/chat/chat_client.py" />
+        <option value="$PROJECT_DIR$/chat/chat_room.py" />
+        <option value="$PROJECT_DIR$/chat/chat_room_proxy.py" />
+        <option value="$PROJECT_DIR$/chat/chat_server.py" />
+        <option value="$PROJECT_DIR$/chat/chat_server.py" />
+        <option value="$PROJECT_DIR$/chat/observer.py" />
+        <option value="$PROJECT_DIR$/chat/test_chat_server.py" />
         <option value="$PROJECT_DIR$/subprocesses/encrypt.py" />
         <option value="$PROJECT_DIR$/subprocesses/decrypt.py" />
-        <option value="$PROJECT_DIR$/chat/test_chat_server.py" />
+        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
+        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/feed_reader.py" />
+        <option value="$PROJECT_DIR$/ticketmanor/rest_services/user_service.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1298" />
+    <option name="x" value="5" />
+    <option name="width" value="1004" />
     <option name="height" value="913" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -292,8 +260,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -364,23 +332,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="test_chat_server" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chat" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex08_concurrency" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chat/test_chat_server.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -392,7 +343,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex09_concurrency" />
+      <module name="solution_ex08_concurrency" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -407,7 +358,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex09_concurrency" />
+      <module name="solution_ex08_concurrency" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -426,7 +377,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex09_concurrency" />
+      <module name="solution_ex08_concurrency" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -445,7 +396,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex09_concurrency" />
+      <module name="solution_ex08_concurrency" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -466,7 +417,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex09_concurrency" />
+      <module name="solution_ex08_concurrency" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -488,7 +439,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="solution_ex09_concurrency" />
+      <module name="solution_ex08_concurrency" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -527,17 +478,15 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Python.Run chat_server" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Run chat_client" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test_chat_server" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_chat_server" />
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_chat_server" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Run chat_server" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Run chat_client" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Python.Run chat_server" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test_chat_server" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Run chat_client" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Run chat_client" />
       </list>
     </recent_temporary>
   </component>
@@ -555,15 +504,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_chat_server - 2015.12.02 at 19h 08m 10s.xml">
-      <configuration name="Unittests in test_chat_server" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_chat_server - 2015.12.02 at 19h 08m 22s.xml">
-      <configuration name="Unittests in test_chat_server" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_chat_server - 2015.12.02 at 19h 08m 30s.xml">
-      <configuration name="Unittests in test_chat_server" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test_chat_server - 2015.12.02 at 19h 08m 33s.xml">
       <configuration name="Unittests in test_chat_server" configurationId="tests" />
     </history-entry>
@@ -585,17 +525,26 @@
     <history-entry file="Unittests_in_test_chat_server - 2015.12.03 at 12h 06m 50s.xml">
       <configuration name="Unittests in test_chat_server" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test_chat_server - 2015.12.18 at 19h 48m 07s.xml">
+      <configuration name="Unittests in test_chat_server" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_chat_server - 2015.12.18 at 20h 09m 25s.xml">
+      <configuration name="Unittests in test_chat_server" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_chat_server - 2015.12.18 at 20h 28m 25s.xml">
+      <configuration name="Unittests in test_chat_server" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1298" height="913" extended-state="6" />
-    <editor active="false" />
+    <frame x="5" y="0" width="1004" height="913" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24939856" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32505175" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36107987" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23497267" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.368758" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1034,14 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/test_chat_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/chat_room.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1066,6 +1007,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chat/test_chat_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chat/chat_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1078,6 +1027,7 @@
     </entry>
   </component>
   <component name="hg4idea.settings">
+    <option name="CHECK_INCOMING_OUTGOING" value="true" />
     <option name="RECENT_HG_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
 </project>

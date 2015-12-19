@@ -9,6 +9,7 @@
 <h3>chat_server.py</h3>
 
 <font color="grey"><pre>
+# TODO: determine if the code in the ChatServer class is thread-safe
 class ChatServer(BaseRequestHandler): </font><font color="blue">
     chat_sockets_lock = Lock() </font><font color="grey">
     chat_sockets = set()
