@@ -35,6 +35,9 @@ class NewsFeedParser:
     # BONUS TODO: define parse_item() as an abstract method
 
 
+    # BONUS TODO: define get_dummy_news() as an abstract method
+
+
 # Run news_feed_parser to verify NewsFeedParser is abstract
 if __name__ == '__main__':
     try:

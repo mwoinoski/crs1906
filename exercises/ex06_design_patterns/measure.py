@@ -40,7 +40,8 @@ def measure(func):
     if func_name not in _function_stats:
         _function_stats[func_name] = [0, 0]
 
-    @wraps(func)  # func is a reference to the decorated function
+    @wraps(func)  # For details of @wraps decorator, see note at end of file.
+    # `func` is a reference to the decorated function
     def wrapper(*args, **kwargs):
         """wrapper() will be called when the decorated function is called"""
         start = time.process_time()  # get initial timestamp
@@ -70,3 +71,26 @@ def get_function_stats():
     return [(name, calls, total_time/calls if calls > 0 else 0)
             for name, (calls, total_time) in sorted(_function_stats.items(),
                                                     key=lambda x: x[0])]
+
+'''
+@wraps is a standard decorator that can be used on a custom decorator's
+wrapper function. @wraps solves the problem that a function's __name__
+and __doc__ attributes appear to be set incorrectly when that function is
+decorated. For example, if the function check() is decorated with the
+@measure decorator defined in this file:
+
+    @measure
+    def check(self, level=0):
+        """Puzzle level 0"""
+        ...
+
+Without @wraps, the __name__ and __doc__ attributes get values from the
+decorator's wrapper function:
+    print('Name:', check.__name__)       # Name: wrapper
+    print('Doc string:', check.__doc__)  # Doc string: wrapper() will be ...
+
+With @wraps, the __name__ and __doc__ attributes get values from the
+decorated function, not the wrapper function:
+    print('Name:', check.__name__)       # Name: check
+    print('Doc string:', check.__doc__)  # Doc string: Puzzle level 0
+'''

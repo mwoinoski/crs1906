@@ -10,7 +10,6 @@ from itertools import zip_longest
 from ticketmanor.rest_services.feed_reader.feed_reader import FeedReader
 from ticketmanor.rest_services.feed_reader import FeedReaderException
 from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import (
-    NewsFeedParser,
     RssNewsFeedParser,
 )
 

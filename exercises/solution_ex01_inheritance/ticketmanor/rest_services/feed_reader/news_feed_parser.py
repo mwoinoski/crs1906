@@ -51,8 +51,12 @@ class NewsFeedParser(metaclass=ABCMeta):
     # This method could be static here in the base class, but we'll leave it
     # defined as an instance method so subclasses can override it if needed.
     # noinspection PyMethodMayBeStatic
-    def get_raw_content(self, url):
-        return urllib.request.urlopen(url).read()
+    def get_raw_content(self, url, news_type=None):
+        # if url is not accessible, return dummy content
+        try:
+            return urllib.request.urlopen(url, timeout=1).read()
+        except urllib.request.URLError:
+            return self.get_dummy_news(url, news_type)
 
     def parse_xml_content(self, raw_content, max_items=0):
         """
@@ -81,3 +85,7 @@ class NewsFeedParser(metaclass=ABCMeta):
     @abstractmethod
     def parse_item(self, node):
         pass
+
+    def get_dummy_news(self, url, news_type):
+        """Subclass can override this method to provide dummy news"""
+        raise urllib.request.URLError("can't open connection to " + url)

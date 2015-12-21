@@ -21,7 +21,6 @@ class TestRssNewsFeedParser(TestCase):
 	feed_reader = RssNewsFeedParser()
 </pre></font>
 
-
 <font color="grey"><pre>
 	# TODO:
         # 1. call the feed reader's get_news() method, passing 'music' as the
@@ -30,22 +29,11 @@ class TestRssNewsFeedParser(TestCase):
 	actual = feed_reader.get_news('music')
 </pre></font>
 
-
 <font color="grey"><pre>
-	# TODO: add a method call that asserts the length of the returned list
-        # is equal to 3 </font><font color="blue">
-	self.assertEqual(3, len(actual))
+        # TODO: call a method that asserts the list named `expected` is
+        # equal to the list named `actual` </font><font color="blue">
+        self.assertEqual(expected, actual)
 </pre></font>
-
-
-<font color="grey"><pre>
-	# TODO: loop over the list returned by get_news(). For each item on
-        # the list, call an assert method that verifies the item is equal to
-        # the corresponding item on the list named "expected".  </font><font color="blue">
-	for i in range(3):
-            self.assertEqual(expected[i], actual[i])
-</pre></font>
-
 
 <font color="grey"><pre>
     # TODO: Define a test method named test_get_news_music_max_items_1 </font><font color="blue">
@@ -56,7 +44,6 @@ class TestRssNewsFeedParser(TestCase):
 	feed_reader = RssNewsFeedParser()
 </pre></font>
 
-
 <font color="grey"><pre>
 	# TODO:
         # 1. call the feed reader's get_news() method, passing
@@ -65,14 +52,17 @@ class TestRssNewsFeedParser(TestCase):
 	actual = feed_reader.get_news('music', max_items=1)
 </pre></font>
 
-
 <font color="grey"><pre>
-	# TODO: verify that the returned list has length 1 and that the
-        # returned news item is equal to the first item on the "expected" list.  </font><font color="blue">
-	self.assertEqual(1, len(actual))
-        self.assertEqual(expected[0], actual[0])
+        # TODO: call a method that asserts the returned list has length 1
+        # HINT: use the built-in function len() </font><font color="blue">
+        self.assertEqual(1, len(actual))
 </pre></font>
 
+<font color="grey"><pre>
+        # TODO: verify that the returned news item is equal to the first item
+        # on the `expected` list. </font><font color="blue">
+        self.assertEqual(expected[0], actual[0])
+</pre></font>
 
 <font color="grey"><pre>
     # TODO: Define a test method named test_get_news_invalid_news_type </font><font color="blue">
@@ -83,7 +73,6 @@ class TestRssNewsFeedParser(TestCase):
 	feed_reader = RssNewsFeedParser()
 </pre></font>
 
-
 <font color="grey"><pre>
 	# TODO: Call an assert method to verify that if you call the
         # feed reader's get_news() method with an invalid news type argument
@@ -91,7 +80,6 @@ class TestRssNewsFeedParser(TestCase):
 	with self.assertRaises(FeedReaderException):
             feed_reader.get_news('pluto')
 </pre></font>
-
 
 <font color="grey"><pre>
     # TODO: call unittest.main() </font><font color="blue">
@@ -105,18 +93,14 @@ class TestRssNewsFeedParser(TestCase):
 # 1. Copy the test_get_news_music() and test_get_news_music_max_items_1()
 #    methods from test_rss_news_feed_parser.py and paste them here.
 # 2. Delete the "self" argument from the copied functions.
-# 3. Replace calls to self.assertEqual() with the assert statement.
-</font><font color="blue">
+# 3. Replace calls to self.assertEqual() with the assert statement. </font><font color="blue">
 
 def test_get_news_music():
     feed_reader = RssNewsFeedParser()
 
     actual = feed_reader.get_news('music')
 
-    assert 3 == len(actual)
-
-    for expected_result, actual_result in zip_longest(expected, actual):
-        assert expected_result == actual_result
+    assert expected == actual
 
 
 def test_get_news_music_max_items_1():
@@ -127,7 +111,6 @@ def test_get_news_music_max_items_1():
     assert 1 == len(actual)
     assert expected[0] == actual[0]
 </pre></font>
-
 
 <font color="grey"><pre>
 # TODO: copy the test_get_news_invalid_news_type() method from

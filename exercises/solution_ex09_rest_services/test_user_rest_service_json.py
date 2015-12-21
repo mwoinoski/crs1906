@@ -17,7 +17,6 @@ features that make the tests much more robust and reliable.
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
-import json
 import requests
 
 # if you want the test cases to run in a different order, assign a new function

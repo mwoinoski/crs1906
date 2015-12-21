@@ -16,6 +16,7 @@ from ticketmanor.util.utils import html_unescape
 from ticketmanor.rest_services.feed_reader.news_feed_parser import (
     NewsFeedParser,
 )
+from ticketmanor.rest_services.feed_reader.rss_dummy_news import RssDummyNews
 
 
 # TODO: make RssNewsFeedParser a subclass of NewsFeedParser
@@ -42,6 +43,13 @@ class RssNewsFeedParser(NewsFeedParser):
 
     # TODO: cut the get_raw_content() method out of this class and paste it
     # into the NewsFeedParser class.
+
+    # TODO: note that get_dummy_news() is a subclass hook method that will be
+    # called by the superclass template method.
+    # (no code changes required)
+    def get_dummy_news(self, url, news_type):
+        """Called if the URL can't be opened"""
+        return RssDummyNews.get_news(news_type)
 
     # TODO: cut the parse_xml_content() method out of this class and paste it
     # into the NewsFeedParser class.

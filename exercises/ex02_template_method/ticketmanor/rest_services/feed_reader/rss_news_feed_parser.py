@@ -18,6 +18,7 @@ from ticketmanor.rest_services.feed_reader.news_feed_parser import (
     NewsType,
     FeedReaderException,
 )
+from ticketmanor.rest_services.feed_reader.rss_dummy_news import RssDummyNews
 
 
 # TODO: make RssNewsFeedParser a subclass of NewsFeedParser
@@ -71,17 +72,26 @@ class RssNewsFeedParser:
 
     # TODO: cut the get_raw_content() method out of this class and paste it
     # into the NewsFeedParser class.
-    # HINT: Be sure to delete get_raw_content() from this file after pasting
-    # it into news_feed_parser.py.
-    def get_raw_content(self, url):
+    def get_raw_content(self, url, news_type=None):
         # TODO: note that get_raw_content() is a generic superclass method that
         # will be called by the superclass template method.
-        return urllib.request.urlopen(url).read()
+        try:
+            return urllib.request.urlopen(url, timeout=1).read()
+        except urllib.request.URLError:
+            # TODO: note the call to the subclass hook method get_dummy_news(),
+            # which returns dummy content if the URL is not accessible.
+            # (no code changes required)
+            return self.get_dummy_news(url, news_type)
+
+    # TODO: note that get_dummy_news() is a subclass hook method that will be
+    # called by the superclass template method.
+    # (no code changes required)
+    def get_dummy_news(self, url, news_type):
+        """Called if the URL can't be opened"""
+        return RssDummyNews.get_news(news_type)
 
     # TODO: cut the parse_xml_content() method out of this class and paste it
     # into the NewsFeedParser class.
-    # HINT: Be sure to delete parse_xml_content() from this file after pasting
-    # it into news_feed_parser.py.
     def parse_xml_content(self, raw_content, max_items=0):
         # TODO: note that parse_xml_content() is a generic superclass method
         # that will be called by the superclass template method.

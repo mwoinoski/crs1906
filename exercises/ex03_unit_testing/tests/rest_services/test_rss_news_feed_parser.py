@@ -2,18 +2,17 @@
 Unit tests for RssNewsFeedParser class.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
-
 import unittest
 from unittest import TestCase, skip
-from itertools import zip_longest
 from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import (
     RssNewsFeedParser,
 )
 from ticketmanor.rest_services.feed_reader import FeedReaderException
 
-# TODO: note the value of the xml_input variable. This is a simulated XML RSS
-# news feed that will be used as input when testing AtomNewsFeedParser methods.
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+
+# TODO: note the value of the `xml_input` variable. This is a simulated XML RSS
+# news feed that will be used as input when testing RssNewsFeedParser methods.
 # (no code changes required)
 
 xml_input = \
@@ -51,10 +50,11 @@ xml_input = \
         '</item>' \
     '</rss>'
 
-# TODO: note the value of the "expected" variable. This is the expected result
-# of parsing the RSS XML news feed in the xml_input variable. You'll reference
-# "expected" in your test cases.
+# TODO: note the value of the `expected` variable. This is the expected result
+# of parsing the RSS XML news feed in the `xml_input` variable. You'll
+# reference `expected` in your test cases.
 # (no code changes required)
+
 expected = [
     {
         'title': 'The Othello of Soul Music - Wall Street Journal',
@@ -100,14 +100,9 @@ class TestRssNewsFeedParser:
         # 2. save the list returned by the method in a local variable
         ...
 
-        # TODO: add a method call that asserts the length of the returned list
-        # is equal to 3
+        # TODO: call a method that asserts the list named `expected` is
+        # equal to the list named `actual`
         # HINT: see slide 3-10
-        ...
-
-        # TODO: loop over the list returned by get_news(). For each item on
-        # the list, call an assert method that verifies the item is equal to
-        # the corresponding item on the list named "expected".
         ...
 
     # TODO: Define a test method named test_get_news_music_max_items_1
@@ -123,8 +118,12 @@ class TestRssNewsFeedParser:
         # 2. save the list returned by the method in a local variable
         ...
 
-        # TODO: verify that the returned list has length 1 and that the
-        # returned news item is equal to the first item on the "expected" list.
+        # TODO: call a method that asserts the returned list has length 1
+        # HINT: use the built-in function len()
+        ...
+
+        # TODO: verify that the returned news item is equal to the first item
+        # on the `expected` list.
         ...
 
     # TODO: Define a test method named test_get_news_invalid_news_type
@@ -151,51 +150,64 @@ class TestRssNewsFeedParser:
 
         actual = feed_reader.get_news('music')
 
-        # By using itertools.zip_longest(), assertEqual() will eventually fail
-        # if the lists are not the same length
-        for expected_result, actual_result in zip_longest(expected, actual):
-            self.assertEqual(expected_result, actual_result)
+        self.assertEqual(expected, actual)
 
     def test_get_news_max_items_1(self):
         feed_reader = RssNewsFeedParser()
 
+        # Note the call FeedReader.get_news() with a max_items argument
         actual = feed_reader.get_news('music', max_items=1)
 
-        for expected_result, actual_result in zip_longest(expected[:1], actual):
-            self.assertEqual(expected_result, actual_result)
+        # Note the use of list slicing in the following assertion to verify
+        # that the actual returned list contains only one item.
+        self.assertEqual(expected[:1], actual)
 
     def test_get_news_max_items_2(self):
         feed_reader = RssNewsFeedParser()
 
         actual = feed_reader.get_news('music', max_items=2)
 
-        for expected_result, actual_result in zip_longest(expected[:2], actual):
-            self.assertEqual(expected_result, actual_result)
+        self.assertEqual(expected[:2], actual)
 
     def test_parse_content(self):
         feed_reader = RssNewsFeedParser()
 
         actual = feed_reader.parse_xml_content(xml_input)
 
-        for expected_result, actual_result in zip_longest(expected, actual):
-            self.assertEqual(expected_result, actual_result)
+        self.assertEqual(expected, actual)
 
     def test_parse_content_max_items_1(self):
         feed_reader = RssNewsFeedParser()
 
         actual = feed_reader.parse_xml_content(xml_input, max_items=1)
 
-        for expected_result, actual_result in zip_longest(expected[:1], actual):
-            self.assertEqual(expected_result, actual_result)
+        self.assertEqual(expected[:1], actual)
 
     def test_parse_content_max_items_2(self):
         feed_reader = RssNewsFeedParser()
 
         actual = feed_reader.parse_xml_content(xml_input, max_items=2)
 
-        for expected_result, actual_result in zip_longest(expected[:2], actual):
-            self.assertEqual(expected_result, actual_result)
+        self.assertEqual(expected[:2], actual)
 
+    def test_parse_content_items_missing(self):
+        feed_reader = RssNewsFeedParser()
+
+        minimal_input = '<rss><item></item></rss>'
+        minimal_results = [
+            {
+                'title': '',
+                'link': '',
+                'date_time': '',
+                'image_thumbnail': '',
+                'image_banner': '',
+                'content': ''
+            }
+        ]
+
+        actual_results = feed_reader.parse_xml_content(minimal_input)
+
+        self.assertEqual(minimal_results, actual_results)
 
     @classmethod
     def setUpClass(cls):

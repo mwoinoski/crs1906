@@ -10,7 +10,6 @@ from itertools import zip_longest
 from ticketmanor.rest_services.feed_reader.feed_reader import FeedReader
 from ticketmanor.rest_services.feed_reader import FeedReaderException
 from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import (
-    NewsFeedParser,
     RssNewsFeedParser,
 )
 
@@ -22,7 +21,6 @@ class TestFeedReader(TestCase):
     def test_fetch_news_items_music(self):
         # TODO: create a mock RssNewsFeedParser object and assign it to a local
         # variable named `mock_news_feed_parser`
-        # HINT: see slide 3-40
         mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
 
         # TODO: set the return value of the mock's get_news() method to the
@@ -58,7 +56,6 @@ class TestFeedReader(TestCase):
         # TODO: create a new Mock and assign it to the mock feed parser's
         # `get_news` attribute. The new Mock should have a side effect of
         # raising a FeedReaderException.
-        # HINT: see slide 3-42
         mock_news_feed_parser.get_news.side_effect = FeedReaderException()
 
         # TODO: create a FeedReader instance and assign it to a local variable
@@ -89,7 +86,6 @@ class TestFeedReader(TestCase):
     # two arguments:
     # 1. the class to be mocked (RssNewsFeedParser)
     # 2. the name of the method to be mocked, as a string ('get_news')
-    # HINT: see slide 3-43
     @patch.object(RssNewsFeedParser, 'get_news')
     # TODO: note the second argument to the method, which will receive the Mock
     # object for the mocked method.

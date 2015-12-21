@@ -9,6 +9,7 @@ Converted to Python 3 by running:
 """
 
 import re
+from ticketmanor.rest_services.feed_reader.rss_dummy_news import RssDummyNews
 
 from ticketmanor.util.utils import html_unescape
 from ticketmanor.rest_services.feed_reader.news_feed_parser import (
@@ -66,3 +67,7 @@ class RssNewsFeedParser(NewsFeedParser):
         except IndexError:
             parsed_item['date_time'] = ''
         return parsed_item
+
+    def get_dummy_news(self, url, news_type):
+        """Called if the URL can't be opened"""
+        return RssDummyNews.get_news(news_type)

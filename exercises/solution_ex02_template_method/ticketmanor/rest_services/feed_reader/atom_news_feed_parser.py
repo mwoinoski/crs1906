@@ -47,9 +47,12 @@ class AtomNewsFeedParser(NewsFeedParser):
 
     # TODO: The get_raw_content() method is now defined in the superclass, so
     # delete the get_raw_content() method from this class.
-    # def get_raw_content(self, url):
+    # def get_raw_content(self, url, news_type=None):
     #     """Get the XML content at the given URL"""
-    #     return urllib.request.urlopen(url).read()
+    #     try:
+    #         return urllib.request.urlopen(url, timeout=1).read()
+    #     except urllib.request.URLError:
+    #         return self.get_dummy_news(url, news_type)
 
     # TODO: The parse_xml_content() method is now defined in the superclass, so
     # delete the parse_xml_content() method from this class.
@@ -114,3 +117,6 @@ class AtomNewsFeedParser(NewsFeedParser):
             parsed_item['date_time'] = ''
 
         return parsed_item
+
+    def get_dummy_news(self, url, news_type):
+        raise urllib.request.URLError("can't open connection to " + url)

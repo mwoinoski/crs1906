@@ -53,15 +53,16 @@ class NewsFeedParser(metaclass=ABCMeta):
 
         return content
 
-    # BONUS TODO: define get_url() as an abstract method
-    @abstractmethod
-    def get_url(self, news_type):
-        pass
-
-    def get_raw_content(self, url):
+    def get_raw_content(self, url, news_type=None):
         # TODO: note that get_raw_content() is a generic superclass method that
         # will be called by the superclass template method.
-        return urllib.request.urlopen(url).read()
+        try:
+            return urllib.request.urlopen(url, timeout=1).read()
+        except urllib.request.URLError:
+            # TODO: note the call to the subclass hook method get_dummy_news(),
+            # which returns dummy content if the URL is not accessible.
+            # (no code changes required)
+            return self.get_dummy_news(url, news_type)
 
     def parse_xml_content(self, raw_content, max_items=0):
         # TODO: note that parse_xml_content() is a generic superclass method
@@ -115,11 +116,19 @@ class NewsFeedParser(metaclass=ABCMeta):
     #     # At this point, there's nothing else to return
     #     return
 
+    # BONUS TODO: define get_url() as an abstract method
+    @abstractmethod
+    def get_url(self, news_type):
+        pass
+
     # BONUS TODO: define parse_item() as an abstract method
     @abstractmethod
     def parse_item(self, item_node):
         pass
 
+    # BONUS TODO: define get_dummy_news() as an abstract method
+    def get_dummy_news(self, url, news_type):
+        pass
 
 # Run news_feed_parser to verify NewsFeedParser is abstract
 if __name__ == '__main__':

@@ -114,3 +114,6 @@ class AtomNewsFeedParser:
             parsed_item['date_time'] = ''
 
         return parsed_item
+
+    def get_dummy_news(self, url, news_type):
+        raise urllib.request.URLError("can't open connection to " + url)
