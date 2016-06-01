@@ -71,6 +71,7 @@ class BaseGUITestRunner(metaclass=ABCMeta):
     """
     def __init__(self, *args, **kwargs):
         # TODO: log an info message that says the class constructor was called.
+        # HINT: this constructor is called when the GUI is being built.
         ...
 
         self.currentResult = None
@@ -118,6 +119,12 @@ class BaseGUITestRunner(metaclass=ABCMeta):
     def discoverClicked(self):
         self.__rollbackImporter.rollbackImports()
         directory = self.getDirectoryToDiscover()
+        # TODO: log a debug-level message with the value of the variable
+        # `directory`, which is set in the previous statement.
+        # HINT: note that the enclosing method is called when you click the
+        # Discover Tests button and select a directory
+        ...
+
         if not directory:
             return
         self.directory_to_read = directory
@@ -125,12 +132,7 @@ class BaseGUITestRunner(metaclass=ABCMeta):
             # Explicitly use 'None' value if no top level directory is
             # specified (indicated by empty string) as discover() explicitly
             # checks for a 'None' to determine if no tld has been specified
-
             top_level_dir = self.top_level_dir or None
-            # TODO: log a debug-level message with the value of top_level_dir
-            # Note that top_level_dir is set in the previous statement.
-            ...
-
             if top_level_dir:
                 sys.path.append(top_level_dir)
                 top_level_dir = None
@@ -205,16 +207,17 @@ class GUITestResult(unittest.TestResult):
         self.callback = callback
 
     def addError(self, test, err):
-        # TODO: log an error message with the value of the `test`
-        # parameter.
+        # TODO: log an error message with the value of the `test` parameter.
+        # HINT: note the enclosing method is called when a test case
+        # generates an error.
         ...
 
         unittest.TestResult.addError(self, test, err)
         self.callback.notifyTestErrored(test, err)
 
     def addFailure(self, test, err):
-        # TODO: log an warning message with the value of the `test`
-        # parameter.
+        # TODO: log an warning message with the value of the `test` parameter.
+        # HINT: note the enclosing method is called when a test case fails.
         ...
 
         unittest.TestResult.addFailure(self, test, err)

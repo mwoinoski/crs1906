@@ -37,34 +37,31 @@ logger = logging.getLogger('unittestgui')
     ...
     def __init__(self, *args, **kwargs):
         # TODO: log an info message that says the class constructor was called. </font><font color="blue">
-	logger.info("%s constructor called", self.__class__.__name__)
+        logger.info("%s constructor called", self.__class__.__name__)
 </pre></font>
 
 
 <font color="grey"><pre>
-	    ...
-	    top_level_dir = self.top_level_dir or None
-            # TODO: log a debug-level message with the value of top_level_dir
-            # Note that top_level_dir is set in the previous statement. </font><font color="blue">
-	    logger.debug('top_level_dir = %s', top_level_dir)
+        ...
+        # TODO: log a debug-level message with the value of the variable
+        # `directory`, which is set in the previous statement. </font><font color="blue">
+        logger.debug('selected directory = %s', directory)
 </pre></font>
 
 
 <font color="grey"><pre>
     def addError(self, test, err):
-        # TODO: log an error message with the value of the `test`
-        # parameter. </font><font color="blue">
-	logger.error('Error in test %s', test) </font><font color="grey">
-	...
+        # TODO: log an error message with the value of the `test` parameter. </font><font color="blue">
+        logger.error('Error in test %s', test) </font><font color="grey">
+        ...
 </pre></font>
 
 
 <font color="grey"><pre>
     def addFailure(self, test, err):
-        # TODO: log an warning message with the value of the `test`
-        # parameter. </font><font color="blue">
-	logger.warning('Failure in test %s', test) </font><font color="grey">
-	...
+        # TODO: log an warning message with the value of the `test` parameter. </font><font color="blue">
+        logger.warning('Failure in test %s', test) </font><font color="grey">
+        ...
 </pre></font>
 
 

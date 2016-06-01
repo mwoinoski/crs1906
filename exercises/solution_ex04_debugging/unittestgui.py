@@ -116,6 +116,10 @@ class BaseGUITestRunner(metaclass=ABCMeta):
     def discoverClicked(self):
         self.__rollbackImporter.rollbackImports()
         directory = self.getDirectoryToDiscover()
+        # TODO: log a debug-level message with the value of the variable
+        # `directory`, which is set in the previous statement.
+        logger.debug('selected directory = %s', directory)
+
         if not directory:
             return
         self.directory_to_read = directory
@@ -123,12 +127,7 @@ class BaseGUITestRunner(metaclass=ABCMeta):
             # Explicitly use 'None' value if no top level directory is
             # specified (indicated by empty string) as discover() explicitly
             # checks for a 'None' to determine if no tld has been specified
-
             top_level_dir = self.top_level_dir or None
-            # TODO: log a debug-level message with the value of top_level_dir
-            # Note that top_level_dir is set in the previous statement.
-            logger.debug('top_level_dir = %s', top_level_dir)
-
             if top_level_dir:
                 sys.path.append(top_level_dir)
                 top_level_dir = None
@@ -203,16 +202,14 @@ class GUITestResult(unittest.TestResult):
         self.callback = callback
 
     def addError(self, test, err):
-        # TODO: log an error message with the value of the `test`
-        # parameter.
+        # TODO: log an error message with the value of the `test` parameter.
         logger.error('Error in test %s', test)
 
         unittest.TestResult.addError(self, test, err)
         self.callback.notifyTestErrored(test, err)
 
     def addFailure(self, test, err):
-        # TODO: log an warning message with the value of the `test`
-        # parameter.
+        # TODO: log an warning message with the value of the `test` parameter.
         logger.warning('Failure in test %s', test)
 
         unittest.TestResult.addFailure(self, test, err)

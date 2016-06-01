@@ -62,8 +62,8 @@ class AllNewsFeedReader:
 
                 # TODO: call executor.submit() to execute the NewsReader's
                 # get_news() method.
-                # Arguments to submit: NewsReader.get_news, news_reader
-                # Assign the Future returned by submit to a local variable.
+                # Arguments to submit(): NewsReader.get_news, news_reader
+                # Assign the Future returned by submit() to a local variable.
                 ...
 
                 # TODO: append the Future to the `news_futures` list

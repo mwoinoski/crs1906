@@ -3,68 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="a4425131-2e5a-44db-a7d7-741e990a6d99" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch01_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch01_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch02_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch02_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch03_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch03_examples/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ch09_examples/todo-api/requirements.txt" afterPath="$PROJECT_DIR$/../ch09_examples/todo-api/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/hints.html" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/hints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/hints.html" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/hints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/hints.html" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/hints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/tests/rest_services/test_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/tests/rest_services/test_user_service.py" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/tests/rest_services/test_user_service.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex05_performance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex05_performance/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/hints.html" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/hints.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/unittestgui.py" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/unittestgui.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/measure.py" afterPath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/measure.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex08_concurrency/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex08_concurrency/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex08_concurrency/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex08_concurrency/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex08_concurrency/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex08_concurrency/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex09_rest_services/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ex09_rest_services/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/tests/rest_services/test_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/tests/rest_services/test_user_service.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/tests/rest_services/test_user_service.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/unittestgui.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/unittestgui.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex05_performance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex05_performance/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/measure.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/measure.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/sudoku.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/sudoku.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex07_distributing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex07_distributing/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/test_user_rest_service_json.py" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/test_user_rest_service_json.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/.idea/workspace.xml" />
     </list>
     <ignored path="ch10_examples.iws" />
@@ -125,7 +86,7 @@
     <option name="x" value="9" />
     <option name="y" value="6" />
     <option name="width" value="991" />
-    <option name="height" value="993" />
+    <option name="height" value="973" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -152,6 +113,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -186,7 +148,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -397,7 +358,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="6" width="991" height="993" extended-state="0" />
+    <frame x="9" y="6" width="991" height="973" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23294859" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
