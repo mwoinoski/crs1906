@@ -41,7 +41,6 @@ class TestBusinessObject(TestCase):
         print('\n----------- test_get_user_not_found ------------')
 
         mock_dao = Mock(spec=UserDao)
-        mock_dao.query_user = Mock()
         mock_dao.query_user.return_value = None
 
         bus_obj = BusinessObject('mock_demo')

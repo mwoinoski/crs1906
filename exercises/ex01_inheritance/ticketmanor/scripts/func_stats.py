@@ -25,11 +25,19 @@ def get_function_stats():
         (function-name, number-of-calls, average-time-per-call)
     """
     # BONUS TODO: convert the "for" loop below into a list comprehension
+    # HINT: note the conditional expression (also known as a "backwards 'if'")
+    # in the 'for' loop:
+    #    avg_time = total_time/calls if calls > 0 else 0  # avoid dividing by 0
+    # This is a compact replacement for the following:
+    #    if calls > 0:
+    #        avg_time = total_time/calls
+    #    else:
+    #        avg_time = 0
     stat_list = []
     sorted_stat_list = sorted(_function_stats.items(),
                               key=lambda stats: stats[0])
     for name, [calls, total_time] in sorted_stat_list:
-        avg_time = total_time/calls if calls > 0 else 0
+        avg_time = total_time/calls if calls > 0 else 0  # avoid dividing by 0
         stat_list.append((name, calls, avg_time))
 
     return stat_list

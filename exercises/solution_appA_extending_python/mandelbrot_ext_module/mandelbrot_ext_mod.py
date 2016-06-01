@@ -9,7 +9,6 @@ from ctypes import Structure, c_int, c_double
 from calc_z_ser_ext_mod import calc_z_ser
 
 # TODO: import array from the array module
-# HINT: see slide 7-21
 from array import array
 
 # area of space to investigate

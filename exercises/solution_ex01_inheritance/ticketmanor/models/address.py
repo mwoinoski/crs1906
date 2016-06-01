@@ -62,7 +62,6 @@ class Address:
 
     def from_json(self, json_value):
         # BONUS TODO: replace the following loop with a dictionary comprehension
-        # HINT: first, modify the for loop to use the dict items() method
         # json_sanitized = {}
         # for k in json_copy:
         #     v = json_copy[k]

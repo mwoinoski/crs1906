@@ -53,9 +53,8 @@ class TestFeedReader(TestCase):
         # variable named `mock_news_feed_parser`
         mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
 
-        # TODO: create a new Mock and assign it to the mock feed parser's
-        # `get_news` attribute. The new Mock should have a side effect of
-        # raising a FeedReaderException.
+        # TODO: configure the mock so that a call to its get_news() method has
+        # the side effect of raising a FeedReaderException.
         mock_news_feed_parser.get_news.side_effect = FeedReaderException()
 
         # TODO: create a FeedReader instance and assign it to a local variable
@@ -72,7 +71,6 @@ class TestFeedReader(TestCase):
         news = feed_reader.fetch_news_items('quack')
 
         # TODO: assert that the `news` variable is an instance of list.
-        # HINT: use the built-in isinstance() function
         self.assertTrue(isinstance(news, list))
 
         # TODO: assert that the length of the `news` list is 0
@@ -82,41 +80,39 @@ class TestFeedReader(TestCase):
         # trace, but as long as you get a green bar, the test case passed.
         # (no code change required)
 
-    # TODO: use @patch.object to create a Mock. @patch.object will take
-    # two arguments:
+    # The @patch.object decorator is an alternate way to create a Mock for a
+    # method call. @patch.object takes two arguments:
     # 1. the class to be mocked (RssNewsFeedParser)
     # 2. the name of the method to be mocked, as a string ('get_news')
     @patch.object(RssNewsFeedParser, 'get_news')
-    # TODO: note the second argument to the method, which will receive the Mock
-    # object for the mocked method.
-    # (no code change required)
+    # The second argument to the test case method is the Mock object for the
+    # mocked method.
     def test_fetch_news_items_max_items_1(self, mock_get_news_method):
-        # TODO: set the return value of the mocked method to the `expected`
+        # Set the return value of the mocked method to the `expected`
         # variable (defined at the end of the file)
         mock_get_news_method.return_value = expected
 
-        # TODO: note the call to the FeedReader constructor. The call to the
+        # Note the call to the FeedReader constructor. The call to the
         # RssNewsFeedParser will happen as usual, but because we added
         # @patch.object to this test method, the RssNewsFeedParser's get_news
         # attribute will be replaced by a Mock.
         feed_reader = FeedReader()
 
-        # TODO: note that the call to the feed_reader's fetch_news_items()
+        # Note that the call to the feed_reader's fetch_news_items()
         # will call the Mock's get_news(), which you programmed to return
         # `expected`
-        # (no code change required)
         news = feed_reader.fetch_news_items("music", 1)
 
-        # TODO: verify that mock_get_news_method was called with
+        # Verify that mock_get_news_method was called with
         # arguments "music" and 1
         mock_get_news_method.assert_called_once_with("music", 1)
 
         for expected_result, actual_result in zip_longest(expected, news):
             self.assertEqual(expected_result, actual_result)
 
-    # TODO: note the use of @patch to completely replace the RssNewsFeedParser
-    # class. This ensures that its constructor is never called.
-    # (no code change required)
+    # The @patch decorator allows you to completely replace the
+    # RssNewsFeedParser class. This ensures that its constructor is never
+    # called.
     @patch('ticketmanor.rest_services.feed_reader.feed_reader.RssNewsFeedParser')
     def test_fetch_news_items_max_items_2(self, mock_news_feed_parser_class):
         # Always patch an object where it is imported, not where it is defined.
@@ -126,10 +122,9 @@ class TestFeedReader(TestCase):
         # needs to know the package that is importing RssNewsFeedParser, not
         # the package that defines RssNewsFeedParser.
 
-        # TODO: note that the second argument to the test method is a
+        # Note that the second argument to the test method is a
         # Mock class, not a Mock instance, so we need an additional step
         # to get a Mock instance for setting the get_news() return value.
-        # (no code change required)
         mock_news_feed_parser = mock_news_feed_parser_class.return_value
         mock_news_feed_parser.get_news.return_value = expected
 
@@ -137,7 +132,7 @@ class TestFeedReader(TestCase):
 
         news = feed_reader.fetch_news_items("music", 2)
 
-        # TODO: verify the mock_news_feed_parser.get_news method was called
+        # Verify the mock_news_feed_parser.get_news method was called
         # with arguments "music" and 2
         mock_news_feed_parser.get_news.assert_called_once_with("music", 2)
 

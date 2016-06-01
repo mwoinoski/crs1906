@@ -97,11 +97,11 @@ class TestRssNewsFeedParser(TestCase):
         # 1. call the feed reader's get_news() method, passing 'music' as the
         #    argument
         # 2. save the list returned by the method in a local variable
+        #    named `actual`
         actual = feed_reader.get_news('music')
 
         # TODO: call a method that asserts the list named `expected` is
         # equal to the list named `actual`
-        # HINT: see slide 3-10
         self.assertEqual(expected, actual)
 
     # TODO: Define a test method named test_get_news_music_max_items_1
@@ -118,7 +118,6 @@ class TestRssNewsFeedParser(TestCase):
         actual = feed_reader.get_news('music', max_items=1)
 
         # TODO: call a method that asserts the returned list has length 1
-        # HINT: use the built-in function len()
         self.assertEqual(1, len(actual))
 
         # TODO: verify that the returned news item is equal to the first item
@@ -139,7 +138,6 @@ class TestRssNewsFeedParser(TestCase):
         # TODO: Call an assert method to verify that if you call the
         # feed reader's get_news() method with an invalid news type argument
         # (for example, 'pluto'), the method raises a FeedReaderException.
-        # HINT: see slide 3-15
         with self.assertRaises(FeedReaderException):
             feed_reader.get_news('pluto')
 
@@ -193,6 +191,8 @@ class TestRssNewsFeedParser(TestCase):
         self.assertEqual(expected[:2], actual)
 
     def test_parse_content_items_missing(self):
+        """This test case will boost test coverage to 100%"""
+
         feed_reader = RssNewsFeedParser()
 
         minimal_input = '<rss><item></item></rss>'
@@ -219,7 +219,7 @@ class TestRssNewsFeedParser(TestCase):
         We discuss monkey patching in the second section of the Unit Testing
         chapter.
         """
-        RssNewsFeedParser.get_raw_content = lambda self, url: xml_input
+        RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input
 
 
 if __name__ == '__main__':

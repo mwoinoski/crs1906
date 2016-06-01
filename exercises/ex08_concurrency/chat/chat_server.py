@@ -49,10 +49,8 @@ class ChatServer(BaseRequestHandler):
 
 @atexit.register
 def shutdown_chat_server():
-    print('Closing chat client sockets, ', end='')
-    ChatServer.shutdown()
     print('shutting down chat server...')
-    server.shutdown()
+    ChatServer.shutdown()
 
 
 if __name__ == '__main__':

@@ -98,6 +98,7 @@ class TestRssNewsFeedParser:
         # 1. call the feed reader's get_news() method, passing 'music' as the
         #    argument
         # 2. save the list returned by the method in a local variable
+        #    named `actual`
         ...
 
         # TODO: call a method that asserts the list named `expected` is
@@ -190,25 +191,6 @@ class TestRssNewsFeedParser:
 
         self.assertEqual(expected[:2], actual)
 
-    def test_parse_content_items_missing(self):
-        feed_reader = RssNewsFeedParser()
-
-        minimal_input = '<rss><item></item></rss>'
-        minimal_results = [
-            {
-                'title': '',
-                'link': '',
-                'date_time': '',
-                'image_thumbnail': '',
-                'image_banner': '',
-                'content': ''
-            }
-        ]
-
-        actual_results = feed_reader.parse_xml_content(minimal_input)
-
-        self.assertEqual(minimal_results, actual_results)
-
     @classmethod
     def setUpClass(cls):
         """
@@ -217,7 +199,7 @@ class TestRssNewsFeedParser:
         We discuss monkey patching in the second section of the Unit Testing
         chapter.
         """
-        RssNewsFeedParser.get_raw_content = lambda self, url: xml_input
+        RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input
 
 
 if __name__ == '__main__':

@@ -70,14 +70,12 @@ def test_get_user_found():
     email = 'ned.flanders@gmail.com'
 
     # TODO: build the URL for the GET request from base_url and email
-    # HINT: see slide 10-32
     url = '{}/{}'.format(base_url, email)
 
     # TODO: set the HTTP Accept header to 'application/xml'
     http_headers = {'Accept': 'application/xml'}
 
     # TODO: send the GET request and store the result in a variable named 'r'
-    # HINT: you don't need to send authorization credentials.
     r = requests.get(url, headers=http_headers)
 
     # TODO: get the XML from the response body and assign it to a variable
@@ -117,8 +115,6 @@ def test_add_user_ok():
     http_headers = {'Content-type': 'application/xml'}
 
     # TODO: send the POST request and store the result in a variable named 'r'
-    # HINT: you don't need to send authorization credentials.
-    # HINT: pass the XML string as the data argument
     r = requests.post(url, headers=http_headers, data=user_miles_xml.strip())
 
     print('POST {} status {}'.format(url, r.status_code))
@@ -141,9 +137,6 @@ def test_update_user_ok():
     url = base_url
 
     # TODO: send the PUT request and store the result in a variable named 'r'
-    # HINT: you don't need to send authorization credentials.
-    # HINT: pass the XML string as the data argument.
-    # HINT: see slide 10-34
     r = requests.put(url, data=user_miles_xml.strip())
 
     print('PUT {} status {}'.format(url, r.status_code))
@@ -162,7 +155,6 @@ def test_delete_user_found():
     url = '{}/{}'.format(base_url, 'miles@jazz.com')
 
     # TODO: send the DELETE request and store the result in a variable 'r'
-    # HINT: you don't need to send authorization credentials.
     r = requests.delete(url)
 
     print('DELETE {} status {}'.format(url, r.status_code))

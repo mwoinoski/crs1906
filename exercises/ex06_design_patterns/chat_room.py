@@ -13,7 +13,7 @@ from collections import namedtuple
 # group several data values so they can be accessed by name instead of numeric
 # index.
 # (no code change required)
-ChatMessage = namedtuple('ChatMessage', 'id value')
+ChatMessage = namedtuple('ChatMessage', 'id, value')
 
 """ TODO: You'll use ChatMessage in the methods below. Example:
 >>> user_name = 'client 1'

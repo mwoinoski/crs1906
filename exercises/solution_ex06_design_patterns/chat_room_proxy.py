@@ -20,8 +20,6 @@ import atexit
 
 # TODO: make ChatRoomProxy at subclass of ChatRoom. Because ChatRoom is a
 # subclass of Subject, a ChatRoomProxy IS-A Subject.
-# HINT: click ChatRoomProxy, then press Ctrl-H to see the class hierarchy.
-# (no code change required)
 class ChatRoomProxy(ChatRoom):
     """
     ChatRoomProxy is a remote proxy for a chat room server.

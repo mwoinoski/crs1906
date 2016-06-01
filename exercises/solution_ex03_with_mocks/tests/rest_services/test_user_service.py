@@ -62,19 +62,18 @@ class UserServiceRestTest(TestCase):
         # constructor.
         user_service = UserServiceRest(None, request, dao=Mock)
 
-        # TODO: program the mock DAO's get() method to have a side effect of
-        # raising a PersistenceError
-        user_service._dao.get = Mock(side_effect=PersistenceError())
+        # TODO: configure the mock so that a call to its get() method has
+        # the side effect of raising a PersistenceError
+        user_service._dao.get.side_effect = PersistenceError()
 
         # TODO: assert that an HTTPNotFound exception is raised when you call
         # the user_service's get_user() method.
         with self.assertRaises(HTTPNotFound):
             user_service.get_user()
 
-        # TODO: Note the assert_called_with() call, which verifies that the
-        # mock DAO's add() method was called once. ANY can be used as a
-        # placeholder so the mock doesn't test the argument values.
-        # (no code change required)
+        # assert_called_with() verifies that the mock DAO's add() method was
+        # called once. ANY can be used as a placeholder so the mock doesn't
+        # test the argument values.
         user_service._dao.add.assert_called_once(ANY, ANY)
 
     def test_get_unhandled_exception(self):
@@ -140,7 +139,7 @@ class UserServiceRestTest(TestCase):
         with self.assertRaisesRegex(HTTPInternalServerError, r'Could not add'):
             user_service.add_user()
 
-        # TODO: assert that the mock DAO's add() method was called once, with
+        # Assert that the mock DAO's add() method was called once, with
         # any two arguments.
         user_service._dao.add.assert_called_once(ANY, ANY)
 

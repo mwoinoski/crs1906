@@ -23,7 +23,7 @@ class TestRssNewsFeedParser(TestCase):
         We discuss monkey patching in the second section of the Unit Testing
         chapter.
         """
-        RssNewsFeedParser.get_raw_content = lambda self, url: xml_input
+        RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input
 
     def test_parse_content(self):
         feed_reader = RssNewsFeedParser()

@@ -7,6 +7,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/models/persistence/test_person_dao.py" afterPath="$PROJECT_DIR$/tests/models/persistence/test_person_dao.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/models/persistence/test_venue_dao.py" afterPath="$PROJECT_DIR$/tests/models/persistence/test_venue_dao.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/models/test_person.py" afterPath="$PROJECT_DIR$/tests/models/test_person.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/customer.py" afterPath="$PROJECT_DIR$/ticketmanor/models/customer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/member.py" afterPath="$PROJECT_DIR$/ticketmanor/models/member.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/persistence/act_dao.py" afterPath="$PROJECT_DIR$/ticketmanor/models/persistence/act_dao.py" />
@@ -14,6 +15,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/person.py" afterPath="$PROJECT_DIR$/ticketmanor/models/person.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/user.py" afterPath="$PROJECT_DIR$/ticketmanor/models/user.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/scripts/func_stats.py" afterPath="$PROJECT_DIR$/ticketmanor/scripts/func_stats.py" />
     </list>
     <ignored path="ex01_inheritance.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +46,6 @@
         <option value="$PROJECT_DIR$/production.ini" />
         <option value="$PROJECT_DIR$/MANIFEST.in" />
         <option value="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
-        <option value="$PROJECT_DIR$/ticketmanor/scripts/func_stats.py" />
         <option value="$PROJECT_DIR$/ticketmanor/models/act.py" />
         <option value="$PROJECT_DIR$/ticketmanor/models/address.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
@@ -59,14 +61,16 @@
         <option value="$PROJECT_DIR$/ticketmanor/models/person.py" />
         <option value="$PROJECT_DIR$/ticketmanor/models/customer.py" />
         <option value="$PROJECT_DIR$/tests/models/test_person.py" />
+        <option value="$PROJECT_DIR$/ticketmanor/scripts/func_stats.py" />
+        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="9" />
-    <option name="y" value="6" />
-    <option name="width" value="991" />
-    <option name="height" value="993" />
+    <option name="x" value="-1" />
+    <option name="y" value="8" />
+    <option name="width" value="1028" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -93,8 +97,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -141,7 +143,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rest_services" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -159,16 +161,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rest_services" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="feed_reader" />
+              <option name="myItemId" value="persistence" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -567,27 +571,27 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="6" width="991" height="993" extended-state="0" />
+    <frame x="-1" y="8" width="1028" height="916" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29066107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.289899" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.312026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2929782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3979849" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2929782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3979849" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -628,27 +632,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/models/persistence/test_person_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/models/persistence/test_person_dao.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -936,13 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/scripts/func_stats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticketmanor/scripts/initializedb.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -964,7 +940,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py">
+    <entry file="file://$PROJECT_DIR$/ticketmanor/scripts/func_stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16748768">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/python/python-3.4/Lib/enum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="266" column="8" selection-start-line="266" selection-start-column="8" selection-end-line="266" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2091021">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_dummy_news.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -978,7 +982,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py">
+    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />

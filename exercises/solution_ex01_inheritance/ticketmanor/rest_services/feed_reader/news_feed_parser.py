@@ -38,7 +38,7 @@ class NewsFeedParser(metaclass=ABCMeta):
 
         url = self.get_url(news_type)
 
-        raw_content = self.get_raw_content(url)
+        raw_content = self.get_raw_content(url, news_type)
 
         content = self.parse_xml_content(raw_content, max_items)
 
@@ -87,5 +87,9 @@ class NewsFeedParser(metaclass=ABCMeta):
         pass
 
     def get_dummy_news(self, url, news_type):
-        """Subclass can override this method to provide dummy news"""
+        """
+        Subclass can override this method to return a string with dummy news
+        items in an XML format.
+        """
         raise urllib.request.URLError("can't open connection to " + url)
+

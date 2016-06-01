@@ -70,7 +70,6 @@ def get_users():
 
 # TODO: add a Flask decorator here so that a GET request
 # to BASE_URI+'/<email>' is mapped to the get_user() method below.
-# HINT: the type of email is string, not int
 @app.route(BASE_URI + '/<string:email>', methods=['GET'])
 # TODO: add decorator that specifies the request must include valid credentials
 @auth.login_required

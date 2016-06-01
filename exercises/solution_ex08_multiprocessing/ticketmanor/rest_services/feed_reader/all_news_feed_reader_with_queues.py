@@ -36,7 +36,6 @@ class AllNewsFeedReader:
         # TODO: wrap the `for` loop in a `with` statement that initializes
         # a ThreadPoolExecutor. Pass the argument max_workers=4 to the
         # ThreadPoolExecutor constructor.
-        # HINT: see slide 9-43
         with ThreadPoolExecutor(max_workers=4) as executor:
             for news_type in 'concerts', 'sports', 'movies':
                 # TODO: replace the call to the Thread constructor with a
@@ -57,7 +56,6 @@ class AllNewsFeedReader:
 
         # TODO: in the following `for` statement, replace `news_threads` with
         # a call to concurrent.futures.as_completed(news_threads)
-        # HINT: see slide 9-47
         for thread in concurrent.futures.as_completed(news_threads):
         # for thread in news_threads:
             # TODO: replace the call to thread.join() with `pass`

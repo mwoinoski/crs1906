@@ -2,69 +2,126 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beda3a6f-337e-4804-893b-33f6893268cb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../examples/ch02_examples/multiple_subclasses.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch02_examples/simple_counter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch07_examples/backup/restview-2.5.2-py2.py3-none-any.whl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/AFstep.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/BlueFeltDrawLetterD.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/BooksSideBySide.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/BriefcaseWithPaperAndSquareWithScrews.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/CheckMarkMonitor.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/ClipboardWithPencilAndPaper.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/ColorSpheresPageLetterD.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/ColoredCompactDisc.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/Cyclops-small.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/DiskHammer.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/DisketteBoxEmpty.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/DisketteBoxFull.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/FileFolders.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/FilingCabinet.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/ForwardBackwardPagesBook.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/Gambit-small.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/GoldenSatelliteDish.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/HeroSandwich.dir.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/IntelInsideMonitor.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/LeatherFullBag.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/MaelstromInFrame.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/Magnify.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/MicroPhonePro.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/ModeledHeadInClouds.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/NeXT.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/NestWithThreeEggs.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/NetscapeLogo.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/OldBlueAddingMachine.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/OldFashionedRadio.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/RH2.tile.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/SQLWindowCornerWithScrewdriver.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/ScrewdriverOnSquareWithScrews.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/SunMicrosystemsMonitor.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/TapeOnMeshNetting.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/ToasterFull.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/Windows95Computer.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/WindowsLogoMonitor.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/Wizard.xpm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/imagescale_out/WomanEyeInMonitor.xpm" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch01_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch01_examples/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch03_examples/mock_demo.py" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/mock_demo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch03_examples/person_buggy.py" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/person_buggy.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch07_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch07_examples/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch06_examples/decorators/profiling_decorator_configurable.py" afterPath="$PROJECT_DIR$/../../examples/ch06_examples/decorators/profiling_decorator_configurable.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch06_examples/singleton/monostate.py" afterPath="$PROJECT_DIR$/../../examples/ch06_examples/singleton/monostate.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch09_examples/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../examples/ch09_examples/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch09_examples/todo-api/requirements.txt" afterPath="$PROJECT_DIR$/../../examples/ch09_examples/todo-api/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../examples/ch08_examples/whatsnew-q-m.py" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/whatsnew-q-m.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex01_inheritance/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex01_inheritance/tests/rest_services/test_rss_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/scripts/func_stats.py" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/scripts/func_stats.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/hints.html" afterPath="$PROJECT_DIR$/../ex02_template_method/hints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../ex02_template_method/tests/rest_services/test_feed_reader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex02_template_method/tests/rest_services/test_rss_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/feed_reader.py" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/feed_reader.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_unit_testing/hints.html" afterPath="$PROJECT_DIR$/../ex03_unit_testing/hints.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_with_mocks/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex03_with_mocks/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_with_mocks/hints.html" afterPath="$PROJECT_DIR$/../ex03_with_mocks/hints.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_feed_reader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_user_service.py" afterPath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_user_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex05_performance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex05_performance/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex06_design_patterns/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex06_design_patterns/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex06_design_patterns/measure.py" afterPath="$PROJECT_DIR$/../ex06_design_patterns/measure.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex06_design_patterns/chat_room.py" afterPath="$PROJECT_DIR$/../ex06_design_patterns/chat_room.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_concurrency/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex08_concurrency/tests/rest_services/test_rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex09_rest_services/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex09_rest_services/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ctypes/mandelbrot_ctypes.py" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ctypes/mandelbrot_ctypes.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_cython/setup.py" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_cython/setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ext_module/mandelbrot_ext_mod.py" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ext_module/mandelbrot_ext_mod.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ext_module/setup.py" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ext_module/setup.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/tests/rest_services/test_rss_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/act.py" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/act.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/address.py" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/address.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/customer.py" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/customer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/member.py" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/member.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex02_template_method/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/tests/rest_services/test_rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_feed_reader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_user_service.py" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_user_service.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex05_performance/func_stats.py" afterPath="$PROJECT_DIR$/../solution_ex05_performance/func_stats.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_client.py" afterPath="$PROJECT_DIR$/chat_client.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_gui_client.py" afterPath="$PROJECT_DIR$/chat_gui_client.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_room.py" afterPath="$PROJECT_DIR$/chat_room.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_room_proxy.py" afterPath="$PROJECT_DIR$/chat_room_proxy.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/observer.py" afterPath="$PROJECT_DIR$/observer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex07_distributing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex07_distributing/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex07_distributing/simple_tz/setup.py" afterPath="$PROJECT_DIR$/../solution_ex07_distributing/simple_tz/setup.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/tests/rest_services/test_rss_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/pi_monte_carlo/pi.py" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/pi_monte_carlo/pi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/subprocesses/encrypt.py" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/subprocesses/encrypt.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/tests/rest_services/test_rss_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/all_news_feed_reader_with_queues.py" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/all_news_feed_reader_with_queues.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/worker.py" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/worker.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/test_user_rest_service_json.py" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/test_user_rest_service_json.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/test_user_rest_service_xml.py" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/test_user_rest_service_xml.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/user_service/rest_server.py" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/user_service/rest_server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ticketmanor_webapp/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/tests/rest_services/test_rss_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../scripts/deactivate.bat" afterPath="$PROJECT_DIR$/../../scripts/deactivate.bat" />
     </list>
     <ignored path="solution_ex06_design_patterns.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,7 +176,7 @@
         <entry file="file://$PROJECT_DIR$/chat_room.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#168#196#0" expanded="true" />
               </folding>
@@ -159,11 +216,11 @@
       <list>
         <option value="$PROJECT_DIR$/chat_server.py" />
         <option value="$PROJECT_DIR$/chat_room_proxy.py" />
-        <option value="$PROJECT_DIR$/chat_room.py" />
         <option value="$PROJECT_DIR$/observer.py" />
         <option value="$PROJECT_DIR$/chat_client.py" />
         <option value="$PROJECT_DIR$/chat_gui_client.py" />
         <option value="$PROJECT_DIR$/sudoku.py" />
+        <option value="$PROJECT_DIR$/chat_room.py" />
       </list>
     </option>
   </component>
@@ -171,7 +228,7 @@
     <option name="x" value="9" />
     <option name="y" value="6" />
     <option name="width" value="991" />
-    <option name="height" value="993" />
+    <option name="height" value="973" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -198,8 +255,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -220,6 +275,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,7 +296,7 @@
     </option>
     <option name="myIpythonEnabled" value="false" />
   </component>
-  <component name="RunManager" selected="Python.Run chat_server">
+  <component name="RunManager" selected="Python tests.Unittests in test_chat_observer">
     <configuration default="false" name="Run chat_gui_client" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -432,6 +489,9 @@
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="beda3a6f-337e-4804-893b-33f6893268cb" name="Default" comment="" />
@@ -445,29 +505,32 @@
     <history-entry file="Unittests_in_test_chat_observer - 2015.11.02 at 21h 29m 00s.xml">
       <configuration name="Unittests in test_chat_observer" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test_chat_observer - 2016.05.31 at 19h 22m 05s.xml">
+      <configuration name="Unittests in test_chat_observer" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="6" width="991" height="993" extended-state="0" />
-    <editor active="false" />
+    <frame x="9" y="6" width="991" height="973" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25603357" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25498426" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286219" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32738096" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278302" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3534279" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -478,6 +541,24 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/chat_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat_gui_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="e#135#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/measure.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -836,16 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat_room.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#168#196#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat_gui_client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -877,6 +948,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat_room.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#168#196#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

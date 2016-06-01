@@ -21,23 +21,24 @@ class Monostate:
         obj.__dict__ = cls._shared_state
         return obj
 
+
 class FileCache(Monostate):
     def __init__(self):
         if not hasattr(self, "files"):
             self.files = OrderedDict()  # adds instance variable named files
-        # TODO: add synchronization
 
     def add_file(self, filename, contents):
         self.files[filename] = contents  # add file contents to shared state
 
     def __str__(self):
         return "\n".join(": ".join(item) for item in self.files.items())
-        # (...) for item in self.files.items(): creates a list comprehension
-        # of tuples (key, value).
-        # ": ".join(item): each element in the two-element tuple are joined in
-        # a string, and all the strings are collected in a list comprehension
-        # "\n".join(...): finally, all strings in the outer list comprehension
-        # are joined with newlines.
+        # 1. for item in self.files.items(): a generator expression that
+        #    yields tuples of (key, value).
+        # 2. ": ".join(item): elements in the two-element tuple are joined
+        #    in a string, and all the strings are yielded by a second generator
+        #    expression.
+        # 3. "\n".join(...): finally, all strings yielded by the second
+        #    generator expression are joined with newlines.
 
 def main():
     file_cache1 = FileCache()

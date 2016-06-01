@@ -95,7 +95,7 @@ def output(results):
         file.write("<html><head><title>What's New</title></head>\n")
         file.write("<body><h1>What's New</h1>\n")
         while not results.empty(): # Safe because all jobs have finished
-            result = results.get_nowait()
+            result = results.get()
             done += 1
             for item in result:
                 file.write(item)

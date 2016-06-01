@@ -37,11 +37,6 @@ class Customer(User):
     # TODO: Modify the methods here to reference Customer-specific attributes
     # when necessary, while delegating as much work as possible to superclass
     # methods.
-    # HINT: you will be able to delete some methods completely; others can
-    # override the superclass methods and then call the superclass methods to
-    # do part of the work.
-    # HINT: be sure that __eq__(), __str__() and __repr__() all reference
-    # self.customer_id
 
     def __eq__(self, other):
         """Compare Customer instances."""

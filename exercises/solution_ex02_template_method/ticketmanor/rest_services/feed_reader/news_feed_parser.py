@@ -44,7 +44,7 @@ class NewsFeedParser(metaclass=ABCMeta):
         # TODO: note the call to the generic superclass method
         # get_raw_content() to get the raw XML content from the URL.
         # (no code changes required)
-        raw_content = self.get_raw_content(url)
+        raw_content = self.get_raw_content(url, news_type)
 
         # TODO: note the call to the generic superclass method
         # parse_xml_content() to convert the raw XML content to Python data.
@@ -100,8 +100,6 @@ class NewsFeedParser(metaclass=ABCMeta):
 
     # BONUS TODO 2: convert parse_xml_content() into a generator function that
     # yields a single parsed item each time it's called.
-    # HINT: delete the parse_content list completely. Instead of appending
-    # each parsed item to a list, yield it from the generator.
     # def parse_xml_content(self, raw_content, max_items=0):
     #     dom = minidom.parseString(raw_content)
     #     for i, item_node in enumerate(

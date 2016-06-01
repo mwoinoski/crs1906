@@ -63,7 +63,6 @@ def calculate_z_serial(q, maxiter):
     # 2. POINTER to c_int
     # 3. c_int
     # 4. c_int
-    # HINT: see slide 7-11
     calc_z_ser.argtypes = (POINTER(COMPLEX), POINTER(c_int), c_int, c_int)
 
     # TODO: set the C function's result type to be c_int
@@ -73,9 +72,6 @@ def calculate_z_serial(q, maxiter):
 
     # TODO: create a new array class for the first argument to the C function.
     # This array will have the same length as the input list.
-    # HINT: see slide 7-11
-    # HINT: the type of each element of the array is COMPLEX
-    # HINT: we stored the length of the input list earlier.
     complex_array_class = COMPLEX * len_q
 
     # TODO: create an array of COMPLEX by calling the constructor for the
@@ -85,7 +81,6 @@ def calculate_z_serial(q, maxiter):
 
     # TODO: create a new array class for the second argument to the C function.
     # This array will have the same length as the input list.
-    # HINT: the type of each element of the array is c_int
     int_array_class = c_int * len_q
 
     # TODO: create an array of c_int by calling the constructor for the
@@ -111,7 +106,6 @@ def calculate_z_serial(q, maxiter):
 
     # TODO: create a Python list from the output_array. Store the Python list
     # in a variable named output_list.
-    # HINT: pass output_array to the list() function
     output_list = list(output_array)
 
     # TODO: return the Python list

@@ -30,7 +30,6 @@ class ChatClient(Observer):
     def new_message(self, message):
         # TODO: call the chat_room's add_message() method, passing the
         # client name from the client_name attribute and the message parameter.
-        # HINT: the chat_room is stored in a data attribute
         self.chat_room.add_message(self.client_name, message)
 
     # TODO: define the update() method, which overrides the abstract update()

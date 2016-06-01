@@ -34,9 +34,6 @@ class Member(User):
 
     # TODO: Modify the methods here to delegate as much work as possible to
     # your User methods
-    # HINT: you will be able to delete some methods completely; others can
-    # override the superclass methods and then call the superclass methods to
-    # do part of the work.
 
     def __eq__(self, other):
         """Compare Member instances."""

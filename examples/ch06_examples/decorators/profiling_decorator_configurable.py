@@ -13,7 +13,7 @@ from configparser import ConfigParser
 from decorators import format_args
 
 config = ConfigParser()
-config.read('decorators/config/config.ini')
+config.read('config/config.ini')
 profiling_enabled = config['ticketmanor.com'].getboolean('profiling.enabled')
 
 

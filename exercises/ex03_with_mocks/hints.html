@@ -43,9 +43,8 @@
         # variable named `mock_news_feed_parser` </font><font color="blue">
 	mock_news_feed_parser = Mock(spec=RssNewsFeedParser) </font><font color="grey">
 
-        # TODO: create a new Mock and assign it to the mock feed parser's
-        # `get_news` attribute. The new Mock should have a side effect of
-        # raising a FeedReaderException.  </font><font color="blue">
+        # TODO: configure the mock so that a call to its get_news() method has
+        # the side effect of raising a FeedReaderException. </font><font color="blue">
         mock_news_feed_parser.get_news.side_effect = FeedReaderException() 
 </pre></font>
 
@@ -116,16 +115,16 @@
 <h3>test_user_service.py</h3>
 
 <font color="grey"><pre>
-	# TODO: pass MagicMock as the DAO class to the UserServiceRest
+	# TODO: pass Mock as the DAO class to the UserServiceRest
         # constructor.  </font><font color="blue">
-	user_service = UserServiceRest(None, request, dao=MagicMock)
+	user_service = UserServiceRest(None, request, dao=Mock)
 </pre></font>
 
 
 <font color="grey"><pre>
-	# TODO: program the mock DAO's get() method to have a side effect of
-        # raising a PersistenceError </font><font color="blue">
-	user_service._dao.get = MagicMock(side_effect=PersistenceError())
+        # TODO: configure the mock so that a call to its get() method has
+        # the side effect of raising a PersistenceError </font><font color="blue">
+	user_service._dao.get = Mock(side_effect=PersistenceError())
 </pre></font>
 
 
@@ -137,16 +136,16 @@
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: pass MagicMock as the DAO class to the UserServiceRest
+	# TODO: pass Mock as the DAO class to the UserServiceRest
         # constructor.  </font><font color="blue">
-	user_service = UserServiceRest(None, request, dao=MagicMock)
+	user_service = UserServiceRest(None, request, dao=Mock)
 </pre></font>
 
 
 <font color="grey"><pre>
 	# TODO: program the mock DAO's get() method to have a side effect of
         # raising a ValueError.  </font><font color="blue">
-	user_service._dao.get = MagicMock(side_effect=ValueError())
+	user_service._dao.get = Mock(side_effect=ValueError())
 </pre></font>
 
 
@@ -160,7 +159,8 @@
 <font color="grey"><pre>
     # TODO: use the @nose.tools.raises decorator to verify that this test
     # raises an HTTPNotFound exception.  </font><font color="blue">
-    @raises(HTTPNotFound) </font><font color="grey">    def test_get_not_found_with_decorator(self):
+    @raises(HTTPNotFound) </font><font color="grey">    
+    def test_get_not_found_with_decorator(self):
 </pre></font>
 
 
@@ -177,12 +177,6 @@
             user_service.add_user()
 </pre></font>
 
-
-<font color="grey"><pre>
-	# TODO: assert that the mock DAO's add() method was called once, with
-        # any two arguments.  </font><font color="blue">
-	user_service._dao.add.assert_called_once(ANY, ANY)
-</pre></font>
 
 </body>
 </html>

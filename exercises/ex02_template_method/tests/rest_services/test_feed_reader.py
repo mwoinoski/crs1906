@@ -18,7 +18,7 @@ class TestFeedReader(TestCase):
         # parser. FeedReader will call the constructor of the news feed parser
         # class, so we'll let it create a Mock, then we can access the Mock as
         # an attribute of the feed parser.
-        self.feed_reader = FeedReader(news_feed_parser=Mock)
+        self.feed_reader = FeedReader(news_feed_parser_class=Mock)
 
     def test_get_news_music(self):
         # The Mock will create new mocks anytime an attribute is referenced.

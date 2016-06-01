@@ -62,8 +62,8 @@ class UserServiceRestTest(TestCase):
         # constructor.
         user_service = UserServiceRest(None, request, dao=...)
 
-        # TODO: program the mock DAO's get() method to have a side effect of
-        # raising a PersistenceError
+        # TODO: configure the mock so that a call to its get() method has
+        # the side effect of raising a PersistenceError
         # HINT: see slide 3-39
         ...
 
@@ -71,12 +71,6 @@ class UserServiceRestTest(TestCase):
         # the user_service's get_user() method.
         # HINT: see slide 3-38
         ...
-
-        # TODO: Note the assert_called_with() call, which verifies that the
-        # mock DAO's add() method was called once. ANY can be used as a
-        # placeholder so the mock doesn't test the argument values.
-        # (no code change required)
-        user_service._dao.add.assert_called_once(ANY, ANY)
 
     def test_get_unhandled_exception(self):
         request = pyramid_testing.DummyRequest()
@@ -139,10 +133,6 @@ class UserServiceRestTest(TestCase):
         # the user_service's add_user() method, and that the exception's
         # message includes the string 'Could not add'
         # HINT: see slide 3-39
-        ...
-
-        # TODO: assert that the mock DAO's add() method was called once, with
-        # any two arguments.
         ...
 
     def test_update_user_success(self):

@@ -9,12 +9,12 @@ Converted to Python 3 by running:
 """
 
 import re
-from ticketmanor.rest_services.feed_reader.rss_dummy_news import RssDummyNews
 
 from ticketmanor.util.utils import html_unescape
 from ticketmanor.rest_services.feed_reader.news_feed_parser import (
     NewsFeedParser,
 )
+from ticketmanor.rest_services.feed_reader.rss_dummy_news import RssDummyNews
 
 
 class RssNewsFeedParser(NewsFeedParser):

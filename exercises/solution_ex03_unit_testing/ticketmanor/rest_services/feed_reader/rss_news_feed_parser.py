@@ -14,6 +14,7 @@ from ticketmanor.util.utils import html_unescape
 from ticketmanor.rest_services.feed_reader.news_feed_parser import (
     NewsFeedParser,
 )
+from ticketmanor.rest_services.feed_reader.rss_dummy_news import RssDummyNews
 
 
 class RssNewsFeedParser(NewsFeedParser):
@@ -28,6 +29,10 @@ class RssNewsFeedParser(NewsFeedParser):
         """Implementation of abstract method"""
         return 'https://news.google.com/news?output={}&pz=1&ned=us&hl=en&q={}'\
             .format(RssNewsFeedParser.feed_type, news_type)
+
+    def get_dummy_news(self, url, news_type):
+        """Called if the URL can't be opened"""
+        return RssDummyNews.get_news(news_type)
 
     def parse_item(self, node):
         """Implementation of abstract method defined in NewsFeedParser"""

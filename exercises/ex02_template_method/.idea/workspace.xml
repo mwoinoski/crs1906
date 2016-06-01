@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="603cdb8e-a838-43cd-9af1-1203576f7241" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hints.html" afterPath="$PROJECT_DIR$/hints.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/rest_services/test_feed_reader.py" afterPath="$PROJECT_DIR$/tests/rest_services/test_feed_reader.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/feed_reader.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/feed_reader.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/news_service.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/news_service.py" />
@@ -27,12 +29,22 @@
     <favorites_list name="ex02_template_method" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="rss_news_feed_parser.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py">
+    <leaf>
+      <file leaf-file-name="news_feed_parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rss_news_feed_parser.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5854859">
+              <caret line="55" column="57" selection-start-line="55" selection-start-column="57" selection-end-line="55" selection-end-column="57" />
               <folding>
                 <element signature="e#246#255#0" expanded="true" />
               </folding>
@@ -48,6 +60,7 @@
         <option value="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
         <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" />
         <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
+        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/feed_reader.py" />
         <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
       </list>
     </option>
@@ -56,7 +69,7 @@
     <option name="x" value="9" />
     <option name="y" value="6" />
     <option name="width" value="991" />
-    <option name="height" value="993" />
+    <option name="height" value="973" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -83,8 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -159,6 +170,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -390,10 +403,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="6" width="991" height="993" extended-state="0" />
-    <editor active="false" />
+    <frame x="9" y="6" width="991" height="973" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30430222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30430222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -429,6 +442,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#246#255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -543,17 +566,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py">
+    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/feed_reader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py">
+    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5854859">
+          <caret line="55" column="57" selection-start-line="55" selection-start-column="57" selection-end-line="55" selection-end-column="57" />
           <folding>
             <element signature="e#246#255#0" expanded="true" />
           </folding>

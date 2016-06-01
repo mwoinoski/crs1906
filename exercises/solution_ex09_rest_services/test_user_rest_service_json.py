@@ -72,7 +72,6 @@ def test_get_user_found():
     http_headers = {'Accept': 'application/json'}
 
     # TODO: send the GET request and store the result in a variable named 'r'
-    # HINT: you don't need to send authorization credentials.
     r = requests.get(url, headers=http_headers)
 
     # TODO: get the JSON from the response body and assign it to a variable
@@ -114,7 +113,6 @@ def test_add_user_ok():
 
     # TODO: send the POST request and store the result in a variable named `r`
     # Pass the the dictionary named user_miles as the JSON data
-    # HINT: you don't need to send authorization credentials.
     r = requests.post(url, headers=http_headers, json=user_miles)
 
     print('POST status {}'.format(r.status_code))
@@ -138,7 +136,6 @@ def test_update_user_ok():
 
     # TODO: send the PUT request and store the result in a variable named 'r'
     # Pass the the dictionary named user_miles as the JSON data
-    # HINT: you don't need to send authorization credentials.
     r = requests.put(url, json=user_miles)
 
     print('PUT status {}'.format(r.status_code))
@@ -157,7 +154,6 @@ def test_delete_user_found():
     url = '{}/{}'.format(base_url, 'miles@jazz.com')
 
     # TODO: send the DELETE request and store the result in a variable 'r'
-    # HINT: you don't need to send authorization credentials.
     r = requests.delete(url)
 
     print('DELETE status {}'.format( r.status_code))

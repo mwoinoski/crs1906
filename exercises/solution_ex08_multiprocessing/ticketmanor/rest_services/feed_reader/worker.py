@@ -26,13 +26,10 @@ def worker(feed_reader, results_q, news_type, max_items):
 
     # TODO: use `self.feed_reader` to get news of the given `news_type` and
     # assign the result to a variable named `news`
-    # HINT: this statement is exactly the same as a statement in the
-    # original code that you commented out earlier.
     news = feed_reader.fetch_news_items(news_type, max_items)
 
     # TODO: create a TypedNews object and save the result in a local
     # variable.
-    # HINT: see the definition of TypedNews at the beginning of this file.
     typed_news = TypedNews(news_type, news)
 
     # TODO: put the typed_news object on `results_q`

@@ -1,5 +1,1 @@
-@echo off
-C:\crs1906\exercises\ticketmanor_webapp\venv\Scripts\deactivate.bat
-echo.
-path
-echo.
+@rem Do nothing if no virtual environment is active

@@ -64,14 +64,12 @@ class AllNewsFeedReader:
         for news_type in 'concerts', 'sports', 'movies':
             # TODO: Create an instance of NewsThread to download one type of news.
             # Constructor arguments: self.feed_reader, news_type, max_items
-            # HINT: see slide 9-
             background = NewsThread(self.feed_reader, news_type, max_items)
 
             # TODO: Append the new thread to the `news_threads` list
             news_threads.append(background)
 
             # TODO: Start the new thread
-            # HINT: see slide 9-17
             background.start()
 
         # TODO: note the definition of the dictionary named `all_news`
@@ -83,7 +81,6 @@ class AllNewsFeedReader:
         for thread in news_threads:
             # TODO: wait for the thread to complete by calling
             # the thread's join() method
-            # HINT: see slide 9-17
             thread.join()
 
             # TODO: Add the thread's news to the `all_news` dictionary.

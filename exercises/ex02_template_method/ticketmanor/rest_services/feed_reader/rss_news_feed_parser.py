@@ -53,7 +53,7 @@ class RssNewsFeedParser:
         # TODO: note the call to the generic superclass method
         # get_raw_content() to get the raw XML content from the URL.
         # (no code changes required)
-        raw_content = self.get_raw_content(url)
+        raw_content = self.get_raw_content(url, news_type)
 
         # TODO: note the call to the generic superclass method
         # parse_xml_content() to convert the raw XML content to Python data.

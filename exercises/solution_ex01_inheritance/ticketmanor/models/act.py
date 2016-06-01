@@ -55,7 +55,6 @@ class Act(Base):
 
     # Dictionary for reverse lookups of act types (strings to ints)
     # BONUS TODO: replace the following loop with a dictionary comprehension
-    # HINT: first, modify the for loop to use the dict items() method
     ACT_TYPE_INV = {v: k for k, v in ACT_TYPE.items()}
     # ACT_TYPE_INV = {}
     # for k in ACT_TYPE:

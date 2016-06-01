@@ -17,13 +17,8 @@ among threads
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from random import random
 
 from threading import Barrier, Thread
-
-
-def read_from_sensor():
-    pass
 
 
 # I have a barrier in here so the workers synchronize
@@ -38,37 +33,43 @@ class Counter:
     def __init__(self):
         self.count = 0
 
-    def increment(self, offset):
+    def increment(self, offset=1):
         self.count += offset
 
 
-def worker(sensor_index, how_many, counter):
-    """Action for each work thread.
+class SampleSensors:
+    counter = Counter()  # single shared instance of Counter
 
-    Each sensor has its own worker thread. After each measurement,
-    a worker increments the count in the shared Counter instance.
-    :param how_many number of measurements the worker thread will take
-    :param counter shared Counter instance
-    """
-    barrier.wait()  # forces the race condition to manifest more often
+    def worker(self, sensor_index, how_many):
+        """Action for each work thread.
 
-    for i in range(how_many):
-        read_from_sensor()  # Get the measurement
-        counter.increment(1)  # Bump the number of measurements so far
+        Each sensor has its own worker thread. After each measurement,
+        a worker increments the count in the shared Counter instance.
+        :param how_many number of measurements the worker thread will take
+        """
+        barrier.wait()  # forces the race condition to manifest more often
 
+        for i in range(how_many):
+            self.read_from_sensor()  # Get the measurement
+            SampleSensors.counter.increment()  # Bump number of measurements
 
-how_many_measurements = 10**5
+    def sample_sensors(self):
+        how_many = 10**5
+        threads = []
+        for i in range(5):
+            thread = Thread(target=SampleSensors.worker,
+                            args=(self, i, how_many))
+            threads.append(thread)
+            thread.start()
+        for thread in threads:
+            thread.join()
 
-counter = Counter()  # single shared instance of Counter
+        print('Counter should be {}, found {}'
+              .format(5*how_many, SampleSensors.counter.count))
 
-threads = []
-for i in range(5):
-    thread = Thread(target=worker,
-                    args=(i, how_many_measurements, counter))
-    threads.append(thread)
-    thread.start()
-for thread in threads:
-    thread.join()
+    def read_from_sensor(self):
+        pass
 
-print('Counter should be {}, found {}'
-      .format(5 * how_many_measurements, counter.count))
+if __name__ == '__main__':
+    sampler = SampleSensors()
+    sampler.sample_sensors()
