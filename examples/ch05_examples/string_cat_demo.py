@@ -10,7 +10,7 @@ from simple_profiler import measure
 ##############################################################################
 
 @measure
-def to_lower_string_concatenation(lines):
+def to_lower_string_concat(lines):
     """String concatenation: slow"""
     r = ''
     for line in lines:
@@ -19,7 +19,7 @@ def to_lower_string_concatenation(lines):
 
 
 @measure
-def to_lower_joining_individual_strings(lines):
+def to_lower_join_individual_strings(lines):
     """Joining individual strings: very slow"""
     r = ''
     for line in lines:
@@ -28,12 +28,22 @@ def to_lower_joining_individual_strings(lines):
 
 
 @measure
-def to_lower_appending_strings_to_list(lines):
+def to_lower_append_strings_to_list(lines):
     """Appending strings to list, then a single join: fast"""
-    r = []
+    ra = []
     for line in lines:
-        r.append(line.lower())
-    return ''.join(r)
+        ra.append(line.lower())
+    return ''.join(ra)
+
+@measure
+def to_lower_list_comprehension(lines):
+    """Add strings to a list comprehension, then a single join: very fast"""
+    return ''.join([line.lower() for line in lines])
+
+@measure
+def to_lower_generator_expression(lines):
+    """Iterate with a generator expression, then a single join: very fast"""
+    return ''.join(line.lower() for line in lines)
 
 
 ##############################################################################
@@ -78,9 +88,11 @@ if __name__ == '__main__':
     input_lines = all_lines[1:10000]
 
     print("String concatenation demo:")
-    to_lower_string_concatenation(input_lines)
-    to_lower_joining_individual_strings(input_lines)
-    to_lower_appending_strings_to_list(input_lines)
+    to_lower_string_concat(input_lines)
+    to_lower_join_individual_strings(input_lines)
+    to_lower_append_strings_to_list(input_lines)
+    to_lower_list_comprehension(input_lines)
+    to_lower_generator_expression(input_lines)
 
     print("\nFunction call overhead demo:")
     to_lower_one_call(input_lines)

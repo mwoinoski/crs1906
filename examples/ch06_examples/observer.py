@@ -29,7 +29,7 @@ class Subject(metaclass=ABCMeta):
 
 class Observer(metaclass=ABCMeta):
     @abstractmethod
-    def update(self, observable):
+    def update(self, subject):
         pass
 
 
@@ -62,12 +62,12 @@ class ConcreteObserver(Observer):
 
 def main():
     initial_state = 1
+    print('\nCreating subject with initial state {}...'.format(initial_state))
+    subject = ConcreteSubject(initial_state)
+    
     print('\nCreating two observers...')
     observer1 = ConcreteObserver('observer1')
     observer2 = ConcreteObserver('observer2')
-    
-    print('\nCreating subject with initial state {}...'.format(initial_state))
-    subject = ConcreteSubject(initial_state)
     
     print('\nAttaching observers to subject...')
     subject.observer_attach(observer1, observer2)
