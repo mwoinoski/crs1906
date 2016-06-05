@@ -76,8 +76,8 @@ class TaskListAPI(Resource):
         task = {
             'id': tasks[-1]['id'] + 1,
             'title': args['title'],
-            'description': args['description'],
-            'done': False
+            'description': args.get('description', ''),
+            'done': args.get('done', False)
         }
         tasks.append(task)
         return {'task': marshal(task, task_fields)}, 201

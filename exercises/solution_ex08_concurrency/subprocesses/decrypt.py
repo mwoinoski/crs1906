@@ -9,16 +9,18 @@ import re
 import subprocess
 
 
-def run_openssl(file, environ):
+def run_openssl(file, pw):
     try:
         with open(file, 'r') as in_file:
             with open(re.sub(r'\.aes$', '', file), 'w') as out_file:
-                # TODO: note that we call subprocess.Popen() exactly as we did
-                # in encrypt.py
+                environ = os.environ.copy()
+                environ['secret'] = pw    # store password in env variable
+                # TODO: note that we call subprocess.Popen() as we did in 
+                # encrypt.py, replacing '-e' with '-d'
                 # (no code change required)
-                proc = subprocess.Popen(
-                    ['openssl', 'enc', '-d', '-aes256', '-pass', 'env:password'],
-                    env=environ, stdin=in_file, stdout=out_file)
+                cmd = ['openssl', 'enc', '-d', '-aes256', '-pass', 'env:secret']
+                proc = subprocess.Popen(cmd, env=environ,
+                                        stdin=in_file, stdout=out_file)
                 return proc
     except Exception as e:
         print('Problem decrypting', file, e)
@@ -31,14 +33,12 @@ def main():
         sys.exit(1)
 
     pw = getpass.getpass()  # prompts and reads without echoing input
-    environ = os.environ.copy()
-    environ['password'] = pw    # store password in environment variable
 
     procs = []
     for file in sys.argv[1:]:
         # TODO: note that we call run_openssl() exactly as we did in encrypt.py
         # (no code change required)
-        proc = run_openssl(file, environ)
+        proc = run_openssl(file, pw)
         procs.append(proc)
 
     for proc in procs:

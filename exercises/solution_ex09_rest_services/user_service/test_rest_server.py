@@ -68,7 +68,7 @@ def test_get_user_not_found():
 
 def test_add_user_ok():
     url = base_url
-    http_headers = {'Content-type': 'application/json'}
+    http_headers = {'Content-Type': 'application/json'}
     creds = ('student', 'studentpw')
 
     r = requests.post(url, auth=creds, headers=http_headers, json=user_miles)
@@ -84,7 +84,7 @@ def test_add_user_ok():
 def test_update_user_ok():
     email = 'miles@jazz.com'
     url = '{}/{}'.format(base_url, email)
-    http_headers = {'Content-type': 'application/json'}
+    http_headers = {'Content-Type': 'application/json'}
     creds = ('student', 'studentpw')
 
     expected_result = dict(user_miles)

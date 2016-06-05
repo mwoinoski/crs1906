@@ -33,7 +33,7 @@ def unauthorized():
     
 
 @app.errorhandler(400)
-def not_found(error):
+def bad_request(error):
     return make_response(jsonify({'error': 'Bad request'}), 400)
 
 
@@ -70,7 +70,7 @@ def create_task():
         abort(400)
     title = request.json['title']
     desc = request.json.get('description', '')
-    done = False
+    done = request.json.get('done', False)
     app.logger.info('Creating task "%s", "%s", %d', title, desc, done)
     task = rest_server_dao.create_task(title, desc, done)
     return jsonify({'task': task}), 201  # 201 == Created

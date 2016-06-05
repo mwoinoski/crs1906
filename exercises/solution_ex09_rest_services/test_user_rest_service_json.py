@@ -109,7 +109,7 @@ def test_add_user_ok():
     url = base_url
 
     # TODO: set the HTTP Accept header to 'application/json'
-    http_headers = {'Content-type': 'application/json'}
+    http_headers = {'Content-Type': 'application/json'}
 
     # TODO: send the POST request and store the result in a variable named `r`
     # Pass the the dictionary named user_miles as the JSON data

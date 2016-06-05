@@ -115,7 +115,7 @@ def test_add_user_ok():
     url = base_url
 
     # TODO: set the HTTP Accept header to 'application/xml'
-    http_headers = {'Content-type': 'application/xml'}
+    http_headers = {'Content-Type': 'application/xml'}
 
     # TODO: send the POST request and store the result in a variable named 'r'
     # HINT: you don't need to send authorization credentials.
