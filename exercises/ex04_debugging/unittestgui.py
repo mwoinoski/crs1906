@@ -43,18 +43,18 @@ from tkinter import simpledialog
 
 # TODO: import the logging package
 # HINT: see slide 4-8
-...
+....
 
 # TODO: import the logging.config package
 # HINT: see slide 4-14
-...
+....
 
 # TODO: read the logging config from the file logging.conf
-...
+....
 
 # TODO: create a Logger instance and assign it to a variable named `logger`.
 # Give the Logger the name 'unittestgui'
-...
+....
 
 init_dir = Path.cwd() / 'sample_unit_tests'
 
@@ -72,7 +72,7 @@ class BaseGUITestRunner(metaclass=ABCMeta):
     def __init__(self, *args, **kwargs):
         # TODO: log an info message that says the class constructor was called.
         # HINT: this constructor is called when the GUI is being built.
-        ...
+        ....
 
         self.currentResult = None
         self.running = 0
@@ -123,7 +123,7 @@ class BaseGUITestRunner(metaclass=ABCMeta):
         # `directory`, which is set in the previous statement.
         # HINT: note that the enclosing method is called when you click the
         # Discover Tests button and select a directory
-        ...
+        ....
 
         if not directory:
             return
@@ -210,7 +210,7 @@ class GUITestResult(unittest.TestResult):
         # TODO: log an error message with the value of the `test` parameter.
         # HINT: note the enclosing method is called when a test case
         # generates an error.
-        ...
+        ....
 
         unittest.TestResult.addError(self, test, err)
         self.callback.notifyTestErrored(test, err)
@@ -218,7 +218,7 @@ class GUITestResult(unittest.TestResult):
     def addFailure(self, test, err):
         # TODO: log an warning message with the value of the `test` parameter.
         # HINT: note the enclosing method is called when a test case fails.
-        ...
+        ....
 
         unittest.TestResult.addFailure(self, test, err)
         self.callback.notifyTestFailed(test, err)

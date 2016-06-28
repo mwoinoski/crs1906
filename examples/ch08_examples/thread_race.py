@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-thread_lock_demo.py - Demo of use of Lock to prevent race condition
-among threads
+thread_race.py - Demo of a race condition among threads
 """
 
 # Copyright 2014 Brett Slatkin, Pearson Education Inc.
@@ -18,14 +17,7 @@ among threads
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from threading import Barrier, Thread
-
-
-# I have a barrier in here so the workers synchronize
-# when they start counting, otherwise it's hard to get a race
-# because the overhead of starting a thread is high.
-barrier = Barrier(5)  # required to artificially force race conditions
-
+from threading import Thread
 
 class Counter:
     """A single instance of Counter will be shared by all worker threads
@@ -47,7 +39,6 @@ class SampleSensors:
         a worker increments the count in the shared Counter instance.
         :param how_many number of measurements the worker thread will take
         """
-        barrier.wait()  # forces the race condition to manifest more often
 
         for i in range(how_many):
             self.read_from_sensor()  # Get the measurement
@@ -70,6 +61,12 @@ class SampleSensors:
     def read_from_sensor(self):
         pass
 
-if __name__ == '__main__':
+def main():
     sampler = SampleSensors()
     sampler.sample_sensors()
+
+if __name__ == '__main__':
+    from timeit import timeit
+    print("\nTime to run main: {:.2f} seconds".format(
+        timeit('main()', setup="from __main__ import main", number=1)))
+    

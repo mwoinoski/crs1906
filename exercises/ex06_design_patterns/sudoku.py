@@ -19,7 +19,7 @@ import sys
 
 # TODO: import the measure and get_function_stats methods from the
 # measure module.
-...
+....
 
 TRIPLETS = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 
@@ -204,7 +204,7 @@ class Sudoku:
 
     # TODO: add the measure decorator to this method using the `@` syntax
     # HINT: see slide 6-18
-    ...
+    ....
     def check(self, level=0):
         self._changed = True
         while self._changed:
@@ -223,7 +223,7 @@ class Sudoku:
         return
         
     # TODO: add the measure decorator to this function
-    ...
+    ....
     def check_for_single_occurances(self):
         # Want to see if x only occurs once in this row/col/3x3...
         for check_type in [ROW_ITER, COL_ITER, TxT_ITER]:
@@ -240,7 +240,7 @@ class Sudoku:
                             self.set_cell(row, col, x)
 
     # TODO: add the measure decorator to this function
-    ...
+    ....
     def check_for_last_in_row_col_3x3(self):
         # Now, for each row/col/3x3 want to see if there is a single
         # unknown entry...
@@ -288,7 +288,7 @@ class Sudoku:
         return answer
 
     # TODO: add the measure decorator to this function
-    ...
+    ....
     def overlapping_3x3_and_row_or_col(self):
         """Block and Column / Row Interactions (name from Simon Armstrong)
 
@@ -335,7 +335,7 @@ class Sudoku:
                                 self.cell_exclude(row, col, x)
 
     # TODO: add the measure decorator to this function
-    ...
+    ....
     def one_level_supposition(self):
         """
         Probably what is known as 'Nishio', try a number and see if it leads to
@@ -463,7 +463,7 @@ if __name__ == "__main__":
 
             # TODO: call the get_function_stats() function and print the stats
             # for all decorated functions
-            ...
+            ....
 
 
             # BONUS TODO: call get_function_stats() only if

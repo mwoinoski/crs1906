@@ -68,18 +68,18 @@ def test_get_user_found():
 
     # TODO: build the URL for the GET request from base_url and email
     # HINT: see slide 9-35
-    url = ...
+    url = ....
 
     # TODO: set the HTTP Accept header to 'application/json'
-    http_headers = ...
+    http_headers = ....
 
     # TODO: send the GET request and store the result in a variable named 'r'
     # HINT: you don't need to send authorization credentials.
-    r = ...
+    r = ....
 
     # TODO: get the JSON from the response body and assign it to a variable
     # named 'actual_result'
-    actual_result = ...
+    actual_result = ....
 
     print('GET {} status {}, response = {}'
           .format(url, r.status_code, actual_result))
@@ -109,16 +109,16 @@ def test_add_user_ok():
     # (no code change required)
 
     # TODO: set the url to base_url
-    ...
+    ....
 
     # TODO: set the HTTP Accept header to 'application/json'
-    ...
+    ....
 
     # TODO: send the POST request and store the result in a variable named `r`
     # Pass the the dictionary named user_miles as the JSON data
     # HINT: you don't need to send authorization credentials.
     # HINT: see slide 9-36
-    r = ...
+    r = ....
 
     print('POST status {}'.format(r.status_code))
 
@@ -137,13 +137,13 @@ def test_update_user_ok():
     # (no code change required)
 
     # TODO: set the url to base_url
-    ...
+    ....
 
     # TODO: send the PUT request and store the result in a variable named 'r'
     # Pass the the dictionary named user_miles as the JSON data
     # HINT: you don't need to send authorization credentials.
     # HINT: see slide 9-37
-    r = ...
+    r = ....
 
     print('PUT status {}'.format(r.status_code))
 
@@ -158,12 +158,12 @@ def test_delete_user_found():
     # (no code change required)
 
     # TODO: build the URL for the GET request from base_url and email
-    ...
+    ....
 
     # TODO: send the DELETE request and store the result in a variable 'r'
     # HINT: you don't need to send authorization credentials.
     # HINT: see slide 9-37
-    r = ...
+    r = ....
 
     print('DELETE status {}'.format( r.status_code))
 

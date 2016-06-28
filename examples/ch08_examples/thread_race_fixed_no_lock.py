@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-thread_race_fixed.py - Demo of use of Lock to prevent a race condition
-among threads
+thread_race_fixed_no_lock.py - Re-designed threading code that does not require
+a lock because there is no possibility of a race condition.
 """
 
 # Copyright 2014 Brett Slatkin, Pearson Education Inc.
@@ -18,55 +18,60 @@ among threads
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from threading import Thread, Lock
+from threading import Thread
 
 
 class Counter:
-    """A single instance of Counter will be shared by all worker threads
-       to accumulate sensor reading counts"""
     def __init__(self):
         self.count = 0
 
     def increment(self, offset=1):
         self.count += offset
 
+class WorkerThread(Thread):
+    """Each worker thread will have its own unique Counter instance"""
 
-class SampleSensors:
-    counter = Counter()  # single shared instance of Counter
-    counter_lock = Lock()
+    def __init__(self, sample_sensor, sensor_index, how_many):
+        super().__init__()
+        self.counter = Counter()
+        self.sample_sensor = sample_sensor
+        self.sensor_index = sensor_index
+        self.how_many = how_many
 
-    def worker(self, sensor_index, how_many):
+    def run(self):
         """Action for each work thread.
 
         Each sensor has its own worker thread. After each measurement,
         a worker increments the count in the shared Counter instance.
         :param how_many number of measurements the worker thread will take
         """
+        for i in range(self.how_many):
+            self.sample_sensor.read_from_sensor()  # Get the measurement
+            self.counter.increment()  # Bump number of measurements
 
-        for i in range(how_many):
-            self.read_from_sensor()  # Get the measurement
-            with SampleSensors.counter_lock:
-                SampleSensors.counter.increment()  # Bump number of measurements
-
+class SampleSensors:
+    def __init__(self, worker_thread_count):
+        self.worker_thread_count = worker_thread_count
+        
     def sample_sensors(self):
         how_many = 10**5
         threads = []
-        for i in range(5):
-            thread = Thread(target=SampleSensors.worker,
-                            args=(self, i, how_many))
+        for i in range(self.worker_thread_count):
+            thread = WorkerThread(self, i, how_many)
             threads.append(thread)
             thread.start()
         for thread in threads:
             thread.join()
 
         print('Counter should be {}, found {}'
-              .format(5*how_many, SampleSensors.counter.count))
+              .format(self.worker_thread_count*how_many, 
+                      sum(thread.counter.count for thread in threads)))
 
     def read_from_sensor(self):
         pass
         
 def main():
-    sampler = SampleSensors()
+    sampler = SampleSensors(5)
     sampler.sample_sensors()
 
 if __name__ == '__main__':

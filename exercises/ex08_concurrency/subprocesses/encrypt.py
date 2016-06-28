@@ -6,7 +6,7 @@ import getpass
 import os
 import sys
 # TODO: import the subprocess module
-...
+....
 
 
 # TODO: note the definition of the run_openssl() function. This function will
@@ -26,7 +26,7 @@ def run_openssl(file, environ):
                 # For the `stdout` argument, pass out_file
                 # Assign the returned Popen instance to a local variable.
                 # HINT: see slide 8-10
-                ...
+                ....
 
                 # TODO: note that you don't need to write to or flush the
                 # Popen instance's standard input because openssl is reading
@@ -34,7 +34,7 @@ def run_openssl(file, environ):
                 # (no code change required)
 
                 # TODO: return the Popen instance
-                return ...
+                return ....
 
     except Exception as e:
         print('Problem encrypting', file, e)
@@ -51,7 +51,7 @@ def main():
     environ['password'] = pw    # store password in environment variable
 
     # TODO: initialize a local variable named `procs` with an empty list
-    procs = ...
+    procs = ....
 
     # TODO: note the following loop over the command line arguments
     # (no code changes required)
@@ -59,18 +59,18 @@ def main():
         # TODO: Call run_openssl(), passing arguments file and environ
         # Save the returned Popen instance in a local variable.
         # HINT: see slide 8-11
-        ...
+        ....
 
         # TODO: append the Popen instance to the `procs` list
-        ...
+        ....
 
     # TODO: loop over all the Popen instances in the `procs` list
-    ...
+    ....
         # TODO: for each Popen instance, call the communicate() method to wait 
         # for the process to complete.
         # HINT: you don't need to save the return values of communicate()
         # because the processes are reading and writing directly to files.
-        ...
+        ....
 
     print('Done encrypting', ' '.join(sys.argv[1:]))
 

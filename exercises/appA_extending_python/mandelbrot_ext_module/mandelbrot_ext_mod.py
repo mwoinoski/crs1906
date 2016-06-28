@@ -6,11 +6,11 @@ from ctypes import Structure, c_int, c_double
 # TODO: import calc_z_ser from the calc_z_ser_ext_mod extension module
 # Note: ignore the error message from PyCharm. It doesn't recognize
 # C extension modules.
-...
+....
 
 # TODO: import array from the array module
 # HINT: see slide 7-21
-...
+....
 
 # area of space to investigate
 x1, x2, y1, y2 = -2.13, 0.77, -1.3, 1.3
@@ -51,7 +51,7 @@ def calc(maxiter, w, h, show_output):
     # TODO: create an array of COMPLEX with length len_q exactly as you did in
     # mandelbrot_ctypes/mandelbrot_ctypes.py. Assign the array to a variable
     # named complex_array.
-    complex_array = ...
+    complex_array = ....
 
     for index in range(len_q):
         # TODO: note how we copy the attributes from each complex object on
@@ -67,7 +67,7 @@ def calc(maxiter, w, h, show_output):
 
     # TODO: call the calc_z_ser() function from the extension module.
     # Arguments: complex_array, output_array, len(q), maxiter
-    ...
+    ....
 
     end_time = datetime.datetime.now()
     secs = end_time - start_time

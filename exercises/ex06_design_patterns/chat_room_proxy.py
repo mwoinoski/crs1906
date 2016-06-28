@@ -37,7 +37,7 @@ class ChatRoomProxy:
     def __init__(self):
         """Initialize a connection with the remote ChatServer."""
         # TODO: call the superclass constructor.
-        ...
+        ....
 
         self.chat_socket = socket(AF_INET, SOCK_STREAM)
         atexit.register(ChatRoomProxy.shutdown, self)
@@ -69,7 +69,7 @@ class ChatRoomProxy:
 
                         # TODO: call the chat_client's update() method,
                         # passing the argument deserialized_msg
-                        ...
+                        ....
 
                         # Don't call self.observer_notify() or you'll get into
                         # a recursive loop.

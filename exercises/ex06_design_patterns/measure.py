@@ -65,13 +65,23 @@ def measure(func):
 def get_function_stats():
     """
     Returns a list of 3-tuples. Each tuple contains the name of a function,
-    the number of calls to that function, and the avergage time per call:
+    the number of calls to that function, and the average time per call:
         (function-name, number-of-calls, average-time-per-call)
     """
     return [(name, calls, total_time/calls if calls > 0 else 0)
-            for name, (calls, total_time) in sorted(_function_stats.items(),
-                                                    key=lambda x: x[0])]
+            for name, (calls, total_time) in sorted(_function_stats.items())]
 
+    # Implementation without list comprehension:
+    # stats = []
+    # sorted_items = sorted(_function_stats.items())
+    # for name, (calls, total_time) in sorted_items:
+    #     if calls > 0:
+    #         time_per_call = total_time/calls
+    #     else:
+    #         time_per_call = 0
+    #     stats.append((name, calls, time_per_call))
+    # return stats
+                                                    
 '''
 @wraps is a standard decorator that can be used on a custom decorator's
 wrapper function. @wraps solves the problem that a function's __name__

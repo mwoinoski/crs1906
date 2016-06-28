@@ -9,7 +9,7 @@ import sys
 from time import sleep
 
 # TODO: import Process from the multiprocessing module
-...
+....
 
 
 # TODO: note the definition of the run_openssl() function. This function will
@@ -46,10 +46,10 @@ def main():
         # TODO: create a Process instance to execute the run_openssl() function
         # HINT: remember to pass file and env to the Process
         # HINT: see slide 8-31
-        ...
+        ....
 
         # TODO: start the Process instance
-        ...
+        ....
 
 
 if __name__ == '__main__':

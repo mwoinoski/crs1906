@@ -30,7 +30,7 @@ class RssNewsFeedParser:
         self.item_element_name = 'item'
         # TODO: call the superclass __init__() method. Pass the value
         # of the item_element_name data attribute as an argument.
-        ...
+        ....
 
     # TODO: cut the get_news() method out of this class and paste it
     # into the NewsFeedParser class.
@@ -116,10 +116,10 @@ class RssNewsFeedParser:
             # passing item_node as the parameter.
             # Save the return value of parse_item() in a local variable
             # named `parsed_item`.
-            parsed_item = ...
+            parsed_item = ....
 
             # TODO: append parsed_item to parsed_content
-            ...
+            ....
 
             if i >= max_items > 0:
                 break

@@ -11,7 +11,7 @@ from .feed_reader import FeedReader
 
 # TODO: make the NewsThread class a subclass of Thread
 # HINT: see slide 8-16
-class NewsThread(...):
+class NewsThread(....):
 
     # TODO: note the arguments to the NewsThread constructor
     # (no code change required)
@@ -31,12 +31,12 @@ class NewsThread(...):
         self.news = None
 
     # TODO: define a run() method that overloads the superclass run() method.
-    def ...
+    def ....
         """Download one type of news and store it in self.news"""
 
         # TODO: use `self.feed_reader` to fetch news of the given
         # `news_type` and assign the result to `self.news`
-        ...
+        ....
 
 
 class AllNewsFeedReader:
@@ -59,19 +59,19 @@ class AllNewsFeedReader:
         # TODO: assign an empty list to the variable named `news_threads`.
         # The `news_threads` list will contain references to NewsThread
         # instances that are downloading the news.
-        news_threads = ...
+        news_threads = ....
 
         for news_type in 'concerts', 'sports', 'movies':
             # TODO: Create an instance of NewsThread to download one type of news.
             # Constructor arguments: self.feed_reader, news_type, max_items
             # HINT: see slide 8-16
-            ...
+            ....
 
             # TODO: Append the new thread to the `news_threads` list
-            ...
+            ....
 
             # TODO: Start the new thread
-            ...
+            ....
 
         # TODO: note the definition of the dictionary named `all_news`
         # (no code change required)
@@ -79,15 +79,15 @@ class AllNewsFeedReader:
 
         # TODO: use a `for` loop to process each thread on the `news_threads`
         # list
-        ...
+        ....
             # TODO: wait for the child thread to complete by calling
             # the thread's join() method
-            ...
+            ....
 
             # TODO: Add the thread's news to the `all_news` dictionary.
             # key: the thread's `news_type` attribute
             # value: the thread's `news` attribute
-            ...
+            ....
 
         # TODO: return the `all_news` dictionary
-        return ...
+        return ....

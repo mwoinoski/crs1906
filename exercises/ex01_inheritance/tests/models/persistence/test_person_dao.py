@@ -72,7 +72,7 @@ class PersonDaoTest(TestCase):
         try:
             mock_init_method.assert_called_once_with(Person, 'email')
         except:
-            print('\nERROR: Person.__init__() should call super().__init__()',
+            print('\nERROR: PersonDao.__init__() should call super().__init__()',
                   file=sys.stderr)
             raise
 
@@ -83,7 +83,7 @@ class PersonDaoTest(TestCase):
             mock_get_method.assert_called_once_with('hsimpson@gmail.com',
                                                     self.session)
         except:
-            print('\nERROR: Person should delegate get() call to BaseDao',
+            print('\nERROR: PersonDao should delegate get() call to BaseDao',
                   file=sys.stderr)
             raise
 

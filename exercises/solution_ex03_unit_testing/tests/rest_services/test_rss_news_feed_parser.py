@@ -120,8 +120,8 @@ class TestRssNewsFeedParser(TestCase):
         # TODO: call a method that asserts the returned list has length 1
         self.assertEqual(1, len(actual))
 
-        # TODO: verify that the returned news item is equal to the first item
-        # on the `expected` list.
+        # TODO: verify that the first item of the `expected` list equals the 
+        # first item of the returned list.
         self.assertEqual(expected[0], actual[0])
 
         # Note that you can combine the two previous assertions into one using

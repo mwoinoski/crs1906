@@ -27,7 +27,7 @@ class ChatClientGui:
 
         # TODO: copy the 3 lines of code from the body of the
         # ChatClient __init__() method here
-        ...
+        ....
 
     def create_widgets(self, name, window):
         if window != root:
@@ -51,7 +51,7 @@ class ChatClientGui:
         self.messaging_field.insert(tk.END, data)
 
     # TODO: copy the new_message() method from ChatClient here
-    def ...
+    def ....
 
     def callback(self, event):
         # TODO: note how we get the message text from the GUI's entry field.
@@ -64,7 +64,7 @@ class ChatClientGui:
 
         # TODO: call the ChatClientGui's new_message() method to send the text
         # from the entry field to the chat room
-        ...
+        ....
 
     # TODO: note that the update() method parameter list and the first 3 lines
     # of code are exactly the same as in the plain ChatClient class.
@@ -84,7 +84,7 @@ class ChatClientGui:
 def main():
     # TODO: create a ChatRoom instance and assign it to a variable named
     # `chat_host`
-    ...
+    ....
 
     # TODO: note the chat_host argument to the ChatClientGui constructor for
     # all three ChatClientGui instances

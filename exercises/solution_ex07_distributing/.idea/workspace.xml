@@ -23,7 +23,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" />
     </list>
-    <ignored path="ex08_distributing.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,7 +37,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="ex08_distributing" />
+    <favorites_list name="solution_ex07_distributing" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -77,15 +76,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../ex08_distributing/simple_tz/tests/test_tz.py" />
-        <option value="$PROJECT_DIR$/../ex08_distributing/simple_tz/README.rst" />
-        <option value="$PROJECT_DIR$/../ex08_distributing/simple_tz/setup.py" />
-        <option value="$PROJECT_DIR$/../ex08_distributing/simple_tz/simple_tz/tz.py" />
-        <option value="$PROJECT_DIR$/../solution_ex08_distributing/simple_tz/setup.cfg" />
-        <option value="$PROJECT_DIR$/../solution_ex08_distributing/simple_tz/README.rst" />
-        <option value="$PROJECT_DIR$/../solution_ex08_distributing/.hgignore" />
-        <option value="$PROJECT_DIR$/../solution_ex08_distributing/simple_tz/simple_tz/tz.py" />
-        <option value="$PROJECT_DIR$/../solution_ex08_distributing/simple_tz/setup.py" />
+        <option value="$PROJECT_DIR$/simple_tz/setup.cfg" />
+        <option value="$PROJECT_DIR$/simple_tz/README.rst" />
+        <option value="$PROJECT_DIR$/.hgignore" />
+        <option value="$PROJECT_DIR$/simple_tz/simple_tz/tz.py" />
+        <option value="$PROJECT_DIR$/simple_tz/setup.py" />
         <option value="$PROJECT_DIR$/sudoku.py" />
       </list>
     </option>
@@ -206,7 +201,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ex08_distributing" />
+      <module name="solution_ex07_distributing" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -221,7 +216,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ex08_distributing" />
+      <module name="solution_ex07_distributing" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -240,7 +235,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ex08_distributing" />
+      <module name="solution_ex07_distributing" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -259,7 +254,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ex08_distributing" />
+      <module name="solution_ex07_distributing" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -280,7 +275,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ex08_distributing" />
+      <module name="solution_ex07_distributing" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -302,7 +297,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ex08_distributing" />
+      <module name="solution_ex07_distributing" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -322,7 +317,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="C:\python\python-3.4\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../ex07_distributing/simple_tz/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/simple_tz/tests" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
