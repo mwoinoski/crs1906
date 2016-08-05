@@ -169,7 +169,7 @@ def test_parse_content_items_missing():
 # Monkey patch RssNewsFeedParser.get_raw_content.
 # We will discuss monkey patching in the second section of the Unit Testing
 # chapter.
-RssNewsFeedParser.get_raw_content = lambda self, url: xml_input
+RssNewsFeedParser.get_raw_content = lambda self, url, max_items: xml_input
 
 
 # TODO: note that there is no call to unittest.main().
