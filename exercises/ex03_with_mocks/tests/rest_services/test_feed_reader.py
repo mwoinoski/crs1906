@@ -83,6 +83,40 @@ class TestFeedReader(TestCase):
         # trace, but as long as you get a green bar, the test case passed.
         # (no code change required)
 
+    def test_fetch_news_items_max_items_1(self):
+        # test set up
+        mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
+        mock_news_feed_parser.get_news.return_value = expected
+        feed_reader = FeedReader()
+        feed_reader.news_feed_parser = mock_news_feed_parser
+
+        # call method under test
+        news = feed_reader.fetch_news_items("music", 1)
+
+        # verify that the mock's get_news() method was called correctly
+        # (for details, see Appendix B)
+        mock_news_feed_parser.get_news.assert_called_once_with("music", 1)
+        # verify results
+        for expected_result, actual_result in zip_longest(expected, news):
+            self.assertEqual(expected_result, actual_result)
+
+    def test_fetch_news_items_max_items_2(self):
+        # test set up
+        mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
+        mock_news_feed_parser.get_news.return_value = expected
+        feed_reader = FeedReader()
+        feed_reader.news_feed_parser = mock_news_feed_parser
+
+        # call method under test
+        news = feed_reader.fetch_news_items("music", 2)
+
+        # verify that the mock's get_news() method was called correctly
+        # (for details, see Appendix B)
+        mock_news_feed_parser.get_news.assert_called_once_with("music", 2)
+        # verify results
+        for expected_result, actual_result in zip_longest(expected, news):
+            self.assertEqual(expected_result, actual_result)
+
 expected = [
     {
         "title": "The Othello of Soul Music - Wall Street Journal",

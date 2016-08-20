@@ -83,33 +83,6 @@
 </pre></font>
 
 
-<font color="grey"><pre>
-    # TODO: use @patch.object to create a Mock. @patch.object will take
-    # two arguments:
-    # 1. the class to be mocked (RssNewsFeedParser)
-    # 2. the name of the method to be mocked, as a string ('get_news') </font><font color="blue">
-    @patch.object(RssNewsFeedParser, 'get_news') </font><font color="grey">
-    def test_get_news_max_items_1(self, mock_get_news_method):
-        # TODO: set the return value of the mocked method to the `expected`
-        # variable (defined at the end of the file) </font><font color="blue">
-	mock_get_news_method.return_value = expected </font><font color="grey">
-
-        ...
-        # TODO: verify that mock_get_news_method was called with
-        # arguments "music" and 1 </font><font color="blue">
-        mock_get_news_method.assert_called_once_with("music", 1)
-</pre></font>
-
-<pre>
-<font color="grey">
-    @patch('ticketmanor.rest_services.feed_reader.feed_reader.RssNewsFeedParser')
-    def test_fetch_news_items_max_items_2(self, mock_news_feed_parser_class):
-	...
-        # TODO: verify the mock_news_feed_parser.get_news method was called
-	# with arguments "music" and 2 </font><font color="blue">
-	mock_news_feed_parser.get_news.assert_called_with("music", 2)
-</font></pre>
-
 <h2>Hints for Exercise 3.2 Bonus</h2>
 
 <h3>test_user_service.py</h3>

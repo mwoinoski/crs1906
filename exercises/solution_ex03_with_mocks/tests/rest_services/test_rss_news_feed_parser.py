@@ -40,6 +40,7 @@ class TestRssNewsFeedParser(TestCase):
 
         actual = feed_reader.parse_xml_content(xml_input, max_items=1)
 
+        self.assertEqual(1, len(actual))
         for expected_result, actual_result in zip_longest(expected[:1], actual):
             self.assertEquals(expected_result, actual_result)
 
@@ -48,6 +49,7 @@ class TestRssNewsFeedParser(TestCase):
 
         actual = feed_reader.parse_xml_content(xml_input, max_items=2)
 
+        self.assertEqual(2, len(actual))
         for expected_result, actual_result in zip_longest(expected[:2], actual):
             self.assertEquals(expected_result, actual_result)
 
