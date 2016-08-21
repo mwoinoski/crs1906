@@ -7,6 +7,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/models/persistence/test_venue_dao.py" afterPath="$PROJECT_DIR$/tests/models/persistence/test_venue_dao.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/models/test_person.py" afterPath="$PROJECT_DIR$/tests/models/test_person.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_support/db_utils.py" afterPath="$PROJECT_DIR$/tests/test_support/db_utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/act.py" afterPath="$PROJECT_DIR$/ticketmanor/models/act.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/address.py" afterPath="$PROJECT_DIR$/ticketmanor/models/address.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/customer.py" afterPath="$PROJECT_DIR$/ticketmanor/models/customer.py" />
@@ -38,12 +39,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="person_dao.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="person_dao.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-              <folding />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#86#121#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,10 +85,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news_feed_parser.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="news_feed_parser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76014763">
+            <state vertical-scroll-proportion="0.0">
               <caret line="88" column="17" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="17" />
               <folding />
             </state>
@@ -377,8 +380,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -399,7 +402,7 @@
     </option>
     <option name="myIpythonEnabled" value="false" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in PersonTestCase">
+  <component name="RunManager" selected="Python tests.Unittests in test_person_dao">
     <configuration default="false" name="Unittests in test_act" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -710,11 +713,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in PersonTestCase" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_act_dao" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_person_dao" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_act" />
         <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_venue_dao" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_person_dao" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_act" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in PersonTestCase" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_act_dao" />
       </list>
     </recent_temporary>
   </component>
@@ -735,12 +738,24 @@
     <history-entry file="Unittests_in_PersonTestCase - 2015.12.18 at 17h 02m 23s.xml">
       <configuration name="Unittests in PersonTestCase" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test_act - 2016.08.20 at 14h 13m 42s.xml">
+      <configuration name="Unittests in test_act" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_person_dao - 2016.08.20 at 14h 00m 40s.xml">
+      <configuration name="Unittests in test_person_dao" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_person_dao - 2016.08.20 at 14h 13m 59s.xml">
+      <configuration name="Unittests in test_person_dao" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_venue_dao - 2016.08.20 at 14h 13m 35s.xml">
+      <configuration name="Unittests in test_venue_dao" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="6" width="991" height="973" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26967472" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26862538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -754,7 +769,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32752612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1073,14 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/models/persistence/test_venue_dao.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1144,9 +1151,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76014763">
+        <state vertical-scroll-proportion="0.0">
           <caret line="88" column="17" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#86#121#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

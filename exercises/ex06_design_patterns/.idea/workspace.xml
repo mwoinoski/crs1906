@@ -5,6 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_client.py" afterPath="$PROJECT_DIR$/chat_client.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_gui_client.py" afterPath="$PROJECT_DIR$/chat_gui_client.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_room.py" afterPath="$PROJECT_DIR$/chat_room.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_room_proxy.py" afterPath="$PROJECT_DIR$/chat_room_proxy.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hints.html" afterPath="$PROJECT_DIR$/hints.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/observer.py" afterPath="$PROJECT_DIR$/observer.py" />
     </list>
@@ -72,7 +73,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -93,6 +93,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>

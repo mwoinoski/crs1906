@@ -80,14 +80,49 @@ class TestFeedReader(TestCase):
         # trace, but as long as you get a green bar, the test case passed.
         # (no code change required)
 
+    def test_fetch_news_items_max_items_1(self):
+        # test set up
+        mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
+        mock_news_feed_parser.get_news.return_value = expected
+        feed_reader = FeedReader()
+        feed_reader.news_feed_parser = mock_news_feed_parser
+
+        # call method under test
+        news = feed_reader.fetch_news_items("music", 1)
+
+        # verify that the mock's get_news() method was called correctly
+        # (for details, see Appendix B)
+        mock_news_feed_parser.get_news.assert_called_once_with("music", 1)
+        # verify results
+        for expected_result, actual_result in zip_longest(expected, news):
+            self.assertEqual(expected_result, actual_result)
+
+    def test_fetch_news_items_max_items_2(self):
+        # test set up
+        mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
+        mock_news_feed_parser.get_news.return_value = expected
+        feed_reader = FeedReader()
+        feed_reader.news_feed_parser = mock_news_feed_parser
+
+        # call method under test
+        news = feed_reader.fetch_news_items("music", 2)
+
+        # verify that the mock's get_news() method was called correctly
+        # (for details, see Appendix B)
+        mock_news_feed_parser.get_news.assert_called_once_with("music", 2)
+        # verify results
+        for expected_result, actual_result in zip_longest(expected, news):
+            self.assertEqual(expected_result, actual_result)
+
     # The @patch.object decorator is an alternate way to create a Mock for a
     # method call. @patch.object takes two arguments:
     # 1. the class to be mocked (RssNewsFeedParser)
     # 2. the name of the method to be mocked, as a string ('get_news')
+    # For details, see Appendix B
     @patch.object(RssNewsFeedParser, 'get_news')
     # The second argument to the test case method is the Mock object for the
     # mocked method.
-    def test_fetch_news_items_max_items_1(self, mock_get_news_method):
+    def test_fetch_news_items_patch_object_decorator(self, mock_get_news_method):
         # Set the return value of the mocked method to the `expected`
         # variable (defined at the end of the file)
         mock_get_news_method.return_value = expected
@@ -103,18 +138,19 @@ class TestFeedReader(TestCase):
         # `expected`
         news = feed_reader.fetch_news_items("music", 1)
 
-        # Verify that mock_get_news_method was called with
-        # arguments "music" and 1
+        # verify that the mock's get_news() method was called correctly
+        # (for details, see Appendix B)
         mock_get_news_method.assert_called_once_with("music", 1)
-
+        # verify results
         for expected_result, actual_result in zip_longest(expected, news):
             self.assertEqual(expected_result, actual_result)
 
     # The @patch decorator allows you to completely replace the
     # RssNewsFeedParser class. This ensures that its constructor is never
     # called.
+    # For details, see Appendix B
     @patch('ticketmanor.rest_services.feed_reader.feed_reader.RssNewsFeedParser')
-    def test_fetch_news_items_max_items_2(self, mock_news_feed_parser_class):
+    def test_fetch_news_items_patch_decorator(self, mock_news_feed_parser_class):
         # Always patch an object where it is imported, not where it is defined.
         # Here, we're testing a method in
         # ticketmanor.rest_services.feed_reader.feed_reader.FeedReader, which
@@ -132,10 +168,10 @@ class TestFeedReader(TestCase):
 
         news = feed_reader.fetch_news_items("music", 2)
 
-        # Verify the mock_news_feed_parser.get_news method was called
-        # with arguments "music" and 2
+        # verify that the mock's get_news() method was called correctly
+        # (for details, see Appendix B)
         mock_news_feed_parser.get_news.assert_called_once_with("music", 2)
-
+        # verify results
         for expected_result, actual_result in zip_longest(expected, news):
             self.assertEqual(expected_result, actual_result)
 
