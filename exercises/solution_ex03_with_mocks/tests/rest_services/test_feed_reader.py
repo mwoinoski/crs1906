@@ -53,8 +53,8 @@ class TestFeedReader(TestCase):
         # variable named `mock_news_feed_parser`
         mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
 
-        # TODO: configure the mock so that a call to its get_news() method has
-        # the side effect of raising a FeedReaderException.
+        # TODO: set the `side_effect` attribute of the mock's `get_news` method
+        # so it raises a FeedReaderException when called.
         mock_news_feed_parser.get_news.side_effect = FeedReaderException()
 
         # TODO: create a FeedReader instance and assign it to a local variable

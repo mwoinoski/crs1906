@@ -27,7 +27,6 @@ def run_openssl(file, pw):
                 # For the `stdin` argument, pass in_file
                 # For the `stdout` argument, pass out_file
                 # Assign the returned Popen instance to a local variable.
-                # HINT: see slide 8-10
                 cmd = ['openssl', 'enc', '-e', '-aes256', '-pass', 'env:secret']
                 proc = subprocess.Popen(cmd, env=environ, 
                                         stdin=in_file, stdout=out_file)
@@ -60,7 +59,6 @@ def main():
     for file in sys.argv[1:]:
         # TODO: Call run_openssl(), passing arguments file and password
         # Save the returned Popen instance in a local variable.
-        # HINT: see slide 8-11
         proc = run_openssl(file, pw)
 
         # TODO: append the Popen instance to the `procs` list

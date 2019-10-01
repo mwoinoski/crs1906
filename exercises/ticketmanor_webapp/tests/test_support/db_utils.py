@@ -14,6 +14,8 @@ def create_db_tables(db):
 
     :param db: name of SQLite database file
     """
+    drop_db_tables(db)
+
     conn = sqlite3.connect(db)
     c = conn.cursor()
 
@@ -157,22 +159,22 @@ def drop_db_tables(db):
     conn = sqlite3.connect(db)
     c = conn.cursor()
 
-    c.execute('''DROP TABLE acts''')
-    c.execute('''DROP TABLE acts_events''')
-    c.execute('''DROP TABLE admin''')
-    c.execute('''DROP TABLE auditoriums''')
-    c.execute('''DROP TABLE customers''')
-    c.execute('''DROP TABLE events''')
-    c.execute('''DROP TABLE feedbackform''')
-    c.execute('''DROP TABLE members''')
-    c.execute('''DROP TABLE movies''')
-    c.execute('''DROP TABLE order_items''')
-    c.execute('''DROP TABLE orders''')
-    c.execute('''DROP TABLE orders_order_items''')
-    c.execute('''DROP TABLE people''')
-    c.execute('''DROP TABLE sellable''')
-    c.execute('''DROP TABLE tickets''')
-    c.execute('''DROP TABLE venues''')
+    c.execute('''DROP TABLE IF EXISTS acts''')
+    c.execute('''DROP TABLE IF EXISTS acts_events''')
+    c.execute('''DROP TABLE IF EXISTS admin''')
+    c.execute('''DROP TABLE IF EXISTS auditoriums''')
+    c.execute('''DROP TABLE IF EXISTS customers''')
+    c.execute('''DROP TABLE IF EXISTS events''')
+    c.execute('''DROP TABLE IF EXISTS feedbackform''')
+    c.execute('''DROP TABLE IF EXISTS members''')
+    c.execute('''DROP TABLE IF EXISTS movies''')
+    c.execute('''DROP TABLE IF EXISTS order_items''')
+    c.execute('''DROP TABLE IF EXISTS orders''')
+    c.execute('''DROP TABLE IF EXISTS orders_order_items''')
+    c.execute('''DROP TABLE IF EXISTS people''')
+    c.execute('''DROP TABLE IF EXISTS sellable''')
+    c.execute('''DROP TABLE IF EXISTS tickets''')
+    c.execute('''DROP TABLE IF EXISTS venues''')
 
     conn.commit()
     c.close()

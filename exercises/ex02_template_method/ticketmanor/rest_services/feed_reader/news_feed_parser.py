@@ -19,7 +19,7 @@ from ticketmanor.rest_services.feed_reader import (
 
 # BONUS TODO: make NewsFeedParser an abstract base class
 # HINT: see slide 2-16
-class NewsFeedParser:
+class NewsFeedParser(....):
 
     # TODO: note the definition of the NewsFeedParser __init__() method.
     # (no code changes required)

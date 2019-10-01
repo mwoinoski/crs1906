@@ -7,7 +7,7 @@ See http://docs.pylonsproject.org/projects/pyramid/en/1.3-branch/narr/testing.ht
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest import TestCase, main
-from unittest.mock import MagicMock
+from unittest.mock import Mock
 
 from pyramid import testing
 
@@ -51,7 +51,7 @@ class LoginViewTest(TestCase):
         class StubDao:
             person = Person(id=123)
             get_person = \
-                MagicMock(spec=BaseDao, return_value=person)
+                Mock(spec=BaseDao, return_value=person)
         request = testing.DummyRequest()
         request.db_session = None
         request.params['user_id'] = 'Ben'
@@ -66,7 +66,7 @@ class LoginViewTest(TestCase):
         class StubDao:
             from sqlalchemy.exc import DBAPIError
             get_person = \
-                MagicMock(side_effect=DBAPIError('DB error', None, None))
+                Mock(side_effect=DBAPIError('DB error', None, None))
         request = testing.DummyRequest()
         request.db_session = None
         request.params['user_id'] = 'Ben'

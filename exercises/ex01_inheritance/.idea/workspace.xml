@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e66dba11-0105-4e20-9ded-e67a8f9ecea9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hints.html" afterPath="$PROJECT_DIR$/hints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/models/persistence/test_act_dao.py" afterPath="$PROJECT_DIR$/tests/models/persistence/test_act_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/models/persistence/test_person_dao.py" afterPath="$PROJECT_DIR$/tests/models/persistence/test_person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/models/persistence/test_venue_dao.py" afterPath="$PROJECT_DIR$/tests/models/persistence/test_venue_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/models/test_person.py" afterPath="$PROJECT_DIR$/tests/models/test_person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/customer.py" afterPath="$PROJECT_DIR$/ticketmanor/models/customer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/member.py" afterPath="$PROJECT_DIR$/ticketmanor/models/member.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/persistence/act_dao.py" afterPath="$PROJECT_DIR$/ticketmanor/models/persistence/act_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py" afterPath="$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/person.py" afterPath="$PROJECT_DIR$/ticketmanor/models/person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/models/user.py" afterPath="$PROJECT_DIR$/ticketmanor/models/user.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/scripts/func_stats.py" afterPath="$PROJECT_DIR$/ticketmanor/scripts/func_stats.py" />
-    </list>
+    <list default="true" id="e66dba11-0105-4e20-9ded-e67a8f9ecea9" name="Default" comment="" />
     <ignored path="ex01_inheritance.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,10 +51,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="9" />
-    <option name="y" value="6" />
+    <option name="x" value="422" />
+    <option name="y" value="1" />
     <option name="width" value="991" />
-    <option name="height" value="973" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -97,6 +81,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -171,8 +157,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -571,10 +555,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="6" width="991" height="973" extended-state="0" />
+    <frame x="422" y="1" width="991" height="904" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28961176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3084995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -835,13 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/base_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.287594">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/python/python-3.4/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -892,20 +869,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketmanor/models/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/person.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -983,6 +946,27 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/base_dao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2881356">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketmanor/models/person.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />

@@ -22,7 +22,7 @@ from ticketmanor.rest_services.feed_reader.rss_dummy_news import RssDummyNews
 
 
 # TODO: make RssNewsFeedParser a subclass of NewsFeedParser
-class RssNewsFeedParser:
+class RssNewsFeedParser(....):
     """Parses a RSS news feed"""
     feed_type = 'rss'
 
@@ -67,7 +67,7 @@ class RssNewsFeedParser:
     # (no code changes required)
     def get_url(self, news_type):
         """Implementation of abstract method"""
-        return 'https://news.google.com/news?output={}&pz=1&ned=us&hl=en&q={}'\
+        return 'https://news.google.com/news/headlines?output={}&pz=1&ned=us&hl=en&q={}'\
             .format(RssNewsFeedParser.feed_type, news_type)
 
     # TODO: cut the get_raw_content() method out of this class and paste it

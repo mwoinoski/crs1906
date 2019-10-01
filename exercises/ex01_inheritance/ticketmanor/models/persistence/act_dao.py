@@ -13,7 +13,7 @@ from ticketmanor.models.persistence import PersistenceError
 
 
 # TODO: make the ActDao class a subclass of BaseDao
-class ActDao:
+class ActDao():
     """
     Persistence methods for Act instances.
     """
@@ -27,9 +27,13 @@ class ActDao:
         # 2. the name of the entity's ID field ('id')
 
 
+
     def query_for_act(self, db_session, *, act_type, search_type, **kwargs):
         """
         Search for an act of the given type.
+        
+        Note: parameters after '*' or '*identifier' are keyword-only parameters
+        and may only be passed using keyword arguments.
 
         :param act_type music, sports, movie, or theater
         :param search_type based on act_type; e.g., music searches support

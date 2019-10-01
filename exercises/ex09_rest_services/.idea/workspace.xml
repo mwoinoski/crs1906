@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff2a5aad-2e03-4cf4-b360-66817d7434ac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hints.html" afterPath="$PROJECT_DIR$/hints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_user_rest_service_json.py" afterPath="$PROJECT_DIR$/test_user_rest_service_json.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_user_rest_service_xml.py" afterPath="$PROJECT_DIR$/test_user_rest_service_xml.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_service/rest_server.py" afterPath="$PROJECT_DIR$/user_service/rest_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_service/test_rest_server.py" afterPath="$PROJECT_DIR$/user_service/test_rest_server.py" />
-    </list>
+    <list default="true" id="ff2a5aad-2e03-4cf4-b360-66817d7434ac" name="Default" comment="" />
     <ignored path="ex09_rest_services.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,17 +25,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test_user_rest_service_json.py" />
         <option value="$PROJECT_DIR$/user_service/rest_server.py" />
         <option value="$PROJECT_DIR$/user_service/rest_server_dao.py" />
+        <option value="$PROJECT_DIR$/test_user_rest_service_json.py" />
+        <option value="$PROJECT_DIR$/test_user_rest_service_xml.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="9" />
-    <option name="y" value="6" />
+    <option name="x" value="422" />
+    <option name="y" value="1" />
     <option name="width" value="991" />
-    <option name="height" value="973" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -68,7 +63,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -103,7 +98,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,7 +336,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="6" width="991" height="973" extended-state="0" />
+    <frame x="422" y="1" width="991" height="904" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27072403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -422,7 +417,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_user_rest_service_xml.py">
+    <entry file="file://$PROJECT_DIR$/user_service/rest_server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -431,12 +426,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_user_rest_service_json.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33293977">
-          <caret line="55" column="6" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user_service/rest_server.py">
+    <entry file="file://$PROJECT_DIR$/test_user_rest_service_xml.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />

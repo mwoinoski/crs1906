@@ -13,17 +13,19 @@ from ticketmanor.models.venue import Venue
 
 
 # TODO: make the VenueDao class a subclass of BaseDao
-class VenueDao:
+class VenueDao():
     """
     Persistence methods for Venue instances.
     """
 
     # TODO: define the __init__() method, with one parameter, self
 
+
         # TODO: in the __init__() method, call the superclass's __init__(),
         # passing two arguments:
         # 1. the class of the entity that will be persisted (Venue)
         # 2. the name of the entity's ID field ('id')
+
 
 
     @classmethod

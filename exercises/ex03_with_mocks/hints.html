@@ -41,10 +41,10 @@
     def test_fetch_news_items_raise_FeedReaderException(self):
         # TODO: create a mock RssNewsFeedParser object and assign it to a local
         # variable named `mock_news_feed_parser` </font><font color="blue">
-	mock_news_feed_parser = Mock(spec=RssNewsFeedParser) </font><font color="grey">
+        mock_news_feed_parser = Mock(spec=RssNewsFeedParser) </font><font color="grey">
 
-        # TODO: configure the mock so that a call to its get_news() method has
-        # the side effect of raising a FeedReaderException. </font><font color="blue">
+        # TODO: set the `side_effect` attribute of the mock's `get_news` method
+        # so it raises a FeedReaderException when called. </font><font color="blue">
         mock_news_feed_parser.get_news.side_effect = FeedReaderException() 
 </pre></font>
 

@@ -70,7 +70,7 @@ def test_get_user_found():
     email = 'ned.flanders@gmail.com'
 
     # TODO: build the URL for the GET request from base_url and email
-    # HINT: see slide 9-35
+    # HINT: see slide B-70
     url = '{}/{}'.format(base_url, email)
 
     # TODO: set the HTTP Accept header to 'application/xml'
@@ -82,7 +82,7 @@ def test_get_user_found():
 
     # TODO: get the XML from the response body and assign it to a variable
     # named 'actual_result'
-    # HINT: see slide 9-43
+    # HINT: see slide B-70
     actual_result = r.text
 
     print('GET {} status {}, response = {}'
@@ -120,7 +120,7 @@ def test_add_user_ok():
     # TODO: send the POST request and store the result in a variable named 'r'
     # HINT: you don't need to send authorization credentials.
     # HINT: pass the XML string as the data argument
-    # HINT: see slide 9-45
+    # HINT: see slide B-72
     r = requests.post(url, headers=http_headers, data=user_miles_xml.strip())
 
     print('POST {} status {}'.format(url, r.status_code))
@@ -152,25 +152,6 @@ def test_update_user_ok():
     # TODO: note the assertion that tests the result of the REST request
     # (no code change required)
     assert r.status_code == 202
-
-
-def test_delete_user_found():
-    # TODO: you'll delete a user with DELETE request like this:
-    # DELETE http://localhost/rest/users/ned.flanders@gmail.com
-    # (no code change required)
-
-    # TODO: build the URL for the GET request from base_url and email
-    url = '{}/{}'.format(base_url, 'miles@jazz.com')
-
-    # TODO: send the DELETE request and store the result in a variable 'r'
-    # HINT: you don't need to send authorization credentials.
-    r = requests.delete(url)
-
-    print('DELETE {} status {}'.format(url, r.status_code))
-
-    # TODO: note the assertion that tests the result of the REST request
-    # (no code change required)
-    assert r.status_code == 204
 
 
 def test_delete_user_not_found():

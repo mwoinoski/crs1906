@@ -1,4 +1,4 @@
-"""
+r"""
 monkey_patch_demo.py - Example of monkey patching, from Chapter 3
 """
 

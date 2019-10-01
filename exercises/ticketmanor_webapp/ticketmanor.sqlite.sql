@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS acts;
+
 CREATE TABLE acts (
   id INTEGER PRIMAY KEY,
   notes varchar(255) DEFAULT NULL,
@@ -80,6 +82,8 @@ INSERT INTO acts VALUES (303,'Gershwin Rhapsody in Blue','New York Philharmonic'
 INSERT INTO acts VALUES (304,'Sketches of Spain','Wynton Marsalis',1,0);
 INSERT INTO acts VALUES (305,'The Standard','Take 6',1,0);
 
+DROP TABLE IF EXISTS acts_events;
+
 CREATE TABLE acts_events (
   acts_id bigint(20) NOT NULL,
   events_id bigint(20) NOT NULL,
@@ -97,10 +101,14 @@ INSERT INTO acts_events VALUES (301,502);
 INSERT INTO acts_events VALUES (301,503);
 INSERT INTO acts_events VALUES (301,504);
 
+DROP TABLE IF EXISTS admin;
+
 CREATE TABLE admin (
   id INTEGER PRIMARY KEY,
   FOREIGN KEY (id) REFERENCES people (id)
 );
+
+DROP TABLE IF EXISTS auditoriums;
 
 CREATE TABLE auditoriums (
   id INTEGER PRIMARY KEY,
@@ -110,10 +118,14 @@ CREATE TABLE auditoriums (
   FOREIGN KEY (venue_id) REFERENCES venues (id)
 );
 
+DROP TABLE IF EXISTS customers;
+
 CREATE TABLE customers (
   id INTEGER PRIMARY KEY,
   FOREIGN KEY (id) REFERENCES people (id)
 );
+
+DROP TABLE IF EXISTS events;
 
 CREATE TABLE events (
   id INTEGER PRIMARY KEY,
@@ -292,6 +304,8 @@ INSERT INTO events VALUES (503,'2015-12-31 21:00:00',402,NULL);
 INSERT INTO events VALUES (504,'2015-12-25 10:00:00',402,NULL);
 INSERT INTO events VALUES (505,'2016-01-01 10:00:00',402,NULL);
 
+DROP TABLE IF EXISTS feedbackform;
+
 CREATE TABLE feedbackform (
   id INTEGER PRIMARY KEY,
   comment varchar(255) DEFAULT NULL,
@@ -300,6 +314,8 @@ CREATE TABLE feedbackform (
   date text
 );
 
+DROP TABLE IF EXISTS members;
+
 CREATE TABLE members (
   profilePhoto blob,
   id INTEGER PRIMARY KEY,
@@ -307,11 +323,15 @@ CREATE TABLE members (
   FOREIGN KEY (id) REFERENCES people (id)
 );
 
+DROP TABLE IF EXISTS movies;
+
 CREATE TABLE movies (
   director varchar(255) DEFAULT NULL,
   id INTEGER PRIMARY KEY,
   FOREIGN KEY (id) REFERENCES acts (id)
 );
+
+DROP TABLE IF EXISTS order_items;
 
 CREATE TABLE order_items (
   id INTEGER PRIMARY KEY,
@@ -320,11 +340,15 @@ CREATE TABLE order_items (
   FOREIGN KEY (sellable_id) REFERENCES sellable (id)
 );
 
+DROP TABLE IF EXISTS orders;
+
 CREATE TABLE orders (
   id INTEGER PRIMARY KEY,
   member_id bigint(20) DEFAULT NULL,
   FOREIGN KEY (member_id) REFERENCES members (id)
 );
+
+DROP TABLE IF EXISTS orders_order_items;
 
 CREATE TABLE orders_order_items (
   orders_id bigint(20) NOT NULL,
@@ -332,6 +356,8 @@ CREATE TABLE orders_order_items (
   FOREIGN KEY (orders_id) REFERENCES orders (id),
   FOREIGN KEY (items_id) REFERENCES order_items (id)
 );
+
+DROP TABLE IF EXISTS people;
 
 CREATE TABLE people (
   id INTEGER PRIMAY KEY,
@@ -353,10 +379,14 @@ INSERT INTO people VALUES (4,'Springfield','USA','97478','OR','123 Maple St','ho
 INSERT INTO people VALUES (5,'Springfield','USA','97478','OR','125 Maple St','ned.flanders@gmail.com','Ned','Flanders','Abraham');
 INSERT INTO people VALUES (6,'Chicago','USA','34568','IL','123 Cool St','miles@jazz.com','Miles','Davis','');
 
+DROP TABLE IF EXISTS sellable;
+
 CREATE TABLE sellable (
   id INTEGER PRIMARY KEY,
   price double NOT NULL
 );
+
+DROP TABLE IF EXISTS tickets;
 
 CREATE TABLE tickets (
   price double DEFAULT NULL,
@@ -366,6 +396,8 @@ CREATE TABLE tickets (
   FOREIGN KEY (event_id) REFERENCES events (id),
   FOREIGN KEY (id) REFERENCES sellable (id)
 );
+
+DROP TABLE IF EXISTS venues;
 
 CREATE TABLE venues (
   id INTEGER PRIMARY KEY,

@@ -23,7 +23,6 @@ class FeedReader:
         # FeedReader class and the RssNewsFeedParser class.
         # (no code change required)
         self.news_feed_parser = RssNewsFeedParser()
-        return
 
     def fetch_news_items(self, news_type, max_items=0):
         """

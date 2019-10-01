@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4facf1c3-a143-41a2-b2c6-c18d2ca3bafc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat/chat_server.py" afterPath="$PROJECT_DIR$/chat/chat_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hints.html" afterPath="$PROJECT_DIR$/hints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pi_monte_carlo/pi.py" afterPath="$PROJECT_DIR$/pi_monte_carlo/pi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/subprocesses/decrypt.py" afterPath="$PROJECT_DIR$/subprocesses/decrypt.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/subprocesses/encrypt.py" afterPath="$PROJECT_DIR$/subprocesses/encrypt.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/user_service.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/user_service.py" />
-    </list>
+    <list default="true" id="4facf1c3-a143-41a2-b2c6-c18d2ca3bafc" name="Default" comment="" />
     <ignored path="ex08_multiprocessing.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,10 +33,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="9" />
-    <option name="y" value="6" />
+    <option name="x" value="422" />
+    <option name="y" value="1" />
     <option name="width" value="991" />
-    <option name="height" value="973" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -71,7 +63,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -161,6 +152,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,7 +371,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="6" width="991" height="973" extended-state="0" />
+    <frame x="422" y="1" width="991" height="904" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2759706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

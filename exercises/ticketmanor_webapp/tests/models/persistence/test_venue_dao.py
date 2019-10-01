@@ -156,6 +156,7 @@ class VenueDaoTest(TestCase):
 
     def tearDown(self):
         self.session.close_all()
+        #self.session.close_all_sessions()
         drop_db_tables(db_filename)
 
     # -------------------------------------------------------------------------

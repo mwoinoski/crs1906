@@ -1,4 +1,4 @@
-"""
+r"""
 magicmock_demo.py - Example of MagicMock, from Chapter 3
 """
 

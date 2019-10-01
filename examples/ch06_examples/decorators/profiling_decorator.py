@@ -8,22 +8,23 @@ Usage example:
         ...
 """
 
-from time import process_time
+import time
 from decorators import format_args
 
 
-def profile_call(decorated_fn):
+def profile_call(target_func):
     """decorator for profiling function execution time"""
-    def profile(*args, **kwargs):
-        before = process_time()
 
-        # call the decorated function
-        result = decorated_fn(*args, **kwargs)  # unwrap the argument list
-
-        print('{}({}) ran in {} secs'.format(
-            decorated_fn.__name__, format_args(*args, **kwargs),
-            process_time() - before))
+    def wrapper(*args, **kwargs):
+        """Nested function definition"""
+        start = time.process_time()
+        # Call target function
+        result = target_func(*args, **kwargs)  # unwrap the argument list
+        end = time.process_time()
+        print('{}({}): {} secs'.format(
+            target_func.__name__, format_args(*args, **kwargs),
+            end - start))
         return result
 
-    # outer function returns reference to nested function
-    return profile
+    # Decorator function returns reference to nested wrapper function
+    return wrapper

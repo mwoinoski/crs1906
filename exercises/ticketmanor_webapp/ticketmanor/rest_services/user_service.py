@@ -115,4 +115,4 @@ class UserServiceRest:
             self._dao.delete(email, self._request.db_session)
         except PersistenceError:
             raise HTTPNotFound()
-        return Response(status_int=204)
+        return Response(status_int=204, content_type=None)

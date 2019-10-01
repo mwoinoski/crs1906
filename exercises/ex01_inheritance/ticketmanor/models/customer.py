@@ -8,7 +8,7 @@ __author__ = 'Mike Woinoski mike@articulatedesign.us.com'
 
 
 # TODO: make Customer a subclass of User
-class Customer:
+class Customer():
     """
     Model class for Customer
     """

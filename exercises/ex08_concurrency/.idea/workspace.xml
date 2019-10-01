@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b008c8f-0480-4397-9ba1-0706ec7e40dd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat/chat_server.py" afterPath="$PROJECT_DIR$/chat/chat_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat/test_chat_server.py" afterPath="$PROJECT_DIR$/chat/test_chat_server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/development.ini" afterPath="$PROJECT_DIR$/development.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hints.html" afterPath="$PROJECT_DIR$/hints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production.ini" afterPath="$PROJECT_DIR$/production.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/subprocesses/encrypt.py" afterPath="$PROJECT_DIR$/subprocesses/encrypt.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/news/all_news.html" afterPath="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/news/all_news.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" afterPath="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-    </list>
+    <list default="true" id="3b008c8f-0480-4397-9ba1-0706ec7e40dd" name="Default" comment="" />
     <ignored path="ex08_concurrency.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,10 +31,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="9" />
-    <option name="y" value="6" />
+    <option name="x" value="422" />
+    <option name="y" value="1" />
     <option name="width" value="991" />
-    <option name="height" value="973" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -76,6 +62,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -110,7 +97,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -347,7 +333,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="6" width="991" height="973" extended-state="0" />
+    <frame x="422" y="1" width="991" height="904" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31794333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

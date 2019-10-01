@@ -10,6 +10,9 @@ exercises.zip
 # PyCharm workspace config
 # .idea/
 
+# VS Code project config
+.vscode/
+
 # Mecurial repositories
 .hg/
 
@@ -25,6 +28,7 @@ pypiserver_packages/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+.mypy_cache/
 
 # MySQL Workbench
 *.mwb

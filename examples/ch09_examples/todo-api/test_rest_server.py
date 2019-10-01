@@ -11,7 +11,7 @@ base_url = 'http://localhost:5000/todo/api/v1.0/tasks'
 def get_task(task_id):
     http_hdrs = {'Accept': 'application/json'}
     creds = ('student', 'studentpw')
-    url = '{}/{}'.format(base_url, task_id)
+    url = base_url + '/' + task_id
 
     r = requests.get(url, auth=creds, headers=http_hdrs)
 
@@ -25,7 +25,8 @@ def get_task(task_id):
 
 
 def create_task(title, description, done):
-    http_hdrs = {'Content-Type': 'application/json'}
+    http_hdrs = {'Content-Type': 'application/json',
+                 'Accept': 'application/json'}
     creds = ('student', 'studentpw')
     task = {
         'title': title,
@@ -43,7 +44,7 @@ def create_task(title, description, done):
 
 
 def update_task(id, task):
-    url = '{}/{}'.format(base_url, id)
+    url = base_url + '/' + id
     http_hdrs = {'Accept': 'application/json'}
     creds = ('student', 'studentpw')
 
@@ -57,7 +58,7 @@ def update_task(id, task):
 
 
 def delete_task(id):
-    url = '{}/{}'.format(base_url, id)
+    url = base_url + '/' + id
 
     r = requests.delete(url, auth=('student', 'studentpw'))
 
@@ -138,8 +139,7 @@ class TestRestServer(unittest.TestCase):
 
     def test_99_get_task_bad_creds(self):
         expected = {'error': 'Unauthorized access'}
-        url = '{}/{}'.format(base_url,
-                             TestRestServer.new_task_id)
+        url = base_url + '/' + TestRestServer.new_task_id
         http_hdrs = {'Accept': 'application/json'}
         creds = ('homer', 'donuts')
 

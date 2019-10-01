@@ -27,7 +27,7 @@ class RssNewsFeedParser(NewsFeedParser):
 
     def get_url(self, news_type):
         """Implementation of abstract method"""
-        return 'https://news.google.com/news?output={}&pz=1&ned=us&hl=en&q={}'\
+        return 'https://news.google.com/news/headlines?output={}&pz=1&ned=us&hl=en&q={}'\
             .format(RssNewsFeedParser.feed_type, news_type)
 
     def get_dummy_news(self, url, news_type):

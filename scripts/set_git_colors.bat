@@ -1,0 +1,8 @@
+git config --global color.status.header "black normal bold"
+git config --global color.status.added "green normal bold"
+git config --global color.status.updated "green normal bold"
+git config --global color.status.changed "yellow normal bold"
+git config --global color.status.untracked "cyan normal bold"
+git config --global color.status.branch "magenta normal bold"
+git config --global color.status.nobranch "normal normal bold"
+git config --global color.status.unmerged "red normal bold"

@@ -1,4 +1,4 @@
-"""
+r"""
 monkey_patch_business_object.py - Example of monkey patching, from Chapter 3
 """
 import types

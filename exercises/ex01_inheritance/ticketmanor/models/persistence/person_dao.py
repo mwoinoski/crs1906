@@ -10,17 +10,19 @@ from ticketmanor.models.persistence import PersistenceError
 
 
 # TODO: make the PersonDao class a subclass of BaseDao
-class PersonDao:
+class PersonDao():
     """
     Persistence methods for Person instances.
     """
 
     # TODO: define the __init__() method, with one parameter, self
 
+
         # TODO: call the superclass's __init__(), passing two arguments:
         # 1. the class of the entity that will be persisted (Person)
         # 2. the name of the entity's ID field ('email')
         # HINT: see slide 1-21
+
 
 
     # TODO: cut all methods from here to the end of the file and paste them

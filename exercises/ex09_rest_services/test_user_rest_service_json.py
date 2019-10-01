@@ -152,26 +152,6 @@ def test_update_user_ok():
     assert r.status_code == 202
 
 
-def test_delete_user_found():
-    # TODO: you'll delete a user with DELETE request like this:
-    # DELETE http://localhost/rest/users/ned.flanders@gmail.com
-    # (no code change required)
-
-    # TODO: build the URL for the GET request from base_url and email
-    ....
-
-    # TODO: send the DELETE request and store the result in a variable 'r'
-    # HINT: you don't need to send authorization credentials.
-    # HINT: see slide 9-37
-    r = ....
-
-    print('DELETE status {}'.format( r.status_code))
-
-    # TODO: note the assertion that tests the result of the REST request
-    # (no code change required)
-    assert r.status_code == 204
-
-
 def test_delete_user_not_found():
     url = '{}/{}'.format(base_url, 'nobody@nowhere.com')
 

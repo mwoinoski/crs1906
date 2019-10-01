@@ -1,4 +1,4 @@
-"""Unit tests for Person
+r"""Unit tests for Person
 
    Run as follows:
    cd C:\crs1906\examples\ch03_examples

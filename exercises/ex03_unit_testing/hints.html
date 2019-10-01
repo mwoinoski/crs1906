@@ -23,7 +23,7 @@ class TestRssNewsFeedParser(TestCase):
 
 <font color="grey"><pre>
 	# TODO:
-        # 1. call the feed reader's get_news() method, passing 'music' as the
+        # 1. call the news feed parser's get_news() method, passing 'music' as the
         #    argument
         # 2. save the list returned by the method in a local variable </font><font color="blue">
 	actual = feed_reader.get_news('music')
@@ -53,15 +53,14 @@ class TestRssNewsFeedParser(TestCase):
 </pre></font>
 
 <font color="grey"><pre>
-        # TODO: call a method that asserts the returned list has length 1
-        # HINT: use the built-in function len() </font><font color="blue">
+        # TODO: assert that the returned list has length 1 and that the first
+        # item of the `expected` list equals the first item of the returned 
+        # list.
+        # HINT: use the built-in function len(), or use list slicing </font><font color="blue">
         self.assertEqual(1, len(actual))
-</pre></font>
-
-<font color="grey"><pre>
-        # TODO: verify that the returned news item is equal to the first item
-        # on the `expected` list. </font><font color="blue">
-        self.assertEqual(expected[0], actual[0])
+        self.assertEqual(expected[0], actual[0]) <font color="grey">
+        # Using list slicing (compares the lists' lengths and contents): </font><font color="blue">
+        self.assertEqual(expected[:1], actual)
 </pre></font>
 
 <font color="grey"><pre>

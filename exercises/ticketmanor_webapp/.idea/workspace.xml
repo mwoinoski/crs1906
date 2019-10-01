@@ -1,955 +1,296 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70e0d77d-87d5-4171-8978-d07aabaaf4dd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" />
+    <list default="true" id="64800e3e-232b-4bdd-9d53-4fc23dcf1a79" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/appA_examples/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch01_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch01_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch01_examples/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch02_examples/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/business_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/business_object.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/magicmock_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/magicmock_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/mock_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/mock_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/mock_patch_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/mock_patch_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/mock_sentinel_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/mock_sentinel_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/monkey_patch_business_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/monkey_patch_business_object.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/monkey_patch_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/monkey_patch_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/person.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/person.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/person_buggy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/person_buggy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/test_person.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/test_person.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/test_person_fail.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/test_person_fail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/test_person_nose.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/test_person_nose.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/test_person_nose_fail.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/test_person_nose_fail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch04_examples/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch05_examples/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch06_examples/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch06_examples/decorators/profiling_decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch06_examples/decorators/profiling_decorator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch07_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch07_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch07_examples/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch08_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch08_examples/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch09_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch09_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch09_examples/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch09_examples/todo-api/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch09_examples/todo-api/test_rest_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch09_examples/todo-api/test_rest_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../appA_extending_python/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/models/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/models/customer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/models/member.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/models/member.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/models/persistence/act_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/models/persistence/act_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/models/persistence/person_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/models/persistence/person_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/models/persistence/venue_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/models/persistence/venue_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/hints.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/hints.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/hints.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/hints.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/tests/views/test_login_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/tests/views/test_login_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex04_debugging/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex05_performance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex05_performance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex05_performance/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex06_design_patterns/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex06_design_patterns/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex06_design_patterns/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex06_design_patterns/sudoku.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex06_design_patterns/sudoku.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex07_distributing/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex07_distributing/simple_tz/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../ex07_distributing/simple_tz/README.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex07_distributing/simple_tz/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex07_distributing/simple_tz/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/subprocesses/decrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/subprocesses/decrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/subprocesses/encrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/subprocesses/encrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/pi_monte_carlo/pi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/pi_monte_carlo/pi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/subprocesses/encrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/subprocesses/encrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex09_rest_services/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex09_rest_services/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex09_rest_services/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex09_rest_services/hints.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex09_rest_services/hints.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex09_rest_services/test_user_rest_service_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex09_rest_services/test_user_rest_service_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex09_rest_services/test_user_rest_service_xml.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex09_rest_services/test_user_rest_service_xml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/dictionaries/user.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/solution_ex01_inheritance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/solution_ex01_inheritance.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/course load setup.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor_pylint.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/views/test_login_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/views/test_login_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex04_debugging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex04_debugging/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex04_debugging/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex05_performance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex05_performance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex05_performance/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex06_design_patterns/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex06_design_patterns/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex06_design_patterns/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex07_distributing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex07_distributing/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/subprocesses/encrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/subprocesses/encrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/test_user_rest_service_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/test_user_rest_service_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/test_user_rest_service_xml.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/test_user_rest_service_xml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/user.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_ticketmanor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ticketmanor_webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ticketmanor_webapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/models/persistence/test_act_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/models/persistence/test_act_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/models/persistence/test_venue_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/models/persistence/test_venue_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/rest_services/test_atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/rest_services/test_atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_support/db_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_support/db_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketmanor.sqlite.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor.sqlite.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketmanor/models/persistence/base_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/models/persistence/base_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketmanor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketmanor/rest_services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketmanor/rest_services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" afterDir="false" />
     </list>
-    <ignored path="ticketmanor_webapp.iws" />
-    <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="ticketmanor_webapp" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/ticketmanor/views/login_view.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/models/act.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/models/person.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/feed_reader_parser_exception.py" />
-        <option value="$PROJECT_DIR$/tests/__init__.py" />
-        <option value="$PROJECT_DIR$/TicketManor.egg-info/PKG-INFO" />
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/tests/rest_services/test_atom_news_feed_parser.py" />
-        <option value="$PROJECT_DIR$/tests/rest_services/test_feed_reader.py" />
-        <option value="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
-        <option value="$PROJECT_DIR$/tests/test_support/db_utils.py" />
-        <option value="$PROJECT_DIR$/tests/util/test_util.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/models/address.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/models/member.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/models/persistence/act_dao.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/models/persistence/base_dao.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/models/persistence/venue_dao.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/util/__init__.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/util/observer.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/util/utils.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/models/persistence/__init__.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/feed_reader_exception.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_type.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/rest_services/__init__.py" />
-        <option value="$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/__init__.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py" />
-        <option value="$PROJECT_DIR$/pyramidsvc.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/feed_reader.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html" />
-        <option value="$PROJECT_DIR$/ticketmanor/rest_services/news_service.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/news/all_news.html" />
-        <option value="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/services/news.js" />
-        <option value="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html" />
-        <option value="$PROJECT_DIR$/ticketmanor/rest_services/user_service.py" />
-        <option value="$PROJECT_DIR$/tests/rest_services/test_user_service.py" />
-        <option value="$PROJECT_DIR$/tests/rest_services/test_user_service_integration.py" />
-        <option value="$PROJECT_DIR$/tests/rest_services/test_event_service_integration.py" />
-        <option value="$PROJECT_DIR$/tests/models/persistence/test_person_dao.py" />
-        <option value="$PROJECT_DIR$/tests/models/persistence/test_venue_dao.py" />
-        <option value="$PROJECT_DIR$/tests/models/test_address.py" />
-        <option value="$PROJECT_DIR$/tests/models/test_member.py" />
-        <option value="$PROJECT_DIR$/tests/models/test_act.py" />
-        <option value="$PROJECT_DIR$/tests/models/test_customer.py" />
-        <option value="$PROJECT_DIR$/tests/models/test_person.py" />
-        <option value="$PROJECT_DIR$/tests/models/persistence/test_act_dao.py" />
-        <option value="$PROJECT_DIR$/tests/util/test_observer.py" />
-        <option value="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="9" />
-    <option name="y" value="6" />
-    <option name="width" value="991" />
-    <option name="height" value="973" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="2" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ticketmanor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="feed_reader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-    </panes>
-  </component>
+  <component name="ProjectId" id="1RZadZiT8R33WADputxFEyRbf32" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
-    <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="64" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="78" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="78" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="672" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="82" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="81" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="82" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="647" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
-  <component name="PyConsoleOptionsProvider">
-    <option name="myPythonConsoleState">
-      <console-settings module-name="ticketmanor_webapp" sdk-home="C:\crs1906\exercises\ticketmanor_webapp\venv\Scripts\python.exe">
-        <option name="mySdkHome" value="C:\crs1906\exercises\ticketmanor_webapp\venv\Scripts\python.exe" />
-        <option name="myModuleName" value="ticketmanor_webapp" />
-      </console-settings>
-    </option>
-    <option name="myIpythonEnabled" value="false" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\crs1906\exercises\ticketmanor_webapp\tests\models\persistence" />
-      <recent name="C:\crs1906\exercises\ticketmanor_webapp\tests\rest_services" />
-      <recent name="C:\crs1906\exercises\ticketmanor_webapp\tests\models" />
-      <recent name="C:\crs1906\exercises\ticketmanor_webapp\ticketmanor\models\persistence" />
-      <recent name="C:\crs1906\exercises\ticketmanor_webapp\ticketmanor\rest_services" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\crs1906\exercises\ticketmanor_webapp\ticketmanor\tests\models\persistence" />
-      <recent name="C:\crs1906\exercises\ticketmanor_webapp\ticketmanor\rest_services\feed_reader" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python tests.Unittests in PersonTestCase">
-    <configuration default="false" name="Unittests in test_user_service" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/rest_services" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ticketmanor_webapp" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/rest_services/test_user_service.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest UserServiceRestTest.test_add_user_db_exception" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/rest_services" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ticketmanor_webapp" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/rest_services/test_user_service.py" />
-      <option name="CLASS_NAME" value="UserServiceRestTest" />
-      <option name="METHOD_NAME" value="test_add_user_db_exception" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in test_observer" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/util" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ticketmanor_webapp" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/util/test_observer.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in test_person_dao" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/models/persistence" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ticketmanor_webapp" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/models/persistence/test_person_dao.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in PersonTestCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/models" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ticketmanor_webapp" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/models/test_person.py" />
-      <option name="CLASS_NAME" value="PersonTestCase" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ticketmanor_webapp" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ticketmanor_webapp" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ticketmanor_webapp" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ticketmanor_webapp" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ticketmanor_webapp" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ticketmanor_webapp" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
-      <method />
-    </configuration>
-    <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Python.Run ticketmanor" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_user_service" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest UserServiceRestTest.test_add_user_db_exception" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_observer" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_person_dao" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in PersonTestCase" />
-    </list>
-    <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in PersonTestCase" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_person_dao" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_observer" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_user_service" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest UserServiceRestTest.test_add_user_db_exception" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
-    </recent_temporary>
+    </option>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="70e0d77d-87d5-4171-8978-d07aabaaf4dd" name="Default" comment="" />
-      <created>1433187350024</created>
+      <changelist id="64800e3e-232b-4bdd-9d53-4fc23dcf1a79" name="Default Changelist" comment="" />
+      <created>1569877159359</created>
       <option name="number" value="Default" />
-      <updated>1433187350024</updated>
+      <option name="presentableId" value="Default" />
+      <updated>1569877159359</updated>
     </task>
-    <task id="LOCAL-00001" summary="Added models for Act, Event, and Venue.&#10;Added VenueDao.&#10;Added VenueDaoTest.">
-      <created>1434157353065</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1434157353065</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="Unittests_in_PersonTestCase - 2015.12.18 at 17h 10m 25s.xml">
-      <configuration name="Unittests in PersonTestCase" configurationId="tests" />
-    </history-entry>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="9" y="6" width="991" height="973" extended-state="0" />
-    <editor active="false" />
-    <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30325288" sideWeight="0.4896989" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19512194" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964823" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2592251" sideWeight="0.5103011" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="244" y="203" width="922" height="857" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24738675" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3872093" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36519116" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
     </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Added models for Act, Event, and Venue.&#10;Added VenueDao.&#10;Added VenueDaoTest." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added models for Act, Event, and Venue.&#10;Added VenueDao.&#10;Added VenueDaoTest." />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="46" />
-    </breakpoint-manager>
-    <watches-manager />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicketManor.egg-info/PKG-INFO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/rest_services/test_atom_news_feed_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/rest_services/test_feed_reader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_support/db_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/util/test_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/address.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/util/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/venue_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.083909184">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45132744">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16781837">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10069102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/python/python-3.4/Lib/unittest/mock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4">
-          <caret line="1868" column="0" selection-start-line="1868" selection-start-column="0" selection-end-line="1868" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0196484">
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/cherrypy/wsgiserver/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyramidsvc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="32" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/base_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6053068">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/person_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36956522">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pyramid/config/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33126295">
-          <caret line="502" column="21" selection-start-line="502" selection-start-column="21" selection-end-line="502" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/feed_reader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/shared/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.384615">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/services/sports.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/news_service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/news/all_news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/services/news.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/shared/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0331384">
-          <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/rest_services/test_user_service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55573773">
-          <caret line="144" column="28" selection-start-line="144" selection-start-column="28" selection-end-line="144" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/models/test_address.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/models/test_member.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10858325">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/models/test_act.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.123061016">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/models/test_customer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12409514">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/util/test_observer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29917184">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/models/persistence/test_act_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27225673">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/rest_services/test_event_service_integration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24637681">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/rest_services/test_user_service_integration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2795031">
-          <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/util/observer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5952381">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/models/persistence/test_venue_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21118012">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36918303">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/user_service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33402276">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/member.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/customer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8161058">
-          <caret line="88" column="12" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/models/test_person.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12620193">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/persistence/act_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.020432692">
-          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/util/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26442307">
-          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/models/person.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/models/persistence/test_person_dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.020432692">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser_no_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.020432692">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+  <component name="hg4idea.settings">
+    <option name="CHECK_INCOMING_OUTGOING" value="true" />
+    <option name="RECENT_HG_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
 </project>

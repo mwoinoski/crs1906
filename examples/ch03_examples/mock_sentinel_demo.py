@@ -1,4 +1,4 @@
-"""
+r"""
 mock_sentinel_demo.py - Test case that uses mock.sentinel,
 from Chapter 3 examples
 """

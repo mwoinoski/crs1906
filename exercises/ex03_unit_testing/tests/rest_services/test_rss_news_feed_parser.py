@@ -84,7 +84,7 @@ expected = [
 
 
 # TODO: make TestRssNewsFeedParser a subclass of unittest.TestCase
-# HINT: see slide 3-9
+# HINT: see slide 3-8
 class TestRssNewsFeedParser:
     """Unit tests for RssNewsFeedParser"""
 
@@ -95,15 +95,15 @@ class TestRssNewsFeedParser:
         ....
 
         # TODO:
-        # 1. call the feed reader's get_news() method, passing 'music' as the
-        #    argument
+        # 1. call the news feed parser's get_news() method, passing 'music' as
+        #    the argument
         # 2. save the list returned by the method in a local variable
         #    named `actual`
         ....
 
         # TODO: call a method that asserts the list named `expected` is
-        # equal to the list named `actual`
-        # HINT: see slide 3-10
+        # equal to the list named `actual`, which was returned from get_news()
+        # HINT: see slide 3-11
         ....
 
     # TODO: Define a test method named test_get_news_music_max_items_1
@@ -119,13 +119,12 @@ class TestRssNewsFeedParser:
         # 2. save the list returned by the method in a local variable
         ....
 
-        # TODO: call a method that asserts the returned list has length 1
-        # HINT: use the built-in function len()
+        # TODO: assert that the returned list has length 1 and that the first
+        # item of the `expected` list equals the first item of the returned 
+        # list.
+        # HINT: use the built-in function len(), or use list slicing
         ....
 
-        # TODO: verify that the first item of the `expected` list equals the 
-        # first item of the returned list.
-        ....
 
     # TODO: Define a test method named test_get_news_invalid_news_type
     ....

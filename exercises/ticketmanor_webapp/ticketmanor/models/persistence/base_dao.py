@@ -31,8 +31,7 @@ class BaseDao:
         # Example filter query: .filter(Person.email == id_value)
         if not entity:
             raise PersistenceError(
-                "Can't get {} with id {}: not in database"
-                .format(self._entity_class.__name__, id_value))
+                f"Can't get {self._entity_class.__name__} with id {id_value}: not in database")
         #  Simple fetch by primary key: act = db_session.query(Act).get(act_id)
         return entity
 

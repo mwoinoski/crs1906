@@ -3,7 +3,7 @@ setup.py - Set up script for sample project
 """
 
 # TODO: import setup and find_packages from the setuptools module
-# HINT: see slide 7-26
+# HINT: see slide 7-23
 ....
 
 import codecs  # To use a consistent encoding

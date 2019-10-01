@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e32bcda7-1241-44d9-b658-5108189189ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_client.py" afterPath="$PROJECT_DIR$/chat_client.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_gui_client.py" afterPath="$PROJECT_DIR$/chat_gui_client.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_room.py" afterPath="$PROJECT_DIR$/chat_room.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat_room_proxy.py" afterPath="$PROJECT_DIR$/chat_room_proxy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hints.html" afterPath="$PROJECT_DIR$/hints.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/observer.py" afterPath="$PROJECT_DIR$/observer.py" />
-    </list>
+    <list default="true" id="e32bcda7-1241-44d9-b658-5108189189ca" name="Default" comment="" />
     <ignored path="ex06_design_patterns.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,10 +36,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="9" />
-    <option name="y" value="6" />
+    <option name="x" value="422" />
+    <option name="y" value="1" />
     <option name="width" value="991" />
-    <option name="height" value="973" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -235,7 +228,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="6" width="991" height="973" extended-state="0" />
+    <frame x="422" y="1" width="991" height="904" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24658972" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

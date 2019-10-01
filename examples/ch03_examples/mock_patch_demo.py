@@ -1,4 +1,4 @@
-"""
+r"""
 mock_demo.py - Test case that uses the @patch decorator from unittet.mock,
 from Chapter 3 examples
 """

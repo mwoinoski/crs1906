@@ -1,4 +1,4 @@
-"""
+r"""
 person_buggy.py - Buggy Person class for Chapter 3 examples.
 """
 

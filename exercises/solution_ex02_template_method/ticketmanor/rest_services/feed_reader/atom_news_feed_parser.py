@@ -42,7 +42,7 @@ class AtomNewsFeedParser(NewsFeedParser):
 
     def get_url(self, news_type):
         """Implementation of abstract method"""
-        return 'https://news.google.com/news?output={}&pz=1&ned=us&hl=en&' \
+        return 'https://news.google.com/news/headlines?output={}&pz=1&ned=us&hl=en&' \
                'q={}'.format(AtomNewsFeedParser.feed_type, news_type)
 
     # TODO: The get_raw_content() method is now defined in the superclass, so

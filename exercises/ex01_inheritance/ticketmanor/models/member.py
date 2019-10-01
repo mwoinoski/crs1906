@@ -8,7 +8,7 @@ __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 
 # TODO: make Member a subclass of User
-class Member:
+class Member():
     """
     Model class for Member
     """
@@ -19,8 +19,11 @@ class Member:
 
         # TODO: call the superclass __init__() method, passing the
         # appropriate arguments
+
+
         # TODO: save any remaining arguments in data attributes of the
         # current Customer object
+
 
         # TODO: for any argument that you passed to the superclass constructor,
         # delete its attribute assignment from the next block of statements.

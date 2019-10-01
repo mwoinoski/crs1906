@@ -1,4 +1,4 @@
-"""
+r"""
 person.py - Simple Person class for Chapter 3 examples.
 """
 
@@ -23,5 +23,4 @@ class Person:
         return not self.__eq__(other)
 
     def __str__(self):
-        return "{self.first_name} {self.middle_name} {self.last_name}"\
-            .format(self=self)
+        return f"{self.first_name} {self.middle_name} {self.last_name}"

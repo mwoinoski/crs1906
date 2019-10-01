@@ -1,6 +1,7 @@
 """Nose unit tests for Person
 
    Run as follows:
+   pip install nose
    cd C:\crs1906\examples\ch03_examples
    nosetests test_person_nose_fail.py
 """

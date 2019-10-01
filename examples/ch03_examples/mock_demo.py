@@ -1,4 +1,4 @@
-"""
+r"""
 mock_demo.py - Test case that uses mock objects, from Chapter 3 examples
 """
 

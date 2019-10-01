@@ -94,14 +94,14 @@ class TestRssNewsFeedParser(TestCase):
         feed_reader = RssNewsFeedParser()
 
         # TODO:
-        # 1. call the feed reader's get_news() method, passing 'music' as the
-        #    argument
+        # 1. call the news feed parser's get_news() method, passing 'music' as
+        #    the argument
         # 2. save the list returned by the method in a local variable
         #    named `actual`
         actual = feed_reader.get_news('music')
 
         # TODO: call a method that asserts the list named `expected` is
-        # equal to the list named `actual`
+        # equal to the list named `actual`, which was returned from get_news()
         self.assertEqual(expected, actual)
 
     # TODO: Define a test method named test_get_news_music_max_items_1
@@ -117,16 +117,17 @@ class TestRssNewsFeedParser(TestCase):
         # 2. save the list returned by the method in a local variable
         actual = feed_reader.get_news('music', max_items=1)
 
-        # TODO: call a method that asserts the returned list has length 1
+        # TODO: assert that the returned list has length 1 and that the first
+        # item of the `expected` list equals the first item of the returned 
+        # list.
         self.assertEqual(1, len(actual))
-
-        # TODO: verify that the first item of the `expected` list equals the 
-        # first item of the returned list.
         self.assertEqual(expected[0], actual[0])
 
         # Note that you can combine the two previous assertions into one using
         # list slicing:
-        # self.assertEqual(expected[:1], actual)
+        self.assertEqual(expected[:1], actual)
+        # Because both arguments to assertEqual() are lists, the method
+        # compares the lists' lengths as well as their contents.
 
     # TODO: Define a test method named test_get_news_invalid_news_type
     def test_get_news_invalid_news_type(self):
