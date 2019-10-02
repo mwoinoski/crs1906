@@ -41,9 +41,11 @@ bin/
 build/
 develop-eggs/
 # Don't ignore dist: javascript for ticketmanor has a required dist directory
-#dist/
+dist/
 # TODO: this was supposed to exclude the JS dist dir from ignore for "dist/" but it doesn't work
-#!*/bower_components/bootstrap/dist/*  
+!*/bower_components/
+!*/bower_components/bootstrap/
+!*/bower_components/bootstrap/dist/
 eggs/
 lib/
 lib64/

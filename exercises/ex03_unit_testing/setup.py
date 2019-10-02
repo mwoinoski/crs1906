@@ -1,4 +1,3 @@
-__author__ = 'Mike Woinoski mike@articulatedesign.us.com'
 
 import os
 
@@ -42,9 +41,9 @@ requires = [
     'transaction',
     'zope.sqlalchemy',
     'waitress',
-    'nose',
     'pytest-cov',
     'pytest',
+	'mysql-connector-python',
     'WebTest',      # Runs a WSGI application for integration tests
     'Sphinx',       # Generates documentation from docstrings in source code
 ]

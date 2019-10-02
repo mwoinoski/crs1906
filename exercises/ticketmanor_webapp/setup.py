@@ -1,7 +1,6 @@
 __author__ = 'Mike Woinoski mike@articulatedesign.us.com'
 
 import os
-
 from setuptools import setup, find_packages, Command
 from glob import glob
 import shutil
@@ -10,6 +9,10 @@ import shutil
 class CleanCommand(Command):
     """Command class that will be used by 'setup.py clean'"""
     user_options = []
+
+    def __init__(self, dist, **kw):
+        super().__init__(dist, **kw)
+        self.cwd = None
 
     def initialize_options(self):
         self.cwd = None
@@ -25,6 +28,7 @@ class CleanCommand(Command):
                     shutil.rmtree(name)
                 else:
                     os.remove(name)
+
 
 here = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(here, 'README.txt')) as f:
@@ -42,8 +46,8 @@ requires = [
     'transaction',
     'zope.sqlalchemy',
     'waitress',
-    'nose',
     'pytest',
+    'mysql-connector-python',
     'WebTest',      # Runs a WSGI application for integration tests
     'Sphinx',       # Generates documentation from docstrings in source code
 ]

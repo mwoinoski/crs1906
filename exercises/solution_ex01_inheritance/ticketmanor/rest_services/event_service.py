@@ -8,7 +8,6 @@ from ticketmanor.models.persistence import PersistenceError
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import logging
-import random
 from urllib.parse import unquote
 
 from pyramid.view import view_config, notfound_view_config, view_defaults
@@ -85,16 +84,16 @@ class EventServiceRest:
             start = act['page'] * act['page_size']
             act['events'] = act['events'][start:start + act['page_size']]
 
-        logger.debug("%s: found %d events for %s", func_name(self),
-            len(act['events'])
-            if act and 'events' in act and act['events'] else 0,
-            search_terms)
+        logger.debug("%s: found %d events for %s",
+                     func_name(self),
+                     len(act['events']) if act and 'events' in act and act['events'] else 0,
+                     search_terms)
 
         return act
 
-    # FIXME: add get_event(self, event_id)
+    # TODO: add get_event(self, event_id)
 
-    # FIXME:
+    # TODO:
     # @view_config(request_method='POST',
     #              route_name='rest_events')
     # def add_event(self):
@@ -109,7 +108,7 @@ class EventServiceRest:
     #         status_int=201,
     #         content_type='application/json; charset=UTF-8')
 
-    # FIXME
+    # TODO
     # @view_config(request_method='PUT',
     #              route_name='rest_events')
     # def update_event(self):
@@ -126,7 +125,7 @@ class EventServiceRest:
     #         raise HTTPNotFound()
     #     return Response(status_int=202)
 
-    # FIXME
+    # TODO
     # @view_config(request_method='DELETE',
     #              route_name='rest_events_id')
     # def delete_event(self):
