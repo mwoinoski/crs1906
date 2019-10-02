@@ -2,32 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64800e3e-232b-4bdd-9d53-4fc23dcf1a79" name="Default Changelist" comment="s">
-      <change afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/dictionaries/student.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/student.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex02_template_method/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/solution_ex01_inheritance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/solution_ex01_inheritance.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/dist/Exercise_1_1_Solution-1.0.0.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/persistence/act_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/persistence/act_dao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/event_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/event_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ticketmanor_webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ticketmanor_webapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/html/javascripts/ticketmanor/views/concerts/concerts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketmanor/models/persistence/act_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/models/persistence/act_dao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ticketmanor/rest_services/event_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/event_service.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,6 +58,16 @@
       <updated>1569877159359</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

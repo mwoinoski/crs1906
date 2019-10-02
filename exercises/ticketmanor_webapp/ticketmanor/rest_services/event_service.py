@@ -84,7 +84,6 @@ class EventServiceRest:
             act['page_size'] = int(self._request.params['page_size'])
             start = act['page'] * act['page_size']
             act['events'] = act['events'][start:start + act['page_size']]
-            # breakpoint()
 
         logger.debug("%s: found %d events for %s",
                      func_name(self),

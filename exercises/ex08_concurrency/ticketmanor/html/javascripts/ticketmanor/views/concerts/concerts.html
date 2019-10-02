@@ -87,7 +87,7 @@
                           <img ng-src="{{concert.image_thumbnail}}" class="news-img">
                           <div>{{concerts.title}}</div>
                           <div>{{concerts.description}}</div>
-                          <div>{{concert.date_time | date: 'MMM d, y h:mm a'}}</div>
+                          <div>{{concert.date_time * 1000 | date: 'MMM d, y h:mm a'}}</div>
                           <div>{{concert.venue.name}}</div>
                           <div>{{concert.venue.city}}</div>
                           <div class="price">{{concert.price}}</div>

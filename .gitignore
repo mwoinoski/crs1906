@@ -40,12 +40,8 @@ __pycache__/
 bin/
 build/
 develop-eggs/
-# Don't ignore dist: javascript for ticketmanor has a required dist directory
-dist/
-# TODO: this was supposed to exclude the JS dist dir from ignore for "dist/" but it doesn't work
-!*/bower_components/
-!*/bower_components/bootstrap/
-!*/bower_components/bootstrap/dist/
+# Ignore ticketmanor/dist but not ticketmanor/html/javascripts/bower_components/bootstrap/dist
+*/*/dist/
 eggs/
 lib/
 lib64/
