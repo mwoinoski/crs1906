@@ -54,7 +54,7 @@
             <h2 class="search-results">Search results</h2>
           </div>
           <div class="col-md-6">
-            <div class="pull-right pages">{{((page-1)*page_size)+1}}-
+            <div class="pull-right pages">
               {{page*page_size < sports.list.events_length ? page*page_size : sports.list.events_length }} of {{sports.list.events_length}}</div>
           </div>
         </div>
@@ -103,7 +103,7 @@
             <h2 class="search-results">Search results</h2>
           </div>
           <div class="col-md-5 col-sm-3 col-sx-12 alignment-right">
-            <div class="pages">{{((page-1)*page_size)+1}}-
+            <div class="pages">
               {{page*page_size < sports.list.events_length ? page*page_size : sports.list.events_length }} of {{sports.list.events_length}}</div>
           </div>
           <div class="col-md-1 col-sm-2 col-xs-12 alignment-right">

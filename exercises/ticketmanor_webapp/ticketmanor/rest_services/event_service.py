@@ -80,7 +80,11 @@ class EventServiceRest:
         if act and 'page' in self._request.params \
                 and 'page_size' in self._request.params \
                 and 'events' in act:
-            act['page'] = int(self._request.params['page'])
+            # breakpoint()
+            try:
+                act['page'] = int(self._request.params['page'])
+            except ValueError:  # For the 2nd request, the UI often passes page=NaN
+                act['page'] = 0
             act['page_size'] = int(self._request.params['page_size'])
             start = act['page'] * act['page_size']
             act['events'] = act['events'][start:start + act['page_size']]
