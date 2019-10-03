@@ -9,6 +9,7 @@ from simple_profiler import measure
 # String concatenation examples
 ##############################################################################
 
+
 @measure
 def to_lower_string_concat(lines):
     """String concatenation: slow"""

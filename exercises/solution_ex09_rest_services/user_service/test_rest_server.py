@@ -2,10 +2,10 @@
 Integration tests for rest_server.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
-
 import json
 import requests
+
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 user_ned = {
     "email": "ned.flanders@gmail.com",

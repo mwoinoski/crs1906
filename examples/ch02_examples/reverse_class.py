@@ -18,6 +18,7 @@ class Reverse:
         self.index -= 1
         return self.list_data[self.index]
 
+
 nums = list(range(5))  # [1, 2, 3, 4]
 for item in nums:
     print(item, end=" ")

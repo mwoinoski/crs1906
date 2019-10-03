@@ -14,6 +14,7 @@ def zip_it(infile, outfile):
         f.write(infile)
     print('Finished', infile)
 
+
 # create a Thread instance that will call zip_it, passing args tuple
 background = Thread(target=zip_it,
                     args=('inventory.csv', 'inventory.zip'))

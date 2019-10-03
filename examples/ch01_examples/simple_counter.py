@@ -2,6 +2,7 @@
 Inheritance example from Chapter 1 Python Object-Oriented Programming
 """
 
+
 class SimpleCounter:
     """A simple example class"""
 
@@ -16,6 +17,7 @@ class SimpleCounter:
 
     def __str__(self):
         return 'count={}'.format(self.count)
+
 
 class UpAndDownCounter(SimpleCounter):
     """UpAndDownCounter defines a decrement operation"""
@@ -35,6 +37,7 @@ class UpAndDownCounter(SimpleCounter):
 
     def __str__(self):
         return super().__str__() + ',min={}'.format(self.min)
+
 
 up_and_down = UpAndDownCounter(10)
 up_and_down.increment()

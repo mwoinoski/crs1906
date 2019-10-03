@@ -5,7 +5,7 @@ http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flas
 
 from flask import (Flask, jsonify, abort, request, make_response, url_for,
                    Response)
-from flask.ext.httpauth import HTTPBasicAuth  # ignore PyCharm error
+from flask_httpauth import HTTPBasicAuth  # ignore PyCharm error
 # pip install Flask-HTTPAuth
 
 import rest_server_dao

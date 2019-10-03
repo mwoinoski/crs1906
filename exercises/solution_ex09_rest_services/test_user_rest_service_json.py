@@ -1,4 +1,4 @@
-"""
+r"""
 Integration tests for UserServiceRest.
 
 These tests cases make several assumptions:
@@ -15,9 +15,9 @@ The TicketManor integration tests take advantage of Pyramid and SQLite
 features that make the tests much more robust and reliable.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
-
 import requests
+
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 # if you want the test cases to run in a different order, assign a new function
 # for comparing method names to TestLoader's sortTestMethodsUsing attribute:

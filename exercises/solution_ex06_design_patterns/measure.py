@@ -11,10 +11,10 @@ Usage:
     stats = get_function_stats()  # returns list of tuples
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
-
 import time
 from functools import wraps
+
+__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
 
 # TODO: note the initialization of the _function_stats dictionary, which will
 # be used to accumulate statistics for all measured functions.

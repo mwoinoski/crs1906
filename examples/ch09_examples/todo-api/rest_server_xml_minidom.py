@@ -4,7 +4,7 @@ http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flas
 """
 
 from flask import Flask, abort, request, make_response, url_for, Response
-from flask.ext.httpauth import HTTPBasicAuth
+from flask_httpauth import HTTPBasicAuth
 from xml.dom.minidom import getDOMImplementation
 import xml.etree.ElementTree as ElementTree
 

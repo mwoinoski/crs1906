@@ -21,6 +21,7 @@ class ComparableMixin(object):
     def __ge__(self, other):
         return self == other or self > other
 
+
 class SimpleCounter:
     def __init__(self, start):
         print('SimpleCounter.__init__')

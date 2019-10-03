@@ -1,4 +1,4 @@
-"""Nose unit tests for Person
+r"""Nose unit tests for Person
 
    Run as follows:
    pip install nose

@@ -13,6 +13,7 @@ response_template = """\
 </html>
 """
 
+
 class HttpRequestProcessor:
     def service_request(self, request):
         # Generic: parse request data

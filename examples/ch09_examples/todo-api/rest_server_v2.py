@@ -3,17 +3,15 @@ rest-server.py - Alternative version of the ToDo RESTful server implemented
 using the Flask-RESTful extension.
 http://blog.miguelgrinberg.com/post/designing-a-restful-api-using-flask-restful
 
-See also https://flask-restful.readthedocs.org/en/0.3.3/
+See also https://flask-restful.readthedocs.io/en/latest/
 """
 
 
-__author__ = 'Miguel Grinberg (https://www.linkedin.com/in/miguelgrinberg)'
-
-"""."""
-
 from flask import Flask, jsonify, abort, make_response
-from flask.ext.restful import Api, Resource, reqparse, fields, marshal
-from flask.ext.httpauth import HTTPBasicAuth
+from flask_restful import Api, Resource, reqparse, fields, marshal
+from flask_httpauth import HTTPBasicAuth
+
+__author__ = 'Miguel Grinberg (https://www.linkedin.com/in/miguelgrinberg)'
 
 app = Flask(__name__, static_url_path="")
 api = Api(app)
@@ -33,17 +31,18 @@ def unauthorized():
     # auth dialog
     return make_response(jsonify({'message': 'Unauthorized access'}), 403)
 
+
 tasks = [
     {
         'id': 1,
-        'title': u'Teach cat Spanish',
-        'description': u'Needs to work on irregular verbs',
+        'title': 'Teach cat Spanish',
+        'description': 'Needs to work on irregular verbs',
         'done': False
     },
     {
         'id': 2,
-        'title': u'Untangle Gordian knot',
-        'description': u'Remember what happened last time',
+        'title': 'Untangle Gordian knot',
+        'description': 'Remember what happened last time',
         'done': False
     }
 ]
@@ -93,14 +92,14 @@ class TaskAPI(Resource):
         self.reqparse.add_argument('done', type=bool, location='json')
         super(TaskAPI, self).__init__()
 
-    def get(self, id):
-        task = [task for task in tasks if task['id'] == id]
+    def get(self, task_id):
+        task = [task for task in tasks if task['id'] == task_id]
         if len(task) == 0:
             abort(404)
         return {'task': marshal(task[0], task_fields)}
 
-    def put(self, id):
-        task = [task for task in tasks if task['id'] == id]
+    def put(self, task_id):
+        task = [task for task in tasks if task['id'] == task_id]
         if len(task) == 0:
             abort(404)
         task = task[0]
@@ -110,8 +109,8 @@ class TaskAPI(Resource):
                 task[k] = v
         return {'task': marshal(task, task_fields)}
 
-    def delete(self, id):
-        task = [task for task in tasks if task['id'] == id]
+    def delete(self, task_id):
+        task = [task for task in tasks if task['id'] == task_id]
         if len(task) == 0:
             abort(404)
         tasks.remove(task[0])
