@@ -1,2 +1,3 @@
 @echo off
-use_python_ver python-3.1
+@rem use_python_ver Python3.1
+@echo Python 3.1 is not installed

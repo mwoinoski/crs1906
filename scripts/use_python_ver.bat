@@ -1,8 +1,9 @@
 @echo off
-set tempfile=C:\cygwin\tmp\path
+set tempfile=C:\software\cygwin\tmp\path
 
-@rem C compiler will be gcc 64-bit from C:\software\cygwin\usr\x86_64-w64-mingw32
-C:\python\python-3.8\python -c "import os, re; path=os.environ['PATH']; path=re.sub(r';C:\\python\\jython-2.7\\bin;C:\\python\\pypy;C:\\python\\pypy\\bin', '', path); path=re.sub(r'C:\\software\\mingw32\\bin;C:\\software\\mingw32\\mingw32\\bin;', '', path); path=re.sub(r'python(.).*?([;\\])', r'python\1"%1"\2', path); path=re.sub(r'$', r';C:\\python\\jython-2.7\\bin;C:\\python\\pypy;C:\\python\\pypy\\bin', path); print(path, sep='', end='')" > %tempfile%
+@rem C and C++ compilers will be C:\software\cygwin\bin\x86_64-w64-mingw32-gcc.exe and *-g++.exe
+
+C:\Python\Python3.7\python.exe -c "import os, re; path=os.environ['PATH']; path=re.sub(r';C:\\[Pp]ython\\pypy;C:\\[Pp]ython\\pypy\\bin', '', path); path=re.sub(r';C:\\[Pp]ython\\jython\\bin', '', path); path=re.sub(r'C:\\software\\mingw32\\bin;C:\\software\\mingw32\\mingw32\\bin;', '', path); path=re.sub(r'Python(.).*?([;\\])', r'Python\1"%1"\2', path); path=re.sub(r';$', '', path); path=re.sub(r'$', r';C:\\Python\\jython\\bin;C:\\Python\\pypy;C:\\python\\pypy\\bin', path); print(path, sep='', end='')" > %tempfile%
 
 set /p PATH= < %tempfile%
 path

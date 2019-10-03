@@ -43,7 +43,7 @@ requires = [
     'waitress',
     'pytest-cov',
     'pytest',
-	'mysql-connector-python',
+    'mysql-connector-python',
     'WebTest',      # Runs a WSGI application for integration tests
     'Sphinx',       # Generates documentation from docstrings in source code
 ]
