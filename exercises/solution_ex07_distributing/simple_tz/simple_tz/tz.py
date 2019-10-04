@@ -4,13 +4,13 @@
 Defines a simple wrapper for pytz functions.
 """
 
-# TODO: set the variable `__author__` to a string with your name. This will
-# also be displayed by help(tz)
-__author__ = 'Happy Pythonista (hpythonista@python.org)'
-
 import re
 import pytz
 from datetime import datetime
+
+# TODO: set the variable `__author__` to a string with your name. This will
+# also be displayed by help(tz)
+__author__ = 'Happy Pythonista (hpythonista@python.org)'
 
 # Add a few timezone abbreviations missing from pytz
 tz_abbrevs = {

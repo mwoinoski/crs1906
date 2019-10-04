@@ -2,13 +2,13 @@
 # displayed when you execute help(tz) from a Python interpreter.
 ...
 
-# TODO: set the variable `__author__` to a string with your name. This will
-# also be displayed by help(tz)
-...
-
 import re
 import pytz
 from datetime import datetime
+
+# TODO: set the variable `__author__` to a string with your name. This will
+# also be displayed by help(tz)
+...
 
 # Add a few timezone abbreviations missing from pytz
 tz_abbrevs = {

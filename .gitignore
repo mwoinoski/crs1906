@@ -43,6 +43,7 @@ develop-eggs/
 # Ignore ticketmanor/dist but not ticketmanor/html/javascripts/bower_components/bootstrap/dist
 */*/dist/
 eggs/
+.eggs/
 lib/
 lib64/
 parts/
