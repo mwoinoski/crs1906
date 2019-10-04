@@ -6,7 +6,7 @@ rest_server.py - Simple REST server based on Flask.
 # (no code change required)
 from flask import (Flask, jsonify, abort, request, make_response, url_for,
                    Response)
-from flask.ext.httpauth import HTTPBasicAuth  # ignore the PyCharm error here
+from flask_httpauth import HTTPBasicAuth  # ignore the PyCharm error here
 
 import rest_server_dao
 

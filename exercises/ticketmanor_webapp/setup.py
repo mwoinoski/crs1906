@@ -56,13 +56,6 @@ setup(name='TicketManor',
       version='1.0.0',
       description='TicketManor',
       long_description=README + '\n\n' + CHANGES,
-      classifiers=[
-          "Programming Language :: Python",
-          "Framework :: Pyramid",
-          "Framework :: SQLAlchemy",
-          "Topic :: Internet :: WWW/HTTP",
-          "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
-      ],
       author='Mike Woinoski',
       author_email='mike@articulatedesign.us.com',
       url='',
@@ -78,5 +71,5 @@ setup(name='TicketManor',
       main = ticketmanor:main
       [console_scripts]
       initialize_TicketManor_db = ticketmanor.scripts.initializedb:main
-      """,
+      """
       )

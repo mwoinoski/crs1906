@@ -52,13 +52,6 @@ setup(name='Exercise_8_2_Solution',
       version='1.0.0',
       description='Exercise 8.2 Solution',
       long_description=README + '\n\n' + CHANGES,
-      classifiers=[
-          "Programming Language :: Python",
-          "Framework :: Pyramid",
-          "Framework :: SQLAlchemy",
-          "Topic :: Internet :: WWW/HTTP",
-          "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
-      ],
       author='Mike Woinoski',
       author_email='mike@articulatedesign.us.com',
       url='',
@@ -74,5 +67,5 @@ setup(name='Exercise_8_2_Solution',
       main = ticketmanor:main
       [console_scripts]
       initialize_TicketManor_db = ticketmanor.scripts.initializedb:main
-      """,
+      """
       )

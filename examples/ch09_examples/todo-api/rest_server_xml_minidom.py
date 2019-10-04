@@ -32,12 +32,12 @@ def unauthorized():
     
 
 @app.errorhandler(400)
-def not_found(error):
+def not_found400(error):
     return make_response(xmlify_element('error', 'Bad request'), 400)
 
 
 @app.errorhandler(404)
-def not_found(error):
+def not_found404(error):
     return make_response(xmlify_element('error', 'Not found'), 404)
 
 

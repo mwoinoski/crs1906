@@ -4,7 +4,7 @@ http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flas
 """
 
 from flask import Flask, jsonify, abort, request, make_response, url_for
-from flask.ext.httpauth import HTTPBasicAuth
+from flask_httpauth import HTTPBasicAuth
 
 
 __author__ = 'Miguel Grinberg (https://www.linkedin.com/in/miguelgrinberg)'
@@ -24,11 +24,11 @@ def unauthorized():
     # return 403 instead of 401 to prevent browsers from displaying the default auth dialog
     
 @app.errorhandler(400)
-def not_found(error):
+def not_found400(error):
     return make_response(jsonify( { 'error': 'Bad request' } ), 400)
 
 @app.errorhandler(404)
-def not_found(error):
+def not_found404(error):
     return make_response(jsonify( { 'error': 'Not found' } ), 404)
 
 tasks = [
