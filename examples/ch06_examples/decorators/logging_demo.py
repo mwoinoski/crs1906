@@ -6,21 +6,22 @@ from decorators.profiling_decorator import profile_call
 def nsum(n):
     """Return the sum of the first n numbers"""
     assert(n >= 0), "n must be >= 0"
-    sum = 0
+    total = 0
     for i in range(n+1):
-        sum += i
-    return sum
+        total += i
+    return total
+
 
 @log_call
 def fibonacci(n, debug=False):
     """Returns the nth number of the Fibonacci sequence"""
     assert(n >= 1), "n must be >= 1"
-    prev = 0
-    next = 1
+    prev_num = 0
+    next_num = 1
     for i in range(0, n):
-        fib = prev + next
-        prev = next
-        next = fib
+        fib = prev_num + next_num
+        prev_num = next_num
+        next_num = fib
     return fib
 
 
@@ -28,6 +29,7 @@ def fibonacci(n, debug=False):
 def simple():
     """Function has no arguments and returns no value"""
     print("printed in simple()")
+
 
 if __name__ == "__main__":
 

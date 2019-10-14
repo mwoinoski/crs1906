@@ -41,21 +41,21 @@ primes_c = library_mod.primes_c
 primes_c.argtypes = (c_int, POINTER(c_int))
 primes_c.restype = c_int
 
-how_many = 10000
 # create a ctype array for the buffer argument to primes_c().
-ctypes_array_class = c_int * how_many
+ctypes_array_class = c_int * 10000
 print("type of ctypes_array_class is", type(ctypes_array_class))
 ctypes_array = ctypes_array_class()
 print("type of ctypes_array is", type(ctypes_array))
 
 # We could combine the previous two statements into one:
-# ctypes_array = (c_int * how_many)()
+# ctypes_array = (c_int * 10000)()
 
 # Call the C function, passing a ctypes array as the second argument
-c_result = primes_c(how_many, ctypes_array)
+c_result = primes_c(10000, ctypes_array)
 
 # Retrieve values from the array just like an ordinary Python list
-last_5 = [ctypes_array[i] for i in range(how_many-5, how_many)]
+last_5 = [ctypes_array[i]
+          for i in range(9995, 10000)]
 print("c_result: {}, tail of ctypes_array: {}".format(c_result, last_5))
 
 # Or copy the ctypes array elements to an ordinary Python list
@@ -67,15 +67,16 @@ print("len(ctypes_array): {}, len(primes_list): {}"
 
 # Another strategy for passing an array to a C function: use the built-in
 # array module to create an array of int, initialized to all zeros
-primes_array = array.array('i', [0]*how_many)
+primes_array = array.array('i', [0]*10000)
 
 # The C function needs the address of the buffer
 primes_ptr, _ = primes_array.buffer_info()
 
 # Call the C function, passing the address of the buffer
-c_result = primes_c(how_many,
+c_result = primes_c(10000,
                     cast(primes_ptr, POINTER(c_int)))
 
 # Retrieve values from the array as usual
-last_5 = [primes_array[i] for i in range(how_many-5, how_many)]
+last_5 = [primes_array[i]
+          for i in range(9995, 10000)]
 print("c_result: {}, tail of primes_array: {}".format(c_result, last_5))

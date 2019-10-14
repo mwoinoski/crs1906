@@ -9,21 +9,23 @@ def nsum(n):
         sum += i
     return sum
 
+
 def fibonacci(n, debug=False):
     """Returns the nth number of the Fibonacci sequence"""
     assert(n >= 1), "n must be >= 1"
-    prev = 0
-    next = 1
+    prev_num = 0
+    next_num = 1
     for i in range(0, n):
-        fib = prev + next
-        prev = next
-        next = fib
+        fib = prev_num + next_num
+        prev_num = next_num
+        next_num = fib
     return fib
 
 
 def simple():
     """Function has no arguments and returns no value"""
     print("printed in simple()")
+
 
 # Monkey patch functions to apply profiling decorator
 nsum = profile_call(nsum)

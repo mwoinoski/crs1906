@@ -24,4 +24,4 @@ $(EXE): $(OBJ)   # $(EXE) is dependent on all of the files in $(OBJ) to exist
 
 # '-' before command causes errors not to exit the process
 clean:
-	-$(RM) $(OBJ) $(DLL) __pycache__ build core
+	-$(RM) $(OBJ) __pycache__ build core *.pyd

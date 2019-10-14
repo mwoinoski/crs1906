@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d682c55-8f14-428b-a956-1b2cf8e67368" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_tz/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/simple_tz/setup.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple_tz/simple_tz/tz.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_tz/simple_tz/tz.py" afterDir="false" />
-    </list>
+    <list default="true" id="7d682c55-8f14-428b-a956-1b2cf8e67368" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

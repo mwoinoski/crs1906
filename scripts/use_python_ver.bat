@@ -10,4 +10,4 @@ path
 echo.
 python --version
 del %tempfile%
-prompt $P$_$+$G
+prompt $P$_$+$G$S

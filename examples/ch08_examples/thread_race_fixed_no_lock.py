@@ -28,14 +28,14 @@ class Counter:
     def increment(self, offset=1):
         self.count += offset
 
+
 class WorkerThread(Thread):
     """Each worker thread will have its own unique Counter instance"""
 
-    def __init__(self, sample_sensor, sensor_index, how_many):
+    def __init__(self, sample_sensor, how_many):
         super().__init__()
         self.counter = Counter()
         self.sample_sensor = sample_sensor
-        self.sensor_index = sensor_index
         self.how_many = how_many
 
     def run(self):
@@ -43,38 +43,38 @@ class WorkerThread(Thread):
 
         Each sensor has its own worker thread. After each measurement,
         a worker increments the count in the shared Counter instance.
-        :param how_many number of measurements the worker thread will take
         """
         for i in range(self.how_many):
             self.sample_sensor.read_from_sensor()  # Get the measurement
             self.counter.increment()  # Bump number of measurements
 
+
 class SampleSensors:
-    def __init__(self, worker_thread_count):
-        self.worker_thread_count = worker_thread_count
-        
     def sample_sensors(self):
-        how_many = 10**5
         threads = []
-        for i in range(self.worker_thread_count):
-            thread = WorkerThread(self, i, how_many)
+        for i in range(5):
+            thread = WorkerThread(self, 100_000)
             threads.append(thread)
             thread.start()
         for thread in threads:
             thread.join()
 
-        print('Counter should be {}, found {}'
-              .format(self.worker_thread_count*how_many, 
-                      sum(thread.counter.count for thread in threads)))
+        total_samples = sum(thread.counter.count for thread in threads)
+        print(f'Counter should be 500000, found {total_samples}')
 
     def read_from_sensor(self):
+        """ Dummy method """
         pass
-        
+
+
 def main():
-    sampler = SampleSensors(5)
+    sampler = SampleSensors()
     sampler.sample_sensors()
 
+
 if __name__ == '__main__':
+    from threading import Barrier
+    barrier = Barrier(2, lambda: barrier.reset())  # increase change of race condition
     from timeit import timeit
-    print("\nTime to run main: {:.2f} seconds".format(
-        timeit('main()', setup="from __main__ import main", number=1)))
+    main_time = timeit('main()', setup="from __main__ import main", number=1)
+    print(f'\nTime to run main: {main_time:.2f} seconds')

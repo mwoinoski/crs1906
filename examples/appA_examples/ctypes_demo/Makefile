@@ -1,6 +1,6 @@
 # Makefile
 # Default goal is all
-# GNU make is installed under \cygwin\bin.
+# GNU make is installed under \software\cygwin\bin.
 # To build the DLL for primes, run "make" from a command prompt:
 #    make
 

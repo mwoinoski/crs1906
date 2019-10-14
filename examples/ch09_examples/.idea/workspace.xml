@@ -2,20 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c6ac7f4-3337-4255-9285-b01a769b62f7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/ch05_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/ch05_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/mandelbrot.prof" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/mandelbrot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/mandelbrot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/string_cat_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/string_cat_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ch09_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ch09_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ch06_examples/.idea/dictionaries/student.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ch08_examples/.idea/dictionaries/student.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/logging_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/logging_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_monkey_patch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_monkey_patch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/imagescale-m.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/imagescale-m.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/imagescale-q-m.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/imagescale-q-m.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/thread_race.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/thread_race.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/thread_race_fixed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/thread_race_fixed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/thread_race_fixed_no_lock.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/thread_race_fixed_no_lock.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amount_to_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/amount_to_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/rest_server_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/rest_server_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/rest_server_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/rest_server_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/rest_server_xml.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/rest_server_xml.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/rest_server_xml_minidom.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/rest_server_xml_minidom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

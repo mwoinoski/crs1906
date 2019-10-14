@@ -70,13 +70,15 @@ def scale(size, smooth, src_dir, dest_dir, num_procs):
     jobs = multiprocessing.JoinableQueue()
     results = multiprocessing.Queue()
     create_processes(size, smooth, jobs, results, num_procs)
-    todo = add_jobs(src_dir, dest_dir, jobs)
+    for src_image, dest_image in get_jobs(src_dir, dest_dir):
+        jobs.put((src_image, dest_image))
     try:
         jobs.join()
     except KeyboardInterrupt: # catch Ctrl-C (may not work on Windows)
         Qtrac.report("canceling...")
         canceled = True
     copied = scaled = 0
+    todo = results.qsize()
     while not results.empty():  # Safe because all jobs have finished
         result = results.get_nowait()
         copied += result.copied
@@ -108,12 +110,11 @@ def worker(size, smooth, jobs, results):
             jobs.task_done()
 
 
-def add_jobs(src_dir, dest_dir, jobs):
-    for todo, name in enumerate(os.listdir(src_dir), start=1):
-        scr_image = os.path.join(src_dir, name)
-        dest_image = os.path.join(dest_dir, name)
-        jobs.put((scr_image, dest_image))
-    return todo
+def get_jobs(src_dir, dest_dir):
+    for file_name in os.listdir(src_dir):
+        src_file_path = os.path.join(src_dir, file_name)
+        dest_file_path = os.path.join(dest_dir, file_name)
+        yield src_file_path, dest_file_path
 
 
 def scale_one(size, smooth, scr_image, dest_image):
@@ -123,8 +124,8 @@ def scale_one(size, smooth, scr_image, dest_image):
         return Result(1, 0, dest_image)
     else:
         if smooth:
-            scale = min(size / old_image.width, size / old_image.height)
-            new_image = old_image.scale(scale)
+            image_scale = min(size / old_image.width, size / old_image.height)
+            new_image = old_image.scale(image_scale)
         else:
             stride = int(math.ceil(max(old_image.width / size,
                                        old_image.height / size)))

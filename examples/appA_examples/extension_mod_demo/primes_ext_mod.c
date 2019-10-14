@@ -24,7 +24,8 @@ static PyObject *py_primes_c(PyObject *self, PyObject *args) {
   }
 
   /* Attempt to extract buffer information from it */
-  if (PyObject_GetBuffer(bufobj, &view, PyBUF_ANY_CONTIGUOUS | PyBUF_FORMAT) == -1) {
+  if (PyObject_GetBuffer(bufobj, &view,
+                         PyBUF_ANY_CONTIGUOUS | PyBUF_FORMAT) == -1) {
     return NULL;
   }
 

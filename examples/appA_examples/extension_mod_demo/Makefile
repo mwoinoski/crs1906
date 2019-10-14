@@ -1,19 +1,15 @@
-# Makefile
+# Makefile for Linux
 # Default goal is all
-# Run MinGW's make command from a command prompt:
+# Run GNU's make command from a command prompt:
 #    make
 
-COMPILER=mingw32
+COMPILER=gcc
+#COMPILER=mingw32
 PYTHON=python
 RM=rm -rf
-.PHONY: all reminder clean extmod
+.PHONY: all clean extmod
 
-all: reminder clean extmod
-
-reminder:
-	@echo
-	@echo "****** Did you run use_python33x86 ? ******"
-	@echo
+all: clean extmod
 
 extmod:
 	$(PYTHON) setup.py build_ext --inplace --compiler=$(COMPILER)

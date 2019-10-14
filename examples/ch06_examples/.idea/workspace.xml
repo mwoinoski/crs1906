@@ -2,30 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c282f57c-9971-4985-a05a-6dd6b8d18b2a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/ch05_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/ch05_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/mandelbrot.prof" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/mandelbrot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/mandelbrot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/string_cat_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/string_cat_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ch06_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ch06_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/student.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/ch07_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/ch07_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/ch08_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/ch08_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/thread_demo1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/thread_demo1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/ch09_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/ch09_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/amount_to_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/amount_to_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_xml.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_xml.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_xml_minidom.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_xml_minidom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decorators/logging_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/decorators/logging_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decorators/profiling_monkey_patch.py" beforeDir="false" afterPath="$PROJECT_DIR$/decorators/profiling_monkey_patch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +34,7 @@
   <component name="ProjectId" id="1Rhv6SGGHRcoem1VeQ8csm99PZD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ch05_examples" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -242,7 +225,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
