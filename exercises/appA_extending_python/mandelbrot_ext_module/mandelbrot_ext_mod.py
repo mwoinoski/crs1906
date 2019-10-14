@@ -9,7 +9,7 @@ from ctypes import Structure, c_int, c_double
 ....
 
 # TODO: import array from the array module
-# HINT: see slide 7-21
+# HINT: see slide A-21
 ....
 
 # area of space to investigate
@@ -25,6 +25,7 @@ class COMPLEX(Structure):
 
 def calc(maxiter, w, h, show_output):
     """Make a list of x and y values which will represent q"""
+    start_time = datetime.datetime.now()
     x_step = (float(x2 - x1) / float(w)) * 2
     y_step = (float(y1 - y2) / float(h)) * 2
     x = []
@@ -45,8 +46,6 @@ def calc(maxiter, w, h, show_output):
     len_q = len(q)
 
     print("Total elements:", len_q)
-    start_time = datetime.datetime.now()
-
 
     # TODO: create an array of COMPLEX with length len_q exactly as you did in
     # mandelbrot_ctypes/mandelbrot_ctypes.py. Assign the array to a variable
@@ -71,26 +70,25 @@ def calc(maxiter, w, h, show_output):
 
     end_time = datetime.datetime.now()
     secs = end_time - start_time
-    print("Main took", secs)
+    print(f"Calculations completed in {end_time - start_time} seconds")
 
     # TODO: note how we sum the output_array elements, exactly as before
     # (no code change required)
     validation_sum = sum(output_array)
     print("Total sum of elements (for validation):", validation_sum)
 
-    # replace this when mingw64 works
-    # if show_output:
-    #     try:
-    #         from PIL import Image
-    #         import numpy as nm
-    #         output = nm.array(output)
-    #         output = (output + (256*output) + (256**2)*output) * 8
-    #         im = Image.new("RGB", (int(w/2), int(h/2)))
-    #         im.fromstring(output.tostring(), "raw", "RGBX", 0, -1)
-    #         im.show()
-    #     except ImportError as err:
-    #         # Bail gracefully if we're using PyPy
-    #         print("Couldn't import Image or numpy:", str(err))
+    if show_output:
+        try:
+            from PIL import Image
+            import numpy as nm
+            output = nm.array(output_array)
+            output = (output + (256*output) + (256**2)*output) * 8
+            im = Image.new("RGB", (int(w/2), int(h/2)))
+            im.frombytes(output.tostring(), "raw", "RGBX", 0, -1)
+            im.show()
+        except ImportError as err:
+            # Bail gracefully if we're using PyPy
+            print("Couldn't import Image or numpy:", str(err))
 
 
 if __name__ == "__main__":

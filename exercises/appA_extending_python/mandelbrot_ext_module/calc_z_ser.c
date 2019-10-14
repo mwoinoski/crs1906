@@ -19,7 +19,7 @@
   * (no code change required)
   */
 int calc_z_ser(struct complex_num* q, int *output, int len_q, int maxiter) {
-    struct complex_num z[len_q];
+    struct complex_num* z = malloc(len_q * sizeof(*z));
     int i, iteration;
     struct complex_num z_squared;
     double magnitude;
@@ -43,5 +43,6 @@ int calc_z_ser(struct complex_num* q, int *output, int len_q, int maxiter) {
             }
         }
     }
+    free(z);
     return 1;
 }

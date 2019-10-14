@@ -5,6 +5,7 @@ from optparse import OptionParser
 from ctypes import cdll, c_int, cast, POINTER, Structure, c_double
 from os.path import abspath, join, split
 
+
 # .dll file is located in the current directory.
 # To build the DLL, run:  make
 
@@ -101,14 +102,13 @@ def calculate_z_serial(q, maxiter):
     # 2. output_array
     # 3. the length of the arrays
     # 4. maxiter
-    # import pdb; pdb.set_trace();
     calc_z_ser(complex_array, output_array, len_q, maxiter)
 
     # TODO: create a Python list from the output_array. Store the Python list
     # in a variable named output_list.
     output_list = list(output_array)
 
-    # TODO: return the Python list
+    # TODO: return output_list
     return output_list
 
 
@@ -138,8 +138,7 @@ def calc(maxiter, w, h, show_output):
     output = calculate_z_serial(q, maxiter)
 
     end_time = datetime.datetime.now()
-    secs = end_time - start_time
-    print("Main took", secs)
+    print(f"calculate_z_serial() completed in {end_time - start_time} seconds")
 
     validation_sum = sum(output)
     print("Total sum of elements (for validation):", validation_sum)
@@ -151,7 +150,7 @@ def calc(maxiter, w, h, show_output):
             output = nm.array(output)
             output = (output + (256*output) + (256**2)*output) * 8
             im = Image.new("RGB", (int(w/2), int(h/2)))
-            im.fromstring(output.tostring(), "raw", "RGBX", 0, -1)
+            im.frombytes(output.tostring(), "raw", "RGBX", 0, -1)
             im.show()
         except ImportError as err:
             # Bail gracefully if we're using PyPy

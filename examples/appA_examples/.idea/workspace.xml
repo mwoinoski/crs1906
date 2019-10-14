@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11b1f6ed-65b8-45ed-bc7a-ba108c2dad4f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ctypes_demo/primes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ch06_examples/.idea/dictionaries/student.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ch08_examples/.idea/dictionaries/student.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/appA_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appA_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ctypes_demo/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/ctypes_demo/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ctypes_demo/ctypes_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/ctypes_demo/ctypes_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extension_mod_demo/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/extension_mod_demo/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extension_mod_demo/primes_ext_mod.c" beforeDir="false" afterPath="$PROJECT_DIR$/extension_mod_demo/primes_ext_mod.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extension_mod_demo/primes_ext_mod_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/extension_mod_demo/primes_ext_mod_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extension_mod_demo/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/extension_mod_demo/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/logging_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/logging_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_monkey_patch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_monkey_patch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/imagescale-m.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/imagescale-m.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/imagescale-q-m.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/imagescale-q-m.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/thread_race.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/thread_race.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/thread_race_fixed.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/thread_race_fixed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/thread_race_fixed_no_lock.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/thread_race_fixed_no_lock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" afterDir="false" />
-    </list>
+    <list default="true" id="11b1f6ed-65b8-45ed-bc7a-ba108c2dad4f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +173,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
