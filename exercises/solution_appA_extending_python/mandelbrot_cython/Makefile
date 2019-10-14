@@ -22,4 +22,4 @@ extmod:
 
 # '-' before command causes errors not to exit the process
 clean:
-	-$(RM) $(OBJ) $(DLL) *.pyd __pycache__ build core
+	-$(RM) $(OBJ) $(DLL) *.c *.pyd __pycache__ build core

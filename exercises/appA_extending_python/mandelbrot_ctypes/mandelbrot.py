@@ -50,8 +50,7 @@ def calc(maxiter, w, h, show_output):
     output = calculate_z_serial(q, maxiter, z)
 
     end_time = datetime.datetime.now()
-    secs = end_time - start_time
-    print("Main took", secs)
+    print(f"calculate_z_serial() completed in {end_time - start_time} seconds")
 
     validation_sum = sum(output)
     print("Total sum of elements (for validation):", validation_sum)
@@ -63,7 +62,7 @@ def calc(maxiter, w, h, show_output):
             output = nm.array(output)
             output = (output + (256*output) + (256**2)*output) * 8
             im = Image.new("RGB", (int(w/2), int(h/2)))
-            im.fromstring(output.tostring(), "raw", "RGBX", 0, -1)
+            im.frombytes(output.tostring(), "raw", "RGBX", 0, -1)
             im.show()
         except ImportError as err:
             # Bail gracefully if we're using PyPy

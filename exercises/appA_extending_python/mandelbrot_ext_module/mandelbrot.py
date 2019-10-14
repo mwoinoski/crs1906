@@ -8,7 +8,7 @@ x1, x2, y1, y2 = -2.13, 0.77, -1.3, 1.3
 
 
 # TODO: note this pure Python definition of the calculate_z_serial(). You'll
-# replace this code with calls to C functions.
+# replace this code with a call to a C function.
 # (no code changes required)
 def calculate_z_serial(q, maxiter, z):
     """Pure python with complex datatype, iterating over list of q and z"""
@@ -24,6 +24,7 @@ def calculate_z_serial(q, maxiter, z):
 
 def calc(maxiter, w, h, show_output):
     """Make a list of x and y values which will represent q"""
+    start_time = datetime.datetime.now()
     x_step = (float(x2 - x1) / float(w)) * 2
     y_step = (float(y1 - y2) / float(h)) * 2
     x = []
@@ -43,32 +44,29 @@ def calc(maxiter, w, h, show_output):
 
     z = [0+0j] * len(q)
     print("Total elements:", len(z))
-    start_time = datetime.datetime.now()
 
     # TODO: note the call to calculate_z_serial().
     # (no code change required)
     output = calculate_z_serial(q, maxiter, z)
 
     end_time = datetime.datetime.now()
-    secs = end_time - start_time
-    print("Main took", secs)
+    print(f"calculate_z_serial() completed in {end_time - start_time} seconds")
 
     validation_sum = sum(output)
     print("Total sum of elements (for validation):", validation_sum)
 
-    # replace this when mingw64 works
-    # if show_output:
-    #     try:
-    #         from PIL import Image
-    #         import numpy as nm
-    #         output = nm.array(output)
-    #         output = (output + (256*output) + (256**2)*output) * 8
-    #         im = Image.new("RGB", (int(w/2), int(h/2)))
-    #         im.fromstring(output.tostring(), "raw", "RGBX", 0, -1)
-    #         im.show()
-    #     except ImportError as err:
-    #         # Bail gracefully if we're using PyPy
-    #         print("Couldn't import Image or numpy:", str(err))
+    if show_output:
+        try:
+            from PIL import Image
+            import numpy as nm
+            output = nm.array(output)
+            output = (output + (256*output) + (256**2)*output) * 8
+            im = Image.new("RGB", (int(w/2), int(h/2)))
+            im.frombytes(output.tostring(), "raw", "RGBX", 0, -1)
+            im.show()
+        except ImportError as err:
+            # Bail gracefully if we're using PyPy
+            print("Couldn't import Image or numpy:", str(err))
 
 
 if __name__ == "__main__":
