@@ -1,11 +1,13 @@
 @echo off
 set tempfile=C:\software\cygwin\tmp\path
 
-C:\Python\Python3.7\python.exe -c "import os, re; path=os.environ['PATH']; path=re.sub(r';C:\\[Pp]ython\\pypy;C:\\[Pp]ython\\pypy\\bin', '', path); path=re.sub(r';C:\\[Pp]ython\\jython\\bin', '', path); path=re.sub(r'Python(.).*?([;\\])', r'Python\1"%1"\2', path); path=re.sub(r';$', '', path); path=re.sub(r'$', r';C:\\Python\\jython\\bin;C:\\Python\\pypy;C:\\python\\pypy\\bin', path); print(path, sep='', end='')" > %tempfile%
-
+@rem Note that in Python REs, to indicate a literal backslash, you still need to use two backslashes
+@rem because the RE engine re-interpolates the RE argument.
+C:\Python\Python3.7\python.exe -c "import os, re; path=os.environ['PATH']; path=re.sub(r'(.)Python(.)[\w.-]+;', r'\1Python\1"%1";', path); path=re.sub(r'(.)Python(.)[\w.-]+(.)Scripts;', r'\1Python\1"%1"\1Scripts;', path); path=re.sub(r';$', '', path); print(path, sep='', end='')" > %tempfile%
+ 
 set /p PATH= < %tempfile%
 path
 echo.
-python --version
+%2 --version
 del %tempfile%
 prompt $P$_$+$G$S

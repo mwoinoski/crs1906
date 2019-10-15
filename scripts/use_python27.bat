@@ -1,2 +1,2 @@
 @echo off
-use_python_ver Python2.7
+use_python_ver Python2.7 python
