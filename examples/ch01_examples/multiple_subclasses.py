@@ -1,6 +1,7 @@
 """
-simple_counter.py - SimpleCounter class with two subclasses
+multiple_subclasses.py - SimpleCounter class with two subclasses
 """
+
 
 class SimpleCounter:
     def __init__(self, start):
@@ -9,6 +10,7 @@ class SimpleCounter:
     def increment(self, incr=1):
         self.count += incr
         return self.count
+
 
 class UpAndDownCounter(SimpleCounter):
     def __init__(self, start, min=0):
@@ -19,6 +21,7 @@ class UpAndDownCounter(SimpleCounter):
         if self.count > self.min:
             self.count -= incr
         return self.count
+
 
 class BoundedCounter(SimpleCounter):
     def __init__(self, start, limit=None):
@@ -31,14 +34,15 @@ class BoundedCounter(SimpleCounter):
             self.count += incr
         return self.count
 
+
 up_and_down = UpAndDownCounter(10)
 up_and_down.increment()
 up_and_down.decrement()
 up_and_down.decrement()
-print("up_and_down.count = " + str(up_and_down.count))
+print("up_and_down.count =", str(up_and_down.count))
 
 bounded = BoundedCounter(0, 2)
 bounded.increment()
 bounded.increment()
 bounded.increment()
-print("bounded.count = " + str(bounded.count))
+print("bounded.count =", str(bounded.count))

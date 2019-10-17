@@ -2,44 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0619d9d4-7862-4cda-91c2-c441bea3b450" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ch02_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ch02_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ch01_examples/multiple_subclasses.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/function_overloading.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ch06_examples/decorators/class_decorator_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../appA_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reverse_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/reverse_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reverse_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/reverse_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_method.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch03_examples/.idea/ch03_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/.idea/ch03_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch03_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch03_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch03_examples/test_person_nose.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/test_person_nose.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch03_examples/test_person_nose_fail.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/test_person_nose_fail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch04_examples/.idea/ch04_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/ch04_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch04_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multiple_subclasses.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/ch05_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/ch05_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/mandelbrot.prof" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/mandelbrot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/mandelbrot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch05_examples/string_cat_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/string_cat_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch06_examples/.idea/ch06_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/ch06_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch06_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/ch07_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/ch07_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/ch08_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/ch08_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/thread_demo1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/thread_demo1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/ch09_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/ch09_examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/amount_to_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/amount_to_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_xml.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_xml.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_xml_minidom.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_xml_minidom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/unittestgui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/unittestgui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,9 +42,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ch01_examples" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -100,7 +72,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.simple_counter">
+  <component name="RunManager" selected="Python.Run http_server">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -133,6 +105,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/http_server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="function_overloading" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ch02_examples" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/function_overloading.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -183,27 +176,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="simple_counter" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ch02_examples" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\crs1906\examples\ch02_examples\multiple_subclasses.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="thumbnail _image_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ch02_examples" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -229,12 +201,12 @@
       <item itemvalue="Python.Run http_server" />
       <item itemvalue="Python.generator_expr" />
       <item itemvalue="Python.introspection_demo" />
-      <item itemvalue="Python.simple_counter" />
       <item itemvalue="Python.thumbnail _image_list" />
+      <item itemvalue="Python.function_overloading" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.simple_counter" />
+        <item itemvalue="Python.function_overloading" />
         <item itemvalue="Python.Run http_server" />
         <item itemvalue="Python.thumbnail _image_list" />
         <item itemvalue="Python.generator_expr" />
@@ -260,7 +232,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -281,11 +255,6 @@
           <url>file://$PROJECT_DIR$/template_demo.py</url>
           <line>10</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/multiple_subclasses.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

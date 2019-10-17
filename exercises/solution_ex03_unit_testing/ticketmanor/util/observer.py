@@ -2,9 +2,9 @@
 Implementation of the GoF Observer design pattern
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
-
 from abc import ABCMeta, abstractmethod
+
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 
 class Observer(metaclass=ABCMeta):

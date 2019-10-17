@@ -2,31 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64800e3e-232b-4bdd-9d53-4fc23dcf1a79" name="Default Changelist" comment="s">
-      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex02_template_method/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../examples/ch01_examples/multiple_subclasses.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../examples/ch02_examples/function_overloading.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../examples/ch06_examples/decorators/class_decorator_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/dictionaries/student.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/appA_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/appA_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch02_examples/multiple_subclasses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch08_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex04_debugging/unittestgui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex04_debugging/unittestgui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/clear_cache.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/fix_git_perms.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/setup_venv.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketmanor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/all_news_feed_reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../scripts/ticketmanor.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/ticketmanor.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python27.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python27.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python31.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python31.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python33.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python33.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python33x86.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python33x86.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python34.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python35.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python37.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python37.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python38.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python38.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +42,9 @@
   <component name="ProjectId" id="1RZadZiT8R33WADputxFEyRbf32" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../solution_ex08_multiprocessing" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">

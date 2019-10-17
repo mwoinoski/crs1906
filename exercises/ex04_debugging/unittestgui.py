@@ -280,7 +280,7 @@ class DiscoverSettingsDialog(simpledialog.Dialog):
         tk.Label(master, text="Top Level Directory").grid(row=0)
         self.e1 = tk.Entry(master, textvariable=self.dirVar)
         self.e1.grid(row = 0, column=1)
-        tk.Button(master, text="...",
+        tk.Button(master, text="`...`",
                   command=lambda: self.selectDirClicked(master)).grid(row=0,column=3)
 
         tk.Label(master, text="Test File Pattern").grid(row=1)

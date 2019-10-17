@@ -1,5 +1,5 @@
 """
-Unit tests for Observer and Observable classes
+Unit tests for Observer and Subject classes
 """
 
 from unittest import TestCase

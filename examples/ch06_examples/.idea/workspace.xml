@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c282f57c-9971-4985-a05a-6dd6b8d18b2a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/student.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ch01_examples/multiple_subclasses.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/decorators/class_decorator_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../appA_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch02_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/multiple_subclasses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decorators/logging_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/decorators/logging_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decorators/profiling_monkey_patch.py" beforeDir="false" afterPath="$PROJECT_DIR$/decorators/profiling_monkey_patch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/unittestgui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/unittestgui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +39,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ch05_examples" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -85,6 +89,27 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration name="class_decorator_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ch06_examples" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/decorators" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/decorators/class_decorator_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="decorator_monkey_patch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ch06_examples" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,27 +123,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/decorator_monkey_patch.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="logging_decorator" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ch06_examples" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/decorators" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/decorators/logging_decorator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -192,18 +196,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.decorator_monkey_patch" />
-      <item itemvalue="Python.logging_decorator" />
       <item itemvalue="Python.logging_demo" />
       <item itemvalue="Python.profile_decorator_demo" />
       <item itemvalue="Python.profiling_demo" />
+      <item itemvalue="Python.class_decorator_demo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.class_decorator_demo" />
         <item itemvalue="Python.logging_demo" />
         <item itemvalue="Python.profile_decorator_demo" />
         <item itemvalue="Python.decorator_monkey_patch" />
         <item itemvalue="Python.profiling_demo" />
-        <item itemvalue="Python.logging_decorator" />
       </list>
     </recent_temporary>
   </component>

@@ -6,7 +6,6 @@ from threading import Thread
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
-from time import sleep
 from .feed_reader import (
     FeedReader,
 )
@@ -34,5 +33,4 @@ class AllNewsFeedReader:
         }
 
     def worker(self, news_type, max_items):
-        sleep(2)  # pause, to simulate a slow response (needed for ex 9.2)
         return self.feed_reader.get_news(news_type, max_items)

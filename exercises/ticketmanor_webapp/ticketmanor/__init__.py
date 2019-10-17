@@ -112,6 +112,21 @@ def add_routes(config, prefix):
     config.add_route('rest_events', '/rest/events/{type}.json')
     config.add_route('rest_event', '/rest/events/{type}/{event_id}.json')
 
+    # Handle request for /favicon.ico: https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/assets.html#registering-a-view-callable-to-serve-a-static-asset
+    # option 1
+    # config.add_view('ticketmanor.views.favicon_view', name='favicon.ico')
+
+    # option 2
+    # config.add_route('favicon', '/favicon.ico')
+    # config.add_view('ticketmanor.views.favicon_view', route_name='favicon')
+    
+    # Both optins generate this error:
+    #   File ...\venv\lib\site-packages\pyramid-1.10.4-py3.7.egg\pyramid\viewderivers.py", line 183, in preserve_view_attrs
+    # wrapper.__module__ = view.__module__
+    # pyramid.exceptions.ConfigurationExecutionError: <class 'AttributeError'>: module 'ticketmanor.views' has no attribute '__module__'
+    # in:
+    # Line 117 of file c:\crs1906\exercises\solution_ex02_template_method\ticketmanor\__init__.py:
+    # config.add_view('ticketmanor.views.favicon_view', route_name='favicon')
 
 # Pyramid mappings of paths to route names
 # routes = [

@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9830ea0c-7263-486b-abee-75f7a8616e7f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../ch06_examples/.idea/dictionaries/student.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/student.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/logging_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/logging_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_monkey_patch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_monkey_patch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ch01_examples/multiple_subclasses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch02_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/multiple_subclasses.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagescale-m.py" beforeDir="false" afterPath="$PROJECT_DIR$/imagescale-m.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagescale-q-m.py" beforeDir="false" afterPath="$PROJECT_DIR$/imagescale-q-m.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thread_race.py" beforeDir="false" afterPath="$PROJECT_DIR$/thread_race.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thread_race_fixed.py" beforeDir="false" afterPath="$PROJECT_DIR$/thread_race_fixed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thread_race_fixed_no_lock.py" beforeDir="false" afterPath="$PROJECT_DIR$/thread_race_fixed_no_lock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +57,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.thread_race">
+  <component name="RunManager" selected="Python.yinyang_multi_four_threads">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -128,48 +119,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="subprocess_demos" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ch08_examples" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/subprocess_demos.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="subprocess_openssl" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ch08_examples" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/subprocess_openssl.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="thread_race" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ch08_examples" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -212,16 +161,61 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thread_race_fixed_no_lock" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="yinyang_multi_four_threads" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ch08_examples" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thread_race_fixed_no_lock.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinyang_multi_four_threads.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="yinyang_multithreaded" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ch08_examples" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinyang_multithreaded.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="yinyang_singlethreaded" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ch08_examples" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinyang_singlethreaded.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -294,19 +288,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.imagescale-q-m" />
-      <item itemvalue="Python.subprocess_demos" />
-      <item itemvalue="Python.subprocess_openssl" />
       <item itemvalue="Python.thread_race" />
       <item itemvalue="Python.thread_race_fixed" />
-      <item itemvalue="Python.thread_race_fixed_no_lock" />
+      <item itemvalue="Python.yinyang_singlethreaded" />
+      <item itemvalue="Python.yinyang_multithreaded" />
+      <item itemvalue="Python.yinyang_multi_four_threads" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.yinyang_multi_four_threads" />
+        <item itemvalue="Python.yinyang_multithreaded" />
+        <item itemvalue="Python.yinyang_singlethreaded" />
         <item itemvalue="Python.thread_race" />
         <item itemvalue="Python.thread_race_fixed" />
-        <item itemvalue="Python.thread_race_fixed_no_lock" />
-        <item itemvalue="Python.subprocess_demos" />
-        <item itemvalue="Python.subprocess_openssl" />
       </list>
     </recent_temporary>
   </component>

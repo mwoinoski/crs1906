@@ -2,36 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e6f03bc-de4b-4129-8a37-78a734c50f7c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../examples/ch01_examples/multiple_subclasses.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../examples/appA_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/appA_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/.idea/appA_extending_python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/.idea/appA_extending_python.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/mandelbrot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/mandelbrot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_ctypes/mandelbrot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_ctypes/mandelbrot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_ctypes/mandelbrot_ctypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_ctypes/mandelbrot_ctypes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_cython/mandelbrot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_cython/mandelbrot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_cython/mandelbrot_cython.py" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_cython/mandelbrot_cython.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_cython/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_cython/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_ext_module/calc_z_ser.c" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_ext_module/calc_z_ser.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_ext_module/mandelbrot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_ext_module/mandelbrot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_ext_module/mandelbrot_ext_mod.py" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_ext_module/mandelbrot_ext_mod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_ext_module/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/mandelbrot_ext_module/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ctypes/mandelbrot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ctypes/mandelbrot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ctypes/mandelbrot_ctypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ctypes/mandelbrot_ctypes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_cython/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_cython/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_cython/calc_z_ser_cython.c" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_cython/calc_z_ser_cython.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_cython/mandelbrot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_cython/mandelbrot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_cython/mandelbrot_cython.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_cython/mandelbrot_cython.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_cython/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_cython/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ext_module/calc_z_ser.c" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ext_module/calc_z_ser.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ext_module/mandelbrot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ext_module/mandelbrot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ext_module/mandelbrot_ext_mod.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/mandelbrot_ext_module/mandelbrot_ext_mod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/pull_code.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/pull_code.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch02_examples/multiple_subclasses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch08_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittestgui.py" beforeDir="false" afterPath="$PROJECT_DIR$/unittestgui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

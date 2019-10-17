@@ -2,76 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e66dba11-0105-4e20-9ded-e67a8f9ecea9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ex01_inheritance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ex01_inheritance.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../examples/ch01_examples/multiple_subclasses.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../examples/ch02_examples/function_overloading.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../examples/ch06_examples/decorators/class_decorator_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/appA_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/appA_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch02_examples/multiple_subclasses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch08_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/ex02_template_method.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/ex02_template_method.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex02_template_method/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/.idea/ex03_unit_testing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/.idea/ex03_unit_testing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/.idea/ex03_with_mocks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/.idea/ex03_with_mocks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/.idea/ex08_concurrency.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/.idea/ex08_concurrency.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/ex08_multiprocessing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/ex08_multiprocessing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/solution_ex02_template_method.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/solution_ex02_template_method.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/solution_ex03_unit_testing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/solution_ex03_unit_testing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/solution_ex03_with_mocks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/solution_ex03_with_mocks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/solution_ex08_concurrency.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/solution_ex08_concurrency.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/solution_ex08_multiprocessing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/solution_ex08_multiprocessing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex04_debugging/unittestgui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex04_debugging/unittestgui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/clear_cache.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/fix_git_perms.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/setup_venv.bat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../scripts/ticketmanor.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/ticketmanor.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python27.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python27.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python31.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python31.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python33.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python33.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python33x86.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python33x86.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python34.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python35.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python37.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python37.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python38.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python38.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,6 +35,7 @@
   <component name="ProjectId" id="1RffyJhM2dadOw9HaKjxbuuh7Q2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="FileHistory.org.zmlx.hg4idea.provider.HgHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.zmlx.hg4idea.provider.HgHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.org.zmlx.hg4idea.provider.HgHistoryProvider_flatOrder2" value="2" />
@@ -107,7 +52,7 @@
     <property name="FileHistory.org.zmlx.hg4idea.provider.HgHistoryProvider_treeWidth1" value="63" />
     <property name="FileHistory.org.zmlx.hg4idea.provider.HgHistoryProvider_treeWidth2" value="63" />
     <property name="FileHistory.org.zmlx.hg4idea.provider.HgHistoryProvider_treeWidth3" value="609" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ticketmanor_webapp" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -443,15 +388,15 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests in PersonTestCase" />
       <item itemvalue="Python tests.Unittests in test_act" />
       <item itemvalue="Python tests.Unittests in test_act_dao" />
-      <item itemvalue="Python tests.Unittests in test_address" />
       <item itemvalue="Python tests.Unittests in test_customer" />
-      <item itemvalue="Python tests.Unittests in test_func_stats" />
       <item itemvalue="Python tests.Unittests in test_member" />
-      <item itemvalue="Python tests.Unittests in test_person_dao" />
       <item itemvalue="Python tests.Unittests in test_venue_dao" />
+      <item itemvalue="Python tests.Unittests in PersonTestCase" />
+      <item itemvalue="Python tests.Unittests in test_address" />
+      <item itemvalue="Python tests.Unittests in test_func_stats" />
+      <item itemvalue="Python tests.Unittests in test_person_dao" />
     </list>
     <recent_temporary>
       <list>
@@ -488,7 +433,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
