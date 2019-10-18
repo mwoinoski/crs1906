@@ -4,11 +4,8 @@ Unit tests for UserServiceRest
 See http://docs.pylonsproject.org/projects/pyramid/en/1.3-branch/narr/pyramid_testing.html
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
-
 from unittest import TestCase, main
 from unittest.mock import Mock, ANY
-from nose.tools import raises
 import sqlite3
 
 from pyramid import testing as pyramid_testing
@@ -17,6 +14,8 @@ from pyramid.httpexceptions import HTTPNotFound, HTTPInternalServerError
 from ticketmanor.models.person import Person
 from ticketmanor.rest_services.user_service import UserServiceRest
 from ticketmanor.models.persistence import PersistenceError
+
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 
 class UserServiceRestTest(TestCase):
@@ -49,7 +48,7 @@ class UserServiceRestTest(TestCase):
         # (no code change required)
         user_service._dao.get.return_value = person
 
-        result = user_service.get_user()
+        result = user_service.get_user('benf@gmail.com')
 
         self.assertEqual(result, person)
 
@@ -64,12 +63,12 @@ class UserServiceRestTest(TestCase):
 
         # TODO: configure the mock so that a call to its get() method has
         # the side effect of raising a PersistenceError
-        # HINT: see slide 3-39
+        # HINT: see slide 3-37
         ....
 
         # TODO: assert that an HTTPNotFound exception is raised when you call
         # the user_service's get_user() method.
-        # HINT: see slide 3-38
+        # HINT: see slide 3-36
         ....
 
     def test_get_unhandled_exception(self):
@@ -89,22 +88,18 @@ class UserServiceRestTest(TestCase):
         # the user_service's get_user() method.
         ....
 
-    # TODO: use the @nose.tools.raises decorator to verify that this test
-    # raises an HTTPNotFound exception.
-    # HINT: see slide 3-22
-    ....
-    def test_get_not_found_with_decorator(self):
+    def test_get_user_PersistenceError(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
         request.matchdict['email'] = 'nobody@gmail.com'
         user_service = UserServiceRest(None, request, dao=Mock)
 
-        # TODO: note that we program the mock DAO's get() method to raise
-        # a PersistenceError
-        # (no code change required)
-        user_service._dao.get = Mock(side_effect=PersistenceError())
+        # TODO: program the mock DAO's get() method to have a side effect of
+        # raising a PersistenceError.
+        ....
 
-        # TODO: call the user_service get_user() method.
+        # TODO: assert that an HTTPNotFound is raised when you call
+        # the user_service's get_user() method.
         ....
 
     def test_add_user_success(self):
@@ -132,7 +127,7 @@ class UserServiceRestTest(TestCase):
         # TODO: assert that an HTTPInternalServerError is raised when you call
         # the user_service's add_user() method, and that the exception's
         # message includes the string 'Could not add'
-        # HINT: see slide 3-39
+        # HINT: see slide 3-37
         ....
 
     def test_update_user_success(self):
@@ -176,6 +171,7 @@ class UserServiceRestTest(TestCase):
 
         with self.assertRaises(HTTPNotFound):
             user_service.delete_user()
+
 
 if __name__ == '__main__':
     main()

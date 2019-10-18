@@ -19,3 +19,4 @@ class TestAct(TestCase):
                          Act.ACT_TYPE_INV[Act.ACT_TYPE[Act.THEATER]])
         self.assertEqual(Act.SPORTS,
                          Act.ACT_TYPE_INV[Act.ACT_TYPE[Act.SPORTS]])
+

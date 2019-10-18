@@ -8,7 +8,6 @@ __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest import TestCase, main
 from unittest.mock import MagicMock, ANY
-from nose.tools import raises
 import sqlite3
 
 from pyramid import testing as pyramid_testing
@@ -78,16 +77,6 @@ class UserServiceRestTest(TestCase):
 
         with self.assertRaises(ValueError):
             user_service.get_user()
-
-    @raises(HTTPNotFound)
-    def test_get_not_found_with_decorator(self):
-        request = pyramid_testing.DummyRequest()
-        request.db_session = None
-        request.matchdict['email'] = 'nobody@gmail.com'
-        user_service = UserServiceRest(None, request, dao=MagicMock)
-        user_service._dao.get = MagicMock(side_effect=PersistenceError())
-
-        user_service.get_user()
 
     def test_add_user_success(self):
         request = pyramid_testing.DummyRequest()

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="C:/crs1906" vcs="Git" />
-    <mapping directory="C:/crs1906/exercises/solution_ex09_rest_services" vcs="hg4idea" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
   </component>
 </project>

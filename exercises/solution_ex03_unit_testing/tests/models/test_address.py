@@ -48,5 +48,6 @@ class AddressTestCase(unittest.TestCase):
             post_code="1",
         )
 
+
 if __name__ == '__main__':
     unittest.main()

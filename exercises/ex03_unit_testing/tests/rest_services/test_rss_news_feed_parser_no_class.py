@@ -2,7 +2,7 @@
 Unit tests for RssNewsFeedParser class defined with no TestCase subclass.
 """
 
-from nose.tools import raises
+from pytest import raises
 from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import (
     RssNewsFeedParser,
 )
@@ -78,8 +78,10 @@ expected = [
 # (no code changes required)
 
 # TODO:
-# 1. Copy the test_get_news_music() and test_get_news_music_max_items_1()
-#    methods from test_rss_news_feed_parser.py and paste them here.
+# 1. Copy the following methods from test_rss_news_feed_parser.py and
+#    paste them here:
+#       test_get_news_music()
+#       test_get_news_music_max_items_1()
 #    (Be sure to un-indent the function definitions)
 # 2. Delete the "self" argument from the copied functions.
 # 3. Replace calls to self.assertEqual() with the assert statement.
@@ -89,7 +91,7 @@ expected = [
 
 # TODO: copy the test_get_news_invalid_news_type() method from
 # test_rss_news_feed_parser.py and paste it here. Modify it to use the
-# nose.tools.raises decorator to verify that a FeedReaderException is raised.
+# pytest.raises() function to verify that a FeedReaderException is raised.
 # HINT: see slide 3-22
 ...
 

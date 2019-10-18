@@ -33,8 +33,8 @@
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <console-settings sdk-home="C:\python\python-3.4\python.exe">
-        <option name="mySdkHome" value="C:\python\python-3.4\python.exe" />
+      <console-settings sdk-home="C:\Python\Python3.7\python.exe">
+        <option name="mySdkHome" value="C:\Python\Python3.7\python.exe" />
       </console-settings>
     </option>
     <option name="myIpythonEnabled" value="false" />

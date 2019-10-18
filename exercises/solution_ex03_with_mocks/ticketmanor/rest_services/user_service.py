@@ -42,13 +42,12 @@ class UserServiceRest:
     @view_config(request_method='GET',
                  route_name='rest_users_email',
                  renderer='json')
-    # TODO: you will be testing this get_user() method.
-    # (no code change required)
     def get_user(self):
         email = self._request.matchdict['email']
         return self.get_user_by_email(email)
 
-    @view_config(request_method='GET', route_name='rest_users_email')
+    # TODO: you will be testing this get_user() method.
+    # (no code change required)
     def get_user_by_email(self, email):
         """Fetch a Person by searching for the registered email address."""
         logger.debug("%s: email = %s", func_name(self), email)

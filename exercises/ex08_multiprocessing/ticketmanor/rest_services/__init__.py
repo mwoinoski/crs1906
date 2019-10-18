@@ -12,4 +12,5 @@ def notfound(request):
         body=json.dumps({"message": "no resource found at path {}"
                         .format(request.url)}),
         status='404 Not Found',
-        content_type='application/json')
+        content_type='application/json',
+        charset='UTF-8')

@@ -8,7 +8,6 @@ __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest import TestCase, main
 from unittest.mock import MagicMock, ANY
-from nose.tools import raises
 import sqlite3
 
 from pyramid import testing as pyramid_testing
@@ -55,7 +54,7 @@ class UserServiceRestTest(TestCase):
         person = Person(id=123)
         user_service._dao.get.return_value = person
 
-        result = user_service.get_user()
+        result = user_service.get_user('benf@gmail.com')
 
         self.assertEqual(result, person)
 
@@ -67,7 +66,7 @@ class UserServiceRestTest(TestCase):
         user_service._dao.get = MagicMock(side_effect=PersistenceError())
 
         with self.assertRaises(HTTPNotFound):
-            user_service.get_user()
+            user_service.get_user('nobody@gmail.com')
 
     def test_get_unhandled_exception(self):
         request = pyramid_testing.DummyRequest()
@@ -77,17 +76,7 @@ class UserServiceRestTest(TestCase):
         user_service._dao.get = MagicMock(side_effect=ValueError())
 
         with self.assertRaises(ValueError):
-            user_service.get_user()
-
-    @raises(HTTPNotFound)
-    def test_get_not_found_with_decorator(self):
-        request = pyramid_testing.DummyRequest()
-        request.db_session = None
-        request.matchdict['email'] = 'nobody@gmail.com'
-        user_service = UserServiceRest(None, request, dao=MagicMock)
-        user_service._dao.get = MagicMock(side_effect=PersistenceError())
-
-        user_service.get_user()
+            user_service.get_user('nobody@gmail.com')
 
     def test_add_user_success(self):
         request = pyramid_testing.DummyRequest()

@@ -10,7 +10,7 @@ import json
 import unittest
 from webtest import TestApp
 from ticketmanor import main
-from test_support.db_utils import (
+from tests.test_support.db_utils import (
     create_db_tables,
     drop_db_tables,
     execute_select,
@@ -58,7 +58,6 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
             'events': [
                 {
                     'id': 204,
-                    'date_time': 1451055600.0,
                     'venue': {
                         'latitude': 40.7127,
                         'prov_state': 'NY',
@@ -69,13 +68,12 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
                         'street_address': '881 7th Ave, New York, NY 10019',
                         'city': 'New York'
                     },
-                    # 'price': '$180'  # FIXME: uncomment when database schema is complete
+                    # 'price': '$180'
                     # 'image_thumbnail': '/static/images/concerts-1.png',
                     # 'image_banner': '/static/images/concerts.jpg',
                 },
                 {
                     'id': 201,
-                    'date_time': 1451610000.0,
                     'venue': {
                         'latitude': 41.8369,
                         'prov_state': 'IL',
@@ -92,7 +90,6 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
                 },
                 {
                     'id': 203,
-                    'date_time': 1451613600.0,
                     'venue': {
                         'latitude': 40.7127,
                         'prov_state': 'NY',
@@ -109,7 +106,6 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
                 },
                 {
                     'id': 202,
-                    'date_time': 1451696400.0,
                     'venue': {
                         'latitude': 41.8369,
                         'prov_state': 'IL',
@@ -130,7 +126,8 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
         res = self.testapp.get(url, headers=headers, status=200)
 
         res_list = json.loads(str(res.body, 'utf-8'))
-        for e in res_list['events']:  # FIXME: delete when database schema is complete
+        for e in res_list['events']:
+            del e['date_time']
             del e['price']
             del e['image_thumbnail']
             del e['image_banner']
@@ -203,6 +200,7 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
             (102, 'New York', 'USA', 40.7127, -74.0059, 'Carnegie Hall',
              'NY', '881 7th Ave, New York, NY 10019')
         )
+
 
 if __name__ == '__main__':
     unittest.main()

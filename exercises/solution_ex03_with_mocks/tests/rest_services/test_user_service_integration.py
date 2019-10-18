@@ -109,12 +109,12 @@ class UserServiceRestIntegrationTest(unittest.TestCase):
     def test_delete_user_found(self):
         url = 'http://localhost:6543/rest/users/trane@jazz.com'
 
-        self.testapp.delete(url, status=202)
+        self.testapp.delete(url, status=204)
 
     def test_delete_user_not_found(self):
         url = 'http://localhost:6543/rest/users/nobody@nowhere.com'
 
-        res = self.testapp.delete(url, headers=headers, status=404)
+        res = self.testapp.delete(url, status=404)
 
     def populate_db_tables(self):
         execute_insert(db_filename, 'people',

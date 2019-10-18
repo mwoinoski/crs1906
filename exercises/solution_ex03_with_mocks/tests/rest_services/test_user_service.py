@@ -4,11 +4,8 @@ Unit tests for UserServiceRest
 See http://docs.pylonsproject.org/projects/pyramid/en/1.3-branch/narr/pyramid_testing.html
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
-
 from unittest import TestCase, main
 from unittest.mock import Mock, ANY
-from nose.tools import raises
 import sqlite3
 
 from pyramid import testing as pyramid_testing
@@ -17,6 +14,8 @@ from pyramid.httpexceptions import HTTPNotFound, HTTPInternalServerError
 from ticketmanor.models.person import Person
 from ticketmanor.rest_services.user_service import UserServiceRest
 from ticketmanor.models.persistence import PersistenceError
+
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 
 class UserServiceRestTest(TestCase):
@@ -71,11 +70,6 @@ class UserServiceRestTest(TestCase):
         with self.assertRaises(HTTPNotFound):
             user_service.get_user()
 
-        # assert_called_with() verifies that the mock DAO's add() method was
-        # called once. ANY can be used as a placeholder so the mock doesn't
-        # test the argument values.
-        user_service._dao.add.assert_called_once(ANY, ANY)
-
     def test_get_unhandled_exception(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
@@ -94,22 +88,20 @@ class UserServiceRestTest(TestCase):
         with self.assertRaises(ValueError):
             user_service.get_user()
 
-    # TODO: use the @nose.tools.raises decorator to verify that this test
-    # raises an HTTPNotFound exception.
-    @raises(HTTPNotFound)
-    def test_get_not_found_with_decorator(self):
+    def test_get_user_PersistenceError(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
         request.matchdict['email'] = 'nobody@gmail.com'
         user_service = UserServiceRest(None, request, dao=Mock)
 
-        # TODO: note that we program the mock DAO's get() method to raise
-        # a PersistenceError
-        # (no code change required)
+        # TODO: program the mock DAO's get() method to have a side effect of
+        # raising a PersistenceError.
         user_service._dao.get = Mock(side_effect=PersistenceError())
 
-        # TODO: call the user_service get_user() method.
-        user_service.get_user()
+        # TODO: assert that an HTTPNotFound is raised when you call
+        # the user_service's get_user() method.
+        with self.assertRaises(HTTPNotFound):
+            user_service.get_user()
 
     def test_add_user_success(self):
         request = pyramid_testing.DummyRequest()
@@ -139,9 +131,9 @@ class UserServiceRestTest(TestCase):
         with self.assertRaisesRegex(HTTPInternalServerError, r'Could not add'):
             user_service.add_user()
 
-        # Assert that the mock DAO's add() method was called once, with
+        # Assert that the mock DAO's add() method was called with
         # any two arguments.
-        user_service._dao.add.assert_called_once(ANY, ANY)
+        user_service._dao.add.assert_called()
 
     def test_update_user_success(self):
         request = pyramid_testing.DummyRequest()
@@ -184,6 +176,7 @@ class UserServiceRestTest(TestCase):
 
         with self.assertRaises(HTTPNotFound):
             user_service.delete_user()
+
 
 if __name__ == '__main__':
     main()

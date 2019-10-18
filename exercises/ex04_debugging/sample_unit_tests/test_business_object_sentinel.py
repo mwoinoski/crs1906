@@ -29,7 +29,7 @@ class TestBusinessObject(TestCase):
         actual_result = bus_obj.get_user(user_id)
 
         mock_query_user_method.assert_called_with(user_id)
-        self.assertEquals(sentinel.person, actual_result)
+        self.assertEqual(sentinel.person, actual_result)
 
     @patch('business_object.UserDao')
     def test_get_user_skip_dao_constructor(self, mock_user_dao_class):
@@ -43,4 +43,4 @@ class TestBusinessObject(TestCase):
         actual_result = bus_obj.get_user(user_id)
 
         mock_class.query_user.assert_called_with(user_id)
-        self.assertEquals(sentinel.person, actual_result)
+        self.assertEqual(sentinel.person, actual_result)

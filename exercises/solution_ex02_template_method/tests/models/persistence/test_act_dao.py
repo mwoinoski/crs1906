@@ -44,9 +44,9 @@ class ActDaoTest(TestCase):
         act = self.act_dao.get(301, self.session)
 
         self.assertEqual(301, act.id)
-        self.assertEquals('Berlin Philharmonic', act.title)
-        self.assertEquals('Beethoven and Brahms', act.notes)
-        self.assertEquals(1, act.act_type)
+        self.assertEqual('Berlin Philharmonic', act.title)
+        self.assertEqual('Beethoven and Brahms', act.notes)
+        self.assertEqual(1, act.act_type)
         self.assertEqual(4, len(act.events))
         # An Act's Events are sorted by their date_time
         self.assertEqual(204, act.events[0].id)
@@ -65,9 +65,9 @@ class ActDaoTest(TestCase):
             search_type='Artist', title='Wynton Marsalis')
 
         self.assertEqual(304, act.id)
-        self.assertEquals('Wynton Marsalis', act.title)
-        self.assertEquals('Sketches of Spain', act.notes)
-        self.assertEquals(Act.MUSIC, act.act_type)
+        self.assertEqual('Wynton Marsalis', act.title)
+        self.assertEqual('Sketches of Spain', act.notes)
+        self.assertEqual(Act.MUSIC, act.act_type)
         self.assertEqual(1, len(act.events))
         self.assertEqual(201, act.events[0].id)
         self.assertEqual(101, act.events[0].venue.id)
@@ -79,9 +79,9 @@ class ActDaoTest(TestCase):
             search_type='Title', title='Wynton Marsalis')
 
         self.assertEqual(305, act.id)
-        self.assertEquals('Wynton Marsalis', act.title)
-        self.assertEquals('The History of Jazz', act.notes)
-        self.assertEquals(Act.MOVIE, act.act_type)
+        self.assertEqual('Wynton Marsalis', act.title)
+        self.assertEqual('The History of Jazz', act.notes)
+        self.assertEqual(Act.MOVIE, act.act_type)
         self.assertEqual(1, len(act.events))
         self.assertEqual(205, act.events[0].id)
         self.assertEqual(103, act.events[0].venue.id)
@@ -93,9 +93,9 @@ class ActDaoTest(TestCase):
             search_type='Artist', title='Berlin Philharmonic')
 
         self.assertEqual(301, act.id)
-        self.assertEquals('Berlin Philharmonic', act.title)
-        self.assertEquals('Beethoven and Brahms', act.notes)
-        self.assertEquals(1, act.act_type)
+        self.assertEqual('Berlin Philharmonic', act.title)
+        self.assertEqual('Beethoven and Brahms', act.notes)
+        self.assertEqual(1, act.act_type)
         self.assertEqual(4, len(act.events))
         # events are sorted by their date_time
         self.assertEqual(204, act.events[0].id)
@@ -112,9 +112,9 @@ class ActDaoTest(TestCase):
         act = self.act_dao.get_act_and_events(301, self.session)
 
         self.assertEqual(301, act.id)
-        self.assertEquals('Berlin Philharmonic', act.title)
-        self.assertEquals('Beethoven and Brahms', act.notes)
-        self.assertEquals(1, act.act_type)
+        self.assertEqual('Berlin Philharmonic', act.title)
+        self.assertEqual('Beethoven and Brahms', act.notes)
+        self.assertEqual(1, act.act_type)
         self.assertEqual(4, len(act.events))
         # events are sorted by their date_time
         self.assertEqual(204, act.events[0].id)

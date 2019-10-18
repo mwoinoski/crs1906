@@ -42,5 +42,5 @@ class TestDepartment(TestCase):
 
         actual_result = dept.get_employee(4321)
 
-        self.assertEquals(expected_result, actual_result)
+        self.assertEqual(expected_result, actual_result)
 

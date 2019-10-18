@@ -33,7 +33,7 @@ class TestBusinessObject(TestCase):
         # verify that the mock method was called correctly
         mock_dao.query_user.assert_called_with(user_id)
         # verify that the actual result equals the expected result
-        self.assertEquals(expected_result, actual_result)
+        self.assertEqual(expected_result, actual_result)
 
     def test_get_user_not_found(self):
         mock_dao = Mock(spec=UserDao)

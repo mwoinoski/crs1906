@@ -25,7 +25,7 @@ class TestBusinessObject(TestCase):
         actual_result = bus_obj.get_user(user_id)
 
         mock_query_user_method.assert_called_with(user_id)
-        self.assertEquals(expected_result, actual_result)
+        self.assertEqual(expected_result, actual_result)
 
     @patch('business_object.UserDao')
     def test_get_user_skip_dao_constructor(self, mock_user_dao_class):
@@ -41,7 +41,7 @@ class TestBusinessObject(TestCase):
         actual_result = bus_obj.get_user(user_id)
 
         mock_dao.query_user.assert_called_with(user_id)
-        self.assertEquals(expected_result, actual_result)
+        self.assertEqual(expected_result, actual_result)
 
 if __name__ == '__main__':
     main()
