@@ -6,34 +6,37 @@ decorator. Note that you must explicitly register each overloaded argument
 type with the @add.register decorator; and at runtime, Python checks only the
 type of the first argument to the function.
 
-There is a standard @overload decorator, but it is used only by as a type
-hint; it does not implement overloaded functions.
+The function decorated by @singledisplatch is the one called by default if
+nothing else matches.
+
+There is a standard @overload decorator, but it is used only as a type hint;
+it does not implement overloaded functions.
 """
 
 from functools import singledispatch
 
 
 @singledispatch
-def add(a, b):
+def add(arg1, arg2):
     raise NotImplementedError('Unsupported type')
 
 
 @add.register(int)
-def _(a, b):
-    print("First argument is of type ", type(a))
-    print(a + b)
+def _(arg1, arg2):
+    print("First argument is of type ", type(arg1))
+    print(arg1 + arg2)
 
 
 @add.register(str)
-def _(a, b):
-    print("First argument is of type ", type(a))
-    print(a + b)
+def _(arg1, arg2):
+    print("First argument is of type ", type(arg1))
+    print(arg1 + arg2)
 
 
 @add.register(list)
-def _(a, b):
-    print("First argument is of type ", type(a))
-    print(a + b)
+def _(arg1, arg2):
+    print("First argument is of type ", type(arg1))
+    print(arg1 + arg2)
 
 
 if __name__ == '__main__':

@@ -18,7 +18,7 @@ class TestBusinessObject(TestCase):
         expected_result = Person('Isaac', None, 'Newton')
 
         # create a mock for the DAO itself
-        mock_dao = Mock(spec=UserDao)
+        mock_dao = Mock()
         # create a mock for the DAO's query_user method and
         # set the return value of the mock method
         mock_dao.query_user.return_value = expected_result
@@ -40,7 +40,7 @@ class TestBusinessObject(TestCase):
     def test_get_user_not_found(self):
         print('\n----------- test_get_user_not_found ------------')
 
-        mock_dao = Mock(spec=UserDao)
+        mock_dao = Mock()
         mock_dao.query_user.return_value = None
 
         bus_obj = BusinessObject('mock_demo')
@@ -55,7 +55,7 @@ class TestBusinessObject(TestCase):
     def test_get_user_dao_error(self):
         print('\n----------- test_get_user_dao_error ------------')
 
-        mock_dao = Mock(spec=UserDao)
+        mock_dao = Mock()
         # Configure the mock query_user method to raise a DB error
         mock_dao.query_user.side_effect = sqlite3.Error('SQL error')
 

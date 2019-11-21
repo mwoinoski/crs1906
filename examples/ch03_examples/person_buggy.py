@@ -4,24 +4,18 @@ person_buggy.py - Buggy Person class for Chapter 3 examples.
 
 
 class Person:
-    """Buggy class for unit test demo"""
+    """Buggy class for a unit test demo"""
 
     def __init__(self, first_name, middle_name, last_name):
-        self.first_name = first_name
-        self.middle_name = middle_name
-        self.last_name = middle_name
+        """ Initialize the Person's attributes """
+        self.first_name = first_name if first_name else ""
+        self.middle_name = middle_name if middle_name else ""
+        self.last_name = last_name if middle_name else ""  # Oops!
 
-    def __eq__(self, other):
-        """Called when Person instances are compared with == operator"""
-        return isinstance(other, Person) and \
-            other.first_name == self.first_name and \
-            other.middle_name == self.middle_name and \
-            other.last_name == self.last_name
-
-    def __ne__(self, other):
-        """Called when Person instances are compared with != operator"""
-        return not self.__eq__(other)
+    def full_name(self):
+        # make sure empty fields don't cause problems
+        names = [self.first_name, self.middle_name, self.last_name]
+        return " ".join(n for n in names if n)
 
     def __str__(self):
-        return "{self.first_name} {self.middle_name} {self.last_name}"\
-            .format(self=self)
+        return self.full_name()

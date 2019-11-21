@@ -54,6 +54,7 @@ var/
 *.egg
 MANIFEST
 pip-selfcheck*
+*.local
 
 # Installer logs
 pip-log.txt

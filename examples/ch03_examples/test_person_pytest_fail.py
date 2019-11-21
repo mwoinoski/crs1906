@@ -32,13 +32,6 @@ def test_eq_instances_not_equal():
     assert p1 != p2  # calls Person.__ne__()
 
 
-def test_eq_new_instances_equal():
-    p1 = Person(None, None, None)
-    p2 = Person(None, None, None)
-
-    assert p1 == p2  # calls Person.__eq__()
-
-
 # @pytest.mark.skip
 # def test_eq_new_instances_equal_fail():
 #     p1 = Person(None, None, None)
