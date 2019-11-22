@@ -57,36 +57,36 @@ class UserServiceRestTest(TestCase):
         request.db_session = None
         request.matchdict['email'] = 'nobody@gmail.com'
 
-        # TODO: pass Mock as the DAO class to the UserServiceRest
-        # constructor.
-        user_service = UserServiceRest(None, request, dao=....)
+        # TODO: pass Mock as the DAO class to the UserServiceRest constructor.
+        # HINT: in the following statement, change the `dao` keyword argument 
+        #       from None to the appropriate value
+        user_service = UserServiceRest(None, request, dao=None)
 
         # TODO: configure the mock so that a call to its get() method has
         # the side effect of raising a PersistenceError
-        # HINT: see slide 3-37
-        ....
+        # HINT: see slide 3-39
+        
 
         # TODO: assert that an HTTPNotFound exception is raised when you call
         # the user_service's get_user() method.
-        # HINT: see slide 3-36
-        ....
+        # HINT: see slide 3-38
+        
 
     def test_get_unhandled_exception(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
         request.matchdict['email'] = 'nobody@gmail.com'
 
-        # TODO: pass Mock as the DAO class to the UserServiceRest
-        # constructor.
-        user_service = UserServiceRest(None, request, dao=....)
+        # TODO: pass Mock as the DAO class to the UserServiceRest constructor.
+        user_service = UserServiceRest(None, request, dao=None)
 
         # TODO: program the mock DAO's get() method to have a side effect of
         # raising a ValueError.
-        ....
+        
 
         # TODO: assert that a ValueError is raised when you call
         # the user_service's get_user() method.
-        ....
+        
 
     def test_get_user_PersistenceError(self):
         request = pyramid_testing.DummyRequest()
@@ -96,11 +96,11 @@ class UserServiceRestTest(TestCase):
 
         # TODO: program the mock DAO's get() method to have a side effect of
         # raising a PersistenceError.
-        ....
+        
 
         # TODO: assert that an HTTPNotFound is raised when you call
         # the user_service's get_user() method.
-        ....
+        
 
     def test_add_user_success(self):
         request = pyramid_testing.DummyRequest()
@@ -127,8 +127,8 @@ class UserServiceRestTest(TestCase):
         # TODO: assert that an HTTPInternalServerError is raised when you call
         # the user_service's add_user() method, and that the exception's
         # message includes the string 'Could not add'
-        # HINT: see slide 3-37
-        ....
+        # HINT: see slide 3-39
+        
 
     def test_update_user_success(self):
         request = pyramid_testing.DummyRequest()

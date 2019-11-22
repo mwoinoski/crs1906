@@ -30,47 +30,24 @@ __author__ = 'Happy Pythonista (hpythonista@python.org)'
 # TODO: import setup and find_packages from the setuptools module</font><font color="blue">
 from setuptools import setup, find_packages
 </pre></font>
-
 <pre><font color="grey">
 setup(</font><font color="blue">
     name='simple_tz',</font><font color="grey">  # TODO: set the package name to 'simple_tz'</font><font color="blue">
     version='1.0.0',</font><font color="grey">   # TODO: set `version` to '1.0.0'</font><font color="blue">
     description='Wrapper for pytz functions', </font><font color="grey"> # TODO: set `description` to a string</font><font color="blue">
-    platforms=['all'],</font><font color="grey">  # TODO: set `platforms` to a list with one string element 'all'</font><font color="blue">
-    install_requires=['pytz'],</font><font color="grey">  # TODO: set `install_requires` to a list with one string element 'pytz'</font><font color="blue">
+    install_requires=['pytz'],</font><font color="grey">  # TODO: set `install_requires` to a list
+                                #       with one string element 'pytz'</font><font color="blue">
     author='Happy Pythonista',</font><font color="grey">  # TODO: set `author` to a string with your name</font><font color="blue">
     author_email='hpythonista@python.org',</font><font color="grey">  # TODO: set `author_email` to a string
 </font></pre>
 
-<h3>setup.cfg</h3>
-
-<font color="grey"><pre>
-# TODO: add a section header for bdist_wheel</font><font color="blue">
-[bdist_wheel]
-</pre></font>
-
-<font color="grey"><pre>
-# TODO: set the value of universal to 1</font><font color="blue">
-universal=1
-</pre></font>
-
-<h3>README.rst</h3>
-
-<font color="grey"><pre>
-########
-Overview
-########
-</font><font color="blue">
-The tz module defines a simple wrapper for pytz functions.
-</pre></font>
-
 <h2>Hints for Exercise 7.1 Bonus (Building and installing a module)</h2>
 
-Steps 28 and 29:
+Steps 26 and 27:
 
 <font color="blue"><pre>
-set VENV=C:\crs1906\exercises\ex07_distributing\simple_tz\py34venv
-C:\python\python-3.4\Scripts\virtualenv %VENV%
+set VENV=C:\crs1906\exercises\ex07_distributing\simple_tz\py37venv
+C:\Python\Python3.7\python -m venv %VENV%
 %VENV%\Scripts\activate
 </pre></font>
 
@@ -89,22 +66,7 @@ pypi-server -p 8888 pypiserver_packages
 Install your module from the local pypiserver:
 
 <font color="blue"><pre>
-pip install --extra-index-url http://localhost:8888/simple simple_tz
-</pre></font>
-
-<h2>Hints for Exercise 7.1 Bonus (Creating virtual environments with venv)</h2>
-
-<font color="blue"><pre>
-\python\python-3.5\python -m venv py35venv
-py35venv\Scripts\activate
-python --version
-</pre></font>
-
-<h2>Hints for Exercise 7.1 Bonus (Modernize a Python 2 script)</h2>
-
-<font color="blue"><pre>
-pip install modernize six
-python-modernize -w sudoku.py
+pip install --index-url http://localhost:8888/simple simple_tz
 </pre></font>
 
 </body>

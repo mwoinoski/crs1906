@@ -15,9 +15,8 @@ def run_openssl(file, pw):
             with open(re.sub(r'\.aes$', '', file), 'w') as out_file:
                 environ = os.environ.copy()
                 environ['secret'] = pw    # store password in env variable
-                # TODO: note that we call subprocess.Popen() as we did in 
+                # We call subprocess.Popen() as we did in 
                 # encrypt.py, replacing '-e' with '-d'
-                # (no code change required)
                 cmd = ['openssl', 'enc', '-d', '-aes256', '-pass', 'env:secret']
                 proc = subprocess.Popen(cmd, env=environ,
                                         stdin=in_file, stdout=out_file)
@@ -36,8 +35,7 @@ def main():
 
     procs = []
     for file in sys.argv[1:]:
-        # TODO: note that we call run_openssl() exactly as we did in encrypt.py
-        # (no code change required)
+        # We call run_openssl() exactly as we did in encrypt.py
         proc = run_openssl(file, pw)
         procs.append(proc)
 

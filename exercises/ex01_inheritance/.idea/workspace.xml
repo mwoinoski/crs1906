@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e66dba11-0105-4e20-9ded-e67a8f9ecea9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../examples/ch03_examples/test_person_exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../examples/ch02_examples/function_overloading.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch01_examples/function_overloading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex07_distributing/hints.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex07_distributing/hints.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex07_distributing/simple_tz/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex07_distributing/simple_tz/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/hints.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/hints.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -384,15 +386,15 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests in PersonTestCase" />
       <item itemvalue="Python tests.Unittests in test_act" />
       <item itemvalue="Python tests.Unittests in test_act_dao" />
-      <item itemvalue="Python tests.Unittests in test_address" />
       <item itemvalue="Python tests.Unittests in test_customer" />
-      <item itemvalue="Python tests.Unittests in test_func_stats" />
       <item itemvalue="Python tests.Unittests in test_member" />
-      <item itemvalue="Python tests.Unittests in test_person_dao" />
       <item itemvalue="Python tests.Unittests in test_venue_dao" />
+      <item itemvalue="Python tests.Unittests in PersonTestCase" />
+      <item itemvalue="Python tests.Unittests in test_address" />
+      <item itemvalue="Python tests.Unittests in test_func_stats" />
+      <item itemvalue="Python tests.Unittests in test_person_dao" />
     </list>
     <recent_temporary>
       <list>
@@ -424,40 +426,12 @@
       <configuration name="Unittests in PersonTestCase" configurationId="tests" />
     </history-entry>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="280" y="191" width="991" height="973" extended-state="0" />
-    <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>

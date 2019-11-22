@@ -103,7 +103,7 @@ class TestRssNewsFeedParser:
 
         # TODO: call a method that asserts the list named `expected` is
         # equal to the list named `actual`, which was returned from get_news()
-        # HINT: see slide 3-11
+        # HINT: see slide 3-18
         ....
 
     # TODO: Define a test method named test_get_news_music_max_items_1
@@ -137,7 +137,7 @@ class TestRssNewsFeedParser:
         # TODO: Call an assert method to verify that if you call the
         # feed reader's get_news() method with an invalid news type argument
         # (for example, 'pluto'), the method raises a FeedReaderException.
-        # HINT: see slide 3-15
+        # HINT: see slide 3-14
         ....
 
 

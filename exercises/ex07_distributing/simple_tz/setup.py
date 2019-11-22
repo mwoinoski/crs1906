@@ -3,7 +3,7 @@ setup.py - Set up script for sample project
 """
 
 # TODO: import setup and find_packages from the setuptools module
-# HINT: see slide 7-23
+# HINT: see slide 7-22
 ....
 
 import codecs  # To use a consistent encoding
@@ -54,6 +54,7 @@ setup(
     url='http://www.pythonchamp.com/simple_tz',
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
     cmdclass={'clean': CleanCommand},  # use CleanCommand class defined above
+    platforms=['all'],
     license='MIT',
     keywords='simple_tz timezone datetime'
 )
