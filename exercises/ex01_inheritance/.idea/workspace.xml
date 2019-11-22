@@ -2,11 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e66dba11-0105-4e20-9ded-e67a8f9ecea9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../homepage/images/python-light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../homepage/images/python-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../homepage/images/python.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../homepage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../css/buttondown.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../homepage/css/buttondown.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../css/clean.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../homepage/css/clean.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../css/simple.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../homepage/css/simple.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_feed_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_feed_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_user_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ex07_distributing/hints.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex07_distributing/hints.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ex07_distributing/simple_tz/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex07_distributing/simple_tz/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ex08_concurrency/hints.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/hints.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/subprocesses/decrypt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/subprocesses/encrypt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/subprocesses/in1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/subprocesses/in1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/subprocesses/in1_copy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/subprocesses/in1_copy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/subprocesses/in2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/subprocesses/in2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/subprocesses/in2_copy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/subprocesses/in2_copy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/subprocesses/in3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/subprocesses/in3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/subprocesses/in3_copy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/subprocesses/in3_copy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/pi_monte_carlo/pi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/pi_monte_carlo/pi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/subprocesses/decrypt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/subprocesses/encrypt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/subprocesses/in1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/subprocesses/in1_copy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/subprocesses/in2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/subprocesses/in2_copy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/subprocesses/in3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/subprocesses/in3_copy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/subprocesses/decrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/subprocesses/decrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/subprocesses/encrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch08_examples/subprocesses/encrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/subprocesses/in1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/subprocesses/in1_copy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/subprocesses/in2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/subprocesses/in2_copy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/subprocesses/in3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/subprocesses/in3_copy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/subprocesses/decrypt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/subprocesses/encrypt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/subprocesses/in1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/subprocesses/in1_copy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/subprocesses/in2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/subprocesses/in2_copy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/subprocesses/in3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/subprocesses/in3_copy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../index.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +99,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../examples/ch03_examples" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/models/customer.py" />
   </component>
   <component name="PyConsoleOptionsProvider">
