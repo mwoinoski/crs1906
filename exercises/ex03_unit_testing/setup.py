@@ -39,7 +39,7 @@ requires = [
     'pyramid_tm',
     'SQLAlchemy',
     'transaction',
-    'zope.sqlalchemy',
+    'zope.sqlalchemy < 1.2',
     'waitress',
     'pytest-cov',
     'pytest',
