@@ -41,7 +41,11 @@ total_samples = 10**6  # total number of calculations
 def calculate_one_sample():
     x = random.uniform(-1.0, 1.0)
     y = random.uniform(-1.0, 1.0)
+    # x and y are the lengths of the sides of a right triangle with apex
+    # at (0, 0). If the length of that triangle's hypotenuse is less than 1,
+    # the point (x, y) lies within the unit circle with origin (0, 0)
     return 1 if x**2 + y**2 <= 1 else 0
+
     # Here we chose random values in the range [-1.0, 1.0] to distribute
     # values in a square whose sides have length 2. But we'd get the
     # same result if we looked at the distribution of hits in just one quadrant
