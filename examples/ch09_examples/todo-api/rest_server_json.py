@@ -88,6 +88,10 @@ def update_task(task_id):
         abort(400)
     if 'done' in request.json and not isinstance(request.json['done'], bool):
         abort(400)
+    if not (request.json.get('title') or request.json.get('description') or
+            request.json.get('done') is not None):
+        abort(400)
+
     title = request.json.get('title')
     desc = request.json.get('description')
     done = request.json.get('done')

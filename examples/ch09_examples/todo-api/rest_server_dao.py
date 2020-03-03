@@ -6,8 +6,11 @@ import sqlite3
 
 __author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
 
-
-conn = sqlite3.connect('rest_server.db')
+# Manage a SQLite database.
+# To connect to the DB file and run SQL commands:
+# cd \crs1906\examples\ch09_examples\todo-api\
+# \software\sqlite\sqlite3 rest_server.sqlite
+conn = sqlite3.connect('rest_server.sqlite', check_same_thread=False)
 
 
 def get_password(username):
@@ -33,8 +36,7 @@ def get_all_tasks():
         FROM todo_tasks
     """
     cursor = conn.cursor()
-    for row in cursor.execute(sql):
-        yield _make_task(row)
+    return [_make_task(row) for row in cursor.execute(sql)]
 
 
 def _make_task(row):
@@ -53,19 +55,19 @@ def get_task(task_id):
     """
     cursor = conn.cursor()
     cursor.execute(sql, (task_id,))
-    task_list = cursor.fetchone()
-    return task_list[0] if len(task_list) > 0 else None
+    return cursor.fetchone()
 
 
 def create_task(title, description, done):
-    # TODO: sanitize inputs
     global conn
     sql = """
         INSERT INTO todo_tasks 
+        (title, description, done)
         VALUES (?, ?, ?)
     """
     cursor = conn.cursor()
     cursor.execute(sql, (title, description, 1 if done else 0))
+    conn.commit()
 
     task = {
         'id': cursor.lastrowid,
@@ -78,22 +80,21 @@ def create_task(title, description, done):
 
 def update_task(task_id, title, description, done):
     global conn
-    sql = """
-        UPDATE todo_tasks 
-        SET title = ?, description = ?, done = ?
-        WHERE id = ?
-    """
+    update_title_sql = 'UPDATE todo_tasks SET title = ? WHERE id = ?'
+    update_description_sql = 'UPDATE todo_tasks SET description = ? WHERE id = ?'
+    update_done_sql = 'UPDATE todo_tasks SET done = ? WHERE id = ?'
     cursor = conn.cursor()
-    cursor.execute(sql, (title, description, 1 if done else 0, task_id))
+    if title:
+        cursor.execute(update_title_sql, (title, task_id))
+    if description:
+        cursor.execute(update_description_sql, (description, task_id))
+    if done is not None:
+        cursor.execute(update_done_sql, (1 if done else 0, task_id))
+    conn.commit()
 
-    task = get_task(task_id)
-    if task is not None:
-        if title is not None:
-            task['title'] = title
-        if description is not None:
-            task['description'] = description
-        if done is not None:
-            task['done'] = done
+    task_fields = ('id', 'title', 'description', 'done')
+    db_task = get_task(task_id)
+    task = {k: v for k, v in zip(task_fields, db_task)}
     return task
 
 
@@ -105,4 +106,5 @@ def delete_task(task_id):
     """
     cursor = conn.cursor()
     cursor.execute(sql, (task_id,))
+    conn.commit()
     return bool(cursor.rowcount)
