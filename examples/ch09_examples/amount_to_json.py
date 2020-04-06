@@ -12,8 +12,7 @@ class Amount:
         self.currency = currency
 
     def __str__(self):
-        return 'value={self.currency}, currency={self.currency}'\
-            .format(self=self)
+        return f'value={self.currency}, currency={self.currency}'
 
 
 # conversion function

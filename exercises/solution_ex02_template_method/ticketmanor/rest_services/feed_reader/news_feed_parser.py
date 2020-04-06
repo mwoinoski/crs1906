@@ -125,6 +125,7 @@ class NewsFeedParser(metaclass=ABCMeta):
         pass
 
     # BONUS TODO: define get_dummy_news() as an abstract method
+    @abstractmethod
     def get_dummy_news(self, url, news_type):
         pass
 
