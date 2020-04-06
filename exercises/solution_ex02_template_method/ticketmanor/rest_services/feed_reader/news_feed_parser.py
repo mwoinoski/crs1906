@@ -129,6 +129,7 @@ class NewsFeedParser(metaclass=ABCMeta):
     def get_dummy_news(self, url, news_type):
         pass
 
+
 # Run news_feed_parser to verify NewsFeedParser is abstract
 if __name__ == '__main__':
     try:

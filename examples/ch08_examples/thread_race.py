@@ -68,8 +68,6 @@ def main():
 
 
 if __name__ == '__main__':
-    from threading import Barrier
-    barrier = Barrier(2, lambda: barrier.reset())  # increase change of race condition
     from timeit import timeit
     main_time = timeit('main()', setup="from __main__ import main", number=1)
     print(f'\nTime to run main: {main_time:.2f} seconds')
