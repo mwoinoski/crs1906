@@ -18,18 +18,18 @@ class PersonDao(BaseDao):
     # TODO: define the __init__() method, with one parameter, self
     def __init__(self):
         # TODO: call the superclass's __init__(), passing two arguments:
-        # 1. the class of the entity that will be persisted (Person)
-        # 2. the name of the entity's ID field ('email')
+        #       1. the class of the entity that will be persisted (Person)
+        #       2. the name of the entity's ID field ('email')
         super().__init__(Person, 'email')
 
     # TODO: cut all methods from here to the end of the file and paste them
-    # at the end of ticketmanor/models/persistence/base_dao.py
+    #       at the end of ticketmanor/models/persistence/base_dao.py
 
     # def get(self, id_value, db_session):
     #     # TODO: in the next statement, make the following changes:
-    #     # 1. replace Person with the value of the DAO's _entity_class attribute
-    #     #    (note that there are 2 occurrences of Person)
-    #     # 2. replace 'email' with the value of the DAO's _id_attr attribute
+    #     #       1. replace Person with the value of the DAO's _entity_class attribute
+    #     #          (note that there are 2 occurrences of Person)
+    #     #       2. replace 'email' with the value of the DAO's _id_attr attribute
     #     entity = db_session.query(Person)\
     #                        .filter(getattr(Person, 'email') == id_value)\
     #                        .first()

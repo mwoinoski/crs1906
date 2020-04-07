@@ -21,22 +21,22 @@ logger = logging.getLogger(__name__)
 
 @view_defaults(renderer='json')
 # TODO: you'll be testing the UserServiceRest class.
-# (no code change required)
+#       (no code change required)
 class UserServiceRest:
     """View Callable for managing users with REST web service requests."""
 
     # TODO: note the UserServiceRest __init__() method takes a DAO class as an
-    # argument.
-    # (no code change required)
+    #       argument.
+    #       (no code change required)
     def __init__(self, context, request, dao=PersonDao):
         """DAO dependency will be injected from dao arg"""
         self._context = context
         self._request = request
 
         # TODO: note how the _dao attribute is set by calling a DAO
-        # constructor. This results in a hard-coded dependency between the
-        # UserServiceRest class and the DAO class.
-        # (no code change required)
+        #       constructor. This results in a hard-coded dependency between the
+        #       UserServiceRest class and the DAO class.
+        #       (no code change required)
         self._dao = dao()  # construct DAO instance and inject
 
     @view_config(request_method='GET',
@@ -47,19 +47,19 @@ class UserServiceRest:
         return self.get_user_by_email(email)
 
     # TODO: you will be testing this get_user() method.
-    # (no code change required)
+    #       (no code change required)
     def get_user_by_email(self, email):
         """Fetch a Person by searching for the registered email address."""
         logger.debug("%s: email = %s", func_name(self), email)
 
         # TODO: note the call to the DAO's get() method.
-        # (no code change required)
+        #       (no code change required)
         try:
             person = self._dao.get(email, self._request.db_session)
 
         # TODO: note that if the DAO's get() method raises a PersistenceError,
-        # we'll raise an HTTPNotFound exception.
-        # (no code change required)
+        #       we'll raise an HTTPNotFound exception.
+        #       (no code change required)
         except PersistenceError:
             raise HTTPNotFound()
 
@@ -68,7 +68,7 @@ class UserServiceRest:
 
     @view_config(request_method='POST', route_name='rest_users')
     # TODO: you will be testing this add_user() method.
-    # (no code change required)
+    #       (no code change required)
     def add_user(self):
         """Add a new Person."""
         # parse JSON in POST body
@@ -78,7 +78,7 @@ class UserServiceRest:
         new_user.from_json(json_body)
 
         # TODO: note the call the DAO's add() method
-        # (no code change required)
+        #       (no code change required)
         try:
             self._dao.add(new_user, self._request.db_session)
             return Response(
@@ -86,8 +86,8 @@ class UserServiceRest:
                 content_type='application/json; charset=UTF-8')
 
         # TODO: note that if the DAO's add() method raises an Exception,
-        # we'll raise an HTTPInternalServerError.
-        # (no code change required)
+        #       we'll raise an HTTPInternalServerError.
+        #       (no code change required)
         except Exception:
             msg = "Could not add user {}".format(new_user)
             logger.exception(msg)

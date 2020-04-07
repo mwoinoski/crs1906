@@ -4,7 +4,7 @@ from optparse import OptionParser
 
 
 # TODO: cut the entire calculate_z_serial() function from here and paste it
-# in the calc_z_ser_cython.pyx file.
+#       in the calc_z_ser_cython.pyx file.
 # def calculate_z_serial(q, maxiter):
 #     """Pure python with complex datatype, iterating over list of q and z"""
 #     z = [complex(0, 0)] * len(q)

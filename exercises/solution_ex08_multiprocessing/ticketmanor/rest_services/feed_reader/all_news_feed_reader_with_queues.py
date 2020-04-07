@@ -34,16 +34,16 @@ class AllNewsFeedReader:
         news_threads = []
 
         # TODO: wrap the `for` loop in a `with` statement that initializes
-        # a ThreadPoolExecutor. Pass the argument max_workers=4 to the
-        # ThreadPoolExecutor constructor.
+        #       a ThreadPoolExecutor. Pass the argument max_workers=4 to the
+        #       ThreadPoolExecutor constructor.
         with ThreadPoolExecutor(max_workers=4) as executor:
             for news_type in 'concerts', 'sports', 'movies':
                 # TODO: replace the call to the Thread constructor with a
-                # call to executor.submit().
-                # Arguments to submit: AllNewsFeedReader.worker, self,
+                #       call to executor.submit().
+                #       Arguments to submit: AllNewsFeedReader.worker, self,
                 #                      results_q, news_type, max_items
-                # Assign the Future returned by submit to the variable
-                # `background`
+                #       Assign the Future returned by submit to the variable
+                #       `background`
                 background = executor.submit(AllNewsFeedReader.worker, self,
                                              results_q, news_type, max_items)
                 # background = Thread(target=AllNewsFeedReader.worker,
@@ -55,7 +55,7 @@ class AllNewsFeedReader:
                 # background.start()
 
         # TODO: in the following `for` statement, replace `news_threads` with
-        # a call to concurrent.futures.as_completed(news_threads)
+        #       a call to concurrent.futures.as_completed(news_threads)
         for thread in concurrent.futures.as_completed(news_threads):
         # for thread in news_threads:
             # TODO: replace the call to thread.join() with `pass`
@@ -63,7 +63,7 @@ class AllNewsFeedReader:
             # thread.join()
 
         # TODO: note that the remainder of the code is unchanged.
-        # (no code changes required)
+        #       (no code changes required)
 
         all_news = {}
 

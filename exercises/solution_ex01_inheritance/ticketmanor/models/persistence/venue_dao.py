@@ -22,9 +22,9 @@ class VenueDao(BaseDao):
     def __init__(self):
 
         # TODO: in the __init__() method, call the superclass's __init__(),
-        # passing two arguments:
-        # 1. the class of the entity that will be persisted (Venue)
-        # 2. the name of the entity's ID field ('id')
+        #       passing two arguments:
+        #       1. the class of the entity that will be persisted (Venue)
+        #       2. the name of the entity's ID field ('id')
         super().__init__(Venue, 'id')
 
     @classmethod
@@ -46,7 +46,7 @@ class VenueDao(BaseDao):
         return venue
 
     # TODO: Note that the following methods are the same as the methods that
-    # you pasted into the BaseDao class.
+    #       you pasted into the BaseDao class.
 
     # TODO: delete all the methods below this comment.
 

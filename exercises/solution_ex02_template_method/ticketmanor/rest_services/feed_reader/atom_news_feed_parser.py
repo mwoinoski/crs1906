@@ -28,11 +28,11 @@ class AtomNewsFeedParser(NewsFeedParser):
     def __init__(self):
         self.item_element_name = 'entry'
         # TODO: call the superclass's __init__() method. Pass the value
-        # of the item_element_name data attribute as an argument.
+        #       of the item_element_name data attribute as an argument.
         super().__init__(self.item_element_name)
 
     # TODO: The get_news() method is now defined in the superclass, so
-    # delete the get_news() method from this class.
+    #       delete the get_news() method from this class.
     # def get_news(self, news_type, max_items=0):
     #     """Return latest news for a news website."""
     #     url = self.get_url(news_type)
@@ -46,7 +46,7 @@ class AtomNewsFeedParser(NewsFeedParser):
                'q={}'.format(AtomNewsFeedParser.feed_type, news_type)
 
     # TODO: The get_raw_content() method is now defined in the superclass, so
-    # delete the get_raw_content() method from this class.
+    #       delete the get_raw_content() method from this class.
     # def get_raw_content(self, url, news_type=None):
     #     """Get the XML content at the given URL"""
     #     try:
@@ -55,7 +55,7 @@ class AtomNewsFeedParser(NewsFeedParser):
     #         return self.get_dummy_news(url, news_type)
 
     # TODO: The parse_xml_content() method is now defined in the superclass, so
-    # delete the parse_xml_content() method from this class.
+    #       delete the parse_xml_content() method from this class.
     # def parse_xml_content(self, raw_content, max_items=0):
     #     """
     #     Parses a raw content string from an XML news feed into a tree of

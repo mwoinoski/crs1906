@@ -47,24 +47,24 @@ def calc(maxiter, w, h, show_output):
     print("Total elements:", len_q)
 
     # TODO: create an array of COMPLEX with length len_q exactly as you did in
-    # mandelbrot_ctypes/mandelbrot_ctypes.py. Assign the array to a variable
-    # named complex_array.
+    #       mandelbrot_ctypes/mandelbrot_ctypes.py. Assign the array to a variable
+    #       named complex_array.
     complex_array = (COMPLEX * len_q)()
 
     for index in range(len_q):
         # TODO: note how we copy the attributes from each complex object on
-        # the input list to an element complex_array.
-        # (no code change required)
+        #       the input list to an element complex_array.
+        #       (no code change required)
         complex_array[index].real = q[index].real
         complex_array[index].imag = q[index].imag
 
     # TODO: note how assign an array of int to output_array, with each
-    # element initialized to 0.
+    #       element initialized to 0.
     # (no code change required)
     output_array = array('i', [0] * len_q)
 
     # TODO: call the calc_z_ser() function from the extension module.
-    # Arguments: complex_array, output_array, len(q), maxiter
+    #       Arguments: complex_array, output_array, len(q), maxiter
     result = calc_z_ser(complex_array, output_array, len(q), maxiter)
 
     end_time = datetime.datetime.now()
@@ -72,7 +72,7 @@ def calc(maxiter, w, h, show_output):
     print(f"Calculations completed in {end_time - start_time} seconds")
 
     # TODO: note how we sum the output_array elements, exactly as before
-    # (no code change required)
+    #       (no code change required)
     validation_sum = sum(output_array)
     print("Total sum of elements (for validation):", validation_sum)
 

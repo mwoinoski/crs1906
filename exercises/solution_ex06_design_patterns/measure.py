@@ -17,17 +17,17 @@ from functools import wraps
 __author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
 
 # TODO: note the initialization of the _function_stats dictionary, which will
-# be used to accumulate statistics for all measured functions.
-# Each key is a function name.
-# Each value is a two-item list of the total number of calls to the function
-# and the total execution time of all calls.
-# (no code change required)
+#       be used to accumulate statistics for all measured functions.
+#       Each key is a function name.
+#       Each value is a two-item list of the total number of calls to the function
+#       and the total execution time of all calls.
+#       (no code change required)
 _function_stats = {}
 
 
 # TODO: note the definition of the measure decorator. Make sure you understand
-# how it works.
-# (no code change required)
+#       how it works.
+#       (no code change required)
 def measure(func):
     """
     Decorator that accumulates number of calls and average run time of each
@@ -59,9 +59,9 @@ def measure(func):
 
 
 # TODO: note the definition of the get_function_stats() function. This function
-# returns statistics about all measured functions. Make sure you understand
-# how it works.
-# (no code change required)
+#       returns statistics about all measured functions. Make sure you understand
+#       how it works.
+#       (no code change required)
 def get_function_stats():
     """
     Returns a list of 3-tuples. Each tuple contains the name of a function,

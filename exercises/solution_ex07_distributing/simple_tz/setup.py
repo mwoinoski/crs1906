@@ -49,7 +49,7 @@ setup(
     author='Happy Pythonista',  # TODO: set `author` to a string with your name
     author_email='hpythonista@python.org',  # TODO: set `author_email` to a string
     # TODO: review the remaining keyword arguments
-    # (no code change required)
+    #       (no code change required)
     long_description=long_description,
     url='http://www.pythonchamp.com/simple_tz',
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),

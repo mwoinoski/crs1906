@@ -10,6 +10,7 @@ __author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
 # To connect to the DB file and run SQL commands:
 # cd \crs1906\examples\ch09_examples\todo-api\
 # \software\sqlite\sqlite3 rest_server.sqlite
+# .tables
 conn = sqlite3.connect('rest_server.sqlite', check_same_thread=False)
 
 
@@ -24,7 +25,7 @@ def get_password(username):
     if re.match(r'^[A-Za-z0-9._-]+$', username):  # validate username
         c = conn.cursor()
         c.execute(sql_get_password, (username,))
-        pw = c.fetchone()  # TODO: add decryption
+        pw = c.fetchone()  # Better: add decryption
         pw = pw[0] if len(pw) > 0 else None
     return pw
 

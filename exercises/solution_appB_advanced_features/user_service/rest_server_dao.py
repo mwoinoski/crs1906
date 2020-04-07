@@ -44,7 +44,7 @@ def get_password(username):
     #     conn = sqlite3.connect('rest_server.sqlite')
     #     c = conn.cursor()
     #     c.execute('SELECT password FROM users WHERE username=?', (username,))
-    #     pw = c.fetchone()  # TODO: add decryption
+    #     pw = c.fetchone()  # Better: add decryption
     #     pw = pw[0] if len(pw) > 0 else None
     # return pw
     return 'studentpw'

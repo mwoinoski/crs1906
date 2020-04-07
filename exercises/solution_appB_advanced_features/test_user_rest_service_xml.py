@@ -57,15 +57,15 @@ user_miles_xml = """
 """
 
 # TODO: note that base_url will be used for all REST requests
-# (no code change required)
+#       (no code change required)
 base_url = 'http://localhost/rest/users'
 
 
 def test_get_user_found():
     # TODO: you'll look up a user with GET request like this:
-    # GET http://localhost/rest/users/ned.flanders@gmail.com
-    # The GET request will return XML data.
-    # (no code change required)
+    #       GET http://localhost/rest/users/ned.flanders@gmail.com
+    #       The GET request will return XML data.
+    #       (no code change required)
 
     email = 'ned.flanders@gmail.com'
 
@@ -79,7 +79,7 @@ def test_get_user_found():
     r = requests.get(url, headers=http_headers)
 
     # TODO: get the XML from the response body and assign it to a variable
-    # named 'actual_result'
+    #       named 'actual_result'
     actual_result = r.text
 
     print('GET {} status {}, response = {}'
@@ -88,7 +88,7 @@ def test_get_user_found():
     # parse XML in response body
 
     # TODO: note the assertions that test the result of the REST request
-    # (no code change required)
+    #       (no code change required)
     assert r.status_code == 200
     # assert actual_result == user_ned_xml  # FIXME
 
@@ -104,9 +104,9 @@ def test_get_user_not_found():
 
 def test_add_user_ok():
     # TODO: you'll add a new user with a POST request like this:
-    # POST http://localhost/rest/users
-    # { "email": "miles@jazz.com", "first_name": "Miles", etc. }
-    # (no code change required)
+    #       POST http://localhost/rest/users
+    #       { "email": "miles@jazz.com", "first_name": "Miles", etc. }
+    #       (no code change required)
 
     # TODO: set the url to base_url
     url = base_url
@@ -120,7 +120,7 @@ def test_add_user_ok():
     print('POST {} status {}'.format(url, r.status_code))
 
     # TODO: note the assertion that tests the result of the REST request
-    # (no code change required)
+    #       (no code change required)
     assert r.status_code == 201
 
 
@@ -129,9 +129,9 @@ def test_update_user_ok():
     user_miles_xml['address']['zipcode'] = '10013'  # FIXME
 
     # TODO: you'll update an existing user with a PUT request like this:
-    # PUT http://localhost/rest/users
-    # { "email": "miles@jazz.com", "first_name": "Miles", etc. }
-    # (no code change required)
+    #       PUT http://localhost/rest/users
+    #       { "email": "miles@jazz.com", "first_name": "Miles", etc. }
+    #       (no code change required)
 
     # TODO: set the url to base_url
     url = base_url
@@ -142,14 +142,14 @@ def test_update_user_ok():
     print('PUT {} status {}'.format(url, r.status_code))
 
     # TODO: note the assertion that tests the result of the REST request
-    # (no code change required)
+    #       (no code change required)
     assert r.status_code == 202
 
 
 def test_delete_user_found():
     # TODO: you'll delete a user with DELETE request like this:
-    # DELETE http://localhost/rest/users/ned.flanders@gmail.com
-    # (no code change required)
+    #       DELETE http://localhost/rest/users/ned.flanders@gmail.com
+    #       (no code change required)
 
     # TODO: build the URL for the GET request from base_url and email
     url = '{}/{}'.format(base_url, 'miles@jazz.com')
@@ -160,7 +160,7 @@ def test_delete_user_found():
     print('DELETE {} status {}'.format(url, r.status_code))
 
     # TODO: note the assertion that tests the result of the REST request
-    # (no code change required)
+    #       (no code change required)
     assert r.status_code == 204
 
 

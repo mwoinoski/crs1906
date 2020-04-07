@@ -20,54 +20,54 @@ class TestFeedReader(TestCase):
     # This test method creates a Mock news feed parser
     def test_fetch_news_items_music(self):
         # TODO: create a mock RssNewsFeedParser object and assign it to a local
-        # variable named `mock_news_feed_parser`
+        #       variable named `mock_news_feed_parser`
         mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
 
         # TODO: set the return value of the mock's get_news() method to the
-        # value of the variable `expected` (defined at the end of the file)
+        #       value of the variable `expected` (defined at the end of the file)
         mock_news_feed_parser.get_news.return_value = expected
 
         # TODO: create a FeedReader instance and assign it to a local variable
-        # named `feed_reader`
+        #       named `feed_reader`
         feed_reader = FeedReader()
 
         # TODO: set the feed_reader.news_feed_parser attribute to the
-        # mock_news_feed_parser
+        #       mock_news_feed_parser
         feed_reader.news_feed_parser = mock_news_feed_parser
 
         # TODO: note the call the call to feed_reader.fetch_news_items().
-        # Because you changed the feed reader's `news_feed_parser` attribute in
-        # the previous statement, the feed_reader will get news from the mock
-        # object instead of a RssNewsFeedParser instance.
-        # (no code change required)
+        #       Because you changed the feed reader's `news_feed_parser` attribute in
+        #       the previous statement, the feed_reader will get news from the mock
+        #       object instead of a RssNewsFeedParser instance.
+        #       (no code change required)
         news = feed_reader.fetch_news_items("music")
 
         # TODO: note that we verify the result as usual.
-        # (no code change required)
+        #       (no code change required)
         for expected_result, actual_result in zip_longest(expected, news):
             self.assertEqual(expected_result, actual_result)
 
     # This test method uses a Mock news feed parser to raise an exception
     def test_fetch_news_items_raise_FeedReaderException(self):
         # TODO: create a mock RssNewsFeedParser object and assign it to a local
-        # variable named `mock_news_feed_parser`
+        #       variable named `mock_news_feed_parser`
         mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
 
         # TODO: set the `side_effect` attribute of the mock's `get_news` method
-        # so it raises a FeedReaderException when called.
+        #       so it raises a FeedReaderException when called.
         mock_news_feed_parser.get_news.side_effect = FeedReaderException()
 
         # TODO: create a FeedReader instance and assign it to a local variable
-        # named `feed_reader`
+        #       named `feed_reader`
         feed_reader = FeedReader()
 
         # TODO: set the feed_reader.news_feed_parser attribute to
-        # mock_news_feed_parser
+        #       mock_news_feed_parser
         feed_reader.news_feed_parser = mock_news_feed_parser
 
         # TODO: call the feed_reader's fetch_news_items() method and save the
-        # return value in a variable named `news`. (Pass any string as the
-        # argument to fetch_news_items())
+        #       return value in a variable named `news`. (Pass any string as the
+        #       argument to fetch_news_items())
         news = feed_reader.fetch_news_items('quack')
 
         # TODO: assert that the `news` variable is an instance of list.
@@ -77,8 +77,8 @@ class TestFeedReader(TestCase):
         self.assertEqual(0, len(news))
 
         # TODO: note that the call to fetch_news_items() will log a stack
-        # trace, but as long as you get a green bar, the test case passed.
-        # (no code change required)
+        #       trace, but as long as you get a green bar, the test case passed.
+        #       (no code change required)
 
     def test_fetch_news_items_max_items_1(self):
         # test set up

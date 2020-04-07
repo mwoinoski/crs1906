@@ -5,7 +5,7 @@ Customer model class
 __author__ = 'Mike Woinoski mike@articulatedesign.us.com'
 
 # TODO: import the User class from the ticketmanor.models.user module
-from ticketmanor.models.user import User
+        from ticketmanor.models.user import User
 # Note that a relative import also works:
 # from .user import User
 
@@ -21,22 +21,22 @@ class Customer(User):
                  post_code=None, customer_id=None):
 
         # TODO: call the superclass __init__() method, passing the
-        # appropriate arguments
+        #       appropriate arguments
         super().__init__(first_name, last_name, email, middles, street, city,
                          state, country, post_code)
 
         # TODO: for any argument that you passed to the superclass constructor,
-        # delete its attribute assignment from the next block of statements.
-        # Save any remaining arguments in data attributes of the current
-        # Customer object.
+        #       delete its attribute assignment from the next block of statements.
+        #       Save any remaining arguments in data attributes of the current
+        #       Customer object.
         self.customer_id = customer_id
 
     # TODO: copy all the methods below this comment and paste them into the
-    # User class
+    #       User class
 
     # TODO: Modify the methods here to reference Customer-specific attributes
-    # when necessary, while delegating as much work as possible to superclass
-    # methods.
+    #       when necessary, while delegating as much work as possible to superclass
+    #       methods.
 
     def __eq__(self, other):
         """Compare Customer instances."""

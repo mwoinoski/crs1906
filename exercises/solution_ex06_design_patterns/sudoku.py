@@ -18,7 +18,7 @@ import time
 import sys
 
 # TODO: import the measure and get_function_stats methods from the
-# measure module.
+#       measure module.
 from measure_configurable import measure, get_function_stats, decorator_enabled
 
 TRIPLETS = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
@@ -461,10 +461,10 @@ if __name__ == "__main__":
             print(solution)
 
             # BONUS TODO: call get_function_stats() only if
-            # decorator_enabled is true
+            #       decorator_enabled is true
             if decorator_enabled:
                 # TODO: call the get_function_stats() function and print the stats
-                # for all decorated functions
+                #       for all decorated functions
                 print('{:^61}'.format('Function Call Stats'))
                 print('{:32s} {:>8s}  {:22s}'
                       .format('Function name', 'Calls', 'Avg Time (seconds)'))

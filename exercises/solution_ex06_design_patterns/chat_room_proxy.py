@@ -13,13 +13,13 @@ from threading import Thread
 import atexit
 
 # TODO: note the definition of the ChatRoomProxy class. This class is a
-# "stand-in" for the remote chat server defined in chat_server.py.
-# ChatRoomProxy exposes the same interface as the ChatRoom class, so
-# a chat client can use a ChatRoomProxy in place of a ChatRoom with no
-# significant code changes.
+#       "stand-in" for the remote chat server defined in chat_server.py.
+#       ChatRoomProxy exposes the same interface as the ChatRoom class, so
+#       a chat client can use a ChatRoomProxy in place of a ChatRoom with no
+#       significant code changes.
 
 # TODO: make ChatRoomProxy at subclass of ChatRoom. Because ChatRoom is a
-# subclass of Subject, a ChatRoomProxy IS-A Subject.
+#       subclass of Subject, a ChatRoomProxy IS-A Subject.
 class ChatRoomProxy(ChatRoom):
     """
     ChatRoomProxy is a remote proxy for a chat room server.
@@ -50,23 +50,23 @@ class ChatRoomProxy(ChatRoom):
             raise
 
         # TODO: note the definition of the receive_loop() method. This method
-        # performs the actual communication with the remote chat server.
+        #       performs the actual communication with the remote chat server.
         def receive_loop():
             try:
                 while True:
                     data = self.chat_socket.recv(ChatRoomProxy.buf_size)
                     if data:
                         # TODO: note how the proxy gets the data from
-                        # the chat server and saves it as deserialized_msg.
-                        # (no code change required).
+                        #       the chat server and saves it as deserialized_msg.
+                        #       (no code change required).
                         deserialized_msg = pickle.loads(data)
 
                         # TODO: note how chat_client is set
-                        # (no code change required).
+                        #       (no code change required).
                         chat_client = self.observers[0]
 
                         # TODO: call the chat_client's update() method,
-                        # passing the argument deserialized_msg
+                        #       passing the argument deserialized_msg
                         chat_client.update(deserialized_msg)
 
                         # Don't call self.observer_notify() or you'll get into
@@ -77,8 +77,8 @@ class ChatRoomProxy(ChatRoom):
         Thread(target=receive_loop).start()
 
     # TODO: note the override of Subject.observer_notify().
-    # This method is called by ChatRoom.add_message().
-    # (no code change required)
+    #       This method is called by ChatRoom.add_message().
+    #       (no code change required)
     def observer_notify(self, data):
         """
         Override of Subject.observer_notify() that pickles a ChatMessage and
@@ -88,7 +88,7 @@ class ChatRoomProxy(ChatRoom):
         """
         serialized_msg = pickle.dumps(data)
         # TODO: note how the proxy sends the client's message to the server.
-        # (no code change required)
+        #       (no code change required)
         self.chat_socket.send(serialized_msg)
 
     def shutdown(self):

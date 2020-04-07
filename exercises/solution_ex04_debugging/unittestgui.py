@@ -51,7 +51,7 @@ import logging.config
 logging.config.fileConfig('logging.conf')
 
 # TODO: create a Logger instance and assign it to a variable named `logger`.
-# Give the Logger the name 'unittestgui'
+#       Give the Logger the name 'unittestgui'
 logger = logging.getLogger('unittestgui')
 
 init_dir = Path.cwd() / 'sample_unit_tests'
@@ -117,7 +117,7 @@ class BaseGUITestRunner(metaclass=ABCMeta):
         self.__rollbackImporter.rollbackImports()
         directory = self.getDirectoryToDiscover()
         # TODO: log a debug-level message with the value of the variable
-        # `directory`, which is set in the previous statement.
+        #       `directory`, which is set in the previous statement.
         logger.debug('selected directory = %s', directory)
 
         if not directory:
