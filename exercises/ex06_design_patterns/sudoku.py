@@ -18,7 +18,7 @@ import time
 import sys
 
 # TODO: import the measure and get_function_stats methods from the
-# measure module.
+#       measure module.
 ....
 
 TRIPLETS = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
@@ -462,9 +462,9 @@ if __name__ == "__main__":
             print(solution)
 
             # TODO: call the get_function_stats() function and print the stats
-            # for all decorated functions
+            #       for all decorated functions
             ....
 
 
             # BONUS TODO: call get_function_stats() only if
-            # decorator_enabled is true
+            #       decorator_enabled is true

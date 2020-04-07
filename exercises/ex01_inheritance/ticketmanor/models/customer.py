@@ -18,13 +18,13 @@ class Customer():
                  post_code=None, customer_id=None):
 
         # TODO: call the superclass __init__() method, passing the
-        # appropriate arguments
+        #       appropriate arguments
 
 
         # TODO: for any argument that you passed to the superclass constructor,
-        # delete its attribute assignment from the next block of statements.
-        # Save any remaining arguments in data attributes of the current
-        # Customer object.
+        #       delete its attribute assignment from the next block of statements.
+        #       Save any remaining arguments in data attributes of the current
+        #       Customer object.
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
@@ -37,11 +37,11 @@ class Customer():
         self.customer_id = customer_id
 
     # TODO: copy all the methods below this comment and paste them into the
-    # User class
+    #       User class
 
     # TODO: Modify the methods here to reference Customer-specific attributes
-    # when necessary, while delegating as much work as possible to superclass
-    # methods.
+    #       when necessary, while delegating as much work as possible to superclass
+    #       methods.
     # HINT: you will be able to delete some methods completely; others can
     # override the superclass methods and then call the superclass methods to
     # do part of the work.

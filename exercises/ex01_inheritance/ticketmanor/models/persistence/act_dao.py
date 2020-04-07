@@ -26,9 +26,9 @@ class ActDao():
 
 
         # TODO: in the __init__() method, call the superclass's __init__(),
-        # passing two arguments:
-        # 1. the class of the entity that will be persisted (Act)
-        # 2. the name of the entity's ID field ('id')
+        #       passing two arguments:
+        #       1. the class of the entity that will be persisted (Act)
+        #       2. the name of the entity's ID field ('id')
 
 
 
@@ -70,7 +70,7 @@ class ActDao():
         act = query.filter_by(**kwargs)\
                    .first()
         # TODO: should return all acts that match the query, not just the first
-        # (needs changes in concerts.html, movies.html, and sports.html)
+        #       (needs changes in concerts.html, movies.html, and sports.html)
 
         # TODO: get ticket price and images from DB, then delete the following
         if hasattr(act, 'events'):
@@ -127,10 +127,10 @@ class ActDao():
         return act
 
     # TODO: Note that the following methods are the same as the methods that
-    # you pasted into the BaseDao class.
+    #       you pasted into the BaseDao class.
 
     # TODO: delete all the methods below this comment (including the last
-    # method, query_for_act())
+    #       method, query_for_act())
 
     def get(self, id_value, db_session):
         entity = db_session.query(Act)\

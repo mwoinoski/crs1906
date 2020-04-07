@@ -11,10 +11,10 @@ from chat_room import ChatRoom
 root = tk.Tk()
 
 # TODO: ChatClientGui is a tkinter GUI chat client. Although the GUI code
-# makes it more complex than the simple command client you completed before,
-# you'll see that the Subject/Observer interaction is exactly the same as in
-# the simpler chat client.
-# (no code change required)
+#       makes it more complex than the simple command client you completed before,
+#       you'll see that the Subject/Observer interaction is exactly the same as in
+#       the simpler chat client.
+#       (no code change required)
 
 # TODO: make ChatClientGui a subclass of Observer
 class ChatClientGui:
@@ -26,7 +26,7 @@ class ChatClientGui:
         self.create_widgets(client_name, window)
 
         # TODO: copy the 3 lines of code from the body of the
-        # ChatClient __init__() method here
+        #       ChatClient __init__() method here
         ....
 
     def create_widgets(self, name, window):
@@ -55,7 +55,7 @@ class ChatClientGui:
 
     def callback(self, event):
         # TODO: note how we get the message text from the GUI's entry field.
-        # (no code change required)
+        #       (no code change required)
         message = self.entry_field.get()
 
         self.entry_field.delete(0, tk.END)
@@ -63,32 +63,32 @@ class ChatClientGui:
         self.add_text('(me) ' + message + '\n')
 
         # TODO: call the ChatClientGui's new_message() method to send the text
-        # from the entry field to the chat room
+        #       from the entry field to the chat room
         ....
 
     # TODO: note that the update() method parameter list and the first 3 lines
-    # of code are exactly the same as in the plain ChatClient class.
-    # (no code change required)
+    #       of code are exactly the same as in the plain ChatClient class.
+    #       (no code change required)
     def update(self, chat_msg):
         id = chat_msg.id
         value = chat_msg.value
         print('\tMessage from {}: "{}"'.format(id, value))
 
         # TODO: note the call to add_text(), which adds the new chat message
-        # to the client's output window
-        # (no code change required)
+        #       to the client's output window
+        #       (no code change required)
         if self.client_name != chat_msg.id:
             self.add_text('({}) {}\n'.format(chat_msg.id, chat_msg.value))
 
 
 def main():
     # TODO: create a ChatRoom instance and assign it to a variable named
-    # `chat_host`
+    #       `chat_host`
     ....
 
     # TODO: note the chat_host argument to the ChatClientGui constructor for
-    # all three ChatClientGui instances
-    # (no code change required)
+    #       all three ChatClientGui instances
+    #       (no code change required)
     chat_client1 = ChatClientGui('Client 1', root, chat_host)
     chat_client2 = ChatClientGui('Client 2', chat_client1, chat_host)
     chat_client3 = ChatClientGui('Client 3', chat_client1, chat_host)

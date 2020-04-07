@@ -8,8 +8,8 @@ x1, x2, y1, y2 = -2.13, 0.77, -1.3, 1.3
 
 
 # TODO: note this pure Python definition of the calculate_z_serial(). You'll
-# replace this code with a call to a C function.
-# (no code changes required)
+#       replace this code with a call to a C function.
+#       (no code changes required)
 def calculate_z_serial(q, maxiter, z):
     """Pure python with complex datatype, iterating over list of q and z"""
     output = [0] * len(q)
@@ -46,7 +46,7 @@ def calc(maxiter, w, h, show_output):
     start_time = datetime.datetime.now()
 
     # TODO: note the call to calculate_z_serial().
-    # (no code change required)
+    #       (no code change required)
     output = calculate_z_serial(q, maxiter, z)
 
     end_time = datetime.datetime.now()

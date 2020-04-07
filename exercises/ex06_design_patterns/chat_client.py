@@ -16,38 +16,38 @@ class ChatClient:
         # The Observer constructor calls Subject.observer_attach()
 
         # TODO: call the superclass constructor, passing chat_room as the
-        # argument.
+        #       argument.
         ....
 
         # TODO: initialize a data attribute named `client_name` with the
-        # client_name parameter.
+        #       client_name parameter.
         ....
 
         # TODO: initialize a data attribute named `chat_room` with the
-        # chat_room parameter.
+        #       chat_room parameter.
         ....
 
     def new_message(self, message):
         # TODO: call the chat_room's add_message() method, passing the
-        # client name from the client_name attribute and the message parameter.
+        #       client name from the client_name attribute and the message parameter.
         # HINT: the chat_room is stored in a data attribute
         ....
 
     # TODO: define the update() method, which overrides the abstract update()
-    # method in the Observer superclass.
-    # In addition to the "self" parameter, update() will have a second
-    # parameter that is a ChatMessage object.
+    #       method in the Observer superclass.
+    #       In addition to the "self" parameter, update() will have a second
+    #       parameter that is a ChatMessage object.
     def ....
         # TODO: assign the ChatMessage's id attribute to a variable named `id`
         ....
 
         # TODO: assign the ChatMessage's value attribute to a variable named
-        # `value`
+        #       `value`
         ....
 
         # TODO: note the use of the ChatMessage's id and value in the following
-        # statement
-        # (no code change required)
+        #       statement
+        #       (no code change required)
         print('\tMessage from {}: "{}"'.format(id, value))
 
         print(prompt, end='', flush=True)
@@ -62,11 +62,11 @@ def main():
         ....
 
         # TODO: create a ChatRoom() object and assign it to a variable
-        # named `chat_room`
+        #       named `chat_room`
         ....
 
         # BONUS TODO: comment out the two statements above (the import of
-        # ChatRoom and the setting of `chat_room`
+        #       ChatRoom and the setting of `chat_room`
 
         # BONUS TODO: import ChatRoomProxy from the chat_room_proxy module
         ....
@@ -78,17 +78,17 @@ def main():
         client_name = input("What's your name? ")
 
         # TODO: create a ChatClient object and assign it to a variable named
-        # `chat_client`. The ChatClient constructor takes two arguments:
-        # 1. client_name
-        # 2. chat_room
+        #       `chat_client`. The ChatClient constructor takes two arguments:
+        #       1. client_name
+        #       2. chat_room
         ....
 
         # TODO: note how we read an input line from the console
-        # (no code change required)
+        #       (no code change required)
         line = input(prompt)
         while line != 'quit':
             # TODO: call the ChatClient's new_message() method, passing the
-            # input line as the argument
+            #       input line as the argument
             ....
 
             line = input(prompt)

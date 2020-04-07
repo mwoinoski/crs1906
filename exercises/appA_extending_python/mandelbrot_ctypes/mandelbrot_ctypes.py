@@ -15,7 +15,7 @@ library = join(*(split(abspath(__file__))[:1] + (library,)))
 print("Loading DLL from " + library)
 
 # TODO: note how we load the DLL and save a reference to it in library_mod
-# (no code change required)
+#       (no code change required)
 library_mod = cdll.LoadLibrary(library)
 
 # The type of ctypes.cdll is ctypes.LibraryLoader. If you reference an
@@ -24,8 +24,8 @@ library_mod = cdll.LoadLibrary(library)
 # library_mod = ctypes.cdll.calc_z_ser
 
 # TODO: note the definition of the Python COMPLEX class. This will map to
-# the C complex_num struct declared in calc_z_ser.h
-# (no code change required)
+#       the C complex_num struct declared in calc_z_ser.h
+#       (no code change required)
 class COMPLEX(Structure):
     _fields_ = [
         ("real", c_double),  # defines a field named `real` of type double
@@ -36,7 +36,7 @@ class COMPLEX(Structure):
 x1, x2, y1, y2 = -2.13, 0.77, -1.3, 1.3
 
 # TODO: note the definition of the calculate_z_serial() function
-# (no code change required)
+#       (no code change required)
 def calculate_z_serial(q, maxiter):
     """Calculate values to plot a Mandelbrot function."""
     # TODO: note the descriptions of the parameters to calculate_z_serial:
@@ -47,23 +47,23 @@ def calculate_z_serial(q, maxiter):
     """
 
     # TODO: note that we save the number of elements on the input list
-    # in the variable len_q. You'll need this later.
-    # (no code change required)
+    #       in the variable len_q. You'll need this later.
+    #       (no code change required)
     len_q = len(q)
 
     # double* calc_z_ser(COMPLEX*, int, int)
 
     # TODO: note how we set calc_z_ser to reference the C function from the
-    # library.
-    # (no code change required)
+    #       library.
+    #       (no code change required)
     calc_z_ser = library_mod.calc_z_ser
 
     # TODO: set calc_z_ser.argtypes to a tuple with the types of the arguments
-    # to the calc_z_ser() function:
-    # 1. POINTER to COMPLEX
-    # 2. POINTER to c_int
-    # 3. c_int
-    # 4. c_int
+    #       to the calc_z_ser() function:
+    #       1. POINTER to COMPLEX
+    #       2. POINTER to c_int
+    #       3. c_int
+    #       4. c_int
     # HINT: see slide A-11
     calc_z_ser.argtypes = ....
 
@@ -73,44 +73,44 @@ def calculate_z_serial(q, maxiter):
     # Convert Python array of complex to ctypes array of COMPLEX structs
 
     # TODO: create a new array class for the first argument to the C function.
-    # This array will have the same length as the input list.
+    #       This array will have the same length as the input list.
     # HINT: see slide A-11
     # HINT: the type of each element of the array is COMPLEX
     # HINT: we stored the length of the input list earlier.
     ....
 
     # TODO: create an array of COMPLEX by calling the constructor for the
-    # array class that you just created.
-    # Assign the array to a variable named `complex_array`
+    #       array class that you just created.
+    #       Assign the array to a variable named `complex_array`
     complex_array = ....
 
     # TODO: create a new array class for the second argument to the C function.
-    # This array will have the same length as the input list.
+    #       This array will have the same length as the input list.
     # HINT: the type of each element of the array is c_int
     ....
 
     # TODO: create an array of c_int by calling the constructor for the
-    # array class that you just created.
-    # Assign the array to a variable named `output_array`
+    #       array class that you just created.
+    #       Assign the array to a variable named `output_array`
     output_array = ....
 
     for index in range(len_q):
         # TODO: note how we copy the attributes from each complex object on
-        # the input list to an element complex_array.
-        # (no code change required)
+        #       the input list to an element complex_array.
+        #       (no code change required)
         q_value = q[index]
         complex_array[index].real = q_value.real
         complex_array[index].imag = q_value.imag
 
     # TODO: call the C function calc_z_ser(), passing the following arguments:
-    # 1. complex_array
-    # 2. output_array
-    # 3. the length of the arrays
-    # 4. maxiter
+    #       1. complex_array
+    #       2. output_array
+    #       3. the length of the arrays
+    #       4. maxiter
     ....
 
     # TODO: create a Python list from the output_array. Store the Python list
-    # in a variable named output_list.
+    #       in a variable named output_list.
     # HINT: pass output_array to the list() function
     output_list = ....
 
@@ -140,7 +140,7 @@ def calc(maxiter, w, h, show_output):
     start_time = datetime.datetime.now()
 
     # TODO: note the call to calculate_z_serial().
-    # (no code change required)
+    #       (no code change required)
     output = calculate_z_serial(q, maxiter)
 
     end_time = datetime.datetime.now()

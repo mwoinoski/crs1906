@@ -21,8 +21,8 @@ class ChatRoom(Subject):
         self.messages = []
 
     # BONUS TODO: note that the ChatRoom.add_message() method is unchanged.
-    # The client calls this method exactly as before.
-    # (no code changes required)
+    #       The client calls this method exactly as before.
+    #       (no code changes required)
     def add_message(self, user_name, message):
         chat_message = ChatMessage(user_name, message)
         self.messages.append(chat_message)

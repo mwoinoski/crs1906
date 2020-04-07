@@ -61,10 +61,11 @@ if __name__ == '__main__':
         ThreadingTCPServer.allow_reuse_address = True
 
         # TODO: note that the ChatServer class is passed as an argument to the
-        # ThreadingTCPServer constructor. For each connection request from a
-        # chat client, ThreadingTCPServer will spawn a new thread that executes
-        # the ChatServer.handle() method. In the next exercise step, you will
-        # ensure that ChatServer.handle() is thread-safe.
+        #       ThreadingTCPServer constructor. For each connection request from a
+        #       chat client, ThreadingTCPServer will spawn a new thread that executes
+        #       the ChatServer.handle() method. In the next exercise step, you will
+        #       ensure that ChatServer.handle() is thread-safe.
+        #       (no code changes required)
         server = ThreadingTCPServer(('', port), ChatServer)
 
         print('Starting ChatServer at port {}...'.format(port))

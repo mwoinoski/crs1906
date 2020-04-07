@@ -22,7 +22,7 @@ from ticketmanor.rest_services.feed_reader import (
 class NewsFeedParser(....):
 
     # TODO: note the definition of the NewsFeedParser __init__() method.
-    # (no code changes required)
+    #       (no code changes required)
     def __init__(self, news_item_element_name):
         self.item_element_name = news_item_element_name
 

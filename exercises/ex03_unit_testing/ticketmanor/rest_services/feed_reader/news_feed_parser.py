@@ -30,8 +30,8 @@ class NewsFeedParser(metaclass=ABCMeta):
         self.item_element_name = news_item_element_name
 
     # TODO: you will write unit tests for the get_news() method. Examine the
-    # get_news() method below and be sure you understand how it works.
-    # (no code changes required)
+    #       get_news() method below and be sure you understand how it works.
+    #       (no code changes required)
     def get_news(self, news_type, max_items=0):
         """A Template method. Returns latest news for a news website."""
 
@@ -44,13 +44,13 @@ class NewsFeedParser(metaclass=ABCMeta):
         raw_content = self.get_raw_content(url, news_type)
 
         # TODO: note that the parse_xml_content() method returns a list of
-        # dictionaries, where each dictionary contains the data from a single
-        # news item.
-        # (no code changes required).
+        #       dictionaries, where each dictionary contains the data from a single
+        #       news item.
+        #       (no code changes required).
         content = self.parse_xml_content(raw_content, max_items)
 
         # TODO: note that get_news() returns the list of news items.
-        # (no code changes required).
+        #       (no code changes required).
         return content
 
     @abstractmethod

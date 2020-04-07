@@ -18,15 +18,15 @@ class Member():
                  post_code=None, nick_name=None, profile_photo=None):
 
         # TODO: call the superclass __init__() method, passing the
-        # appropriate arguments
+        #       appropriate arguments
 
 
         # TODO: save any remaining arguments in data attributes of the
-        # current Customer object
+        #       current Customer object
 
 
         # TODO: for any argument that you passed to the superclass constructor,
-        # delete its attribute assignment from the next block of statements.
+        #       delete its attribute assignment from the next block of statements.
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
@@ -40,8 +40,8 @@ class Member():
         self.profile_photo = profile_photo
 
     # TODO: Modify the methods here to reference Member-specific attributes
-    # when necessary, while delegating as much work as possible to superclass
-    # methods.
+    #       when necessary, while delegating as much work as possible to superclass
+    #       methods.
     # HINT: you will be able to delete some methods completely; others can
     # override the superclass methods and then call the superclass methods to
     # do part of the work.

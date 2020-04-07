@@ -1,5 +1,5 @@
 # TODO: add a docstring that describes this module. This string will be
-# displayed when you execute help(tz) from a Python interpreter.
+#       displayed when you execute help(tz) from a Python interpreter.
 ...
 
 import re
@@ -7,7 +7,7 @@ import pytz
 from datetime import datetime
 
 # TODO: set the variable `__author__` to a string with your name. This will
-# also be displayed by help(tz)
+#       also be displayed by help(tz)
 ...
 
 # Add a few timezone abbreviations missing from pytz
@@ -22,8 +22,8 @@ tz_abbrevs = {
 
 
 # TODO: note the definition of the convert() function. This function will be
-# accessible to scripts that import our new package.
-# (no code change required)
+#       accessible to scripts that import our new package.
+#       (no code change required)
 def convert(time_str, from_tz, to_tz, time_format='%Y-%m-%d %H:%M:%S'):
     """
     Convert date/time from one timezone to another.

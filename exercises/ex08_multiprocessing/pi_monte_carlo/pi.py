@@ -56,9 +56,9 @@ def calculate_one_sample():
 
 
 # TODO: note the definition of the `pi_serial` method, which performs a
-# calculation without using processes or threads. It calls
-# calculate_one_sample() one million times and adds up all the return values.
-# (no code change required)
+#       calculation without using processes or threads. It calls
+#       calculate_one_sample() one million times and adds up all the return values.
+#       (no code change required)
 def pi_serial():
     """Perform the Monte Carlo technique in a serial fashion"""
     hits = 0
@@ -71,8 +71,8 @@ def pi_serial():
 
 
 # TODO: note the definition of the `sample_multiple` method, which calls
-# calculate_one_sample() 250,000 times and adds up all the return values.
-# (no code change required)
+#       calculate_one_sample() 250,000 times and adds up all the return values.
+#       (no code change required)
 def sample_multiple(chunk_size):
     hits = 0
     for _ in range(chunk_size):
@@ -83,8 +83,8 @@ def sample_multiple(chunk_size):
 
 
 # TODO: note the definition of the `pi_async` method. You'll define this method
-# to call sample_multiple() with four parallel processes.
-# (no code change required)
+#       to call sample_multiple() with four parallel processes.
+#       (no code change required)
 def pi_async():
     """
     Divide calculation into 4 chunks and create 4 processes to execute
@@ -94,8 +94,8 @@ def pi_async():
     # ntasks = multiprocessing.cpu_count() # number of (virtual) CPU cores
 
     # TODO: note the definition of `chunk_size`. This will be the number of
-    # calculations performed in each call to sample_multiple()
-    # (no code change required)
+    #       calculations performed in each call to sample_multiple()
+    #       (no code change required)
     chunk_size = total_samples // ntasks  # divide work into 4 chunks
 
     # TODO: define an empty set of Future instances named `futures`
@@ -109,19 +109,19 @@ def pi_async():
         for ....
 
             # TODO: for each loop iteration, use a Process to execute
-            # sample_multiple with the argument chunk_size.
-            # Save the returned Future in a local variable.
+            #       sample_multiple with the argument chunk_size.
+            #       Save the returned Future in a local variable.
             ....
 
             # TODO: add the returned Future to the `futures` set.
             ....
 
     # TODO: note the definition of `hits`
-    # (no code change required)
+    #       (no code change required)
     hits = 0
 
     # TODO: set up a `for` loop to get the result of each process as it
-    # completes.
+    #       completes.
     # HINT: see slide 8-37
     # HINT: future.result() returns the result of the call to sample_multiple()
     for ....
@@ -130,7 +130,7 @@ def pi_async():
         hits += ....
 
     # TODO: note how the value of `hits` is used in the next statement
-    # (no code change required)
+    #       (no code change required)
     pi = 4.0 * hits/total_samples
     return pi
 

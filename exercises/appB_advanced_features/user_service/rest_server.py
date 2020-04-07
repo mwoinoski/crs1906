@@ -3,7 +3,7 @@ rest_server.py - Simple REST server based on Flask.
 """
 
 # TODO: note the Flask imports
-# (no code change required)
+#       (no code change required)
 from flask import (Flask, jsonify, abort, request, make_response, url_for,
                    Response)
 from flask_httpauth import HTTPBasicAuth  # ignore the PyCharm error here
@@ -16,7 +16,7 @@ auth = HTTPBasicAuth()
 
 
 # TODO: note the definition of the Flask authentication callback function
-# (no code change required)
+#       (no code change required)
 @auth.get_password
 def get_password(username):
     """Callback function that returns the password for username"""
@@ -24,8 +24,8 @@ def get_password(username):
 
 
 # TODO: note the definition of the Flask error handler for requests without
-# valid login credentials
-# (no code change required)
+#       valid login credentials
+#       (no code change required)
 @auth.error_handler
 def unauthorized():
     return make_response(jsonify({'error': 'Unauthorized access'}), 401)
@@ -46,12 +46,12 @@ def not_found(error):
 
 
 # TODO: note the setting of the base URI
-# (no code change required)
+#       (no code change required)
 BASE_URI = '/rest/users'
 
 
 # TODO: add a Flask decorator here so that a GET request to BASE_URI is mapped
-# to the get_users() method below
+#       to the get_users() method below
 # HINT: see slide 9-21
 ....
 # TODO: add decorator that specifies the request must include valid credentials
@@ -61,18 +61,18 @@ def get_users():
     app.logger.info('Getting all users')
 
     # TODO: note how we delegate the look up of the users to a DAO and
-    # assign the list of users to the variable 'users'
-    # (no code change required)
+    #       assign the list of users to the variable 'users'
+    #       (no code change required)
     users = rest_server_dao.get_all_users()
 
     # TODO: return a jsonified dictionary with key of 'users' and value of
-    # the users list
+    #       the users list
     # HINT: see slide 9-21
     return ....
 
 
 # TODO: add a Flask decorator here so that a GET request
-# to BASE_URI+'/<email>' is mapped to the get_user() method below.
+#       to BASE_URI+'/<email>' is mapped to the get_user() method below.
 # HINT: the type of email is string, not int
 # HINT: see slide 9-22
 ....
@@ -82,15 +82,15 @@ def get_user(email):
     app.logger.info('Getting user %s', email)
 
     # TODO: note how we delegate the look up of the user to a DAO and
-    # assign the user to the variable 'user'
-    # (no code change required)
+    #       assign the user to the variable 'user'
+    #       (no code change required)
     user = rest_server_dao.get_user(email)
 
     # TODO: if user is None, abort with HTTP status 404
     if ....
 
     # TODO: return a jsonified dictionary with key of 'user' and value of
-    # the user
+    #       the user
     return ....
 
 
@@ -101,17 +101,17 @@ def get_user(email):
 ....
 def create_user():
     # TODO: add a test to ensure that the request body contains JSON and
-    # the JSON has a member named 'email'. Abort with status 400 if the
-    # test fails.
+    #       the JSON has a member named 'email'. Abort with status 400 if the
+    #       test fails.
     if ....
 
     # TODO: get the email from the request JSON and assign it to a variable
-    # named 'email'
+    #       named 'email'
     email = ....
     app.logger.info('Creating user %s', email)
 
     # TODO: note how we get the rest of the input data from the request
-    # (no code change required)
+    #       (no code change required)
     first_name = request.json.get('first_name', '')
     middles = request.json.get('middles', '')
     last_name = request.json.get('last_name', '')
@@ -122,34 +122,34 @@ def create_user():
     country = request.json['address'].get('country', '')
 
     # TODO: note how we delegate the creation of the user to a DAO and
-    # assign the new user to the variable 'user'
-    # (no code change required)
+    #       assign the new user to the variable 'user'
+    #       (no code change required)
     user = rest_server_dao.create_user(email, first_name, middles, last_name,
                                        street, post_code, city, state, country)
 
     # TODO: return two values:
-    # 1. a jsonified dictionary with key of 'user' and value of the new user
-    # 2. HTTP status 201
+    #       1. a jsonified dictionary with key of 'user' and value of the new user
+    #       2. HTTP status 201
     return ....
 
 
 # TODO: add a Flask decorator here so that a PUT request
-# to BASE_URI+'/<email>' is mapped to the update_user() method below.
+#       to BASE_URI+'/<email>' is mapped to the update_user() method below.
 ....
 # TODO: add decorator that specifies the request must include valid credentials
 ....
 def update_user(email):
     # TODO: add a test to ensure that the request body contains JSON.
-    # Abort with status 400 if the test fails.
+    #       Abort with status 400 if the test fails.
     ....
 
     # TODO: get the email from the request JSON and assign it to a variable
-    # named 'email'
+    #       named 'email'
     email = ....
     app.logger.info('Updating user %s', email)
 
     # TODO: note how we get the rest of the input data from the request
-    # (no code change required)
+    #       (no code change required)
     first_name = request.json.get('first_name', '')
     middles = request.json.get('middles', '')
     last_name = request.json.get('last_name', '')
@@ -160,7 +160,7 @@ def update_user(email):
     country = request.json['address'].get('country', '')
 
     # TODO: note how we delegate the update of the user to a DAO and
-    # assign the modified user to the variable 'user'
+    #       assign the modified user to the variable 'user'
     # (no code change required)
     user = rest_server_dao.update_user(email, first_name, middles, last_name,
                                        street, post_code, city, state, country)
@@ -169,13 +169,13 @@ def update_user(email):
     ....
 
     # TODO: return two values:
-    # 1. a jsonified dictionary with key of 'user' and value of the new user
-    # 2. HTTP status 202
+    #       1. a jsonified dictionary with key of 'user' and value of the new user
+    #       2. HTTP status 202
     ....
 
 
 # TODO: add a Flask decorator here so that a DELETE request
-# to BASE_URI+'/<email>' is mapped to the delete_user() method below.
+#       to BASE_URI+'/<email>' is mapped to the delete_user() method below.
 ....
 # TODO: add decorator that specifies the request must include valid credentials
 ....
@@ -183,7 +183,7 @@ def delete_user(email):
     app.logger.info('Deleting user %s', email)
 
     # TODO: note how we delegate the deletion of the user to a DAO.
-    # (no code change required)
+    #       (no code change required)
     if not rest_server_dao.delete_user(email):
         app.logger.error("User %s not found, can't delete", email)
         abort(404)

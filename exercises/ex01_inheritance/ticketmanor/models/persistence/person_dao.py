@@ -19,8 +19,8 @@ class PersonDao():
 
 
         # TODO: call the superclass's __init__(), passing two arguments:
-        # 1. the class of the entity that will be persisted (Person)
-        # 2. the name of the entity's ID field ('email')
+        #       1. the class of the entity that will be persisted (Person)
+        #       2. the name of the entity's ID field ('email')
         # HINT: see slide 1-21
 
 
@@ -30,9 +30,9 @@ class PersonDao():
 
     def get(self, id_value, db_session):
         # TODO: in the next statement, make the following changes:
-        # 1. replace Person with self._entity_class
-        #    (note that there are 2 occurrences of Person)
-        # 2. replace 'email' with self._id_attr
+        #       1. replace Person with self._entity_class
+        #          (note that there are 2 occurrences of Person)
+        #       2. replace 'email' with self._id_attr
         entity = db_session.query(Person)\
                            .filter(getattr(Person, 'email') == id_value)\
                            .first()

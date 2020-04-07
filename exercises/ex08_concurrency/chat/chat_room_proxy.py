@@ -57,7 +57,8 @@ class ChatRoomProxy(ChatRoom):
         Thread(target=receive_loop).start()
 
     # TODO: note the override of Subject.observer_notify().
-    # This method is called by ChatRoom.add_message()
+    #       This method is called by ChatRoom.add_message()
+    #       (no code changes required)
     def observer_notify(self, data):
         """
         Override of Subject.observer_notify() that pickles a ChatMessage and

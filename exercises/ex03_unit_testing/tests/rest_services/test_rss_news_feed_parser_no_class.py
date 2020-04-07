@@ -74,24 +74,24 @@ expected = [
 ]
 
 # TODO: note that there is no TestCase subclass defined in this module.
-# The test cases are ordinary functions rather than methods.
-# (no code changes required)
+#       The test cases are ordinary functions rather than methods.
+#       (no code changes required)
 
 # TODO:
-# 1. Copy the following methods from test_rss_news_feed_parser.py and
-#    paste them here:
-#       test_get_news_music()
-#       test_get_news_music_max_items_1()
-#    (Be sure to un-indent the function definitions)
-# 2. Delete the "self" argument from the copied functions.
-# 3. Replace calls to self.assertEqual() with the assert statement.
-#    HINT: see slide 3-21
+#       1. Copy the following methods from test_rss_news_feed_parser.py and
+#          paste them here:
+#             test_get_news_music()
+#             test_get_news_music_max_items_1()
+#          (Be sure to un-indent the function definitions)
+#       2. Delete the "self" argument from the copied functions.
+#       3. Replace calls to self.assertEqual() with the assert statement.
+# HINT: see slide 3-21
 ...
 
 
 # TODO: copy the test_get_news_invalid_news_type() method from
-# test_rss_news_feed_parser.py and paste it here. Modify it to use the
-# pytest.raises() function to verify that a FeedReaderException is raised.
+#       test_rss_news_feed_parser.py and paste it here. Modify it to use the
+#       pytest.raises() function to verify that a FeedReaderException is raised.
 # HINT: see slide 3-24
 ...
 
@@ -155,4 +155,4 @@ RssNewsFeedParser.get_raw_content = lambda self, url, max_items: xml_input
 
 
 # TODO: note that there is no call to unittest.main().
-# (no code changes required)
+#       (no code changes required)

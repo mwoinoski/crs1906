@@ -10,10 +10,10 @@ from socketserver import BaseRequestHandler, ThreadingTCPServer
 
 
 # TODO: note the definition of the ChatServer class, which defines a simple
-# TCP socket-based chat server. A ChatServer co-ordinates conversations with
-# chat clients running in different Python VMs, which may be connecting from
-# different hosts across a network.
-# (no code changes required)
+#       TCP socket-based chat server. A ChatServer co-ordinates conversations with
+#       chat clients running in different Python VMs, which may be connecting from
+#       different hosts across a network.
+#       (no code changes required)
 class ChatServer(BaseRequestHandler):
     """
     ChatServer instances are created by ThreadingTCPServer.

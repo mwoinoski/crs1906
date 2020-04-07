@@ -43,7 +43,7 @@ def measure(func):
     """
     global decorator_enabled
     # BONUS TODO: note how we define the wrapper function if the decorator
-    # is not enabled (no code change required)
+    #       is not enabled (no code change required)
     if not decorator_enabled:
         @wraps(func)
         def wrapper(*args, **kwargs):

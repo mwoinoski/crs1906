@@ -36,16 +36,16 @@ class UserServiceRestTest(TestCase):
         request.matchdict['email'] = 'benf@gmail.com'
 
         # TODO: note that we pass Mock as the DAO class to the
-        # UserServiceRest constructor.
-        # (no code change required)
+        #       UserServiceRest constructor.
+        #       (no code change required)
         user_service = UserServiceRest(None, request, dao=Mock)
 
         person = Person(id=123)
 
         # TODO: note how we access the DAO from the UserServiceRest instance
-        # after the Mock DAO has been set. Here, we program the Mock so that
-        # its get() method returns a reference to the Person created above.
-        # (no code change required)
+        #       after the Mock DAO has been set. Here, we program the Mock so that
+        #       its get() method returns a reference to the Person created above.
+        #       (no code change required)
         user_service._dao.get.return_value = person
 
         result = user_service.get_user('benf@gmail.com')
@@ -63,12 +63,12 @@ class UserServiceRestTest(TestCase):
         user_service = UserServiceRest(None, request, dao=None)
 
         # TODO: configure the mock so that a call to its get() method has
-        # the side effect of raising a PersistenceError
+        #       the side effect of raising a PersistenceError
         # HINT: see slide 3-39
         
 
         # TODO: assert that an HTTPNotFound exception is raised when you call
-        # the user_service's get_user() method.
+        #       the user_service's get_user() method.
         # HINT: see slide 3-38
         
 
@@ -85,7 +85,7 @@ class UserServiceRestTest(TestCase):
         
 
         # TODO: assert that a ValueError is raised when you call
-        # the user_service's get_user() method.
+        #       the user_service's get_user() method.
         
 
     def test_get_user_PersistenceError(self):
@@ -95,11 +95,11 @@ class UserServiceRestTest(TestCase):
         user_service = UserServiceRest(None, request, dao=Mock)
 
         # TODO: program the mock DAO's get() method to have a side effect of
-        # raising a PersistenceError.
+        #       raising a PersistenceError.
         
 
         # TODO: assert that an HTTPNotFound is raised when you call
-        # the user_service's get_user() method.
+        #       the user_service's get_user() method.
         
 
     def test_add_user_success(self):
@@ -121,12 +121,12 @@ class UserServiceRestTest(TestCase):
         user_service = UserServiceRest(None, request, dao=Mock)
 
         # TODO: note the mock DAO's add() method will raise a DatabaseError.
-        # (no code change required)
+        #       (no code change required)
         user_service._dao.add = Mock(side_effect=sqlite3.DatabaseError())
 
         # TODO: assert that an HTTPInternalServerError is raised when you call
-        # the user_service's add_user() method, and that the exception's
-        # message includes the string 'Could not add'
+        #       the user_service's add_user() method, and that the exception's
+        #       message includes the string 'Could not add'
         # HINT: see slide 3-39
         
 

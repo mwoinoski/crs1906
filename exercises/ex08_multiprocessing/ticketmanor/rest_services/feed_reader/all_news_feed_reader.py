@@ -13,12 +13,12 @@ __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 
 # TODO: note the definition of the NewsReader class. NewsReader.get_news()
-# will download one type of news.
-# Also note that this is not a Thread subclass.
-# (no code change required)
+#       will download one type of news.
+#       Also note that this is not a Thread subclass.
+#       (no code change required)
 class NewsReader:
     # TODO: note the arguments to the NewsReader constructor
-    # (no code change required)
+    #       (no code change required)
     def __init__(self, feed_reader, news_type, max_items):
         """Initialize a NewsThread"""
         self.feed_reader = feed_reader
@@ -27,13 +27,13 @@ class NewsReader:
         self.news = None
 
     # TODO: note the definition of the get_news() method
-    # (no code change required)
+    #       (no code change required)
     def get_news(self):
         """Download one type of news and store it in self.news"""
         self.news = self.feed_reader.fetch_news_items(self.news_type,
                                                       self.max_items)
         # TODO: note this method returns a reference to the current NewsReader
-        # (no code change required)
+        #       (no code change required)
         return self
 
 
@@ -50,14 +50,14 @@ class AllNewsFeedReader:
         news_futures = ....
 
         # TODO: wrap the `for` loop in a `with` statement that initializes
-        # a ThreadPoolExecutor. Pass the argument max_workers=4 to the
-        # ThreadPoolExecutor constructor.
+        #       a ThreadPoolExecutor. Pass the argument max_workers=4 to the
+        #       ThreadPoolExecutor constructor.
         # HINT: see slide 8-38
         ....
             for news_type in 'concerts', 'sports', 'movies':
 
                 # TODO: create an instance of NewsReader and assign it to a
-                # local variable named `news_reader`
+                #       local variable named `news_reader`
                 news_reader = ....
 
                 # TODO: call executor.submit() to execute the NewsReader's
