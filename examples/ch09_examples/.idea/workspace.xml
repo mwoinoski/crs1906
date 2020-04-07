@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c6ac7f4-3337-4255-9285-b01a769b62f7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../ch08_examples/thread_race.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/thread_race.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/rest_server.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/rest_server.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/rest_server_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/rest_server_dao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/ex09_rest_services/user_service/rest_server_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex09_rest_services/user_service/rest_server_dao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/ticketmanor_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/tests/ticketmanor_db.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
-    </list>
+    <list default="true" id="3c6ac7f4-3337-4255-9285-b01a769b62f7" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
