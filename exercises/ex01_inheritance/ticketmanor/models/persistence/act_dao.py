@@ -69,10 +69,7 @@ class ActDao():
 
         act = query.filter_by(**kwargs)\
                    .first()
-        # TODO: should return all acts that match the query, not just the first
-        #       (needs changes in concerts.html, movies.html, and sports.html)
 
-        # TODO: get ticket price and images from DB, then delete the following
         if hasattr(act, 'events'):
             for event in act.events:
                 event.price = ActDao.generate_price(event.venue.country)

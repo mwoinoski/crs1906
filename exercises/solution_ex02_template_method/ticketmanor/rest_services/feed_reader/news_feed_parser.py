@@ -57,7 +57,7 @@ class NewsFeedParser(metaclass=ABCMeta):
         # TODO: note that get_raw_content() is a generic superclass method that
         #       will be called by the superclass template method.
         try:
-            return urllib.request.urlopen(url, timeout=1).read()
+            return urllib.request.urlopen(url, timeout=5).read()
         except urllib.request.URLError:
             # TODO: note the call to the subclass hook method get_dummy_news(),
             #       which returns dummy content if the URL is not accessible.

@@ -63,7 +63,7 @@ class NewsFeedParser(metaclass=ABCMeta):
     def get_raw_content(self, url, news_type=None):
         # if url is not accessible, return dummy content
         try:
-            return urllib.request.urlopen(url, timeout=1).read()
+            return urllib.request.urlopen(url, timeout=5).read()
         except urllib.request.URLError:
             return self.get_dummy_news(url, news_type)
 

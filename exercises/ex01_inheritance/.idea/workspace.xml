@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e66dba11-0105-4e20-9ded-e67a8f9ecea9" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../1906_CN_C1_911_B1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1906_MA_C1_911_B1.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/models/persistence/ticketmanor_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/tests/models/persistence/ticketmanor_db.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketmanor/models/persistence/act_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/models/persistence/act_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/development.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/development.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/production.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/production.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +240,7 @@
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -329,6 +346,21 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in test_person.py" type="tests" factoryName="Unittests">
+      <module name="ex01_inheritance" />
+      <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_pattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/models/test_person.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests in test_person.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
@@ -382,10 +414,10 @@
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
       <module name="ex01_inheritance" />
-      <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/models/persistence" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -396,11 +428,12 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python tests.Unittests in test_person" />
       <item itemvalue="Python tests.Unittests in test_act.py" />
       <item itemvalue="Python tests.Unittests in test_address.py" />
       <item itemvalue="Python tests.Unittests in test_customer.py" />
-      <item itemvalue="Python tests.Unittests in test_venue_dao.py" />
       <item itemvalue="Python tests.Unittests in test_person.py" />
+      <item itemvalue="Python tests.Unittests in test_venue_dao.py" />
       <item itemvalue="Python tests.Unittests in test_act_dao.py" />
       <item itemvalue="Python tests.Unittests in test_member.py" />
       <item itemvalue="Python tests.Unittests in test_person_dao.py" />
@@ -409,6 +442,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Unittests in test_person_dao.py" />
+        <item itemvalue="Python tests.Unittests in test_member.py" />
+        <item itemvalue="Python tests.Unittests in test_act_dao.py" />
         <item itemvalue="Python tests.Unittests in test_person.py" />
       </list>
     </recent_temporary>
