@@ -13,6 +13,7 @@ class DebuggingDemo(object):
         return '{} executed {} of {} loops'\
                .format(self._name, i+1, self._count)
 
+
 if __name__ == '__main__':
     obj_name = 'debugging demo'
     print('Starting ' + obj_name + '...')
