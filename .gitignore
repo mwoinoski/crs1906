@@ -1,4 +1,5 @@
 examples.zip
+crs1906.zip
 examples/ch09_examples/imagescale_in.backup/
 examples/ch09_examples/imagescale_out/
 .timestamp
@@ -12,6 +13,8 @@ exercises.zip
 
 # VS Code project config
 .vscode/
+
+.pytest_cache/
 
 # Mecurial repositories
 .hg/

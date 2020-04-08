@@ -5,7 +5,7 @@ Customer model class
 __author__ = 'Mike Woinoski mike@articulatedesign.us.com'
 
 # TODO: import the User class from the ticketmanor.models.user module
-        from ticketmanor.models.user import User
+from ticketmanor.models.user import User
 # Note that a relative import also works:
 # from .user import User
 
