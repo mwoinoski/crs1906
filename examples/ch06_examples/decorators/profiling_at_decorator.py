@@ -32,10 +32,10 @@ def simple():
 if __name__ == "__main__":
 
     fib_result = fibonacci(20, debug=True)
-    print("in main, fibonacci(20, debug=True) = {}\n".format(fib_result))
+    print(f"in main, fibonacci(20, debug=True) = {fib_result}\n")
 
     nsum_result = nsum(1000000)
-    print("in main, nsum(1000000) = {}\n".format(nsum_result))
+    print(f"in main, nsum(1000000) = {nsum_result}\n")
 
     simple_result = simple()
-    print("in main, simple() = {}\n".format(simple_result))
+    print(f"in main, simple() = {simple_result}\n")

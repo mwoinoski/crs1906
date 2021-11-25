@@ -56,13 +56,12 @@ class ConcreteObserver(Observer):
         self._name = name
 
     def update(self, subject):
-        print('{}.update() called, subject state = {}'
-              .format(self._name, subject.state))
+        print(f'{self._name}.update() called, subject state = {subject.state}')
 
 
 def main():
     initial_state = 1
-    print('\nCreating subject with initial state {}...'.format(initial_state))
+    print(f'\nCreating subject with initial state {initial_state}...')
     subject = ConcreteSubject(initial_state)
     
     print('\nCreating two observers...')

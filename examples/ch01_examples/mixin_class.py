@@ -40,7 +40,7 @@ class SimpleCounter:
         self._count = value
 
     def __str__(self):
-        return 'count={}'.format(self.count)
+        return f'count={self.count}'
 
 class UpAndDownCounter(SimpleCounter, ComparableMixin):
     """UpAndDownCounter uses multiple inheritance with ComparableMixin"""
@@ -62,7 +62,7 @@ class UpAndDownCounter(SimpleCounter, ComparableMixin):
         return self._count == other.count
 
     def __str__(self):
-        return super().__str__() + ',min={}'.format(self._min)
+        return super().__str__() + f',min={self._min}'
 
 
 counter0 = UpAndDownCounter(0)

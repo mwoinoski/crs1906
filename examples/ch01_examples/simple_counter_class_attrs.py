@@ -21,7 +21,7 @@ class SimpleCounter:
         return self.count
 
     def __str__(self):
-        return 'count={}'.format(self.count)
+        return f'count={self.count}'
 
 counter1 = SimpleCounter(0)
 counter2 = SimpleCounter(100)
@@ -34,7 +34,7 @@ counter2.increment(5)
 msg = "Counter2 value: " + str(counter2)
 print(msg)
 
-print("There are {} SimpleCounter instances (class data attribute)"
-      .format(SimpleCounter.how_many_counters))
-print("There are {} SimpleCounter instances (class method)"
-      .format(SimpleCounter.get_instance_count()))
+print(f"There are {SimpleCounter.how_many_counters}", 
+      "SimpleCounter instances (class data attribute)")
+print(f"There are {SimpleCounter.get_instance_count()}",
+      "SimpleCounter instances (class method)")

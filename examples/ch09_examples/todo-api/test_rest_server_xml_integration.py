@@ -85,7 +85,7 @@ class TestRestServer(unittest.TestCase):
         self.assertEqual(201, r.status_code)
 
     def test_03_get_task(self):
-        url = '{}/{}'.format(TestRestServer.base_url, 3)
+        url = f'{TestRestServer.base_url}/3'
         http_hdrs = {'Content-Type': 'application/xml'}
         creds = ('student', 'studentpw')
 
@@ -107,7 +107,7 @@ class TestRestServer(unittest.TestCase):
         task = {'done': done}
         xml_data = self.create_task_xml(task)
 
-        url = f'{TestRestServer.base_url}/{3}'
+        url = f'{TestRestServer.base_url}/3'
         http_hdrs = {'Content-Type': 'application/xml'}
         creds = ('student', 'studentpw')
 
@@ -146,19 +146,19 @@ class TestRestServer(unittest.TestCase):
         self.assertEqual(201, r.status_code)
 
     def test_06_delete_task(self):
-        url = f'{TestRestServer.base_url}/{3}'
+        url = f'{TestRestServer.base_url}/3'
         creds = ('student', 'studentpw')
         r = requests.delete(url, auth=creds)
         self.assertEqual(204, r.status_code)
 
-        url = f'{TestRestServer.base_url}/{4}'
+        url = f'{TestRestServer.base_url}/4'
         creds = ('student', 'studentpw')
         r = requests.delete(url, auth=creds)
         self.assertEqual(204, r.status_code)
 
     def test_99_get_task_bad_creds(self):
         expected = '<error>Unauthorized access</error>'
-        url = f'{TestRestServer.base_url}/{1}'
+        url = f'{TestRestServer.base_url}/1'
         http_hdrs = {'Content-Type': 'application/xml'}
         creds = ('homer', 'donuts')
 

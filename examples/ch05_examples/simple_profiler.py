@@ -23,16 +23,13 @@ def measure(func):
 
         end = timer_func()   # get ending timestamp
 
-        args_str = ''
-        print('{}.{}({}) : {:.4f} seconds'
-              .format(func.__module__, func.__name__, args_str, end - start))
+        print(f'{func.__module__}.{func.__name__}() : {end - start:.4f} seconds')
         return r
         # To add the function's arguments to the output, you can do something
         # like this:
         # all_args = [str(a) for a in args]
         # all_args.extend([str(k)+'='+str(v) for k, v in kwargs.items()])
         # args_str = ', '.join(all_args)
-        # print('{}.{}({}) : {:.4f} seconds'
-        #       .format(func.__module__, func.__name__, args_str, end - start))
+        # print(f'{func.__module__}.{func.__name__}({args_str}) : {end - start:.4f} seconds')
 
     return wrapper

@@ -12,7 +12,7 @@ class Image(metaclass=ABCMeta):
 
 class ConcreteImage(Image):
     def __init__(self, path):
-        print('ConcreteImage.__init__("{}")'.format(path))
+        print(f'ConcreteImage.__init__("{path}")')
         # load image immediately
         pil_image = PILImage.open(path)
         self.image_content = PILImageTk.PhotoImage(pil_image) 
@@ -21,12 +21,12 @@ class ConcreteImage(Image):
         return self.image_content
 
     def __repr__(self):
-        return 'ConcreteImage("{}")'.format(self.path)
+        return f'ConcreteImage("{self.path}")'
 
 
 class LazyLoadingImage(Image):
     def __init__(self, path):  # don't load image yet
-        print('LazyLoadingImage.__init__("{}")'.format(path))
+        print(f'LazyLoadingImage.__init__("{path}")')
         self.path = path
         self.concrete_image = None
         
@@ -37,14 +37,14 @@ class LazyLoadingImage(Image):
         return self.concrete_image.get_content()  
 
     def __repr__(self):
-        return 'LazyLoadingImage("{}")'.format(self.path)
+        return f'LazyLoadingImage("{self.path}")'
 
 
 class ImageClient:
     root = tk.Tk()
     
     def __init__(self, image):
-        print('ImageClient.__init__({})'.format(image))
+        print(f'ImageClient.__init__({image})')
         self.image = image
         
     def display_image(self):
@@ -54,7 +54,7 @@ class ImageClient:
         ImageClient.root.mainloop()
 
     def __repr__(self):
-        return 'ImageClient({})'.format(self.image)
+        return f'ImageClient({self.image})'
 
 
 def main():

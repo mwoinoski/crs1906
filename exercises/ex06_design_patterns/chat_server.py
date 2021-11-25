@@ -72,7 +72,7 @@ if __name__ == '__main__':
         # Start server listening at localhost. ThreadingTCPServer spawns a new
         # thread to handle each connection request.
         server = ThreadingTCPServer(('', port), ChatServer)
-        print('Starting ChatServer at port {}...'.format(port))
+        print(f'Starting ChatServer at port {port}...')
         server.serve_forever()
     except KeyboardInterrupt:  # catch Ctrl-c
         pass  # Interpreter will call atexit handler

@@ -19,3 +19,8 @@ class Person:
 
     def __str__(self):
         return self.full_name()
+
+    def __repr__(self):
+        return f'Person("{self.first_name}","{self.middle_name}","{self.last_name}")'
+
+    # Oops! Forgot to define __eq__()

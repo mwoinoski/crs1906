@@ -7,7 +7,7 @@ import sched, time
 scheduler = sched.scheduler(time.time, time.sleep)
 
 def do_task(name):
-    print('Running {} at time {}'.format(name, time.strftime("%X %x")))
+    print(f'Running {name} at time {time.strftime("%X %x")}'))
 
 print('Starting at time ' + time.strftime("%X %x"))
 

@@ -21,7 +21,7 @@ def process_ticket(ticket):
 try:
     t = Ticket('XKCD Con', None, 1000.0)
     process_ticket(t)
-    print('Ticket {} is ok'.format(t))
+    print(f'Ticket {t} is ok')
 except TicketException as te:
     print(te.args)
 

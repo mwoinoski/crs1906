@@ -34,7 +34,7 @@ class ChatClientGui(Observer):
     def create_widgets(self, name, window):
         if window != root:
             window = tk.Toplevel(root)
-        window.geometry('+200+{}'.format(ChatClientGui.last_y))
+        window.geometry(f'+200+{ChatClientGui.last_y}')
         ChatClientGui.last_y += 250
         window.wm_title(name)
         self.frame = tk.Frame(window)
@@ -75,13 +75,13 @@ class ChatClientGui(Observer):
     def update(self, chat_msg):
         id = chat_msg.id
         value = chat_msg.value
-        print('\tMessage from {}: "{}"'.format(id, value))
+        print(f'\tMessage from {id}: "{value}"')
 
         # TODO: note the call to add_text(), which adds the new chat message
         #       to the client's output window
         #       (no code change required)
         if self.client_name != chat_msg.id:
-            self.add_text('({}) {}\n'.format(chat_msg.id, chat_msg.value))
+            self.add_text(f'({chat_msg.id}) {chat_msg.value}\n')
 
 
 def main():

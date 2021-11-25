@@ -53,14 +53,14 @@ def main():
         add_stats('func'+str(i), 20, 400)
 
     #all_stats = get_function_stats()
-    #print('got stats for {} functions'.format(len(all_stats))
+    #print(f'got stats for {len(all_stats)} functions')
 
     from timeit import timeit
     loops = 10
     exc_time = timeit('all_stats = get_function_stats()',
                       setup='from __main__ import get_function_stats',
                       number=loops)
-    print('average time to execute get_function_stats() = {:.3} seconds'.format(exc_time/loops))
+    print('average time to execute get_function_stats() = {exc_time/loops:.3} seconds')
 
 
 if __name__ == '__main__':

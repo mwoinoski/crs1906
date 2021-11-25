@@ -16,7 +16,7 @@ class SimpleCounter:
         return self.count
 
     def __str__(self):
-        return 'count={}'.format(self.count)
+        return f'count={self.count}'
 
 
 class UpAndDownCounter(SimpleCounter):
@@ -36,7 +36,7 @@ class UpAndDownCounter(SimpleCounter):
         return self.count
 
     def __str__(self):
-        return super().__str__() + ',min={}'.format(self.min)
+        return super().__str__() + f',min={self.min}'
 
 
 up_and_down = UpAndDownCounter(10)

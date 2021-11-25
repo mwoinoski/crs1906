@@ -21,7 +21,7 @@ class ChatClient(Observer):
 
     def update(self, chat_msg):
         """Update this ChatClient with a new message from the ChatRoom."""
-        print('\tMessage from {}: {}'.format(chat_msg.id, chat_msg.value))
+        print(f'\tMessage from {chat_msg.id}: {chat_msg.value}')
         print(prompt, end='', flush=True)
 
 prompt = 'chat> '

@@ -17,7 +17,7 @@ def pinger(index, q):
     """Pings a host"""
     while True:
         host = q.get()
-        print("Thread {}: Pinging {}".format(index, host))
+        print(f"Thread {index}: Pinging {host}")
         is_win = platform.system() == 'Windows'
         try:
             ret = subprocess.call(
@@ -27,11 +27,11 @@ def pinger(index, q):
                 stderr=subprocess.STDOUT,
                 timeout=2)  # timeout after 2 seconds
             if ret == 0:
-                print("{}: is alive".format(host))
+                print(f"{host}: is alive")
             else:
-                print("{}: did not respond".format(host))
+                print(f"{host}: did not respond")
         except subprocess.TimeoutExpired:
-            print("{}: did not respond".format(host))
+            print(f"{host}: did not respond")
 
         # notify Queue that this work item has been processed
         q.task_done()

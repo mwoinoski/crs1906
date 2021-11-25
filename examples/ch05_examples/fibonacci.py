@@ -34,6 +34,6 @@ if __name__ == '__main__':
     # total_time = timeit("main()",
     #                    setup="from __main__ import main",
     #                    number=loops)
-    # print('Called main() {} times, average time was {:.3} seconds'
-    #       .format(loops, total_time/loops))
+    # print(f'Called main() {loops} times,',
+    #       f'average time was {total_time/loops:.3} seconds')
     print("Done.")

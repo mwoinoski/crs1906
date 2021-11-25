@@ -30,7 +30,7 @@ class HttpRequestProcessor:
 
         else:
             raise NotImplementedError(
-                "HTTP method {} not implemented".format(request.method))
+                f"HTTP method {request.method} not implemented")
 
         # Generic: prepare HTML response
         self.return_response(response_data)
@@ -42,7 +42,7 @@ class HttpRequestProcessor:
             return self.decode_post_params(request['body'])
         else:
             raise NotImplementedError(
-                "HTTP method {} not implemented".format(request.method))
+                f"HTTP method {request.method} not implemented")
 
     def do_get(self, request):
         raise NotImplementedError("do_get() must be implemented")
@@ -75,8 +75,7 @@ class AddUserFormProcessor(HttpRequestProcessor):
         address = '123 Url Param St'  # fake it
         response_data = {
             'status': 200,  # OK
-            'message': "User '{}' is at address '{}'"
-                       .format(name, address),
+            'message': f"User '{name}' is at address '{address}'",
         }
         return response_data
 
@@ -86,8 +85,7 @@ class AddUserFormProcessor(HttpRequestProcessor):
         # add user to database
         response_data = {
             'status': 201,  # Created
-            'message': "User '{}' at address '{}' added successfully"
-                       .format(name, address),
+            'message': f"User '{name}' at address '{address}' added successfully",
         }
         return response_data
 

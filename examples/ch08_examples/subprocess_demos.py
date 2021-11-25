@@ -39,8 +39,7 @@ def ex4():
         status = exc.returncode
         output = exc.output
 
-    print('ping exit status = {}, output = {}'
-          .format(status, output.decode('utf-8')))
+    print(f'ping exit status = {status}, output = {output.decode('utf-8')}')
 
 
 def ex5():
@@ -57,8 +56,7 @@ def ex5():
             status = exc.returncode
             output = exc.output
 
-        print('ping exit status = {}, output = {}'
-              .format(status, output.decode('utf-8')))
+        print(f'ping exit status = {status}, output = {output.decode('utf-8')}')
 
 
 def ex6():

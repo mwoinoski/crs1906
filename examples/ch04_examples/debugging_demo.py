@@ -10,8 +10,7 @@ class DebuggingDemo(object):
     def count(self):
         for i in range(self._count):
             print(i)
-        return '{} executed {} of {} loops'\
-               .format(self._name, i+1, self._count)
+        return f'{self._name} executed {i+1} of {self._count} loops'
 
 
 if __name__ == '__main__':

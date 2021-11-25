@@ -6,5 +6,5 @@ from .utils import util_mod1
 
 
 def func1():
-    print("In {}.func1()".format(__name__))
+    print(f"In {__name__}.func1()")
     util_mod1.util_func1()

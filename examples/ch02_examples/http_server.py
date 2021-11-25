@@ -107,7 +107,7 @@ class AddUserFormProcessor(HttpRequestProcessor):
         name = request_data['name']
         job = request_data['job']
         # Now use the GET params to add the user
-        print('do_get() called with name = {}, job = {}'.format(name, job))
+        print(f'do_get() called with name = {name}, job = {job}')
         # For this demo, we'll just echo the request data
         get_response = dict(request_data)
         return get_response, 200  # OK
@@ -118,7 +118,7 @@ class AddUserFormProcessor(HttpRequestProcessor):
         name = request_data['name']
         job = request_data['job']
         # Now use the POST params to add the user.
-        print('do_post() called with name = {}, job = {}'.format(name, job))
+        print(f'do_post() called with name = {name}, job = {job}')
         # For this demo, we'll just echo the request data
         post_response = dict(request_data)
         return post_response, 201  # Created
@@ -133,12 +133,12 @@ if __name__ == "__main__":
     server_address = (host, http_port)  # listen on localhost
     httpd = HTTPServer(server_address, AddUserFormProcessor)
 
-    print("Server Started - {}:{}".format(host, http_port))
+    print(f"Server Started - {host}:{http_port}")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
         pass
     httpd.server_close()
-    print("Server Stopped - {}:{}".format(host, http_port))
+    print(f"Server Stopped - {host}:{http_port}")
 
 # def do_GET(self):  # called by BaseHTTPRequestHandler.handle_one_request

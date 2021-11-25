@@ -4,4 +4,4 @@ Utility module 2
 
 
 def util_func2():
-    print("In {}.util_func1()".format(__name__))
+    print(f"In {__name__}.util_func2()")

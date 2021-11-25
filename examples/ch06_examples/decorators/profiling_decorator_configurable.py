@@ -29,9 +29,8 @@ def profile_call_enabled(decorated_fn):
         # call the decorated function
         result = decorated_fn(*args, **kwargs)  # unwrap the argument list
 
-        print('{}({}) ran in {} secs'.format(
-            decorated_fn.__name__, format_args(*args, **kwargs),
-            process_time() - before))
+        print(f'{decorated_fn.__name__}({format_args(*args, **kwargs)})',
+              f'ran in {process_time() - before} secs')
         return result
 
     # outer function returns reference to nested function

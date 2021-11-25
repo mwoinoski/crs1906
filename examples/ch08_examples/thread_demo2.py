@@ -13,8 +13,7 @@ class Zipper:
         self.name = name
 
     def zip_it(self, infile, outfile):
-        print('Zipper {} is zipping {} to {}...'
-              .format(self.name, infile, outfile))
+        print(f'Zipper {self.name} is zipping {infile} to {outfile}...')
         f = ZipFile(outfile, 'w', ZIP_DEFLATED)
         f.write(infile)
         f.close()

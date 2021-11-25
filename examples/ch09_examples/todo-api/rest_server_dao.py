@@ -1,5 +1,5 @@
 """
-rest_server_dao.py - DAO for REST server in rest_server.py
+rest_server_dao.py - DAO for REST server in rest_server_json.py and rest_server_xml.py
 """
 import re
 import sqlite3

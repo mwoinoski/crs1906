@@ -2,7 +2,7 @@ r"""Pytest unit tests for Person
 
    Run as follows:
    cd C:\crs1906\examples\ch03_examples
-   py.test test_person_pytest_fail.py
+   pytest test_person_pytest_fail.py
 """
 
 from person_buggy import Person

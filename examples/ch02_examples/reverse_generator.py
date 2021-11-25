@@ -11,12 +11,12 @@ def reverse(data):
     return
 
 
-print('{} reverse generator function {}'.format('-'*10, '-'*10))
+print(f'{"-"*10} reverse generator function {"-"*10}')
 
 for char in reverse('golf'):
     print(char)
 
-print('{} double_it generator function {}'.format('-'*10, '-'*10))
+print(f'{"-"*10} double_it generator function {"-"*10}')
 
 
 def double_it(data):

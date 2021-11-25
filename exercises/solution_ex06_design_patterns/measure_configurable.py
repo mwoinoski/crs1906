@@ -23,8 +23,7 @@ config.read('measure.ini')
 try:
     decorator_enabled = config.getboolean('profiler', 'enabled')
 
-    print('Profiler enabled setting in measure.ini = {}'
-          .format(decorator_enabled))
+    print(f'Profiler enabled setting in measure.ini = {decorator_enabled}')
 except KeyError:
     print('No profiler enabled setting found, defaulting to False')
     decorator_enabled = False

@@ -2,12 +2,131 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="834cd2ce-708a-4d83-8462-e25ee9d59bb4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/ch01_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ch01_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mixin_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/mixin_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multiple_inheritance_cooperative.py" beforeDir="false" afterPath="$PROJECT_DIR$/multiple_inheritance_cooperative.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_counter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_counter_class_attrs.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple_counter_class_attrs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/.idea/ch02_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch02_examples/.idea/ch02_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch02_examples/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch02_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/generator_expr.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch02_examples/generator_expr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/http_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch02_examples/http_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/logging_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch02_examples/logging_method.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/reverse_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch02_examples/reverse_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/template_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch02_examples/template_method.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch02_examples/template_method_abc.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch02_examples/template_method_abc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch03_examples/.idea/ch03_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/.idea/ch03_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch03_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch03_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch03_examples/business_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/business_object.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch03_examples/db/user_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/db/user_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch03_examples/models/bus_obj.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/models/bus_obj.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch03_examples/monkey_patch_business_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/monkey_patch_business_object.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch03_examples/person.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/person.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch03_examples/person_buggy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/person_buggy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch03_examples/test_person_pytest.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/test_person_pytest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch03_examples/test_person_pytest_fail.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch03_examples/test_person_pytest_fail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch04_examples/.idea/ch04_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/ch04_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch04_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch04_examples/debugging_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/debugging_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/ex09_rest_services/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex09_rest_services/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch04_examples/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch04_examples/logging.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/logging.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/ch05_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/ch05_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch05_examples/fibonacci.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/fibonacci.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch05_examples/pi_numba.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/pi_numba.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch05_examples/primes_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/primes_python.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch05_examples/simple_profiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/simple_profiler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch05_examples/string_cat_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/string_cat_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/.idea/ch06_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/ch06_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorator_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorator_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorator_monkey_patch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorator_monkey_patch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/decorator_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/decorator_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/fibonacci.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/fibonacci.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/fibonacci_naive.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/fibonacci_naive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/logging_decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/logging_decorator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/logging_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/logging_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_at_decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_at_decorator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_decorator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_decorator_configurable.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_decorator_configurable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_monkey_patch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/decorators/profiling_monkey_patch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/display_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/display_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/image_proxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/image_proxy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch06_examples/observer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/observer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/ch07_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/ch07_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch07_examples/setup_example/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/setup_example/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch07_examples/setup_example/setup_example/sample_mod1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/setup_example/setup_example/sample_mod1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch07_examples/setup_example/setup_example/sample_mod2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/setup_example/setup_example/sample_mod2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch07_examples/setup_example/setup_example/utils/util_mod1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/setup_example/setup_example/utils/util_mod1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch07_examples/setup_example/setup_example/utils/util_mod2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/setup_example/setup_example/utils/util_mod2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/ch08_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/ch08_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/executor_map_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/executor_map_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/ping_threaded.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/ping_threaded.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/sched_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/sched_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/scratch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/subprocess_demos.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/subprocess_demos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/subprocesses/decrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/subprocesses/decrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/subprocesses/encrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/subprocesses/encrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/thread_demo2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/thread_demo2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch08_examples/thread_demo4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/thread_demo4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/ch09_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/ch09_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/todo-api/rest_server_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch09_examples/todo-api/test_rest_server_xml_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/todo-api/test_rest_server_xml_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/ex01_inheritance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/ex01_inheritance.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/sample_unit_tests/business_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/sample_unit_tests/business_object.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/sample_unit_tests/person.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/sample_unit_tests/person.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/sample_unit_tests/test_business_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/sample_unit_tests/test_business_object.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex05_performance/func_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex05_performance/func_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex05_performance/sudoku.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex05_performance/sudoku.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/chat_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/chat_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/chat_gui_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/chat_gui_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/chat_room.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/chat_room.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/chat_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/chat_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/measure_configurable.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/measure_configurable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/sudoku.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/sudoku.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex08_concurrency/chat/chat_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_concurrency/chat/chat_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex08_concurrency/chat/chat_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_concurrency/chat/chat_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/chat/chat_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/chat/chat_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/chat/chat_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/chat/chat_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/pi_monte_carlo/pi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/pi_monte_carlo/pi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex09_rest_services/test_user_rest_service_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex09_rest_services/test_user_rest_service_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex09_rest_services/user_service/test_rest_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex09_rest_services/user_service/test_rest_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/sample_unit_tests/business_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/sample_unit_tests/business_object.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/sample_unit_tests/person.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/sample_unit_tests/person.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/sample_unit_tests/test_business_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/sample_unit_tests/test_business_object.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex05_performance/func_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex05_performance/func_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex05_performance/sudoku.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex05_performance/sudoku.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/chat_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/chat_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/chat_gui_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/chat_gui_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/chat_room.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/chat_room.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/chat_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/chat_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/measure_configurable.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/measure_configurable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/sudoku.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/sudoku.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/chat/chat_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/chat/chat_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/chat/chat_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/chat/chat_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/chat/chat_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/chat/chat_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/chat/chat_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/chat/chat_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/pi_monte_carlo/pi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/pi_monte_carlo/pi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/test_user_rest_service_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/test_user_rest_service_json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/user_service/test_rest_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/user_service/test_rest_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scripts/use_pypy.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/use_python_ver.bat" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,12 +150,14 @@
   </component>
   <component name="ProjectId" id="1RhvkAtphNQSxEh6aMdAy7t3Nmi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -52,18 +173,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\crs1906\exercises\ch01_examples" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.simple_counter_class_attrs">
     <configuration default="true" type="tests" factoryName="Attests">
@@ -207,6 +316,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -225,13 +335,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -250,7 +359,7 @@
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://C:/python/python-3.3/Lib/string.py</url>
+          <url>file://$PROJECT_DIR$/../../../python/python-3.3/Lib/string.py</url>
           <line>61</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>

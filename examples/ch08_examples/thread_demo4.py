@@ -15,7 +15,7 @@ class DiskUsage(Thread):
         self.results = None
 
     def run(self):
-        print('Getting disk usage for "{}"'.format(self.target_dir))
+        print(f'Getting disk usage for "{self.target_dir}"')
         total, used, free = shutil.disk_usage('/')
         self.results = used / total
 
@@ -26,4 +26,4 @@ print('Main thread is running while DiskUsage thread is running')
 disk_usage_thread.join()  # Wait for the child_process task to finish
 disk_usage = disk_usage_thread.results  # Main thread gets child thread results
 
-print('Root dir is {:.1f}% full'.format(100 * disk_usage))
+print(f'Root dir is {100 * disk_usage:.1f}% full')

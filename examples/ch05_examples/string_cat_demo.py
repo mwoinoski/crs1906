@@ -12,10 +12,19 @@ from simple_profiler import measure
 
 @measure
 def to_lower_string_concat(lines):
-    """String concatenation: slow"""
+    """String concatenation: not bad"""
     r = ''
     for line in lines:
-        r += line.lower()
+        r = r + line.lower()
+    return r
+
+
+@measure
+def to_lower_string_concat_fstrings(lines):
+    """String concatenation with fstrings: REALLY slow"""
+    r = ''
+    for line in lines:
+        r = f'{r}{line.lower()}'
     return r
 
 
@@ -90,6 +99,7 @@ if __name__ == '__main__':
 
     print("String concatenation demo:")
     to_lower_string_concat(input_lines)
+    to_lower_string_concat_fstrings(input_lines)
     to_lower_join_individual_strings(input_lines)
     to_lower_append_strings_to_list(input_lines)
     to_lower_list_comprehension(input_lines)

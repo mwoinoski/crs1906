@@ -18,19 +18,19 @@ class BusinessObject:
         try:
             user = self.user_dao.query_user(user_id)
 
-            print('BusinessObject.get_user: user_dao.query_user returned '
+            print('BusinessObject.get_user: user_dao.query_user returned',
                   'user ' + user.last_name if user else None)
 
             if user is None:
-                raise ValueError('{} is not a valid user ID'.format(user_id))
+                raise ValueError(f'{user_id} is not a valid user ID')
 
             return user
         except sqlite3.Error as e:
-            raise BusinessError('Problem fetching user with ID {}: {}'
-                                .format(user_id, str(e)))
+            raise BusinessError(
+                f'Problem fetching user with ID {user_id}: {str(e)}')
 
     def __str__(self):
-        return "{self.name}".format(self=self)
+        return self.name
 
 
 class BusinessError(Exception):

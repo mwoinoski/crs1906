@@ -408,7 +408,7 @@ if __name__ == "__main__":
     # Using only check() and one_level_suposition(), completes 82 out of 95 in
     # this test file, http://magictour.free.fr/top95
     if len(sys.argv) == 1:
-        print("Usage: {} input_file".format(sys.argv[0]), file=sys.stderr)
+        print(f"Usage: {sys.argv[0]} input_file", file=sys.stderr)
         exit(1)
 
     for test_file in sys.argv[1:]:
@@ -446,7 +446,7 @@ if __name__ == "__main__":
                         print("- Failed")
                         print(solution.as_test_list())
                 else:
-                    print("Bad input at line {}:\n{}".format(count, line))
+                    print(f"Bad input at line {count}:\n{line}")
                 if count % 2 == 0:
                     print('.', file=sys.stderr, end='', flush=True)
 
@@ -454,8 +454,7 @@ if __name__ == "__main__":
             job_time = time.time()-start_time
             input_file.close()
 
-            print("Solved {} / {} puzzles in {:0.2f} seconds"
-                  .format(score, count, job_time))
+            print(f"Solved {score} / {count} puzzles in {job_time:0.2f} seconds")
             print("\nLast puzzle:\n")
             print(Sudoku.line_to_puzzle(line_copy))
             print("\nSolution:\n")

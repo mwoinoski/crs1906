@@ -13,4 +13,4 @@ if len(sys.argv) == 2:
     label.pack(padx=5, pady=5)
     root.mainloop()
 else:
-    print('Usage: {} image_file_path'.format(sys.argv[0]))
+    print(f'Usage: {sys.argv[0]} image_file_path')

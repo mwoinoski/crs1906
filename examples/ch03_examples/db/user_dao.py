@@ -13,6 +13,6 @@ class UserDao(object):
         pass  # Production DAO would create connection to database
 
     def query_user(self, user_id):
-        print('UserDao.query_user({})'.format(user_id))
+        print(f'UserDao.query_user({user_id})')
         return Person('Isaac', None, 'Newton')
         # Production DAO would query database for user by ID

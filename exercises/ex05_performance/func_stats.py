@@ -52,7 +52,7 @@ def main():
     for i in range(10**5):
         add_stats('func'+str(i), 20, 400)
 
-    print('Created {} function stats'.format(len(get_function_stats())))
+    print(f'Created {len(get_function_stats())} function stats')
 
 
 if __name__ == '__main__':

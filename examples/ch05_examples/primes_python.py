@@ -6,8 +6,7 @@ def primes_python(how_many):
     limit = 10000
     result = []
     if how_many <= 0 or how_many > limit:
-        print("{} is too many, let's do {} instead..."
-              .format(how_many, limit))
+        print(f"{how_many} is too many, let's do {limit} instead...")
         how_many = limit
     k = 0
     n = 2
@@ -25,9 +24,9 @@ if __name__ == '__main__':
     import time
     start_time = time.time()
     how_many = 10000
-    print("calling primes_python({})...".format(how_many))
+    print(f"calling primes_python({how_many})...")
     primes = primes_python(how_many)
     last_5 = [primes[i] for i in range(how_many-5, how_many)]
     end_time = time.time()
-    print("tail of primes list: {}".format(last_5))
-    print("Total execution time: {:.1f} seconds".format(end_time-start_time))
+    print(f"tail of primes list: {last_5}")
+    print(f"Total execution time: {end_time - start_time:.1f} seconds")

@@ -2,7 +2,7 @@ r"""Pytest unit tests for Person
 
    Run as follows:
    cd C:\crs1906\examples\ch03_examples
-   py.test test_person_pytest.py
+   pytest test_person_pytest.py
 """
 
 from person import Person
@@ -22,14 +22,16 @@ def test_eq_instances_equal():
     p1 = Person("John", "Quincy", "Adams")
     p2 = Person("John", "Quincy", "Adams")
 
-    assert p1 == p2  # calls Person.__eq__()
+    assert p1 == p2
+    # p1 == p2 calls p1.__eq__(p2)
 
 
 def test_eq_instances_not_equal():
     p1 = Person("John", None, "Adams")
     p2 = Person("John", "Quincy", "Adams")
 
-    assert p1 != p2  # calls Person.__ne__()
+    assert p1 != p2
+    # p1 != p2 calls p1.__ne__(p2)
 
 
 # @pytest.mark.skip

@@ -35,7 +35,7 @@ from concurrent.futures import (
 import concurrent.futures
 import random
 
-total_samples = 10**6  # total number of calculations
+total_samples = 10_000_000  # total number of calculations
 
 
 def calculate_one_sample():
@@ -142,8 +142,11 @@ def pi_async():
 
 
 if __name__ == '__main__':
-    print('pi_async() returned {}'.format(pi_async()))
-    print('pi_serial() returned {}'.format(pi_serial()))
+    pi_async_result = pi_async()
+    print(f'pi_async() returned {pi_async_result}')
+
+    pi_serial_result = pi_serial()
+    print(f'pi_serial() returned {pi_serial_result}')
 
     # Add calls to timeit here
 
@@ -152,9 +155,9 @@ if __name__ == '__main__':
     time = timeit('pi_async()',
                   setup='from __main__ import pi_async',
                   number=1)
-    print('pi_async() finished in {:.3} seconds'.format(time))
+    print(f'pi_async() finished in {time:.3} seconds')
 
     time = timeit('pi_serial()',
                   setup='from __main__ import pi_serial',
                   number=1)
-    print('pi_serial() finished in {:.3} seconds'.format(time))
+    print(f'pi_serial() finished in {time:.3} seconds')

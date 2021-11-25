@@ -20,7 +20,7 @@ from setup_example.sample_mod2 import func2
 
 
 def main():
-    print("In {}.main()".format(__name__))
+    print(f"In {__name__}.main()")
     func1()
     func2()
 

@@ -7,7 +7,7 @@ import sqlite3
 from unittest import TestCase
 from unittest.mock import Mock
 from person import Person
-from business_object import BusinessObject, UserDao, BusinessError
+from business_object import BusinessObject, UserDao
 
 
 class TestBusinessObject(TestCase):
@@ -58,7 +58,7 @@ class TestBusinessObject(TestCase):
         bus_obj.user_dao = mock_dao
 
         user_id = 123
-        with self.assertRaisesRegex(BusinessError, 'SQL error'):
+        with self.assertRaisesRegex(RuntimeError, 'SQL error'):
             bus_obj.get_user(user_id)
 
         mock_dao.query_user.assert_called_with(user_id)

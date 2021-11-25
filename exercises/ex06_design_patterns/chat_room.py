@@ -19,7 +19,7 @@ ChatMessage = namedtuple('ChatMessage', 'id, value')
 >>> user_name = 'client 1'
 >>> message = 'Greetings!'
 >>> chat_message = ChatMessage(user_name, message)
->>> print('Message from {}: "{}"'.format(chat_message.id, chat_message.value))
+>>> print(f'Message from {chat_message.id}: "{chat_message.value}"')
 Message from client 1: "Greetings!"
 """
 

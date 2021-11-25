@@ -40,6 +40,6 @@ if __name__ == '__main__':
         try:
             print('Launched all ftp processes')
             for site, file in results:
-                print("Got {} from {}".format(file, site))
+                print(f"Got {file} from {site}")
         except Exception as e:
             print("Got an exception: " + str(e))

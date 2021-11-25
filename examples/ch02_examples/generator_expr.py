@@ -4,7 +4,7 @@ generator_expr.py - Example of generator expressions from Chapter 2
 
 powers = [2, 4, 8, 16, 32]
 msg = ", ".join(str(p) for p in powers)
-print("msg = {}".format(msg))
+print(f"msg = {msg}")
 
 graduates = [
     ('Paul', 3.0),
@@ -15,4 +15,4 @@ graduates = [
 
 top = max((grad[1], grad[0]) for grad in graduates)
 
-print("top graduate = {}".format((top[1], top[0])))
+print(f"top graduate = {(top[1], top[0])}")

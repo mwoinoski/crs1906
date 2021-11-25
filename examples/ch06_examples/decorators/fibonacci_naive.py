@@ -9,4 +9,4 @@ def fibonacci(n):
 if __name__ == '__main__':
     from timeit import Timer
     t = Timer('fibonacci(5)', 'from __main__ import fibonacci')
-    print("Time: {:.2} usecs".format(t.timeit()))
+    print(f"Time: {t.timeit():.2} usecs")

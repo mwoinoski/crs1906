@@ -72,7 +72,7 @@ if __name__ == '__main__':
         #       ensure that ChatServer.handle() is thread-safe.
         server = ThreadingTCPServer(('', port), ChatServer)
 
-        print('Starting ChatServer at port {}...'.format(port))
+        print(f'Starting ChatServer at port {port}...')
         server.serve_forever()
     except KeyboardInterrupt:  # catch Ctrl-c
         pass  # Interpreter will call atexit handler

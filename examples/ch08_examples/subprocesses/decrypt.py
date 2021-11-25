@@ -28,7 +28,7 @@ def run_openssl(file, pw):
 
 def main():
     if len(sys.argv) == 1:
-        print('Usage: {} file...'.format(sys.argv[0]))
+        print(f'Usage: {sys.argv[0]} file...')
         sys.exit(1)
 
     pw = getpass.getpass()  # prompts and reads without echoing input

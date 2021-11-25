@@ -21,9 +21,8 @@ def profile_call(target_func):
         # Call target function
         result = target_func(*args, **kwargs)  # unwrap the argument list
         end = time.process_time()
-        print('{}({}): {} secs'.format(
-            target_func.__name__, format_args(*args, **kwargs),
-            end - start))
+        print(f'{target_func.__name__}({format_args(*args, **kwargs)}):',
+              f'{end - start} secs')
         return result
 
     # Decorator function returns reference to nested wrapper function

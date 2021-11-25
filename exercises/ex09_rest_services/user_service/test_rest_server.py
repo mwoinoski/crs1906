@@ -40,7 +40,7 @@ base_url = 'http://localhost:5000/rest/users'
 
 def test_get_user_found():
     email = 'ned.flanders@gmail.com'
-    url = '{}/{}'.format(base_url, email)
+    url = f'{base_url}/{email}'
     creds = ('student', 'studentpw')
     http_headers = {'Accept': 'application/json'}
 
@@ -48,8 +48,7 @@ def test_get_user_found():
 
     actual_result = r.json()
 
-    print('GET {} status {}, response = {}'
-          .format(url, r.status_code, actual_result))
+    print(f'GET {url} status {r.status_code}, response = {actual_result}')
 
     assert r.status_code == 200
 
@@ -57,7 +56,7 @@ def test_get_user_found():
 
 
 def test_get_user_not_found():
-    url = '{}/{}'.format(base_url, 'nobody@nowhere.com')
+    url = f'{base_url}/nobody@nowhere.com'
     headers = {'Accept': 'application/json'}
     creds = ('student', 'studentpw')
 
@@ -75,7 +74,7 @@ def test_add_user_ok():
 
     actual_result = r.json()
 
-    print('POST {} status {}'.format(url, r.status_code))
+    print(f'POST {url} status {r.status_code}')
     assert r.status_code == 201
 
     assert actual_result == {'user': user_miles}
@@ -83,7 +82,7 @@ def test_add_user_ok():
 
 def test_update_user_ok():
     email = 'miles@jazz.com'
-    url = '{}/{}'.format(base_url, email)
+    url = '{base_url}/{email}'
     http_headers = {'Content-Type': 'application/json'}
     creds = ('student', 'studentpw')
 
@@ -94,7 +93,7 @@ def test_update_user_ok():
     r = requests.put(url, auth=creds, headers=http_headers,
                      json=expected_result)
 
-    print('PUT {} status {}'.format(url, r.status_code))
+    print(f'PUT {url} status {r.status_code}')
     assert r.status_code == 202
 
     actual_result = r.json()
@@ -102,18 +101,18 @@ def test_update_user_ok():
 
 
 def test_delete_user_found():
-    url = '{}/{}'.format(base_url, 'miles@jazz.com')
+    url = '{base_url}/miles@jazz.com')
     creds = ('student', 'studentpw')
 
     r = requests.delete(url, auth=creds)
 
-    print('DELETE {} status {}'.format(url, r.status_code))
+    print(f'DELETE {url} status {r.status_code}')
 
     assert r.status_code == 204
 
 
 def test_delete_user_not_found():
-    url = '{}/{}'.format(base_url, 'nobody@nowhere.com')
+    url = '{base_url}/nobody@nowhere.com'
     creds = ('student', 'studentpw')
 
     r = requests.delete(url, auth=creds)

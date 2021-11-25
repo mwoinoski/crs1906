@@ -34,12 +34,12 @@ def simple():
 if __name__ == "__main__":
 
     fib_result = fibonacci(20, debug=True)
-    print("\nin main, fibonacci(20, debug=True) = {}\n".format(fib_result))
+    print(f"\nin main, fibonacci(20, debug=True) = {fib_result}\n")
 
     nsum_result = nsum(1000000)
-    print("\nin main, nsum(1000000) = {}\n".format(nsum_result))
+    print(f"\nin main, nsum(1000000) = {nsum_result}\n")
 
     simple_result = simple()
-    print("\nin main, simple() = {}\n".format(simple_result))
+    print(f"\nin main, simple() = {simple_result}\n")
 
 

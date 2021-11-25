@@ -21,18 +21,19 @@ class Person:
         return " ".join(n for n in names if n)
 
     def __eq__(self, other):
-        """Called when Person instances are compared with == operator"""
+        """ Called when Person instances are compared with == operator """
         return isinstance(other, Person) and \
             other.first_name == self.first_name and \
             other.middle_name == self.middle_name and \
             other.last_name == self.last_name
 
     def __str__(self):
-        """ Result is useful for a client """
+        """ Informal string representation of the object: human readable """
         return self.full_name()
 
     def __repr__(self):
-        """ Result is useful for a developer (for example, in a debugger) """
-        return f"first_name={self.first_name}," \
-               f"middle_name={self.middle_name}," \
-               f"last_name={self.last_name}"
+        """
+        Formal string representation: a valid Python expression that could be
+        used to re-create the object; for example, a constructor call.
+        """
+        return f'Person("{self.first_name}","{self.middle_name}","{self.last_name}")'

@@ -10,13 +10,13 @@ from person import Person
 
 # Here's our monkey patch
 def patch_get_user(obj, user_id):
-    print("patch_get_user({}, {})".format(obj, user_id))
+    print(f"patch_get_user({obj}, {user_id})")
     return Person('Curious', '', 'George')
 
 bus_obj = BusinessObject('Business As Usual')
 
 person = bus_obj.get_user(123)
-print('\nBefore monkey patch, person = {}'.format(person))
+print(f'\nBefore monkey patch, person = {person}')
 
 # Save a reference to the old method
 old_get_user = BusinessObject.get_user
@@ -25,18 +25,18 @@ old_get_user = BusinessObject.get_user
 BusinessObject.get_user = patch_get_user
 
 person = bus_obj.get_user(123)
-print('After monkey patch, person = {}'.format(person))
+print(f'After monkey patch, person = {person}')
 
 # Restore the old method definition
 BusinessObject.get_user = old_get_user
 
 person = bus_obj.get_user(123)
-print('After replacing old method, person = {}\n'.format(person))
+print(f'After replacing old method, person = {person}\n')
 
 dao1 = UserDao()
 dao2 = UserDao()
-print('Before monkey patch, dao1.query_user = {}'.format(dao1.query_user(123)))
-print('Before monkey patch, dao2.query_user = {}'.format(dao2.query_user(123)))
+print(f'Before monkey patch, dao1.query_user = {dao1.query_user(123)}')
+print(f'Before monkey patch, dao2.query_user = {dao2.query_user(123)}')
 
 # This time, we patch only one instance, not the entire class.
 # This requires a call to types.MethodType to bind the new function to
@@ -44,5 +44,5 @@ print('Before monkey patch, dao2.query_user = {}'.format(dao2.query_user(123)))
 dao2.query_user = types.MethodType(patch_get_user, dao2)
 
 # dao1 has the old method, dao2 has the new method
-print('After monkey patch, dao1.query_user = {}'.format(dao1.query_user(123)))
-print('After monkey patch, dao2.query_user = {}'.format(dao2.query_user(123)))
+print(f'After monkey patch, dao1.query_user = {dao1.query_user(123)}')
+print(f'After monkey patch, dao2.query_user = {dao2.query_user(123)}')

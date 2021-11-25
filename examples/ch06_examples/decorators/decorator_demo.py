@@ -17,9 +17,9 @@ def fibonacci(n):
 if __name__ == "__main__":
     # by default, Timer.timeit() runs a statement a million times
     t = Timer("fibonacci(5)", "from __main__ import fibonacci")
-    print("executing: fibonacci(5), average time: {:.2f} usecs".format(t.timeit()))
+    print(f"executing: fibonacci(5), average time: {t.timeit():.2f} usecs"))
 
     t = Timer("nsum(5)", "from __main__ import nsum")
-    print("executing: nsum(5), average time: {:.2f} usecs".format(t.timeit()))
+    print(f"executing: nsum(5), average time: {t.timeit():.2f} usecs"))
 
 

@@ -31,11 +31,11 @@ def pi_serial():
 
 
 if __name__ == '__main__':
-    print('pi_serial() returned {}'.format(pi_serial()))
+    print(f'pi_serial() returned {pi_serial()}')
 
     from timeit import timeit
 
     time = timeit('pi_serial()',
                   setup='from __main__ import pi_serial',
                   number=1)
-    print('pi_serial() finished in {:.3} seconds'.format(time))
+    print(f'pi_serial() finished in {time:.3} seconds')

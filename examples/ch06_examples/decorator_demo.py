@@ -10,7 +10,7 @@ def measure(target_func):
         start = time.time()
         result = target_func(*args, **kwargs)
         end = time.time()
-        print('{}: {:.4f} secs'.format(target_func.__name__, end - start))
+        print(f'{target_func.__name__}: {end - start:.4f} secs')
         return result
 
     return wrapper

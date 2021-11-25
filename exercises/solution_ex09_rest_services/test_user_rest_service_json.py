@@ -66,7 +66,7 @@ def test_get_user_found():
     email = 'ned.flanders@gmail.com'
 
     # TODO: build the URL for the GET request from base_url and email
-    url = '{}/{}'.format(base_url, email)
+    url = f'{base_url}/{email}'
 
     # TODO: set the HTTP Accept header to 'application/json'
     http_headers = {'Accept': 'application/json'}
@@ -78,8 +78,7 @@ def test_get_user_found():
     #       named 'actual_result'
     actual_result = r.json()
 
-    print('GET {} status {}, response = {}'
-          .format(url, r.status_code, actual_result))
+    print('GET {url} status {r.status_code}, response = {actual_result}')
 
     # update our test user with the id by the database
     user_ned['id'] = actual_result['id']
@@ -91,7 +90,7 @@ def test_get_user_found():
 
 
 def test_get_user_not_found():
-    url = '{}/{}'.format(base_url, 'nobody@nowhere.com')
+    url = f'{base_url}/nobody@nowhere.com'
     headers = {'Accept': 'application/json'}
 
     r = requests.get(url, headers=headers)
@@ -115,7 +114,7 @@ def test_add_user_ok():
     #       Pass the the dictionary named user_miles as the JSON data
     r = requests.post(url, headers=http_headers, json=user_miles)
 
-    print('POST status {}'.format(r.status_code))
+    print(f'POST status {r.status_code}')
 
     # TODO: note the assertion that tests the result of the REST request
     #       (no code change required)
@@ -138,7 +137,7 @@ def test_update_user_ok():
     #       Pass the the dictionary named user_miles as the JSON data
     r = requests.put(url, json=user_miles)
 
-    print('PUT status {}'.format(r.status_code))
+    print(f'PUT status {r.status_code}')
 
     # TODO: note the assertion that tests the result of the REST request
     #       (no code change required)
@@ -146,7 +145,7 @@ def test_update_user_ok():
 
 
 def test_delete_user_not_found():
-    url = '{}/{}'.format(base_url, 'nobody@nowhere.com')
+    url = f'{base_url}/nobody@nowhere.com'
 
     r = requests.delete(url)
 

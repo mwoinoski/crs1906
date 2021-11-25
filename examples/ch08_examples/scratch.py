@@ -46,6 +46,6 @@ if __name__ == '__main__':
                 if result is None:
                     break
                 site, file = result
-                print("Got {} from {}".format(file, site))
+                print(f"Got {file} from {site}")
             except Exception as e:
                 print("exception: " + str(e))

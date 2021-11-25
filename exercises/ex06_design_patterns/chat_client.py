@@ -48,7 +48,7 @@ class ChatClient:
         # TODO: note the use of the ChatMessage's id and value in the following
         #       statement
         #       (no code change required)
-        print('\tMessage from {}: "{}"'.format(id, value))
+        print(f'\tMessage from {id}: "{value}"')
 
         print(prompt, end='', flush=True)
 
