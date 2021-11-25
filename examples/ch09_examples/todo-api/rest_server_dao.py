@@ -37,14 +37,16 @@ def get_all_tasks():
         FROM todo_tasks
     """
     cursor = conn.cursor()
-    return [_make_task(row) for row in cursor.execute(sql)]
+    tasks = [_make_task(row) for row in cursor.execute(sql)]
+    return tasks
 
 
 def _make_task(row):
-    return {'id': row[0],
+    task = {'id': row[0],
             'title': row[1],
             'description': row[2],
             'done': row[3] != 0}
+    return task
 
 
 def get_task(task_id):
@@ -56,7 +58,8 @@ def get_task(task_id):
     """
     cursor = conn.cursor()
     cursor.execute(sql, (task_id,))
-    return cursor.fetchone()
+    task = _make_task(cursor.fetchone())
+    return task
 
 
 def create_task(title, description, done):
@@ -93,9 +96,7 @@ def update_task(task_id, title, description, done):
         cursor.execute(update_done_sql, (1 if done else 0, task_id))
     conn.commit()
 
-    task_fields = ('id', 'title', 'description', 'done')
-    db_task = get_task(task_id)
-    task = {k: v for k, v in zip(task_fields, db_task)}
+    task = get_task(task_id)
     return task
 
 
@@ -108,4 +109,5 @@ def delete_task(task_id):
     cursor = conn.cursor()
     cursor.execute(sql, (task_id,))
     conn.commit()
-    return bool(cursor.rowcount)
+    ok = bool(cursor.rowcount)
+    return ok

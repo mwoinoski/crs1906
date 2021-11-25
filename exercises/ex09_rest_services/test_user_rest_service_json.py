@@ -1,4 +1,4 @@
-"""
+r"""
 Integration tests for UserServiceRest.
 
 These tests cases make several assumptions:
@@ -15,10 +15,9 @@ The TicketManor integration tests take advantage of Pyramid and SQLite
 features that make the tests much more robust and reliable.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
-
-import json
 import requests
+
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 # if you want the test cases to run in a different order, assign a new function
 # for comparing method names to TestLoader's sortTestMethodsUsing attribute:
@@ -60,7 +59,7 @@ base_url = 'http://localhost:6543/rest/users'
 
 def test_get_user_found():
     # TODO: you'll look up a user with GET request like this:
-    #       GET http://localhost/rest/users/ned.flanders@gmail.com
+    #       GET http://localhost:6543/rest/users/ned.flanders@gmail.com
     #       The GET request will return JSON data.
     #       (no code change required)
 
@@ -103,7 +102,7 @@ def test_get_user_not_found():
 
 def test_add_user_ok():
     # TODO: you'll add a new user with a POST request like this:
-    #       POST http://localhost/rest/users
+    #       POST http://localhost:6543/rest/users
     #       { "email": "miles@jazz.com", "first_name": "Miles", etc. }
     #       (no code change required)
 
@@ -114,6 +113,7 @@ def test_add_user_ok():
     ....
 
     # TODO: send the POST request and store the result in a variable named `r`
+    #       Pass the the dictionary named user_miles as the JSON data
     # HINT: you don't need to send authorization credentials.
     # HINT: see slide 9-36
     r = ....
@@ -130,7 +130,7 @@ def test_update_user_ok():
     user_miles['address']['zipcode'] = '10013'
 
     # TODO: you'll update an existing user with a PUT request like this:
-    #       PUT http://localhost/rest/users
+    #       PUT http://localhost:6543/rest/users
     #       { "email": "miles@jazz.com", "first_name": "Miles", etc. }
     #       (no code change required)
 

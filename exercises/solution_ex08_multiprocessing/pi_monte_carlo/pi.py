@@ -57,7 +57,7 @@ def calculate_one_sample():
 
 # TODO: note the definition of the `pi_serial` method, which performs a
 #       calculation without using processes or threads. It calls
-#       calculate_one_sample() one million times and adds up all the return values.
+#       calculate_one_sample() `total_samples` times and adds up all the return values.
 #       (no code change required)
 def pi_serial():
     """Perform the Monte Carlo technique in a serial fashion"""
