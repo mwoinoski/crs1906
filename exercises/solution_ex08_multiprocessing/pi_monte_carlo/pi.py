@@ -91,7 +91,7 @@ def pi_async():
     each chunk.
     """
     ntasks = 4
-    # ntasks = multiprocessing.cpu_count() # number of (virtual) CPU cores
+    # ntasks = multiprocessing.cpu_count()  # number of (virtual) CPU cores
 
     # TODO: note the definition of `chunk_size`. This will be the number of
     #       calculations performed in each call to sample_multiple()

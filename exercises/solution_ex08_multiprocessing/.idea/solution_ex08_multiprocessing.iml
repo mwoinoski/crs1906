@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/pi_monte_carlo" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ticketmanor" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (solution_ex08_multiprocessing)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

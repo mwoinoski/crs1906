@@ -2,24 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f261b96-9f46-4a66-9199-60ecd902f332" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../1906_CN_C1_911_B1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1906_MA_C1_911_B1.pdf" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../examples/ch04_examples/person.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../examples/ch04_examples/test_person.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/ch03_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/ch03_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/ch04_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/ch04_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch04_examples/temp.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/tests/models/persistence/ticketmanor_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/tests/models/persistence/ticketmanor_db.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/models/persistence/act_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/models/persistence/act_dao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_unit_testing/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/solution_ex08_multiprocessing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/solution_ex08_multiprocessing.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pi_monte_carlo/pi.py" beforeDir="false" afterPath="$PROJECT_DIR$/pi_monte_carlo/pi.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,10 +30,15 @@
   </component>
   <component name="ProjectId" id="1RfdXuGXh1lX4sRRJEElHPDZtOz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pi_monte_carlo/pi.py" />
-    <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/pi_monte_carlo/pi.py" />
   </component>
@@ -57,18 +56,6 @@
       <recent name="C:\crs1906\exercises\solution_ex08_multiprocessing\ticketmanor\rest_services\feed_reader" />
       <recent name="C:\crs1906\exercises\solution_ex08_multiprocessing\subprocesses" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="tests" factoryName="Attests">
@@ -117,6 +104,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -135,13 +123,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
