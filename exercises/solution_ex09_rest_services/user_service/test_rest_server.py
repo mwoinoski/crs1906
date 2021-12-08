@@ -8,6 +8,8 @@ import requests
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
+creds = ('admin', 'adminpw')
+
 user_ned = {
     "id": 1,
     "username": "nedf",
@@ -50,7 +52,6 @@ def init_test_database(test_db_name):
     shutil.copy(f'{test_db_name}.sqlite', test_db_input_file)
     # Tell web service to switch to new database file
     url = f'{base_url}?db_file={test_db_input_file}'
-    creds = ('nedf', 'nedfpw')
     requests.patch(url, auth=creds)
 
 
@@ -59,7 +60,6 @@ def test_get_user_found():
 
     email = 'ned.flanders@gmail.com'
     url = f'{base_url}/{email}'
-    creds = ('nedf', 'nedfpw')
     http_headers = {'Accept': 'application/json'}
 
     r = requests.get(url, auth=creds, headers=http_headers)
@@ -78,7 +78,6 @@ def test_get_user_not_found():
 
     url = f'{base_url}/nobody@nowhere.com'
     headers = {'Accept': 'application/json'}
-    creds = ('nedf', 'nedfpw')
 
     r = requests.get(url, auth=creds, headers=headers)
 
@@ -90,7 +89,6 @@ def test_add_user_ok():
 
     url = base_url
     http_headers = {'Content-Type': 'application/json'}
-    creds = ('nedf', 'nedfpw')
 
     r = requests.post(url, auth=creds, headers=http_headers, json=user_miles)
 
@@ -110,7 +108,6 @@ def test_update_user_ok():
     email = 'miles@jazz.com'
     url = f'{base_url}/{email}'
     http_headers = {'Content-Type': 'application/json'}
-    creds = ('nedf', 'nedfpw')
 
     expected_result = dict(user_miles)
     expected_result['middles'] = 'Dewey'
@@ -132,7 +129,6 @@ def test_delete_user_found():
     init_test_database('test_db_with_miles')
 
     url = f'{base_url}/miles@jazz.com'
-    creds = ('nedf', 'nedfpw')
 
     r = requests.delete(url, auth=creds)
 
@@ -145,7 +141,6 @@ def test_delete_user_not_found():
     init_test_database('test_db_with_miles')
 
     url = f'{base_url}/nobody@nowhere.com'
-    creds = ('nedf', 'nedfpw')
 
     r = requests.delete(url, auth=creds)
 
@@ -154,6 +149,18 @@ def test_delete_user_not_found():
 
 @pytest.fixture(scope='session', autouse=True)
 def restore_prod_db():
+    """
+    Pytest will call this fixture once before any test case executes.
+    If the fixture yields a value, the code after the yield will run
+    after all test cases have executed.
+
+    This is equivalent to JUnit's @BeforeAll and @AfterAll.
+    """
+
+    # Nothing to do before all tests, so we'll yield immediately
     yield None
-    creds = ('nedf', 'nedfpw')
+    # Code after the yield runs after all test cases
+
+    # Send a PATCH request with no argument. The service will restore the
+    # production database file.
     requests.patch(base_url, auth=creds)

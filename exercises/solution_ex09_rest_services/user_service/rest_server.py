@@ -8,11 +8,12 @@ from flask import (Flask, jsonify, abort, request, make_response, url_for,
                    Response)
 from flask_httpauth import HTTPBasicAuth  # ignore the PyCharm error here
 
-import rest_server_dao
-
+from rest_server_dao import UserDao
 
 app = Flask(__name__, static_url_path="")
 auth = HTTPBasicAuth()
+
+dao = UserDao()  # create a Data Access Object (DAO) for database operations
 
 
 # TODO: note the definition of the Flask authentication callback function
@@ -20,7 +21,7 @@ auth = HTTPBasicAuth()
 @auth.get_password
 def get_password(username):
     """Callback function that returns the password for username"""
-    return rest_server_dao.get_password(username)
+    return dao.get_password(username)
 
 
 # TODO: note the definition of the Flask error handler for requests without
@@ -33,13 +34,15 @@ def unauthorized():
     # display the default auth dialog. But that shouldn't be a problem here
     # because the request will an asynchronous call from JavaScript or a
     # Python client.
-    
 
+
+# noinspection PyUnusedLocal
 @app.errorhandler(400)
 def not_found(error):
     return make_response(jsonify({'error': 'Bad request'}), 400)
 
 
+# noinspection PyUnusedLocal
 @app.errorhandler(404)
 def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
@@ -61,7 +64,7 @@ def get_users():
     # TODO: note how we delegate the look up of the users to a DAO and
     #       assign the list of users to the variable 'users'
     # (no code change required)
-    users = rest_server_dao.get_all_users()
+    users = dao.get_all_users()
 
     # TODO: return a jsonified dictionary with key of 'users' and value of
     #       the users list
@@ -70,7 +73,7 @@ def get_users():
 
 # TODO: add a Flask decorator here so that a GET request
 #       to BASE_URI+'/<email>' is mapped to the get_user() method below.
-@app.route(BASE_URI + '/<string:email>', methods=['GET'])
+@app.route(f'{BASE_URI}/<string:email>', methods=['GET'])
 # TODO: add decorator that specifies the request must include valid credentials
 @auth.login_required
 def get_user(email):
@@ -79,7 +82,7 @@ def get_user(email):
     # TODO: note how we delegate the look up of the user to a DAO and
     #       assign the user to the variable 'user'
     #       (no code change required)
-    user = rest_server_dao.get_user(email)
+    user = dao.get_user(email)
 
     # TODO: if user is None, abort with HTTP status 404
     if user is None:
@@ -123,7 +126,7 @@ def create_user():
     # TODO: note how we delegate the creation of the user to a DAO and
     #       assign the new user to the variable 'user'
     #       (no code change required)
-    user = rest_server_dao.create_user(
+    user = dao.create_user(
         username, password, email, first_name, middles, last_name, street,
         post_code, city, state, country)
 
@@ -135,7 +138,7 @@ def create_user():
 
 # TODO: add a Flask decorator here so that a PUT request
 #       to BASE_URI+'/<email>' is mapped to the update_user() method below.
-@app.route(BASE_URI + '/<string:email>', methods=['PUT'])
+@app.route(f'{BASE_URI}/<string:email>', methods=['PUT'])
 # TODO: add decorator that specifies the request must include valid credentials
 @auth.login_required
 def update_user(email):
@@ -167,8 +170,8 @@ def update_user(email):
     # TODO: note how we delegate the update of the user to a DAO and
     #       assign the modified user to the variable 'user'
     #       (no code change required)
-    user = rest_server_dao.update_user(email, first_name, middles, last_name,
-                                       street, post_code, city, state, country)
+    user = dao.update_user(email, first_name, middles, last_name,
+                           street, post_code, city, state, country)
 
     # TODO: if user is None, abort with HTTP status 404
     if user is None:
@@ -183,7 +186,7 @@ def update_user(email):
 
 # TODO: add a Flask decorator here so that a DELETE request
 #       to BASE_URI+'/<email>' is mapped to the delete_user() method below.
-@app.route(BASE_URI + '/<string:email>', methods=['DELETE'])
+@app.route(f'{BASE_URI}/<string:email>', methods=['DELETE'])
 # TODO: add decorator that specifies the request must include valid credentials
 @auth.login_required
 def delete_user(email):
@@ -191,7 +194,7 @@ def delete_user(email):
 
     # TODO: note how we delegate the deletion of the user to a DAO.
     #       (no code change required)
-    if not rest_server_dao.delete_user(email):
+    if not dao.delete_user(email):
         app.logger.error("User %s not found, can't delete", email)
         abort(404)
 
@@ -221,20 +224,21 @@ def make_public_user(user):
     return new_user
 
 
-original_db_file = rest_server_dao.sqlite_file_name
+original_db_file = dao.sqlite_file_name
 
 
 @app.route(BASE_URI, methods=['PATCH'])
 @auth.login_required
 def select_db_file():
+    """ Allow test cases to switch to a stub database file """
     db_file = request.args.get('db_file')
     if db_file:
         app.logger.info('Switching to database file %s', db_file)
-        rest_server_dao.sqlite_file_name = db_file
+        dao.sqlite_file_name = db_file
     else:
         app.logger.info('Switching base to production database file %s',
                         original_db_file)
-        rest_server_dao.sqlite_file_name = original_db_file
+        dao.sqlite_file_name = original_db_file
     return Response(status=200)
 
 

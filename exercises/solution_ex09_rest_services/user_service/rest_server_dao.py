@@ -23,165 +23,163 @@ __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 # 2|montyb|montybpw|monty.burns@burns.com|Montgomery|Flint|Burns|1 Hill St|97478|Springfield|OR|USA
 
 
-def get_password(username):
-    sql = """
-        SELECT password 
-          FROM users 
-         WHERE username = ?
-    """
-    if re.match(r'^[A-Za-z0-9._-]+$', username):  # validate username
-        conn, c = init_operation()
-        c.execute(sql, (username,))
-        pw = c.fetchone()  # BETTER: add decryption
-        pw = pw[0] if pw and len(pw) > 0 else None
-        end_operation(conn, c)
-        return pw
-    else:
-        raise ValueError(f'invalid username {username}')
+class UserDao:
+    # Test cases can change Sqlite database file name to test different conditions
+    sqlite_file_name = 'users_db.sqlite'
 
+    def __init__(self, db_file_name=None):
+        if db_file_name:
+            self.sqlite_file_name = db_file_name
+        self.conn = sqlite3.connect(self.sqlite_file_name,
+                                    check_same_thread=False)
 
-def get_all_users():
-    sql = """
-        SELECT id,username,password,email,first_name,middles,last_name,
-               street,post_code,city,state,country
-          FROM users
-    """
-    conn, c = init_operation()
-    users = [_make_user_from_row(row) for row in c.execute(sql)]
-    end_operation(conn, c)
-    return users
+    def close(self):
+        self.conn.close()
 
+    def get_password(self, username):
+        sql = """
+            SELECT password 
+              FROM users 
+             WHERE username = ?
+        """
+        if re.match(r'^[A-Za-z0-9._-]+$', username):  # validate username
+            c = self.conn.cursor()
+            c.execute(sql, (username,))
+            pw = c.fetchone()  # BETTER: add decryption
+            pw = pw[0] if pw and len(pw) > 0 else None
+            c.close()
+            return pw
+        else:
+            raise ValueError(f'invalid username {username}')
 
-def _make_user(user_id, username, password, email, first_name, middles, last_name,
-               street, post_code, city, state, country):
-    return {
-        "id": user_id,
-        "username": username,
-        "password": password,
-        "email": email,
-        "first_name": first_name,
-        "middles": middles,
-        "last_name": last_name,
-        "address": {
-            "street": street,
-            "post_code": post_code,
-            "city": city,
-            "state": state,
-            "country": country,
+    def get_all_users(self):
+        sql = """
+            SELECT id,username,password,email,first_name,middles,last_name,
+                   street,post_code,city,state,country
+              FROM users
+        """
+        c = self.conn.cursor()
+        users = [self._make_user_from_row(row)
+                 for row in c.execute(sql)
+                 if row[0] > 0]  # skip admin user
+        c.close()
+        return users
+
+    def _make_user(self, user_id, username, password, email, first_name, middles, last_name,
+                   street, post_code, city, state, country):
+        return {
+            "id": user_id,
+            "username": username,
+            "password": password,
+            "email": email,
+            "first_name": first_name,
+            "middles": middles,
+            "last_name": last_name,
+            "address": {
+                "street": street,
+                "post_code": post_code,
+                "city": city,
+                "state": state,
+                "country": country,
+            }
         }
-    }
 
+    def _make_user_from_row(self, row):
+        return self._make_user(*row)
 
-def _make_user_from_row(row):
-    return _make_user(*row)
+    def get_user(self, email):
+        sql = """
+            SELECT id,username,password,email,first_name,middles,last_name,
+                   street,post_code,city,state,country
+            FROM users 
+            WHERE email = ?
+        """
+        c = self.conn.cursor()
+        c.execute(sql, (email,))
+        user = c.fetchone()
+        c.close()
+        return self._make_user_from_row(user) if user else None
 
+    def create_user(self, username, password, email, first_name, middles, last_name,
+                    street, post_code, city, state, country):
+        sql = """
+            INSERT INTO users
+                (username,password,email,first_name,middles,last_name,
+                 street,post_code,city,state,country)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """
+        values = (username, password, email, first_name, middles, last_name,
+                  street, post_code, city, state, country)
 
-def get_user(email):
-    sql = """
-        SELECT id,username,password,email,first_name,middles,last_name,
-               street,post_code,city,state,country
-        FROM users 
-        WHERE email = ?
-    """
-    conn, c = init_operation()
-    c.execute(sql, (email,))
-    user = c.fetchone()
-    end_operation(conn, c)
-    return _make_user_from_row(user) if user else None
-
-
-def create_user(username, password, email, first_name, middles, last_name,
-                street, post_code, city, state, country):
-    sql = """
-        INSERT INTO users
-            (username,password,email,first_name,middles,last_name,
-             street,post_code,city,state,country)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """
-    values = (username, password, email, first_name, middles, last_name,
-              street, post_code, city, state, country)
-
-    conn, c = init_operation()
-    c.execute(sql, values)
-    c.execute('SELECT last_insert_rowid()')  # fetch auto-generated key
-    user_id = c.fetchone()[0]
-    end_operation(conn, c)
-
-    user = _make_user_from_row((user_id,) + values)
-    return user
-
-
-def update_user(email, first_name, middles, last_name, street, post_code,
-                city, state, country):
-    sql = """
-        UPDATE users
-           SET first_name = ?,
-               middles = ?,
-               last_name = ?,
-               street = ?,
-               post_code = ?,
-               city = ?,
-               state = ?,
-               country = ?
-         WHERE email = ?
-    """
-    user = get_user(email)
-    if user is not None:
-        if first_name is not None:
-            user['first_name'] = first_name
-        if middles is not None:
-            user['middles'] = middles
-        if last_name is not None:
-            user['last_name'] = last_name
-        if street is not None:
-            user['address']['street'] = street
-        if post_code is not None:
-            user['address']['post_code'] = post_code
-        if city is not None:
-            user['address']['city'] = city
-        if state is not None:
-            user['address']['state'] = state
-        if country is not None:
-            user['address']['country'] = country
-            
-        values = (
-            user['first_name'], user['middles'], user['last_name'],
-            user['address']['street'], user['address']['post_code'],
-            user['address']['city'], user['address']['state'],
-            user['address']['country'], email
-        )
-
-        conn, c = init_operation()
+        c = self.conn.cursor()
         c.execute(sql, values)
-        end_operation(conn, c)
+        c.execute('SELECT last_insert_rowid()')  # fetch auto-generated key
+        user_id = c.fetchone()[0]
+        self.conn.commit()
+        c.close()
+        # BETTER: delete commits from DAO and let client decide
+        #         whether to commit or rollback
+
+        user = self._make_user_from_row((user_id,) + values)
         return user
-    else:
-        raise ValueError(f'unknown user email {email}')
 
+    def update_user(self, email, first_name, middles, last_name, street, post_code,
+                    city, state, country):
+        sql = """
+            UPDATE users
+               SET first_name = ?,
+                   middles = ?,
+                   last_name = ?,
+                   street = ?,
+                   post_code = ?,
+                   city = ?,
+                   state = ?,
+                   country = ?
+             WHERE email = ?
+        """
+        user = self.get_user(email)
+        if user is not None:
+            if first_name is not None:
+                user['first_name'] = first_name
+            if middles is not None:
+                user['middles'] = middles
+            if last_name is not None:
+                user['last_name'] = last_name
+            if street is not None:
+                user['address']['street'] = street
+            if post_code is not None:
+                user['address']['post_code'] = post_code
+            if city is not None:
+                user['address']['city'] = city
+            if state is not None:
+                user['address']['state'] = state
+            if country is not None:
+                user['address']['country'] = country
 
-def delete_user(email):
-    sql = """
-        DELETE FROM users
-         WHERE email = ?
-    """
-    conn, c = init_operation()
-    c.execute(sql, (email,))
-    c.execute('SELECT changes()')  # fetch number of rows deleted
-    row_count = c.fetchone()[0]
-    end_operation(conn, c)
-    return row_count > 0
+            values = (
+                user['first_name'], user['middles'], user['last_name'],
+                user['address']['street'], user['address']['post_code'],
+                user['address']['city'], user['address']['state'],
+                user['address']['country'], email
+            )
 
+            c = self.conn.cursor()
+            c.execute(sql, values)
+            self.conn.commit()
+            c.close()
+            return user
+        else:
+            raise ValueError(f'unknown user email {email}')
 
-# Test cases can change Sqlite database file name to test different conditions
-sqlite_file_name = 'users_db.sqlite'
-
-
-def init_operation():
-    conn = sqlite3.connect(sqlite_file_name)
-    cursor = conn.cursor()
-    return conn, cursor
-
-
-def end_operation(conn, cursor):
-    cursor.close()
-    conn.commit()
+    def delete_user(self, email):
+        sql = """
+            DELETE FROM users
+             WHERE email = ?
+        """
+        c = self.conn.cursor()
+        c.execute(sql, (email,))
+        c.execute('SELECT changes()')  # fetch number of rows deleted
+        row_count = c.fetchone()[0]
+        self.conn.commit()
+        c.close()
+        return row_count > 0

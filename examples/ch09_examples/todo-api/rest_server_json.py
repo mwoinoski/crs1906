@@ -5,8 +5,8 @@ http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flas
 
 from flask import (Flask, jsonify, abort, request, make_response, url_for,
                    Response)
-from flask_httpauth import HTTPBasicAuth  # ignore PyCharm error
-# pip install Flask-HTTPAuth
+from flask_httpauth import HTTPBasicAuth
+# to install flask_httpauth: pip install Flask-HTTPAuth
 
 import rest_server_dao
 
@@ -53,7 +53,7 @@ def get_tasks():
     return jsonify({'tasks': tasks})
 
 
-@app.route(BASE_URI + '/<int:task_id>', methods=['GET'])
+@app.route(f'{BASE_URI}/<int:task_id>', methods=['GET'])
 @auth.login_required
 def get_task(task_id):
     app.logger.info('Getting task %d', task_id)
@@ -76,7 +76,7 @@ def create_task():
     return jsonify({'task': task}), 201  # 201 == Created
 
 
-@app.route(BASE_URI + '/<int:task_id>', methods=['PUT'])
+@app.route(f'{BASE_URI}/<int:task_id>', methods=['PUT'])
 @auth.login_required
 def update_task(task_id):
     if not request.json:
@@ -103,7 +103,7 @@ def update_task(task_id):
     return jsonify({'task': task}), 202  # 202 == Accepted
 
 
-@app.route(BASE_URI + '/<int:task_id>', methods=['DELETE'])
+@app.route(f'{BASE_URI}/<int:task_id>', methods=['DELETE'])
 @auth.login_required
 def delete_task(task_id):
     app.logger.info('Deleting task %d', task_id)

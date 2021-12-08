@@ -9,8 +9,12 @@ __author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
 # Manage a SQLite database.
 # To connect to the DB file and run SQL commands:
 # cd \crs1906\examples\ch09_examples\todo-api\
-# \software\sqlite\sqlite3 rest_server.sqlite
+# sqlite3 rest_server.sqlite
 # .tables
+# .schema todo_tasks
+# select * from todo_tasks;
+# .quit
+
 conn = sqlite3.connect('rest_server.sqlite', check_same_thread=False)
 
 

@@ -41,7 +41,7 @@ user_ned = {
 user_miles = {
     "email": "miles@jazz.com",
     "first_name": "Miles",
-    "middles": None,
+    "middles": "",
     "last_name": "Davis",
     "address": {
         "country": "USA",
@@ -151,7 +151,7 @@ def test_update_user_ok():
 
 
 def test_delete_user_not_found():
-    url = '{base_url}/nobody@nowhere.com'
+    url = f'{base_url}/nobody@nowhere.com'
 
     r = requests.delete(url)
 

@@ -41,7 +41,7 @@ user_ned = {
 user_miles = {
     "email": "miles@jazz.com",
     "first_name": "Miles",
-    "middles": None,
+    "middles": "",
     "last_name": "Davis",
     "address": {
         "country": "USA",
@@ -78,7 +78,7 @@ def test_get_user_found():
     #       named 'actual_result'
     actual_result = r.json()
 
-    print('GET {url} status {r.status_code}, response = {actual_result}')
+    print(f'GET {url} status {r.status_code}, response = {actual_result}')
 
     # update our test user with the id by the database
     user_ned['id'] = actual_result['id']
