@@ -139,13 +139,14 @@ def create_user():
 # TODO: add decorator that specifies the request must include valid credentials
 ....
 def update_user(email):
+    # TODO: add a test to ensure that the URL includes an email parameter.
+    #       Abort with status 400 if the test fails.
+    ....
+
     # TODO: add a test to ensure that the request body contains JSON.
     #       Abort with status 400 if the test fails.
     ....
 
-    # TODO: get the email from the request JSON and assign it to a variable
-    #       named 'email'
-    email = ....
     app.logger.info('Updating user %s', email)
 
     # TODO: note how we get the rest of the input data from the request

@@ -58,7 +58,6 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
             'events': [
                 {
                     'id': 204,
-                    'date_time': 1451055600.0,
                     'venue': {
                         'latitude': 40.7127,
                         'prov_state': 'NY',
@@ -75,7 +74,6 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
                 },
                 {
                     'id': 201,
-                    'date_time': 1451610000.0,
                     'venue': {
                         'latitude': 41.8369,
                         'prov_state': 'IL',
@@ -92,7 +90,6 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
                 },
                 {
                     'id': 203,
-                    'date_time': 1451613600.0,
                     'venue': {
                         'latitude': 40.7127,
                         'prov_state': 'NY',
@@ -109,7 +106,6 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
                 },
                 {
                     'id': 202,
-                    'date_time': 1451696400.0,
                     'venue': {
                         'latitude': 41.8369,
                         'prov_state': 'IL',
@@ -134,6 +130,7 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
             del e['price']
             del e['image_thumbnail']
             del e['image_banner']
+            del e['date_time']
         self.maxDiff = None
         self.assertEqual(expected_res, res_list)
 

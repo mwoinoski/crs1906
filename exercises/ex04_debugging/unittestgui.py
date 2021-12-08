@@ -72,6 +72,7 @@ class BaseGUITestRunner(metaclass=ABCMeta):
     def __init__(self, *args, **kwargs):
         # TODO: log an info message that says the class constructor was called.
         # HINT: this constructor is called when the GUI is being built.
+        # HINT: see slide 4-9
 
 
         self.currentResult = None
@@ -122,7 +123,7 @@ class BaseGUITestRunner(metaclass=ABCMeta):
         # TODO: log a debug-level message with the value of the variable
         #       `directory`, which is set in the previous statement.
         # HINT: note that the enclosing method is called when you click the
-        # Discover Tests button and select a directory
+        #       Discover Tests button and select a directory
 
 
         if not directory:
@@ -209,7 +210,7 @@ class GUITestResult(unittest.TestResult):
     def addError(self, test, err):
         # TODO: log an error message with the value of the `test` parameter.
         # HINT: note the enclosing method is called when a test case
-        # generates an error.
+        #       generates an error.
 
 
         unittest.TestResult.addError(self, test, err)

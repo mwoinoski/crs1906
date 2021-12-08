@@ -54,7 +54,7 @@ class UserServiceRestTest(TestCase):
         person = Person(id=123)
         user_service._dao.get.return_value = person
 
-        result = user_service.get_user()
+        result = user_service.get_user_json()
 
         self.assertEqual(result, person)
 
@@ -66,7 +66,7 @@ class UserServiceRestTest(TestCase):
         user_service._dao.get = MagicMock(side_effect=PersistenceError())
 
         with self.assertRaises(HTTPNotFound):
-            user_service.get_user()
+            user_service.get_user_json()
 
     def test_get_unhandled_exception(self):
         request = pyramid_testing.DummyRequest()
@@ -76,7 +76,7 @@ class UserServiceRestTest(TestCase):
         user_service._dao.get = MagicMock(side_effect=ValueError())
 
         with self.assertRaises(ValueError):
-            user_service.get_user()
+            user_service.get_user_json()
 
     def test_add_user_success(self):
         request = pyramid_testing.DummyRequest()

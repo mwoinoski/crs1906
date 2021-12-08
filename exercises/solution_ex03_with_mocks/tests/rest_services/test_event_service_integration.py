@@ -10,7 +10,7 @@ import json
 import unittest
 from webtest import TestApp
 from ticketmanor import main
-from tests.test_support.db_utils import (
+from test_support.db_utils import (
     create_db_tables,
     drop_db_tables,
     execute_select,
@@ -68,7 +68,7 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
                         'street_address': '881 7th Ave, New York, NY 10019',
                         'city': 'New York'
                     },
-                    # 'price': '$180'
+                    # 'price': '$180'  # FIXME: uncomment when database schema is complete
                     # 'image_thumbnail': '/static/images/concerts-1.png',
                     # 'image_banner': '/static/images/concerts.jpg',
                 },
@@ -126,11 +126,11 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
         res = self.testapp.get(url, headers=headers, status=200)
 
         res_list = json.loads(str(res.body, 'utf-8'))
-        for e in res_list['events']:
-            del e['date_time']
+        for e in res_list['events']:  # FIXME: delete when database schema is complete
             del e['price']
             del e['image_thumbnail']
             del e['image_banner']
+            del e['date_time']
         self.maxDiff = None
         self.assertEqual(expected_res, res_list)
 
@@ -200,7 +200,6 @@ class EventServiceRestIntegrationTest(unittest.TestCase):
             (102, 'New York', 'USA', 40.7127, -74.0059, 'Carnegie Hall',
              'NY', '881 7th Ave, New York, NY 10019')
         )
-
 
 if __name__ == '__main__':
     unittest.main()

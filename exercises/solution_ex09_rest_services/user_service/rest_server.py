@@ -109,6 +109,8 @@ def create_user():
 
     # TODO: note how we get the rest of the input data from the request
     #       (no code change required)
+    username = request.json.get('username', '')
+    password = request.json.get('password', '')
     first_name = request.json.get('first_name', '')
     middles = request.json.get('middles', '')
     last_name = request.json.get('last_name', '')
@@ -121,8 +123,9 @@ def create_user():
     # TODO: note how we delegate the creation of the user to a DAO and
     #       assign the new user to the variable 'user'
     #       (no code change required)
-    user = rest_server_dao.create_user(email, first_name, middles, last_name,
-                                       street, post_code, city, state, country)
+    user = rest_server_dao.create_user(
+        username, password, email, first_name, middles, last_name, street,
+        post_code, city, state, country)
 
     # TODO: return two values:
     #       1. a jsonified dictionary with key of 'user' and value of the new user
@@ -136,27 +139,30 @@ def create_user():
 # TODO: add decorator that specifies the request must include valid credentials
 @auth.login_required
 def update_user(email):
+    # TODO: add a test to ensure that the URL includes an email parameter.
+    #       Abort with status 400 if the test fails.
+    if not email:
+        app.logger.error('User email address is required to update a user')
+        abort(400)
+
     # TODO: add a test to ensure that the request body contains JSON.
     #       Abort with status 400 if the test fails.
     if not request.json:
         app.logger.error('No JSON in PUT request to update user %s', email)
         abort(400)
 
-    # TODO: get the email from the request JSON and assign it to a variable
-    #       named 'email'
-    email = request.json['email']
     app.logger.info('Updating user %s', email)
 
     # TODO: note how we get the rest of the input data from the request
     #       (no code change required)
-    first_name = request.json.get('first_name', '')
-    middles = request.json.get('middles', '')
-    last_name = request.json.get('last_name', '')
-    street = request.json['address'].get('street', '')
-    post_code = request.json['address'].get('post_code', '')
-    city = request.json['address'].get('city', '')
-    state = request.json['address'].get('state', '')
-    country = request.json['address'].get('country', '')
+    first_name = request.json.get('first_name', None)
+    middles = request.json.get('middles', None)
+    last_name = request.json.get('last_name', None)
+    street = request.json['address'].get('street', None)
+    post_code = request.json['address'].get('post_code', None)
+    city = request.json['address'].get('city', None)
+    state = request.json['address'].get('state', None)
+    country = request.json['address'].get('country', None)
 
     # TODO: note how we delegate the update of the user to a DAO and
     #       assign the modified user to the variable 'user'
@@ -213,6 +219,23 @@ def make_public_user(user):
                                       _external=True)
         new_user[field] = user[field]
     return new_user
+
+
+original_db_file = rest_server_dao.sqlite_file_name
+
+
+@app.route(BASE_URI, methods=['PATCH'])
+@auth.login_required
+def select_db_file():
+    db_file = request.args.get('db_file')
+    if db_file:
+        app.logger.info('Switching to database file %s', db_file)
+        rest_server_dao.sqlite_file_name = db_file
+    else:
+        app.logger.info('Switching base to production database file %s',
+                        original_db_file)
+        rest_server_dao.sqlite_file_name = original_db_file
+    return Response(status=200)
 
 
 if __name__ == '__main__':

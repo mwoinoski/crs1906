@@ -60,9 +60,12 @@ class UserServiceRest:
         logger.debug("%s: email = %s", func_name(self), email)
         try:
             person = self._dao.get(email, self._request.db_session)
+            logger.debug("%s: person = %s", func_name(self), 
+                         str(vars(person)) if person else "null")
+            if not person:
+                raise HTTPNotFound()
         except PersistenceError:
             raise HTTPNotFound()
-        logger.debug("%s: person = %s", func_name(self), str(vars(person)))
         return person
 
     @staticmethod

@@ -41,9 +41,9 @@ class UserServiceRest:
     @view_config(request_method='GET',
                  route_name='rest_users_email',
                  renderer='json')
-    def get_user(self):
+    def get_user_json(self):
         email = self._request.matchdict['email']
-        return self.get_user_by_email(email)
+        return self.get_user(email)
 
     # FIXME: if this method is defined, requests without an Accept header
     # are always sent to it
@@ -55,14 +55,17 @@ class UserServiceRest:
     #     user = self.get_user(email)
     #     return UserServiceRest.user_to_xml(user)
 
-    def get_user_by_email(self, email):
+    def get_user(self, email):
         """Fetch a Person by searching for the registered email address."""
         logger.debug("%s: email = %s", func_name(self), email)
         try:
             person = self._dao.get(email, self._request.db_session)
+            logger.debug("%s: person = %s", func_name(self), 
+                         str(vars(person)) if person else "null")
+            if not person:
+                raise HTTPNotFound()
         except PersistenceError:
             raise HTTPNotFound()
-        logger.debug("%s: person = %s", func_name(self), str(vars(person)))
         return person
 
     @staticmethod
@@ -115,4 +118,4 @@ class UserServiceRest:
             self._dao.delete(email, self._request.db_session)
         except PersistenceError:
             raise HTTPNotFound()
-        return Response(status_int=204, content_type=None)
+        return Response(status_int=204)

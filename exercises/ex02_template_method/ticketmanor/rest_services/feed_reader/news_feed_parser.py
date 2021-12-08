@@ -37,12 +37,3 @@ class NewsFeedParser(....):
 
     # BONUS TODO: define get_dummy_news() as an abstract method
 
-
-# Run news_feed_parser to verify NewsFeedParser is abstract
-if __name__ == '__main__':
-    try:
-        parser = NewsFeedParser(None)
-        import sys
-        print("\nERROR: NewsFeedParser is not abstract", file=sys.stderr)
-    except TypeError:
-        print("\nSuccess: NewsFeedParser is abstract")

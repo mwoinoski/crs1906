@@ -11,7 +11,6 @@ Converted to Python 3 by running:
 from datetime import datetime
 from time import strptime
 import urllib.request
-from xml.dom import minidom
 import re
 
 from ticketmanor.util.utils import html_unescape
@@ -79,7 +78,7 @@ class AtomNewsFeedParser(NewsFeedParser):
         try:
             parsed_item['title'] = \
                 item_node.getElementsByTagName('title')[0] \
-                    .childNodes[0].nodeValue
+                .childNodes[0].nodeValue
         except IndexError:
             parsed_item['title'] = ''
         parsed_item['content'] = ''
@@ -88,7 +87,7 @@ class AtomNewsFeedParser(NewsFeedParser):
         try:
             desc_raw = \
                 item_node.getElementsByTagName('content')[0] \
-                    .childNodes[0].nodeValue
+                .childNodes[0].nodeValue
             desc_html = html_unescape(desc_raw)
             match = re.match(r'.*?<img src="([^"]*).*', desc_html)
             if match:
@@ -108,11 +107,11 @@ class AtomNewsFeedParser(NewsFeedParser):
         try:
             updated = \
                 item_node.getElementsByTagName('updated')[0] \
-                    .childNodes[0].nodeValue
+                .childNodes[0].nodeValue
             # 2015-06-02T22:11:58Z
             parsed_item['date_time'] = \
                 datetime(*strptime(updated, '%Y-%m-%dT%H:%M:%SZ')[0:6]) \
-                    .strftime('%a, %d %b %Y %H:%M:%S GMT')
+                .strftime('%a, %d %b %Y %H:%M:%S GMT')
         except IndexError:
             parsed_item['date_time'] = ''
 

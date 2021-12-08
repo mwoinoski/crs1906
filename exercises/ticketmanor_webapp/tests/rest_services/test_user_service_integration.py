@@ -10,7 +10,7 @@ import json
 import unittest
 from webtest import TestApp
 from ticketmanor import main
-from tests.test_support.db_utils import (
+from test_support.db_utils import (
     create_db_tables,
     drop_db_tables,
     execute_select,

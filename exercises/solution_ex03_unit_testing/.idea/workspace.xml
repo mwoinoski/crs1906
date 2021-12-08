@@ -2,33 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3740fad5-d027-42f8-9634-86fd9cb2ed8f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/tests/models/persistence/ticketmanor_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/tests/models/persistence/ticketmanor_db.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex02_template_method/tests/rest_services/test_news_feed_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../solution_ex02_template_method/tests/rest_services/test_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/tests/rest_services/test_event_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/tests/rest_services/test_event_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/tests/rest_services/test_user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/tests/rest_services/test_user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/ticketmanor/rest_services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/ex02_template_method.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/ex02_template_method.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex04_debugging/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex06_design_patterns/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex06_design_patterns/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/pi_monte_carlo/pi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/pi_monte_carlo/pi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex09_rest_services/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex09_rest_services/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex09_rest_services/test_user_rest_service_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex09_rest_services/test_user_rest_service_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/tests/rest_services/test_event_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/tests/rest_services/test_event_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/tests/rest_services/test_user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/tests/rest_services/test_user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/tests/rest_services/test_user_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/tests/rest_services/test_user_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex02_template_method/ticketmanor/rest_services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/.idea/ex03_unit_testing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/.idea/ex03_unit_testing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_unit_testing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_event_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_event_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/tests/rest_services/test_user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03_with_mocks/ticketmanor/rest_services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/tests/rest_services/test_event_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/tests/rest_services/test_event_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/tests/rest_services/test_user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/tests/rest_services/test_user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/tests/rest_services/test_user_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/tests/rest_services/test_user_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/rest_services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/ticketmanor/rest_services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/ticketmanor/rest_services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/solution_ex02_template_method.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/solution_ex02_template_method.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/tests/rest_services/test_event_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/tests/rest_services/test_event_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/tests/rest_services/test_user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/tests/rest_services/test_user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/tests/rest_services/test_user_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/tests/rest_services/test_user_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/atom_news_feed_parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/news_feed_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex04_debugging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex04_debugging/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex05_performance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex05_performance/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex06_design_patterns/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex06_design_patterns/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex07_distributing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/feed_reader/rss_news_feed_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/ticketmanor/rest_services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/solution_ex03_unit_testing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/solution_ex03_unit_testing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_event_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_event_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex03_with_mocks/ticketmanor/rest_services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/tests/rest_services/test_event_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/tests/rest_services/test_event_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/tests/rest_services/test_user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/tests/rest_services/test_user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/tests/rest_services/test_user_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/tests/rest_services/test_user_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/rest_services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/ticketmanor/rest_services/user_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/pi_monte_carlo/pi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/pi_monte_carlo/pi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/tests/rest_services/test_event_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/tests/rest_services/test_event_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/tests/rest_services/test_user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/tests/rest_services/test_user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/tests/rest_services/test_user_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/tests/rest_services/test_user_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/ticketmanor/rest_services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/tests/rest_services/test_event_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/tests/rest_services/test_event_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/tests/rest_services/test_user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/tests/rest_services/test_user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/tests/rest_services/test_user_service_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/tests/rest_services/test_user_service_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/ticketmanor/rest_services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/ticketmanor/rest_services/user_service.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,13 +73,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1RfejexAnvBNpK4kw7OKSTsiklH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
-    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../ex03_unit_testing/tests/rest_services/test_rss_news_feed_parser_no_class.py" />
   </component>
@@ -69,19 +105,7 @@
     </option>
     <option name="myIpythonEnabled" value="false" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_observer.ObserverTest.test_detach">
+  <component name="RunManager" selected="Python tests.Unittests in test_atom_news_feed_parser.py">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -101,35 +125,7 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration name="Unittests for test_customer.CustomerTestCase.test_eq_instances_person_field_ne" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="solution_ex03_unit_testing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/models" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_customer.CustomerTestCase.test_eq_instances_person_field_ne&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for test_observer.ObserverTest.test_detach" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="solution_ex03_unit_testing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/util" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_observer.ObserverTest.test_detach&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for test_user_service.UserServiceRestTest.test_get_success" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test_atom_news_feed_parser.py" type="tests" factoryName="Autodetect" temporary="true">
       <module name="solution_ex03_unit_testing" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -139,35 +135,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_user_service.UserServiceRestTest.test_get_success&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for test_util.TestUtil.test_html_unescape_no_double_unescape" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="solution_ex03_unit_testing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/util" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_util.TestUtil.test_html_unescape_no_double_unescape&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in test_observer.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="solution_ex03_unit_testing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/util" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/util/test_observer.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/rest_services/test_atom_news_feed_parser.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -180,50 +148,40 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="C:\crs1906\exercises\solution_ex03_unit_testing\tests\rest_services\test_rss_news_feed_parser_no_class.py" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
-      <module name="solution_ex03_unit_testing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\crs1906\exercises\solution_ex03_unit_testing\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/rest_services" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in test_rss_news_feed_parser.py" type="tests" factoryName="Autodetect" temporary="true">
+      <module name="solution_ex03_unit_testing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/rest_services" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python tests.Unittests in test_rss_news_feed_parser_no_class" />
-      <item itemvalue="Python tests.Unittests in test_observer.py" />
-      <item itemvalue="Python tests.Unittests for test_user_service.UserServiceRestTest.test_get_success" />
-      <item itemvalue="Python tests.Unittests for test_customer.CustomerTestCase.test_eq_instances_person_field_ne" />
-      <item itemvalue="Python tests.Unittests for test_util.TestUtil.test_html_unescape_no_double_unescape" />
-      <item itemvalue="Python tests.Unittests for test_observer.ObserverTest.test_detach" />
+      <item itemvalue="Python tests.Unittests in test_rss_news_feed_parser.py" />
+      <item itemvalue="Python tests.Unittests in test_atom_news_feed_parser.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for test_observer.ObserverTest.test_detach" />
-        <item itemvalue="Python tests.Unittests in test_observer.py" />
-        <item itemvalue="Python tests.Unittests for test_util.TestUtil.test_html_unescape_no_double_unescape" />
-        <item itemvalue="Python tests.Unittests for test_customer.CustomerTestCase.test_eq_instances_person_field_ne" />
-        <item itemvalue="Python tests.Unittests for test_user_service.UserServiceRestTest.test_get_success" />
+        <item itemvalue="Python tests.Unittests in test_atom_news_feed_parser.py" />
+        <item itemvalue="Python tests.Unittests in test_rss_news_feed_parser.py" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -242,13 +200,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -262,6 +219,17 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/rest_services/test_rss_news_feed_parser.py</url>
+          <line>104</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="hg4idea.settings">
     <option name="CHECK_INCOMING_OUTGOING" value="true" />

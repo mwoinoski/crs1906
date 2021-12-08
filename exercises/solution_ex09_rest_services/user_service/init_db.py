@@ -3,7 +3,7 @@ init_db.py - Initialize a Sqlite3 database for the rest-server.py script.
 """
 
 import sqlite3
-conn = sqlite3.connect('rest_server.sqlite')
+conn = sqlite3.connect('users_db.sqlite')
 
 c = conn.cursor()
 c.execute("""CREATE TABLE users

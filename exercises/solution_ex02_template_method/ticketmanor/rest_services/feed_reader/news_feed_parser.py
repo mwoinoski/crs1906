@@ -128,13 +128,3 @@ class NewsFeedParser(metaclass=ABCMeta):
     @abstractmethod
     def get_dummy_news(self, url, news_type):
         pass
-
-
-# Run news_feed_parser to verify NewsFeedParser is abstract
-if __name__ == '__main__':
-    try:
-        parser = NewsFeedParser(None)
-        import sys
-        print("\nERROR: NewsFeedParser is not abstract", file=sys.stderr)
-    except TypeError:
-        print("\nSuccess: NewsFeedParser is abstract")

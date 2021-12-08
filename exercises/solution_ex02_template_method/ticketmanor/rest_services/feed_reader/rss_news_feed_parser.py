@@ -10,7 +10,6 @@ Converted to Python 3 by running:
 
 import re
 import urllib.request
-from xml.dom import minidom
 
 from ticketmanor.util.utils import html_unescape
 from ticketmanor.rest_services.feed_reader.news_feed_parser import (
