@@ -21,7 +21,7 @@ class PersonDao():
         # TODO: call the superclass's __init__(), passing two arguments:
         #       1. the class of the entity that will be persisted (Person)
         #       2. the name of the entity's ID field ('email')
-        # HINT: see slide 1-21
+        # HINT: see slide 1-26
 
 
 

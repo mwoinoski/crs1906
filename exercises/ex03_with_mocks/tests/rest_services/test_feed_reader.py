@@ -21,7 +21,7 @@ class TestFeedReader(TestCase):
     def test_fetch_news_items_music(self):
         # TODO: create a mock RssNewsFeedParser object and assign it to a local
         #       variable named `mock_news_feed_parser`
-        # HINT: see slide 3-36
+        # HINT: see slide 3-37
         mock_news_feed_parser = ....
 
         # TODO: set the return value of the mock's get_news() method to the
@@ -56,7 +56,7 @@ class TestFeedReader(TestCase):
 
         # TODO: set the `side_effect` attribute of the mock's `get_news` method
         #       so it raises a FeedReaderException when called.
-        # HINT: see slide 3-39
+        # HINT: see slide 3-40
         ....
 
         # TODO: create a FeedReader instance and assign it to a local variable

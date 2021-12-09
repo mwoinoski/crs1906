@@ -99,7 +99,7 @@ def pi_async():
     chunk_size = total_samples // ntasks  # divide work into 4 chunks
 
     # TODO: define an empty set of Future instances named `futures`
-    # HINT: see slide 8-36
+    # HINT: see slide 8-37
     futures = ....
 
     # TODO: write a `with` statement to use a ProcessPoolExecutor.
@@ -122,7 +122,7 @@ def pi_async():
 
     # TODO: set up a `for` loop to get the result of each process as it
     #       completes.
-    # HINT: see slide 8-37
+    # HINT: see slide 8-38
     # HINT: future.result() returns the result of the call to sample_multiple()
     for ....
 

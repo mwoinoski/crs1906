@@ -50,9 +50,9 @@ class AllNewsFeedReader:
         news_futures = ....
 
         # TODO: wrap the `for` loop in a `with` statement that initializes
-        #       a ThreadPoolExecutor. Pass the argument max_workers=4 to the
+        #       a ThreadPoolExecutor. Pass the argument max_workers=8 to the
         #       ThreadPoolExecutor constructor.
-        # HINT: see slide 8-38
+        # HINT: see slide 8-39
         ....
             for news_type in 'concerts', 'sports', 'movies':
 
@@ -61,9 +61,9 @@ class AllNewsFeedReader:
                 news_reader = ....
 
                 # TODO: call executor.submit() to execute the NewsReader's
-                # get_news() method.
-                # Arguments to submit(): NewsReader.get_news, news_reader
-                # Assign the Future returned by submit() to a local variable.
+                #       get_news() method.
+                #       Arguments to submit(): NewsReader.get_news, news_reader
+                #       Assign the Future returned by submit to a local variable
                 ....
 
                 # TODO: append the Future to the `news_futures` list
@@ -73,22 +73,22 @@ class AllNewsFeedReader:
         all_news = ....
 
         # TODO: use a `for` to loop over the result of a call to
-        # concurrent.futures.as_completed(news_futures)
-        # HINT: see slide 8-37
+        #       concurrent.futures.as_completed(news_futures)
+        # HINT: see slide 8-38
         ....
 
             # TODO: assign the result of the Future to a variable named
-            # `news_reader`
+            #       `news_reader`
             news_reader = ....
 
             # TODO: note that the result of the Future is the result of the
-            # NewReader's get_news() method, which returns a reference to the
-            # current NewsReader.
-            # (no code change required)
+            #       NewReader's get_news() method, which returns a reference to
+            #       the current NewsReader.
+            #       (no code change required)
 
             # TODO: Add the NewsReader's news to the `all_news` dictionary.
-            # key: the news_reader's `news_type` attribute
-            # value: the news_reader's `news` attribute
+            #       key: the news_reader's `news_type` attribute
+            #       value: the news_reader's `news` attribute
             ....
 
         # TODO: return the `all_news` dictionary

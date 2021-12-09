@@ -32,7 +32,7 @@ class ChatRoom:
 
     def __init__(self):
         # TODO: call the superclass constructor, passing no arguments
-        # HINT: see slide 1-21
+        # HINT: see slide 1-26
         ....
 
         # TODO: initialize a data attribute named `messages` with an empty list

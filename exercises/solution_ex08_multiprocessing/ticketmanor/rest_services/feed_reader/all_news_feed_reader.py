@@ -50,9 +50,9 @@ class AllNewsFeedReader:
         news_futures = []
 
         # TODO: wrap the `for` loop in a `with` statement that initializes
-        #       a ThreadPoolExecutor. Pass the argument max_workers=4 to the
+        #       a ThreadPoolExecutor. Pass the argument max_workers=8 to the
         #       ThreadPoolExecutor constructor.
-        with ThreadPoolExecutor(max_workers=4) as executor:
+        with ThreadPoolExecutor(max_workers=8) as executor:
             for news_type in 'concerts', 'sports', 'movies':
 
                 # TODO: create an instance of NewsReader and assign it to a
@@ -62,7 +62,7 @@ class AllNewsFeedReader:
                 # TODO: call executor.submit() to execute the NewsReader's
                 #       get_news() method.
                 #       Arguments to submit(): NewsReader.get_news, news_reader
-                #       Assign the Future returned by submit() to a local variable.
+                #       Assign the Future returned by submit to a local variable
                 future = executor.submit(NewsReader.get_news, news_reader)
 
                 # TODO: append the Future to the `news_futures` list
@@ -80,8 +80,8 @@ class AllNewsFeedReader:
             news_reader = future.result()
 
             # TODO: note that the result of the Future is the result of the
-            #       NewReader's get_news() method, which returns a reference to the
-            #       current NewsReader.
+            #       NewReader's get_news() method, which returns a reference to
+            #       the current NewsReader.
             #       (no code change required)
 
             # TODO: Add the NewsReader's news to the `all_news` dictionary.
