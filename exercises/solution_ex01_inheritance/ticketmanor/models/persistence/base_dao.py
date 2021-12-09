@@ -44,5 +44,4 @@ class BaseDao:
         if entity:
             db_session.delete(entity)
         else:
-            raise PersistenceError('No entity with ID {} found'
-                                   .format(id_value))
+            raise PersistenceError(f'No entity with ID {id_value} found')

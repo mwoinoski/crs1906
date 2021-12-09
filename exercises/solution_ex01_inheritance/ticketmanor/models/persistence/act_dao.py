@@ -16,11 +16,13 @@ __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 logger = logging.getLogger(__name__)
 
 
+# TODO: make the ActDao class a subclass of BaseDao
 class ActDao(BaseDao):
     """
     Persistence methods for Act instances.
     """
 
+    # TODO: define the __init__() method, with one parameter, self
     def __init__(self):
         """Initialize the ActDao"""
         super().__init__(Act, 'id')
@@ -58,7 +60,7 @@ class ActDao(BaseDao):
             raise ValueError("Sports search function isn't implemented yet")
 
         else:
-            raise ValueError('Unknown act type {}'.format(act_type))
+            raise ValueError(f'Unknown act type {act_type}')
 
         act = query.filter_by(**kwargs)\
                    .first()
@@ -85,7 +87,7 @@ class ActDao(BaseDao):
                 query = query.filter(or_(Act.title.like(like_str),
                                          Act.notes.like(like_str)))
         else:
-            raise ValueError('No music search type "{}"'.format(search_type))
+            raise ValueError(f'No music search type "{search_type}"')
         return query
 
     @staticmethod
@@ -97,7 +99,7 @@ class ActDao(BaseDao):
                 query = query.filter(or_(Act.title.like(like_str),
                                          Act.notes.like(like_str)))
         else:
-            raise ValueError('No movie search type "{}"'.format(search_type))
+            raise ValueError(f'No movie search type "{search_type}"')
         return query
 
     @staticmethod

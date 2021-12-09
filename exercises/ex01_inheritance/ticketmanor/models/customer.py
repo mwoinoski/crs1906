@@ -50,8 +50,7 @@ class Customer():
 
     def name(self):
         middle_name = self.middles + " " if self.middles is not None else ""
-        return "{self.first_name} {}{self.last_name}"\
-            .format(middle_name, self=self)
+        return f"{self.first_name} {middle_name}{self.last_name}"
 
     def __eq__(self, other):
         """Compare Customer instances."""
@@ -77,10 +76,9 @@ class Customer():
 
     def __repr__(self):
         """Return an unambiguous String representation of a Customer"""
-        return "id={self.id},first_name='{self.first_name}'," \
-            "middles='{self.middles}',last_name='{self.last_name}'," \
-            "email='{self.email}',street='{self.street}'," \
-            "city='{self.city}',state='{self.state}'," \
-            "country='{self.country}',post_code='{self.post_code}'," \
-            "customer_id='{self.customer_id}'" \
-            .format(self=self)
+        return f"id={self.id},first_name='{self.first_name}'," \
+            f"middles='{self.middles}',last_name='{self.last_name}'," \
+            f"email='{self.email}',street='{self.street}'," \
+            f"city='{self.city}',state='{self.state}'," \
+            f"country='{self.country}',post_code='{self.post_code}'," \
+            f"customer_id='{self.customer_id}'"

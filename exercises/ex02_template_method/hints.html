@@ -72,21 +72,21 @@ class NewsFeedParser(metaclass=ABCMeta):
     # BONUS TODO: define get_url() as an abstract method </font><font color="blue">
     @abstractmethod
     def get_url(self, news_type):
-        pass
+        <i>""" Return the URL of a feed for the given news type """</i>
 </pre></font>
 
 <font color="grey"><pre>
     # BONUS TODO: define parse_item() as an abstract method </font><font color="blue">
     @abstractmethod
     def parse_item(self, item_node):
-        pass
+        <i>""" Convert the DOM item node to a dict """</i>
 </pre></font>
 
 <font color="grey"><pre>
     # BONUS TODO: define get_dummy_news() as an abstract method </font><font color="blue">
     @abstractmethod
     def get_dummy_news(self, url, news_type):
-        pass
+        <i>""" Return a URL of a dummy news feed for testing """</i>
 </pre></font>
 
 

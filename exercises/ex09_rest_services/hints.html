@@ -6,14 +6,14 @@
 <body>
 <h2>Hints for Exercise 9.1</h2>
 
-<h3>test_user_rest_service.py</h3>
+<h3>test_user_rest_service_json.py</h3>
 
 <font color="grey"><pre>
 def test_get_user_found():
     email = 'ned.flanders@gmail.com' </font><font color="grey">
 
     # TODO: build the URL for the GET request from base_url and email </font><font color="blue">
-    url = '{}/{}'.format(base_url, email) </font><font color="grey">
+    url = f'{base_url}/{email}' </font><font color="grey">
 
     # TODO: set the HTTP Accept header to 'application/json' </font><font color="blue">
     http_headers = {'Accept': 'application/json'} </font><font color="grey">
@@ -73,7 +73,7 @@ def get_users():
 <font color="grey"><pre>
 # TODO: add a Flask decorator here so that a GET request
 # to BASE_URI+'/&lt;email&gt;' is mapped to the get_user() method below. </font><font color="blue">
-@app.route(BASE_URI + '/&lt;string:email&gt;', methods=['GET']) </font><font color="grey">
+@app.route(f'{BASE_URI}/&lt;string:email&gt;', methods=['GET']) </font><font color="grey">
 # TODO: add decorator that specifies the request must include valid credentials </font><font color="blue">
 @auth.login_required </font><font color="grey">
 def get_user(email):
@@ -116,7 +116,7 @@ def create_user():
 <font color="grey"><pre>
 # TODO: add a Flask decorator here so that a PUT request
 # to BASE_URI+'/&lt;email&gt;' is mapped to the update_user() method below. </font><font color="blue">
-@app.route(BASE_URI + '/&lt;string:email&gt;', methods=['PUT']) </font><font color="grey">
+@app.route(f'{BASE_URI}/&lt;string:email&gt;', methods=['PUT']) </font><font color="grey">
 # TODO: add decorator that specifies the request must include valid credentials </font><font color="blue">
 @auth.login_required </font><font color="grey">
 def update_user(email):
@@ -146,7 +146,7 @@ def update_user(email):
 <font color="grey"><pre>
 # TODO: add a Flask decorator here so that a DELETE request
 # to BASE_URI+'/&lt;email&gt;' is mapped to the delete_user() method below </font>.  <font color="blue">
-@app.route(BASE_URI + '/&lt;string:email&gt;', methods=['DELETE']) </font><font color="grey">
+@app.route(f'{BASE_URI}/&lt;string:email&gt;', methods=['DELETE']) </font><font color="grey">
 # TODO: add decorator that specifies the request must include valid credentials </font><font color="blue">
 @auth.login_required </font><font color="grey">
 def delete_user(email):

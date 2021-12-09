@@ -54,9 +54,8 @@ from measure import measure, get_function_stats </font><font color="grey">
 <font color="grey"><pre>
 	    # TODO: call the get_function_stats() function and print the stats
             # for all decorated functions </font><font color="blue">
-            print('{:^61}'.format('Function Call Stats'))
-            print('{:32s} {:&gt;8s}  {:22s}'
-                  .format('Function name', 'Calls', 'Avg Time (seconds)'))
+            print('{Function Call Stats:^61}')
+            print('{Function name:32s} {Calls:&gt;8s}  {Avg Time (seconds):22s}')
             print('-' * 61)
             for stats in get_function_stats():
                 print('{:32s} {:8d}  {:13.6f}'.format(*stats))
@@ -274,9 +273,8 @@ from measure_configurable import measure, get_function_stats, decorator_enabled
 	    # BONUS TODO: call get_function_stats() only if
             # decorator_enabled is true </font><font color="blue">
 	    if decorator_enabled: </font><font color="grey">
-                print('{:^61}'.format('Function Call Stats'))
-                print('{:32s} {:&gt;8s}  {:22s}'
-                      .format('Function name', 'Calls', 'Avg Time (seconds)'))
+                print('{Function Call Stats:^61}')
+                print('{Function name:32s} {Calls:&gt;8s}  {Avg Time (seconds):22s}')
                 print('-' * 61)
                 for stats in get_function_stats():
                     print('{:32s} {:8d}  {:13.6f}'.format(*stats))

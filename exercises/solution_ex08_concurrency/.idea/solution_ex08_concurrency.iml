@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/ticketmanor" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/chat" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/subprocesses" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (solution_ex08_concurrency)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

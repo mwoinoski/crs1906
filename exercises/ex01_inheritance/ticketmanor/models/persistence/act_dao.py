@@ -65,7 +65,7 @@ class ActDao():
             raise ValueError("Sports search function isn't implemented yet")
 
         else:
-            raise ValueError('Unknown act type {}'.format(act_type))
+            raise ValueError(f'Unknown act type {act_type}')
 
         act = query.filter_by(**kwargs)\
                    .first()
@@ -89,7 +89,7 @@ class ActDao():
                 query = query.filter(or_(Act.title.like(like_str),
                                          Act.notes.like(like_str)))
         else:
-            raise ValueError('No music search type "{}"'.format(search_type))
+            raise ValueError(f'No music search type "{search_type}"')
         return query
 
     @staticmethod
@@ -101,7 +101,7 @@ class ActDao():
                 query = query.filter(or_(Act.title.like(like_str),
                                          Act.notes.like(like_str)))
         else:
-            raise ValueError('No movie search type "{}"'.format(search_type))
+            raise ValueError(f'No movie search type "{search_type}"')
         return query
 
     @staticmethod
@@ -146,8 +146,7 @@ class ActDao():
         if entity:
             db_session.delete(entity)
         else:
-            raise PersistenceError('No entity with ID {} found'
-                                   .format(id_value))
+            raise PersistenceError(f'No entity with ID {id_value} found')
 
     def query_for_act(self, *args, **kwargs):
         """Dummy query_for_act() implementation"""
