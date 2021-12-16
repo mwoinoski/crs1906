@@ -35,7 +35,7 @@ from concurrent.futures import (
 import concurrent.futures
 import random
 
-total_samples = 10_000_000  # total number of calculations
+total_samples = 4_000_000  # total number of calculations
 
 
 def calculate_one_sample():
