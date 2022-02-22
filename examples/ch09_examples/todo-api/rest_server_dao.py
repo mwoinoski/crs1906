@@ -60,9 +60,12 @@ def get_task(task_id):
           FROM todo_tasks
          WHERE id = ?
     """
+    task = None
     cursor = conn.cursor()
     cursor.execute(sql, (task_id,))
-    task = _make_task(cursor.fetchone())
+    row = cursor.fetchone()
+    if row:
+        task = _make_task(row)
     return task
 
 
