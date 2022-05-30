@@ -7,7 +7,7 @@ See http://docs.pylonsproject.org/projects/pyramid/en/1.3-branch/narr/pyramid_te
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest import TestCase, main
-from unittest.mock import Mock, ANY
+from unittest.mock import Mock
 from pytest import raises
 
 from pyramid import testing as pyramid_testing
@@ -53,6 +53,7 @@ class UserServiceRestTest(TestCase):
 
         self.assertEqual(actual_result, expected_result)
 
+    # noinspection PyMethodMayBeStatic
     def test_get_user_not_found(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
@@ -75,6 +76,7 @@ class UserServiceRestTest(TestCase):
             #       any string as an argument
             user_service.get_user('a@b.com')
 
+    # noinspection PyMethodMayBeStatic
     def test_get_user_dao_exception(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
@@ -109,6 +111,7 @@ class UserServiceRestTest(TestCase):
 
         self.assertEqual(201, response.status_int)
 
+    # noinspection PyMethodMayBeStatic
     def test_add_user_db_exception(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
@@ -132,6 +135,7 @@ class UserServiceRestTest(TestCase):
 
         self.assertEqual(202, response.status_int)
 
+    # noinspection PyMethodMayBeStatic
     def test_update_user_not_found(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
@@ -154,6 +158,7 @@ class UserServiceRestTest(TestCase):
 
         self.assertEqual(204, response.status_int)
 
+    # noinspection PyMethodMayBeStatic
     def test_delete_user_not_found(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
