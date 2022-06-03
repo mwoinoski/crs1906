@@ -21,7 +21,7 @@ from ticketmanor.rest_services.feed_reader.rss_dummy_news import RssDummyNews
 # TODO: make RssNewsFeedParser a subclass of NewsFeedParser
 class RssNewsFeedParser(NewsFeedParser):
     """Parses a RSS news feed"""
-    feed_type = 'rss'
+    feed_type = 'rss'  # class attribute
 
     def __init__(self):
         self.item_element_name = 'item'

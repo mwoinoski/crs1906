@@ -36,8 +36,7 @@ class Observer(metaclass=ABCMeta):
 class ConcreteSubject(Subject):
     def __init__(self, value=None):
         super().__init__()
-        self._state = None  # _value must be set before setter is invoked
-        self.state = value  # invoke property setter
+        self._state = value
 
     @property
     def state(self):

@@ -5,14 +5,18 @@ from abc import ABCMeta, abstractmethod
 
 
 class Image(metaclass=ABCMeta):
+    def __init__(self, path):
+        self.path = path
+
     @abstractmethod
-    def get_content(self, path):
-        pass
+    def get_content(self):
+        """Loads the image from the given path"""
 
 
 class ConcreteImage(Image):
     def __init__(self, path):
         print(f'ConcreteImage.__init__("{path}")')
+        super().__init__(path)
         # load image immediately
         pil_image = PILImage.open(path)
         self.image_content = PILImageTk.PhotoImage(pil_image) 
@@ -27,13 +31,13 @@ class ConcreteImage(Image):
 class LazyLoadingImage(Image):
     def __init__(self, path):  # don't load image yet
         print(f'LazyLoadingImage.__init__("{path}")')
-        self.path = path
+        super().__init__(path)
         self.concrete_image = None
         
     def get_content(self):  
         # delegate image loaded to ConcreteImage
         if not self.concrete_image:
-            self.concrete_image = ConcreteImage(self.path) # loads image
+            self.concrete_image = ConcreteImage(self.path)  # loads image
         return self.concrete_image.get_content()  
 
     def __repr__(self):
@@ -63,6 +67,8 @@ def main():
 
     if len(sys.argv) > 1 and sys.argv[1] == '--display-image':
         client.display_image()
+
+    # better: use the standard argparse module to handle command-line arguments
 
 
 if __name__ == '__main__':
