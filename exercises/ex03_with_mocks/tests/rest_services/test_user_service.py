@@ -7,7 +7,7 @@ See http://docs.pylonsproject.org/projects/pyramid/en/1.3-branch/narr/pyramid_te
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest import TestCase, main
-from unittest.mock import MagicMock, ANY
+from unittest.mock import Mock, ANY
 import sqlite3
 
 from pyramid import testing as pyramid_testing
@@ -22,20 +22,19 @@ from ticketmanor.models.persistence import PersistenceError
 # from ticketmanor.models import DBSession, Base
 
 
-class UserServiceRestTest(TestCase):
+class UserServiceRestTest:
     """Unit tests for Pyramid view callable UserServiceRest"""
 
     def setUp(self):
-        # environment that has an isolated registry and an isolated
-        # request for the duration of a single test. Each call to
-        #  get_current_registry() within a test case method will return
-        # the application registry associated with the config
-        # Configurator instance.
+        # Create a Pyramid test environment that has an isolated registry and 
+        # an isolated request for the duration of a single test. Each call to
+        # get_current_registry() within a test case method will return the
+        # application registry associated with the config Configurator instance
         request = pyramid_testing.DummyRequest()
         self.config = pyramid_testing.setUp(request=request)
         self.config.include('pyramid_chameleon')
 
-        # For integration test, add model to in-memory DB
+        # For integration test, add the model to the in-memory DB
         # engine = create_engine('sqlite://')
         # DBSession.configure(bind=engine)
         # Base.metadata.create_all(engine)
@@ -46,44 +45,84 @@ class UserServiceRestTest(TestCase):
         # DBSession.remove()
         pyramid_testing.tearDown()
 
-    def test_get_success(self):
+    def test_get_user_success(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
-        request.matchdict['email'] = 'benf@gmail.com'
-        user_service = UserServiceRest(None, request, dao=MagicMock)
-        person = Person(id=123)
-        user_service._dao.get.return_value = person
+        #request.matchdict['email'] = 'benf@gmail.com'
+        
+        expected_result = Person(id=123)
+        mock_dao = Mock()
+        mock_dao.get.return_value = expected_result
+        user_service = UserServiceRest(None, request, mock_dao)
+        #user_service = UserServiceRest(None, request, dao=Mock)
+        #user_service._dao.get.return_value = expected_result
 
-        result = user_service.get_user_json()
+        actual_result = user_service.get_user('a@b.com')
+        #actual_result = user_service.get_user_json()
 
-        self.assertEqual(result, person)
+        self.assertEqual(actual_result, expected_result)
 
-    def test_get_not_found(self):
+    def test_get_user_not_found(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
-        request.matchdict['email'] = 'nobody@gmail.com'
-        user_service = UserServiceRest(None, request, dao=MagicMock)
-        user_service._dao.get = MagicMock(side_effect=PersistenceError())
+        #request.matchdict['email'] = 'nobody@gmail.com'
+        
+        # TODO: create a mock DAO
+        mock_dao = Mock()
 
-        with self.assertRaises(HTTPNotFound):
-            user_service.get_user_json()
+        # TODO: assign None to the return value of the mock's `get` method
+        # HINT: see slide 3-38
+        mock_dao.get.return_value = None
 
-    def test_get_unhandled_exception(self):
+        # TODO: create a UserServiceRest instance, passing the mock_dao as
+        #       the last argument
+        user_service = UserServiceRest(None, request, mock_dao)
+        #user_service = UserServiceRest(None, request, dao=Mock)
+        #user_service._dao.get = Mock(side_effect=PersistenceError())
+
+        # TODO: add a `with` statement to assert that the nested method call
+        #       raises an HTTPNotFound exception
+        with raises(HTTPNotFound):
+        #with self.assertRaises(HTTPNotFound):
+            # TODO: call the UserServiceRest's `get_user` method, passing
+            #       any string as an argument
+            user_service.get_user('a@b.com')
+            #user_service.get_user_json()
+
+    def test_get_user_dao_exception(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
-        request.matchdict['email'] = 'nobody@gmail.com'
-        user_service = UserServiceRest(None, request, dao=MagicMock)
-        user_service._dao.get = MagicMock(side_effect=ValueError())
+        #request.matchdict['email'] = 'nobody@gmail.com'
+        
+        # TODO: create a mock DAO
+        mock_dao = Mock()
+        
+        # TODO: assign a sqlite3.Error as the side effect of 
+        #       the mock's `get` method
+        # HINT: see slide 3-39
+        mock_dao.get.side_effect = sqlite3.Error('SQL error')
+        
+        # TODO: create a UserServiceRest instance, passing the mock_dao as
+        #       the last argument
+        user_service = UserServiceRest(None, request, mock_dao)
+        #user_service = UserServiceRest(None, request, dao=Mock)
+        #user_service._dao.get = Mock(side_effect=ValueError())
 
-        with self.assertRaises(ValueError):
-            user_service.get_user_json()
+        # TODO: add a `with` statement to assert that the nested method call
+        #       raises an HTTPNotFound exception
+        with raises(HTTPNotFound):
+        #with self.assertRaises(ValueError):
+            # TODO: call the UserServiceRest's `get_user` method, passing
+            #       any string as an argument
+            user_service.get_user('a@b.com')
+            #user_service.get_user_json()
 
     def test_add_user_success(self):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
         request.json_body = {"id": "1", "first_name": "Ben",
                              "last_name": "Franklin", "email": "benf@gmail.com"}
-        user_service = UserServiceRest(None, request, dao=MagicMock)
+        user_service = UserServiceRest(None, request, dao=Mock)
 
         response = user_service.add_user()
 
@@ -94,8 +133,8 @@ class UserServiceRestTest(TestCase):
         request.db_session = None
         request.json_body = {"id": "1", "first_name": "Ben",
                              "last_name": "Franklin", "email": "benf@gmail.com"}
-        user_service = UserServiceRest(None, request, dao=MagicMock)
-        user_service._dao.add = MagicMock(side_effect=sqlite3.DatabaseError())
+        user_service = UserServiceRest(None, request, dao=Mock)
+        user_service._dao.add = Mock(side_effect=sqlite3.DatabaseError())
 
         with self.assertRaisesRegex(HTTPInternalServerError, r'Could not add'):
             user_service.add_user()
@@ -106,7 +145,7 @@ class UserServiceRestTest(TestCase):
         request.db_session = None
         request.json_body = {"id": "1", "first_name": "Ben",
                              "last_name": "Franklin", "email": "benf@gmail.com"}
-        user_service = UserServiceRest(None, request, dao=MagicMock)
+        user_service = UserServiceRest(None, request, dao=Mock)
 
         response = user_service.update_user()
 
@@ -117,8 +156,8 @@ class UserServiceRestTest(TestCase):
         request.db_session = None
         request.json_body = {"id": "1", "first_name": "Ben",
                              "last_name": "Franklin", "email": "benf@gmail.com"}
-        user_service = UserServiceRest(None, request, dao=MagicMock)
-        user_service._dao.update = MagicMock(side_effect=PersistenceError())
+        user_service = UserServiceRest(None, request, dao=Mock)
+        user_service._dao.update = Mock(side_effect=PersistenceError())
 
         with self.assertRaises(HTTPNotFound):
             user_service.update_user()
@@ -127,7 +166,7 @@ class UserServiceRestTest(TestCase):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
         request.matchdict['email'] = 'benf@gmail.com'
-        user_service = UserServiceRest(None, request, dao=MagicMock)
+        user_service = UserServiceRest(None, request, dao=Mock)
 
         response = user_service.delete_user()
 
@@ -137,8 +176,8 @@ class UserServiceRestTest(TestCase):
         request = pyramid_testing.DummyRequest()
         request.db_session = None
         request.matchdict['email'] = 'nobody@gmail.com'
-        user_service = UserServiceRest(None, request, dao=MagicMock)
-        user_service._dao.delete = MagicMock(side_effect=PersistenceError())
+        user_service = UserServiceRest(None, request, dao=Mock)
+        user_service._dao.delete = Mock(side_effect=PersistenceError())
 
         with self.assertRaises(HTTPNotFound):
             user_service.delete_user()
