@@ -4,10 +4,10 @@ from decorators.profiling_decorator import profile_call
 def nsum(n):
     """Return the sum of the first n numbers"""
     assert(n >= 0), "n must be >= 0"
-    sum = 0
+    total = 0
     for i in range(n+1):
-        sum += i
-    return sum
+        total += i
+    return total
 
 
 def fibonacci(n, debug=False):
@@ -15,10 +15,13 @@ def fibonacci(n, debug=False):
     assert(n >= 1), "n must be >= 1"
     prev_num = 0
     next_num = 1
+    fib = 0
     for i in range(0, n):
         fib = prev_num + next_num
         prev_num = next_num
         next_num = fib
+    if debug:
+        print(f'fibonacci({n} returned {fib}')
     return fib
 
 

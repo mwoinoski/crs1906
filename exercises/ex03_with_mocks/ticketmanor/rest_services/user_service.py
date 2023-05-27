@@ -29,12 +29,11 @@ class UserServiceRest:
     #       during unit testing.
     #       (no code change required)
     def __init__(self, context, request, dao):
-    #def __init__(self, context, request, dao=PersonDao):
         """DAO dependency will be injected from the `dao` parameter"""
         self._context = context
         self._request = request
+        # if no DAO is supplied, use the production DAO by default
         self._dao = dao if dao else PersonDao()
-        #self._dao = dao()  # construct DAO instance and inject
 
     # URLs are mapped to route names in __init__.py with Configurator.add_route()
 
@@ -64,20 +63,21 @@ class UserServiceRest:
             #       (no code change required)
             person = self._dao.get(email, self._request.db_session)
 
-            logger.debug("%s: person = %s", func_name(self), 
+            logger.debug("%s: person = %s", func_name(self),
                          str(vars(person)) if person else "null")
 
             # TODO: note that if there is no Person with that email,
             #       the service raises an HTTPNotFound exception
             #       (no code change required)
             if not person:
-                raise HTTPNotFound()
+                raise HTTPNotFound(f'no user with email {email}')
 
         # TODO: note that if the DAO raises a PersistenceError,
         #       the service raises an HTTPNotFound exception
         #       (no code change required)
         except PersistenceError:
-            raise HTTPNotFound()
+            raise HTTPNotFound(f'problem querying user with email {email}')
+
         return person
 
     @staticmethod

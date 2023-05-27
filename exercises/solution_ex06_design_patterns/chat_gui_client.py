@@ -16,6 +16,7 @@ root = tk.Tk()
 #       the simpler chat client.
 #       (no code change required)
 
+
 # TODO: make ChatClientGui a subclass of Observer
 class ChatClientGui(Observer):
     last_y = 50

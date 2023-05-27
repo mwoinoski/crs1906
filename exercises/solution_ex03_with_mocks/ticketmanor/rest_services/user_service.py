@@ -22,11 +22,18 @@ logger = logging.getLogger(__name__)
 class UserServiceRest:
     """View Callable for managing users"""
 
-    def __init__(self, context, request, dao=PersonDao):
-        """DAO dependency will be injected from dao arg"""
+    # TODO: note that the constructor for UserServiceRest has a DAO parameter.
+    #       If no DAO parameter is passed, the service creates a production DAO
+    #       by default. This design allows the unit test to pass a mock DAO to
+    #       the service constructor, so the production DAO will never be created
+    #       during unit testing.
+    #       (no code change required)
+    def __init__(self, context, request, dao):
+        """DAO dependency will be injected from the `dao` parameter"""
         self._context = context
         self._request = request
-        self._dao = dao()  # construct DAO instance and inject
+        # if no DAO is supplied, use the production DAO by default
+        self._dao = dao if dao else PersonDao()
 
     # URLs are mapped to route names in __init__.py with Configurator.add_route()
 
@@ -45,31 +52,36 @@ class UserServiceRest:
         email = self._request.matchdict['email']
         return self.get_user(email)
 
-    # FIXME: if this method is defined, requests without an Accept header
-    # are always sent to it
-    # @view_config(request_method='GET',
-    #              route_name='rest_users_email',
-    #              accept='application/xml')
-    # def get_user_xml(self):
-    #     email = self._request.matchdict['email']
-    #     user = self.get_user(email)
-    #     return UserServiceRest.user_to_xml(user)
-
+    # TODO: you'll write test cases for the get_user() method
+    #       (no code change required)
     def get_user(self, email):
         """Fetch a Person by searching for the registered email address."""
         logger.debug("%s: email = %s", func_name(self), email)
         try:
+            # TODO: note how the service method calls the DAO's `get` method to
+            #       look up the Person record with the associated email address
+            #       (no code change required)
             person = self._dao.get(email, self._request.db_session)
+
             logger.debug("%s: person = %s", func_name(self), 
                          str(vars(person)) if person else "null")
+
+            # TODO: note that if there is no Person with that email,
+            #       the service raises an HTTPNotFound exception
+            #       (no code change required)
             if not person:
-                raise HTTPNotFound()
+                raise HTTPNotFound(f'no user with email {email}')
+
+        # TODO: note that if the DAO raises a PersistenceError,
+        #       the service raises an HTTPNotFound exception
+        #       (no code change required)
         except PersistenceError:
-            raise HTTPNotFound()
+            raise HTTPNotFound(f'problem querying user with email {email}')
+
         return person
 
     @staticmethod
-    def user_to_xml(user):  # FIXME: complete this method
+    def user_to_xml(user):
         # create xml manually as in 10-41 and 10-42
         return '<user/>'
 

@@ -36,6 +36,7 @@ def profile_call_enabled(decorated_fn):
     # outer function returns reference to nested function
     return profile
 
+
 # if configured, apply decorator with monkey patch
 profile_call = profile_call_enabled if profiling_enabled \
                                     else decorator_disabled

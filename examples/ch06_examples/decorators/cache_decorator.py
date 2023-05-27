@@ -4,6 +4,7 @@ cache_decorator.py - defines a decorator for caching function results
 
 import functools
 
+
 def cache(fn):
     cached_results = {}
 

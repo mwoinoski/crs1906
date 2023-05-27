@@ -41,11 +41,8 @@ from tkinter import messagebox
 from tkinter import filedialog
 from tkinter import simpledialog
 
-# TODO: import the logging package
-# HINT: see slide 4-8
 
-
-# TODO: import the logging.config package
+# TODO: import the logging package and the logging.config package
 # HINT: see slide 4-14
 
 

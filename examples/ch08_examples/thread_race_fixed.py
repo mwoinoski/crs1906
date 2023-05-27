@@ -35,7 +35,7 @@ class SampleSensors:
     counter = Counter()  # single shared instance of Counter
     counter_lock = Lock()
 
-    def worker(self, how_many):
+    def sample_one_sensor(self, how_many):
         """Action for each work thread.
 
         Each sensor has its own worker thread. After each measurement,
@@ -51,7 +51,7 @@ class SampleSensors:
     def sample_sensors(self):
         threads = []
         for i in range(5):
-            thread = Thread(target=SampleSensors.worker,
+            thread = Thread(target=SampleSensors.sample_one_sensor,
                             args=(self, 100_000))
             threads.append(thread)
             thread.start()
@@ -62,7 +62,6 @@ class SampleSensors:
 
     def read_from_sensor(self):
         """ Dummy method """
-        pass
 
 
 def main():
@@ -71,8 +70,11 @@ def main():
 
 
 if __name__ == '__main__':
+    # For demo purposes only: wait for two threads to arrive at the Barrier
+    # This greatly increases the chance of a race condition
     from threading import Barrier
-    barrier = Barrier(2, lambda: barrier.reset())  # increase change of race condition
+    barrier = Barrier(2, lambda: barrier.reset())
+
     from timeit import timeit
     main_time = timeit('main()', setup="from __main__ import main", number=1)
     print(f'\nTime to run main: {main_time:.2f} seconds')

@@ -88,68 +88,55 @@
 <h3>test_user_service.py</h3>
 
 <font color="grey"><pre>
-	# TODO: pass Mock as the DAO class to the UserServiceRest
-        # constructor.  </font><font color="blue">
-	user_service = UserServiceRest(None, request, dao=Mock)
-</pre></font>
-
-
-<font color="grey"><pre>
-        # TODO: configure the mock so that a call to its get() method has
-        # the side effect of raising a PersistenceError </font><font color="blue">
-	user_service._dao.get = Mock(side_effect=PersistenceError())
-</pre></font>
-
-
-<font color="grey"><pre>
-	# TODO: assert that an HTTPNotFound exception is raised when you call
-        # the user_service's get_user() method.  </font><font color="blue">
-	with self.assertRaises(HTTPNotFound):
-            user_service.get_user()
+    # TODO: create a mock DAO  </font><font color="blue">
+    mock_dao = Mock()
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: pass Mock as the DAO class to the UserServiceRest
-        # constructor.  </font><font color="blue">
-	user_service = UserServiceRest(None, request, dao=Mock)
-</pre></font>
-
-
-<font color="grey"><pre>
-	# TODO: program the mock DAO's get() method to have a side effect of
-        # raising a ValueError.  </font><font color="blue">
-	user_service._dao.get = Mock(side_effect=ValueError())
-</pre></font>
-
-
-<font color="grey"><pre>
-	# TODO: assert that a ValueError is raised when you call
-        # the user_service's get_user() method.  </font><font color="blue">
-	with self.assertRaises(ValueError):
-            user_service.get_user()
+    # TODO: assign None to the return value of the mock DAO's `get` method  </font><font color="blue">
+    mock_dao.get.return_value = None
 </pre></font>
 
 <font color="grey"><pre>
-    # TODO: use the @nose.tools.raises decorator to verify that this test
-    # raises an HTTPNotFound exception.  </font><font color="blue">
-    @raises(HTTPNotFound) </font><font color="grey">    
-    def test_get_not_found_with_decorator(self):
-</pre></font>
-
-
-<font color="grey"><pre>
-	# TODO: call the user_service get_user() method.  </font><font color="blue">
-	user_service.get_user()
+    # TODO: create a UserServiceRest instance, passing the mock_dao as
+    #       the third argument  </font><font color="blue">
+    user_service = UserServiceRest(None, request, mock_dao)
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: assert that an HTTPInternalServerError is raised when you call
-        # the user_service's add_user() method, and that the exception's
-        # message includes the string 'Could not add' </font><font color="blue">
-	with self.assertRaisesRegex(HTTPInternalServerError, r'Could not add'):
-            user_service.add_user()
+    # TODO: add a `with` statement to assert that the nested method call
+    #       raises an HTTPNotFound exception  </font><font color="blue">
+    with raises(HTTPNotFound):
 </pre></font>
 
+<font color="grey"><pre>
+        # TODO: call the UserServiceRest's `get_user` method, passing
+        #       any string as an argument  </font><font color="blue">
+        user_service.get_user('a@b.com')
+</pre></font>
+
+<font color="grey"><pre>
+    # TODO: create a mock DAO  </font><font color="blue">
+    mock_dao = Mock()
+</pre></font>
+
+<font color="grey"><pre>
+    # TODO: create a UserServiceRest instance, passing the mock_dao as
+    #       the last argument  </font><font color="blue">
+    user_service = UserServiceRest(None, request, mock_dao)
+</pre></font>
+
+<font color="grey"><pre>
+    # TODO: add a `with` statement to assert that the nested method call
+    #       raises an HTTPNotFound exception  </font><font color="blue">
+    with raises(HTTPNotFound, match=r'problem querying user with email a@b.com'):
+</pre></font>
+
+<font color="grey"><pre>
+        # TODO: call the UserServiceRest's `get_user` method, passing
+        #       any string as an argument  </font><font color="blue">
+        user_service.get_user('a@b.com')
+</pre></font>
 
 </body>
 </html>
