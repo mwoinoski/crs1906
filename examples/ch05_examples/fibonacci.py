@@ -22,8 +22,9 @@ def fib_seq(n):
 
 
 def main():
-    for i in range(20):
-        fib_seq(i)
+    for i in range(1, 20):
+        next_fib_seq = fib_seq(i)
+        print(f'First {i+1} Fibonacci numbers: {next_fib_seq}')
 
 
 if __name__ == '__main__':
