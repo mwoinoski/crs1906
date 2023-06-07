@@ -85,4 +85,4 @@ def test_eq_instances_not_equal():
     p1 = Person("John", None, "Adams")
     p2 = Person("John", "Quincy", "Adams")
 
-    assert p1 != p2  # != calls p1.__ne__(p2) if __ne__ is defined, otherwise !p1.__eq__(p2)
+    assert p1 != p2  # != calls p1.__ne__(p2) if __ne__ is defined, otherwise calls !p1.__eq__(p2)

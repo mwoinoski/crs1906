@@ -2,6 +2,22 @@
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[tool.build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+[project]
+name = "setup_example"
+version = "1.0.0"
+authors = [
+    {name = "Pat Python", email = "pat.python42@gmail.com"},
+]
+description = "Demo of Python project configuration"
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "rich"
+]
+
+[tools.setuptools.packages.find]
+exclude = ["tests*"]

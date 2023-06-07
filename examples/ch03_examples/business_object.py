@@ -32,7 +32,7 @@ class BusinessObject:
         return self.name
 
 
-class UserDao(object):
+class UserDao:
     """Class that encapsulates database access"""
     def __init__(self):
         print('UserDao.__init__')
