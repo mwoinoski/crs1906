@@ -12,7 +12,7 @@ __author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
 
 class Person:
     def __init__(self, name, age=None):
-        if not age is None and (not isinstance(age, (int, float)) or age <= 0):
+        if age is not None and (not isinstance(age, (int, float)) or age <= 0):
             raise ValueError(f"Invalid age {age}: age must be greater than 0")
         self.name = name
         self._age = age

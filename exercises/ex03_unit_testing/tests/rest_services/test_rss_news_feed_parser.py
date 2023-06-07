@@ -106,61 +106,56 @@ class TestRssNewsFeedParser:
         # HINT: see slide 3-19
         ....
 
-    # TODO: Define a test method named test_get_news_music_max_items_1
-    ....
-        # TODO: in the test_get_news_music_max_items_1 method, create an
-        #       instance of RssNewsFeedParser and save a reference to it in a
-        #       local variable.
-        ....
-
-        # TODO:
-        #       1. call the feed reader's get_news() method, passing
-        #          news_type='music' and max_items=1 as the arguments.
-        #       2. save the list returned by the method in a local variable
-        ....
-
-        # TODO: assert that the returned list has length 1 and that the first
-        #       item of the `expected` list equals the first item of the returned 
-        #       list.
-        # HINT: use the built-in function len(), or use list slicing
-        ....
 
 
-    # TODO: Define a test method named test_get_news_invalid_news_type
-    ....
+# TODO: After you get the first test case running, uncomment the following 
+#       test case and make the required changes. Then run the file again and 
+#       verify this second test case passes.
+# HINT: In PyCharm, to uncomment lines, highlight the commented lines and then
+#       press Ctrl-/
 
-        # TODO: in the test_get_news_invalid_news_type method, create an
-        #       instance of RssNewsFeedParser and save a reference to it in a
-        #       local variable.
-        ....
+#     # TODO: Define a test method named test_get_news_music_max_items_1
+#     ....
+#         # TODO: in the test_get_news_music_max_items_1 method, create an
+#         #       instance of RssNewsFeedParser and save a reference to it in a
+#         #       local variable.
+#         ....
+# 
+#         # TODO:
+#         #       1. call the feed reader's get_news() method, passing
+#         #          news_type='music' and max_items=1 as the arguments.
+#         #       2. save the list returned by the method in a local variable
+#         ....
+# 
+#         # TODO: assert that the returned list has length 1 and that the first
+#         #       item of the `expected` list equals the first item of the returned 
+#         #       list.
+#         # HINT: use the built-in function len(), or use list slicing
+#         ....
 
-        # TODO: Call an assert method to verify that if you call the
-        #       feed reader's get_news() method with an invalid news type argument
-        #       (for example, 'pluto'), the method raises a FeedReaderException.
-        # HINT: see slide 3-15
-        ....
+
+# TODO: uncomment the following function, make the required changes,
+#       and verify this third test case passes.
+
+
+#     # TODO: Define a test method named test_get_news_invalid_news_type
+#     ....
+# 
+#         # TODO: in the test_get_news_invalid_news_type method, create an
+#         #       instance of RssNewsFeedParser and save a reference to it in a
+#         #       local variable.
+#         ....
+# 
+#         # TODO: Call an assert method to verify that if you call the
+#         #       feed reader's get_news() method with an invalid news type argument
+#         #       (for example, 'pluto'), the method raises a FeedReaderException.
+#         # HINT: see slide 3-15
+#         ....
 
 
     # TODO: examine the remaining test cases and be sure you understand
     #       how they work.
     #       (no code changes required)
-
-    def test_get_news_music_zip_longest(self):
-        feed_reader = RssNewsFeedParser()
-
-        actual = feed_reader.get_news('music')
-
-        self.assertEqual(expected, actual)
-
-    def test_get_news_max_items_1(self):
-        feed_reader = RssNewsFeedParser()
-
-        # Note the call FeedReader.get_news() with a max_items argument
-        actual = feed_reader.get_news('music', max_items=1)
-
-        # Note the use of list slicing in the following assertion to verify
-        # that the actual returned list contains only one item.
-        self.assertEqual(expected[:1], actual)
 
     def test_get_news_max_items_2(self):
         feed_reader = RssNewsFeedParser()
@@ -202,5 +197,4 @@ class TestRssNewsFeedParser:
 
 
 if __name__ == '__main__':
-    # TODO: call unittest.main()
-    ....
+    unittest.main()

@@ -30,7 +30,7 @@ class Subject(metaclass=ABCMeta):
 class Observer(metaclass=ABCMeta):
     @abstractmethod
     def update(self, subject):
-        pass
+        """ Subject notifies observer by calling this method """
 
 
 class ConcreteSubject(Subject):

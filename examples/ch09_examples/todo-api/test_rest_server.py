@@ -13,12 +13,12 @@ def get_task(task_id):
     creds = ('student', 'studentpw')
     url = f'{base_url}/{task_id}'
 
-    r = requests.get(url, auth=creds, headers=http_hdrs)
+    response = requests.get(url, auth=creds, headers=http_hdrs)
 
-    if r.status_code != 200:
+    if response.status_code != 200:
         raise RuntimeError('Oops')
 
-    json_result = r.json()
+    json_result = response.json()
 
     task = json_result['task']
     return task['title'], task['description'], task['done']
@@ -34,13 +34,13 @@ def create_task(title, description, done):
         'done': done,
     }
 
-    r = requests.post(base_url, auth=creds, headers=http_hdrs,
+    response = requests.post(base_url, auth=creds, headers=http_hdrs,
                       json=task)
 
-    if r.status_code != 201:
+    if response.status_code != 201:
         raise RuntimeError('Problem creating task')
 
-    return r.json()
+    return response.json()
 
 
 def update_task(task_id, task):
@@ -48,21 +48,21 @@ def update_task(task_id, task):
     http_hdrs = {'Accept': 'application/json'}
     creds = ('student', 'studentpw')
 
-    r = requests.put(url, auth=creds,
+    response = requests.put(url, auth=creds,
                      headers=http_hdrs, json=task)
 
-    if r.status_code != 202:
+    if response.status_code != 202:
         raise RuntimeError('Problem updating task')
 
-    return r.json()
+    return response.json()
 
 
 def delete_task(task_id):
     url = f'{base_url}/{task_id}'
 
-    r = requests.delete(url, auth=('student', 'studentpw'))
+    response = requests.delete(url, auth=('student', 'studentpw'))
 
-    if r.status_code != 204:
+    if response.status_code != 204:
         raise RuntimeError('Problem deleting task')
 
 
@@ -85,11 +85,11 @@ class TestRestServer(unittest.TestCase):
         http_hdrs = {'Accept': 'application/json'}
         creds = ('student', 'studentpw')
 
-        r = requests.get(base_url, auth=creds,
+        response = requests.get(base_url, auth=creds,
                          headers=http_hdrs)
-        json_dict = r.json()
+        json_dict = response.json()
 
-        self.assertEqual(200, r.status_code)
+        self.assertEqual(200, response.status_code)
         for task in json_dict['tasks']:
             del task['id']
         self.assertEqual(tasks, json_dict['tasks'][:2])

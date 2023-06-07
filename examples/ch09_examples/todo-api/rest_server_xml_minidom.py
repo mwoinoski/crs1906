@@ -12,7 +12,7 @@ import rest_server_dao
 
 __author__ = 'Miguel Grinberg (https://www.linkedin.com/in/miguelgrinberg)'
 
-app = Flask(__name__, static_url_path="")
+app = Flask(__name__)
 auth = HTTPBasicAuth()
 
 

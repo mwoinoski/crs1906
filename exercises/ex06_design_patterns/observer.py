@@ -44,4 +44,4 @@ class Observer(metaclass=ABCMeta):
 
     @abstractmethod
     def update(self, data):
-        pass
+        """ Subject notifies observer by calling this method """

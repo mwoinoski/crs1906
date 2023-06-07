@@ -71,21 +71,21 @@ def test_get_user_found():
     # TODO: set the HTTP Accept header to 'application/json'
     http_headers = {'Accept': 'application/json'}
 
-    # TODO: send the GET request and store the result in a variable named 'r'
-    r = requests.get(url, headers=http_headers)
+    # TODO: send the GET request and store the result in a variable named 'response'
+    response = requests.get(url, headers=http_headers)
 
     # TODO: get the JSON from the response body and assign it to a variable
     #       named 'actual_result'
-    actual_result = r.json()
+    actual_result = response.json()
 
-    print(f'GET {url} status {r.status_code}, response = {actual_result}')
+    print(f'GET {url} status {response.status_code}, response = {actual_result}')
 
     # update our test user with the id by the database
     user_ned['id'] = actual_result['id']
 
     # TODO: note the assertions that test the result of the REST request
     #       (no code change required)
-    assert r.status_code == 200
+    assert response.status_code == 200
     assert actual_result == user_ned
 
 
@@ -93,9 +93,9 @@ def test_get_user_not_found():
     url = f'{base_url}/nobody@nowhere.com'
     headers = {'Accept': 'application/json'}
 
-    r = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers)
 
-    assert r.status_code == 404
+    assert response.status_code == 404
 
 
 def test_add_user_ok():
@@ -110,15 +110,15 @@ def test_add_user_ok():
     # TODO: set the HTTP Accept header to 'application/json'
     http_headers = {'Content-Type': 'application/json'}
 
-    # TODO: send the POST request and store the result in a variable named `r`
+    # TODO: send the POST request and store the result in a variable named `response`
     #       Pass the the dictionary named user_miles as the JSON data
-    r = requests.post(url, headers=http_headers, json=user_miles)
+    response = requests.post(url, headers=http_headers, json=user_miles)
 
-    print(f'POST status {r.status_code}')
+    print(f'POST status {response.status_code}')
 
     # TODO: note the assertion that tests the result of the REST request
     #       (no code change required)
-    assert r.status_code == 201
+    assert response.status_code == 201
 
 
 def test_update_user_ok():
@@ -133,20 +133,20 @@ def test_update_user_ok():
     # TODO: set the url to base_url
     url = base_url
 
-    # TODO: send the PUT request and store the result in a variable named 'r'
+    # TODO: send the PUT request and store the result in a variable named 'response'
     #       Pass the the dictionary named user_miles as the JSON data
-    r = requests.put(url, json=user_miles)
+    response = requests.put(url, json=user_miles)
 
-    print(f'PUT status {r.status_code}')
+    print(f'PUT status {response.status_code}')
 
     # TODO: note the assertion that tests the result of the REST request
     #       (no code change required)
-    assert r.status_code == 202
+    assert response.status_code == 202
 
 
 def test_delete_user_not_found():
     url = f'{base_url}/nobody@nowhere.com'
 
-    r = requests.delete(url)
+    response = requests.delete(url)
 
-    assert r.status_code == 404
+    assert response.status_code == 404
