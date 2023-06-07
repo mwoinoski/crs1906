@@ -55,7 +55,7 @@ class PersonTestCase(unittest.TestCase):
 
     def test_init_all_args_empty(self):
         with self.assertRaises(ValueError):
-            person = Person("", "", "")
+            Person("", "", "")
 
     def test_eq_instances_equal(self):
         p1 = Person("John", "Quincy", "Adams")
