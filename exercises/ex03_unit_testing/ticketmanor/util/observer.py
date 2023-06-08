@@ -13,7 +13,7 @@ class Observer(metaclass=ABCMeta):
     """
     @abstractmethod
     def update(self, observable):
-        pass
+        """ Subject calls update to notify an Observer of a change of state """
 
 
 class Subject(metaclass=ABCMeta):

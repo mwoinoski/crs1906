@@ -8,6 +8,7 @@ from unittest import TestCase
 
 from ticketmanor.util.utils import html_escape, html_unescape
 
+
 class TestUtil(TestCase):
     """Unit tests for utility functions"""
 

@@ -2,8 +2,10 @@
 Unit tests for RssNewsFeedParser class.
 """
 
-import unittest
-from unittest import TestCase, skip
+import re
+import pytest
+from pytest import raises
+
 from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import (
     RssNewsFeedParser,
 )
@@ -184,16 +186,38 @@ class TestRssNewsFeedParser:
 
         self.assertEqual(expected[:2], actual)
 
-    @classmethod
-    def setUpClass(cls):
-        """
-        Monkey patch RssNewsFeedParser.get_raw_content.
+        def test_get_dummy_news(self):
+            feed_reader = RssNewsFeedParser()
 
-        We discuss monkey patching in the second section of the Unit Testing
-        chapter.
-        """
-        RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input
+            dummy_news = feed_reader.get_dummy_news('', 'movies')
+
+            assert re.match(r'^\s*<rss.*</rss>\s*$', dummy_news, flags=re.DOTALL)
+
+        def test_parse_content_items_missing(self):
+            feed_reader = RssNewsFeedParser()
+
+            minimal_input = '<rss><item></item></rss>'
+            minimal_results = [
+                {
+                    'title': '',
+                    'link': '',
+                    'date_time': '',
+                    'image_thumbnail': '',
+                    'image_banner': '',
+                    'content': ''
+                }
+            ]
+
+            actual_results = feed_reader.parse_xml_content(minimal_input)
+
+            assert minimal_results == actual_results
 
 
-if __name__ == '__main__':
-    unittest.main()
+@pytest.fixture(autouse=True, scope='function')
+def parser_monkey_patch():
+    """
+    Monkey patch RssNewsFeedParser.get_raw_content to return our mock XML input.
+    (We discuss monkey patching in the second section of the Unit Testing
+    chapter.)
+    """
+    RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input

@@ -2,6 +2,7 @@
 Unit tests for RssNewsFeedParser class.
 """
 
+import re
 import pytest
 from pytest import raises
 
@@ -189,9 +190,14 @@ class TestRssNewsFeedParser:
 
         assert expected[:2] == actual
 
-    def test_parse_content_items_missing(self):
-        """This test case will boost test coverage to 100%"""
+    def test_get_dummy_news(self):
+        feed_reader = RssNewsFeedParser()
 
+        dummy_news = feed_reader.get_dummy_news('', 'movies')
+
+        assert re.match(r'^\s*<rss.*</rss>\s*$', dummy_news, flags=re.DOTALL)
+
+    def test_parse_content_items_missing(self):
         feed_reader = RssNewsFeedParser()
 
         minimal_input = '<rss><item></item></rss>'

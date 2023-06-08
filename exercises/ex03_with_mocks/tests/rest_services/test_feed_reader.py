@@ -5,7 +5,6 @@ Unit tests for FeedReader class.
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest.mock import Mock, patch
-from unittest import TestCase, main, skip
 from itertools import zip_longest
 from ticketmanor.rest_services.feed_reader.feed_reader import FeedReader
 from ticketmanor.rest_services.feed_reader import FeedReaderException
@@ -14,14 +13,14 @@ from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import (
 )
 
 
-class TestFeedReader(TestCase):
+class TestFeedReader:
     """Unit tests for FeedReader"""
 
     # This test method creates a Mock news feed parser
     def test_fetch_news_items_music(self):
         # TODO: create a mock RssNewsFeedParser object and assign it to a local
         #       variable named `mock_news_feed_parser`
-        # HINT: see slide 3-37
+        # HINT: see slide 3-39
         mock_news_feed_parser = ....
 
         # TODO: set the return value of the mock's get_news() method to the
@@ -46,17 +45,17 @@ class TestFeedReader(TestCase):
         # TODO: note that we verify the result as usual.
         #       (no code change required)
         for expected_result, actual_result in zip_longest(expected, news):
-            self.assertEqual(expected_result, actual_result)
+            assert expected_result == actual_result
 
     # This test method uses a Mock news feed parser to raise an exception
-    def test_fetch_news_items_raise_FeedReaderException(self):
+    def test_fetch_news_items_raise_feedreaderexception(self):
         # TODO: create a mock RssNewsFeedParser object and assign it to a local
         #       variable named `mock_news_feed_parser`
         mock_news_feed_parser = ....
 
         # TODO: set the `side_effect` attribute of the mock's `get_news` method
         #       so it raises a FeedReaderException when called.
-        # HINT: see slide 3-40
+        # HINT: see slide 3-38
         ....
 
         # TODO: create a FeedReader instance and assign it to a local variable
@@ -98,7 +97,7 @@ class TestFeedReader(TestCase):
         mock_news_feed_parser.get_news.assert_called_once_with("music", 1)
         # verify results
         for expected_result, actual_result in zip_longest(expected, news):
-            self.assertEqual(expected_result, actual_result)
+            assert expected_result == actual_result
 
     def test_fetch_news_items_max_items_2(self):
         # test set up
@@ -115,7 +114,7 @@ class TestFeedReader(TestCase):
         mock_news_feed_parser.get_news.assert_called_once_with("music", 2)
         # verify results
         for expected_result, actual_result in zip_longest(expected, news):
-            self.assertEqual(expected_result, actual_result)
+            assert expected_result == actual_result
 
 expected = [
     {
@@ -140,6 +139,3 @@ expected = [
         "content": "Third item content..."
     },
 ]
-
-if __name__ == '__main__':
-    main()

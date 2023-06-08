@@ -5,7 +5,6 @@ Unit tests for FeedReader class.
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest.mock import Mock, patch
-from unittest import TestCase, main, skip
 from itertools import zip_longest
 from ticketmanor.rest_services.feed_reader.feed_reader import FeedReader
 from ticketmanor.rest_services.feed_reader import FeedReaderException
@@ -14,7 +13,7 @@ from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import (
 )
 
 
-class TestFeedReader(TestCase):
+class TestFeedReader:
     """Unit tests for FeedReader"""
 
     # This test method creates a Mock news feed parser
@@ -45,10 +44,10 @@ class TestFeedReader(TestCase):
         # TODO: note that we verify the result as usual.
         #       (no code change required)
         for expected_result, actual_result in zip_longest(expected, news):
-            self.assertEqual(expected_result, actual_result)
+            assert expected_result == actual_result
 
     # This test method uses a Mock news feed parser to raise an exception
-    def test_fetch_news_items_raise_FeedReaderException(self):
+    def test_fetch_news_items_raise_feedreaderexception(self):
         # TODO: create a mock RssNewsFeedParser object and assign it to a local
         #       variable named `mock_news_feed_parser`
         mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
@@ -71,10 +70,10 @@ class TestFeedReader(TestCase):
         news = feed_reader.fetch_news_items('quack')
 
         # TODO: assert that the `news` variable is an instance of list.
-        self.assertTrue(isinstance(news, list))
+        assert isinstance(news, list)
 
         # TODO: assert that the length of the `news` list is 0
-        self.assertEqual(0, len(news))
+        assert 0 == len(news)
 
         # TODO: note that the call to fetch_news_items() will log a stack
         #       trace, but as long as you get a green bar, the test case passed.
@@ -95,7 +94,7 @@ class TestFeedReader(TestCase):
         mock_news_feed_parser.get_news.assert_called_once_with("music", 1)
         # verify results
         for expected_result, actual_result in zip_longest(expected, news):
-            self.assertEqual(expected_result, actual_result)
+            assert expected_result == actual_result
 
     def test_fetch_news_items_max_items_2(self):
         # test set up
@@ -112,7 +111,7 @@ class TestFeedReader(TestCase):
         mock_news_feed_parser.get_news.assert_called_once_with("music", 2)
         # verify results
         for expected_result, actual_result in zip_longest(expected, news):
-            self.assertEqual(expected_result, actual_result)
+            assert expected_result == actual_result
 
     # The @patch.object decorator is an alternate way to create a Mock for a
     # method call. @patch.object takes two arguments:
@@ -143,7 +142,7 @@ class TestFeedReader(TestCase):
         mock_get_news_method.assert_called_once_with("music", 1)
         # verify results
         for expected_result, actual_result in zip_longest(expected, news):
-            self.assertEqual(expected_result, actual_result)
+            assert expected_result == actual_result
 
     # The @patch decorator allows you to completely replace the
     # RssNewsFeedParser class. This ensures that its constructor is never
@@ -173,7 +172,8 @@ class TestFeedReader(TestCase):
         mock_news_feed_parser.get_news.assert_called_once_with("music", 2)
         # verify results
         for expected_result, actual_result in zip_longest(expected, news):
-            self.assertEqual(expected_result, actual_result)
+            assert expected_result == actual_result
+
 
 expected = [
     {
@@ -198,6 +198,3 @@ expected = [
         "content": "Third item content..."
     },
 ]
-
-if __name__ == '__main__':
-    main()
