@@ -2,8 +2,9 @@
 Unit tests for RssNewsFeedParser class.
 """
 
-import unittest
-from unittest import TestCase, skip
+import pytest
+from pytest import raises
+
 from ticketmanor.rest_services.feed_reader.rss_news_feed_parser import (
     RssNewsFeedParser,
 )
@@ -83,8 +84,7 @@ expected = [
 ]
 
 
-# TODO: make TestRssNewsFeedParser a subclass of unittest.TestCase
-class TestRssNewsFeedParser(TestCase):
+class TestRssNewsFeedParser:
     """Unit tests for RssNewsFeedParser"""
 
     # TODO: Define a test method named test_get_news_music
@@ -93,8 +93,7 @@ class TestRssNewsFeedParser(TestCase):
         #       RssNewsFeedParser and save a reference to it in a local variable
         feed_reader = RssNewsFeedParser()
 
-        # TODO:
-        #       1. call the news feed parser's get_news() method, passing 'music' as
+        # TODO: 1. call the news feed parser's get_news() method, passing 'music' as
         #          the argument
         #       2. save the list returned by the method in a local variable
         #          named `actual`
@@ -102,7 +101,7 @@ class TestRssNewsFeedParser(TestCase):
 
         # TODO: call a method that asserts the list named `expected` is
         #       equal to the list named `actual`, which was returned from get_news()
-        self.assertEqual(expected, actual)
+        assert expected == actual
 
     # TODO: Define a test method named test_get_news_music_max_items_1
     def test_get_news_music_max_items_1(self):
@@ -111,8 +110,7 @@ class TestRssNewsFeedParser(TestCase):
         #       local variable.
         feed_reader = RssNewsFeedParser()
 
-        # TODO:
-        #       1. call the feed reader's get_news() method, passing
+        # TODO: 1. call the feed reader's get_news() method, passing
         #          news_type='music' and max_items=1 as the arguments.
         #       2. save the list returned by the method in a local variable
         actual = feed_reader.get_news('music', max_items=1)
@@ -120,14 +118,14 @@ class TestRssNewsFeedParser(TestCase):
         # TODO: assert that the returned list has length 1 and that the first
         #       item of the `expected` list equals the first item of the returned 
         #       list.
-        self.assertEqual(1, len(actual))
-        self.assertEqual(expected[0], actual[0])
+        assert 1 == len(actual)
+        assert expected[0] == actual[0]
 
         # Note that you can combine the two previous assertions into one using
         # list slicing:
-        self.assertEqual(expected[:1], actual)
+        assert expected[:1] == actual
         # Because both arguments to assertEqual() are lists, the method
-        # compares the lists' lengths as well as their contents.
+        # compares the lists' lengths and their contents.
 
     # TODO: Define a test method named test_get_news_invalid_news_type
     def test_get_news_invalid_news_type(self):
@@ -139,7 +137,7 @@ class TestRssNewsFeedParser(TestCase):
         # TODO: Call an assert method to verify that if you call the
         #       feed reader's get_news() method with an invalid news type argument
         #       (for example, 'pluto'), the method raises a FeedReaderException.
-        with self.assertRaises(FeedReaderException):
+        with raises(FeedReaderException):
             feed_reader.get_news('pluto')
 
     # TODO: examine the remaining test cases and be sure you understand
@@ -151,7 +149,7 @@ class TestRssNewsFeedParser(TestCase):
 
         actual = feed_reader.get_news('music')
 
-        self.assertEqual(expected, actual)
+        assert expected == actual
 
     def test_get_news_max_items_1(self):
         feed_reader = RssNewsFeedParser()
@@ -161,35 +159,35 @@ class TestRssNewsFeedParser(TestCase):
 
         # Note the use of list slicing in the following assertion to verify
         # that the actual returned list contains only one item.
-        self.assertEqual(expected[:1], actual)
+        assert expected[:1] == actual
 
     def test_get_news_max_items_2(self):
         feed_reader = RssNewsFeedParser()
 
         actual = feed_reader.get_news('music', max_items=2)
 
-        self.assertEqual(expected[:2], actual)
+        assert expected[:2] == actual
 
     def test_parse_content(self):
         feed_reader = RssNewsFeedParser()
 
         actual = feed_reader.parse_xml_content(xml_input)
 
-        self.assertEqual(expected, actual)
+        assert expected == actual
 
     def test_parse_content_max_items_1(self):
         feed_reader = RssNewsFeedParser()
 
         actual = feed_reader.parse_xml_content(xml_input, max_items=1)
 
-        self.assertEqual(expected[:1], actual)
+        assert expected[:1] == actual
 
     def test_parse_content_max_items_2(self):
         feed_reader = RssNewsFeedParser()
 
         actual = feed_reader.parse_xml_content(xml_input, max_items=2)
 
-        self.assertEqual(expected[:2], actual)
+        assert expected[:2] == actual
 
     def test_parse_content_items_missing(self):
         """This test case will boost test coverage to 100%"""
@@ -210,19 +208,14 @@ class TestRssNewsFeedParser(TestCase):
 
         actual_results = feed_reader.parse_xml_content(minimal_input)
 
-        self.assertEqual(minimal_results, actual_results)
-
-    @classmethod
-    def setUpClass(cls):
-        """
-        Monkey patch RssNewsFeedParser.get_raw_content.
-
-        We discuss monkey patching in the second section of the Unit Testing
-        chapter.
-        """
-        RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input
+        assert minimal_results == actual_results
 
 
-if __name__ == '__main__':
-    # TODO: call unittest.main()
-    unittest.main()
+@pytest.fixture(autouse=True, scope='function')
+def parser_monkey_patch():
+    """
+    Monkey patch RssNewsFeedParser.get_raw_content to return our mock XML input.
+    (We discuss monkey patching in the second section of the Unit Testing
+    chapter.)
+    """
+    RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input

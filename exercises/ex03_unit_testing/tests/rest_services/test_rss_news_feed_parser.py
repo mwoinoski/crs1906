@@ -83,12 +83,11 @@ expected = [
 ]
 
 
-# TODO: make TestRssNewsFeedParser a subclass of unittest.TestCase
-# HINT: see slide 3-9
 class TestRssNewsFeedParser:
     """Unit tests for RssNewsFeedParser"""
 
     # TODO: Define a test method named test_get_news_music
+    # HINT: see slide 3-16
     ....
         # TODO: in the test_get_news_music method, create an instance of
         #       RssNewsFeedParser and save a reference to it in a local variable
@@ -103,7 +102,7 @@ class TestRssNewsFeedParser:
 
         # TODO: call a method that asserts the list named `expected` is
         #       equal to the list named `actual`, which was returned from get_news()
-        # HINT: see slide 3-19
+        # HINT: see slide 3-18
         ....
 
 
@@ -149,7 +148,7 @@ class TestRssNewsFeedParser:
 #         # TODO: Call an assert method to verify that if you call the
 #         #       feed reader's get_news() method with an invalid news type argument
 #         #       (for example, 'pluto'), the method raises a FeedReaderException.
-#         # HINT: see slide 3-15
+#         # HINT: see slide 3-22
 #         ....
 
 

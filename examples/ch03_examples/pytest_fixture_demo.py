@@ -1,5 +1,5 @@
 r"""
-fixture_demo.py - Test case that defines a test fixture
+pytest_fixture_demo.py - Test case that defines a test fixture
 """
 
 import sqlite3

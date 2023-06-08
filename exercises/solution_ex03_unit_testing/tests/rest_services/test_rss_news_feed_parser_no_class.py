@@ -74,7 +74,7 @@ expected = [
 ]
 
 # TODO: note that there is no TestCase subclass defined in this module.
-#       The test cases are ordinary functions rather than methods.
+#       The test cases are global functions rather than methods.
 #       (no code changes required)
 
 # TODO:
