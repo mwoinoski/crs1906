@@ -464,8 +464,8 @@ if __name__ == "__main__":
             if decorator_enabled:
                 # TODO: call the get_function_stats() function and print the stats
                 #       for all decorated functions
-                print('{Function Call Stats:^61}')
-                print('{Function name:32s} {Calls:>8s}  {Avg Time (seconds):22s}')
+                print(f'{"Function Call Stats":^61}')
+                print(f'{"Function name":32s} {"Calls":>8s}  {"Avg Time (seconds)":22s}')
                 print('-' * 61)
-                for stats in get_function_stats():
-                    print('{:32s} {:8d}  {:13.6f}'.format(*stats))
+                for name, calls, time_per_call in get_function_stats():
+                    print(f'{name:32s} {calls:8d}  {time_per_call:13.6f}')
