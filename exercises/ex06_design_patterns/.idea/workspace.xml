@@ -91,8 +91,8 @@
     </option>
     <option name="myIpythonEnabled" value="false" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_chat_observer.py">
-    <configuration name="Run chat_gui_client" type="PythonConfigurationType" factoryName="Python">
+  <component name="RunManager" selected="Python tests in test_chat_observer.py">
+    <configuration name="Run chat_gui_client.py" type="PythonConfigurationType" factoryName="Python">
       <module name="ex06_design_patterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -113,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Run chat_server" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="Run chat_server.py" type="PythonConfigurationType" factoryName="Python">
       <module name="ex06_design_patterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -151,9 +151,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Run chat_gui_client" />
-      <item itemvalue="Python.Run chat_server" />
-      <item itemvalue="Python tests.Unittests in test_chat_observer.py" />
+      <item itemvalue="Run chat_gui_client.py" />
+      <item itemvalue="Run chat_server.py" />
+      <item itemvalue="Python tests in test_chat_observer.py" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

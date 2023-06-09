@@ -79,7 +79,7 @@
       <recent name="C:\crs1906\exercises\solution_ex03_with_mocks\tests\rest_services" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_user_service.py">
+  <component name="RunManager" selected="Python tests in test_user_service.py">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -147,9 +147,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.All tests" />
-      <item itemvalue="Python tests.Unittests in test_feed_reader.py" />
-      <item itemvalue="Python tests.Unittests in test_user_service.py" />
+      <item itemvalue="All tests" />
+      <item itemvalue="Python tests in test_feed_reader.py" />
+      <item itemvalue="Python tests in test_user_service.py" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

@@ -78,7 +78,7 @@
       <recent name="C:\crs1906\exercises\solution_ex09_rest_services\user_service\db" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_user_rest_service_json">
+  <component name="RunManager" selected="Python tests in test_user_rest_service_json.py">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -98,7 +98,7 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration name="Run rest_server" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="Run rest_server.py" type="PythonConfigurationType" factoryName="Python">
       <module name="solution_ex09_rest_services" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -119,7 +119,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_rest_server" type="tests" factoryName="py.test">
+    <configuration name="Python tests in test_rest_server.py" type="tests" factoryName="py.test">
       <module name="solution_ex09_rest_services" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -135,7 +135,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_user_rest_service_json" type="tests" factoryName="py.test">
+    <configuration name="Python tests in test_user_rest_service_json.py" type="tests" factoryName="py.test">
       <module name="solution_ex09_rest_services" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -152,9 +152,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Run rest_server" />
-      <item itemvalue="Python tests.pytest in test_rest_server" />
-      <item itemvalue="Python tests.pytest in test_user_rest_service_json" />
+      <item itemvalue="Python.Run rest_server.py" />
+      <item itemvalue="Python tests in test_rest_server.py" />
+      <item itemvalue="Python tests in test_user_rest_service_json.py" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

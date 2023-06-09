@@ -63,7 +63,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/models/persistence/test_act_dao.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_person_dao.py">
+  <component name="RunManager" selected="Python tests in test_person_dao.py">
     <configuration name="All tests" type="tests" factoryName="py.test">
       <module name="solution_ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -204,15 +204,15 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.All tests" />
-      <item itemvalue="Python tests.Unittests in test_act_dao.py" />
-      <item itemvalue="Python tests.Unittests in test_act.py" />
-      <item itemvalue="Python tests.Unittests in test_address.py" />
-      <item itemvalue="Python tests.Unittests in test_customer.py" />
-      <item itemvalue="Python tests.Unittests in test_func_stats.py" />
-      <item itemvalue="Python tests.Unittests in test_member.py" />
-      <item itemvalue="Python tests.Unittests in test_person_dao.py" />
-      <item itemvalue="Python tests.Unittests in test_venue_dao.py" />
+      <item itemvalue="All tests" />
+      <item itemvalue="Python tests in test_act_dao.py" />
+      <item itemvalue="Python tests in test_act.py" />
+      <item itemvalue="Python tests in test_address.py" />
+      <item itemvalue="Python tests in test_customer.py" />
+      <item itemvalue="Python tests in test_func_stats.py" />
+      <item itemvalue="Python tests in test_member.py" />
+      <item itemvalue="Python tests in test_person_dao.py" />
+      <item itemvalue="Python tests in test_venue_dao.py" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />

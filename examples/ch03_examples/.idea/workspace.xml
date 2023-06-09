@@ -108,7 +108,7 @@
       <recent name="C:\crs1906\examples\ch03_examples\db" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_person.py">
+  <component name="RunManager" selected="Python tests in test_person.py">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -166,7 +166,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.test_person_exceptions" />
-      <item itemvalue="Python tests.Unittests in test_person.py" />
+      <item itemvalue="Python tests in test_person.py" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
