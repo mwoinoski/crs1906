@@ -79,6 +79,11 @@ class TestFeedReader:
         #       trace, but as long as you get a green bar, the test case passed.
         #       (no code change required)
 
+
+    # TODO: examine the remaining test cases and be sure you understand
+    #       how they work.
+    #       (no code changes required)
+
     def test_fetch_news_items_max_items_1(self):
         # test set up
         mock_news_feed_parser = Mock(spec=RssNewsFeedParser)

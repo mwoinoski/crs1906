@@ -47,40 +47,49 @@ class TestFeedReader:
         for expected_result, actual_result in zip_longest(expected, news):
             assert expected_result == actual_result
 
-    # This test method uses a Mock news feed parser to raise an exception
-    def test_fetch_news_items_raise_feedreaderexception(self):
-        # TODO: create a mock RssNewsFeedParser object and assign it to a local
-        #       variable named `mock_news_feed_parser`
-        mock_news_feed_parser = ....
+    # TODO: After you get the first test case running, uncomment the following
+    #       test case and make the required changes. Then run the file again and
+    #       verify this second test case passes.
 
-        # TODO: set the `side_effect` attribute of the mock's `get_news` method
-        #       so it raises a FeedReaderException when called.
-        # HINT: see slide 3-38
-        ....
+    # # This test method uses a Mock news feed parser to raise an exception
+    # def test_fetch_news_items_raise_feedreaderexception(self):
+    #     # TODO: create a mock RssNewsFeedParser object and assign it to a local
+    #     #       variable named `mock_news_feed_parser`
+    #     mock_news_feed_parser = ....
+    #
+    #     # TODO: set the `side_effect` attribute of the mock's `get_news` method
+    #     #       so it raises a FeedReaderException when called.
+    #     # HINT: see slide 3-38
+    #     ....
+    #
+    #     # TODO: create a FeedReader instance and assign it to a local variable
+    #     #       named `feed_reader`
+    #     feed_reader = ....
+    #
+    #     # TODO: set the feed_reader.news_feed_parser attribute to
+    #     #       mock_news_feed_parser
+    #     ....
+    #
+    #     # TODO: call the feed_reader's fetch_news_items() method and save the
+    #     #       return value in a variable named `news`. (Pass any string as the
+    #     #       argument to fetch_news_items())
+    #     news = ....
+    #
+    #     # TODO: assert that the `news` variable is an instance of list.
+    #     # HINT: use the built-in isinstance() function
+    #     ....
+    #
+    #     # TODO: assert that the length of the `news` list is 0
+    #     ....
+    #
+    #     # TODO: note that the call to fetch_news_items() will log a stack
+    #     #       trace, but as long as you get a green bar, the test case passed.
+    #     #       (no code change required)
 
-        # TODO: create a FeedReader instance and assign it to a local variable
-        #       named `feed_reader`
-        feed_reader = ....
 
-        # TODO: set the feed_reader.news_feed_parser attribute to
-        #       mock_news_feed_parser
-        ....
-
-        # TODO: call the feed_reader's fetch_news_items() method and save the
-        #       return value in a variable named `news`. (Pass any string as the
-        #       argument to fetch_news_items())
-        news = ....
-
-        # TODO: assert that the `news` variable is an instance of list.
-        # HINT: use the built-in isinstance() function
-        ....
-
-        # TODO: assert that the length of the `news` list is 0
-        ....
-
-        # TODO: note that the call to fetch_news_items() will log a stack
-        #       trace, but as long as you get a green bar, the test case passed.
-        #       (no code change required)
+    # TODO: examine the remaining test cases and be sure you understand
+    #       how they work.
+    #       (no code changes required)
 
     def test_fetch_news_items_max_items_1(self):
         # test set up

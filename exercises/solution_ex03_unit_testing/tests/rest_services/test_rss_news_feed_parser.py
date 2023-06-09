@@ -94,6 +94,11 @@ class TestRssNewsFeedParser:
         #       RssNewsFeedParser and save a reference to it in a local variable
         feed_reader = RssNewsFeedParser()
 
+        # Note that our goal is to test NewsFeedParser.get_news. But we
+        # can't call the constructor for NewsFeedParser because it's an
+        # abstract class, so instead we call the constructor for its
+        # subclass RssNewsFeedParser
+
         # TODO: 1. call the news feed parser's get_news() method, passing 'music' as
         #          the argument
         #       2. save the list returned by the method in a local variable
@@ -144,23 +149,6 @@ class TestRssNewsFeedParser:
     # TODO: examine the remaining test cases and be sure you understand
     #       how they work.
     #       (no code changes required)
-
-    def test_get_news_music_zip_longest(self):
-        feed_reader = RssNewsFeedParser()
-
-        actual = feed_reader.get_news('music')
-
-        assert expected == actual
-
-    def test_get_news_max_items_1(self):
-        feed_reader = RssNewsFeedParser()
-
-        # Note the call FeedReader.get_news() with a max_items argument
-        actual = feed_reader.get_news('music', max_items=1)
-
-        # Note the use of list slicing in the following assertion to verify
-        # that the actual returned list contains only one item.
-        assert expected[:1] == actual
 
     def test_get_news_max_items_2(self):
         feed_reader = RssNewsFeedParser()

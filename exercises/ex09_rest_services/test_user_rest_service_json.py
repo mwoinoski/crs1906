@@ -106,8 +106,6 @@ def test_get_user_not_found():
 # TODO: After you get the first test case running, uncomment the following 
 #       test case and make the required changes. Then run the file again and 
 #       verify this second test case passes.
-# HINT: In PyCharm, to uncomment lines, highlight the commented lines and then
-#       press Ctrl-/
 
 # def test_add_user_ok():
 #     # TODO: you'll add a new user with a POST request like this:

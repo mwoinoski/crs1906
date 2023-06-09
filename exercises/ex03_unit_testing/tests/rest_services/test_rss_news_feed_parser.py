@@ -95,6 +95,11 @@ class TestRssNewsFeedParser:
         #       RssNewsFeedParser and save a reference to it in a local variable
         ....
 
+        # Note that our goal is to test NewsFeedParser.get_news. But we
+        # can't call the constructor for NewsFeedParser because it's an
+        # abstract class, so instead we call the constructor for its
+        # subclass RssNewsFeedParser
+
         # TODO:
         #       1. call the news feed parser's get_news() method, passing 'music' as
         #          the argument
