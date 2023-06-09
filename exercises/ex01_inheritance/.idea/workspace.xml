@@ -166,7 +166,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_act_dao.py" type="tests" factoryName="Unittests" nameIsGenerated="true">
+    <configuration name="Python tests in test_act_dao.py" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />
@@ -181,7 +181,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_act.py" type="tests" factoryName="Unittests">
+    <configuration name="Python tests in test_act.py" type="tests" factoryName="py.test">
       <module name="ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />
@@ -196,7 +196,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_address.py" type="tests" factoryName="Unittests">
+    <configuration name="Python tests in test_address.py" type="tests" factoryName="py.test">
       <module name="ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />
@@ -211,7 +211,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_customer.py" type="tests" factoryName="Unittests">
+    <configuration name="Python tests in test_customer.py" type="tests" factoryName="py.test">
       <module name="ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />
@@ -226,7 +226,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_func_stats.py" type="tests" factoryName="Unittests" nameIsGenerated="true">
+    <configuration name="Python tests in test_func_stats.py" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />
@@ -241,7 +241,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_member.py" type="tests" factoryName="Unittests" nameIsGenerated="true">
+    <configuration name="Python tests in test_member.py" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />
@@ -256,7 +256,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_person_dao.py" type="tests" factoryName="Unittests" nameIsGenerated="true">
+    <configuration name="Python tests in test_person_dao.py" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />
@@ -271,7 +271,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_person.py" type="tests" factoryName="Unittests">
+    <configuration name="Python tests in test_person.py" type="tests" factoryName="py.test">
       <module name="ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />
@@ -286,7 +286,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_person.py" type="tests" factoryName="Unittests">
+    <configuration name="Python tests in test_person.py" type="tests" factoryName="py.test">
       <module name="ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />
@@ -301,7 +301,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_person.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_person.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />
@@ -334,7 +334,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_venue_dao.py" type="tests" factoryName="Unittests">
+    <configuration name="Python tests in test_venue_dao.py" type="tests" factoryName="py.test">
       <module name="ex01_inheritance" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::Depreca" />
       <option name="PARENT_ENVS" value="true" />

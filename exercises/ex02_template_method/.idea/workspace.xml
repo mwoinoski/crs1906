@@ -141,7 +141,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_atom_news_feed_parser.py" type="tests" factoryName="Unittests" nameIsGenerated="true">
+    <configuration name="Python tests in test_atom_news_feed_parser.py" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="ex02_template_method" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -156,7 +156,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_news_feed_parser.py" type="tests" factoryName="Autodetect">
+    <configuration name="Python tests in test_news_feed_parser.py" type="tests" factoryName="Autodetect">
       <module name="ex02_template_method" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -170,7 +170,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_rss_news_feed_parser.py" type="tests" factoryName="Unittests" nameIsGenerated="true">
+    <configuration name="Python tests in test_rss_news_feed_parser.py" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="ex02_template_method" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />

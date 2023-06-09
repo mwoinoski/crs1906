@@ -132,7 +132,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_chat_observer.py" type="tests" factoryName="py.test">
+    <configuration name="Python tests in test_chat_observer.py" type="tests" factoryName="py.test">
       <module name="solution_ex06_design_patterns" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />

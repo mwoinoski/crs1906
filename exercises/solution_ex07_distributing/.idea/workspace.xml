@@ -119,7 +119,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittest test_tz" type="tests" factoryName="Unittests">
+    <configuration name="Python tests test_tz" type="tests" factoryName="py.test">
       <module name="solution_ex07_distributing" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />

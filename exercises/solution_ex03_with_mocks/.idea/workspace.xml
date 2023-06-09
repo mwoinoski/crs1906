@@ -116,7 +116,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_feed_reader.py" type="tests" factoryName="Unittests" nameIsGenerated="true">
+    <configuration name="Python tests in test_feed_reader.py" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="solution_ex03_with_mocks" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />
@@ -131,7 +131,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_user_service.py" type="tests" factoryName="Unittests">
+    <configuration name="Python tests in test_user_service.py" type="tests" factoryName="py.test">
       <module name="solution_ex03_with_mocks" />
       <option name="INTERPRETER_OPTIONS" value="-W ignore::DeprecationWarning" />
       <option name="PARENT_ENVS" value="true" />

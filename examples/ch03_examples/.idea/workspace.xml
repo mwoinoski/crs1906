@@ -149,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_person.py" type="tests" factoryName="Unittests">
+    <configuration name="Python tests in test_person.py" type="tests" factoryName="py.test">
       <module name="ch03_examples" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
