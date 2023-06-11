@@ -221,6 +221,28 @@ def main():
 </pre></font>
 
 
+<h2>Hints for Exercise 6.1 Bonus (Configuring a decorator with a configuration file)</h2>
+
+<h3>sudoku.py</h3>
+
+<font color="grey"><pre>
+# BONUS TODO: import the measure and get_function_stats methods and
+# the decorator_enabled variable from the measure_configurable module. </font><font color="blue">
+from measure_configurable import measure, get_function_stats, decorator_enabled
+</pre></font>
+
+<font color="grey"><pre>
+	    # BONUS TODO: call get_function_stats() only if
+            # decorator_enabled is true </font><font color="blue">
+	    if decorator_enabled: </font><font color="grey">
+                print('{Function Call Stats:^61}')
+                print('{Function name:32s} {Calls:&gt;8s}  {Avg Time (seconds):22s}')
+                print('-' * 61)
+                for stats in get_function_stats():
+                    print('{:32s} {:8d}  {:13.6f}'.format(*stats))
+</pre></font>
+
+
 <h2>Hints for Exercise 6.1 Bonus (Implement the Proxy design pattern)</h2>
 
 <h3>chat_room_proxy.py</h3>
@@ -257,27 +279,6 @@ class ChatRoomProxy(ChatRoom):
 	# BONUS TODO: create a ChatRoomProxy() object and assign it to a variable
         # named `chat_room` </font><font color="blue">
 	chat_room = ChatRoomProxy()
-</pre></font>
-
-<h2>Hints for Exercise 6.1 Bonus (Configuring a decorator with a configuration file)</h2>
-
-<h3>sudoku.py</h3>
-
-<font color="grey"><pre>
-# BONUS TODO: import the measure and get_function_stats methods and
-# the decorator_enabled variable from the measure_configurable module. </font><font color="blue">
-from measure_configurable import measure, get_function_stats, decorator_enabled
-</pre></font>
-
-<font color="grey"><pre>
-	    # BONUS TODO: call get_function_stats() only if
-            # decorator_enabled is true </font><font color="blue">
-	    if decorator_enabled: </font><font color="grey">
-                print('{Function Call Stats:^61}')
-                print('{Function name:32s} {Calls:&gt;8s}  {Avg Time (seconds):22s}')
-                print('-' * 61)
-                for stats in get_function_stats():
-                    print('{:32s} {:8d}  {:13.6f}'.format(*stats))
 </pre></font>
 
 </body>

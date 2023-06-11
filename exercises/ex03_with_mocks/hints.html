@@ -73,13 +73,13 @@
 <font color="grey"><pre>
 	# TODO: assert that the `news` variable is an instance of list.
         # HINT: use the built-in isinstance() function </font><font color="blue">
-	self.assertTrue(isinstance(news, list))
+	assert isinstance(news, list)
 </pre></font>
 
 
 <font color="grey"><pre>
 	# TODO: assert that the length of the `news` list is 0 </font><font color="blue">
-	self.assertEqual(0, len(news))
+	assert 0 == len(news)
 </pre></font>
 
 
@@ -89,7 +89,7 @@
 
 <font color="grey"><pre>
     # TODO: create a mock DAO  </font><font color="blue">
-    mock_dao = Mock()
+    mock_dao = Mock(spec=RssNewsFeedParser)
 </pre></font>
 
 <font color="grey"><pre>
@@ -117,7 +117,7 @@
 
 <font color="grey"><pre>
     # TODO: create a mock DAO  </font><font color="blue">
-    mock_dao = Mock()
+    mock_dao = Mock(spec=RssNewsFeedParser)
 </pre></font>
 
 <font color="grey"><pre>

@@ -9,11 +9,6 @@
 <h3>test_rss_news_feed_parser.py</h3>
 
 <font color="grey"><pre>
-# TODO: make TestRssNewsFeedParser a subclass of unittest.TestCase </font><font color="blue">
-class TestRssNewsFeedParser(TestCase):
-</pre></font>
-
-<font color="grey"><pre>
     # TODO: Define a test method named test_get_news_music </font><font color="blue">
     def test_get_news_music(self): </font><font color="grey">
 	# TODO: in the test_get_news_music method, create an instance of
@@ -23,16 +18,17 @@ class TestRssNewsFeedParser(TestCase):
 
 <font color="grey"><pre>
 	# TODO:
-        # 1. call the news feed parser's get_news() method, passing 'music' as the
-        #    argument
-        # 2. save the list returned by the method in a local variable </font><font color="blue">
+        # 1. call the news feed parser's get_news() method, passing 'music' as
+        #    the argument
+        # 2. save the list returned by the method in a local variable 
+        #    named `actual`</font><font color="blue">
 	actual = feed_reader.get_news('music')
 </pre></font>
 
 <font color="grey"><pre>
-        # TODO: call a method that asserts the list named `expected` is
-        # equal to the list named `actual` </font><font color="blue">
-        self.assertEqual(expected, actual)
+        # TODO: assert that the list named `expected` is equal to
+        # the list named `actual` that was returned from get_news() </font><font color="blue">
+        assert expected == actual
 </pre></font>
 
 <font color="grey"><pre>
@@ -57,10 +53,10 @@ class TestRssNewsFeedParser(TestCase):
         # item of the `expected` list equals the first item of the returned 
         # list.
         # HINT: use the built-in function len(), or use list slicing </font><font color="blue">
-        self.assertEqual(1, len(actual))
-        self.assertEqual(expected[0], actual[0]) <font color="grey">
+        assert 1 == len(actual)
+        assert expected[0] == actual[0] <font color="grey">
         # Using list slicing (compares the lists' lengths and contents): </font><font color="blue">
-        self.assertEqual(expected[:1], actual)
+        assert expected[:1] == actual
 </pre></font>
 
 <font color="grey"><pre>
@@ -73,16 +69,11 @@ class TestRssNewsFeedParser(TestCase):
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: Call an assert method to verify that if you call the
+	# TODO: Call a Pytest function to verify that if you call the
         # feed reader's get_news() method with an invalid news type argument
         # (for example, 'pluto'), the method raises a FeedReaderException.  </font><font color="blue">
-	with self.assertRaises(FeedReaderException):
+	with raises(FeedReaderException):
             feed_reader.get_news('pluto')
-</pre></font>
-
-<font color="grey"><pre>
-    # TODO: call unittest.main() </font><font color="blue">
-    unittest.main()
 </pre></font>
 
 <h2>Hints for Exercise 3.1 Bonus (Writing testcases without a TestCase subclass)</h2>
@@ -93,8 +84,7 @@ class TestRssNewsFeedParser(TestCase):
 # TODO:
 # 1. Copy the test_get_news_music() and test_get_news_music_max_items_1()
 #    methods from test_rss_news_feed_parser.py and paste them here.
-# 2. Delete the "self" argument from the copied functions.
-# 3. Replace calls to self.assertEqual() with the assert statement. </font><font color="blue">
+# 2. Delete the "self" argument from the copied functions. </font><font color="blue">
 
 def test_get_news_music():
     feed_reader = RssNewsFeedParser()
@@ -111,45 +101,6 @@ def test_get_news_music_max_items_1():
 
     assert 1 == len(actual)
     assert expected[0] == actual[0]
-</pre></font>
-
-<font color="grey"><pre>
-# TODO: copy the test_get_news_invalid_news_type() method from
-# test_rss_news_feed_parser.py and paste it here. Modify it to use the
-# nose.tools.raises decorator to verify that a FeedReaderException is raised.  </font><font color="blue">
-@raises(FeedReaderException)
-def test_get_news_invalid_news_type():
-    feed_reader = RssNewsFeedParser()
-
-    feed_reader.get_news('pluto')
-</pre></font>
-
-
-<h2>Hints for Exercise 3.1 Bonus (Achieving 100% test coverage)</h2>
-
-<h3>test_rss_news_feed_parser.py</h3>
-
-Add a test method that passes a minimal XML document to parse_xml_content():
-
-<pre><font color="blue">
-    def test_parse_content_items_missing(self):
-        feed_reader = RssNewsFeedParser()
-
-        minimal_input = '&lt;rss&gt;&lt;item&gt;&lt;/item&gt;&lt;/rss&gt;'
-        minimal_results = [
-            {
-                'title': '',
-                'link': '',
-                'date_time': '',
-                'image_thumbnail': '',
-                'image_banner': '',
-                'content': ''
-            }
-        ]
-
-        actual_results = feed_reader.parse_xml_content(minimal_input)
-
-        self.assertEqual(minimal_results, actual_results)
 </pre></font>
 
 

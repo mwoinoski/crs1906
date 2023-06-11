@@ -105,8 +105,8 @@ class TestRssNewsFeedParser:
         #          named `actual`
         actual = feed_reader.get_news('music')
 
-        # TODO: call a method that asserts the list named `expected` is
-        #       equal to the list named `actual`, which was returned from get_news()
+        # TODO: assert that the list named `expected` is equal to
+        #       the list named `actual` that was returned from get_news()
         assert expected == actual
 
     # TODO: Define a test method named test_get_news_music_max_items_1
@@ -130,7 +130,7 @@ class TestRssNewsFeedParser:
         # Note that you can combine the two previous assertions into one using
         # list slicing:
         assert expected[:1] == actual
-        # Because both arguments to assertEqual() are lists, the method
+        # Because both arguments to assert are lists, the method
         # compares the lists' lengths and their contents.
 
     # TODO: Define a test method named test_get_news_invalid_news_type
@@ -140,7 +140,7 @@ class TestRssNewsFeedParser:
         #       local variable.
         feed_reader = RssNewsFeedParser()
 
-        # TODO: Call an assert method to verify that if you call the
+        # TODO: add a `with` statement to assert that if you call the
         #       feed reader's get_news() method with an invalid news type argument
         #       (for example, 'pluto'), the method raises a FeedReaderException.
         with raises(FeedReaderException):

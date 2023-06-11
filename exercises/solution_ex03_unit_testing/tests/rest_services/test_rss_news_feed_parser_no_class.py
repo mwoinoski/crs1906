@@ -84,7 +84,6 @@ expected = [
 #             test_get_news_music_max_items_1()
 #          (Be sure to un-indent the function definitions)
 #       2. Delete the "self" argument from the copied functions.
-#       3. Replace calls to self.assertEqual() with the assert statement.
 
 
 def test_get_news_music():
