@@ -3,7 +3,7 @@ Unit tests for Person
 
 Run as follows:
 	cd C:\crs1906\examples\ch03_examples
-	pytest test_person.py
+	pytest test_person_pytest.py
 """
 
 from pytest import raises

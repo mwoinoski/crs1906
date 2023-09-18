@@ -2,8 +2,8 @@ r"""
 Parameterized unit tests for Person
 
 Run as follows:
-cd C:\crs1906\examples\ch03_examples
-pytest test_person_parameterized.py
+	cd C:\crs1906\examples\ch03_examples
+	pytest test_person_parameterized.py
 """
 
 from pytest import mark

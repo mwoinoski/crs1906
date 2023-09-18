@@ -2,8 +2,8 @@ r"""
 Unit tests for Person
 
 Run as follows:
-cd C:\crs1906\examples\ch03_examples
-python -m unittest test_person.py
+	cd C:\crs1906\examples\ch03_examples
+	python -m unittest test_person_unittest.py
 """
 
 import unittest

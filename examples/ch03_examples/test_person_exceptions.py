@@ -1,6 +1,7 @@
-r"""Pytest unit tests for Person
+r"""
+Pytest unit tests for Person
 
-   Run as follows:
+Run as follows:
    cd C:\crs1906\examples\ch03_examples
    pytest test_person_exceptions.py
 """
