@@ -1,7 +1,4 @@
-r"""
-Unit tests for Person
-
-Run as follows:
+r""" Unit tests for Person Run as follows:
 	cd C:\crs1906\examples\ch03_examples
 	python -m unittest test_person_unittest.py
 """
