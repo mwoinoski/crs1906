@@ -2,8 +2,7 @@ from decorators.logging_decorator import log_call
 from decorators.profiling_decorator import profile_call
 
 
-@profile_call
-@log_call          # profile_call( log_call( nsum ) )
+@log_call
 def nsum(n):
     """Return the sum of the first n numbers"""
     assert(n >= 0), "n must be >= 0"
@@ -13,7 +12,6 @@ def nsum(n):
     return total
 
 
-@profile_call
 @log_call
 def fibonacci(n, debug=False):
     """Returns the nth number of the Fibonacci sequence"""
@@ -27,7 +25,6 @@ def fibonacci(n, debug=False):
     return fib
 
 
-@profile_call
 @log_call
 def simple():
     """Function has no arguments and returns no value"""
