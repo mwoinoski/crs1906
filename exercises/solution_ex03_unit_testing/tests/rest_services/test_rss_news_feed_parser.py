@@ -105,8 +105,8 @@ class TestRssNewsFeedParser:
         #          named `actual`
         actual = feed_reader.get_news('music')
 
-        # TODO: assert that the list named `expected` is equal to
-        #       the list named `actual` that was returned from get_news()
+        # TODO: assert that the list named `expected` is equal to the list named
+        #       `actual`, which was returned from get_news()
         assert expected == actual
 
     # TODO: Define a test method named test_get_news_music_max_items_1

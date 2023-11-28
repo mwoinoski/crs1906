@@ -107,8 +107,8 @@ class TestRssNewsFeedParser:
         #          named `actual`
         ....
 
-        # TODO: call a method that asserts the list named `expected` is
-        #       equal to the list named `actual`, which was returned from get_news()
+        # TODO: assert that the list named `expected` is equal to the list named
+        #       `actual`, which was returned from get_news()
         # HINT: see slide 3-18
         ....
 
@@ -152,7 +152,7 @@ class TestRssNewsFeedParser:
 #         #       local variable.
 #         ....
 # 
-#         # TODO: Call an assert method to verify that if you call the
+#         # TODO: add a `with` statement to assert that if you call the
 #         #       feed reader's get_news() method with an invalid news type argument
 #         #       (for example, 'pluto'), the method raises a FeedReaderException.
 #         # HINT: see slide 3-22
@@ -168,28 +168,28 @@ class TestRssNewsFeedParser:
 
         actual = feed_reader.get_news('music', max_items=2)
 
-        self.assertEqual(expected[:2], actual)
+        assert expected[:2] == actual
 
     def test_parse_content(self):
         feed_reader = RssNewsFeedParser()
 
         actual = feed_reader.parse_xml_content(xml_input)
 
-        self.assertEqual(expected, actual)
+        assert expected == actual
 
     def test_parse_content_max_items_1(self):
         feed_reader = RssNewsFeedParser()
 
         actual = feed_reader.parse_xml_content(xml_input, max_items=1)
 
-        self.assertEqual(expected[:1], actual)
+        assert expected[:1] == actual
 
     def test_parse_content_max_items_2(self):
         feed_reader = RssNewsFeedParser()
 
         actual = feed_reader.parse_xml_content(xml_input, max_items=2)
 
-        self.assertEqual(expected[:2], actual)
+        assert expected[:2] == actual
 
         def test_get_dummy_news(self):
             feed_reader = RssNewsFeedParser()
