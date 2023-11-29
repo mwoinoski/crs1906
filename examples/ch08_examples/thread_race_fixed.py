@@ -28,7 +28,18 @@ class Counter:
         self.count = 0
 
     def increment(self, offset=1):
-        self.count += offset
+        # self.count += offset  # race condition occurs with Python 3.7 and earlier
+        self.count += offset * self.forceRaceCondition()  # race condition always occurs
+
+    def forceRaceCondition(self):
+        """Hack to force a race condition in Python 3.10+
+
+        Python 3.10 introduced changes that reduced the chance of race
+        conditions. But if we add a method call to the statement, it makes
+        a race condition more likely. For an explanation, see
+        https://stefan-marr.de/2023/11/python-global-interpreter-lock/
+        """
+        return 1
 
 
 class SampleSensors:

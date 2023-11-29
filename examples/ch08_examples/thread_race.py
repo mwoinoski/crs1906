@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 """
-thread_race.py - Demo of a race condition among threads
-Run this with Python 3.7 to increase the chance the of a race condition.
-You may need to run this a few times to see the problem.
-I've never seen the race condition with Python 3.10 (don't know why)
+thread_race.py - Demo of a race condition between threads
 """
 
 # Copyright 2014 Brett Slatkin, Pearson Education Inc.
@@ -30,7 +27,18 @@ class Counter:
         self.count = 0
 
     def increment(self, offset=1):
-        self.count += offset
+        # self.count += offset  # race condition occurs with Python 3.7 and earlier
+        self.count += offset * self.forceRaceCondition()  # race condition always occurs
+
+    def forceRaceCondition(self):
+        """Hack to force a race condition in Python 3.10+
+
+        Python 3.10 introduced changes that reduced the chance of race
+        conditions. But if we add a method call to the statement, it makes
+        a race condition more likely. For an explanation, see
+        https://stefan-marr.de/2023/11/python-global-interpreter-lock/
+        """
+        return 1
 
 
 class SampleSensors:
