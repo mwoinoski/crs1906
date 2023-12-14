@@ -87,16 +87,18 @@ print(capitalized)
 
 # TODO: Write a list comprehension that generates a list of squares for all 
 # even numbers between 1 and 20. The output should be:
-#   [4, 16, 36, 64, 100, 144, # 196, 256, 324, 400]
+#   [4, 16, 36, 64, 100, 144, 196, 256, 324, 400]
 
 squares_of_evens = [num**2 for num in range(1, 20) if num % 2 == 0]
 print(squares_of_evens)
 
 # BONUS EXERCISES
 
-# TODO: Write a function that finds all the numbers in a given range
-# (e.g., 1 to 100) that are divisible by 3 and 5. The output should be a list
-# of these numbers. Generate the list using a list comprehension.
+# TODO: Write a function div_by_3_and_5 that finds all the numbers in a given
+# range that are divisible by 3 and 5. The function should return a list of 
+# these numbers. For instance, div_by_3_and_5(1, 90) should return 
+# [15, 30, 45, 60, 75, 90]
+# Generate the list using a list comprehension.
 # HINT: use the built-in range() function to generate a sequence of numbers.
 # See slide 1-11
 
@@ -106,12 +108,12 @@ def multiples_of_3_and_5(start, end):
             if n % 3 == 0 and n % 5 == 0]
 
 
-result = multiples_of_3_and_5(1, 100)
-print(f'multiples of 3 and 5 in the range 1 to 100: {result}')
+result = multiples_of_3_and_5(1, 90)
+print(f'multiples of 3 and 5 in the range 1 to 90: {result}')
 
 # TODO: Create a list comprehension that takes a list of strings and generates
 # a new list containing the length of each string. Test this with the list
-# ["apple", "banana", "cherry", "date"].
+# ["apple", "banana", "cherry", "date"]
 
 strings = ["apple", "banana", "cherry", "date"]
 lengths = [len(s) for s in strings]
