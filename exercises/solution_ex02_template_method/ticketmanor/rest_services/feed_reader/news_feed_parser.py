@@ -8,7 +8,7 @@ Converted to Python 3 by running:
     python PYTHON_HOME/Tools/Scripts/2to3.py -w news_feed_parser.py
 """
 
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 import urllib.request
 from xml.dom import minidom
 from ticketmanor.rest_services.feed_reader import (
@@ -18,7 +18,7 @@ from ticketmanor.rest_services.feed_reader import (
 
 
 # BONUS TODO: make NewsFeedParser an abstract base class
-class NewsFeedParser(metaclass=ABCMeta):
+class NewsFeedParser(ABC):
 
     # TODO: note the definition of the NewsFeedParser __init__() method.
     #       (no code changes required)
