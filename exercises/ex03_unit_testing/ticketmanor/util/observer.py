@@ -4,10 +4,10 @@ Implementation of the GoF Observer design pattern
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 
 
-class Observer(metaclass=ABCMeta):
+class Observer(ABC):
     """
     Observer interface
     """
@@ -16,7 +16,7 @@ class Observer(metaclass=ABCMeta):
         """ Subject calls update to notify an Observer of a change of state """
 
 
-class Subject(metaclass=ABCMeta):
+class Subject(ABC):
     """
     Subject abstract class.
 

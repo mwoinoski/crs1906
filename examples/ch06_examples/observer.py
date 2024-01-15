@@ -2,11 +2,11 @@
 observer.py - Example of Observer design pattern.
 """
 
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 import itertools
 
 
-class Subject(metaclass=ABCMeta):
+class Subject(ABC):
     def __init__(self):
         self._observers = set()
 
@@ -27,7 +27,7 @@ class Subject(metaclass=ABCMeta):
             obs.update(self)
 
 
-class Observer(metaclass=ABCMeta):
+class Observer(ABC):
     @abstractmethod
     def update(self, subject):
         """ Subject notifies observer by calling this method """

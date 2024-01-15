@@ -34,7 +34,7 @@ import sys
 import traceback
 import unittest
 from pathlib import Path
-from abc import abstractmethod, ABCMeta
+from abc import abstractmethod, ABC
 
 import tkinter as tk
 from tkinter import messagebox
@@ -59,7 +59,7 @@ init_dir = Path.cwd() / 'sample_unit_tests'
 # GUI framework classes
 ##############################################################################
 
-class BaseGUITestRunner(metaclass=ABCMeta):
+class BaseGUITestRunner(ABC):
     """
     Subclass this class to create a GUI TestRunner that uses a specific
     windowing toolkit. The class takes care of running tests in the correct

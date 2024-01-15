@@ -3,7 +3,7 @@ template_method.py - demo Template Method design pattern from Chapter 2
 """
 
 import re
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 
 RESPONSE_TEMPLATE = """\
 <html>
@@ -14,7 +14,7 @@ RESPONSE_TEMPLATE = """\
 </html>
 """
 
-class HttpRequestProcessor(metaclass=ABCMeta):
+class HttpRequestProcessor(ABC):
     def service_request(self, request):
         # Generic: parse request data
         request_data = self.parse_request(request)

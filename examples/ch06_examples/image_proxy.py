@@ -1,10 +1,10 @@
 from PIL import Image as PILImage, ImageTk as PILImageTk
 import tkinter as tk
 import sys
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 
 
-class Image(metaclass=ABCMeta):
+class Image(ABC):
     def __init__(self, path):
         self.path = path
 
