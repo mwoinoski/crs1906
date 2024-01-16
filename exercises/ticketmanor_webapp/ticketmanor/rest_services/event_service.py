@@ -83,9 +83,10 @@ class EventServiceRest:
             # breakpoint()
             try:
                 act['page'] = int(self._request.params['page'])
-            except ValueError:  # For the 2nd request, the UI often passes page=NaN
+                act['page_size'] = int(self._request.params['page_size'])
+            except ValueError:  # UI sometimes passes 'NaN' as page or page size
                 act['page'] = 0
-            act['page_size'] = int(self._request.params['page_size'])
+                act['page_size'] = 4
             start = act['page'] * act['page_size']
             act['events'] = act['events'][start:start + act['page_size']]
 
