@@ -19,6 +19,13 @@ def test_init():
 	assert ("John", "Quincy", "Adams") == \
 		   (person.first_name, person.middle_name, person.last_name)
 
+
+def test_init_no_middle_name():
+	person = Person("John", None, "Adams")
+
+	assert ("John", "", "Adams") == \
+		   (person.first_name, person.middle_name, person.last_name)
+
 def test_full_name():
 	person = Person("John", "Quincy", "Adams")
 

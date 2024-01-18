@@ -15,8 +15,8 @@ The simplest option is to define scripts outside the packages that they use.
 # File > Settings > Project ch10_examples > Project structure >
 #    select setup_example folder > click Sources
 
-from setup_example.sample_mod1 import func1
-from setup_example.sample_mod2 import func2
+from src.setup_example.sample_mod1 import func1
+from src.setup_example.sample_mod2 import func2
 
 
 def main():
