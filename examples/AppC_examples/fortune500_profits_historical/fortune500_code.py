@@ -2,6 +2,7 @@
 # https://www.dataquest.io/blog/jupyter-notebook-tutorial/
 
 # some setup
+pd.options.mode.chained_assignment = None
 %matplotlib inline
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -26,11 +27,13 @@ df.dtypes
 
 # Find non-numeric profit values
 non_numeric_profits = df.profit.str.contains('[^0-9.-]')
+# non_number_profits is an array of boolean of the same length as df.profit: [False, False, ..., True, False...]
 df.loc[non_numeric_profits].head()
+# df.loc with a boolean array returns only element indexes with True
 
 # How many different non-numberic profits?
 set(df.profit[non_numeric_profits])
-# Only one non-numeric profit
+# Only one non-numeric profit value "N.A."
 
 # What should we do? Depends on how many occurrences
 len(df.profit[non_numeric_profits])
@@ -41,8 +44,11 @@ bin_sizes, _, _ = plt.hist(df.year[non_numeric_profits], bins=range(1955, 2006))
 # Number of invalid values in a single year is fewer than 25 (less than 5%)
 
 # Let’s say this is acceptable and go ahead and remove these rows.
+# First, df.loc is used for label-based indexing. We'll use it to 
+# select only the rows where the profit column contains numeric values. 
 df = df.loc[~non_numeric_profits]
-df.profit = df.profit.apply(pd.to_numeric)
+# The profit values are still strings, so convert them to numbers.
+df['profit'] = pd.to_numeric(df['profit'])
 len(df)
 
 df.dtypes
@@ -65,7 +71,7 @@ plot(x, y1, ax, 'Increase in mean Fortune 500 company profits from 1955 to 2005'
 # The increase in profits looks exponential, except for early 1990's recession 
 # and 2000's dot-com bubble.
 
-# What about revenues? 
+# What about revenues? (IMPORTANT: Execute the next block of statements in the same cell)
 y2 = avgs.revenue
 fig, ax = plt.subplots()
 plot(x, y2, ax, 'Increase in mean Fortune 500 company revenues from 1955 to 2005', 'Revenue (millions)')
@@ -76,6 +82,7 @@ def plot_with_std(x, y, stds, ax, title, y_label):
     ax.fill_between(x, y - stds, y + stds, alpha=0.2)
     plot(x, y, ax, title, y_label)
 
+# IMPORTANT: Execute the next block of statements in the same cell
 fig, (ax1, ax2) = plt.subplots(ncols=2)
 title = 'Increase in mean and std Fortune 500 company %s from 1955 to 2005'
 stds1 = group_by_year.std().profit.values
@@ -86,5 +93,3 @@ fig.set_size_inches(14, 4)
 fig.tight_layout()
 
 # Wow. Some companies made billions, others lost billions.
-
-
