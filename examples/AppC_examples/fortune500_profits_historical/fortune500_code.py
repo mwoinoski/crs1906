@@ -21,9 +21,13 @@ df.columns = ['year', 'rank', 'company', 'revenue', 'profit']
 len(df)
 # Yes, looks good
 
-# Check the datatypes of the columns
+# How did GM do?
+df.loc[df['company'] == 'General Motors'].head()
+df.loc[df['company'] == 'General Motors', 'profit'].head()
+df.loc[df['company'] == 'General Motors', 'profit'].sum()
+# Oops. Why is sum so strange? Check the datatypes of the columns
 df.dtypes
-# Oops. problem with the profit column
+# Ah. There's a problem with the profit column
 
 # Find non-numeric profit values
 non_numeric_profits = df.profit.str.contains('[^0-9.-]')
@@ -55,6 +59,11 @@ len(df)
 df.dtypes
 # Better
 
+df.loc[df['company'] == 'General Motors', 'profit'].sum()
+df.loc[df['company'] == 'General Motors', 'profit'].mean()
+# Looks good. 
+
+# Time for some visualizations.
 # Plot the average profit by year
 # ':' is slice notation: as the first index, it means "all rows"
 group_by_year = df.loc[:, ['year', 'revenue', 'profit']].groupby('year')
