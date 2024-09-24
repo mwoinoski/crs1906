@@ -40,6 +40,7 @@ len(df.profit[non_numeric_profits])
 # Not too many. If they're evenly distributed, we can just remove them.
 
 # Find distributions of records with non-numeric profit values
+# Plot a histogram using matplotlib
 bin_sizes, _, _ = plt.hist(df.year[non_numeric_profits], bins=range(1955, 2006))
 # Number of invalid values in a single year is fewer than 25 (less than 5%)
 
@@ -55,6 +56,7 @@ df.dtypes
 # Better
 
 # Plot the average profit by year
+# ':' is slice notation: as the first index, it means "all rows"
 group_by_year = df.loc[:, ['year', 'revenue', 'profit']].groupby('year')
 avgs = group_by_year.mean()
 x = avgs.index
