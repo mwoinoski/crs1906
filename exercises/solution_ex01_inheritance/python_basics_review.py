@@ -6,6 +6,8 @@
 # parameter and returns its area. Use the formula area = pi * radius**2. Test
 # your function with a radius of 7.0
 # HINT: for the value of pi, import math, then reference math.pi
+# HINT: to run this file: PyCharm Run menu > Run > python_basics_review
+#       OR Ctrl-Shift-F10
 
 import math
 
