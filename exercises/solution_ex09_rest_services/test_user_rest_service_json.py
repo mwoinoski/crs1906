@@ -91,9 +91,9 @@ def test_get_user_found():
 
 def test_get_user_not_found():
     url = f'{base_url}/nobody@nowhere.com'
-    headers = {'Accept': 'application/json'}
+    http_headers = {'Accept': 'application/json'}
 
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=http_headers)
 
     assert response.status_code == 404
 
@@ -108,7 +108,11 @@ def test_add_user_ok():
     url = base_url
 
     # TODO: set the HTTP Accept header to 'application/json'
-    http_headers = {'Content-Type': 'application/json'}
+    #       and the Content-Type header to 'application/json'
+    http_headers = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }
 
     # TODO: send the POST request and store the result in a variable named `response`
     #       Pass the the dictionary named user_miles as the JSON data
@@ -133,9 +137,16 @@ def test_update_user_ok():
     # TODO: set the url to base_url
     url = base_url
 
+    # TODO: set the HTTP Accept header to 'application/json'
+    #       and the Content-Type header to 'application/json'
+    http_headers = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }
+
     # TODO: send the PUT request and store the result in a variable named 'response'
     #       Pass the the dictionary named user_miles as the JSON data
-    response = requests.put(url, json=user_miles)
+    response = requests.put(url, headers=http_headers, json=user_miles)
 
     print(f'PUT status {response.status_code}')
 
