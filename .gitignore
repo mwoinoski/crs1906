@@ -65,8 +65,23 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Application logs
-logs/
+logs/*
 *.log
+!exercises/ex01_inheritance/ticketmanor/logs/ticketmanor.log
+!exercises/ex02_template_method/ticketmanor/logs/ticketmanor.log
+!exercises/ex03_unit_testing/ticketmanor/logs/ticketmanor.log
+!exercises/ex03_with_mocks/ticketmanor/logs/ticketmanor.log
+!exercises/ex08_concurrency/ticketmanor/logs/ticketmanor.log
+!exercises/ex08_multiprocessing/ticketmanor/logs/ticketmanor.log
+!exercises/solution_ex01_inheritance/logs/ticketmanor.log
+!exercises/solution_ex01_inheritance/ticketmanor/logs/ticketmanor.log
+!exercises/solution_ex02_template_method/ticketmanor/logs/ticketmanor.log
+!exercises/solution_ex03_unit_testing/ticketmanor/logs/ticketmanor.log
+!exercises/solution_ex03_with_mocks/ticketmanor/logs/ticketmanor.log
+!exercises/solution_ex08_concurrency/ticketmanor/logs/ticketmanor.log
+!exercises/solution_ex08_multiprocessing/ticketmanor/logs/ticketmanor.log
+!exercises/ticketmanor_webapp/ticketmanor/logs/ticketmanor.log
+
 
 # Unit test / coverage reports
 .tox/

@@ -49,8 +49,8 @@ dependencies = [
 Steps 26 and 27:
 
 <font color="blue"><pre>
-set VENV=C:\crs1906\exercises\ex07_distributing\simple_tz\py311venv
-C:\Python\Python3.11\python -m venv %VENV%
+set VENV=C:\crs1906\exercises\ex07_distributing\simple_tz\py313venv
+C:\Python\Python3.13\python -m venv %VENV%
 %VENV%\Scripts\activate
 </pre></font>
 
@@ -69,7 +69,7 @@ pypi-server -p 8888 pypiserver_packages
 Install your module from the local pypiserver:
 
 <font color="blue"><pre>
-pip install --index-url http://localhost:8888/simple simple_tz
+pip install --index-url http://localhost:8888 simple_tz
 </pre></font>
 
 </body>
