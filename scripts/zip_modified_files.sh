@@ -8,7 +8,7 @@ echo 'Zipping all .py and .ini files modified this week...'
 
 cd /c
 
-find crs1906/exercises -not -path '*/venv/*' -not -path '*/.idea/*' -mtime -5 \( -name '*.py' -o -name '*.ini' \) | sed 's#^#/#' > /c/crs1906/$fileList
+find crs1906/exercises -not -path '*/*venv*/*' -not -path '*/.idea/*' -mtime -5 \( -name '*.py' -o -name '*.ini' \) | sed 's#^#/#' > /c/crs1906/$fileList
 
 'C:\Program Files\7-Zip\7z.exe' a -tzip -spf2 "$zipFile" @'C:\crs1906\'$fileList > /dev/null
 
