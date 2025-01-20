@@ -20,5 +20,5 @@ dependencies = [
     "rich"
 ]
 
-[tools.setuptools.packages.find]
+[tool.setuptools.packages.find]
 exclude = ["tests*"]

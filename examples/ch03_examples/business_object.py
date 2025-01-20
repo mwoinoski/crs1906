@@ -2,8 +2,6 @@ r"""
 business_object.py - Classes for exercising mock objects
 """
 
-import sqlite3
-
 
 class BusinessObject:
     """Simple class for mock demo"""
@@ -24,9 +22,9 @@ class BusinessObject:
                 raise ValueError(f'{user_id} is not a valid user ID')
 
             return user
-        except sqlite3.Error as e:
+        except DaoError as e:
             raise BusinessError(
-                f'Problem fetching user with ID {user_id}: {str(e)}')
+                f'Problem fetching user with ID {user_id}: {e}')
 
     def __str__(self):
         return self.name
@@ -45,6 +43,12 @@ class UserDao:
 
 
 class BusinessError(Exception):
+    """Application-specific exception class"""
+    def __init__(self, msg):
+        super().__init__(msg)
+
+
+class DaoError(Exception):
     """Application-specific exception class"""
     def __init__(self, msg):
         super().__init__(msg)

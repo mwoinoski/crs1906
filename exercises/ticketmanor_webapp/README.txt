@@ -6,7 +6,7 @@ Getting Started
 
 > cd <directory containing this file>
 
-> venv/Scripts/activate
+> venv\Scripts\activate
 
 > python setup.py develop
 

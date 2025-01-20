@@ -20,6 +20,15 @@ def to_lower_string_concat(lines):
 
 
 @measure
+def to_lower_string_concat_fstrings(lines):
+    """String concatenation with fstrings: REALLY slow"""
+    r = ''
+    for line in lines:
+        r = f'{r}{line.lower()}'
+    return r
+
+
+@measure
 def to_lower_join_individual_strings(lines):
     """Joining individual strings: very slow"""
     r = ''
@@ -90,6 +99,7 @@ if __name__ == '__main__':
 
     print("String concatenation demo:")
     to_lower_string_concat(input_lines)
+    to_lower_string_concat_fstrings(input_lines)
     to_lower_join_individual_strings(input_lines)
     to_lower_append_strings_to_list(input_lines)
     to_lower_list_comprehension(input_lines)

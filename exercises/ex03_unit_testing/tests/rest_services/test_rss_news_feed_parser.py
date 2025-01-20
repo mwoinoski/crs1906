@@ -226,3 +226,7 @@ def parser_monkey_patch():
     chapter.)
     """
     RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input
+
+
+# TODO: note that there is no call to unittest.main().
+#       (no code changes required)
