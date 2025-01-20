@@ -2,14 +2,12 @@ r"""
 pytest_fixture_demo.py - Test case that defines a test fixture
 """
 
-import sqlite3
-
 import pytest
 from pytest import raises
 from unittest.mock import Mock
 
 from person import Person
-from business_object import BusinessObject, UserDao, BusinessError
+from business_object import BusinessObject, UserDao, BusinessError, DaoError
 
 
 # Define a test fixture. The value returned by the fixture function will
@@ -74,7 +72,7 @@ def test_get_user_dao_error(init_mock_fixture):
     # get the mock DAO that was created by the test fixture
     mock_dao = init_mock_fixture
     # Configure the mock query_user method to raise a DB error
-    mock_dao.query_user.side_effect = sqlite3.Error('SQL error')
+    mock_dao.query_user.side_effect = DaoError('SQL error')
 
     bus_obj = BusinessObject('mock_demo')
     bus_obj.user_dao = mock_dao

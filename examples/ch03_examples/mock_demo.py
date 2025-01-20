@@ -2,13 +2,11 @@ r"""
 mock_demo.py - Test case that uses mock objects, from Chapter 3 examples
 """
 
-import sqlite3
-
 from pytest import raises
 from unittest.mock import Mock
 
 from person import Person
-from business_object import BusinessObject, BusinessError
+from business_object import BusinessObject, BusinessError, DaoError
 
 
 def test_get_user():
@@ -58,13 +56,13 @@ def test_get_user_dao_error():
 
     mock_dao = Mock()
     # Configure the mock query_user method to raise a DB error
-    mock_dao.query_user.side_effect = sqlite3.Error('SQL error')
+    mock_dao.query_user.side_effect = DaoError('SQL error')
 
     bus_obj = BusinessObject('mock_demo')
     bus_obj.user_dao = mock_dao
 
     user_id = 123
-    with raises(BusinessError, match='SQL error'):
+    with raises(BusinessError, match='Problem.*user'):
         bus_obj.get_user(user_id)
 
     mock_dao.query_user.assert_called_with(user_id)

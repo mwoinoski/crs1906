@@ -4,7 +4,35 @@
     <link rel="stylesheet" type="text/css" href="../../homepage/css/simple.css">
 </head>
 <body>
-<h2>Hints for Exercise 3.1</h2>
+<h2>Hints for Exercise 3.1 (Writing and running unit tests)</h2>
+
+<h3>test_person.py</h3>
+
+<font color="grey"><pre>
+# TODO: Add a test case that calls the Person constructor with three arguments.
+#       Each argument should contain leading and trailing spaces.</font><font color="blue">
+def test_init_spaces_in_args():
+    person = Person("  John   ", "  Quincy ", " Adams  ")
+
+    assert "John" == person.first_name
+    assert "Quincy" == person.middle_name
+    assert "Adams" == person.last_name</pre></font>
+
+<h3>person.py</h3>
+
+<font color="grey"><pre>
+    # TODO: modify this constructor as needed to make your new test case pass
+    def __init__(self, first_name, middle_name, last_name):
+        """ Initialize the Person's attributes """
+        if not (first_name or middle_name or last_name):
+            raise ValueError("All arguments are empty or None")
+        # replace None with an empty string
+        self.first_name = first_name</font><font color="blue">.strip()</font><font color="grey"> if first_name else ""
+        self.middle_name = middle_name</font><font color="blue">.strip()</font><font color="grey"> if middle_name else ""
+        self.last_name = last_name</font><font color="blue">.strip()</font><font color="grey"> if last_name else ""
+</pre></font>
+
+<h2>Hints for Exercise 3.1 (Writing unit tests for TicketManor)</h2>
 
 <h3>test_rss_news_feed_parser.py</h3>
 

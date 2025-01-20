@@ -2,12 +2,12 @@
 # https://www.dataquest.io/blog/jupyter-notebook-tutorial/
 
 # some setup
-pd.options.mode.chained_assignment = None
 %matplotlib inline
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set(style="darkgrid")
+pd.options.mode.chained_assignment = None
 
 # read the dataset
 df = pd.read_csv('fortune500.csv')
@@ -59,6 +59,7 @@ len(df)
 df.dtypes
 # Better
 
+# Crunch some numbers
 df.loc[df['company'] == 'General Motors', 'profit'].sum()
 df.loc[df['company'] == 'General Motors', 'profit'].mean()
 # Looks good. 
@@ -77,15 +78,17 @@ def plot(x, y, ax, title, y_label):
     ax.plot(x, y)
     ax.margins(x=0, y=0)
 
+# IMPORTANT: Execute the next block of statements in the same cell
 fig, ax = plt.subplots()
-plot(x, y1, ax, 'Increase in mean Fortune 500 company profits from 1955 to 2005', 'Profit (millions)')
+plot(x, y1, ax, 'Increase in mean Fortune 500 company profits from 1955 to 2019', 'Profit (millions)')
 # The increase in profits looks exponential, except for early 1990's recession 
 # and 2000's dot-com bubble.
 
-# What about revenues? (IMPORTANT: Execute the next block of statements in the same cell)
+# What about revenues?
+# Execute the next block of statements in the same cell
 y2 = avgs.revenue
 fig, ax = plt.subplots()
-plot(x, y2, ax, 'Increase in mean Fortune 500 company revenues from 1955 to 2005', 'Revenue (millions)')
+plot(x, y2, ax, 'Increase in mean Fortune 500 company revenues from 1955 to 2019', 'Revenue (millions)')
 # Revenues weren't hit as badly in the downturns, and still an enormous increase
 
 # Is that the whole picture? Let's superimpose plots with their standard deviations
@@ -93,9 +96,9 @@ def plot_with_std(x, y, stds, ax, title, y_label):
     ax.fill_between(x, y - stds, y + stds, alpha=0.2)
     plot(x, y, ax, title, y_label)
 
-# IMPORTANT: Execute the next block of statements in the same cell
+# Execute the next block of statements in the same cell
 fig, (ax1, ax2) = plt.subplots(ncols=2)
-title = 'Increase in mean and std Fortune 500 company %s from 1955 to 2005'
+title = 'Increase in mean and std Fortune 500 company %s from 1955 to 2019'
 stds1 = group_by_year.std().profit.values
 stds2 = group_by_year.std().revenue.values
 plot_with_std(x, y1.values, stds1, ax1, title % 'profits', 'Profit (millions)')
@@ -104,3 +107,7 @@ fig.set_size_inches(14, 4)
 fig.tight_layout()
 
 # Wow. Some companies made billions, others lost billions.
+
+# Note: for drawing plots with plotly, run the following block:
+# import plotly.io as pio
+# pio.renderers.default = 'svg'

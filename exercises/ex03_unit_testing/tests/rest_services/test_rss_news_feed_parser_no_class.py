@@ -73,7 +73,7 @@ expected = [
     },
 ]
 
-# TODO: note that there is no TestCase subclass defined in this module.
+# TODO: note that there is no class defined in this module.
 #       The test cases are global functions rather than methods.
 #       (no code changes required)
 
@@ -144,7 +144,3 @@ def test_parse_content_items_missing():
 # We will discuss monkey patching in the second section of the Unit Testing
 # chapter.
 RssNewsFeedParser.get_raw_content = lambda self, url, max_items: xml_input
-
-
-# TODO: note that there is no call to unittest.main().
-#       (no code changes required)
