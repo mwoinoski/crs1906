@@ -1,4 +1,4 @@
-"""
+r"""
 Creates the Pyramid WSGI application.
 
 To run the app:
@@ -12,7 +12,7 @@ from ticketmanor.rest_services.user_service import UserServiceRest
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from pyramid.config import Configurator
-from sqlalchemy import engine_from_config
+from sqlalchemy import engine_from_config, create_engine
 from sqlalchemy.orm import sessionmaker
 from .models import (
     DBSession,
@@ -41,11 +41,12 @@ def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application. """
 
     config = Configurator(settings=settings)
+    config.include("pyramid_debugtoolbar")
 
     # Create the SQLAlchemy DB Engine
-    engine = engine_from_config(settings, 'sqlalchemy.')
+    engine = create_engine('mysql+pymysql://root:root@localhost:3306/ticketmanor')
+    # engine = engine_from_config(settings, 'sqlalchemy.')  # SQLAlchemy 1.0
     initialize_sql(engine)
-
     # Store a session factory in the application’s registry, and have
     # the session factory called as a side effect of asking the request
     # object for an attribute. The session object will then have a
@@ -63,7 +64,6 @@ def main(global_config, **settings):
     # Second arg is path to directory with static resources
     config.add_static_view('static', 'html', cache_max_age=3600)
 
-    # FIXME: URL path prefix needs to be added to URLs for Apache httpd.
     # Another option: all URLs in template must be prefixed with ${request.route_url('index')}
     # url_path_prefix = settings['ticketmanor.url_path_prefix']
     url_path_prefix = ""
@@ -92,7 +92,7 @@ def add_routes(config, prefix):
     # config.add_route('add_user_form', '/add_user_form')
     # config.add_route('add_user', '/add_user')
 
-    # http://localhost:6543/rest/news/news.json
+    # http://localhost:6543/rest/events/concerts/news/news.json
     config.add_route('get_news', '/rest/news/{news_type}.json')
     config.add_route('get_news_item', '/rest/news/{news_type}/{item_id}.json')
     config.add_route('get_all_news', '/rest/news.json')

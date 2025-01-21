@@ -33,20 +33,19 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
 requires = [
-    'coverage',
-    'pyramid',
-    'pyramid_chameleon',
-    'pyramid_debugtoolbar',
-    'pyramid_tm',
-    'SQLAlchemy',
-    'transaction',
-    'zope.sqlalchemy < 1.2',
-    'waitress',
-    'pytest-cov',
     'pytest',
-    'mysql-connector-python',
-    'WebTest',      # Runs a WSGI application for integration tests
-    'Sphinx',       # Generates documentation from docstrings in source code
+    'coverage',
+    'pytest-cov',
+    'pyramid==2.0.2',
+    'pyramid_debugtoolbar==4.12.1',
+    'pyramid_tm==2.6',
+    'pyramid_chameleon==0.3',
+    'PyMySQL==1.1.1',
+    'SQLAlchemy==2.0.37',
+    'zope.sqlalchemy==3.1',
+    'waitress==3.0.2',
+    'WebTest',  # Runs a WSGI application for integration tests
+    'Sphinx'    # Generates documentation from docstrings in source code
 ]
 
 setup(name='Exercise_2_1_Solution',
