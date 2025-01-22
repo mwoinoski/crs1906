@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=75.8", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -28,4 +28,5 @@ dependencies = [
 ]
 
 [tools.setuptools.packages.find]
+where = ["src"]
 exclude = ["tests*"]
