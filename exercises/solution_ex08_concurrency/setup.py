@@ -44,6 +44,7 @@ requires = [
     'SQLAlchemy==2.0.37',
     'zope.sqlalchemy==3.1',
     'waitress==3.0.2',
+    'cryptography==44.0.0',
     'WebTest',  # Runs a WSGI application for integration tests
     'Sphinx'    # Generates documentation from docstrings in source code
 ]
