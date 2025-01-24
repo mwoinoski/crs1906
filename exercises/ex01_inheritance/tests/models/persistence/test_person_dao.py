@@ -5,6 +5,7 @@ Integration tests for PersonDao.
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 import sys
+
 from sqlalchemy.orm import sessionmaker
 from unittest import TestCase, main
 from unittest.mock import patch
@@ -28,7 +29,7 @@ from ticketmanor.models.venue import Venue
 
 # SQLAlchemy can't connect to an in-memory SQLite database, so we'll
 # use a temporary database file.
-db_filename = 'test_db.sqlite'
+db_filename = r'C:\crs1906\tmp\test_db.sqlite'
 
 
 class PersonDaoTest(TestCase):
@@ -41,10 +42,14 @@ class PersonDaoTest(TestCase):
     # -------------------------------------------------------------------------
 
     def setUp(self):
+        try:
+            drop_db_tables(db_filename)
+        except:
+            pass
         create_db_tables(db_filename)
         self.populate_db_tables()
 
-        settings = {'sqlalchemy.url': 'sqlite:///' + db_filename}
+        settings = {'sqlalchemy.url': f'sqlite:///{db_filename}'}
         # Create the SQLAlchemy DB Engine
         engine = engine_from_config(settings, 'sqlalchemy.')
         Session = sessionmaker(bind=engine)
@@ -54,6 +59,7 @@ class PersonDaoTest(TestCase):
     def tearDown(self):
         self.session.close_all()
         drop_db_tables(db_filename)
+
 
     # -------------------------------------------------------------------------
     #                              Test Cases
@@ -100,8 +106,8 @@ class PersonDaoTest(TestCase):
 
     def test_get_person_not_found(self):
 
-        self.assertRaises(PersistenceError, self.person_dao.delete, 999,
-                          self.session)
+        person = self.person_dao.get(999, self.session)
+        self.assertIsNone(person, self.session)
 
     def test_add_person_ok(self):
 
