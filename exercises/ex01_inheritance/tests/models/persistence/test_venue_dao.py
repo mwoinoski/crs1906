@@ -23,9 +23,10 @@ from ticketmanor.models.persistence import PersistenceError
 # without it, SQLAlchemy raises exceptions.
 from ticketmanor.models.event import Event
 
+
 # SQLAlchemy can't connect to an in-memory SQLite database, so we'll
 # use a temporary database file.
-db_filename = 'test_db.sqlite'
+db_filename = r'C:\crs1906\tmp\test_db.sqlite'
 
 
 class VenueDaoTest(TestCase):
@@ -38,10 +39,14 @@ class VenueDaoTest(TestCase):
     # -------------------------------------------------------------------------
 
     def setUp(self):
+        try:
+            drop_db_tables(db_filename)
+        except:
+            pass
         create_db_tables(db_filename)
         self.populate_db_tables()
 
-        settings = {'sqlalchemy.url': 'sqlite:///' + db_filename}
+        settings = {'sqlalchemy.url': f'sqlite:///{db_filename}'}
         # Create the SQLAlchemy DB Engine
         engine = engine_from_config(settings, 'sqlalchemy.')
         Session = sessionmaker(bind=engine)
