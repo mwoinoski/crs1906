@@ -86,6 +86,11 @@ class ActDao(BaseDao):
                 like_str = "%{}%".format(kwargs.pop('title'))
                 query = query.filter(or_(Act.title.like(like_str),
                                          Act.notes.like(like_str)))
+        elif search_type == 'Venue':
+            # TODO fix this code to get all acts in the venue, not just the first
+            if 'name' in kwargs.keys():
+                like_str = "%{}%".format(kwargs.pop('name'))
+                query = query.filter(Act.venue.like(like_str))
         else:
             raise ValueError(f'No music search type "{search_type}"')
         return query

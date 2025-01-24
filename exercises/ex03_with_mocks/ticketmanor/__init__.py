@@ -44,10 +44,9 @@ def main(global_config, **settings):
     config.include("pyramid_debugtoolbar")
 
     # Create the SQLAlchemy DB Engine
-    engine = create_engine('mysql+pymysql://root:root@localhost:3306/ticketmanor')
-    # engine = engine_from_config(settings, 'sqlalchemy.')  # SQLAlchemy 1.0
+    engine = engine_from_config(settings, 'sqlalchemy.')
     initialize_sql(engine)
-    # Store a session factory in the application’s registry, and have
+    # Store a session factory in the application's registry, and have
     # the session factory called as a side effect of asking the request
     # object for an attribute. The session object will then have a
     # lifetime matching that of the request.
@@ -80,7 +79,7 @@ def main(global_config, **settings):
     # that we import each "by hand" within models/__init__.py.
     # See http://pyramid-cookbook.readthedocs.org/en/latest/database/sqlalchemy.html#importing-all-sqlalchemy-models
     config.scan('.models')
-    config.scan()
+    config.scan('.rest_services')
     return config.make_wsgi_app()
 
 
@@ -92,7 +91,7 @@ def add_routes(config, prefix):
     # config.add_route('add_user_form', '/add_user_form')
     # config.add_route('add_user', '/add_user')
 
-    # http://localhost:6543/rest/events/concerts/news/news.json
+    # http://localhost:6543/rest/news/concerts.json
     config.add_route('get_news', '/rest/news/{news_type}.json')
     config.add_route('get_news_item', '/rest/news/{news_type}/{item_id}.json')
     config.add_route('get_all_news', '/rest/news.json')
