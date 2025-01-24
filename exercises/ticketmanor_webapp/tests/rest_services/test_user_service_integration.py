@@ -4,7 +4,6 @@ Integration tests for UserServiceRest.
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
-import os
 import json
 
 import unittest
@@ -20,17 +19,13 @@ from test_support.db_utils import (
 # SQLAlchemy can't connect to an in-memory SQLite database, so we'll
 # use a temporary database file.
 
-db_filename = 'ticketmanor_db.sqlite'
+db_filename = 'test_db.sqlite'
 
 
 class UserServiceRestIntegrationTest(unittest.TestCase):
     """
     Integration tests for UserServiceRest
     """
-
-    @classmethod
-    def tearDownClass(cls):
-        os.remove(db_filename)
 
     def setUp(self):
         create_db_tables(db_filename)

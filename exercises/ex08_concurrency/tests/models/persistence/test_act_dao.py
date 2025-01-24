@@ -5,7 +5,6 @@ from ticketmanor.models.persistence import PersistenceError
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
-import os
 from sqlalchemy.orm import sessionmaker
 
 from unittest import TestCase
@@ -27,7 +26,7 @@ from ticketmanor.models.venue import Venue
 # SQLAlchemy can't connect to an in-memory SQLite database, so we'll
 # use a temporary database file.
 
-db_filename = 'ticketmanor_db.sqlite'
+db_filename = 'test_db.sqlite'
 
 
 class ActDaoTest(TestCase):
@@ -174,11 +173,6 @@ class ActDaoTest(TestCase):
     # -------------------------------------------------------------------------
     #                        Set Up and Tear Down Methods
     # -------------------------------------------------------------------------
-
-    @classmethod
-    def tearDownClass(cls):
-        """Called once, before the first test case is run"""
-        os.remove(db_filename)
 
     def setUp(self):
         """Called before each test case"""
