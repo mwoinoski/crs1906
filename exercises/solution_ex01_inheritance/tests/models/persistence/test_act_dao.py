@@ -3,13 +3,12 @@ Integration tests for ActDao.
 """
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
-import os
 import sys
 from sqlalchemy.orm import sessionmaker
 from unittest import TestCase, main
 from unittest.mock import patch
 from ticketmanor import engine_from_config
-from test_support.db_utils import (
+from tests.test_support.db_utils import (
     create_db_tables,
     drop_db_tables,
     execute_select,
@@ -24,10 +23,10 @@ from ticketmanor.models.persistence import PersistenceError
 from ticketmanor.models.event import Event
 from ticketmanor.models.venue import Venue
 
+
 # SQLAlchemy can't connect to an in-memory SQLite database, so we'll
 # use a temporary database file.
-
-db_filename = 'ticketmanor_db.sqlite'
+db_filename = r'C:\crs1906\tmp\test_db.sqlite'
 
 
 class ActDaoTest(TestCase):
@@ -40,12 +39,14 @@ class ActDaoTest(TestCase):
     # -------------------------------------------------------------------------
 
     def setUp(self):
-        if os.path.exists(db_filename):
-            os.remove(db_filename)
+        try:
+            drop_db_tables(db_filename)
+        except:
+            pass
         create_db_tables(db_filename)
         self.populate_db_tables()
 
-        settings = {'sqlalchemy.url': 'sqlite:///' + db_filename}
+        settings = {'sqlalchemy.url': f'sqlite:///{db_filename}'}
         # Create the SQLAlchemy DB Engine
         engine = engine_from_config(settings, 'sqlalchemy.')
         Session = sessionmaker(bind=engine)

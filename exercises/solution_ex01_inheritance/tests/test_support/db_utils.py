@@ -231,9 +231,8 @@ def execute_sql(db, *sql):
     :param sql: list of SQL statements to execute
     """
     conn = sqlite3.connect(db)
-    with conn:  # commits automatically if no exception
-        c = conn.cursor()
+    with conn:  # commits and closes automatically if no exception
+        c = conn.cursor()  # `with` statement here doesn't close the cursor
         for stmt in sql:
             c.execute(stmt)
         c.close()
-    conn.close()

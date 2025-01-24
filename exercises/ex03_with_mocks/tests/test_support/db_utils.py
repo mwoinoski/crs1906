@@ -205,7 +205,7 @@ def execute_insert(db, table_name, *values):
         ','.join("'" + v + "'" if isinstance(v, str) else 'null' if v is None else str(v)
                  for v in value_tuple)) for value_tuple in values]
 
-    # Or, if you prefer a non-Pythonic approach:
+    # Or, if you prefer a more readable approach:
     # statements = []
     # for value_tuple in values:
     #     value_list = []
@@ -220,6 +220,7 @@ def execute_insert(db, table_name, *values):
     #     value_str = ','.join(value_list)
     #     statement = 'INSERT INTO {} VALUES ({})'.format(table_name, value_str)
     #     statements.append(statement)
+
     execute_sql(db, *statements)
 
 
@@ -230,9 +231,8 @@ def execute_sql(db, *sql):
     :param sql: list of SQL statements to execute
     """
     conn = sqlite3.connect(db)
-    with conn:  # commits automatically if no exception
-        c = conn.cursor()
+    with conn:  # commits and closes automatically if no exception
+        c = conn.cursor()  # `with` statement here doesn't close the cursor
         for stmt in sql:
             c.execute(stmt)
         c.close()
-    conn.close()

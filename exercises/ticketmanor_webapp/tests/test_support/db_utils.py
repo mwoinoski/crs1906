@@ -14,8 +14,6 @@ def create_db_tables(db):
 
     :param db: name of SQLite database file
     """
-    drop_db_tables(db)
-
     conn = sqlite3.connect(db)
     c = conn.cursor()
 
@@ -159,22 +157,22 @@ def drop_db_tables(db):
     conn = sqlite3.connect(db)
     c = conn.cursor()
 
-    c.execute('''DROP TABLE IF EXISTS acts''')
-    c.execute('''DROP TABLE IF EXISTS acts_events''')
-    c.execute('''DROP TABLE IF EXISTS admin''')
-    c.execute('''DROP TABLE IF EXISTS auditoriums''')
-    c.execute('''DROP TABLE IF EXISTS customers''')
-    c.execute('''DROP TABLE IF EXISTS events''')
-    c.execute('''DROP TABLE IF EXISTS feedbackform''')
-    c.execute('''DROP TABLE IF EXISTS members''')
-    c.execute('''DROP TABLE IF EXISTS movies''')
-    c.execute('''DROP TABLE IF EXISTS order_items''')
-    c.execute('''DROP TABLE IF EXISTS orders''')
-    c.execute('''DROP TABLE IF EXISTS orders_order_items''')
-    c.execute('''DROP TABLE IF EXISTS people''')
-    c.execute('''DROP TABLE IF EXISTS sellable''')
-    c.execute('''DROP TABLE IF EXISTS tickets''')
-    c.execute('''DROP TABLE IF EXISTS venues''')
+    c.execute('''DROP TABLE acts''')
+    c.execute('''DROP TABLE acts_events''')
+    c.execute('''DROP TABLE admin''')
+    c.execute('''DROP TABLE auditoriums''')
+    c.execute('''DROP TABLE customers''')
+    c.execute('''DROP TABLE events''')
+    c.execute('''DROP TABLE feedbackform''')
+    c.execute('''DROP TABLE members''')
+    c.execute('''DROP TABLE movies''')
+    c.execute('''DROP TABLE order_items''')
+    c.execute('''DROP TABLE orders''')
+    c.execute('''DROP TABLE orders_order_items''')
+    c.execute('''DROP TABLE people''')
+    c.execute('''DROP TABLE sellable''')
+    c.execute('''DROP TABLE tickets''')
+    c.execute('''DROP TABLE venues''')
 
     conn.commit()
     c.close()
@@ -207,7 +205,7 @@ def execute_insert(db, table_name, *values):
         ','.join("'" + v + "'" if isinstance(v, str) else 'null' if v is None else str(v)
                  for v in value_tuple)) for value_tuple in values]
 
-    # Or, if you prefer a non-Pythonic approach:
+    # Or, if you prefer a more readable approach:
     # statements = []
     # for value_tuple in values:
     #     value_list = []
@@ -222,6 +220,7 @@ def execute_insert(db, table_name, *values):
     #     value_str = ','.join(value_list)
     #     statement = 'INSERT INTO {} VALUES ({})'.format(table_name, value_str)
     #     statements.append(statement)
+
     execute_sql(db, *statements)
 
 
@@ -232,9 +231,8 @@ def execute_sql(db, *sql):
     :param sql: list of SQL statements to execute
     """
     conn = sqlite3.connect(db)
-    with conn:  # commits automatically if no exception
-        c = conn.cursor()
+    with conn:  # commits and closes automatically if no exception
+        c = conn.cursor()  # `with` statement here doesn't close the cursor
         for stmt in sql:
             c.execute(stmt)
         c.close()
-    conn.close()
