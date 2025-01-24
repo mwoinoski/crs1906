@@ -4,13 +4,15 @@ Integration tests for UserServiceRest.
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
-import os
 import json
+import sys
 
 import unittest
+from tempfile import NamedTemporaryFile
+
 from webtest import TestApp
 from ticketmanor import main
-from test_support.db_utils import (
+from tests.test_support.db_utils import (
     create_db_tables,
     drop_db_tables,
     execute_select,
@@ -19,8 +21,7 @@ from test_support.db_utils import (
 
 # SQLAlchemy can't connect to an in-memory SQLite database, so we'll
 # use a temporary database file.
-
-db_filename = 'ticketmanor_db.sqlite'
+db_filename = r'C:\crs1906\tmp\test_db.sqlite'
 
 
 class UserServiceRestIntegrationTest(unittest.TestCase):
@@ -28,20 +29,17 @@ class UserServiceRestIntegrationTest(unittest.TestCase):
     Integration tests for UserServiceRest
     """
 
-    @classmethod
-    def tearDownClass(cls):
-        os.remove(db_filename)
-
     def setUp(self):
+        try:
+            drop_db_tables(db_filename)
+        except:
+            pass
         create_db_tables(db_filename)
         self.populate_db_tables()
 
-        settings = {'sqlalchemy.url': 'sqlite:///' + db_filename}
+        settings = {'sqlalchemy.url': f'sqlite:///{db_filename}'}
         app = main(None, **settings)
         self.testapp = TestApp(app)
-
-    def tearDown(self):
-        drop_db_tables(db_filename)
 
     def test_get_user_found(self):
         url = 'http://localhost:6543/rest/users/trane@jazz.com'
@@ -96,7 +94,7 @@ class UserServiceRestIntegrationTest(unittest.TestCase):
                 "state": "IL"
             },
             "first_name": "John",
-            "last_name": "Coltrance"
+            "last_name": "Coltrane"
         }
 
         res = self.testapp.put_json(url, put_body, status=202)
