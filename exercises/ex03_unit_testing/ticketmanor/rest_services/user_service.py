@@ -37,7 +37,7 @@ class UserServiceRest:
     # http://docs.pylonsproject.org/projects/colander/en/latest/
 
     # Pyramid calls this method for a request like this:
-    # GET http://localhost:6543/rest/users/mike%@wxyz.com
+    # GET http://localhost:6543/rest/users/mike@wxyz.com
     @view_config(request_method='GET',
                  route_name='rest_users_email',
                  renderer='json')
@@ -45,7 +45,7 @@ class UserServiceRest:
         email = self._request.matchdict['email']
         return self.get_user(email)
 
-    # FIXME: if this method is defined, requests without an Accept header
+    # NEXT REV: if this method is defined, requests without an Accept header
     # are always sent to it
     # @view_config(request_method='GET',
     #              route_name='rest_users_email',
@@ -60,13 +60,16 @@ class UserServiceRest:
         logger.debug("%s: email = %s", func_name(self), email)
         try:
             person = self._dao.get(email, self._request.db_session)
+            logger.debug("%s: person = %s", func_name(self), 
+                         str(vars(person)) if person else "null")
+            if not person:
+                raise HTTPNotFound()
         except PersistenceError:
             raise HTTPNotFound()
-        logger.debug("%s: person = %s", func_name(self), str(vars(person)))
         return person
 
     @staticmethod
-    def user_to_xml(user):  # FIXME: complete this method
+    def user_to_xml(user):  # NEXT REV: complete this method
         # create xml manually as in 10-41 and 10-42
         return '<user/>'
 
@@ -81,12 +84,14 @@ class UserServiceRest:
         new_user.from_json(json_body)
         try:
             self._dao.add(new_user, self._request.db_session)
+            self._request.db_session.commit()
             return Response(
                 status_int=201,
                 content_type='application/json; charset=UTF-8')
         except Exception:
             msg = "Could not add user {}".format(new_user)
             logger.exception(msg)
+            self._request.db_session.rollback()
             raise HTTPInternalServerError(msg)
 
     @view_config(request_method='PUT',
@@ -100,8 +105,10 @@ class UserServiceRest:
         new_user.from_json(json_body)
         try:
             self._dao.update(new_user, self._request.db_session)
+            self._request.db_session.commit()
         except Exception:
             logger.exception("Problem updating Person {}".format(new_user))
+            self._request.db_session.rollback()
             raise HTTPNotFound()
         return Response(status_int=202)
 
@@ -113,6 +120,9 @@ class UserServiceRest:
         logger.debug("%s: email = %s", func_name(self), email)
         try:
             self._dao.delete(email, self._request.db_session)
+            self._request.db_session.commit()
         except PersistenceError:
+            logger.exception(f"Problem deleting Person {email}")
+            self._request.db_session.rollback()
             raise HTTPNotFound()
         return Response(status_int=204)

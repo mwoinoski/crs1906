@@ -22,18 +22,11 @@ logger = logging.getLogger(__name__)
 class UserServiceRest:
     """View Callable for managing users"""
 
-    # TODO: note that the constructor for UserServiceRest has a DAO parameter.
-    #       If no DAO parameter is passed, the service creates a production DAO
-    #       by default. This design allows the unit test to pass a mock DAO to
-    #       the service constructor, so the production DAO will never be created
-    #       during unit testing.
-    #       (no code change required)
-    def __init__(self, context, request, dao):
-        """DAO dependency will be injected from the `dao` parameter"""
+    def __init__(self, context, request, dao=PersonDao):
+        """DAO dependency will be injected from dao arg"""
         self._context = context
         self._request = request
-        # if no DAO is supplied, use the production DAO by default
-        self._dao = dao if dao else PersonDao()
+        self._dao = dao()  # construct DAO instance and inject
 
     # URLs are mapped to route names in __init__.py with Configurator.add_route()
 
@@ -44,7 +37,7 @@ class UserServiceRest:
     # http://docs.pylonsproject.org/projects/colander/en/latest/
 
     # Pyramid calls this method for a request like this:
-    # GET http://localhost:6543/rest/users/mike%@wxyz.com
+    # GET http://localhost:6543/rest/users/mike@wxyz.com
     @view_config(request_method='GET',
                  route_name='rest_users_email',
                  renderer='json')
@@ -52,36 +45,31 @@ class UserServiceRest:
         email = self._request.matchdict['email']
         return self.get_user(email)
 
-    # TODO: you'll write test cases for the get_user() method
-    #       (no code change required)
+    # NEXT REV: if this method is defined, requests without an Accept header
+    # are always sent to it
+    # @view_config(request_method='GET',
+    #              route_name='rest_users_email',
+    #              accept='application/xml')
+    # def get_user_xml(self):
+    #     email = self._request.matchdict['email']
+    #     user = self.get_user(email)
+    #     return UserServiceRest.user_to_xml(user)
+
     def get_user(self, email):
         """Fetch a Person by searching for the registered email address."""
         logger.debug("%s: email = %s", func_name(self), email)
         try:
-            # TODO: note how the service method calls the DAO's `get` method to
-            #       look up the Person record with the associated email address
-            #       (no code change required)
             person = self._dao.get(email, self._request.db_session)
-
-            logger.debug("%s: person = %s", func_name(self),
+            logger.debug("%s: person = %s", func_name(self), 
                          str(vars(person)) if person else "null")
-
-            # TODO: note that if there is no Person with that email,
-            #       the service raises an HTTPNotFound exception
-            #       (no code change required)
             if not person:
-                raise HTTPNotFound(f'no user with email {email}')
-
-        # TODO: note that if the DAO raises a PersistenceError,
-        #       the service raises an HTTPNotFound exception
-        #       (no code change required)
+                raise HTTPNotFound()
         except PersistenceError:
-            raise HTTPNotFound(f'problem querying user with email {email}')
-
+            raise HTTPNotFound()
         return person
 
     @staticmethod
-    def user_to_xml(user):
+    def user_to_xml(user):  # NEXT REV: complete this method
         # create xml manually as in 10-41 and 10-42
         return '<user/>'
 
@@ -96,12 +84,14 @@ class UserServiceRest:
         new_user.from_json(json_body)
         try:
             self._dao.add(new_user, self._request.db_session)
+            self._request.db_session.commit()
             return Response(
                 status_int=201,
                 content_type='application/json; charset=UTF-8')
         except Exception:
             msg = "Could not add user {}".format(new_user)
             logger.exception(msg)
+            self._request.db_session.rollback()
             raise HTTPInternalServerError(msg)
 
     @view_config(request_method='PUT',
@@ -115,8 +105,10 @@ class UserServiceRest:
         new_user.from_json(json_body)
         try:
             self._dao.update(new_user, self._request.db_session)
+            self._request.db_session.commit()
         except Exception:
             logger.exception("Problem updating Person {}".format(new_user))
+            self._request.db_session.rollback()
             raise HTTPNotFound()
         return Response(status_int=202)
 
@@ -128,6 +120,9 @@ class UserServiceRest:
         logger.debug("%s: email = %s", func_name(self), email)
         try:
             self._dao.delete(email, self._request.db_session)
+            self._request.db_session.commit()
         except PersistenceError:
+            logger.exception(f"Problem deleting Person {email}")
+            self._request.db_session.rollback()
             raise HTTPNotFound()
         return Response(status_int=204)
