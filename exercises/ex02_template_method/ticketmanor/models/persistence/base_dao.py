@@ -29,10 +29,6 @@ class BaseDao:
                                            self._id_attr) == id_value)\
                            .first()
         # Example filter query: .filter(Person.email == id_value)
-        if not entity:
-            raise PersistenceError(
-                "Can't get {} with id {}: not in database"
-                .format(self._entity_class.__name__, id_value))
         #  Simple fetch by primary key: act = db_session.query(Act).get(act_id)
         return entity
 
@@ -56,6 +52,10 @@ class BaseDao:
         # We need to make sure we don't call the subclass's get method,
         # so we'll explicitly call the base class definition.
         entity = BaseDao.get(self, id_value, db_session)
+        if not entity:
+            raise PersistenceError(
+                "Can't delete {} with id {}: not in database"
+                .format(self._entity_class.__name__, id_value))
         db_session.delete(entity)
         logger.debug("%s: deleted %s %s", func_name(self),
                      self._entity_class.__name__, repr(entity))
