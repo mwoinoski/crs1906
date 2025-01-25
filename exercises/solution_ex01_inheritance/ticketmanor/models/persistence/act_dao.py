@@ -24,12 +24,16 @@ class ActDao(BaseDao):
 
     # TODO: define the __init__() method, with one parameter, self
     def __init__(self):
-        """Initialize the ActDao"""
+        # TODO: in the __init__() method, call the superclass's __init__(),
+        #       passing two arguments
         super().__init__(Act, 'id')
 
     def query_for_act(self, db_session, *, act_type, search_type, **kwargs):
         """
         Search for an act of the given type.
+        
+        Note: parameters after '*' or '*identifier' are keyword-only parameters
+        and may only be passed using keyword arguments.
 
         :param db_session a Session instance
         :param act_type music, sports, movie, or theater
@@ -64,10 +68,7 @@ class ActDao(BaseDao):
 
         act = query.filter_by(**kwargs)\
                    .first()
-        # TODO: should return all acts that match the query, not just the first
-        #       (needs changes in concerts.html, movies.html, and sports.html)
 
-        # TODO: get ticket price and images from DB, then delete the following
         if hasattr(act, 'events'):
             for event in act.events:
                 event.price = ActDao.generate_price(event.venue.country)
@@ -87,7 +88,7 @@ class ActDao(BaseDao):
                 query = query.filter(or_(Act.title.like(like_str),
                                          Act.notes.like(like_str)))
         elif search_type == 'Venue':
-            # TODO fix this code to get all acts in the venue, not just the first
+            # NEXT REV: fix this code to get all acts in the venue, not just the first
             if 'name' in kwargs.keys():
                 like_str = "%{}%".format(kwargs.pop('name'))
                 query = query.filter(Act.venue.like(like_str))
@@ -125,3 +126,7 @@ class ActDao(BaseDao):
                         .options(joinedload(Act.events))\
                         .filter_by(id=act_id).one()
         return act
+
+    # TODO: delete all the methods below this comment (including the last
+    #       method, query_for_act())
+

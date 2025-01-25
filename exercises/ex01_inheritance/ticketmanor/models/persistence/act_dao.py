@@ -50,6 +50,9 @@ class ActDao():
                      search_type='Artist',
                      title='Berlin Philharmonic')
         """
+        logger.debug("%s: args = %s, %s", func_name(self), search_type,
+                     ','.join(['{}={}'.format(k, kwargs[k]) for k in kwargs]))
+
         act_type_int = Act.ACT_TYPE_INV[act_type]  # convert string to int
         query = db_session.query(Act).filter_by(act_type=act_type_int)
 
@@ -88,6 +91,11 @@ class ActDao():
                 like_str = "%{}%".format(kwargs.pop('title'))
                 query = query.filter(or_(Act.title.like(like_str),
                                          Act.notes.like(like_str)))
+        elif search_type == 'Venue':
+            # NEXT REV: fix this code to get all acts in the venue, not just the first
+            if 'name' in kwargs.keys():
+                like_str = "%{}%".format(kwargs.pop('name'))
+                query = query.filter(Act.venue.like(like_str))
         else:
             raise ValueError(f'No music search type "{search_type}"')
         return query
@@ -151,3 +159,4 @@ class ActDao():
     def query_for_act(self, *args, **kwargs):
         """Dummy query_for_act() implementation"""
         return None
+

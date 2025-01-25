@@ -8,6 +8,7 @@ exercises.backup/
 exercises.clean/
 exercises.copy/
 exercises.zip
+tmp/test_db.sqlite
 
 # PyCharm workspace config
 # .idea/

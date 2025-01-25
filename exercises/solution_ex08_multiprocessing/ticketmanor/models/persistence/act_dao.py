@@ -2,15 +2,16 @@
 DAO for Act.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
-
+from datetime import datetime, timedelta
+from random import randint, randrange
 import logging
-import random
 from sqlalchemy.orm import joinedload
 from sqlalchemy import or_
 from ...util.utils import func_name
 from ...models.act import Act
 from .base_dao import BaseDao
+
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 logger = logging.getLogger(__name__)
 
@@ -27,7 +28,11 @@ class ActDao(BaseDao):
     def query_for_act(self, db_session, *, act_type, search_type, **kwargs):
         """
         Search for an act of the given type.
+        
+        Note: parameters after '*' or '*identifier' are keyword-only parameters
+        and may only be passed using keyword arguments.
 
+        :param db_session a Session instance
         :param act_type music, sports, movie, or theater
         :param search_type based on act_type; e.g., music searches support
                searches for Artist, Venue, City, Date, and City
@@ -56,19 +61,20 @@ class ActDao(BaseDao):
             raise ValueError("Sports search function isn't implemented yet")
 
         else:
-            raise ValueError('Unknown act type {}'.format(act_type))
+            raise ValueError(f'Unknown act type {act_type}')
 
         act = query.filter_by(**kwargs)\
                    .first()
-        # FIXME: should return all acts that match the query, not just the first
-        # (needs changes in concerts.html, movies.html, and sports.html)
+        # NEXT REV: should return all acts that match the query, not just the first
+        #           (needs changes in concerts.html, movies.html, and sports.html)
 
-        # FIXME: get ticket price and images from DB, then delete the following
+        # NEXT REV: get ticket price and images from DB, then delete the following
         if hasattr(act, 'events'):
             for event in act.events:
-                event.price = self.generate_price(event.venue.country)
+                event.price = ActDao.generate_price(event.venue.country)
+                event.date_time = ActDao.generate_event_date_time()
                 event.image_thumbnail = '/static/images/concerts-{}.png'\
-                                        .format(random.randrange(1, 7))
+                                        .format(randrange(1, 7))
                 event.image_banner = '/static/images/concerts.jpg'
 
         return act
@@ -81,8 +87,13 @@ class ActDao(BaseDao):
                 like_str = "%{}%".format(kwargs.pop('title'))
                 query = query.filter(or_(Act.title.like(like_str),
                                          Act.notes.like(like_str)))
+        elif search_type == 'Venue':
+            # NEXT REV: fix this code to get all acts in the venue, not just the first
+            if 'name' in kwargs.keys():
+                like_str = "%{}%".format(kwargs.pop('name'))
+                query = query.filter(Act.venue.like(like_str))
         else:
-            raise ValueError('No music search type "{}"'.format(search_type))
+            raise ValueError(f'No music search type "{search_type}"')
         return query
 
     @staticmethod
@@ -94,18 +105,24 @@ class ActDao(BaseDao):
                 query = query.filter(or_(Act.title.like(like_str),
                                          Act.notes.like(like_str)))
         else:
-            raise ValueError('No movie search type "{}"'.format(search_type))
+            raise ValueError(f'No movie search type "{search_type}"')
         return query
 
-    def generate_price(self, country):
+    @staticmethod
+    def generate_price(country):
         symbol = '$' if country == 'USA' else '\u20AC'
-        return symbol + str(random.randrange(60, 200, 5))
+        return symbol + str(randrange(60, 200, 5))
 
-    def get_act_and_events(self, id, db_session):
+    @staticmethod
+    def generate_event_date_time():
+        return datetime.now().replace(hour=randint(19, 21), minute=0, second=0) + \
+               timedelta(days=randint(1, 120))
+
+    def get_act_and_events(self, act_id, db_session):
         """Eagerly loads the act and associated events for a given act id"""
-        logger.debug("%s: id = %s", func_name(self), id)
+        logger.debug("%s: act_id = %s", func_name(self), act_id)
 
         act = db_session.query(Act)\
                         .options(joinedload(Act.events))\
-                        .filter_by(id=id).one()
+                        .filter_by(id=act_id).one()
         return act
