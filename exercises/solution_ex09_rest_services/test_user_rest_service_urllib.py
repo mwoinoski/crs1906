@@ -40,7 +40,7 @@ user_miles = {
     }
 }
 
-base_url = 'http://localhost:6543/rest/users'
+base_url = 'http://localhost:6544/rest/users'
 
 
 def test_get_user_found():

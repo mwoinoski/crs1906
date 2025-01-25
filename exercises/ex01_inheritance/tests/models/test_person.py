@@ -1,8 +1,5 @@
-"""Unit tests for Person
-
-   Run as follows:
-   cd ticketmanor_webapp
-   python -m unittest tests/models/test_person.py
+"""
+Unit tests for Person
 """
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'

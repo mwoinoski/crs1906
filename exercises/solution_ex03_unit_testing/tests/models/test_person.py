@@ -1,8 +1,5 @@
-"""Unit tests for Person
-
-   Run as follows:
-   cd ticketmanor_webapp
-   python -m unittest tests/models/test_person.py
+"""
+Unit tests for Person
 """
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
@@ -37,7 +34,8 @@ class PersonTestCase(unittest.TestCase):
         p1 = self.create_person()
         p2 = self.create_person()
         p2.first_name = "Eve"
-        self.assertNotEqual(p1, p2)
+        # make the test case fail to demo pytest error reporting
+        self.assertEqual(p1, p2)  
 
     def test_eq_instances_address_field_ne(self):
         p1 = self.create_person()
@@ -84,7 +82,8 @@ class PersonTestCase(unittest.TestCase):
 
         s = str(p)
 
-        self.assertEqual('Adam Alpha adam.alpha@gmail.com', s)
+        # make the test case fail to demo pytest error reporting
+        self.assertEqual('Adam Beta adam.alpha@gmail.com', s)
 
     # Don't make this method static, because if a test case changes an
     # attribute value, the new value persists to the following test cases

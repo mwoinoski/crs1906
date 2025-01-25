@@ -54,12 +54,12 @@ user_miles = {
 
 # TODO: note that base_url will be used for all REST requests
 #       (no code change required)
-base_url = 'http://localhost:6543/rest/users'
+base_url = 'http://localhost:6544/rest/users'
 
 
 def test_get_user_found():
     # TODO: you'll look up a user with GET request like this:
-    #       GET http://localhost:6543/rest/users/ned.flanders@gmail.com
+    #       GET http://localhost:6544/rest/users/ned.flanders@gmail.com
     #       The GET request will return JSON data.
     #       (no code change required)
 
@@ -100,7 +100,7 @@ def test_get_user_not_found():
 
 def test_add_user_ok():
     # TODO: you'll add a new user with a POST request like this:
-    #       POST http://localhost:6543/rest/users
+    #       POST http://localhost:6544/rest/users
     #       { "email": "miles@jazz.com", "first_name": "Miles", etc. }
     #       (no code change required)
 
@@ -130,7 +130,7 @@ def test_update_user_ok():
     user_miles['address']['zipcode'] = '10013'
 
     # TODO: you'll update an existing user with a PUT request like this:
-    #       PUT http://localhost:6543/rest/users
+    #       PUT http://localhost:6544/rest/users
     #       { "email": "miles@jazz.com", "first_name": "Miles", etc. }
     #       (no code change required)
 

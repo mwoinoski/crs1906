@@ -1,7 +1,7 @@
-"""Nose unit tests for Person
+"""
+Nose unit tests for Person
 
-   Run as follows:
-   cd C:\crs1906\examples\ch03_examples
+Run as follows:
    nosetests test_person_nose.py
 """
 
