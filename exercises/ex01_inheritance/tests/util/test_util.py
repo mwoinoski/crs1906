@@ -8,6 +8,7 @@ from unittest import TestCase
 
 from ticketmanor.util.utils import html_escape, html_unescape
 
+
 class TestUtil(TestCase):
     """Unit tests for utility functions"""
 
@@ -20,8 +21,8 @@ class TestUtil(TestCase):
         self.assertEqual(TestUtil.unescaped_html, html)
 
     def test_html_unescape_no_double_unescape(self):
-        orginal = "&amp;lt;br&amp;gt;"
-        html = html_unescape(orginal)
+        original = "&amp;lt;br&amp;gt;"
+        html = html_unescape(original)
         self.assertEqual("&lt;br&gt;", html)
 
     unescaped_html = """

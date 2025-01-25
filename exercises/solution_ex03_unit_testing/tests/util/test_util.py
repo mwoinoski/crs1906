@@ -21,8 +21,8 @@ class TestUtil(TestCase):
         self.assertEqual(TestUtil.unescaped_html, html)
 
     def test_html_unescape_no_double_unescape(self):
-        orginal = "&lt;br&gt;"
-        html = html_unescape(orginal)
+        original = "&amp;lt;br&amp;gt;"
+        html = html_unescape(original)
         self.assertEqual("&lt;br&gt;", html)
 
     unescaped_html = """
