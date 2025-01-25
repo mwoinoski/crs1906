@@ -22,11 +22,11 @@ logger = logging.getLogger(__name__)
 class UserServiceRest:
     """View Callable for managing users"""
 
-    def __init__(self, context, request, dao=PersonDao):
+    def __init__(self, context, request, dao=PersonDao()):
         """DAO dependency will be injected from dao arg"""
         self._context = context
         self._request = request
-        self._dao = dao()  # construct DAO instance and inject
+        self._dao = dao
 
     # URLs are mapped to route names in __init__.py with Configurator.add_route()
 
@@ -60,7 +60,7 @@ class UserServiceRest:
         logger.debug("%s: email = %s", func_name(self), email)
         try:
             person = self._dao.get(email, self._request.db_session)
-            logger.debug("%s: person = %s", func_name(self), 
+            logger.debug("%s: person = %s", func_name(self),
                          str(vars(person)) if person else "null")
             if not person:
                 raise HTTPNotFound()

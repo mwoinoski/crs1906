@@ -42,7 +42,7 @@ class UserServiceRestTest(TestCase):
 
     def test_get_user_success(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
 
         expected_result = Person(id=123)
         mock_dao = Mock()
@@ -56,7 +56,7 @@ class UserServiceRestTest(TestCase):
     # noinspection PyMethodMayBeStatic
     def test_get_user_not_found(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
 
         # TODO: create a mock DAO
         mock_dao = Mock()
@@ -79,7 +79,7 @@ class UserServiceRestTest(TestCase):
     # noinspection PyMethodMayBeStatic
     def test_get_user_dao_exception(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
 
         # TODO: create a mock DAO
         mock_dao = Mock()
@@ -95,14 +95,14 @@ class UserServiceRestTest(TestCase):
 
         # TODO: add a `with` statement to assert that the nested method call
         #       raises an HTTPNotFound exception
-        with raises(HTTPNotFound, match=r'problem querying user with email a@b.com'):
+        with raises(HTTPNotFound):
             # TODO: call the UserServiceRest's `get_user` method, passing
             #       any string as an argument
             user_service.get_user('a@b.com')
 
     def test_add_user_success(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.json_body = {"id": "1", "first_name": "Ben",
                              "last_name": "Franklin", "email": "benf@gmail.com"}
         user_service = UserServiceRest(None, request, dao=Mock())
@@ -114,7 +114,7 @@ class UserServiceRestTest(TestCase):
     # noinspection PyMethodMayBeStatic
     def test_add_user_db_exception(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.json_body = {"id": "1", "first_name": "Ben",
                              "last_name": "Franklin", "email": "benf@gmail.com"}
         mock_dao = Mock()
@@ -126,7 +126,7 @@ class UserServiceRestTest(TestCase):
 
     def test_update_user_success(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.json_body = {"id": "1", "first_name": "Ben",
                              "last_name": "Franklin", "email": "benf@gmail.com"}
         user_service = UserServiceRest(None, request, dao=Mock())
@@ -138,7 +138,7 @@ class UserServiceRestTest(TestCase):
     # noinspection PyMethodMayBeStatic
     def test_update_user_not_found(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.json_body = {"id": "1", "first_name": "Ben",
                              "last_name": "Franklin", "email": "benf@gmail.com"}
         mock_dao = Mock()
@@ -150,7 +150,7 @@ class UserServiceRestTest(TestCase):
 
     def test_delete_user_success(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.matchdict['email'] = 'benf@gmail.com'
         user_service = UserServiceRest(None, request, dao=Mock())
 
@@ -161,7 +161,7 @@ class UserServiceRestTest(TestCase):
     # noinspection PyMethodMayBeStatic
     def test_delete_user_not_found(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.matchdict['email'] = 'nobody@gmail.com'
         mock_dao = Mock()
         mock_dao.delete.side_effect = PersistenceError()

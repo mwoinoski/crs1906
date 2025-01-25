@@ -7,7 +7,7 @@ See http://docs.pylonsproject.org/projects/pyramid/en/1.3-branch/narr/pyramid_te
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
 
 from unittest import TestCase, main
-from unittest.mock import MagicMock, ANY
+from unittest.mock import MagicMock, ANY, Mock
 import sqlite3
 
 from pyramid import testing as pyramid_testing
@@ -35,13 +35,6 @@ class UserServiceRestTest(TestCase):
         self.config = pyramid_testing.setUp(request=request)
         self.config.include('pyramid_chameleon')
 
-        # For integration test, add model to in-memory DB
-        # engine = create_engine('sqlite://')
-        # DBSession.configure(bind=engine)
-        # Base.metadata.create_all(engine)
-        # with transaction.manager:
-        #     DBSession.add(UserServiceRestTest.model)
-
     def tearDown(self):
         # DBSession.remove()
         pyramid_testing.tearDown()
@@ -54,33 +47,33 @@ class UserServiceRestTest(TestCase):
         person = Person(id=123)
         user_service._dao.get.return_value = person
 
-        result = user_service.get_user()
+        result = user_service.get_user_json()
 
         self.assertEqual(result, person)
 
     def test_get_not_found(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.matchdict['email'] = 'nobody@gmail.com'
         user_service = UserServiceRest(None, request, dao=MagicMock)
         user_service._dao.get = MagicMock(side_effect=PersistenceError())
 
         with self.assertRaises(HTTPNotFound):
-            user_service.get_user()
+            user_service.get_user_json()
 
     def test_get_unhandled_exception(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.matchdict['email'] = 'nobody@gmail.com'
         user_service = UserServiceRest(None, request, dao=MagicMock)
         user_service._dao.get = MagicMock(side_effect=ValueError())
 
         with self.assertRaises(ValueError):
-            user_service.get_user()
+            user_service.get_user_json()
 
     def test_add_user_success(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.json_body = {"id": "1", "first_name": "Ben",
                              "last_name": "Franklin", "email": "benf@gmail.com"}
         user_service = UserServiceRest(None, request, dao=MagicMock)
@@ -91,7 +84,7 @@ class UserServiceRestTest(TestCase):
 
     def test_add_user_db_exception(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.json_body = {"id": "1", "first_name": "Ben",
                              "last_name": "Franklin", "email": "benf@gmail.com"}
         user_service = UserServiceRest(None, request, dao=MagicMock)
@@ -103,7 +96,7 @@ class UserServiceRestTest(TestCase):
 
     def test_update_user_success(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.json_body = {"id": "1", "first_name": "Ben",
                              "last_name": "Franklin", "email": "benf@gmail.com"}
         user_service = UserServiceRest(None, request, dao=MagicMock)
@@ -114,7 +107,7 @@ class UserServiceRestTest(TestCase):
 
     def test_update_user_not_found(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.json_body = {"id": "1", "first_name": "Ben",
                              "last_name": "Franklin", "email": "benf@gmail.com"}
         user_service = UserServiceRest(None, request, dao=MagicMock)
@@ -125,17 +118,17 @@ class UserServiceRestTest(TestCase):
 
     def test_delete_user_success(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.matchdict['email'] = 'benf@gmail.com'
         user_service = UserServiceRest(None, request, dao=MagicMock)
 
         response = user_service.delete_user()
 
-        self.assertEqual(202, response.status_int)
+        self.assertEqual(204, response.status_int)
 
     def test_delete_user_not_found(self):
         request = pyramid_testing.DummyRequest()
-        request.db_session = None
+        request.db_session = Mock()
         request.matchdict['email'] = 'nobody@gmail.com'
         user_service = UserServiceRest(None, request, dao=MagicMock)
         user_service._dao.delete = MagicMock(side_effect=PersistenceError())
