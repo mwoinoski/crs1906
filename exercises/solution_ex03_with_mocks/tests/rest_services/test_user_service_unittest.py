@@ -62,7 +62,6 @@ class UserServiceRestTest(TestCase):
         mock_dao = Mock()
 
         # TODO: assign None to the return value of the mock DAO's `get` method
-        # HINT: see slide 3-38
         mock_dao.get.return_value = None
 
         # TODO: create a UserServiceRest instance, passing the mock_dao as
@@ -86,7 +85,6 @@ class UserServiceRestTest(TestCase):
         
         # TODO: assign a PersistenceError as the side effect of
         #       the mock's `get` method
-        # HINT: see slide 3-39
         mock_dao.get.side_effect = PersistenceError()
         
         # TODO: create a UserServiceRest instance, passing the mock_dao as

@@ -46,7 +46,7 @@ class TestUserServiceRest:
         ....
 
         # TODO: assign None to the return value of the mock DAO's `get` method
-        # HINT: see slide 3-38
+        # HINT: see slide 3-37
         ....
 
         # TODO: create a UserServiceRest instance, passing the mock_dao as
@@ -73,7 +73,7 @@ class TestUserServiceRest:
     #
     #     # TODO: assign a PersistenceError as the side effect of
     #     #       the mock's `get` method
-    #     # HINT: see slide 3-39
+    #     # HINT: see slide 3-38
     #     ....
     #
     #     # TODO: create a UserServiceRest instance, passing the mock_dao as

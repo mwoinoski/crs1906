@@ -109,7 +109,7 @@ class TestRssNewsFeedParser:
 
         # TODO: assert that the list named `expected` is equal to the list named
         #       `actual`, which was returned from get_news()
-        # HINT: see slide 3-18
+        # HINT: see slide 3-21
         ....
 
 

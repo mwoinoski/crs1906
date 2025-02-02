@@ -49,7 +49,6 @@ print('maximum of [20, 10.1, 40.4, 10.1] is '
 # TODO: Write a function greet that takes a name and an age as parameters and 
 # returns a greeting string using f-strings. For example, greet("Alice", 30)
 # should return "Hello Alice, you are 30 years old!".
-# HINT: see slide 1-8
 
 
 def greet(name, age):
@@ -102,7 +101,6 @@ print(squares_of_evens)
 # [15, 30, 45, 60, 75, 90]
 # Generate the list using a list comprehension.
 # HINT: use the built-in range() function to generate a sequence of numbers.
-# See slide 1-11
 
 
 def multiples_of_3_and_5(start, end):
