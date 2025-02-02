@@ -8,7 +8,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.pytest_cache" />
       <excludeFolder url="file://$MODULE_DIR$/Exercise_1_1.egg-info" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.7 (ex01_inheritance)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.13 virtualenv at C:\crs1906\exercises\ex01_inheritance\venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

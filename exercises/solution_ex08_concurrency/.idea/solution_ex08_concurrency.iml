@@ -8,7 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/subprocesses" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.7 (solution_ex08_concurrency)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.13 virtualenv at C:\crs1906\exercises\solution_ex08_concurrency\venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

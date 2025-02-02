@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="11b1f6ed-65b8-45ed-bc7a-ba108c2dad4f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../homepage/images/pythonLogo.ico" afterDir="false" />
+    <list default="true" id="70d40fcd-cd38-4c93-a5d4-92818751102b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/appA_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appA_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../appB_examples/.idea/appB_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../appB_examples/.idea/appB_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../appB_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appB_examples/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch01_examples/.idea/ch01_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch01_examples/.idea/ch01_examples.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch01_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch01_examples/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch01_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch01_examples/.idea/workspace.xml" afterDir="false" />
@@ -15,12 +26,18 @@
       <change beforePath="$PROJECT_DIR$/../ch04_examples/.idea/ch04_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/ch04_examples.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch04_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch04_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/ch05_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/ch05_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch05_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch06_examples/.idea/ch06_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/ch06_examples.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch06_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch06_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/ch07_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/ch07_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch07_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch07_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/ch08_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/ch08_examples.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch08_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch08_examples/.idea/misc.xml" afterDir="false" />
@@ -28,31 +45,60 @@
       <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/ch09_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/ch09_examples.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ch09_examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/appA_extending_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/appA_extending_python/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/ex01_inheritance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/ex01_inheritance.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/logs/ticketmanor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex01_inheritance/ticketmanor/logs/ticketmanor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/ex02_template_method.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/ex02_template_method.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/logs/ticketmanor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex02_template_method/ticketmanor/logs/ticketmanor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/.idea/ex03_unit_testing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/.idea/ex03_unit_testing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/logs/ticketmanor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex03_unit_testing/ticketmanor/logs/ticketmanor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/.idea/ex03_with_mocks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/.idea/ex03_with_mocks.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/logs/ticketmanor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex03_with_mocks/ticketmanor/logs/ticketmanor.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/ex04_debugging.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/ex04_debugging.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex04_debugging/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex05_performance/.idea/ex05_performance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex05_performance/.idea/ex05_performance.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex05_performance/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex05_performance/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex05_performance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex05_performance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/.idea/ex06_design_patterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/.idea/ex06_design_patterns.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex06_design_patterns/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/ex07_distributing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/ex07_distributing.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex07_distributing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex08_concurrency/.idea/ex08_concurrency.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_concurrency/.idea/ex08_concurrency.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex08_concurrency/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_concurrency/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_concurrency/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex08_concurrency/ticketmanor/logs/ticketmanor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_concurrency/ticketmanor/logs/ticketmanor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/.idea/ex08_multiprocessing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/.idea/ex08_multiprocessing.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/ticketmanor/logs/ticketmanor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex08_multiprocessing/ticketmanor/logs/ticketmanor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ex09_rest_services/.idea/ex09_rest_services.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex09_rest_services/.idea/ex09_rest_services.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex09_rest_services/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex09_rest_services/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/ex09_rest_services/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ex09_rest_services/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_appA_extending_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_appA_extending_python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/solution_ex01_inheritance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/solution_ex01_inheritance.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/logs/ticketmanor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex01_inheritance/ticketmanor/logs/ticketmanor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/.idea/solution_ex02_template_method.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/.idea/solution_ex02_template_method.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/logs/ticketmanor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex02_template_method/ticketmanor/logs/ticketmanor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/.idea/solution_ex03_unit_testing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/.idea/solution_ex03_unit_testing.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/logs/ticketmanor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_unit_testing/ticketmanor/logs/ticketmanor.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/logs/ticketmanor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex03_with_mocks/ticketmanor/logs/ticketmanor.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/.idea/solution_ex04_debugging.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/.idea/solution_ex04_debugging.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex04_debugging/.idea/workspace.xml" afterDir="false" />
@@ -62,198 +108,65 @@
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/.idea/solution_ex06_design_patterns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/.idea/solution_ex06_design_patterns.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex06_design_patterns/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex07_distributing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex07_distributing/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex07_distributing/.idea/solution_ex07_distributing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex07_distributing/.idea/solution_ex07_distributing.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex07_distributing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/.idea/solution_ex08_concurrency.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/.idea/solution_ex08_concurrency.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/ticketmanor/logs/ticketmanor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_concurrency/ticketmanor/logs/ticketmanor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/.idea/solution_ex08_multiprocessing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/.idea/solution_ex08_multiprocessing.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/ticketmanor/logs/ticketmanor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex08_multiprocessing/ticketmanor/logs/ticketmanor.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/.idea/solution_ex09_rest_services.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/.idea/solution_ex09_rest_services.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/solution_ex09_rest_services/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/.idea/ticketmanor_webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/.idea/ticketmanor_webapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../exercises/ticketmanor_webapp/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1SACLyL6zo8hw81efBcELWGxcO6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2s8KJr8lj0kY0uVaut33DR3mdHw" />
   <component name="ProjectViewState">
-    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ch07_examples" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="PyConsoleOptionsProvider">
-    <option name="myPythonConsoleState">
-      <console-settings is-module-sdk="true">
-        <option name="myUseModuleSdk" value="true" />
-      </console-settings>
-    </option>
-    <option name="myIpythonEnabled" value="false" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\crs1906\examples\appA_examples\ctypes_demo" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ch07_examples" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="ch07_examples" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="ch07_examples" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <module name="ch07_examples" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <module name="ch07_examples" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <module name="ch07_examples" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;major-rev-2025&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/crs1906/examples/appA_examples&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="11b1f6ed-65b8-45ed-bc7a-ba108c2dad4f" name="Default" comment="" />
-      <created>1438017417920</created>
+      <changelist id="70d40fcd-cd38-4c93-a5d4-92818751102b" name="Changes" comment="" />
+      <created>1737831693106</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1438017417920</updated>
+      <updated>1737831693106</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/extension_mod_demo/primes_ext_mod_demo.py</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

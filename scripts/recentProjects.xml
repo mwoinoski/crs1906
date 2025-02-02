@@ -2,171 +2,193 @@
   <component name="RecentProjectsManager">
     <option name="additionalInfo">
       <map>
-        <entry key="C:/crs1906/exercises/solution_appA_extending_python">
-          <value>
-            <RecentProjectMetaInfo frameTitle="solution_appA_extending_python – mandelbrot_ctypes.py" projectWorkspaceId="1RhxVc9yBnw8IKNc2g6s5VNo8EE">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
-              <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639082971241" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="C:/crs1906/exercises/appA_extending_python">
-          <value>
-            <RecentProjectMetaInfo frameTitle="appA_extending_python" projectWorkspaceId="1SCdDmc5seshLCdYOUzDM8hlNX2">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
-              <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083059168" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="C:/crs1906/examples/appB_examples">
-          <value>
-            <RecentProjectMetaInfo frameTitle="appB_examples" projectWorkspaceId="1SDaJ53n7UBGEF6SZEJfxwnmj3K">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
-              <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639082951319" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
-        <entry key="C:/crs1906/examples/appA_examples">
-          <value>
-            <RecentProjectMetaInfo frameTitle="appA_examples" projectWorkspaceId="1SACLyL6zo8hw81efBcELWGxcO6">
-              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
-              <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083021668" />
-            </RecentProjectMetaInfo>
-          </value>
-        </entry>
         <entry key="C:/crs1906/exercises/ticketmanor_webapp">
           <value>
-            <RecentProjectMetaInfo>
+            <RecentProjectMetaInfo frameTitle="ticketmanor_webapp – development.ini" projectWorkspaceId="1RZadZiT8R33WADputxFEyRbf32">
+              <option name="activationTimestamp" value="1738510496844" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-192.6817.19" />
-              <option name="buildTimestamp" value="1569401371302" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1586291259594" />
+              <option name="projectOpenTimestamp" value="1738510101853" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="C:/crs1906/exercises/solution_appB_advanced_features">
+          <value>
+            <RecentProjectMetaInfo frameTitle="solution_appB_advanced_features" projectWorkspaceId="1RhxSTPFnq5Wo7zAHETSycaMOVE">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
+              <option name="productionCode" value="PC" />
+              <option name="projectOpenTimestamp" value="1738510540018" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="C:/crs1906/exercises/solution_appA_extending_python">
+          <value>
+            <RecentProjectMetaInfo frameTitle="solution_appA_extending_python" projectWorkspaceId="1RhxVc9yBnw8IKNc2g6s5VNo8EE">
+              <option name="activationTimestamp" value="1737831243270" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="6" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
+              <option name="productionCode" value="PC" />
+              <option name="projectOpenTimestamp" value="1738510554188" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/exercises/solution_ex09_rest_services">
           <value>
             <RecentProjectMetaInfo frameTitle="solution_ex09_rest_services – test_user_rest_service_json.py" projectWorkspaceId="1Rhw1vKDo8JplPCaMk7l45KDc4t">
+              <option name="activationTimestamp" value="1737847875460" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="3" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083107003" />
+              <option name="projectOpenTimestamp" value="1738510874261" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/exercises/solution_ex08_multiprocessing">
           <value>
-            <RecentProjectMetaInfo frameTitle="solution_ex08_multiprocessing – pi.py" projectWorkspaceId="1RfdXuGXh1lX4sRRJEElHPDZtOz">
+            <RecentProjectMetaInfo frameTitle="solution_ex08_multiprocessing – all_news_feed_reader.py" projectWorkspaceId="1RfdXuGXh1lX4sRRJEElHPDZtOz">
+              <option name="activationTimestamp" value="1737848068320" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="2" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083125989" />
+              <option name="projectOpenTimestamp" value="1738510925726" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/exercises/solution_ex08_concurrency">
           <value>
-            <RecentProjectMetaInfo frameTitle="solution_ex08_concurrency – chat_server.py" projectWorkspaceId="1RfeBkgvuzpNHyQaZRk0MVahHUw">
+            <RecentProjectMetaInfo frameTitle="solution_ex08_concurrency – all_news_feed_reader.py" projectWorkspaceId="1RfeBkgvuzpNHyQaZRk0MVahHUw">
+              <option name="activationTimestamp" value="1737843879462" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="1" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083138035" />
+              <option name="projectOpenTimestamp" value="1738510935274" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/exercises/solution_ex07_distributing">
           <value>
-            <RecentProjectMetaInfo frameTitle="solution_ex07_distributing – sudoku.py" projectWorkspaceId="1RhwD6Edcud2BL8zGJVZMubO8sF">
+            <RecentProjectMetaInfo frameTitle="solution_ex07_distributing – pyproject.toml" projectWorkspaceId="1RhwD6Edcud2BL8zGJVZMubO8sF">
               <option name="activationTimestamp" value="1705610874860" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-231.9011.38" />
-              <option name="buildTimestamp" value="1684272850461" />
-              <frame x="24" y="43" width="1098" height="1114" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="0" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1705611079006" />
+              <option name="projectOpenTimestamp" value="1738510943120" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/exercises/solution_ex06_design_patterns">
           <value>
-            <RecentProjectMetaInfo frameTitle="solution_ex06_design_patterns – sudoku.py" projectWorkspaceId="1Rhx19HLauTj91U8fm0mYS6Ne3x">
+            <RecentProjectMetaInfo frameTitle="solution_ex06_design_patterns – chat_room.py" projectWorkspaceId="1Rhx19HLauTj91U8fm0mYS6Ne3x">
+              <option name="activationTimestamp" value="1737842010452" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083182198" />
+              <option name="projectOpenTimestamp" value="1738510973524" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/exercises/solution_ex05_performance">
           <value>
-            <RecentProjectMetaInfo frameTitle="solution_ex05_performance – func_stats.py" projectWorkspaceId="1Rhx9LUpoXQZs9lSw7fyk4cLOIp">
+            <RecentProjectMetaInfo frameTitle="solution_ex05_performance – sudoku-py2.py" projectWorkspaceId="1Rhx9LUpoXQZs9lSw7fyk4cLOIp">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="7" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083197456" />
+              <option name="projectOpenTimestamp" value="1738511008447" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/exercises/solution_ex04_debugging">
           <value>
             <RecentProjectMetaInfo frameTitle="solution_ex04_debugging – unittestgui.py" projectWorkspaceId="1RhxGjyLjczbyjLJ3eXwkN4GN13">
+              <option name="activationTimestamp" value="1738511086386" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="6" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083216811" />
+              <option name="projectOpenTimestamp" value="1738511027057" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/exercises/solution_ex03_with_mocks">
           <value>
-            <RecentProjectMetaInfo frameTitle="solution_ex03_with_mocks – feed_reader.py" projectWorkspaceId="1RfeYIkbRqWgaGIvjALN7lVuIFK">
+            <RecentProjectMetaInfo frameTitle="solution_ex03_with_mocks – test_feed_reader.py" projectWorkspaceId="1RfeYIkbRqWgaGIvjALN7lVuIFK">
+              <option name="activationTimestamp" value="1738511159528" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083227656" />
+              <option name="projectOpenTimestamp" value="1738511110114" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/exercises/solution_ex03_unit_testing">
           <value>
-            <RecentProjectMetaInfo frameTitle="solution_ex03_unit_testing – news_feed_parser.py" projectWorkspaceId="1RfejexAnvBNpK4kw7OKSTsiklH">
+            <RecentProjectMetaInfo frameTitle="solution_ex03_unit_testing – test_rss_news_feed_parser.py" projectWorkspaceId="1RfejexAnvBNpK4kw7OKSTsiklH">
+              <option name="activationTimestamp" value="1737833396931" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083237651" />
+              <option name="projectOpenTimestamp" value="1738511214184" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -174,134 +196,247 @@
           <value>
             <RecentProjectMetaInfo frameTitle="solution_ex02_template_method – rss_news_feed_parser.py" projectWorkspaceId="1RfeunLJIOml2KCS33mIhZ9TKFN">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="3" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083256195" />
+              <option name="projectOpenTimestamp" value="1738511284671" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/exercises/solution_ex01_inheritance">
           <value>
-            <RecentProjectMetaInfo frameTitle="solution_ex01_inheritance – event_service.py" projectWorkspaceId="1RJ3PYmkAJVwumkKQVRDartSfA1">
-              <option name="activationTimestamp" value="1705441364596" />
+            <RecentProjectMetaInfo frameTitle="solution_ex01_inheritance – base_dao.py" projectWorkspaceId="1RJ3PYmkAJVwumkKQVRDartSfA1">
+              <option name="activationTimestamp" value="1738512021481" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-231.9011.38" />
-              <option name="buildTimestamp" value="1684272856276" />
-              <frame x="39" y="158" width="945" height="1028" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="1" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1705442183300" />
+              <option name="projectOpenTimestamp" value="1738511389766" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="C:/crs1906/examples/AppC_examples">
+          <value>
+            <RecentProjectMetaInfo frameTitle="AppC_examples – fortune500.csv" projectWorkspaceId="2sUZLEWK9rAimejlIuOpEbPWRXj">
+              <option name="activationTimestamp" value="1738512127545" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="0" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
+              <option name="productionCode" value="PC" />
+              <option name="projectOpenTimestamp" value="1738512056080" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="C:/crs1906/examples/appB_examples">
+          <value>
+            <RecentProjectMetaInfo frameTitle="appB_examples" projectWorkspaceId="1SDaJ53n7UBGEF6SZEJfxwnmj3K">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
+              <option name="productionCode" value="PC" />
+              <option name="projectOpenTimestamp" value="1738512137811" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="C:/crs1906/examples/appA_examples">
+          <value>
+            <RecentProjectMetaInfo frameTitle="appA_examples" projectWorkspaceId="2s8KJr8lj0kY0uVaut33DR3mdHw">
+              <option name="activationTimestamp" value="1737832041081" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="7" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
+              <option name="productionCode" value="PC" />
+              <option name="projectOpenTimestamp" value="1738512169376" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/examples/ch09_examples">
           <value>
-            <RecentProjectMetaInfo frameTitle="ch09_examples – amount_to_json.py" projectWorkspaceId="1RhhTJmNCc1OSIdQ4oaPNyCWu8w">
+            <RecentProjectMetaInfo frameTitle="ch09_examples" projectWorkspaceId="1RhhTJmNCc1OSIdQ4oaPNyCWu8w">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="2" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083315659" />
+              <option name="projectOpenTimestamp" value="1738512180010" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/examples/ch08_examples">
           <value>
-            <RecentProjectMetaInfo frameTitle="ch08_examples – thread_demo1.py" projectWorkspaceId="1RhuZkp8E8TTZnWYj4LwqpLfh5Q">
+            <RecentProjectMetaInfo frameTitle="ch08_examples – yinyang_multiprocessing.py" projectWorkspaceId="1RhuZkp8E8TTZnWYj4LwqpLfh5Q">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="1" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083325025" />
+              <option name="projectOpenTimestamp" value="1738512188832" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/examples/ch07_examples">
           <value>
-            <RecentProjectMetaInfo frameTitle="ch07_examples" projectWorkspaceId="1RhunxBFGcKBXc918Sxl1GvORyA">
-              <option name="activationTimestamp" value="1705535920786" />
+            <RecentProjectMetaInfo frameTitle="ch07_examples – pyproject.toml" projectWorkspaceId="2s8KDkvz8HhUEnX17gMC7eaNWDB">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-231.9011.38" />
-              <option name="buildTimestamp" value="1684272890781" />
-              <frame x="24" y="161" width="1098" height="864" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="0" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1705514493112" />
+              <option name="projectOpenTimestamp" value="1738512230120" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/examples/ch06_examples">
           <value>
-            <RecentProjectMetaInfo frameTitle="ch06_examples – observer.py" projectWorkspaceId="1Rhv6SGGHRcoem1VeQ8csm99PZD">
+            <RecentProjectMetaInfo frameTitle="ch06_examples – decorator_demo.py" projectWorkspaceId="1Rhv6SGGHRcoem1VeQ8csm99PZD">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083368062" />
+              <option name="projectOpenTimestamp" value="1738512260813" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/examples/ch05_examples">
           <value>
             <RecentProjectMetaInfo frameTitle="ch05_examples – fibonacci.py" projectWorkspaceId="1RhJPzyXV2YVMq3pyjoELNjAopB">
+              <option name="activationTimestamp" value="1737829745298" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="6" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083378667" />
+              <option name="projectOpenTimestamp" value="1738512314188" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/examples/ch04_examples">
           <value>
-            <RecentProjectMetaInfo frameTitle="ch04_examples – test_person.py" projectWorkspaceId="1RhvHY43VOFVWsE5mPDCU7YDp95">
+            <RecentProjectMetaInfo frameTitle="ch04_examples – logging_demo.py" projectWorkspaceId="1RhvHY43VOFVWsE5mPDCU7YDp95">
+              <option name="activationTimestamp" value="1738510029414" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083388912" />
+              <option name="projectOpenTimestamp" value="1738512344636" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/examples/ch03_examples">
           <value>
-            <RecentProjectMetaInfo frameTitle="ch03_examples – test_person.py" projectWorkspaceId="1RhvNwVvED5OONfB2RQ1POSXT3Y">
-              <option name="activationTimestamp" value="1705442387942" />
+            <RecentProjectMetaInfo frameTitle="ch03_examples – person.py" projectWorkspaceId="1RhvNwVvED5OONfB2RQ1POSXT3Y">
+              <option name="activationTimestamp" value="1737832554026" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-231.9011.38" />
-              <option name="buildTimestamp" value="1684272856276" />
-              <frame x="156" y="164" width="1098" height="864" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1705442213851" />
+              <option name="projectOpenTimestamp" value="1738512383877" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/examples/ch02_examples">
           <value>
-            <RecentProjectMetaInfo frameTitle="ch02_examples – template_method.py" projectWorkspaceId="1RhvWXBrTtSuvQva63z44aJsoCa">
+            <RecentProjectMetaInfo frameTitle="ch02_examples – http_server.py" projectWorkspaceId="1RhvWXBrTtSuvQva63z44aJsoCa">
+              <option name="activationTimestamp" value="1737823174798" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="3" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083405962" />
+              <option name="projectOpenTimestamp" value="1738512416346" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/examples/ch01_examples">
           <value>
             <RecentProjectMetaInfo frameTitle="ch01_examples – simple_counter.py" projectWorkspaceId="1RhvkAtphNQSxEh6aMdAy7t3Nmi">
+              <option name="activationTimestamp" value="1738512523771" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="2" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083418055" />
+              <option name="projectOpenTimestamp" value="1738512457935" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="C:/crs1906/exercises/appB_advanced_features">
+          <value>
+            <RecentProjectMetaInfo frameTitle="appB_advanced_features" projectWorkspaceId="2sUcGAsV3vFPDgpVHVTJxXBSMBm">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="2" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
+              <option name="productionCode" value="PC" />
+              <option name="projectOpenTimestamp" value="1738513495445" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="C:/crs1906/exercises/appA_extending_python">
+          <value>
+            <RecentProjectMetaInfo frameTitle="appA_extending_python" projectWorkspaceId="1SCdDmc5seshLCdYOUzDM8hlNX2">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="1" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
+              <option name="productionCode" value="PC" />
+              <option name="projectOpenTimestamp" value="1738513519522" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -309,23 +444,30 @@
           <value>
             <RecentProjectMetaInfo frameTitle="ex09_rest_services" projectWorkspaceId="1RhvuFtVZ69hDRisoUCc6HNPAK1">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="7" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083436681" />
+              <option name="projectOpenTimestamp" value="1738513537289" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/exercises/ex08_multiprocessing">
           <value>
             <RecentProjectMetaInfo frameTitle="ex08_multiprocessing" projectWorkspaceId="1RffCZ0PZ5TeUAUobVzyoSAXBle">
+              <option name="activationTimestamp" value="1738512946668" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="6" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083445748" />
+              <option name="projectOpenTimestamp" value="1738513544794" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -333,11 +475,14 @@
           <value>
             <RecentProjectMetaInfo frameTitle="ex08_concurrency" projectWorkspaceId="1RffN8hK5aSpefUWpLpMmTizBjL">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083452720" />
+              <option name="projectOpenTimestamp" value="1738513549560" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -345,11 +490,14 @@
           <value>
             <RecentProjectMetaInfo frameTitle="ex07_distributing" projectWorkspaceId="1RhwvfmnJECT26mB0FrxVaceaOi">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="1" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083462772" />
+              <option name="projectOpenTimestamp" value="1738513555620" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -357,11 +505,14 @@
           <value>
             <RecentProjectMetaInfo frameTitle="ex06_design_patterns" projectWorkspaceId="1RhxggsLdD3aZnsjtylicnzsghq">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="0" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083472619" />
+              <option name="projectOpenTimestamp" value="1738513561189" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -369,11 +520,14 @@
           <value>
             <RecentProjectMetaInfo frameTitle="ex05_performance" projectWorkspaceId="1RhxkuYecFMBZyuxXX8f22rXJWL">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083480124" />
+              <option name="projectOpenTimestamp" value="1738513566335" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -381,11 +535,14 @@
           <value>
             <RecentProjectMetaInfo frameTitle="ex04_debugging" projectWorkspaceId="1RhxppKmVpVet6ozGkoEiyTNW7X">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="7" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083488147" />
+              <option name="projectOpenTimestamp" value="1738513570153" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -393,11 +550,14 @@
           <value>
             <RecentProjectMetaInfo frameTitle="ex03_with_mocks" projectWorkspaceId="1RffWjH5V6MJ09jo6vt23nb8NZZ">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083496015" />
+              <option name="projectOpenTimestamp" value="1738513574663" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -405,11 +565,14 @@
           <value>
             <RecentProjectMetaInfo frameTitle="ex03_unit_testing" projectWorkspaceId="1RffgZZFH8MKKWg93BVm3NgUnIc">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="3" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083503119" />
+              <option name="projectOpenTimestamp" value="1738513578546" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
@@ -417,24 +580,30 @@
           <value>
             <RecentProjectMetaInfo frameTitle="ex02_template_method" projectWorkspaceId="1RffqOiwQr9PPtVZ3Ehas19BES3">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-212.5457.59" />
-              <option name="buildTimestamp" value="1634653598308" />
-              <frame x="0" y="9" width="1015" height="1160" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="2" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1639083525787" />
+              <option name="projectOpenTimestamp" value="1738513583335" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
         <entry key="C:/crs1906/exercises/ex01_inheritance">
           <value>
             <RecentProjectMetaInfo frameTitle="ex01_inheritance" opened="true" projectWorkspaceId="1RffyJhM2dadOw9HaKjxbuuh7Q2">
-              <option name="activationTimestamp" value="1705536620416" />
+              <option name="activationTimestamp" value="1738513630851" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="build" value="PC-231.9011.38" />
-              <option name="buildTimestamp" value="1684272890781" />
-              <frame x="24" y="161" width="1098" height="864" />
+              <option name="build" value="PC-243.22562.220" />
+              <option name="buildTimestamp" value="1734509820000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="0" />
+              </option>
+              <frame x="138" y="18" width="1196" height="900" />
               <option name="productionCode" value="PC" />
-              <option name="projectOpenTimestamp" value="1705535932888" />
+              <option name="projectOpenTimestamp" value="1738513590336" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
