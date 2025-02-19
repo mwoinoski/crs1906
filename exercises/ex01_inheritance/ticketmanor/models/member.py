@@ -21,10 +21,6 @@ class Member():
         #       appropriate arguments
 
 
-        # TODO: save any remaining arguments in data attributes of the
-        #       current Customer object
-
-
         # TODO: for any argument that you passed to the superclass constructor,
         #       delete its attribute assignment from the next block of statements.
         self.first_name = first_name

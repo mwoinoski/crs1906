@@ -11,6 +11,7 @@ Converted to Python 3 by running:
 from datetime import datetime
 from time import strptime
 import urllib.request
+import urllib.error
 import re
 
 from ticketmanor.util.utils import html_unescape
@@ -50,7 +51,7 @@ class AtomNewsFeedParser(NewsFeedParser):
     #     """Get the XML content at the given URL"""
     #     try:
     #         return urllib.request.urlopen(url, timeout=1).read()
-    #     except urllib.request.URLError:
+    #     except urllib.error.URLError:
     #         return self.get_dummy_news(url, news_type)
 
     # TODO: The parse_xml_content() method is now defined in the superclass, so
@@ -118,4 +119,4 @@ class AtomNewsFeedParser(NewsFeedParser):
         return parsed_item
 
     def get_dummy_news(self, url, news_type):
-        raise urllib.request.URLError("can't open connection to " + url)
+        raise urllib.error.URLError("can't open connection to " + url)

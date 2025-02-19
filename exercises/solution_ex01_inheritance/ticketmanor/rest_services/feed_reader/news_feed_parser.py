@@ -10,6 +10,7 @@ Converted to Python 3 by running:
 
 from abc import ABC, abstractmethod
 import urllib.request
+import urllib.error
 from xml.dom import minidom
 from ticketmanor.rest_services.feed_reader import (
     NewsType,
@@ -55,7 +56,7 @@ class NewsFeedParser(ABC):
         # if url is not accessible, return dummy content
         try:
             return urllib.request.urlopen(url, timeout=5).read()
-        except urllib.request.URLError:
+        except urllib.error.URLError:
             return self.get_dummy_news(url, news_type)
 
     def parse_xml_content(self, raw_content, max_items=0):
@@ -91,5 +92,5 @@ class NewsFeedParser(ABC):
         Subclass can override this method to return a string with dummy news
         items in an XML format.
         """
-        raise urllib.request.URLError("can't open connection to " + url)
+        raise urllib.error.URLError("can't open connection to " + url)
 

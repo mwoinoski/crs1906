@@ -10,6 +10,7 @@ Converted to Python 3 by running:
 
 import re
 import urllib.request
+import urllib.error
 from xml.dom import minidom
 
 from ticketmanor.util.utils import html_unescape
@@ -77,7 +78,7 @@ class RssNewsFeedParser(....):
         #       will be called by the superclass template method.
         try:
             return urllib.request.urlopen(url, timeout=1).read()
-        except urllib.request.URLError:
+        except urllib.error.URLError:
             # TODO: note the call to the subclass hook method get_dummy_news(),
             #       which returns dummy content if the URL is not accessible.
             #       (no code changes required)

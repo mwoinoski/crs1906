@@ -11,6 +11,7 @@ Converted to Python 3 by running:
 from datetime import datetime
 from time import strptime
 import urllib.request
+import urllib.error
 from xml.dom import minidom
 import re
 
@@ -116,4 +117,4 @@ class AtomNewsFeedParser:
         return parsed_item
 
     def get_dummy_news(self, url, news_type):
-        raise urllib.request.URLError("can't open connection to " + url)
+        raise urllib.error.URLError("can't open connection to " + url)

@@ -25,8 +25,6 @@ class Member(User):
         super().__init__(first_name, last_name, email, middles, street, city,
                          state, country, post_code)
 
-        # TODO: save any remaining arguments in data attributes of the
-        #       current Customer object
         # TODO: for any argument that you passed to the superclass constructor,
         #       delete its attribute assignment from the next block of statements.
         self.nick_name = nick_name
