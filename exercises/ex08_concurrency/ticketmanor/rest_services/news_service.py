@@ -34,12 +34,7 @@ class NewsServiceView:
         logger.debug("%s: news_type = %s, max_items = %s",
                      func_name(self), news_type, max_items)
 
-        news_items = self._news_reader.fetch_news_items(news_type, max_items)
-
-        for id, news_item in enumerate(news_items):
-            news_item['id'] = id
-
-        return news_items
+        return self._fetch_news(news_type, max_items)
 
     # Pyramid calls this method for a request like this:
     # GET http://localhost:6543/rest/events/{news_type}/news/{item_id}.json
@@ -54,8 +49,8 @@ class NewsServiceView:
 
         news_items = self._news_reader.fetch_news_items(news_type)
 
-        id = int(item_id)
-        return news_items[id if id < len(news_items) else 0]
+        item_id_int = int(item_id)
+        return news_items[item_id_int if item_id_int < len(news_items) else 0]
 
     # Pyramid calls this method for a request like this:
     # GET http://localhost:6543/rest/events/{news_type}/news/news.json?max_items=3
@@ -67,7 +62,22 @@ class NewsServiceView:
         logger.debug("%s: max_items = %s",
                      func_name(self), max_items)
 
-        news_items = self._all_news_reader.get_news(max_items)
+        # TODO: delete the next 4 statements, which fetch news types serially
+        all_news = {}
+        all_news['concerts'] = self._fetch_news('music', max_items)
+        all_news['sports'] = self._fetch_news('sports', max_items)
+        all_news['movies'] = self._fetch_news('movies', max_items)
+        # TODO: uncomment the following statement to use your AllNewsFeedReader
+        #       to fetch all news types concurrently
+        # all_news = self._all_news_reader.get_news(max_items)
+
+        return all_news
+
+    def _fetch_news(self, news_type, max_items):
+        news_items = self._news_reader.fetch_news_items(news_type, max_items)
+
+        for item_id_int, news_item in enumerate(news_items):
+            news_item['id'] = item_id_int
 
         return news_items
 

@@ -35,6 +35,6 @@ class FeedReader:
 
         # slow the method down to emphasize the performance improvement
         # from the serial version to the multi-threaded version
-        time.sleep(1)
+        time.sleep(0.3)
 
         return self._news_feed_parser.get_news(news_type, max_items)

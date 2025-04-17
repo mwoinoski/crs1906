@@ -77,18 +77,18 @@ class AllNewsFeedReader:
 <font color="grey"><pre>
         for news_type in 'concerts', 'sports', 'movies':
             # TODO: Create an instance of NewsThread to download one type of news.
-            # Constructor arguments: self.feed_reader, news_type, max_items </font><font color="blue">
-            background = NewsThread(self.feed_reader, news_type, max_items)
+            # Constructor arguments: news_type, max_items </font><font color="blue">
+            news_thread = NewsThread(news_type, max_items)
 </pre></font>
 
 <font color="grey"><pre>
             # TODO: Append the new thread to the `news_threads` list </font><font color="blue">
-            news_threads.append(background)
+            news_threads.append(news_thread)
 </pre></font>
 
 <font color="grey"><pre>
             # TODO: Start the new thread </font><font color="blue">
-            background.start()
+            news_thread.start()
 </pre></font>
 
 <font color="grey"><pre>
@@ -96,23 +96,37 @@ class AllNewsFeedReader:
 
         # TODO: use a `for` loop to process each thread on the `news_threads`
         # list </font><font color="blue">
-        for thread in news_threads:
+        for t in news_threads:
 </pre></font>
 
 <font color="grey"><pre>
             # TODO: wait for the thread to complete by calling
             # the thread's join() method </font><font color="blue">
-            thread.join()
+            t.join()
 </pre></font>
 
 <font color="grey"><pre>
             # TODO: Add the thread's news to the `all_news` dictionary. </font><font color="blue">
-            all_news[thread.news_type] = thread.news
+            all_news[t.news_type] = t.news
 </pre></font>
 
 <font color="grey"><pre>
         # TODO: return the `all_news` dictionary </font><font color="blue">
         return all_news
+</pre></font>
+
+<h3>news_service.py</h3>
+
+
+<font color="grey"><pre>
+        # TODO: delete the next 4 statements, which fetch news types serially </font><font color="blue">
+        # all_news = {}
+        # all_news['concerts'] = self._fetch_news('music', max_items)
+        # all_news['sports'] = self._fetch_news('sports', max_items)
+        # all_news['movies'] = self._fetch_news('movies', max_items) </font><font color="grey">
+        # TODO: uncomment the following statement to use your AllNewsFeedReader
+        #       to fetch all news types concurrently </font><font color="blue">
+        all_news = self._all_news_reader.get_news(max_items)
 </pre></font>
 
 </body>

@@ -12,27 +12,27 @@ from .feed_reader import FeedReader
 # TODO: make the NewsThread class a subclass of Thread
 # HINT: see slide 8-11
 class NewsThread(....):
+    """ Fetch one type of news in a Thread """
 
     # TODO: note the arguments to the NewsThread constructor
     #       (no code change required)
-    def __init__(self, feed_reader, news_type, max_items):
-        """Initialize a NewsThread.
-
-        :param feed_reader a FeedReader instance
+    def __init__(self, news_type, max_items):
+        """
+        Initialize a NewsThread.
         :param news_type: a string with the type of news to download
         :param max_items: maximum number of news items to download
         """
         super().__init__()
         # TODO: note that `self.feed_reader` is an instance of FeedReader
         #       (no code change required)
-        self.feed_reader = feed_reader
+        self.feed_reader = FeedReader()
         self.news_type = news_type
         self.max_items = max_items
         self.news = None
 
     # TODO: define a run() method that overloads the superclass run() method.
     def ....
-        """Download one type of news and store it in self.news"""
+        """ Download one type of news and store it in self.news """
 
         # TODO: use `self.feed_reader` to fetch news of the given
         #       `news_type` and assign the result to `self.news`
@@ -40,21 +40,16 @@ class NewsThread(....):
 
 
 class AllNewsFeedReader:
-    """Reads news feeds for music, concerts, and sports"""
-
-    # TODO: note the initialization of the `feed_reader` attribute
-    #       (no code change required)
-    def __init__(self):
-        self.feed_reader = FeedReader()
+    """ Reads news feeds for music, concerts, and sports """
 
     # TODO: note that the get_news() method downloads news of all types.
     #       (no code change required)
     def get_news(self, max_items=0):
-        """Get news items of all news types.
-
+        """
+        Get news items of all news types.
         :param: max_items: if max_items > 0, return no more than max_items
         news items. Otherwise, return all news items.
-        :return dictionary of news items.
+        :return dictionary of news items. The keys are names of news types.
         """
         # TODO: assign an empty list to the variable named `news_threads`.
         #       The `news_threads` list will contain references to NewsThread
@@ -63,7 +58,7 @@ class AllNewsFeedReader:
 
         for news_type in 'concerts', 'sports', 'movies':
             # TODO: Create an instance of NewsThread to download one type of news.
-            #       Constructor arguments: self.feed_reader, news_type, max_items
+            #       Constructor arguments: news_type, max_items
             # HINT: see slide 8-11
             ....
 
@@ -91,3 +86,6 @@ class AllNewsFeedReader:
 
         # TODO: return the `all_news` dictionary
         return ....
+
+# TODO: after completing all the steps in this file,
+#       edit news_service.py and complete the TODO steps there
