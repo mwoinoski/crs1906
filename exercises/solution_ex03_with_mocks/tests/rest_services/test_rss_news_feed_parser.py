@@ -26,9 +26,9 @@ class TestRssNewsFeedParser(TestCase):
         RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input
 
     def test_parse_content(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(xml_input)
+        actual = news_feed_parser.parse_xml_content(xml_input)
 
         # By using itertools.zip_longest(), assertEquals() will eventually fail
         # if the lists are not the same length
@@ -36,25 +36,25 @@ class TestRssNewsFeedParser(TestCase):
             self.assertEqual(expected_result, actual_result)
 
     def test_parse_content_max_items_1(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(xml_input, max_items=1)
+        actual = news_feed_parser.parse_xml_content(xml_input, max_items=1)
 
         self.assertEqual(1, len(actual))
         for expected_result, actual_result in zip_longest(expected[:1], actual):
             self.assertEqual(expected_result, actual_result)
 
     def test_parse_content_max_items_2(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(xml_input, max_items=2)
+        actual = news_feed_parser.parse_xml_content(xml_input, max_items=2)
 
         self.assertEqual(2, len(actual))
         for expected_result, actual_result in zip_longest(expected[:2], actual):
             self.assertEqual(expected_result, actual_result)
 
     def test_parse_content_items_missing(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
         minimal_input = '<rss><item></item></rss>'
         minimal_results = [
@@ -68,38 +68,38 @@ class TestRssNewsFeedParser(TestCase):
             }
         ]
 
-        actual_results = feed_reader.parse_xml_content(minimal_input)
+        actual_results = news_feed_parser.parse_xml_content(minimal_input)
 
         self.assertEqual(minimal_results, actual_results)
 
     def test_get_news_music(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.get_news('music')
+        actual = news_feed_parser.get_news('music')
 
         for expected_result, actual_result in zip_longest(expected, actual):
             self.assertEqual(expected_result, actual_result)
 
     def test_get_news_max_items_1(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.get_news('music', max_items=1)
+        actual = news_feed_parser.get_news('music', max_items=1)
 
         for expected_result, actual_result in zip_longest(expected[:1], actual):
             self.assertEqual(expected_result, actual_result)
 
     def test_get_news_max_items_2(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.get_news('music', max_items=2)
+        actual = news_feed_parser.get_news('music', max_items=2)
 
         for expected_result, actual_result in zip_longest(expected[:2], actual):
             self.assertEqual(expected_result, actual_result)
 
     def test_get_news_invalid_news_type(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
         with self.assertRaises(FeedReaderException):
-            feed_reader.get_news('pluto')
+            news_feed_parser.get_news('pluto')
 
 
 xml_input = \

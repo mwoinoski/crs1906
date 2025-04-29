@@ -164,42 +164,42 @@ class TestRssNewsFeedParser:
     #       (no code changes required)
 
     def test_get_news_max_items_2(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.get_news('music', max_items=2)
+        actual = news_feed_parser.get_news('music', max_items=2)
 
         assert expected[:2] == actual
 
     def test_parse_content(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(xml_input)
+        actual = news_feed_parser.parse_xml_content(xml_input)
 
         assert expected == actual
 
     def test_parse_content_max_items_1(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(xml_input, max_items=1)
+        actual = news_feed_parser.parse_xml_content(xml_input, max_items=1)
 
         assert expected[:1] == actual
 
     def test_parse_content_max_items_2(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(xml_input, max_items=2)
+        actual = news_feed_parser.parse_xml_content(xml_input, max_items=2)
 
         assert expected[:2] == actual
 
         def test_get_dummy_news(self):
-            feed_reader = RssNewsFeedParser()
+            news_feed_parser = RssNewsFeedParser()
 
-            dummy_news = feed_reader.get_dummy_news('', 'movies')
+            dummy_news = news_feed_parser.get_dummy_news('', 'movies')
 
             assert re.match(r'^\s*<rss.*</rss>\s*$', dummy_news, flags=re.DOTALL)
 
         def test_parse_content_items_missing(self):
-            feed_reader = RssNewsFeedParser()
+            news_feed_parser = RssNewsFeedParser()
 
             minimal_input = '<rss><item></item></rss>'
             minimal_results = [
@@ -213,7 +213,7 @@ class TestRssNewsFeedParser:
                 }
             ]
 
-            actual_results = feed_reader.parse_xml_content(minimal_input)
+            actual_results = news_feed_parser.parse_xml_content(minimal_input)
 
             assert minimal_results == actual_results
 
