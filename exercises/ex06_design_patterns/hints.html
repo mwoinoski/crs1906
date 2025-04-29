@@ -52,7 +52,7 @@ from measure import measure, get_function_stats </font><font color="grey">
 </pre></font>
 
 <font color="grey"><pre>
-	    # TODO: call the get_function_stats() function and print the stats
+            # TODO: call the get_function_stats() function and print the stats
             # for all decorated functions </font><font color="blue">
             print('{Function Call Stats:^61}')
             print('{Function name:32s} {Calls:&gt;8s}  {Avg Time (seconds):22s}')
@@ -73,12 +73,12 @@ class ChatRoom(Subject):
 <font color="grey"><pre>
     def __init__(self):
         # TODO: call the superclass constructor, passing no arguments </font><font color="blue">
-	super().__init__()
+        super().__init__()
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: initialize a data attribute named `messages` with an empty list </font><font color="blue">
-	self.messages = []
+        # TODO: initialize a data attribute named `messages` with an empty list </font><font color="blue">
+        self.messages = []
 </pre></font>
 
 <font color="grey"><pre>
@@ -86,19 +86,19 @@ class ChatRoom(Subject):
         # TODO: create a ChatMessage object and save it in a local variable.
         # Pass user_name and message as arguments to the ChatMessage
         # constructor. </font><font color="blue">
-	chat_message = ChatMessage(user_name, message)
+        chat_message = ChatMessage(user_name, message)
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: append the ChatMessage to the list of messages in the
+        # TODO: append the ChatMessage to the list of messages in the
         # ChatRoom's `messages` attribute </font><font color="blue">
-	self.messages.append(chat_message)
+        self.messages.append(chat_message)
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: call the ChatRoom's observer_notify() method, passing the
+        # TODO: call the ChatRoom's observer_notify() method, passing the
         # ChatMessage as the argument. </font><font color="blue">
-	self.observer_notify(chat_message)
+        self.observer_notify(chat_message)
 </pre></font>
 
 <h3>chat_client.py</h3>
@@ -112,26 +112,26 @@ class ChatClient(Observer):
     def __init__(self, client_name, chat_room):
         # TODO: call the superclass constructor, passing chat_room as the
         # argument. </font><font color="blue">
-	super().__init__(chat_room)
+        super().__init__(chat_room)
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: initialize a data attribute named `client_name` with the
+        # TODO: initialize a data attribute named `client_name` with the
         # client_name parameter. </font><font color="blue">
-	self.client_name = client_name
+        self.client_name = client_name
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: initialize a data attribute named `chat_room` with the
+        # TODO: initialize a data attribute named `chat_room` with the
         # chat_room parameter. </font><font color="blue">
-	self.chat_room = chat_room
+        self.chat_room = chat_room
 </pre></font>
 
 <font color="grey"><pre>
     def new_message(self, message):
         # TODO: call the chat_room's add_message() method, passing the
         # client name from the client_name attribute and the message parameter. </font><font color="blue">
-	self.chat_room.add_message(self.client_name, message)
+        self.chat_room.add_message(self.client_name, message)
 </pre></font>
 
 <font color="grey"><pre>
@@ -143,41 +143,41 @@ class ChatClient(Observer):
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: assign the ChatMessage's id attribute to a variable named `id` </font><font color="blue">
-	id = chat_msg.id
+        # TODO: assign the ChatMessage's id attribute to a variable named `id` </font><font color="blue">
+        id = chat_msg.id
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: assign the ChatMessage's value attribute to a variable named
+        # TODO: assign the ChatMessage's value attribute to a variable named
         # `value` </font><font color="blue">
-	value = chat_msg.value
+        value = chat_msg.value
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: import ChatRoom from the chat_room module </font><font color="blue">
-	from chat_room import ChatRoom
+        # TODO: import ChatRoom from the chat_room module </font><font color="blue">
+        from chat_room import ChatRoom
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: create a ChatRoom() object and assign it to a variable
+        # TODO: create a ChatRoom() object and assign it to a variable
         # named `chat_room` </font><font color="blue">
-	chat_room = ChatRoom()
+        chat_room = ChatRoom()
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: create a ChatClient object and assign it to a variable named
+        # TODO: create a ChatClient object and assign it to a variable named
         # `chat_client`. The ChatClient constructor takes two arguments:
         # 1. client_name
         # 2. chat_room </font><font color="blue">
-	chat_client = ChatClient(client_name, chat_room)
+        chat_client = ChatClient(client_name, chat_room)
 </pre></font>
 
 <font color="grey"><pre>
-	line = input(prompt)
+        line = input(prompt)
         while line != 'quit':
             # TODO: call the ChatClient's new_message() method, passing the
             # input line as the argument </font><font color="blue">
-	    chat_client.new_message(line)
+            chat_client.new_message(line)
 </pre></font>
 
 <h2>Hints for Exercise 6.1 Bonus (Implement a chat GUI client)</h2>
@@ -192,9 +192,9 @@ class ChatClientGui(Observer):
 <font color="grey"><pre>
     def __init__(self, client_name, window, chat_room):
         self.create_widgets(client_name, window)
-	# TODO: copy the 3 lines of code from the body of the
+        # TODO: copy the 3 lines of code from the body of the
         # ChatClient __init__() method here </font><font color="blue">
-	super().__init__(chat_room)
+        super().__init__(chat_room)
         self.client_name = client_name
         self.chat_room = chat_room
 </pre></font>
@@ -208,9 +208,9 @@ class ChatClientGui(Observer):
 <font color="grey"><pre>
     def callback(self, event):
         ...
-	# TODO: call the ChatClientGui's new_message() method to send the text
+        # TODO: call the ChatClientGui's new_message() method to send the text
         # from the entry field to the chat room </font><font color="blue">
-	self.new_message(message)
+        self.new_message(message)
 </pre></font>
 
 <font color="grey"><pre>
@@ -232,9 +232,9 @@ from measure_configurable import measure, get_function_stats, decorator_enabled
 </pre></font>
 
 <font color="grey"><pre>
-	    # BONUS TODO: call get_function_stats() only if
+            # BONUS TODO: call get_function_stats() only if
             # decorator_enabled is true </font><font color="blue">
-	    if decorator_enabled: </font><font color="grey">
+            if decorator_enabled: </font><font color="grey">
                 print('{Function Call Stats:^61}')
                 print('{Function name:32s} {Calls:&gt;8s}  {Avg Time (seconds):22s}')
                 print('-' * 61)
@@ -256,29 +256,29 @@ class ChatRoomProxy(ChatRoom):
 <font color="grey"><pre>
     def __init__(self):
         # TODO: call the superclass constructor. </font><font color="blue">
-	super().__init__()
+        super().__init__()
 </pre></font>
 
 <font color="grey"><pre>
         def receive_loop():
-                        ...
-			# TODO: call the chat_client's update() method,
-                        # passing the argument deserialized_msg </font><font color="blue">
-			chat_client.update(deserialized_msg)
+            ...
+            # TODO: call the chat_client's update() method,
+            # passing the argument deserialized_msg </font><font color="blue">
+            chat_client.update(deserialized_msg)
 </pre></font>
 
 
 <h3>chat_client.py</h3>
 
 <font color="grey"><pre>
-	# BONUS TODO: import ChatRoomProxy from the chat_room_proxy module </font><font color="blue">
-	from chat_room_proxy import ChatRoomProxy
+        # BONUS TODO: import ChatRoomProxy from the chat_room_proxy module </font><font color="blue">
+        from chat_room_proxy import ChatRoomProxy
 </pre></font>
 
 <font color="grey"><pre>
-	# BONUS TODO: create a ChatRoomProxy() object and assign it to a variable
+        # BONUS TODO: create a ChatRoomProxy() object and assign it to a variable
         # named `chat_room` </font><font color="blue">
-	chat_room = ChatRoomProxy()
+        chat_room = ChatRoomProxy()
 </pre></font>
 
 </body>
