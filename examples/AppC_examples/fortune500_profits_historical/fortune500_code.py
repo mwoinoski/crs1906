@@ -22,6 +22,9 @@ len(df)
 # Yes, looks good
 
 # How did GM do?
+# df.loc[...] - loc selects data by labels (row names and column names)
+# df.loc[row_indexer, column_indexer]
+# first column of output is row number (0, 500, 1000, ...)
 df.loc[df['company'] == 'General Motors'].head()
 df.loc[df['company'] == 'General Motors', 'profit'].head()
 df.loc[df['company'] == 'General Motors', 'profit'].sum()
