@@ -1,19 +1,32 @@
-#!/usr/bin/env python3
-"""       turtle-example-suite:
-
-            tdemo_yinyang.py
-
-Another drawing suitable as a beginner's
-programming example.
-
-The small circles are drawn by the circle
-command.
+"""
+yinyang_multi_four_threads.py
 
 Code from "Python Programming Fundamentals" by Kent Lee
 """
-
-import turtle
+import sys
+import subprocess
 from threading import Thread
+import turtle  # turtle graphics library
+
+
+# This program needs to run under Python 3.11
+if f'{sys.version_info.major}.{sys.version_info.minor}' != '3.11':
+    subprocess.run(['py', '-3.11', sys.argv[0]])
+    exit()
+
+
+def init_screen():
+    """
+    Delete the turtle's drawings from the screen, re-center the turtle and
+    set variables to the default values
+    """
+    screen = turtle.Screen()
+    screen.setup(width=500, height=500)
+    screen.title('Yin Yang')
+
+    turtle.reset()
+    turtle.bgcolor('#E8E8F6')
+    turtle.hideturtle()
 
 
 def draw_fish(heading, radius, color):
@@ -30,7 +43,7 @@ def draw_fish(heading, radius, color):
     pen.end_fill()
 
 
-def draw_dot(heading, fish_radius, color):
+def draw_eye(heading, fish_radius, color):
     pen = turtle.Turtle()
     pen.speed(10)
     pen.setheading(heading)
@@ -45,20 +58,20 @@ def draw_dot(heading, fish_radius, color):
     pen.end_fill()
 
 
-def draw_yin(radius):
+def draw_yin_fish(radius):
     draw_fish(0, radius, "black")
 
 
-def draw_yin_dot(fish_radius):
-    draw_dot(0, fish_radius, "white")
+def draw_yin_eye(fish_radius):
+    draw_eye(0, fish_radius, "white")
 
 
-def draw_yang(radius):
+def draw_yang_fish(radius):
     draw_fish(180, radius, "white")
 
 
-def draw_yang_dot(fish_radius):
-    draw_dot(180, fish_radius, "black")
+def draw_yang_eye(fish_radius):
+    draw_eye(180, fish_radius, "black")
 
 
 def main():
@@ -67,29 +80,18 @@ def main():
     fish_radius = 200
 
     threads = [
-        Thread(target=draw_yin, args=(fish_radius,)),
-        Thread(target=draw_yin_dot, args=(fish_radius,)),
-        Thread(target=draw_yang, args=(fish_radius,)),
-        Thread(target=draw_yang_dot, args=(fish_radius,)),
+        Thread(target=draw_yin_fish, args=(fish_radius,)),
+        Thread(target=draw_yin_eye, args=(fish_radius,)),
+        Thread(target=draw_yang_fish, args=(fish_radius,)),
+        Thread(target=draw_yang_eye, args=(fish_radius,)),
     ]
 
     for thread in threads:
         thread.start()
 
+    turtle.mainloop()
     # main thread can't join child threads or turtle graphics complains
-
-
-def init_screen():
-    # Delete the turtle's drawings from the screen, re-center the turtle and
-    # set variables to the default values
-    screen = turtle.Screen()
-    screen.setup(width=500, height=500)
-    screen.title('Yin Yang')
-    turtle.reset()
-    turtle.bgcolor('#E8E8F6')
-    turtle.hideturtle()
 
 
 if __name__ == '__main__':
     main()
-    turtle.mainloop()

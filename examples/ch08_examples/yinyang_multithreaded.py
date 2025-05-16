@@ -1,19 +1,32 @@
-#!/usr/bin/env python3
-"""       turtle-example-suite:
-
-            tdemo_yinyang.py
-
-Another drawing suitable as a beginner's
-programming example.
-
-The small circles are drawn by the circle
-command.
+"""
+yinyang_multithreaded.py
 
 Code from "Python Programming Fundamentals" by Kent Lee
 """
-
-import turtle
+import sys
+import subprocess
 from threading import Thread
+import turtle  # turtle graphics library
+
+
+# This program needs to run under Python 3.11
+if f'{sys.version_info.major}.{sys.version_info.minor}' != '3.11':
+    subprocess.run(['py', '-3.11', sys.argv[0]])
+    exit()
+
+
+def init_screen():
+    """
+    Delete the turtle's drawings from the screen, re-center the turtle and
+    set variables to the default values
+    """
+    screen = turtle.Screen()
+    screen.setup(width=500, height=500)
+    screen.title('Yin Yang')
+
+    turtle.reset()
+    turtle.bgcolor('#E8E8F6')
+    turtle.hideturtle()
 
 
 def draw_fish(heading, radius, color1, color2):
@@ -28,6 +41,8 @@ def draw_fish(heading, radius, color1, color2):
     pen.left(180)
     pen.circle(-radius/2., 180)
     pen.end_fill()
+
+    # draw eye
     pen.left(90)
     pen.up()
     pen.forward(radius*0.35)
@@ -48,15 +63,7 @@ def draw_yang():
 
 
 def main():
-    # Delete the turtle's drawings from the screen, re-center the turtle and
-    # set variables to the default values
-    screen = turtle.Screen()
-    screen.setup(width=500, height=500)
-    screen.title('Yin Yang')
-
-    turtle.reset()
-    turtle.bgcolor('#E8E8F6')
-    turtle.hideturtle()
+    init_screen()
 
     yin_thread = Thread(target=draw_yin)
     yang_thread = Thread(target=draw_yang)
@@ -64,8 +71,8 @@ def main():
     yin_thread.start()
     yang_thread.start()
 
+    turtle.mainloop()
     # main thread can't join child threads or turtle graphics complains
 
 if __name__ == '__main__':
     main()
-    turtle.mainloop()

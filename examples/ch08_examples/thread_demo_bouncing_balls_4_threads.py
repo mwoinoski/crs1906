@@ -1,3 +1,10 @@
+"""
+thread_demo_bouncing_balls_4_balls.py - demo of multithreading.
+
+This program has a dependency on the pygame module:
+    pip install pygame
+"""
+
 import pygame
 import threading
 import time
@@ -30,7 +37,8 @@ class Ball:
 
     def draw(self, surface):
         with self.lock:
-            pygame.draw.circle(surface, self.color, (int(self.x), int(self.y)), self.radius)
+            pygame.draw.circle(surface, self.color, (int(self.x), int(self.y)), 
+                               self.radius)
 
 
 # task for worker threads

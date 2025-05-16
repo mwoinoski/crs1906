@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-thread_race_fixed.py - Demo of use of Lock to prevent a race condition
+thread_race_fixed.py - Demo of the use of locks to prevent a race condition
 between threads
 """
+
 
 # Copyright 2014 Brett Slatkin, Pearson Education Inc.
 #
@@ -18,7 +19,16 @@ between threads
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import sys
+import subprocess
 from threading import Thread, Lock
+
+
+# This program needs to run under Python 3.7. In newer versions of Python,
+# many more operations are atomic, so race conditions are much less likely.
+if f'{sys.version_info.major}.{sys.version_info.minor}' != '3.7':
+    subprocess.run(['py', '-3.7', sys.argv[0]])
+    exit()
 
 
 class Counter:
@@ -28,18 +38,7 @@ class Counter:
         self.count = 0
 
     def increment(self, offset=1):
-        # self.count += offset  # race condition occurs with Python 3.7 and earlier
-        self.count += offset * self.forceRaceCondition()  # race condition always occurs
-
-    def forceRaceCondition(self):
-        """Hack to force a race condition in Python 3.10+
-
-        Python 3.10 introduced changes that reduced the chance of race
-        conditions. But if we add a method call to the statement, it makes
-        a race condition more likely. For an explanation, see
-        https://stefan-marr.de/2023/11/python-global-interpreter-lock/
-        """
-        return 1
+        self.count += offset
 
 
 class SampleSensors:
@@ -55,21 +54,22 @@ class SampleSensors:
         """
 
         for i in range(how_many):
-            self.read_from_sensor()  # Get the measurement
+            self.read_from_sensor()
+            # acquire the lock before incrementing
             with SampleSensors.counter_lock:
-                SampleSensors.counter.increment()  # Bump number of measurements
+                SampleSensors.counter.increment()
 
     def sample_sensors(self):
         threads = []
         for i in range(5):
             thread = Thread(target=SampleSensors.sample_one_sensor,
-                            args=(self, 100_000))
+                            args=(self, 200_000))
             threads.append(thread)
             thread.start()
         for thread in threads:
             thread.join()
 
-        print(f'Counter should be 500000, found {SampleSensors.counter.count}')
+        print(f'Counter should be 1000000, found {SampleSensors.counter.count}')
 
     def read_from_sensor(self):
         """ Dummy method """
@@ -81,11 +81,6 @@ def main():
 
 
 if __name__ == '__main__':
-    # For demo purposes only: wait for two threads to arrive at the Barrier
-    # This greatly increases the chance of a race condition
-    from threading import Barrier
-    barrier = Barrier(2, lambda: barrier.reset())
-
     from timeit import timeit
     main_time = timeit('main()', setup="from __main__ import main", number=1)
-    print(f'\nTime to run main: {main_time:.2f} seconds')
+    print(f'\nTime to run main with locking: {main_time:.2f} seconds')

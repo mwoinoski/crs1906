@@ -18,7 +18,15 @@ a lock because there is no possibility of a race condition.
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import sys
+import subprocess
 from threading import Thread
+
+# This program needs to run under Python 3.7. In newer versions of Python,
+# many more operations are atomic, so race conditions are much less likely.
+if f'{sys.version_info.major}.{sys.version_info.minor}' != '3.7':
+    subprocess.run(['py', '-3.7', sys.argv[0]])
+    exit()
 
 
 class Counter:
@@ -53,18 +61,17 @@ class SampleSensors:
     def sample_sensors(self):
         threads = []
         for i in range(5):
-            thread = WorkerThread(self, 100_000)
+            thread = WorkerThread(self, 200_000)
             threads.append(thread)
             thread.start()
         for thread in threads:
             thread.join()
 
         total_samples = sum(thread.counter.count for thread in threads)
-        print(f'Counter should be 500000, found {total_samples}')
+        print(f'Counter should be 100000, found {total_samples}')
 
     def read_from_sensor(self):
         """ Dummy method """
-        pass
 
 
 def main():
@@ -73,8 +80,6 @@ def main():
 
 
 if __name__ == '__main__':
-    from threading import Barrier
-    barrier = Barrier(2, lambda: barrier.reset())  # increase change of race condition
     from timeit import timeit
     main_time = timeit('main()', setup="from __main__ import main", number=1)
-    print(f'\nTime to run main: {main_time:.2f} seconds')
+    print(f'\nTime to run main in redesigned program: {main_time:.2f} seconds')
