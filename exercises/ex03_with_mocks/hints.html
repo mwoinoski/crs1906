@@ -19,21 +19,21 @@
 <font color="grey"><pre>
         # TODO: set the return value of the mock's get_news() method to the
         # value of the variable `expected` (defined at the end of the file) </font><font color="blue">
-	mock_news_feed_parser.get_news.return_value = expected
+        mock_news_feed_parser.get_news.return_value = expected
 </pre></font>
 
 
 <font color="grey"><pre>
-	# TODO: create a FeedReader instance and assign it to a local variable
+        # TODO: create a FeedReader instance and assign it to a local variable
         # named `feed_reader` </font><font color="blue">
-	feed_reader = FeedReader()
+        feed_reader = FeedReader()
 </pre></font>
 
 
 <font color="grey"><pre>
-	# TODO: set feed_reader.news_feed_parser attribute to
+        # TODO: set feed_reader.news_feed_parser attribute to
         # mock_news_feed_parser </font><font color="blue">
-	feed_reader.news_feed_parser = mock_news_feed_parser
+        feed_reader.news_feed_parser = mock_news_feed_parser
 </pre></font>
 
 
@@ -49,37 +49,37 @@
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: create a FeedReader instance and assign it to a local variable
+        # TODO: create a FeedReader instance and assign it to a local variable
         # named `feed_reader` </font><font color="blue">
-	feed_reader = FeedReader()
+        feed_reader = FeedReader()
 </pre></font>
 
 
 <font color="grey"><pre>
-	# TODO: set the feed_reader.news_feed_parser attribute to
+        # TODO: set the feed_reader.news_feed_parser attribute to
         # mock_news_feed_parser </font><font color="blue">
-	feed_reader.news_feed_parser = mock_news_feed_parser
+        feed_reader.news_feed_parser = mock_news_feed_parser
 </pre></font>
 
 
 <font color="grey"><pre>
-	# TODO: call the feed_reader's fetch_news_items() method and save the
+        # TODO: call the feed_reader's fetch_news_items() method and save the
         # return value in a variable named `news`. (Pass any string as the
         # argument to fetch_news_items()) </font><font color="blue">
-	news = feed_reader.fetch_news_items('quack')
+        news = feed_reader.fetch_news_items('quack')
 </pre></font>
 
 
 <font color="grey"><pre>
-	# TODO: assert that the `news` variable is an instance of list.
+        # TODO: assert that the `news` variable is an instance of list.
         # HINT: use the built-in isinstance() function </font><font color="blue">
-	assert isinstance(news, list)
+        assert isinstance(news, list)
 </pre></font>
 
 
 <font color="grey"><pre>
-	# TODO: assert that the length of the `news` list is 0 </font><font color="blue">
-	assert 0 == len(news)
+        # TODO: assert that the length of the `news` list is 0 </font><font color="blue">
+        assert 0 == len(news)
 </pre></font>
 
 

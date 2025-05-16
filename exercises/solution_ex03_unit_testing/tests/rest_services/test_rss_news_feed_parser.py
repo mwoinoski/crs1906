@@ -92,7 +92,7 @@ class TestRssNewsFeedParser:
     def test_get_news_music(self):
         # TODO: in the test_get_news_music method, create an instance of
         #       RssNewsFeedParser and save a reference to it in a local variable
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
         # Note that our goal is to test NewsFeedParser.get_news. But we
         # can't call the constructor for NewsFeedParser because it's an
@@ -103,7 +103,7 @@ class TestRssNewsFeedParser:
         #          the argument
         #       2. save the list returned by the method in a local variable
         #          named `actual`
-        actual = feed_reader.get_news('music')
+        actual = news_feed_parser.get_news('music')
 
         # TODO: assert that the list named `expected` is equal to the list named
         #       `actual`, which was returned from get_news()
@@ -114,12 +114,12 @@ class TestRssNewsFeedParser:
         # TODO: in the test_get_news_music_max_items_1 method, create an
         #       instance of RssNewsFeedParser and save a reference to it in a
         #       local variable.
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
         # TODO: 1. call the feed reader's get_news() method, passing
         #          news_type='music' and max_items=1 as the arguments.
         #       2. save the list returned by the method in a local variable
-        actual = feed_reader.get_news('music', max_items=1)
+        actual = news_feed_parser.get_news('music', max_items=1)
 
         # TODO: assert that the returned list has length 1 and that the first
         #       item of the `expected` list equals the first item of the returned 
@@ -138,55 +138,55 @@ class TestRssNewsFeedParser:
         # TODO: in the test_get_news_invalid_news_type method, create an
         #       instance of RssNewsFeedParser and save a reference to it in a
         #       local variable.
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
         # TODO: add a `with` statement to assert that if you call the
         #       feed reader's get_news() method with an invalid news type argument
         #       (for example, 'pluto'), the method raises a FeedReaderException.
         with raises(FeedReaderException):
-            feed_reader.get_news('pluto')
+            news_feed_parser.get_news('pluto')
 
     # TODO: examine the remaining test cases and be sure you understand
     #       how they work.
     #       (no code changes required)
 
     def test_get_news_max_items_2(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.get_news('music', max_items=2)
+        actual = news_feed_parser.get_news('music', max_items=2)
 
         assert expected[:2] == actual
 
     def test_parse_content(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(xml_input)
+        actual = news_feed_parser.parse_xml_content(xml_input)
 
         assert expected == actual
 
     def test_parse_content_max_items_1(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(xml_input, max_items=1)
+        actual = news_feed_parser.parse_xml_content(xml_input, max_items=1)
 
         assert expected[:1] == actual
 
     def test_parse_content_max_items_2(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(xml_input, max_items=2)
+        actual = news_feed_parser.parse_xml_content(xml_input, max_items=2)
 
         assert expected[:2] == actual
 
     def test_get_dummy_news(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
-        dummy_news = feed_reader.get_dummy_news('', 'movies')
+        dummy_news = news_feed_parser.get_dummy_news('', 'movies')
 
         assert re.match(r'^\s*<rss.*</rss>\s*$', dummy_news, flags=re.DOTALL)
 
     def test_parse_content_items_missing(self):
-        feed_reader = RssNewsFeedParser()
+        news_feed_parser = RssNewsFeedParser()
 
         minimal_input = '<rss><item></item></rss>'
         minimal_results = [
@@ -200,7 +200,7 @@ class TestRssNewsFeedParser:
             }
         ]
 
-        actual_results = feed_reader.parse_xml_content(minimal_input)
+        actual_results = news_feed_parser.parse_xml_content(minimal_input)
 
         assert minimal_results == actual_results
 

@@ -16,10 +16,10 @@ class PersonDao(BaseDao):
 <font color="grey"><pre>
     # TODO: define the __init__() method, with one parameter, self </font><font color="blue">
     def __init__(self): </font><font color="grey">
-	# TODO: call the superclass's __init__(), passing two arguments:
+        # TODO: call the superclass's __init__(), passing two arguments:
         # 1. the class of the entity that will be persisted (Person)
         # 2. the name of the entity's ID field ('email') </font><font color="blue">
-	super().__init__(Person, 'email')
+        super().__init__(Person, 'email')
 </pre></font>
 
 <h3>base_dao.py</h3>
@@ -30,7 +30,7 @@ class PersonDao(BaseDao):
         # 1. replace Person with the value of the DAO's _entity_class attribute
         #    (note: there are 2 occurrences of Person)
         # 2. replace 'email' with the value of the DAO's _id_attr attribute </font><font color="blue">
-	entity = db_session.query(self._entity_class)\
+        entity = db_session.query(self._entity_class)\
                            .filter(getattr(self._entity_class,
                                            self._id_attr) == id_value)\
                            .first()</font>
@@ -50,11 +50,11 @@ class VenueDao(BaseDao):
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: in the __init__() method, call the superclass's __init__(),
+        # TODO: in the __init__() method, call the superclass's __init__(),
         # passing two arguments:
         # 1. the class of the entity that will be persisted (Venue)
         # 2. the name of the entity's ID field ('id') </font><font color="blue">
-	super().__init__(Venue, 'id')
+        super().__init__(Venue, 'id')
 </pre></font>
 
 <h3>act_dao.py</h3>
@@ -67,11 +67,11 @@ class ActDao(BaseDao):
 <font color="grey"><pre>
     # TODO: define the __init__() method </font><font color="blue">
     def __init__(self): </font><font color="grey">
-	# TODO: in the __init__() method, call the superclass's __init__(),
+        # TODO: in the __init__() method, call the superclass's __init__(),
         # passing two arguments:
         # 1. the class of the entity that will be persisted (Act)
         # 2. the name of the entity's ID field ('id') </font><font color="blue">
-	super().__init__(Act, 'id')
+        super().__init__(Act, 'id')
 </pre></font>
 
 
@@ -94,7 +94,7 @@ class Customer(User): </font><font color="grey">
 
         # TODO: call the superclass __init__() method, passing the
         # appropriate arguments </font><font color="blue">
-	super().__init__(first_name, last_name, email, middles, street, city,
+        super().__init__(first_name, last_name, email, middles, street, city,
              state, country, post_code)
 </pre></font>
 
@@ -103,7 +103,7 @@ class Customer(User): </font><font color="grey">
         # delete its attribute assignment from the next block of statements.
         # Save any remaining arguments in data attributes of the current
         # Customer object.  </font><font color="blue">
-	self.customer_id = customer_id
+        self.customer_id = customer_id
 </pre></font>
 
 <font color="grey"><pre>
@@ -176,18 +176,18 @@ class Member(User):
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: call the superclass __init__() method, passing the
+        # TODO: call the superclass __init__() method, passing the
         # appropriate arguments </font><font color="blue">
-	super().__init__(first_name, last_name, email, middles, street, city,
+        super().__init__(first_name, last_name, email, middles, street, city,
                          state, country, post_code)
 </pre></font>
 
 <font color="grey"><pre>
-	# TODO: save the remaining arguments in data attributes of the
+        # TODO: save the remaining arguments in data attributes of the
         # current Member object
         # TODO: for any argument that you passed to the superclass constructor,
         # delete its attribute assignment from the next block of statements. </font><font color="blue">
-	self.nick_name = nick_name
+        self.nick_name = nick_name
         self.profile_photo = profile_photo
 </pre></font>
 
@@ -229,8 +229,8 @@ class Member(User):
 <h3>address.py</h3>
 
 <font color="grey"><pre>
-	# BONUS TODO: replace the following loop with a dictionary comprehension </font><font color="blue">
-	json_sanitized = {k: (None if v == 'null' else v)
+        # BONUS TODO: replace the following loop with a dictionary comprehension </font><font color="blue">
+        json_sanitized = {k: (None if v == 'null' else v)
                           for k, v in json_value.items()}
         self.__dict__.update(**json_sanitized)
 </pre></font>

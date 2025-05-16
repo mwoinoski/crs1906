@@ -3,5 +3,4 @@
 :: discard the warnings.
 
 @echo off
-@echo in pip.cmd
 powershell -NoProfile -Command "pip3 %* 2>&1 | Where-Object { $_ -notmatch 'DEPRECATION' }"
