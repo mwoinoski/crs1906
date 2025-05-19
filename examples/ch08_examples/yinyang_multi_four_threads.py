@@ -2,6 +2,8 @@
 yinyang_multi_four_threads.py
 
 Code from "Python Programming Fundamentals" by Kent Lee
+
+IMPORTANT: this application runs only with Python 3.11.
 """
 import sys
 import subprocess

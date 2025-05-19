@@ -7,6 +7,8 @@ that reference `barrier`.
 
 Race conditions are relatively rare, which is what makes them notoriously
 difficult to debug because it may be impossible to reproduce them in testing.
+
+IMPORTANT: this program runs only with Python 3.7.
 """
 
 # Copyright 2014 Brett Slatkin, Pearson Education Inc.

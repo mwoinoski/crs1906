@@ -2,6 +2,8 @@
 """
 thread_race_fixed.py - Demo of the use of locks to prevent a race condition
 between threads
+
+IMPORTANT: this program runs only with Python 3.7.
 """
 
 

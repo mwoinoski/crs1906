@@ -44,7 +44,7 @@ def main():
     # Spawn thread pool
     for i, _ in enumerate(hosts, start=1):
         worker = Thread(target=pinger, args=(i, queue))
-        worker.setDaemon(True)
+        worker.daemon = True
         worker.start()
 
     # Place work in queue

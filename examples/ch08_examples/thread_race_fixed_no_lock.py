@@ -2,6 +2,8 @@
 """
 thread_race_fixed_no_lock.py - Re-designed threading code that does not require
 a lock because there is no possibility of a race condition.
+
+IMPORTANT: this program runs only with Python 3.7.
 """
 
 # Copyright 2014 Brett Slatkin, Pearson Education Inc.
