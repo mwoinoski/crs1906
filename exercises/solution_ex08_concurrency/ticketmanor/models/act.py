@@ -89,7 +89,7 @@ class Act(Base):
             "id": self.id,
             "title": self.title,
             "notes": self.notes,
-            "act_type": self.ACT_TYPE[self.act_type],
+            "act_type": self.ACT_TYPE[self.act_type],  # noqa
             "year": self.year,
             "events": [] if not hasattr(self, 'events')
                          else [event.__json__() for event in self.events],
