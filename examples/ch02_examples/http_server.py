@@ -22,14 +22,16 @@ class HttpRequestProcessor(BaseHTTPRequestHandler):
     """Handle HTTP requests"""
 
     def get_request_line(self):
-        self.raw_requestline = self.rfile.readline(65537)
+        # noinspection
+        self.raw_requestline = self.rfile.readline(65537)  # noqa
         if len(self.raw_requestline) > 65536:
+            # noinspection
             self.requestline = ''
             self.request_version = ''
             self.command = ''
             self.send_error(414)
         elif not self.raw_requestline:
-            self.close_connection = 1
+            self.close_connection = True
 
     # TODO: note the definition of the template method handle_one_request()
     def handle_one_request(self):
@@ -48,13 +50,13 @@ class HttpRequestProcessor(BaseHTTPRequestHandler):
                     # TODO: note call of do_get() and do_post() template
                     # methods defined in subclass
                     if self.command == 'GET':
-                        resp, status = self.do_get(request_data)
+                        resp, status = self.do_get(request_data)  # noqa
 
                     elif self.command == 'POST':
-                        resp, status = self.do_post(request_data)
+                        resp, status = self.do_post(request_data)  # noqa
 
                     # TODO: note call of generic return_response()
-                    self.return_response(resp, status)
+                    self.return_response(resp, status)  # noqa
 
                 else:
                     self.send_error(501, "Unsupported method (%r)" %
@@ -65,7 +67,7 @@ class HttpRequestProcessor(BaseHTTPRequestHandler):
         except socket.timeout as e:
             # a read or a write timed out.  Discard this connection
             self.log_error("Request timed out: %r", e)
-            self.close_connection = 1
+            self.close_connection = True
             return
 
     # TODO: note the definition of get_request_data()
@@ -80,9 +82,9 @@ class HttpRequestProcessor(BaseHTTPRequestHandler):
             content_len = int(self.headers.get('content-length', 0))
             post_body = self.rfile.read(content_len)
             request_data = self.get_cgi_data(post_body.decode('utf-8'))
-        return request_data
+        return request_data  # noqa
 
-    def get_cgi_data(self, string):
+    def get_cgi_data(self, string):  # noqa
         return {} if not string \
             else dict([name_value.split('=') for name_value in string.split('&')])
 
@@ -102,7 +104,7 @@ class HttpRequestProcessor(BaseHTTPRequestHandler):
 class AddUserFormProcessor(HttpRequestProcessor):
 
     # TODO: note the definition of do_get()
-    def do_get(self, request_data):
+    def do_get(self, request_data):  # noqa
         """Handle GET request"""
         name = request_data['name']
         job = request_data['job']
@@ -113,7 +115,7 @@ class AddUserFormProcessor(HttpRequestProcessor):
         return get_response, 200  # OK
 
     # TODO: note the definition of do_post()
-    def do_post(self, request_data):
+    def do_post(self, request_data):  # noqa
         """Handle POST request"""
         name = request_data['name']
         job = request_data['job']
@@ -131,7 +133,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         http_port = int(sys.argv[1])
     server_address = (host, http_port)  # listen on localhost
-    httpd = HTTPServer(server_address, AddUserFormProcessor)
+    httpd = HTTPServer(server_address, AddUserFormProcessor)  # noqa
 
     print(f"Server Started - {host}:{http_port}")
     try:
