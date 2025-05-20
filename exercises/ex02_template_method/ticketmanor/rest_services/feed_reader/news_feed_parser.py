@@ -8,7 +8,7 @@ Converted to Python 3 by running:
     python PYTHON_HOME/Tools/Scripts/2to3.py -w news_feed_parser.py
 """
 
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 import urllib.request
 import urllib.error
 from xml.dom import minidom
