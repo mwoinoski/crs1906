@@ -218,6 +218,25 @@ class ActDaoTest(TestCase):
         self.assertRaises(
             PersistenceError, self.act_dao.delete, 999, self.session)
 
+    def test_dunder_json(self):
+        act = self.act_dao.query_for_act(
+            self.session, act_type='music',
+            search_type='Artist', title='Wynton Marsalis')
+
+        expected = {
+            "act_type": Act.ACT_TYPE[Act.MUSIC],
+            "id": 304,
+            "notes": "Sketches of Spain",
+            "title": "Wynton Marsalis",
+        }
+
+        actual = act.__json__()
+
+        self.assertEqual(len(actual['events']), 1)
+        del actual['events']
+        del actual['year']
+        self.assertEqual(expected, actual)
+
     # -------------------------------------------------------------------------
     #                              Utility Methods
     # -------------------------------------------------------------------------
