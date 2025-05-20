@@ -10,6 +10,7 @@ Converted to Python 3 by running:
 
 from abc import ABCMeta, abstractmethod
 import urllib.request
+import urllib.error
 from xml.dom import minidom
 from ticketmanor.rest_services.feed_reader import (
     NewsType,
