@@ -75,9 +75,8 @@ class Act(Base):
 
     def __str__(self):
         """Return a human-readable representation of a Venue"""
-        # noinspection PyTypeChecker
         return "{self.id} {self.title} {act_type} {self.year} {self.notes}"\
-            .format(act_type=Act.ACT_TYPE[self.act_type], self=self)
+            .format(act_type=Act.ACT_TYPE[self.act_type], self=self)  # noqa
 
     def __repr__(self):
         """Return an unambiguous String representation of a Act"""
