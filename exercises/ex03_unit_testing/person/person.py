@@ -12,9 +12,9 @@ class Person:
         if not (first_name or middle_name or last_name):
             raise ValueError("All arguments are empty or None")
         # replace None with an empty string
-        self.first_name = first_name if first_name else ""
-        self.middle_name = middle_name if middle_name else ""
-        self.last_name = last_name if last_name else ""
+        self.first_name = first_name.strip() if first_name else ""
+        self.middle_name = middle_name.strip() if middle_name else ""
+        self.last_name = last_name.strip() if last_name else ""
 
     def full_name(self):
         # make sure empty fields don't insert extra spaces

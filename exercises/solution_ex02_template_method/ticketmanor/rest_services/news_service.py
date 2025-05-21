@@ -37,7 +37,7 @@ class NewsServiceView:
         # news_items might be a generator, but Pyramid won't convert a
         # generator to JSON. So as a work-around, we'll re-package the
         # news items into a new list.
-        news_items = list(self._news_reader.get_news(news_type, max_items))
+        news_items = list(self._news_reader.fetch_news_items(news_type, max_items))
 
         for item_id, news_item in enumerate(news_items):
             news_item['id'] = item_id
@@ -55,7 +55,7 @@ class NewsServiceView:
         logger.debug("%s: news_type = %s, item_id = %s",
                      func_name(self), news_type, item_id)
 
-        news_items = list(self._news_reader.get_news(news_type))
+        news_items = list(self._news_reader.fetch_news_items(news_type))
 
         item_id = int(item_id)
         return news_items[item_id if item_id < len(news_items) else 0]

@@ -9,8 +9,10 @@ Converted to Python 3 by running:
 """
 
 from abc import ABC, abstractmethod
+from typing import Optional, List, Dict
 import urllib.request
 import urllib.error
+from xml.dom.minidom import Element
 from xml.dom import minidom
 from ticketmanor.rest_services.feed_reader import (
     NewsType,
@@ -27,48 +29,48 @@ class NewsFeedParser(ABC):
     NewsFeedParser is implemented with the Template Method GoF design pattern.
     """
 
-    def __init__(self, news_item_element_name):
-        self.item_element_name = news_item_element_name
+    def __init__(self, news_item_element_name: str) -> None:
+        self.item_element_name: str = news_item_element_name
 
     # TODO: you will write unit tests for the get_news() method. Examine the
     #       get_news() method below and be sure you understand how it works.
     #       (no code changes required)
-    def get_news(self, news_type, max_items=0):
+    def get_news(self, news_type: str, max_items: int = 0) -> List[Dict[str, str]]:
         """A Template method. Returns latest news for a news website."""
 
         if news_type not in NewsType.__members__:
             raise FeedReaderException(
                 '"{}" is not a recognized news type'.format(news_type))
 
-        url = self.get_url(news_type)
+        url: str = self.get_url(news_type)
 
-        raw_content = self.get_raw_content(url, news_type)
+        raw_content: bytes = self.get_raw_content(url, news_type)
 
         # TODO: note that the parse_xml_content() method returns a list of
         #       dictionaries, where each dictionary contains the data from a single
         #       news item.
         #       (no code changes required).
-        content = self.parse_xml_content(raw_content, max_items)
+        content: List[Dict[str, str]] = self.parse_xml_content(raw_content, max_items)
 
         # TODO: note that get_news() returns the list of news items.
         #       (no code changes required).
         return content
 
     @abstractmethod
-    def get_url(self, news_type):
+    def get_url(self, news_type: str) -> str:
         pass
 
     # This method could be static here in the base class, but we'll leave it
     # defined as an instance method so subclasses can override it if needed.
     # noinspection PyMethodMayBeStatic
-    def get_raw_content(self, url, news_type=None):
+    def get_raw_content(self, url: str, news_type: str = None) -> bytes:
         # if url is not accessible, return dummy content
         try:
             return urllib.request.urlopen(url, timeout=5).read()
         except urllib.error.URLError:
             return self.get_dummy_news(url, news_type)
 
-    def parse_xml_content(self, raw_content, max_items=0):
+    def parse_xml_content(self, raw_content: bytes, max_items: int = 0) -> List[Dict[str, str]]:
         """
         Parses a raw content string from an XML news feed into a list of
         news items.
@@ -78,8 +80,8 @@ class NewsFeedParser(ABC):
         :return: list of news items. Each news item is a dictionary with keys
         title, link, content, date_time, image_banner, and image_thumbnail
         """
-        parsed_content = []
-        dom = minidom.parseString(raw_content)
+        parsed_content: List[Dict[str, str]] = []
+        dom = minidom.parseString(raw_content.decode())
 
         for i, node in enumerate(
                 dom.getElementsByTagName(self.item_element_name), start=1):
@@ -93,10 +95,9 @@ class NewsFeedParser(ABC):
         return parsed_content
 
     @abstractmethod
-    def parse_item(self, node):
+    def parse_item(self, node: Element) -> Dict[str, str]:
         pass
 
-    def get_dummy_news(self, url, news_type):
+    def get_dummy_news(self, url: str, news_type: Optional[str]) -> bytes:
         """Subclass can override this method to provide dummy news"""
         raise urllib.error.URLError("can't open connection to " + url)
-

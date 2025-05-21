@@ -33,4 +33,4 @@ class AllNewsFeedReader:
         }
 
     def worker(self, news_type, max_items):
-        return self.feed_reader.get_news(news_type, max_items)
+        return self.feed_reader.fetch_news_items(news_type, max_items)

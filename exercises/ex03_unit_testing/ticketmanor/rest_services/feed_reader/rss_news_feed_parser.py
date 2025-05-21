@@ -9,6 +9,8 @@ Converted to Python 3 by running:
 """
 
 import re
+from typing import Dict
+from xml.dom.minidom import Element
 
 from ticketmanor.util.utils import html_unescape
 from ticketmanor.rest_services.feed_reader.news_feed_parser import (
@@ -22,21 +24,21 @@ class RssNewsFeedParser(NewsFeedParser):
     feed_type = 'rss'
     item_element = 'item'
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__(RssNewsFeedParser.item_element)
 
-    def get_url(self, news_type):
+    def get_url(self, news_type: str) -> str:
         """Implementation of abstract method"""
         return 'https://news.google.com/news/headlines?output={}&pz=1&ned=us&hl=en&q={}'\
             .format(RssNewsFeedParser.feed_type, news_type)
 
-    def get_dummy_news(self, url, news_type):
+    def get_dummy_news(self, url: str, news_type: str) -> bytes:
         """Called if the URL can't be opened"""
         return RssDummyNews.get_news(news_type)
 
-    def parse_item(self, node):
+    def parse_item(self, node: Element) -> Dict[str, str]:
         """Implementation of abstract method defined in NewsFeedParser"""
-        parsed_item = {}
+        parsed_item: Dict[str, str] = {}
         try:
             title_node = node.getElementsByTagName('title')[0]
             parsed_item['title'] = title_node.childNodes[0].nodeValue
