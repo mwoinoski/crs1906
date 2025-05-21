@@ -160,21 +160,21 @@ class TestRssNewsFeedParser:
     def test_parse_content(self):
         news_feed_parser = RssNewsFeedParser()
 
-        actual = news_feed_parser.parse_xml_content(xml_input)
+        actual = news_feed_parser.parse_xml_content(xml_input.encode())
 
         assert expected == actual
 
     def test_parse_content_max_items_1(self):
         news_feed_parser = RssNewsFeedParser()
 
-        actual = news_feed_parser.parse_xml_content(xml_input, max_items=1)
+        actual = news_feed_parser.parse_xml_content(xml_input.encode(), max_items=1)
 
         assert expected[:1] == actual
 
     def test_parse_content_max_items_2(self):
         news_feed_parser = RssNewsFeedParser()
 
-        actual = news_feed_parser.parse_xml_content(xml_input, max_items=2)
+        actual = news_feed_parser.parse_xml_content(xml_input.encode(), max_items=2)
 
         assert expected[:2] == actual
 
@@ -183,7 +183,7 @@ class TestRssNewsFeedParser:
 
         dummy_news = news_feed_parser.get_dummy_news('', 'movies')
 
-        assert re.match(r'^\s*<rss.*</rss>\s*$', dummy_news, flags=re.DOTALL)
+        assert re.match(r'^\s*<rss.*</rss>\s*$', dummy_news.decode(), flags=re.DOTALL)
 
     def test_parse_content_items_missing(self):
         news_feed_parser = RssNewsFeedParser()
@@ -200,7 +200,7 @@ class TestRssNewsFeedParser:
             }
         ]
 
-        actual_results = news_feed_parser.parse_xml_content(minimal_input)
+        actual_results = news_feed_parser.parse_xml_content(minimal_input.encode())
 
         assert minimal_results == actual_results
 
