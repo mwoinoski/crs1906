@@ -20,14 +20,14 @@ class TestFeedReader(TestCase):
         # an attribute of the feed parser.
         self.feed_reader = FeedReader(news_feed_parser=Mock)
 
-    def test_get_news_music(self):
+    def test_fetch_news_items_music(self):
         # The Mock will create new mocks anytime an attribute is referenced.
         # In the following statement, mocks are created for the
         # _news_feed_parser and get_news attributes. Because get_news is a
         # method, we can also set the method's return value.
-        self.feed_reader._news_feed_parser.fetch_news_items.return_value = expected
+        self.feed_reader._news_feed_parser.get_news.return_value = expected
 
-        # The feed reader's get_news() method delegates to the news feed
+        # The feed reader's fetch_news_items() method delegates to the news feed
         # parser's get_news(), which is a mock that we created in the previous
         # statement. The parser's get_news() will return the value of the
         # "expected" list.
@@ -36,8 +36,8 @@ class TestFeedReader(TestCase):
         for expected_result, actual_result in zip_longest(expected, news):
             self.assertEqual(expected_result, actual_result)
 
-    def test_get_news_max_items_1(self):
-        self.feed_reader._news_feed_parser.fetch_news_items.return_value = expected[:1]
+    def test_fetch_news_items_max_items_1(self):
+        self.feed_reader._news_feed_parser.get_news.return_value = expected[:1]
 
         news = self.feed_reader.fetch_news_items("music", max_items=1)
 
@@ -45,7 +45,7 @@ class TestFeedReader(TestCase):
             self.assertEqual(expected_result, actual_result)
 
     def test_get_news_max_items_2(self):
-        self.feed_reader._news_feed_parser.fetch_news_items.return_value = expected[:2]
+        self.feed_reader._news_feed_parser.get_news.return_value = expected[:2]
 
         news = self.feed_reader.fetch_news_items("music", max_items=2)
 
