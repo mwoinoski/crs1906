@@ -99,7 +99,7 @@ def test_get_news_max_items_2():
 def test_parse_content():
     feed_reader = RssNewsFeedParser()
 
-    actual = feed_reader.parse_xml_content(xml_input)
+    actual = feed_reader.parse_xml_content(xml_input.encode())
 
     assert expected == actual
 
@@ -107,7 +107,7 @@ def test_parse_content():
 def test_parse_content_max_items_1():
     feed_reader = RssNewsFeedParser()
 
-    actual = feed_reader.parse_xml_content(xml_input, max_items=1)
+    actual = feed_reader.parse_xml_content(xml_input.encode(), max_items=1)
 
     assert expected[:1] == actual
 
@@ -115,7 +115,7 @@ def test_parse_content_max_items_1():
 def test_parse_content_max_items_2():
     feed_reader = RssNewsFeedParser()
 
-    actual = feed_reader.parse_xml_content(xml_input, max_items=2)
+    actual = feed_reader.parse_xml_content(xml_input.encode(), max_items=2)
 
     assert expected[:2] == actual
 
@@ -135,7 +135,7 @@ def test_parse_content_items_missing():
         }
     ]
 
-    actual_results = feed_reader.parse_xml_content(minimal_input)
+    actual_results = feed_reader.parse_xml_content(minimal_input.encode())
 
     assert minimal_results == actual_results
 
@@ -143,4 +143,8 @@ def test_parse_content_items_missing():
 # Monkey patch RssNewsFeedParser.get_raw_content.
 # We will discuss monkey patching in the second section of the Unit Testing
 # chapter.
-RssNewsFeedParser.get_raw_content = lambda self, url, max_items: xml_input
+RssNewsFeedParser.get_raw_content = lambda self, url, max_items: xml_input.encode()
+
+
+# TODO: note that there is no call to unittest.main().
+#       (no code changes required)

@@ -73,7 +73,7 @@ expected = [
     },
 ]
 
-# TODO: note that there is no TestCase subclass defined in this module.
+# TODO: note that there is no class defined in this module.
 #       The test cases are global functions rather than methods.
 #       (no code changes required)
 
@@ -82,6 +82,7 @@ expected = [
 #          paste them here:
 #             test_get_news_music()
 #             test_get_news_music_max_items_1()
+#             test_get_news_invalid_news_type()
 #          (Be sure to un-indent the function definitions)
 #       2. Delete the "self" argument from the copied functions.
 
@@ -106,9 +107,6 @@ def test_get_news_music_max_items_1():
     # assert expected[:1] == actual
 
 
-# TODO: copy the test_get_news_invalid_news_type() method from
-#       test_rss_news_feed_parser.py and paste it here. Modify it to use the
-#       pytest.raises() function to verify that a FeedReaderException is raised.
 def test_get_news_invalid_news_type():
     feed_reader = RssNewsFeedParser()
 
@@ -171,7 +169,7 @@ def test_parse_content_items_missing():
 # Monkey patch RssNewsFeedParser.get_raw_content.
 # We will discuss monkey patching in the second section of the Unit Testing
 # chapter.
-RssNewsFeedParser.get_raw_content = lambda self, url, max_items: xml_input
+RssNewsFeedParser.get_raw_content = lambda self, url, max_items: xml_input.encode()
 
 
 # TODO: note that there is no call to unittest.main().
