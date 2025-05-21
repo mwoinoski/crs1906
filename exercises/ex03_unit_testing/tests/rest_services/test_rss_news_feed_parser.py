@@ -90,10 +90,10 @@ class TestRssNewsFeedParser:
 
     # TODO: Define a test method named test_get_news_music
     # HINT: see slide 3-16
-    def test_get_news_music(self):
+    ....
         # TODO: in the test_get_news_music method, create an instance of
         #       RssNewsFeedParser and save a reference to it in a local variable
-        parser = RssNewsFeedParser()
+        ....
 
         # Note that our goal is to test NewsFeedParser.get_news. But we
         # can't call the constructor for NewsFeedParser because it's an
@@ -105,20 +105,20 @@ class TestRssNewsFeedParser:
         #          the argument
         #       2. save the list returned by the method in a local variable
         #          named `actual`
-        actual = parser.get_news('music')
+        ....
 
         # TODO: assert that the list named `expected` is equal to the list named
         #       `actual`, which was returned from get_news()
         # HINT: see slide 3-21
-        assert expected == actual
+        ....
 
 
 
-# TODO: After you get the first test case running, uncomment the following 
-#       test case and make the required changes. Then run the file again and 
-#       verify this second test case passes.
-# HINT: In PyCharm, to uncomment lines, highlight the commented lines and then
-#       press Ctrl-/
+    # TODO: After you get the first test case running, uncomment the following
+    #       test method skeleton and make the required changes. Then run the file
+    #       again and verify this second test case passes.
+    # HINT: In PyCharm, to uncomment lines, highlight the commented lines and then
+    #       press Ctrl-/
 
 #     # TODO: Define a test method named test_get_news_music_max_items_1
 #     ....
@@ -140,9 +140,8 @@ class TestRssNewsFeedParser:
 #         ....
 
 
-# TODO: uncomment the following function, make the required changes,
-#       and verify this third test case passes.
-
+    # TODO: uncomment the following test method skeleton, make the required changes,
+    #       and verify this third test case passes.
 
 #     # TODO: Define a test method named test_get_news_invalid_news_type
 #     ....
