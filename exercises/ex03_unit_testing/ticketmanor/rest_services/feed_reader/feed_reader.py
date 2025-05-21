@@ -41,7 +41,7 @@ class FeedReader:
         # TODO: note the call to the feed parser's get_news() method.
         #       (no code change required)
         try:
-            return self.news_feed_parser.get_news(news_type, max_items)
+            return self._news_feed_parser.get_news(news_type, max_items)
 
         # TODO: note that if the call to get_news() raises an exception,
         #       this method returns an empty list.

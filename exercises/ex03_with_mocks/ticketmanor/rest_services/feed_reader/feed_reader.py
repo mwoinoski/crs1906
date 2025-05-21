@@ -22,7 +22,7 @@ class FeedReader:
         #       constructor. This creates a hard-coded dependency between the
         #       FeedReader class and the RssNewsFeedParser class.
         #       (no code change required)
-        self.news_feed_parser = RssNewsFeedParser()
+        self._news_feed_parser = RssNewsFeedParser()
 
     def fetch_news_items(self, news_type, max_items=0):
         """
@@ -39,7 +39,7 @@ class FeedReader:
         #       verify the result.
         #       (no code change required)
         try:
-            return self.news_feed_parser.get_news(news_type, max_items)
+            return self._news_feed_parser.get_news(news_type, max_items)
 
         # TODO: note that if the call to get_news() raises an exception,
         #       this method returns an empty list.
