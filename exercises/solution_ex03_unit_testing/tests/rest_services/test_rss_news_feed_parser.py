@@ -212,4 +212,4 @@ def parser_monkey_patch():
     (We discuss monkey patching in the second section of the Unit Testing
     chapter.)
     """
-    RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input
+    RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input.encode()

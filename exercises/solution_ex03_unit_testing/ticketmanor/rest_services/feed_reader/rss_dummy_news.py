@@ -160,4 +160,4 @@ class RssDummyNews:
     @staticmethod
     def get_news(news_type):
         news = dummy_news[news_type]
-        return re.sub(r'\d{2} \w{3} \d{4}', time.strftime("%d %b %Y"), news)
+        return re.sub(r'\d{2} \w{3} \d{4}', time.strftime("%d %b %Y"), news).encode()

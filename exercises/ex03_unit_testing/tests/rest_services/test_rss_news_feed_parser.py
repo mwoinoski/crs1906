@@ -90,10 +90,10 @@ class TestRssNewsFeedParser:
 
     # TODO: Define a test method named test_get_news_music
     # HINT: see slide 3-16
-    ....
+    def test_get_news_music(self):
         # TODO: in the test_get_news_music method, create an instance of
         #       RssNewsFeedParser and save a reference to it in a local variable
-        ....
+        parser = RssNewsFeedParser()
 
         # Note that our goal is to test NewsFeedParser.get_news. But we
         # can't call the constructor for NewsFeedParser because it's an
@@ -105,12 +105,12 @@ class TestRssNewsFeedParser:
         #          the argument
         #       2. save the list returned by the method in a local variable
         #          named `actual`
-        ....
+        actual = parser.get_news('music')
 
         # TODO: assert that the list named `expected` is equal to the list named
         #       `actual`, which was returned from get_news()
         # HINT: see slide 3-21
-        ....
+        assert expected == actual
 
 
 
@@ -225,7 +225,7 @@ def parser_monkey_patch():
     (We discuss monkey patching in the second section of the Unit Testing
     chapter.)
     """
-    RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input
+    RssNewsFeedParser.get_raw_content = lambda self, url, ntype: xml_input.encode()
 
 
 # TODO: note that there is no call to unittest.main().
