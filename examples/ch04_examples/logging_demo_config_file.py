@@ -4,7 +4,6 @@ configuration file, from Chapter 4"""
 import time
 import shutil
 
-import logging
 import logging.config
 
 

@@ -2,7 +2,7 @@
 Unit tests for FeedReader class.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'  # noqa
 
 from unittest.mock import Mock, patch
 from itertools import zip_longest
@@ -30,9 +30,9 @@ class TestFeedReader:
         #       named `feed_reader`
         feed_reader = FeedReader()
 
-        # TODO: set the feed_reader.news_feed_parser attribute to the
+        # TODO: set the feed_reader._news_feed_parser attribute to the
         #       mock_news_feed_parser
-        feed_reader.news_feed_parser = mock_news_feed_parser
+        feed_reader._news_feed_parser = mock_news_feed_parser
 
         # TODO: note the call the call to feed_reader.fetch_news_items().
         #       Because you changed the feed reader's `news_feed_parser` attribute in
@@ -60,9 +60,9 @@ class TestFeedReader:
         #       named `feed_reader`
         feed_reader = FeedReader()
 
-        # TODO: set the feed_reader.news_feed_parser attribute to
+        # TODO: set the feed_reader._news_feed_parser attribute to
         #       mock_news_feed_parser
-        feed_reader.news_feed_parser = mock_news_feed_parser
+        feed_reader._news_feed_parser = mock_news_feed_parser
 
         # TODO: call the feed_reader's fetch_news_items() method and save the
         #       return value in a variable named `news`. (Pass any string as the
@@ -89,7 +89,7 @@ class TestFeedReader:
         mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
         mock_news_feed_parser.get_news.return_value = expected
         feed_reader = FeedReader()
-        feed_reader.news_feed_parser = mock_news_feed_parser
+        feed_reader._news_feed_parser = mock_news_feed_parser
 
         # call method under test
         news = feed_reader.fetch_news_items("music", 1)
@@ -106,7 +106,7 @@ class TestFeedReader:
         mock_news_feed_parser = Mock(spec=RssNewsFeedParser)
         mock_news_feed_parser.get_news.return_value = expected
         feed_reader = FeedReader()
-        feed_reader.news_feed_parser = mock_news_feed_parser
+        feed_reader._news_feed_parser = mock_news_feed_parser
 
         # call method under test
         news = feed_reader.fetch_news_items("music", 2)

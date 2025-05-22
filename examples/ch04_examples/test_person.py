@@ -12,7 +12,7 @@ import pytest
 
 from person import Person
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'  # noqa
 
 
 class PersonTestCase(unittest.TestCase):

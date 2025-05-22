@@ -11,7 +11,7 @@ logger = logging.getLogger('logging_demo')
 logger.setLevel(logging.DEBUG)
 
 # Log messages to a file
-log_format = '%(asctime)s:%(levelname)s:%(message)s'
+log_format = '%(asctime)s:%(levelname)s:%(message)s'  # noqa
 handler = logging.FileHandler('logging_demo.log')
 handler.setFormatter(logging.Formatter(log_format))
 logger.addHandler(handler)
@@ -32,7 +32,7 @@ logger.info('Program started at %s', time.strftime('%X %x'))
 logger.warning('Root dir is %d%% full', 100*used/total)
 
 # Change log message format to include date and time
-log_format = '%(asctime)s:%(levelname)s:%(message)s'
+log_format = '%(asctime)s:%(levelname)s:%(message)s'  # noqa
 handler.setFormatter(logging.Formatter(log_format))
 
 logger.info('Program started at %s', time.strftime('%X %x'))
