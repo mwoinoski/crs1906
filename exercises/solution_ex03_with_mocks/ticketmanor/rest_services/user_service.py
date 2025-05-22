@@ -58,11 +58,6 @@ class UserServiceRest:
         email = self._request.matchdict['email']
         return self.get_user(email)
 
-    @staticmethod
-    def user_to_xml(user):  # noqa
-        # create stub xml manually
-        return '<user/>'
-
     @view_config(request_method='POST',
                  route_name='rest_users')
     def add_user(self):
@@ -116,3 +111,8 @@ class UserServiceRest:
             self._request.db_session.rollback()
             raise HTTPNotFound()
         return Response(status_int=204)
+
+    @staticmethod
+    def user_to_xml(user):  # noqa
+        # create stub xml manually
+        return '<user/>'
