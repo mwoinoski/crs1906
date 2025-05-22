@@ -43,7 +43,7 @@ from tkinter import simpledialog
 
 
 # TODO: import the logging package and the logging.config package
-# HINT: see slide 4-14
+# HINT: see slide 4-13
 
 
 # TODO: read the logging config from the file logging.conf
