@@ -2,7 +2,7 @@
 Unit tests for FeedReader class.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'  # noqa
 
 from unittest.mock import Mock
 from itertools import zip_longest

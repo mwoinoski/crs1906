@@ -6,11 +6,12 @@ by Gennadiy Zlobin.
 
 Converted to Python 3 by running:
     python PYTHON_HOME/Tools/Scripts/2to3.py -w news_parser.py
-"""
+"""  # noqa
 
+from typing import Dict
 from datetime import datetime
 from time import strptime
-from xml.dom import minidom
+from xml.dom.minidom import Element
 import re
 
 from ticketmanor.util.utils import html_unescape
@@ -23,29 +24,17 @@ class AtomNewsFeedParser(NewsFeedParser):
     """Parses an AtomPub news feed"""
     feed_type = 'atom'
     item_element = 'entry'
+    newsfeed_url = 'https://news.google.com/news/headlines?output={}&pz=1&ned=us&hl=en&q={}'
 
     def __init__(self):
         super().__init__(AtomNewsFeedParser.item_element)
 
-    def get_url(self, news_type):
+    def get_url(self, news_type: str) -> str:
         """Implementation of abstract method"""
-        return 'https://news.google.com/news/headlines?output={}&pz=1&ned=us&hl=en&' \
-               'q={}'.format(AtomNewsFeedParser.feed_type, news_type)
+        return AtomNewsFeedParser.newsfeed_url \
+            .format(AtomNewsFeedParser.feed_type, news_type)
 
-    # def parse_xml_content(self, raw_content, max_items=0):
-    #     """Implementation of abstract method"""
-    #     parsed_content = []
-    #     dom = minidom.parseString(raw_content)
-    #
-    #     for i, node in enumerate(dom.getElementsByTagName('entry'), start=1):
-    #         parsed_item = self.parse_item(node)
-    #         parsed_content.append(parsed_item)
-    #         if i >= max_items > 0:
-    #             break
-    #
-    #     return parsed_content
-
-    def parse_item(self, node):
+    def parse_item(self, node: Element) -> Dict[str, str]:
         """Implementation of abstract method defined in NewsFeedParser"""
         parsed_item = {}
         try:

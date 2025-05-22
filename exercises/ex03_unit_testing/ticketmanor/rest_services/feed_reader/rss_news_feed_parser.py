@@ -6,7 +6,7 @@ by Gennadiy Zlobin.
 
 Converted to Python 3 by running:
     python PYTHON_HOME/Tools/Scripts/2to3.py -w news_parser.py
-"""
+"""  # noqa
 
 import re
 from typing import Dict
@@ -23,18 +23,15 @@ class RssNewsFeedParser(NewsFeedParser):
     """Parses a RSS news feed"""
     feed_type = 'rss'
     item_element = 'item'
+    newsfeed_url = 'https://news.google.com/news/headlines?output={}&pz=1&ned=us&hl=en&q={}'
 
     def __init__(self) -> None:
         super().__init__(RssNewsFeedParser.item_element)
 
     def get_url(self, news_type: str) -> str:
         """Implementation of abstract method"""
-        return 'https://news.google.com/news/headlines?output={}&pz=1&ned=us&hl=en&q={}'\
+        return RssNewsFeedParser.newsfeed_url \
             .format(RssNewsFeedParser.feed_type, news_type)
-
-    def get_dummy_news(self, url: str, news_type: str) -> bytes:
-        """Called if the URL can't be opened"""
-        return RssDummyNews.get_news(news_type)
 
     def parse_item(self, node: Element) -> Dict[str, str]:
         """Implementation of abstract method defined in NewsFeedParser"""
@@ -73,3 +70,7 @@ class RssNewsFeedParser(NewsFeedParser):
         except IndexError:
             parsed_item['date_time'] = ''
         return parsed_item
+
+    def get_dummy_news(self, url: str, news_type: str) -> bytes:
+        """Called if the URL can't be opened"""
+        return RssDummyNews.get_news(news_type)

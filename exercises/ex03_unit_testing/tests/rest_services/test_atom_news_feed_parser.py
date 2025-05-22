@@ -17,7 +17,7 @@ class TestAtomNewsFeedParser(TestCase):
     def test_get_news_music(self):
         feed_reader = AtomNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(xml_input)
+        actual = feed_reader.parse_xml_content(xml_input.encode())
 
         for expected_result, actual_result in zip_longest(expected, actual):
             self.assertEqual(expected_result, actual_result)
@@ -25,7 +25,7 @@ class TestAtomNewsFeedParser(TestCase):
     def test_get_news_max_items_1(self):
         feed_reader = AtomNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(xml_input, max_items=1)
+        actual = feed_reader.parse_xml_content(xml_input.encode(), max_items=1)
 
         for expected_result, actual_result in zip_longest(expected[:1], actual):
             self.assertEqual(expected_result, actual_result)
@@ -33,7 +33,7 @@ class TestAtomNewsFeedParser(TestCase):
     def test_get_news_max_items_2(self):
         feed_reader = AtomNewsFeedParser()
 
-        actual = feed_reader.parse_xml_content(xml_input, max_items=2)
+        actual = feed_reader.parse_xml_content(xml_input.encode(), max_items=2)
 
         for expected_result, actual_result in zip_longest(expected[:2], actual):
             self.assertEqual(expected_result, actual_result)

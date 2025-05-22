@@ -6,10 +6,10 @@ by Gennadiy Zlobin.
 
 Converted to Python 3 by running:
     python PYTHON_HOME/Tools/Scripts/2to3.py -w news_parser.py
-"""
+"""  # noqa
 
 from abc import ABC, abstractmethod
-from typing import Optional, List, Dict
+from typing import List, Dict
 import urllib.request
 import urllib.error
 from xml.dom.minidom import Element
@@ -58,11 +58,13 @@ class NewsFeedParser(ABC):
 
     @abstractmethod
     def get_url(self, news_type: str) -> str:
-        pass
+        """
+        Subclass hook method to get the URL of a news feed that the subclass
+        can parse.
+        """
 
     # This method could be static here in the base class, but we'll leave it
     # defined as an instance method so subclasses can override it if needed.
-    # noinspection PyMethodMayBeStatic
     def get_raw_content(self, url: str, news_type: str = None) -> bytes:
         # if url is not accessible, return dummy content
         try:
@@ -72,15 +74,15 @@ class NewsFeedParser(ABC):
 
     def parse_xml_content(self, raw_content: bytes, max_items: int = 0) -> List[Dict[str, str]]:
         """
-        Parses a raw content string from an XML news feed into a list of
-        news items.
+        Parses the raw content from an XML news feed into a list of news items.
 
-        :param raw_content: string of well-formed XML
+        :param raw_content: byte string of well-formed XML
         :param max_items: maximum number of news items to return
         :return: list of news items. Each news item is a dictionary with keys
         title, link, content, date_time, image_banner, and image_thumbnail
         """
         parsed_content: List[Dict[str, str]] = []
+
         dom = minidom.parseString(raw_content.decode())
 
         for i, node in enumerate(
@@ -96,8 +98,25 @@ class NewsFeedParser(ABC):
 
     @abstractmethod
     def parse_item(self, node: Element) -> Dict[str, str]:
-        pass
+        """
+        Subclass hook method.
+        The ELement parameter represents the XML of a news items from the
+        news feed. The XML elements are specific to each news feed type.
+        This method converts the ELement to a dict with generic keys
+        so that all news feed types can be processed in the same way.
+        The keys in the returned dict are:
+            title
+            link
+            content
+            image_banner
+            image_thumbnail
+            image_banner
+            date_time
+        """
 
-    def get_dummy_news(self, url: str, news_type: Optional[str]) -> bytes:
-        """Subclass can override this method to provide dummy news"""
+    def get_dummy_news(self, url: str, news_type: str) -> bytes:
+        """
+        Subclass can override this method to provide dummy news when the
+        news feed URL is not reachable.
+        """
         raise urllib.error.URLError("can't open connection to " + url)
