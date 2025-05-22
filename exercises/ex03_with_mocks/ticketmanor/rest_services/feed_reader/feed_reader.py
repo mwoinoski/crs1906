@@ -2,7 +2,7 @@
 FeedReader class reads various feeds (for example, RSS, AtomPub).
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'  # noqa
 
 import logging
 from .rss_news_feed_parser import RssNewsFeedParser

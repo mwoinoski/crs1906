@@ -1,18 +1,16 @@
 """
 Pyramid View Callable for requests related to user management.
 """
-import json
 from pyramid.response import Response
 from ticketmanor.models.persistence import PersistenceError
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'  # noqa
 
-from pyramid.view import view_config, notfound_view_config, view_defaults
+
+from pyramid.view import view_config, view_defaults
 from pyramid.httpexceptions import HTTPNotFound, HTTPInternalServerError
 import logging
-import re
 from ..util.utils import func_name
-from ..models.persistence.person_dao import PersonDao
 from ..models.person import Person
 
 logger = logging.getLogger(__name__)
@@ -22,22 +20,37 @@ logger = logging.getLogger(__name__)
 class UserServiceRest:
     """View Callable for managing users"""
 
-    def __init__(self, context, request, dao=PersonDao):
+    def __init__(self, context, request, dao):
         """DAO dependency will be injected from dao arg"""
+        if isinstance(dao, type):  # the param is a reference to a DAO class
+            dao = dao()  # construct an instance of the given class
+
+        # TODO: note that this class has a dependency on a DAO
+        self._dao = dao
+
         self._context = context
         self._request = request
-        self._dao = dao()  # construct DAO instance and inject
 
-    # URLs are mapped to route names in __init__.py with Configurator.add_route()
+    # TODO: this is the method you will test
+    def get_user(self, email):
+        """Fetch a Person by searching for the registered email address."""
+        try:
+            # TODO: note the call to the DAO's `get` method to look up a person
+            #       in the database
+            person = self._dao.get(email, self._request.db_session)
 
-    # For POST and PUT, we'll need to deserialize JSON to Person instances.
-    # Pyramid's subproject Colander can do that, but the schema definition
-    # is complex, so we'll just do it manually in the Person class.
-    # For details of Colander, see
-    # http://docs.pylonsproject.org/projects/colander/en/latest/
+            # TODO: note that if the person is not in the database,
+            #       this method raises an HTTPNotFound exception
+            if not person:
+                raise HTTPNotFound()
 
-    # Pyramid calls this method for a request like this:
-    # GET http://localhost:6543/rest/users/mike@wxyz.com
+        # TODO: note that if the DAO's `get` method raises an exception,
+        #       this method raises an HTTPNotFound exception
+        except PersistenceError:
+            raise HTTPNotFound()
+
+        return person
+
     @view_config(request_method='GET',
                  route_name='rest_users_email',
                  renderer='json')
@@ -45,32 +58,9 @@ class UserServiceRest:
         email = self._request.matchdict['email']
         return self.get_user(email)
 
-    # NEXT REV: if this method is defined, requests without an Accept header
-    # are always sent to it
-    # @view_config(request_method='GET',
-    #              route_name='rest_users_email',
-    #              accept='application/xml')
-    # def get_user_xml(self):
-    #     email = self._request.matchdict['email']
-    #     user = self.get_user(email)
-    #     return UserServiceRest.user_to_xml(user)
-
-    def get_user(self, email):
-        """Fetch a Person by searching for the registered email address."""
-        logger.debug("%s: email = %s", func_name(self), email)
-        try:
-            person = self._dao.get(email, self._request.db_session)
-            logger.debug("%s: person = %s", func_name(self), 
-                         str(vars(person)) if person else "null")
-            if not person:
-                raise HTTPNotFound()
-        except PersistenceError:
-            raise HTTPNotFound()
-        return person
-
     @staticmethod
-    def user_to_xml(user):  # NEXT REV: complete this method
-        # create xml manually as in 10-41 and 10-42
+    def user_to_xml(user):  # noqa
+        # create stub xml manually
         return '<user/>'
 
     @view_config(request_method='POST',
