@@ -24,7 +24,7 @@ def get_function_stats():
 
     # BONUS TODO: version 1: note how we create a list of function stats with a 
     #             `for` loop. After reviewing this code, profile this program
-    #             using either cProfile or timeit.
+    #             using cProfile.
     stat_list = []
     sorted_stat_list = sorted(_function_stats.items(),
                               key=lambda stats: stats[0])
