@@ -68,8 +68,15 @@ def main():
     if len(sys.argv) > 1 and sys.argv[1] == '--display-image':
         client.display_image()
 
-    # better: use the standard argparse module to handle command-line arguments
-
+    # for production: use standard argparse module to handle command-line args
+    # from argparse import ArgumentParser
+    # parser = ArgumentParser(description='Proxy design pattern demo',
+    #     usage='python image_proxy.py [--display-image|--help]')
+    # parser.add_argument('-d', '--display-image', action='store_true',
+    #     help='Load an image and optionally display it (default: no display)')
+    # display_image = parser.parse_args().display_image
+    # if display_image:
+    #     client.display_image()
 
 if __name__ == '__main__':
     main()
