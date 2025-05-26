@@ -2,7 +2,7 @@
 Demo of chat room client that implements the Observer design pattern.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'  # noqa
 
 from observer import Observer
 
@@ -38,19 +38,16 @@ class ChatClient:
     #       In addition to the "self" parameter, update() will have a second
     #       parameter that is a ChatMessage object.
     def ....
-        # TODO: assign the ChatMessage's id attribute to a variable named `id`
+        # TODO: assign the ChatMessage's id attribute to a variable named `msg_id`
         ....
 
-        # TODO: assign the ChatMessage's value attribute to a variable named
-        #       `value`
+        # TODO: assign the ChatMessage's value attribute to a variable named `value`
         ....
 
-        # TODO: note the use of the ChatMessage's id and value in the following
-        #       statement
+        # TODO: note the use of the ChatMessage's id and value in the
+        #       following statement
         #       (no code change required)
-        print(f'\tMessage from {id}: "{value}"')
-
-        print(prompt, end='', flush=True)
+        print(f'\tMessage from {msg_id}: "{value}"')
 
 prompt = 'chat> '
 
@@ -66,13 +63,13 @@ def main():
         ....
 
         # BONUS TODO: comment out the two statements above (the import of
-        #             ChatRoom and the setting of `chat_room`
+        #       ChatRoom and the setting of `chat_room`)
 
         # BONUS TODO: import ChatRoomProxy from the chat_room_proxy module
         
 
         # BONUS TODO: create a ChatRoomProxy() object and assign it to a
-        #             variable named `chat_room`
+        #       variable named `chat_room`
        
 
         client_name = input("What's your name? ")
@@ -85,13 +82,10 @@ def main():
 
         # TODO: note how we read an input line from the console
         #       (no code change required)
-        line = input(prompt)
-        while line != 'quit':
+        while (line := input(prompt)) != 'quit':
             # TODO: call the ChatClient's new_message() method, passing the
             #       input line as the argument
             ....
-
-            line = input(prompt)
 
     except KeyboardInterrupt:  # user entered Ctrl-c
         pass

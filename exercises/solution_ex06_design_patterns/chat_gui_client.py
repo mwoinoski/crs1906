@@ -2,7 +2,7 @@
 GUI chat client that implements the Observer design pattern.
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'  # noqa
 
 import tkinter as tk
 from chat_client import Observer
@@ -15,7 +15,6 @@ root = tk.Tk()
 #       you'll see that the Subject/Observer interaction is exactly the same as in
 #       the simpler chat client.
 #       (no code change required)
-
 
 # TODO: make ChatClientGui a subclass of Observer
 class ChatClientGui(Observer):
@@ -32,6 +31,7 @@ class ChatClientGui(Observer):
         self.client_name = client_name
         self.chat_room = chat_room
 
+    # noinspection All
     def create_widgets(self, name, window):
         if window != root:
             window = tk.Toplevel(root)
@@ -57,7 +57,7 @@ class ChatClientGui(Observer):
     def new_message(self, message):
         self.chat_room.add_message(self.client_name, message)
 
-    def callback(self, event):
+    def callback(self, _):
         # TODO: note how we get the message text from the GUI's entry field.
         #       (no code change required)
         message = self.entry_field.get()
@@ -74,9 +74,9 @@ class ChatClientGui(Observer):
     #       of code are exactly the same as in the plain ChatClient class.
     #       (no code change required)
     def update(self, chat_msg):
-        id = chat_msg.id
+        msg_id = chat_msg.id
         value = chat_msg.value
-        print(f'\tMessage from {id}: "{value}"')
+        print(f'\tMessage from {msg_id}: "{value}"')
 
         # TODO: note the call to add_text(), which adds the new chat message
         #       to the client's output window
@@ -94,8 +94,8 @@ def main():
     #       all three ChatClientGui instances
     #       (no code change required)
     chat_client1 = ChatClientGui('Client 1', root, chat_host)
-    chat_client2 = ChatClientGui('Client 2', chat_client1, chat_host)
-    chat_client3 = ChatClientGui('Client 3', chat_client1, chat_host)
+    chat_client2 = ChatClientGui('Client 2', chat_client1, chat_host)  # noqa
+    chat_client3 = ChatClientGui('Client 3', chat_client1, chat_host)  # noqa
 
     root.mainloop()
 

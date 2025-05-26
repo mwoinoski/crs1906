@@ -11,7 +11,7 @@ Usage:
     stats = get_function_stats()  # returns list of tuples
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'  # noqa
 
 import time
 import configparser
@@ -76,7 +76,7 @@ def measure(func):
 def get_function_stats():
     """
     Returns a list of 3-tuples. Each tuple contains the name of a function,
-    the number of calls to that function, and the avergage time per call:
+    the number of calls to that function, and the average time per call:
         (function-name, number-of-calls, average-time-per-call)
     """
     return [(name, calls, total_time/calls if calls > 0 else 0)

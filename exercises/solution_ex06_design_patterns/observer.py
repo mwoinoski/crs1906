@@ -2,16 +2,16 @@
 Implementation of the GoF Observer design pattern
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'  # noqa
 
 from abc import ABC, abstractmethod
 
 
 class Subject(ABC):
-    """Subject abstract class."""
+    """Subject abstract class"""
 
     def __init__(self):
-        """Initialize set of Observers"""
+        """Initialize the set of Observers"""
         self._observers = set()
 
     @property
@@ -34,14 +34,14 @@ class Subject(ABC):
 
 
 class Observer(ABC):
-    """Observer interface."""
+    """Observer interface"""
 
     def __init__(self, subject=None):
-        """Attaches Observer to subject."""
+        """Attaches Observer to subject"""
         self.subject = subject
         if subject:
             subject.observer_attach(self)
 
     @abstractmethod
     def update(self, data):
-        """ Subject notifies observer by calling this method """
+        """Subject notifies observer by calling this method"""

@@ -2,7 +2,7 @@
 Demo of chat room client that implements the Observer design pattern.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'  # noqa
 
 from observer import Observer
 
@@ -34,22 +34,19 @@ class ChatClient(Observer):
 
     # TODO: define the update() method, which overrides the abstract update()
     #       method in the Observer superclass.
-    #       In addition to the "self" parameter, update() will have a second
+    #       In addition to the `self` parameter, update() will have a second
     #       parameter that is a ChatMessage object.
     def update(self, chat_msg):
-        # TODO: assign the ChatMessage's id attribute to a variable named `id`
-        id = chat_msg.id
+        # TODO: assign the ChatMessage's id attribute to a variable named `msg_id`
+        msg_id = chat_msg.id
 
-        # TODO: assign the ChatMessage's value attribute to a variable named
-        #       `value`
+        # TODO: assign the ChatMessage's value attribute to a variable named `value`
         value = chat_msg.value
 
-        # TODO: note the use of the ChatMessage's id and value in the following
-        #       statement
+        # TODO: note the use of the ChatMessage's id and value in the
+        #       following statement
         #       (no code change required)
-        print(f'\tMessage from {id}: "{value}"')
-
-        print(prompt, end='', flush=True)
+        print(f'\tMessage from {msg_id}: "{value}"')
 
 prompt = 'chat> '
 
@@ -58,7 +55,7 @@ def main():
     chat_room = None
     try:
         # TODO: import ChatRoom from the chat_room module
-        #       from chat_room import ChatRoom
+        # from chat_room import ChatRoom
 
         # TODO: create a ChatRoom() object and assign it to a variable
         #       named `chat_room`
@@ -70,8 +67,8 @@ def main():
         # BONUS TODO: import ChatRoomProxy from the chat_room_proxy module
         from chat_room_proxy import ChatRoomProxy
 
-        # BONUS TODO: create a ChatRoomProxy() object and assign it to a variable
-        #       named `chat_room`
+        # BONUS TODO: create a ChatRoomProxy() object and assign it to a
+        #       variable named `chat_room`
         chat_room = ChatRoomProxy()
 
         client_name = input("What's your name? ")
@@ -84,13 +81,10 @@ def main():
 
         # TODO: note how we read an input line from the console
         #       (no code change required)
-        line = input(prompt)
-        while line != 'quit':
+        while (line := input(prompt)) != 'quit':
             # TODO: call the ChatClient's new_message() method, passing the
             #       input line as the argument
             chat_client.new_message(line)
-
-            line = input(prompt)
 
     except KeyboardInterrupt:  # user entered Ctrl-c
         pass

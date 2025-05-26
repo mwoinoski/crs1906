@@ -3,7 +3,7 @@ chat_room.py - Defines a Subject subclass named ChatRoom for the Observer
 design pattern example.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'  # noqa
 
 from observer import Subject
 from collections import namedtuple
@@ -55,9 +55,9 @@ class ChatRoom(Subject):
         self.observer_notify(chat_message)
 
 
-    # BONUS TODO: note that the ChatRoom.add_message() requires no changes.
+    # BONUS TODO: note that ChatRoom.add_message() requires no changes.
     #       The client calls this method exactly as before.
     #       (no code changes required)
 
-    def shutdown(self):
-        pass
+    def shutdown(self):  # noqa
+        print('Chat room is shutting down')

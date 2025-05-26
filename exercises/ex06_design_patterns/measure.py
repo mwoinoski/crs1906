@@ -11,10 +11,10 @@ Usage:
     stats = get_function_stats()  # returns list of tuples
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
-
 import time
 from functools import wraps
+
+__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'  # noqa
 
 # TODO: note the initialization of the _function_stats dictionary, which will
 #       be used to accumulate statistics for all measured functions.
@@ -82,7 +82,7 @@ def get_function_stats():
     #     stats.append((name, calls, time_per_call))
     # return stats
 
-                                                    
+
 '''
 @wraps is a standard decorator that can be used on a custom decorator's
 wrapper function. @wraps solves the problem that a function's __name__

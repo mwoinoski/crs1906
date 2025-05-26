@@ -4,7 +4,7 @@ The proxy has the same interface as the local ChatRoom, but the proxy sends
 messages to a (potentially) remote server
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'  # noqa
 
 from chat_room import ChatRoom
 from socket import socket, AF_INET, SOCK_STREAM
@@ -39,7 +39,7 @@ class ChatRoomProxy:
         ....
 
         self.chat_socket = socket(AF_INET, SOCK_STREAM)
-        atexit.register(ChatRoomProxy.shutdown, self)
+        atexit.register(ChatRoomProxy.shutdown, self)  # noqa
         self.chat()
 
     def chat(self):

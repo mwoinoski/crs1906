@@ -2,7 +2,7 @@
 Unit tests for chat_client.py
 """
 
-__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'  # noqa
 
 from chat_client import ChatClient
 from chat_room import ChatRoom, ChatMessage
