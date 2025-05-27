@@ -5,10 +5,7 @@
 import re
 from datetime import datetime
 
-# TODO: Ignore the PyCharm error on the following import. The pytz module will
-#       be imported when you build your module.
-#       (no code change required)
-import pytz
+import pytz  # noqa
 
 # TODO: set the variable `__author__` to a string with your name. This will
 #       also be displayed by help(tz)
