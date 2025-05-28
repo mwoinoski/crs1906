@@ -2,12 +2,11 @@
 Pyramid View Callable for requests related to reading news feeds.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'  # noqa
 
 from pyramid.view import view_config
 import logging
 from .feed_reader.feed_reader import FeedReader
-from .feed_reader.all_news_feed_reader import AllNewsFeedReader
 from ..util.utils import func_name
 
 logger = logging.getLogger(__name__)
@@ -19,7 +18,6 @@ class NewsServiceView:
     def __init__(self, request):
         self._request = request
         self._news_reader = FeedReader()
-        self._all_news_reader = AllNewsFeedReader()
 
     # URLs map to route names in __init__.py with Configurator.add_route()
 
@@ -63,13 +61,15 @@ class NewsServiceView:
                      func_name(self), max_items)
 
         # TODO: delete the next 4 statements, which fetch news types serially
-        # all_news = {}
+        # all_news = {}  # noqa
         # all_news['concerts'] = self._fetch_news('music', max_items)
         # all_news['sports'] = self._fetch_news('sports', max_items)
         # all_news['movies'] = self._fetch_news('movies', max_items)
-        # TODO: uncomment the following statement to use your AllNewsFeedReader
+        # TODO: uncomment the following 3 statements to use your AllNewsFeedReader
         #       to fetch all news types concurrently
-        all_news = self._all_news_reader.get_news(max_items)
+        from .feed_reader.all_news_feed_reader import AllNewsFeedReader
+        all_news_reader = AllNewsFeedReader()
+        all_news = all_news_reader.get_news(max_items)
 
         return all_news
 
