@@ -65,13 +65,13 @@ class SampleSensors:
         threads = []
         for i in range(5):
             thread = Thread(target=SampleSensors.sample_one_sensor,
-                            args=(self, 200_000))
+                            args=(self, 100_000))
             threads.append(thread)
             thread.start()
         for thread in threads:
             thread.join()
 
-        print(f'Counter should be 1000000, found {SampleSensors.counter.count}')
+        print(f'Counter should be 500000, found {SampleSensors.counter.count}')
 
     def read_from_sensor(self):
         """ Dummy method """
