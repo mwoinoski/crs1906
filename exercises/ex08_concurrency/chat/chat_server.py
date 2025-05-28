@@ -2,7 +2,7 @@
 Simple (very simple!) socket-based chat server.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'  # noqa
 
 from threading import Lock
 import atexit
@@ -60,11 +60,11 @@ if __name__ == '__main__':
         ThreadingTCPServer.allow_reuse_address = True
         # Start server listening at localhost. ThreadingTCPServer spawns a new
         # thread to handle each connection request.
-        server = ThreadingTCPServer(('', port), ChatServer)
+        server = ThreadingTCPServer(('', port), ChatServer)  # noqa
         print(f'Starting ChatServer at port {port}...')
         server.serve_forever()
     except KeyboardInterrupt:  # catch Ctrl-c
-        pass  # Interpreter will call atexit handler
+        pass  # Interpreter will call atexit handler  # noqa
 
 # for details of (lower-level) sockets, see
 # https://docs.python.org/3.4/howto/sockets.html#non-blocking-sockets
