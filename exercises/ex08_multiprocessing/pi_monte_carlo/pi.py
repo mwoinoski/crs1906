@@ -9,7 +9,7 @@ If the dart hits are evenly distributed, the ratio of the number of hits inside
 the circle to the total number of darts is equal to the ratio of the area of
 the circle to the area of the square:
     (hits inside circle) / (number of throws) = pi / 4
-4. Multiply both sides of the equation by 4 and you have the value of pi:
+4. Multiply both sides of the equation by 4, and you have the value of pi:
     4 * (hits / throws) = pi
 
 The calculation is an example of an Embarrassingly Parallel problem, which
