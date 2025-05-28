@@ -3,7 +3,7 @@ AllNewsFeedReader class reads multiple RSS news feeds to populate the
 Read All News page.
 """
 
-__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
+__author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'  # noqa
 
 from threading import Thread
 from .feed_reader import FeedReader
@@ -45,12 +45,12 @@ class AllNewsFeedReader:
 
     # TODO: note that the get_news() method downloads news of all types.
     #       (no code change required)
-    def get_news(self, max_items=0):
+    def get_news(self, max_items=0):  # noqa
         """
         Get news items of all news types.
-        :param: max_items: if max_items > 0, return no more than max_items
+        :param max_items: if max_items > 0, return no more than max_items
         news items. Otherwise, return all news items.
-        :return dictionary of news items. The keys are names of news types.
+        :return: dictionary of news items. The keys are names of news types.
         """
         # TODO: assign an empty list to the variable named `news_threads`.
         #       The `news_threads` list will contain references to NewsThread
