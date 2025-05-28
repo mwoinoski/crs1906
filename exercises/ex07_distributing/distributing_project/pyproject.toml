@@ -27,6 +27,6 @@ dependencies = [
     ...
 ]
 
-[tools.setuptools.packages.find]
+[tool.setuptools.packages.find]
 where = ["src"]
 exclude = ["tests*"]
