@@ -29,12 +29,12 @@ def convert(time_str, from_tz, to_tz, time_format='%Y-%m-%d %H:%M:%S'):
     """
     Convert date/time from one timezone to another.
 
-    :param time_str string representation of the date/time being converted
-    :param from_tz string representation of the timezone of the input string
-    :param to_tz string representation of the timezone of the output string
-    :param time_format time format string in the same format as the
+    :param time_str: string representation of the date/time being converted
+    :param from_tz: string representation of the timezone of the input string
+    :param to_tz: string representation of the timezone of the output string
+    :param time_format: time format string in the same format as the
         datatime.strptime() format string
-    :return string representation of the converted datatime
+    :return: string representation of the converted datatime
     """
     from_datetime_no_tz = datetime.strptime(time_str, time_format)
     from_timezone = pytz.timezone(tz_abbrevs.get(from_tz, from_tz))

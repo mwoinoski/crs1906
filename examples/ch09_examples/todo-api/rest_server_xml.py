@@ -106,8 +106,8 @@ def xmlify_list(tasks):
 def xmlify_element(name, value):
     """Return a string with a single XML element
 
-    :param name the XML element name
-    :param value the text content of the element"""
+    :param name: the XML element name
+    :param value: the text content of the element"""
     element = ElementTree.Element(name)
     element.text = value if value is not None else ''
     return ElementTree.tostring(element, encoding='unicode')

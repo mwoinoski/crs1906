@@ -57,7 +57,7 @@ class SampleSensors:
 
         Each sensor has its own worker thread. After each measurement,
         a worker increments the count in the shared Counter instance.
-        :param how_many number of measurements the worker thread will take
+        :param how_many: number of measurements the worker thread will take
         """
         # barrier.wait()  # increase the chance of a race condition
 

@@ -39,9 +39,9 @@ class ActDao():
         Note: parameters after '*' or '*identifier' are keyword-only parameters
         and may only be passed using keyword arguments.
 
-        :param db_session a Session instance
-        :param act_type music, sports, movie, or theater
-        :param search_type based on act_type; e.g., music searches support
+        :param db_session: a Session instance
+        :param act_type: music, sports, movie, or theater
+        :param search_type: based on act_type; e.g., music searches support
                searches for Artist, Venue, City, Date, and City
         Remaining keyword args are names of attributes of the Act class.
         Example: dao.query_for_act(

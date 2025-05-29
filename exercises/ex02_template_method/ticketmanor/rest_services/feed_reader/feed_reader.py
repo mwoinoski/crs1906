@@ -16,7 +16,7 @@ class FeedReader:
         """
         Initialize the FeedReader.
 
-        :param news_feed_parser_class the class of a parser for the news feed.
+        :param news_feed_parser_class: the class of a parser for the news feed.
         The FeedReader instance will call the constructor of the parser class.
         This is a simple implementation of dependency injection, which allows
         the dependency to be satisfied dynamically.
