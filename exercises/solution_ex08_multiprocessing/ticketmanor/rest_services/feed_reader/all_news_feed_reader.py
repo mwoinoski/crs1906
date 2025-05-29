@@ -63,7 +63,7 @@ class AllNewsFeedReader:
                 #       get_news() method.
                 #       Arguments to submit(): NewsReader.get_news, news_reader
                 #       Assign the Future returned by submit to a local variable
-                future = executor.submit(NewsReader.get_news, news_reader)
+                future = executor.submit(NewsReader.get_news, news_reader)  # noqa
 
                 # TODO: append the Future to the `news_futures` list
                 news_futures.append(future)

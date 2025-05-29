@@ -35,7 +35,7 @@ from concurrent.futures import (
 import concurrent.futures
 import random
 
-total_samples = 4_000_000  # total number of calculations
+total_samples = 10_000_000  # total number of calculations
 
 
 def calculate_one_sample():
@@ -102,8 +102,8 @@ def pi_async():
     futures = set()
 
     # TODO: write a `with` statement to use a ProcessPoolExecutor.
-    #       with ThreadPoolExecutor(max_workers=ntasks) as executor:
     with ProcessPoolExecutor() as executor:
+    # with ThreadPoolExecutor(max_workers=ntasks) as executor:
 
         # TODO: set up a `for` loop that executes `ntasks` times.
         for _ in range(ntasks):
