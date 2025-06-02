@@ -51,6 +51,12 @@ class RssNewsFeedParser(....):
         #       (no code changes required)
         url = self.get_url(news_type)
 
+
+        # BONUS TODO: Note the PyCharm gives a warning "Unresolved attribute
+        #       reference 'get_url'" because it doesn't know that the subclasses
+        #       implement `get_url`. You'll fix that by defining `get_url` as an
+        #       abstract method later in this class.
+
         # TODO: note the call to the generic superclass method
         #       get_raw_content() to get the raw XML content from the URL.
         #       (no code changes required)
@@ -66,7 +72,7 @@ class RssNewsFeedParser(....):
     # TODO: note that get_url() is a subclass hook method that will be
     #       called by the superclass template method.
     #       (no code changes required)
-    def get_url(self, news_type):
+    def get_url(self, news_type):  # noqa
         """Implementation of abstract method"""
         return 'https://news.google.com/news/headlines?output={}&pz=1&ned=us&hl=en&q={}'\
             .format(RssNewsFeedParser.feed_type, news_type)
@@ -87,7 +93,7 @@ class RssNewsFeedParser(....):
     # TODO: note that get_dummy_news() is a subclass hook method that will be
     #       called by the superclass template method.
     #       (no code changes required)
-    def get_dummy_news(self, url, news_type):
+    def get_dummy_news(self, url, news_type):  # noqa
         """Called if the URL can't be opened"""
         return RssDummyNews.get_news(news_type)
 
@@ -135,7 +141,7 @@ class RssNewsFeedParser(....):
     # TODO: note that parse_item() is a subclass hook method that will be
     #       called by the superclass template method.
     #       (no code changes required)
-    def parse_item(self, item_node):
+    def parse_item(self, item_node):  # noqa
         """Implementation of a method called from NewsFeedParser"""
         parsed_item = {}
         try:

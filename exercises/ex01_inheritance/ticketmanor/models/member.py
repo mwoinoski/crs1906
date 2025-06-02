@@ -69,7 +69,7 @@ class Member():
 
     def __str__(self):
         """Return a human-readable representation of a Member"""
-        return self.name + " " + self.email
+        return self.name() + " " + self.email
 
     def __repr__(self):
         """Return an unambiguous String representation of a Member"""

@@ -72,7 +72,7 @@ class Customer():
 
     def __str__(self):
         """Return a human-readable representation of a Customer"""
-        return self.name + " " + self.email
+        return self.name() + " " + self.email
 
     def __repr__(self):
         """Return an unambiguous String representation of a Customer"""

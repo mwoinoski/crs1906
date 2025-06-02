@@ -41,14 +41,14 @@ class AtomNewsFeedParser:
         content = self.parse_xml_content(raw_content, max_items)
         return content
 
-    def get_url(self, news_type):
+    def get_url(self, news_type):  # noqa
         """Implementation of abstract method"""
         return 'https://news.google.com/news/headlines?output={}&pz=1&ned=us&hl=en&' \
                'q={}'.format(AtomNewsFeedParser.feed_type, news_type)
 
     # TODO: The get_raw_content() method is now defined in the superclass, so
     #       delete the get_raw_content() method from this class.
-    def get_raw_content(self, url):
+    def get_raw_content(self, url):  # noqa
         """Get the XML content at the given URL"""
         return urllib.request.urlopen(url).read()
 
@@ -71,7 +71,7 @@ class AtomNewsFeedParser:
 
         return parsed_content
 
-    def parse_item(self, item_node):
+    def parse_item(self, item_node):  # noqa
         """Implementation of a method called from NewsFeedParser"""
         parsed_item = {}
         try:
@@ -116,5 +116,5 @@ class AtomNewsFeedParser:
 
         return parsed_item
 
-    def get_dummy_news(self, url, news_type):
+    def get_dummy_news(self, url, news_type):  # noqa
         raise urllib.error.URLError("can't open connection to " + url)
