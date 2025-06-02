@@ -22,14 +22,6 @@ def test_init():
 # HINT: Copy the first test case and modify it as needed.
 
 
-def test_init_blanks():
-    person = Person(" John  ", None, "  Adams ")
-
-    assert "John" == person.first_name
-    assert "" == person.middle_name
-    assert "Adams" == person.last_name
-
-
 def test_full_name():
     person = Person("John", "Quincy", "Adams")
     full_name = person.full_name()

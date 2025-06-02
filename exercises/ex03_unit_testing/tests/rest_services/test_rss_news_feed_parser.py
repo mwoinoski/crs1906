@@ -91,8 +91,8 @@ class TestRssNewsFeedParser:
     # TODO: Define a test method named test_get_news_music
     # HINT: see slide 3-16
     ....
-        # TODO: in the test_get_news_music method, create an instance of
-        #       RssNewsFeedParser and save a reference to it in a local variable
+        # TODO: create an instance of RssNewsFeedParser and save a reference
+        #       to it in a local variable
         ....
 
         # Note that our goal is to test NewsFeedParser.get_news. But we
@@ -116,19 +116,18 @@ class TestRssNewsFeedParser:
 
     # TODO: After you get the first test case running, uncomment the following
     #       test method skeleton and make the required changes. Then run the file
-    #       again and verify that this second test case passes.
-    # HINT: In PyCharm, to uncomment lines, highlight the commented lines and then
+    #       again and verify this second test case passes.
+    # HINT: To uncomment lines in PyCharm, highlight the commented lines and then
     #       press Ctrl-/
 
 #     # TODO: Define a test method named test_get_news_music_max_items_1
 #     ....
-#         # TODO: in the test_get_news_music_max_items_1 method, create an
-#         #       instance of RssNewsFeedParser and save a reference to it in a
-#         #       local variable.
+#         # TODO: create an instance of RssNewsFeedParser and save a reference
+#         #       to it in a local variable.
 #         ....
 # 
 #         # TODO:
-#         #       1. call the feed reader's get_news() method, passing
+#         #       1. call the news feed parser's get_news() method, passing
 #         #          news_type='music' and max_items=1 as the arguments.
 #         #       2. save the list returned by the method in a local variable
 #         ....
@@ -141,19 +140,19 @@ class TestRssNewsFeedParser:
 
 
     # TODO: uncomment the following test method skeleton, make the required changes,
-    #       and verify that this third test case passes.
+    #       and verify this third test case passes.
 
 #     # TODO: Define a test method named test_get_news_invalid_news_type
 #     ....
 # 
-#         # TODO: in the test_get_news_invalid_news_type method, create an
-#         #       instance of RssNewsFeedParser and save a reference to it in a
-#         #       local variable.
+#         # TODO: create an instance of RssNewsFeedParser and save a reference
+#         #       to it in a local variable.
 #         ....
 # 
 #         # TODO: add a `with` statement to assert that if you call the
-#         #       feed reader's get_news() method with an invalid news type argument
-#         #       (for example, 'pluto'), the method raises a FeedReaderException.
+#         #       news feed parser's get_news() method with an invalid news type
+#         #       argument (for example, 'pluto'), the method raises a
+#         #       FeedReaderException.
 #         # HINT: see slide 3-22
 #         ....
 
