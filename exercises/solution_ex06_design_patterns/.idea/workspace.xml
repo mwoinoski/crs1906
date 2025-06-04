@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beda3a6f-337e-4804-893b-33f6893268cb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex07_distributing/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/user_service/users_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/user_service/users_db.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +41,7 @@
   "keyToString": {
     "Python tests.Python tests in test_chat_observer.py.executor": "Run",
     "Python.Run chat_gui_client.py.executor": "Run",
+    "Python.Run chat_server.py.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -56,7 +58,7 @@
     </option>
     <option name="myIpythonEnabled" value="false" />
   </component>
-  <component name="RunManager" selected="Python.Run chat_gui_client.py">
+  <component name="RunManager" selected="Python tests.Python tests in test_chat_observer.py">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -146,7 +148,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-884f5ed5d46b-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.22855.92" />
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
       </set>
     </attachedChunks>
   </component>

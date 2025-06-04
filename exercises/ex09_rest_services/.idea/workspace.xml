@@ -10,6 +10,8 @@
       <change beforePath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/ch05_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/ch05_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../examples/ch07_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch07_examples/.idea/workspace.xml" afterDir="false" />
@@ -17,7 +19,8 @@
       <change beforePath="$PROJECT_DIR$/../../examples/ch09_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch09_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../appA_extending_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../appB_advanced_features/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appB_advanced_features/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex01_inheritance/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" afterDir="false" />
@@ -56,6 +59,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Pytest in test_rest_server.py.executor": "Run",
+    "Python tests.Pytest in test_user_rest_service_json.py.executor": "Run",
+    "Python tests.Python tests in test_rest_server.py.executor": "Run",
+    "Python tests.Python tests in test_user_rest_service_json.py.executor": "Run",
+    "Python.Run rest_server.py.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -73,7 +81,7 @@
     </option>
     <option name="myIpythonEnabled" value="false" />
   </component>
-  <component name="RunManager" selected="Python tests.Pytest in test_user_rest_service_json.py">
+  <component name="RunManager" selected="Python tests.Python tests in test_user_rest_service_json.py">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -115,35 +123,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Pytest in test_rest_server.py" type="tests" factoryName="py.test">
+    <configuration name="Python tests in test_rest_server.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="ex09_rest_services" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Python\Python3.11\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/user_service" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/user_service/test_rest_server.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Pytest in test_user_rest_service_json.py" type="tests" factoryName="py.test">
+    <configuration name="Python tests in test_user_rest_service_json.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="ex09_rest_services" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Python\Python3.11\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test_user_rest_service_json.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
@@ -151,14 +155,20 @@
     </configuration>
     <list>
       <item itemvalue="Python.Run rest_server.py" />
-      <item itemvalue="Python tests.Pytest in test_rest_server.py" />
-      <item itemvalue="Python tests.Pytest in test_user_rest_service_json.py" />
+      <item itemvalue="Python tests.Python tests in test_rest_server.py" />
+      <item itemvalue="Python tests.Python tests in test_user_rest_service_json.py" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests in test_user_rest_service_json.py" />
+        <item itemvalue="Python tests.Python tests in test_rest_server.py" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-884f5ed5d46b-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.22855.92" />
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
       </set>
     </attachedChunks>
   </component>

@@ -7,6 +7,8 @@
       <change beforePath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch02_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch03_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch04_examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/ch05_examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/ch05_examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch05_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch06_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../examples/ch07_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch07_examples/.idea/workspace.xml" afterDir="false" />
@@ -14,6 +16,8 @@
       <change beforePath="$PROJECT_DIR$/../../examples/ch09_examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/ch09_examples/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../appA_extending_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appA_extending_python/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../appB_advanced_features/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../appB_advanced_features/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_concurrency/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex08_multiprocessing/.idea/workspace.xml" afterDir="false" />
@@ -56,6 +60,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests in test_chat_observer.py.executor": "Run",
+    "Python.Run chat_gui_client.py.executor": "Run",
+    "Python.Run chat_server.py.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -143,7 +150,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-884f5ed5d46b-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.22855.92" />
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
       </set>
     </attachedChunks>
   </component>

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c7786d6-019a-4d10-9954-200e22402310" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex07_distributing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex01_inheritance/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_appA_extending_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_appA_extending_python/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex02_template_method/.idea/workspace.xml" afterDir="false" />
@@ -18,6 +18,7 @@
       <change beforePath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_concurrency/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex08_multiprocessing/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solution_ex09_rest_services/user_service/users_db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/../solution_ex09_rest_services/user_service/users_db.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ticketmanor_webapp/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,27 +42,27 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python tests.All tests.executor": "Run",
-    "Python tests.Python tests for test_person_dao.PersonDaoTest.test_get_person_not_found.executor": "Debug",
-    "Python tests.Python tests for test_user_service.TestUserServiceRest.test_get_user_success.executor": "Run",
-    "Python tests.Python tests in test_person_dao.py (1).executor": "Run",
-    "Python tests.Python tests in test_person_dao.py.executor": "Run",
-    "Python tests.Python tests in test_user_service.py (1).executor": "Run",
-    "Python tests.Python tests in test_user_service.py.executor": "Run",
-    "Python tests.Python tests in test_user_service_unittest.py.executor": "Run",
-    "Python tests.Python tests in tests.executor": "Run",
-    "Python tests.pytest for tests.rest_services.test_user_service.TestUserServiceRest.test_get_user_dao_exception.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/crs1906/examples/AppC_examples",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python tests.All tests.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_person_dao.PersonDaoTest.test_get_person_not_found.executor&quot;: &quot;Debug&quot;,
+    &quot;Python tests.Python tests for test_user_service.TestUserServiceRest.test_get_user_success.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_person_dao.py (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_person_dao.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_user_service.py (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_user_service.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_user_service_unittest.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in tests.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.rest_services.test_user_service.TestUserServiceRest.test_get_user_dao_exception.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/crs1906/examples/AppC_examples&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python tests.All tests">
+}</component>
+  <component name="RunManager" selected="Python tests.Python tests in test_person_dao.py">
     <configuration name="All tests" type="tests" factoryName="py.test">
       <module name="solution_ex01_inheritance" />
       <option name="ENV_FILES" value="" />
@@ -71,6 +72,7 @@
         <env name="PYTHONPATH" value="C:\crs1906\exercises\solution_ex01_inheritance\tests" />
       </envs>
       <option name="SDK_HOME" value="C:\crs1906\exercises\solution_ex01_inheritance\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.13 (solution_ex01_inheritance)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="false" />
@@ -80,21 +82,6 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_person_dao.PersonDaoTest.test_get_person_not_found" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="solution_ex01_inheritance" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/models/persistence" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_person_dao.PersonDaoTest.test_get_person_not_found&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in test_act_dao.py" type="tests" factoryName="py.test">
@@ -166,6 +153,7 @@
         <env name="PYTHONPATH" value="C:\crs1906\exercises\ex01_inheritance\tests" />
       </envs>
       <option name="SDK_HOME" value="C:\crs1906\exercises\solution_ex01_inheritance\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.13 (solution_ex01_inheritance)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -217,21 +205,6 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_person_dao.py (1)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="solution_ex03_with_mocks" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/models/persistence" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/../solution_ex03_with_mocks/tests/models/persistence/test_person_dao.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests in test_person_dao.py" type="tests" factoryName="py.test">
       <module name="solution_ex01_inheritance" />
       <option name="ENV_FILES" value="" />
@@ -249,21 +222,6 @@
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/models/persistence/test_person_dao.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in test_user_service.py (1)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="solution_ex03_with_mocks" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/../solution_ex03_with_mocks/tests/rest_services/test_user_service.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -319,34 +277,28 @@
     </configuration>
     <list>
       <item itemvalue="Python tests.All tests" />
-      <item itemvalue="Python tests.Python tests for test_person_dao.PersonDaoTest.test_get_person_not_found" />
       <item itemvalue="Python tests.Python tests in test_act_dao.py" />
       <item itemvalue="Python tests.Python tests in test_act.py" />
       <item itemvalue="Python tests.Python tests in test_address.py" />
       <item itemvalue="Python tests.Python tests in test_customer.py" />
       <item itemvalue="Python tests.Python tests in test_func_stats.py" />
       <item itemvalue="Python tests.Python tests in test_member.py" />
-      <item itemvalue="Python tests.Python tests in test_person_dao.py (1)" />
       <item itemvalue="Python tests.Python tests in test_person_dao.py" />
-      <item itemvalue="Python tests.Python tests in test_user_service.py (1)" />
-      <item itemvalue="Python tests.Python tests in test_user_service_unittest.py" />
       <item itemvalue="Python tests.Python tests in test_venue_dao.py" />
+      <item itemvalue="Python tests.Python tests in test_user_service_unittest.py" />
       <item itemvalue="Python tests.Python tests in tests" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests in tests" />
-        <item itemvalue="Python tests.Python tests in test_person_dao.py (1)" />
-        <item itemvalue="Python tests.Python tests for test_person_dao.PersonDaoTest.test_get_person_not_found" />
         <item itemvalue="Python tests.Python tests in test_user_service_unittest.py" />
-        <item itemvalue="Python tests.Python tests in test_user_service.py (1)" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-884f5ed5d46b-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.22855.92" />
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
       </set>
     </attachedChunks>
   </component>
