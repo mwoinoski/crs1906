@@ -5,15 +5,15 @@ build-backend = "setuptools.build_meta"
 [project]
 # TODO: set name to simple_tz
 # HINT: see slide 7-21
-...
+....
 # TODO: set version to 1.0.0
-...
+....
 # TODO: set name and email to your name and email address
 authors = [
-    {...},
+    {....},
 ]
 # TODO: set description to a string
-...
+....
 
 readme = "README.md"
 requires-python = ">=3.0"
@@ -24,7 +24,7 @@ classifiers = [
 ]
 # TODO: add a dependency on "pytz"
 dependencies = [
-    ...
+    ....
 ]
 
 [tool.setuptools.packages.find]
