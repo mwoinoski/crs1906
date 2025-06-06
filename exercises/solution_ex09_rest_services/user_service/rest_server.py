@@ -117,11 +117,14 @@ def create_user():
     first_name = request.json.get('first_name', '')
     middles = request.json.get('middles', '')
     last_name = request.json.get('last_name', '')
-    street = request.json['address'].get('street', '')
-    post_code = request.json['address'].get('post_code', '')
-    city = request.json['address'].get('city', '')
-    state = request.json['address'].get('state', '')
-    country = request.json['address'].get('country', '')
+    if 'address' in request.json:
+        street = request.json['address'].get('street', '')
+        post_code = request.json['address'].get('post_code', '')
+        city = request.json['address'].get('city', '')
+        state = request.json['address'].get('state', '')
+        country = request.json['address'].get('country', '')
+    else:
+        street = post_code = city = state = country = ''
 
     # TODO: note how we delegate the creation of the user to a DAO and
     #       assign the new user to the variable 'user'
@@ -161,11 +164,14 @@ def update_user(email):
     first_name = request.json.get('first_name', None)
     middles = request.json.get('middles', None)
     last_name = request.json.get('last_name', None)
-    street = request.json['address'].get('street', None)
-    post_code = request.json['address'].get('post_code', None)
-    city = request.json['address'].get('city', None)
-    state = request.json['address'].get('state', None)
-    country = request.json['address'].get('country', None)
+    if 'address' in request.json:
+        street = request.json['address'].get('street', '')
+        post_code = request.json['address'].get('post_code', '')
+        city = request.json['address'].get('city', '')
+        state = request.json['address'].get('state', '')
+        country = request.json['address'].get('country', '')
+    else:
+        street = post_code = city = state = country = ''
 
     # TODO: note how we delegate the update of the user to a DAO and
     #       assign the modified user to the variable 'user'

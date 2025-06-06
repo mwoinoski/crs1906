@@ -90,8 +90,8 @@ def test_get_user_found():
     assert response.status_code == 200
     assert actual_result == user_ned
 
-    # TODO: when you have completed the above changes, right-click this file
-    #       and select Run 'pytest in test_user_...'. Verify the test case passes.
+    # TODO: when you have completed the above changes, right-click this file and
+    #       select Run 'Python tests in test...'. Verify the test case passes.
 
 def test_get_user_not_found():
     url = f'{base_url}/nobody@nowhere.com'
