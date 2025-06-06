@@ -1,4 +1,4 @@
-r"""
+rr"""
 Integration tests for UserServiceRest.
 
 These tests cases make several assumptions:
