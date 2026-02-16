@@ -17,7 +17,7 @@ def main():
             else:
                 x = letters.index(letter) + shift
                 encoded = encoded + letters[x]
-    if choice == "decode":
+    if (choice == "decode"):
         for letter in word:
             if letter == ' ':
                 encoded = encoded + ' '
