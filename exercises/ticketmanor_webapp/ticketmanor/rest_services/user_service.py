@@ -3,6 +3,7 @@ Pyramid View Callable for requests related to user management.
 """
 import json
 from pyramid.response import Response
+from pyramid.httpexceptions import HTTPNoContent
 from ticketmanor.models.persistence import PersistenceError
 
 __author__ = 'Mike Woinoski (mike@articulatedesign.us.com)'
@@ -125,4 +126,7 @@ class UserServiceRest:
             logger.exception(f"Problem deleting Person {email}")
             self._request.db_session.rollback()
             raise HTTPNotFound()
-        return Response(status_int=204)
+        # Success
+        response = Response(status_int=204)
+        del response.headers['Content-Type']  # remove header to avoid warnings
+        return response

@@ -1,92 +1,67 @@
 """
-thread_race.py - Demo of a race condition between threads
+Demo of a race condition.
 
-Run this program several times. Eventually the expected counter should be
-different than the expected value. If not, uncomment the two lines below
-that reference `barrier`.
-
-Race conditions are relatively rare, which is what makes them notoriously
-difficult to debug because it may be impossible to reproduce them in testing.
-
-IMPORTANT: this program runs only with Python 3.7.
+Depending on the performance of your VM, you may need either to increase or
+decrease the value of the global `goal` variable to get interesting results.
 """
 
-# Copyright 2014 Brett Slatkin, Pearson Education Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+from threading import Thread
+import time, os
 
-import sys
-import subprocess
-from threading import Barrier, Thread
+buffer = []
 
+sentinel = object()  # value that means "end of data"
+produced = 0
+consumed = 0
 
-# This program needs to run under Python 3.7. In newer versions of Python,
-# many more operations are atomic, so race conditions are much less likely.
-if f'{sys.version_info.major}.{sys.version_info.minor}' != '3.7':
-    subprocess.run(['py', '-3.7', sys.argv[0]])
-    exit()
+goal = 500  # you may need to tweak this value
+expected = 2 * goal  # two producers should produce this many items
 
-# barrier = Barrier(5)
+def producer(pid):
+    global produced
+    for i in range(goal):
+        buffer.append((pid, i))
+        produced += 1
+        time.sleep(0)   # hack to increase the chance of a race condition
+    buffer.append(sentinel)  # add sentinel to end of buffer
 
 
-class Counter:
-    """A single instance of Counter will be shared by all worker threads
-       to accumulate sensor reading counts"""
-    def __init__(self):
-        self.count = 0
-
-    def increment(self, offset=1):
-        self.count += offset
-
-
-class SampleSensors:
-    counter = Counter()  # single shared instance of Counter
-
-    def sample_one_sensor(self, how_many):
-        """Action for each work thread.
-
-        Each sensor has its own worker thread. After each measurement,
-        a worker increments the count in the shared Counter instance.
-        :param how_many: number of measurements the worker thread will take
-        """
-        # barrier.wait()  # increase the chance of a race condition
-
-        for i in range(how_many):
-            self.read_from_sensor()  # Get the measurement
-            SampleSensors.counter.increment()  # Bump number of measurements
-
-    def sample_sensors(self):
-        threads = []
-        for i in range(5):
-            thread = Thread(target=SampleSensors.sample_one_sensor,
-                            args=(self, 100_000))
-            threads.append(thread)
-            thread.start()
-        for thread in threads:
-            thread.join()
-
-        print(f'Counter should be 500000, found {SampleSensors.counter.count}')
-
-    def read_from_sensor(self):
-        """ Dummy method """
+def consumer(cid):
+    global consumed, expected
+    while True:
+        if len(buffer) > 0:  # check that there is an item to pop
+            time.sleep(0)    # hack to increase the chance of a race condition
+            try:
+                item = buffer.pop(0)
+                if item is sentinel:
+                    return
+                else:
+                    consumed += 1
+            except IndexError:
+                print("pop failed because buffer was empty", flush=True)
+                print("race detected by consumer", cid, flush=True)
+                print_stats(expected, produced, consumed)
+                os._exit(1)  # hard exit
+        else:
+            time.sleep(0) # yield the CPU so another thread has a chance
 
 
-def main():
-    sampler = SampleSensors()
-    sampler.sample_sensors()
+def print_stats(expected, produced, consumed):
+    print("expected:", expected)
+    print("produced:", produced)
+    print("consumed:", consumed)
 
 
-if __name__ == '__main__':
-    from timeit import timeit
-    main_time = timeit('main()', setup="from __main__ import main", number=1)
-    print(f'\nTime to run main without locking: {main_time:.2f} seconds')
+threads = [
+    Thread(target=producer, args=(1,)),
+    Thread(target=producer, args=(2,)),
+    Thread(target=consumer, args=(1,)),
+    Thread(target=consumer, args=(2,))
+]
+for t in threads:
+    t.start()
+for t in threads:
+    t.join()
+
+print("No race condition detected", flush=True)
+print_stats(expected, produced, consumed)

@@ -23,7 +23,7 @@ def primes_python(how_many):
 if __name__ == '__main__':
     import time
     start_time = time.time()
-    how_many = 10000
+    how_many = 5000
     print(f"calling primes_python({how_many})...")
     primes = primes_python(how_many)
     last_5 = [primes[i] for i in range(how_many-5, how_many)]

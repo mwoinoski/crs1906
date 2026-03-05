@@ -1,5 +1,5 @@
 """
-Version with the race condition fixed using explicit Lock calls.
+Version using the `with` statement to simplify the code.
 """
 
 from threading import Thread, Lock
@@ -20,27 +20,20 @@ def producer(pid):
     for i in range(goal):
         # attempt to acquire the lock. If another thread is holding the lock,
         # wait until the other thread releases it.
-        buffer_lock.acquire()
-        try:
+        with buffer_lock:
             buffer.append((pid, i))
             produced += 1
-        finally:
-            buffer_lock.release()
         time.sleep(0)   # hack to increase the chance of a race condition
 
     # now add the sentinel to the end of the buffer.
-    buffer_lock.acquire()
-    try:
+    with buffer_lock:
         buffer.append(sentinel)
-    finally:
-        buffer_lock.release()
 
 
 def consumer(cid):
     global consumed, expected
     while True:
-        try:
-            buffer_lock.acquire()
+        with buffer_lock:
             if len(buffer) > 0:  # check that there is an item to pop
                 time.sleep(0)    # hack to increase the chance of a race condition
                 try:
@@ -56,8 +49,6 @@ def consumer(cid):
                     os._exit(1)  # hard exit
             else:
                 time.sleep(0) # yield the CPU so another thread has a chance
-        finally:
-            buffer_lock.release()
 
 
 def print_stats(expected, produced, consumed):

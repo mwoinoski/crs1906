@@ -145,7 +145,7 @@ class SpaceShip(Turtle):
                     asteroid.blowUp()
                     bullet.blowUp()
                     hit = True
-            if (not bullet.done() and not hit):
+            if (not bullet.sentinel() and not hit):
                 dasBullets.append(bullet)
 
         self.bullets = dasBullets

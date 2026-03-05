@@ -54,7 +54,6 @@ class PersonTestCase(unittest.TestCase):
 
         self.assertEqual(expected, full_name)
 
-    # fails because Person.full_name() isn't fully implemented
     def test_full_name_empty_middle(self):
         person = Person("John", "", "Adams")
         expected = "John Adams"
