@@ -42,7 +42,7 @@ class ChatServer(BaseRequestHandler): </font><font color="blue">
                 ...
 </pre></font>
 
-<h2>Hints for Exercise 8.1 Bonus (Write a multithreaded RSS feed reader)</h2>
+<h2>Hints for Exercise 8.1 Second Bonus (Write a multithreaded RSS feed reader)</h2>
 
 <h3>all_news_feed_reader.py</h3>
 
@@ -120,13 +120,15 @@ class AllNewsFeedReader:
 
 <font color="grey"><pre>
         # TODO: delete the next 4 statements, which fetch news types serially </font><font color="blue">
-        # all_news = {}
+        # all_news = {}  # noqa
         # all_news['concerts'] = self._fetch_news('music', max_items)
         # all_news['sports'] = self._fetch_news('sports', max_items)
         # all_news['movies'] = self._fetch_news('movies', max_items) </font><font color="grey">
-        # TODO: uncomment the following statement to use your AllNewsFeedReader
+        # TODO: uncomment the following 3 statements to use your AllNewsFeedReader
         #       to fetch all news types concurrently </font><font color="blue">
-        all_news = self._all_news_reader.get_news(max_items)
+        from .feed_reader.all_news_feed_reader import AllNewsFeedReader
+        all_news_reader = AllNewsFeedReader()
+        all_news = all_news_reader.get_news(max_items)
 </pre></font>
 
 </body>

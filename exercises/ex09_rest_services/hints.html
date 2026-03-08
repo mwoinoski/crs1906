@@ -6,48 +6,96 @@
 <body>
 <h2>Hints for Exercise 9.1</h2>
 
-<h3>test_user_rest_service_json.py</h3>
+<h3>user_gui.py</h3>
 
 <font color="grey"><pre>
-def test_get_user_found():
-    email = 'ned.flanders@gmail.com' </font><font color="grey">
+def get_users():
+    print("Getting users...")
 
-    # TODO: build the URL for the GET request from base_url and email </font><font color="blue">
-    url = f'{base_url}/{email}' </font><font color="grey">
-
+    # TODO: create a tuple with the REST service's login credentials.
+    #       The username is 'admin' and the password is 'adminpw' </font><font color="blue">
+    creds = ('admin', 'adminpw')
+ </font><font color="grey">
     # TODO: set the HTTP Accept header to 'application/json' </font><font color="blue">
-    http_headers = {'Accept': 'application/json'} </font><font color="grey">
-
-    # TODO: send the GET request and store the result in a variable named 'r' </font><font color="blue">
-    r = requests.get(url, headers=http_headers) </font><font color="grey">
-
-    # TODO: get the JSON from the response body and assign it to a variable 
-    # named 'actual_result' </font><font color="blue">
-    actual_result = r.json()
+    http_headers = {'Accept': 'application/json'}
+ </font><font color="grey">
+    # TODO: send a GET request to the base URL. Store the result in a
+    #       variable named 'response' </font><font color="blue">
+    response = requests.get(base_url, auth=creds, headers=http_headers)
+ </font><font color="grey">
+    # TODO: if the response status code is not 200, raise a RuntimeError </font><font color="blue">
+    if response.status_code != 200:
+        raise RuntimeError("Failed to get users.")
+ </font><font color="grey">
+    # TODO: get the JSON body from the response </font><font color="blue">
+    json_result = response.json()
+ </font><font color="grey">
+    # TODO: return the 'users' property of the JSON body instead of
+    #       an empty list </font><font color="blue">
+    return json_result['users']
 </pre></font>
 
 <font color="grey"><pre>
-def test_add_user_ok():
-    # TODO: set the url to base_url </font><font color="blue">
-    url = base_url </font><font color="grey">
+def add_user(user_record):
+    print("Adding user:", user_record)
 
-    # TODO: set the HTTP Accept header to 'application/json' </font><font color="blue">
-    http_headers = {'Content-type': 'application/json'}  </font><font color="grey">
+    # TODO: use the same login credentials and Accept header values as in
+    #       the previous function. </font><font color="blue">
+    creds = ('admin', 'adminpw')
+    http_headers = {'Content-Type': 'application/json'} </font><font color="grey">
 
-    # TODO: send the POST request and store the result in a variable named `r`
-    # Pass the the dictionary named user_miles as the JSON data </font><font color="blue">
-    r = requests.post(url, headers=http_headers, json=user_miles)
+    # TODO: send a POST request to the base URL. Pass the `user_record`
+    #       parameter as the JSON data. Store the result in a variable
+    #       named `response`. </font><font color="blue">
+    response = requests.post(base_url, auth=creds, headers=http_headers,
+                             json=user_record) </font><font color="grey">
+
+    # TODO: if the response status code is not 201, raise a RuntimeError
+    if response.status_code != 201: </font><font color="blue">
+        raise RuntimeError("Failed to add user: " + user_record)
 </pre></font>
 
 <font color="grey"><pre>
-def test_update_user_ok():
-    ...
-    # TODO: set the url to base_url </font><font color="blue">
-    url = base_url </font><font color="grey">
+def update_user(user_record):
+    print("Updating user:", user_record)
 
-    # TODO: send the PUT request and store the result in a variable named 'r'
-    # Pass the the dictionary named user_miles as the JSON data </font><font color="blue">
-    r = requests.put(url, json=user_miles)
+    # TODO: build a URL by concatenating the base URL, a forward slash, and
+    #       the parameter's `email` value </font><font color="blue">
+    url = f'{base_url}/{user_record['email']}' </font><font color="grey">
+
+    # TODO: use the same login credentials and Accept header values as in
+    #       the previous function </font><font color="blue">
+    creds = ('admin', 'adminpw')
+    http_headers = {'Content-Type': 'application/json'} </font><font color="grey">
+
+    # TODO: send a PUT request to the base URL. Pass the `user_record`
+    #       parameter as the JSON data. Store the result in a variable
+    #       named `response` </font><font color="blue">
+    response = requests.put(url, auth=creds, headers=http_headers,
+                            json=user_record) </font><font color="grey">
+
+    # TODO: if the response status code is not 202, raise a RuntimeError </font><font color="blue">
+    if response.status_code != 202:
+        raise RuntimeError("Failed to update user: ", user_record)
+</pre></font>
+
+<font color="grey"><pre>
+def delete_user(user_email):
+    print("Deleting user:", user_email)
+
+    # TODO: build a URL by concatenating the base URL, a forward slash, and
+    #       the `user_email` parameter </font><font color="blue">
+    url = f'{base_url}/{user_email}' </font><font color="grey">
+
+    # TODO: use the same login credentials as in the previous function </font><font color="blue">
+    creds = ('admin', 'adminpw') </font><font color="grey">
+
+    # TODO: send a DELETE request to the base URL </font><font color="blue">
+    response = requests.delete(url, auth=creds) </font><font color="grey">
+
+    # TODO: if the response status code is not 204, raise a RuntimeError </font><font color="blue">
+    if response.status_code != 204:
+        raise RuntimeError("Failed to delete user: ", user_email)
 </pre></font>
 
 

@@ -1,4 +1,4 @@
-rr"""
+r"""
 Integration tests for UserServiceRest.
 
 These tests cases make several assumptions:
@@ -52,7 +52,7 @@ user_miles = {
     }
 }
 
-# TODO: note that base_url will be used for all REST requests
+# TODO: note the base URL that will be used for all REST requests
 #       (no code change required)
 base_url = 'http://localhost:6544/rest/users'
 
@@ -114,8 +114,8 @@ def test_add_user_ok():
         'Content-Type': 'application/json'
     }
 
-    # TODO: send the POST request and store the result in a variable named `response`
-    #       Pass the the dictionary named user_miles as the JSON data
+    # TODO: send the POST request and store the result in a variable named
+    #       `response`. Pass the dictionary named user_miles as the JSON data
     response = requests.post(url, headers=http_headers, json=user_miles)
 
     print(f'POST status {response.status_code}')

@@ -33,9 +33,12 @@ from concurrent.futures import (
     ThreadPoolExecutor,
 )
 import concurrent.futures
-import random
 
-total_samples = 10_000_000  # total number of calculations
+import random
+import sys
+
+
+total_samples = 5_000_000  # total number of calculations
 
 
 def calculate_one_sample():
@@ -135,7 +138,15 @@ def pi_async():
     return pi
 
 
+def print_version():
+    version = f"{sys.version_info.major}.{sys.version_info.minor}"
+    ft = "free-threading" if "free-threading" in sys.version else "GIL"
+    print(f"Running Python {version} ({ft})")
+
+
 if __name__ == '__main__':
+    print_version()
+
     pi_async_result = pi_async()
     print(f'pi_async() returned {pi_async_result}')
 

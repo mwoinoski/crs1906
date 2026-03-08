@@ -160,4 +160,7 @@ def restore_prod_db():
     # Nothing to do before all tests, so we'll yield immediately
     yield None
     # Code after the yield runs after all test cases
+
+    # Send a PATCH request with no argument. The service will restore the
+    # production database file.
     requests.patch(base_url, auth=creds)

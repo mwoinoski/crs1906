@@ -30,12 +30,14 @@ This version has modifications to use the concurrent.futures module.
 
 from concurrent.futures import (
     ProcessPoolExecutor,
-    # ThreadPoolExecutor,
+    ThreadPoolExecutor,
 )
 import concurrent.futures
 import random
+import sys
 
-total_samples = 10_000_000  # total number of calculations
+
+total_samples = 5_000_000  # total number of calculations
 
 
 def calculate_one_sample():
@@ -99,6 +101,7 @@ def pi_async():
     chunk_size = total_samples // ntasks  # divide work into 4 chunks
 
     # TODO: define an empty set of Future instances named `futures`
+    # HINT: see slide 8-37
     futures = set()
 
     # TODO: write a `with` statement to use a ProcessPoolExecutor.
@@ -126,6 +129,8 @@ def pi_async():
 
     # TODO: set up a `for` loop to get the result of each process as it
     #       completes.
+    # HINT: see slide 8-38
+    # HINT: future.result() returns the result of the call to sample_multiple()
     for future in concurrent.futures.as_completed(futures):
 
         # TODO: add the process's result to `hits`
@@ -141,14 +146,22 @@ def pi_async():
     return pi
 
 
+def print_version():
+    version = f"{sys.version_info.major}.{sys.version_info.minor}"
+    ft = "free-threading" if "free-threading" in sys.version else "GIL"
+    print(f"Running Python {version} ({ft})")
+
+
 if __name__ == '__main__':
+    print_version()
+
     pi_async_result = pi_async()
     print(f'pi_async() returned {pi_async_result}')
 
     pi_serial_result = pi_serial()
     print(f'pi_serial() returned {pi_serial_result}')
 
-    # Add calls to timeit here
+    # add calls to timeit here
 
     from timeit import timeit
 
