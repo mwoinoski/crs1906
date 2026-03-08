@@ -85,7 +85,6 @@ def update_user(user_record):
     # TODO: send a PUT request to the base URL. Pass the `user_record`
     #       parameter as the JSON data. Store the result in a variable
     #       named `response`
-    # HINT: see slide 9-37
     response = requests.put(url, auth=creds, headers=http_headers,
                             json=user_record)
 

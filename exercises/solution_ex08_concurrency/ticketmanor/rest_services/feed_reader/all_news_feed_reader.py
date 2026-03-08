@@ -10,7 +10,7 @@ from .feed_reader import FeedReader
 
 
 # TODO: make the NewsThread class a subclass of Thread
-# HINT: see slide 8-11
+# HINT: see slide 8-8
 class NewsThread(Thread):
     """ Fetch one type of news in a Thread """
 
@@ -60,7 +60,6 @@ class AllNewsFeedReader:
         for news_type in 'concerts', 'sports', 'movies':
             # TODO: Create an instance of NewsThread to download one type of news.
             #       Constructor arguments: news_type, max_items
-            # HINT: see slide 8-11
             news_thread = NewsThread(news_type, max_items)
 
             # TODO: Append the new thread to the `news_threads` list

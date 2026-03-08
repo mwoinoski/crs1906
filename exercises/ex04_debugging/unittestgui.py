@@ -69,7 +69,6 @@ class BaseGUITestRunner(ABC):
     def __init__(self, *args, **kwargs):
         # TODO: log an info message that says the class constructor was called.
         # HINT: this constructor is called when the GUI is being built.
-        # HINT: see slide 4-9
 
 
         self.currentResult = None
