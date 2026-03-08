@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:/crs1906/exercises/ex08_multiprocessing/.idea/ex08_multiprocessing.iml" filepath="C:/crs1906/exercises/ex08_multiprocessing/.idea/ex08_multiprocessing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ex08_multiprocessing.iml" filepath="$PROJECT_DIR$/.idea/ex08_multiprocessing.iml" />
     </modules>
   </component>
 </project>
