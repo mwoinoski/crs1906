@@ -46,7 +46,6 @@ user_miles = {
 base_url = 'http://localhost:5000/rest/users'
 test_db_input_file = 'test_db.sqlite'
 
-
 def init_test_database(test_db_name):
     """ Send request to user web service to switch to test database """
     shutil.copy(f'{test_db_name}.sqlite', test_db_input_file)

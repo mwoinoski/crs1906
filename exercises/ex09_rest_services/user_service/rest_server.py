@@ -55,9 +55,10 @@ BASE_URI = '/rest/users'
 
 # TODO: add a Flask decorator here so that a GET request to BASE_URI is mapped
 #       to the get_users() method below
-@app.route(BASE_URI, methods=['GET'])
+# HINT: see slide 9-21
+....
 # TODO: add decorator that specifies the request must include valid credentials
-@auth.login_required
+....
 def get_users():
     app.logger.info('Getting all users')
 
@@ -68,14 +69,15 @@ def get_users():
 
     # TODO: return a jsonified dictionary with key of 'users' and value of
     #       the users list
-    return jsonify({'users': users})
+    ....
 
 
 # TODO: add a Flask decorator here so that a GET request
 #       to BASE_URI+'/<email>' is mapped to the get_user() method below.
-@app.route(f'{BASE_URI}/<string:email>', methods=['GET'])
+# HINT: see slide 9-22
+....
 # TODO: add decorator that specifies the request must include valid credentials
-@auth.login_required
+....
 def get_user(email):
     app.logger.info('Getting user %s', email)
 
@@ -85,29 +87,29 @@ def get_user(email):
     user = dao.get_user(email)
 
     # TODO: if user is None, abort with HTTP status 404
-    if user is None:
-        abort(404)
+    if ....
+        ....
 
     # TODO: return a jsonified dictionary with key of 'user' and value of
     #       the user
-    return jsonify({'user': user})
+    return ....
 
 
 # TODO: add a decorator so a POST request to BASE_URI is mapped create_users()
-@app.route(BASE_URI, methods=['POST'])
+# HINT: see slide 9-23
+....
 # TODO: add decorator that specifies the request must include valid credentials
-@auth.login_required
+....
 def create_user():
     # TODO: add a test to ensure that the request body contains JSON and
     #       the JSON has a member named 'email'. Abort with status 400 if the
     #       test fails.
-    if not request.json or 'email' not in request.json:
-        app.logger.error('No email in POST request to create user')
-        abort(400)
+    if ....
+        ....
 
     # TODO: get the email from the request JSON and assign it to a variable
     #       named 'email'
-    email = request.json['email']
+    email = ....
     app.logger.info('Creating user %s', email)
 
     # TODO: note how we get the rest of the input data from the request
@@ -136,26 +138,25 @@ def create_user():
     # TODO: return two values:
     #       1. a jsonified dictionary with key of 'user' and value of the new user
     #       2. HTTP status 201
-    return jsonify({'user': user}), 201  # 201 == Created
+    return ....
 
 
 # TODO: add a Flask decorator here so that a PUT request
 #       to BASE_URI+'/<email>' is mapped to the update_user() method below.
-@app.route(f'{BASE_URI}/<string:email>', methods=['PUT'])
+# HINT: see slide 9-24
+....
 # TODO: add decorator that specifies the request must include valid credentials
-@auth.login_required
+....
 def update_user(email):
     # TODO: add a test to ensure that the URL includes an email parameter.
     #       Abort with status 400 if the test fails.
-    if not email:
-        app.logger.error('User email address is required to update a user')
-        abort(400)
+    if ....
+        ....
 
     # TODO: add a test to ensure that the request body contains JSON.
     #       Abort with status 400 if the test fails.
-    if not request.json:
-        app.logger.error('No JSON in PUT request to update user %s', email)
-        abort(400)
+    if ....
+        ....
 
     app.logger.info('Updating user %s', email)
 
@@ -180,21 +181,21 @@ def update_user(email):
                            street, post_code, city, state, country)
 
     # TODO: if user is None, abort with HTTP status 404
-    if user is None:
-        app.logger.error("User %s not found, can't update", email)
-        abort(404)
+    if ....
+        ....
 
     # TODO: return two values:
     #       1. a jsonified dictionary with key of 'user' and value of the new user
     #       2. HTTP status 202
-    return jsonify({'user': user}), 202  # 202 == Accepted
+    return ....
 
 
 # TODO: add a Flask decorator here so that a DELETE request
 #       to BASE_URI+'/<email>' is mapped to the delete_user() method below.
-@app.route(f'{BASE_URI}/<string:email>', methods=['DELETE'])
+# HINT: see slide 9-24
+....
 # TODO: add decorator that specifies the request must include valid credentials
-@auth.login_required
+....
 def delete_user(email):
     app.logger.info('Deleting user %s', email)
 
@@ -205,7 +206,7 @@ def delete_user(email):
         abort(404)
 
     # TODO: return HTTP response 204
-    return Response(status=204)  # 204 == No Content
+    return ....
 
 
 def make_public_user(user):
