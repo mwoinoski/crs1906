@@ -17,7 +17,6 @@ classifiers = [
     "Programming Language :: Python :: 3"
 ]
 dependencies = [
-    "rich"
 ]
 
 [tool.setuptools.packages.find]
