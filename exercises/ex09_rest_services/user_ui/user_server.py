@@ -54,12 +54,12 @@ def get_users():
     return jsonify({'users': users})
 
 
-@app.route(f'{BASE_URI}/<string:email>', methods=['GET'])
+@app.route(f'{BASE_URI}/<string:user_id>', methods=['GET'])
 @auth.login_required
-def get_user(email):
-    app.logger.info('Getting user %s', email)
+def get_user(user_id):
+    app.logger.info('Getting user %s', user_id)
 
-    user = dao.get_user(email)
+    user = dao.get_user(user_id)
 
     if user is None:
         abort(404)
@@ -98,19 +98,20 @@ def create_user():
     return jsonify({'user': user}), 201  # 201 == Created
 
 
-@app.route(f'{BASE_URI}/<string:email>', methods=['PUT'])
+@app.route(f'{BASE_URI}/<string:user_id>', methods=['PUT'])
 @auth.login_required
-def update_user(email):
-    if not email:
-        app.logger.error('User email address is required to update a user')
+def update_user(user_id):
+    if not user_id:
+        app.logger.error('User id is required to update a user')
         abort(400)
 
     if not request.json:
-        app.logger.error('No JSON in PUT request to update user %s', email)
+        app.logger.error('No JSON in PUT request to update user %s', user_id)
         abort(400)
 
-    app.logger.info('Updating user %s', email)
+    app.logger.info('Updating user %s', user_id)
 
+    email = request.json.get('email', None)
     first_name = request.json.get('first_name', None)
     middles = request.json.get('middles', None)
     last_name = request.json.get('last_name', None)
@@ -123,23 +124,23 @@ def update_user(email):
     else:
         street = post_code = city = state = country = ''
 
-    user = dao.update_user(email, first_name, middles, last_name,
+    user = dao.update_user(user_id, email, first_name, middles, last_name,
                            street, post_code, city, state, country)
 
     if user is None:
-        app.logger.error("User %s not found, can't update", email)
+        app.logger.error("User %s not found, can't update", user_id)
         abort(404)
 
     return jsonify({'user': user}), 202  # 202 == Accepted
 
 
-@app.route(f'{BASE_URI}/<string:email>', methods=['DELETE'])
+@app.route(f'{BASE_URI}/<string:user_id>', methods=['DELETE'])
 @auth.login_required
-def delete_user(email):
-    app.logger.info('Deleting user %s', email)
+def delete_user(user_id):
+    app.logger.info('Deleting user %s', user_id)
 
-    if not dao.delete_user(email):
-        app.logger.error("User %s not found, can't delete", email)
+    if not dao.delete_user(user_id):
+        app.logger.error("User %s not found, can't delete", user_id)
         abort(404)
 
     return Response(status=204)  # 204 == No Content

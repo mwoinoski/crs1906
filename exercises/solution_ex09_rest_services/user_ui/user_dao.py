@@ -87,15 +87,15 @@ class UserDao:
     def _make_user_from_row(self, row):
         return self._make_user(*row)
 
-    def get_user(self, email):
+    def get_user(self, user_id):
         sql = """
-            SELECT id,username,password,email,first_name,middles,last_name,
+            SELECT email,username,password,email,first_name,middles,last_name,
                    street,post_code,city,state,country
             FROM users 
-            WHERE email = ?
+            WHERE id = ?
         """
         c = self.conn.cursor()
-        c.execute(sql, (email,))
+        c.execute(sql, (user_id,))
         user = c.fetchone()
         c.close()
         return self._make_user_from_row(user) if user else None
@@ -123,11 +123,12 @@ class UserDao:
         user = self._make_user_from_row((user_id,) + values)
         return user
 
-    def update_user(self, email, first_name, middles, last_name, street, post_code,
+    def update_user(self, user_id, email, first_name, middles, last_name, street, post_code,
                     city, state, country):
         sql = """
             UPDATE users
-               SET first_name = ?,
+               SET email = ?,
+                   first_name = ?,
                    middles = ?,
                    last_name = ?,
                    street = ?,
@@ -135,10 +136,12 @@ class UserDao:
                    city = ?,
                    state = ?,
                    country = ?
-             WHERE email = ?
+             WHERE id = ?
         """
-        user = self.get_user(email)
+        user = self.get_user(user_id)
         if user is not None:
+            if email is not None:
+                user['email'] = email
             if first_name is not None:
                 user['first_name'] = first_name
             if middles is not None:
@@ -157,10 +160,12 @@ class UserDao:
                 user['address']['country'] = country
 
             values = (
+                user['email'],
                 user['first_name'], user['middles'], user['last_name'],
                 user['address']['street'], user['address']['post_code'],
                 user['address']['city'], user['address']['state'],
-                user['address']['country'], email
+                user['address']['country'],
+                user_id
             )
 
             c = self.conn.cursor()
@@ -169,15 +174,15 @@ class UserDao:
             c.close()
             return user
         else:
-            raise ValueError(f'unknown user email {email}')
+            raise ValueError(f'unknown user id {user_id}')
 
-    def delete_user(self, email):
+    def delete_user(self, user_id):
         sql = """
             DELETE FROM users
-             WHERE email = ?
+             WHERE id = ?
         """
         c = self.conn.cursor()
-        c.execute(sql, (email,))
+        c.execute(sql, (user_id,))
         c.execute('SELECT changes()')  # fetch number of rows deleted
         row_count = c.fetchone()[0]
         self.conn.commit()

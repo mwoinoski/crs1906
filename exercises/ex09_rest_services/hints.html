@@ -60,8 +60,8 @@ def update_user(user_record):
     print("Updating user:", user_record)
 
     # TODO: build a URL by concatenating the base URL, a forward slash, and
-    #       the parameter's `email` value </font><font color="blue">
-    url = f'{base_url}/{user_record['email']}' </font><font color="grey">
+    #       the `id` value of the `user_record` parameter </font><font color="blue">
+    url = f'{base_url}/{user_record['id']}' </font><font color="grey">
 
     # TODO: use the same login credentials and Accept header values as in
     #       the previous function </font><font color="blue">
@@ -80,12 +80,12 @@ def update_user(user_record):
 </pre></font>
 
 <font color="grey"><pre>
-def delete_user(user_email):
-    print("Deleting user:", user_email)
+def delete_user(user_id):
+    print("Deleting user:", user_id)
 
     # TODO: build a URL by concatenating the base URL, a forward slash, and
-    #       the `user_email` parameter </font><font color="blue">
-    url = f'{base_url}/{user_email}' </font><font color="grey">
+    #       the `user_id` parameter </font><font color="blue">
+    url = f'{base_url}/{user_id}' </font><font color="grey">
 
     # TODO: use the same login credentials as in the previous function </font><font color="blue">
     creds = ('admin', 'adminpw') </font><font color="grey">
@@ -95,7 +95,7 @@ def delete_user(user_email):
 
     # TODO: if the response status code is not 204, raise a RuntimeError </font><font color="blue">
     if response.status_code != 204:
-        raise RuntimeError("Failed to delete user: ", user_email)
+        raise RuntimeError("Failed to delete user: ", user_id)
 </pre></font>
 
 
