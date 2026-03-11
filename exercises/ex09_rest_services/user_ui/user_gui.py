@@ -7,6 +7,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 
 # TODO: import the `requests` module
+import requests
 
 
 # ----------------------------------------------------------------
@@ -23,24 +24,25 @@ def get_users():
     # TODO: create a tuple with the REST service's login credentials.
     #       The username is 'admin' and the password is 'adminpw'
     # HINT: see slide 9-35
-
+    creds = ('admin', 'adminpw')
 
     # TODO: set the HTTP Accept header to 'application/json'
-
+    http_headers = {'Accept': 'application/json'}
 
     # TODO: send a GET request to the base URL. Store the result in a
     #       variable named 'response'
-
+    response = requests.get(base_url, auth=creds, headers=http_headers)
 
     # TODO: if the response status code is not 200, raise a RuntimeError
-
+    if response.status_code != 200:
+        raise RuntimeError("Failed to get users.")
 
     # TODO: get the JSON body from the response
-
+    json_result = response.json()
 
     # TODO: return the 'users' property of the JSON body instead of
     #       an empty list
-    return []
+    return json_result['users']
 
 
 def add_user(user_record):
@@ -51,56 +53,63 @@ def add_user(user_record):
 
     # TODO: use the same login credentials and Accept header values as in
     #       the previous function.
-
+    creds = ('admin', 'adminpw')
+    http_headers = {'Content-Type': 'application/json'}
 
     # TODO: send a POST request to the base URL. Pass the `user_record`
     #       parameter as the JSON data. Store the result in a variable
     #       named `response`.
     # HINT: see slide 9-36
-
+    response = requests.post(base_url, auth=creds, headers=http_headers,
+                             json=user_record)
 
     # TODO: if the response status code is not 201, raise a RuntimeError
-
+    if response.status_code != 201:
+        raise RuntimeError("Failed to add user: " + user_record)
 
 
 def update_user(user_record):
     print("Updating user:", user_record)
 
     # TODO: build a URL by concatenating the base URL, a forward slash, and
-    #       the parameter's `email` value
+    #       the `id` value of the `user_record` parameter
     # HINT: remember that the parameter is a dict
     # HINT: see slide 9-37
-
+    url = f'{base_url}/{user_record['id']}'
 
     # TODO: use the same login credentials and Accept header values as in
     #       the previous function
-
+    creds = ('admin', 'adminpw')
+    http_headers = {'Content-Type': 'application/json'}
 
     # TODO: send a PUT request to the base URL. Pass the `user_record`
     #       parameter as the JSON data. Store the result in a variable
     #       named `response`
-
+    response = requests.put(url, auth=creds, headers=http_headers,
+                            json=user_record)
 
     # TODO: if the response status code is not 202, raise a RuntimeError
+    if response.status_code != 202:
+        raise RuntimeError("Failed to update user: ", user_record)
 
 
-
-def delete_user(user_email):
-    print("Deleting user:", user_email)
+def delete_user(user_id):
+    print("Deleting user:", user_id)
 
     # TODO: build a URL by concatenating the base URL, a forward slash, and
-    #       the `user_email` parameter
+    #       the `user_id` parameter
     # HINT: see slide 9-37
-
+    url = f'{base_url}/{user_id}'
 
     # TODO: use the same login credentials as in the previous function
-
+    creds = ('admin', 'adminpw')
 
     # TODO: send a DELETE request to the base URL
-
+    response = requests.delete(url, auth=creds)
 
     # TODO: if the response status code is not 204, raise a RuntimeError
-
+    if response.status_code != 204:
+        raise RuntimeError("Failed to delete user: ", user_id)
 
 
 # ----------------------------------------------------------------
@@ -109,9 +118,10 @@ def delete_user(user_email):
 
 class UserApp:
     def __init__(self, root):
+        self.selected_user_id = 0
         self.root = root
         self.root.title("User Management")
-        self.root.geometry("500x750")
+        self.root.geometry("500x650")
 
         self.setup_global_font()
 
@@ -167,7 +177,6 @@ class UserApp:
     def setup_record_form(self):
         self.form_frame = ttk.Frame(self.root, padding="10")
         self.form_frame.grid(row=1, column=0, sticky="nsew")
-        self.form_frame.columnconfigure(1, weight=1)
 
         # StringVars
         self.first_name_var = tk.StringVar()
@@ -180,25 +189,109 @@ class UserApp:
         self.post_code_var = tk.StringVar()
         self.country_var = tk.StringVar()
 
-        fields = [
-            ("First Name", self.first_name_var),
-            ("Middle Name", self.middles_var),
-            ("Last Name", self.last_name_var),
-            ("Email", self.email_var),
-            ("Street", self.street_var),
-            ("City", self.city_var),
-            ("State", self.state_var),
-            ("Post Code", self.post_code_var),
-            ("Country", self.country_var),
-        ]
+        # ------------------------------------------------------------
+        # Row 0: First Name
+        # ------------------------------------------------------------
+        ttk.Label(self.form_frame, text="First Name:").grid(row=0, column=0, sticky="e", padx=5, pady=3)
+        ttk.Entry(self.form_frame, textvariable=self.first_name_var).grid(
+            row=0, column=1, columnspan=3, sticky="ew"
+        )
 
-        for i, (label, var) in enumerate(fields):
-            ttk.Label(self.form_frame, text=label + ":").grid(row=i, column=0, sticky="e", padx=5, pady=3)
-            ttk.Entry(self.form_frame, textvariable=var).grid(row=i, column=1, sticky="ew", padx=5, pady=3)
+        # ------------------------------------------------------------
+        # Row 1: Middle Name
+        # ------------------------------------------------------------
+        ttk.Label(self.form_frame, text="Middle Name:").grid(row=1, column=0, sticky="e", padx=5, pady=3)
+        ttk.Entry(self.form_frame, textvariable=self.middles_var).grid(
+            row=1, column=1, columnspan=3, sticky="ew"
+        )
 
-        # Buttons
-        ttk.Button(self.form_frame, text="Add / Update", command=self.save_record).grid(row=20, column=0, pady=10)
-        ttk.Button(self.form_frame, text="Clear Form", command=self.clear_form).grid(row=20, column=1, pady=10)
+        # ------------------------------------------------------------
+        # Row 2: Last Name
+        # ------------------------------------------------------------
+        ttk.Label(self.form_frame, text="Last Name:").grid(row=2, column=0, sticky="e", padx=5, pady=3)
+        ttk.Entry(self.form_frame, textvariable=self.last_name_var).grid(
+            row=2, column=1, columnspan=3, sticky="ew"
+        )
+
+        # ------------------------------------------------------------
+        # Separator
+        # ------------------------------------------------------------
+        ttk.Separator(self.form_frame, orient="horizontal").grid(
+            row=3, column=0, columnspan=4, sticky="ew", pady=(8, 8)
+        )
+
+        # ------------------------------------------------------------
+        # Row 4: Email
+        # ------------------------------------------------------------
+        ttk.Label(self.form_frame, text="Email:").grid(row=4, column=0, sticky="e", padx=5, pady=3)
+        ttk.Entry(self.form_frame, textvariable=self.email_var).grid(
+            row=4, column=1, columnspan=3, sticky="ew"
+        )
+
+        # ------------------------------------------------------------
+        # Row 5: Street
+        # ------------------------------------------------------------
+        ttk.Label(self.form_frame, text="Street:").grid(row=5, column=0, sticky="e", padx=5, pady=3)
+        ttk.Entry(self.form_frame, textvariable=self.street_var).grid(
+            row=5, column=1, columnspan=3, sticky="ew"
+        )
+
+        # ------------------------------------------------------------
+        # Separator
+        # ------------------------------------------------------------
+        ttk.Separator(self.form_frame, orient="horizontal").grid(
+            row=6, column=0, columnspan=4, sticky="ew", pady=(8, 8)
+        )
+
+        # ------------------------------------------------------------
+        # Row 7: City + Region (inside one grid cell)
+        # ------------------------------------------------------------
+        ttk.Label(self.form_frame, text="City / Region:").grid(
+            row=7, column=0, sticky="e", padx=5, pady=3
+        )
+
+        city_state_frame = ttk.Frame(self.form_frame)
+        city_state_frame.grid(row=7, column=1, columnspan=3, sticky="w")
+
+        ttk.Entry(city_state_frame, textvariable=self.city_var, width=25).grid(
+            row=0, column=0, sticky="w"
+        )
+        ttk.Entry(city_state_frame, textvariable=self.state_var, width=8).grid(
+            row=0, column=1, sticky="w", padx=(8, 0)
+        )
+
+        # ------------------------------------------------------------
+        # Row 8: Post Code + Country (inside one grid cell)
+        # ------------------------------------------------------------
+        ttk.Label(self.form_frame, text="Post Code / Country:").grid(
+            row=8, column=0, sticky="e", padx=5, pady=3
+        )
+
+        pc_country_frame = ttk.Frame(self.form_frame)
+        pc_country_frame.grid(row=8, column=1, columnspan=3, sticky="w")
+
+        ttk.Entry(pc_country_frame, textvariable=self.post_code_var, width=12).grid(
+            row=0, column=0, sticky="w"
+        )
+        ttk.Entry(pc_country_frame, textvariable=self.country_var, width=12).grid(
+            row=0, column=1, sticky="w", padx=(8, 0)
+        )
+
+        # ------------------------------------------------------------
+        # Row 9: Buttons (Add/Update, Clear, Quit)
+        # ------------------------------------------------------------
+        btn_frame = ttk.Frame(self.form_frame)
+        btn_frame.grid(row=9, column=0, columnspan=4, pady=12, sticky="e")
+
+        ttk.Button(btn_frame, text="Add / Update", command=self.save_record).grid(row=0, column=0, padx=5)
+        ttk.Button(btn_frame, text="Clear Form", command=self.clear_form).grid(row=0, column=1, padx=5)
+        ttk.Button(btn_frame, text="Quit", command=self.root.destroy).grid(row=0, column=2, padx=5)
+
+        # Only column 1 expands; others stay tight
+        self.form_frame.columnconfigure(0, weight=0)
+        self.form_frame.columnconfigure(1, weight=1)
+        self.form_frame.columnconfigure(2, weight=0)
+        self.form_frame.columnconfigure(3, weight=0)
 
         self.current_index = None
 
@@ -226,6 +319,7 @@ class UserApp:
     def load_users(self):
         self.set_status("Loading users...")
         try:
+            self.clear_form()
             self.listbox.delete(0, tk.END)
             self.records = get_users()
 
@@ -250,6 +344,7 @@ class UserApp:
         rec = self.records[idx]
         self.current_index = idx
 
+        self.selected_user_id = rec["id"]
         self.first_name_var.set(rec["first_name"])
         self.middles_var.set(rec["middles"])
         self.last_name_var.set(rec["last_name"])
@@ -268,6 +363,7 @@ class UserApp:
     # CLEAR FORM
     # ------------------------------------------------------------
     def clear_form(self):
+        self.selected_user_id = 0
         self.current_index = None
         for var in [
             self.first_name_var, self.middles_var, self.last_name_var,
@@ -275,7 +371,7 @@ class UserApp:
             self.state_var, self.post_code_var, self.country_var
         ]:
             var.set("")
-        self.set_status("Form cleared.")
+        # self.set_status("Form cleared.")
 
     # ------------------------------------------------------------
     # SAVE (ADD OR UPDATE)
@@ -284,6 +380,7 @@ class UserApp:
         self.set_status("Saving record...")
 
         record = {
+            "id": self.selected_user_id,
             "email": self.email_var.get(),
             "first_name": self.first_name_var.get(),
             "middles": self.middles_var.get(),
@@ -330,9 +427,10 @@ class UserApp:
         self.set_status("Deleting record...")
 
         try:
-            delete_user(rec["email"])  # or rec["id"] if your service uses IDs
+            delete_user(rec["id"])
             self.set_status("Record deleted.")
             self.load_users()
+            self.selected_user_id = 0
         except Exception as e:
             self.set_status("Delete failed.")
             messagebox.showerror("Error", f"Failed to delete record: {e}")
