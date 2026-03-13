@@ -1,6 +1,8 @@
 # TODO: add a docstring that describes this module. This string will be
 #       displayed when you execute help(tz) from a Python interpreter.
-....
+"""
+Simple time zone conversion module.
+"""
 
 import re
 from datetime import datetime
@@ -9,7 +11,7 @@ import pytz  # noqa
 
 # TODO: set the variable `__author__` to a string with your name. This will
 #       also be displayed by help(tz)
-....
+__author__ = "Fred Flintstone"
 
 # Add a few timezone abbreviations missing from pytz
 tz_abbrevs = {
