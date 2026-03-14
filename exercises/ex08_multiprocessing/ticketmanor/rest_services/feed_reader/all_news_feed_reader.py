@@ -32,7 +32,8 @@ class NewsReader:
         """Download one type of news and store it in self.news"""
         self.news = self.feed_reader.fetch_news_items(self.news_type,
                                                       self.max_items)
-        # TODO: note this method returns a reference to the current NewsReader
+        # TODO: We return `self` so the Future gives back the current
+        #       NewsReader instance.
         #       (no code change required)
         return self
 
@@ -62,7 +63,7 @@ class AllNewsFeedReader:
 
                 # TODO: call executor.submit() to execute the NewsReader's
                 #       get_news() method.
-                #       Arguments to submit(): NewsReader.get_news, news_reader
+                #       Arguments to submit(): NewsReader.get_news and news_reader
                 #       Assign the Future returned by submit to a local variable
                 ....
 
