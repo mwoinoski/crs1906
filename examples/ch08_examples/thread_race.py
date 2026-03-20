@@ -22,8 +22,7 @@ PRODUCER_DELAY = 0.0005  # slow down the producer
 
 buffer = []
 
-sentinel = object()
-
+sentinel = object()  # value that means "end of data"
 produced = 0
 consumed = 0
 expected = 100
@@ -34,31 +33,30 @@ def producer(pid):
     for i in range(expected):
         buffer.append((pid, i))
         produced += 1
-        time.sleep(PRODUCER_DELAY)   # faster producer
+        time.sleep(PRODUCER_DELAY)  # hack to increase the chance of a race condition
 
     buffer.append(sentinel)
 
 def consumer(cid):
     global consumed, stop
     while not stop:
-        if len(buffer) > 0:
-            # widen the race window only sometimes
-            if random.random() < RACE_CHANCE:
+        if len(buffer) > 0:  # check that there is an item to pop
+            if random.random() < RACE_CHANCE:  # widen the race window only sometimes
                 time.sleep(0)
-
             try:
                 item = buffer.pop(0)
                 if item is sentinel:
                     stop = True
                     return
-                consumed += 1
+                else:
+                    consumed += 1
             except IndexError:
-                print("pop failed because buffer was empty", flush=True)
+                print("\npop failed because buffer was empty", flush=True)
                 print("race detected by consumer", cid, flush=True)
                 print_stats(expected, produced, consumed)
-                os._exit(1)
+                os._exit(1)  # hard exit, kills all threads
         else:
-            time.sleep(0)
+            time.sleep(0)  # yield the CPU so another thread has a chance
 
 def print_stats(items_expected, items_produced, items_consumed):
     print("expected:", items_expected)
@@ -71,10 +69,10 @@ threads = [
     Thread(target=consumer, args=(2,))
 ]
 
-for t in threads:
+for t in threads:  # start producer and consumer threads
     t.start()
-for t in threads:
+for t in threads:  # wait for all child threads to complete
     t.join()
 
-print("No race condition detected", flush=True)
+print("\nNo race condition detected", flush=True)
 print_stats(expected, produced, consumed)
