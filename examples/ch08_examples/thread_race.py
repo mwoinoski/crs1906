@@ -35,7 +35,7 @@ def producer(pid):
         produced += 1
         time.sleep(PRODUCER_DELAY)  # hack to increase the chance of a race condition
 
-    buffer.append(sentinel)
+    buffer.append(sentinel)  # add "end of data" value to buffer
 
 def consumer(cid):
     global consumed, stop
@@ -45,10 +45,11 @@ def consumer(cid):
                 time.sleep(0)
             try:
                 item = buffer.pop(0)
-                if item is sentinel:
-                    stop = True
+                if item is sentinel:  # have we consumed all items?
+                    stop = True  # tell other consumer thread to stop
                     return
                 else:
+                    # do something useful with the item, then...
                     consumed += 1
             except IndexError:
                 print("\npop failed because buffer was empty", flush=True)
