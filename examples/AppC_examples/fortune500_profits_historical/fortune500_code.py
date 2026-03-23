@@ -65,7 +65,9 @@ df.dtypes
 # Crunch some numbers
 df.loc[df['company'] == 'General Motors', 'profit'].sum()
 df.loc[df['company'] == 'General Motors', 'profit'].mean()
-# Looks good. 
+# Looks good. "np.float64(...)" means it's an NumPy scalar.
+# To display just the numberic value, append .item():
+# df.loc[df['company'] == 'General Motors', 'profit'].mean().item()
 
 # Time for some visualizations.
 # Plot the average profit by year
