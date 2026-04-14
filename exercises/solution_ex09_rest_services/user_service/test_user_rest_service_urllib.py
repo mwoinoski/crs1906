@@ -41,6 +41,7 @@ user_miles = {
 }
 
 base_url = 'http://localhost:6544/rest/users'
+creds = ('admin', 'adminpw')
 
 
 def test_get_user_found():
@@ -48,22 +49,27 @@ def test_get_user_found():
     url = f'{base_url}/{email}'
     http_headers = {'Accept': 'application/json'}
 
-    response = urllib_wrapper.get(url, headers=http_headers)
+    response = urllib_wrapper.get(url, headers=http_headers, creds=creds)
 
     actual_result = response.json()
 
-    # update our test user with the id by the database
-    user_ned['id'] = actual_result['id']
+    # The service returns a wrapped payload: {'user': {...}}
+    actual_user = actual_result['user']
+
+    # update expected user with fields populated by the service
+    user_ned['id'] = actual_user['id']
+    user_ned['username'] = actual_user['username']
+    user_ned['password'] = actual_user['password']
 
     assert response.status_code == 200
-    assert actual_result == user_ned
+    assert actual_user == user_ned
 
 
 def test_get_user_not_found():
     url = f'{base_url}/nobody@nowhere.com'
     http_headers = {'Accept': 'application/json'}
 
-    response = urllib_wrapper.get(url, headers=http_headers)
+    response = urllib_wrapper.get(url, headers=http_headers, creds=creds)
 
     assert response.status_code == 404
 
@@ -75,7 +81,7 @@ def test_add_user_ok():
         'Content-Type': 'application/json'
     }
 
-    response = urllib_wrapper.post(url, headers=http_headers, json=user_miles)
+    response = urllib_wrapper.post(url, headers=http_headers, json=user_miles, creds=creds)
 
     assert response.status_code == 201
 
@@ -84,13 +90,13 @@ def test_update_user_ok():
     user_miles['middles'] = 'Dewey'
     user_miles['address']['zipcode'] = '10013'
 
-    url = base_url
+    url = f"{base_url}/{user_miles['email']}"
     http_headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
     }
 
-    response = urllib_wrapper.put(url, headers=http_headers, json=user_miles)
+    response = urllib_wrapper.put(url, headers=http_headers, json=user_miles, creds=creds)
 
     assert response.status_code == 202
 
@@ -98,7 +104,7 @@ def test_update_user_ok():
 def test_delete_user_not_found():
     url = f'{base_url}/nobody@nowhere.com'
 
-    response = urllib_wrapper.delete(url)
+    response = urllib_wrapper.delete(url, creds=creds)
 
     assert response.status_code == 404
 
