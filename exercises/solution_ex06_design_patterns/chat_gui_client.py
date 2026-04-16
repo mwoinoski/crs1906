@@ -5,6 +5,8 @@ GUI chat client that implements the Observer design pattern.
 __author__ = 'Mike Woinoski (michaelw@articulatedesign.us.com)'  # noqa
 
 import tkinter as tk
+from queue import Empty, Queue
+from threading import current_thread, main_thread
 from chat_client import Observer
 from chat_room import ChatRoom
 
@@ -23,7 +25,9 @@ class ChatClientGui(Observer):
     # TODO: note the parameters to the ChatClientGui __init__() method
     #       (no code changes required)
     def __init__(self, client_name, window, chat_room):
+        self._pending_messages = Queue()
         self.create_widgets(client_name, window)
+        self.frame.after(10, self.flush_pending_messages)
 
         # TODO: copy the 3 lines of code from the body of the
         #       ChatClient __init__() method here
@@ -51,7 +55,19 @@ class ChatClientGui(Observer):
         self.frame.pack()
 
     def add_text(self, data):
-        self.messaging_field.insert(tk.END, data)
+        if current_thread() is main_thread():
+            self.messaging_field.insert(tk.END, data)
+        else:
+            self._pending_messages.put(data)
+
+    def flush_pending_messages(self):
+        while True:
+            try:
+                data = self._pending_messages.get_nowait()
+            except Empty:
+                break
+            self.add_text(data)
+        self.frame.after(10, self.flush_pending_messages)
 
     # TODO: copy the new_message() method from ChatClient here
     def new_message(self, message):
@@ -82,7 +98,8 @@ class ChatClientGui(Observer):
         #       to the client's output window
         #       (no code change required)
         if self.client_name != chat_msg.id:
-            self.add_text(f'({chat_msg.id}) {chat_msg.value}\n')
+            formatted_message = f'({chat_msg.id}) {chat_msg.value}\n'
+            self.add_text(formatted_message)
 
 
 def main():

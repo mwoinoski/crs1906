@@ -28,13 +28,14 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[2]
 TICKETMANOR_ROOT = REPO_ROOT / "exercises" / "ticketmanor_webapp"
 PSERVE_EXE = TICKETMANOR_ROOT / "venv" / "Scripts" / "pserve.exe"
 DEFAULT_BASE_URL = "http://127.0.0.1:6544/static/#/home"
 SEARCH_TERM = "Berlin Philharmonic"
 EXPECTED_RESULTS_TEXT = "4 of 4"
 EXPECTED_RESULT_COUNT = 4
+MIN_NEWS_TITLES = 3
 
 
 def parse_args() -> argparse.Namespace:
@@ -59,6 +60,11 @@ def parse_args() -> argparse.Namespace:
         type=float,
         default=45.0,
         help="Seconds to wait for the app to become ready (default: 45).",
+    )
+    parser.add_argument(
+        "--check-all-news",
+        action="store_true",
+        help="Also verify the Concert News browser flow used by the later exercises.",
     )
     return parser.parse_args()
 
@@ -102,7 +108,7 @@ def wait_for_server(base_url: str, server_process: subprocess.Popen[str] | None,
     raise TimeoutError(f"Timed out waiting for TicketManor to start at {base_url}")
 
 
-def run_ui_check(base_url: str, headed: bool) -> None:
+def run_ui_check(base_url: str, headed: bool, check_all_news: bool = False) -> None:
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=not headed)
         page = browser.new_page(viewport={"width": 1440, "height": 1080})
@@ -132,6 +138,19 @@ def run_ui_check(base_url: str, headed: bool) -> None:
                 raise AssertionError(f"Expected to find '{SEARCH_TERM}' in the page results.")
 
             print(f"PASS: UI search for '{SEARCH_TERM}' returned {result_count} results ({pages_text}).")
+
+            if check_all_news:
+                page.get_by_role("heading", name="Concert News").wait_for(state="visible", timeout=10_000)
+
+                news_titles = page.locator(".news-title")
+                news_titles.first.wait_for(state="visible", timeout=10_000)
+                title_count = news_titles.count()
+                if title_count < MIN_NEWS_TITLES:
+                    raise AssertionError(
+                        f"Expected at least {MIN_NEWS_TITLES} news titles in the Concert News section, found {title_count}."
+                    )
+
+                print(f"PASS: Concert News section loaded with {title_count} visible news titles.")
         finally:
             browser.close()
 
@@ -151,7 +170,7 @@ def main() -> int:
             server_process = start_server()
             wait_for_server(args.base_url, server_process, args.timeout)
 
-        run_ui_check(args.base_url, args.headed)
+        run_ui_check(args.base_url, args.headed, args.check_all_news)
         return 0
     except Exception as exc:
         print(f"ERROR: {exc}")

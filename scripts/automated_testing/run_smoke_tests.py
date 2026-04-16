@@ -10,10 +10,10 @@ starting point for automation:
 
 Examples
 --------
-    py -3.14 scripts\run_smoke_tests.py --list
-    py -3.14 scripts\run_smoke_tests.py baseline
-    py -3.14 scripts\run_smoke_tests.py ticketmanor-api
-    py -3.14 scripts\run_smoke_tests.py all
+    py -3.14 scripts\automated_testing\run_smoke_tests.py --list
+    py -3.14 scripts\automated_testing\run_smoke_tests.py baseline
+    py -3.14 scripts\automated_testing\run_smoke_tests.py ticketmanor-api
+    py -3.14 scripts\automated_testing\run_smoke_tests.py all
 """
 
 from __future__ import annotations
@@ -26,7 +26,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+AUTOMATED_TESTING_DIR = Path(__file__).resolve().parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 WORKSPACE_PYTHON = Path(sys.executable)
 
 
@@ -70,7 +71,7 @@ EX01_VENV_PYTHON = EX01_ROOT / "venv" / "Scripts" / "python.exe"
 BASELINE_SCRIPT = EX01_ROOT / "python_basics_review.py"
 TICKETMANOR_ROOT = REPO_ROOT / "exercises" / "ticketmanor_webapp"
 TICKETMANOR_PYTHON = TICKETMANOR_ROOT / "venv" / "Scripts" / "python.exe"
-TICKETMANOR_UI_SCRIPT = REPO_ROOT / "scripts" / "ticketmanor_ui_smoke.py"
+TICKETMANOR_UI_SCRIPT = AUTOMATED_TESTING_DIR / "ticketmanor_ui_smoke.py"
 PYTEST_WARNING_FILTER = "ignore::DeprecationWarning"
 
 
