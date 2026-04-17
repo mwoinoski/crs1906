@@ -38,6 +38,19 @@ AUTOMATED_TESTING_DIR = Path(__file__).resolve().parent
 REPO_ROOT = Path(__file__).resolve().parents[2]
 WORKSPACE_PYTHON = Path(sys.executable)
 
+POST_RUN_GIT_RESTORE_PATHS = [
+    REPO_ROOT / "exercises" / "solution_ex01_inheritance" / "logs" / "ticketmanor.log",
+    REPO_ROOT / "exercises" / "solution_ex07_distributing" / "distributing_project" / "dist" / "simple_tz-1.0.0-py3-none-any.whl",
+    REPO_ROOT / "exercises" / "solution_ex07_distributing" / "distributing_project" / "dist" / "simple_tz-1.0.0.tar.gz",
+]
+
+POST_RUN_DELETE_PATHS = [
+    REPO_ROOT / "exercises" / "solution_ex04_debugging" / "ex04_pylintrc.generated",
+    REPO_ROOT / "exercises" / "solution_ex05_performance" / "profile1.txt",
+    REPO_ROOT / "exercises" / "solution_ex05_performance" / "profile2.txt",
+    REPO_ROOT / "exercises" / "solution_ex05_performance" / "sudoku.prof",
+]
+
 FAST_SKIP_STEP_NAMES = {
     "Ex 3.1 coverage report (html)",
     "Ex 5.1 sudoku cProfile tottime",
@@ -177,6 +190,34 @@ def restore_file_from_backup(target: Path) -> None:
 def restore_ex09_databases() -> None:
     restore_file_from_backup(REPO_ROOT / "exercises" / "solution_ex09_rest_services" / "user_service" / "users_db.sqlite")
     restore_file_from_backup(REPO_ROOT / "exercises" / "solution_ex09_rest_services" / "user_ui" / "users_db.sqlite")
+
+
+def restore_requested_git_paths() -> None:
+    cp = subprocess.run(
+        ["git", "restore", "--", *(str(path.relative_to(REPO_ROOT)) for path in POST_RUN_GIT_RESTORE_PATHS)],
+        cwd=REPO_ROOT,
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    if cp.returncode != 0:
+        print("WARNING: git restore cleanup failed")
+        if cp.stderr.strip():
+            print(cp.stderr.strip())
+
+
+def delete_requested_temp_files() -> None:
+    for path in POST_RUN_DELETE_PATHS:
+        try:
+            path.unlink(missing_ok=True)
+        except OSError as exc:
+            print(f"WARNING: could not delete temporary file {path}: {exc}")
+
+
+def cleanup_post_run_artifacts() -> None:
+    restore_ex09_databases()
+    restore_requested_git_paths()
+    delete_requested_temp_files()
 
 
 def print_summary(results: list[StepResult]) -> None:
@@ -759,7 +800,7 @@ def parse_args() -> argparse.Namespace:
         "--profile",
         choices=("fast", "full", "strict"),
         default="full",
-        help="Run profile: fast skips longer optional steps; full runs all configured checks; strict treats skips as failures.",
+        help="Run profile: fast skips longer optional steps; full runs all configured checks; strict auto-includes the 6544 external check and treats skips as failures.",
     )
     return p.parse_args()
 
@@ -788,6 +829,13 @@ def print_requested_section_report(results: list[StepResult]) -> None:
 
 def main() -> int:
     args = parse_args()
+    include_external_6544 = args.include_external_6544 or args.profile == "strict"
+
+    ok_6544, reason_6544 = has_6544_contract()
+    if not ok_6544:
+        print("ERROR: validation requires an available service on localhost:6544 before any profile can run.")
+        print(f"DETAILS: {reason_6544}")
+        return 2
 
     ex01_dir = REPO_ROOT / "exercises" / "solution_ex01_inheritance"
     ex02_dir = REPO_ROOT / "exercises" / "solution_ex02_template_method"
@@ -795,113 +843,115 @@ def main() -> int:
 
     results: list[StepResult] = []
 
-    ui_checks = [
-        ("Ex 1.1 TicketManor UI smoke", ex01_dir),
-        ("Ex 2.1 TicketManor UI smoke", ex02_dir),
-    ]
-    if args.profile != "fast":
-        ui_checks.extend([
-            ("Ex 3.1 TicketManor UI smoke", REPO_ROOT / "exercises" / "solution_ex03_unit_testing"),
-            ("Ex 8.1 TicketManor UI smoke", REPO_ROOT / "exercises" / "solution_ex08_concurrency"),
-            ("Ex 8.2 TicketManor UI smoke", REPO_ROOT / "exercises" / "solution_ex08_multiprocessing"),
-        ])
+    try:
+        ui_checks = [
+            ("Ex 1.1 TicketManor UI smoke", ex01_dir),
+            ("Ex 2.1 TicketManor UI smoke", ex02_dir),
+        ]
+        if args.profile != "fast":
+            ui_checks.extend([
+                ("Ex 3.1 TicketManor UI smoke", REPO_ROOT / "exercises" / "solution_ex03_unit_testing"),
+                ("Ex 8.1 TicketManor UI smoke", REPO_ROOT / "exercises" / "solution_ex08_concurrency"),
+                ("Ex 8.2 TicketManor UI smoke", REPO_ROOT / "exercises" / "solution_ex08_multiprocessing"),
+            ])
 
-    # Ex 1.1 and Ex 2.1 manual validation includes running the TicketManor web UI.
-    for label, project_root in ui_checks:
-        section = section_for_ui_label(label)
-        if not (project_root / "venv" / "Scripts" / "pserve.exe").exists():
-            results.append(StepResult(label, section, "SKIP", 0, 0.0, f"pserve not found in {project_root}"))
-            continue
-
-        ui_port = find_free_port()
-        server, temp_ini = start_pserve_server(project_root, ui_port)
-        try:
-            if not wait_port("127.0.0.1", ui_port, timeout_s=15):
-                results.append(StepResult(label, section, "FAIL", 2, 0.0, f"{project_root} did not open port {ui_port}"))
-                if args.fail_fast:
-                    break
+        # Ex 1.1 and Ex 2.1 manual validation includes running the TicketManor web UI.
+        for label, project_root in ui_checks:
+            section = section_for_ui_label(label)
+            if not (project_root / "venv" / "Scripts" / "pserve.exe").exists():
+                results.append(StepResult(label, section, "SKIP", 0, 0.0, f"pserve not found in {project_root}"))
                 continue
 
-            cmd = [
-                str(WORKSPACE_PYTHON),
-                str(ui_smoke_script),
-                "--base-url",
-                f"http://127.0.0.1:{ui_port}/static/#/home",
-                "--no-start-server",
-            ]
-            if "8.2" in label:
-                cmd.append("--check-all-news")
+            ui_port = find_free_port()
+            server, temp_ini = start_pserve_server(project_root, ui_port)
+            try:
+                if not wait_port("127.0.0.1", ui_port, timeout_s=15):
+                    results.append(StepResult(label, section, "FAIL", 2, 0.0, f"{project_root} did not open port {ui_port}"))
+                    if args.fail_fast:
+                        break
+                    continue
 
-            ui_step = Step(
-                name=label,
-                section=section,
-                cwd=REPO_ROOT,
-                cmd=cmd,
-                note=f"Temporary server: {project_root}",
-            )
-            ui_result = run_cmd(ui_step)
-            results.append(ui_result)
-            if args.fail_fast and ui_result.status == "FAIL":
-                break
+                cmd = [
+                    str(WORKSPACE_PYTHON),
+                    str(ui_smoke_script),
+                    "--base-url",
+                    f"http://127.0.0.1:{ui_port}/static/#/home",
+                    "--no-start-server",
+                ]
+                if "8.2" in label:
+                    cmd.append("--check-all-news")
+
+                ui_step = Step(
+                    name=label,
+                    section=section,
+                    cwd=REPO_ROOT,
+                    cmd=cmd,
+                    note=f"Temporary server: {project_root}",
+                )
+                ui_result = run_cmd(ui_step)
+                results.append(ui_result)
+                if args.fail_fast and ui_result.status == "FAIL":
+                    break
+            finally:
+                stop_process(server)
+                if temp_ini.exists():
+                    temp_ini.unlink(missing_ok=True)
+
+        # Stop early if fail-fast tripped during UI checks.
+        if args.fail_fast and any(r.status == "FAIL" for r in results):
+            print_summary(results)
+            return 1
+
+        ex09_root = REPO_ROOT / "exercises" / "solution_ex09_rest_services"
+        ex09_dir = ex09_root / "user_service"
+        ex09_user_ui_dir = ex09_root / "user_ui"
+        server = start_flask_server(ex09_dir, "rest_server.py", 5000)
+        user_ui_server: Optional[subprocess.Popen] = None
+
+        if not can_connect("127.0.0.1", 5001):
+            user_ui_server = start_flask_server(ex09_user_ui_dir, "user_server.py", 5001)
+            wait_port("127.0.0.1", 5001, timeout_s=12)
+
+        server_started = wait_port("127.0.0.1", 5000, timeout_s=12)
+        if not server_started:
+            stop_process(server)
+            stop_process(user_ui_server)
+            print("ERROR: could not start Ex 9 local rest_server on port 5000")
+            return 2
+
+        try:
+            for step in build_steps(include_external_6544=include_external_6544, profile=args.profile):
+                result = run_cmd(step)
+                if args.profile == "strict" and result.status == "SKIP":
+                    result = StepResult(
+                        result.name,
+                        result.section,
+                        "FAIL",
+                        99,
+                        result.duration_s,
+                        f"Strict profile: skip treated as failure. Original reason: {result.note}",
+                    )
+                results.append(result)
+
+                print("-" * 88)
+                print(f"{result.status}: {result.name} (code={result.code}, {result.duration_s:.2f}s)")
+                if result.note:
+                    print(f"note: {result.note}")
+
+                if args.fail_fast and result.status == "FAIL":
+                    break
         finally:
             stop_process(server)
-            if temp_ini.exists():
-                temp_ini.unlink(missing_ok=True)
+            stop_process(user_ui_server)
 
-    # Stop early if fail-fast tripped during UI checks.
-    if args.fail_fast and any(r.status == "FAIL" for r in results):
         print_summary(results)
-        return 1
+        failed = sum(1 for result in results if result.status == "FAIL")
 
-    ex09_root = REPO_ROOT / "exercises" / "solution_ex09_rest_services"
-    ex09_dir = ex09_root / "user_service"
-    ex09_user_ui_dir = ex09_root / "user_ui"
-    server = start_flask_server(ex09_dir, "rest_server.py", 5000)
-    user_ui_server: Optional[subprocess.Popen] = None
+        print_requested_section_report(results)
 
-    if not can_connect("127.0.0.1", 5001):
-        user_ui_server = start_flask_server(ex09_user_ui_dir, "user_server.py", 5001)
-        wait_port("127.0.0.1", 5001, timeout_s=12)
-
-    server_started = wait_port("127.0.0.1", 5000, timeout_s=12)
-    if not server_started:
-        stop_process(server)
-        stop_process(user_ui_server)
-        print("ERROR: could not start Ex 9 local rest_server on port 5000")
-        return 2
-
-    try:
-        for step in build_steps(include_external_6544=args.include_external_6544, profile=args.profile):
-            result = run_cmd(step)
-            if args.profile == "strict" and result.status == "SKIP":
-                result = StepResult(
-                    result.name,
-                    result.section,
-                    "FAIL",
-                    99,
-                    result.duration_s,
-                    f"Strict profile: skip treated as failure. Original reason: {result.note}",
-                )
-            results.append(result)
-
-            print("-" * 88)
-            print(f"{result.status}: {result.name} (code={result.code}, {result.duration_s:.2f}s)")
-            if result.note:
-                print(f"note: {result.note}")
-
-            if args.fail_fast and result.status == "FAIL":
-                break
+        return 1 if failed else 0
     finally:
-        stop_process(server)
-        stop_process(user_ui_server)
-        restore_ex09_databases()
-
-    print_summary(results)
-    failed = sum(1 for result in results if result.status == "FAIL")
-
-    print_requested_section_report(results)
-
-    return 1 if failed else 0
+        cleanup_post_run_artifacts()
 
 
 if __name__ == "__main__":
