@@ -45,7 +45,7 @@ class Member(User):
 
     def __repr__(self):
         """Return an unambiguous String representation of a Member"""
-        return super().__repr_() + \
+        return super().__repr__() + \
             f",nick_name={self.nick_name},profile_photo={self.profile_photo}"
 
     # def name(self):
