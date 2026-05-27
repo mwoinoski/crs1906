@@ -7,7 +7,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 
 # TODO: import the `requests` module
-import requests
+
 
 
 # ----------------------------------------------------------------
@@ -18,31 +18,31 @@ import requests
 #       (no code change required)
 base_url = 'http://localhost:5001/rest/users'
 
+
 def get_users():
     print("Getting users...")
 
     # TODO: create a tuple with the REST service's login credentials.
     #       The username is 'admin' and the password is 'adminpw'
     # HINT: see slide 9-35
-    creds = ('admin', 'adminpw')
+
 
     # TODO: set the HTTP Accept header to 'application/json'
-    http_headers = {'Accept': 'application/json'}
+
 
     # TODO: send a GET request to the base URL. Store the result in a
     #       variable named 'response'
-    response = requests.get(base_url, auth=creds, headers=http_headers)
+
 
     # TODO: if the response status code is not 200, raise a RuntimeError
-    if response.status_code != 200:
-        raise RuntimeError("Failed to get users.")
+
 
     # TODO: get the JSON body from the response
-    json_result = response.json()
+
 
     # TODO: return the 'users' property of the JSON body instead of
     #       an empty list
-    return json_result['users']
+    return []
 
 
 def add_user(user_record):
@@ -53,19 +53,16 @@ def add_user(user_record):
 
     # TODO: use the same login credentials and Accept header values as in
     #       the previous function.
-    creds = ('admin', 'adminpw')
-    http_headers = {'Content-Type': 'application/json'}
+
 
     # TODO: send a POST request to the base URL. Pass the `user_record`
     #       parameter as the JSON data. Store the result in a variable
     #       named `response`.
     # HINT: see slide 9-36
-    response = requests.post(base_url, auth=creds, headers=http_headers,
-                             json=user_record)
+
 
     # TODO: if the response status code is not 201, raise a RuntimeError
-    if response.status_code != 201:
-        raise RuntimeError("Failed to add user: " + user_record)
+
 
 
 def update_user(user_record):
@@ -75,22 +72,19 @@ def update_user(user_record):
     #       the `id` value of the `user_record` parameter
     # HINT: remember that the parameter is a dict
     # HINT: see slide 9-37
-    url = f'{base_url}/{user_record['id']}'
+
 
     # TODO: use the same login credentials and Accept header values as in
     #       the previous function
-    creds = ('admin', 'adminpw')
-    http_headers = {'Content-Type': 'application/json'}
+
 
     # TODO: send a PUT request to the base URL. Pass the `user_record`
     #       parameter as the JSON data. Store the result in a variable
     #       named `response`
-    response = requests.put(url, auth=creds, headers=http_headers,
-                            json=user_record)
+
 
     # TODO: if the response status code is not 202, raise a RuntimeError
-    if response.status_code != 202:
-        raise RuntimeError("Failed to update user: ", user_record)
+
 
 
 def delete_user(user_id):
@@ -99,17 +93,16 @@ def delete_user(user_id):
     # TODO: build a URL by concatenating the base URL, a forward slash, and
     #       the `user_id` parameter
     # HINT: see slide 9-37
-    url = f'{base_url}/{user_id}'
+
 
     # TODO: use the same login credentials as in the previous function
-    creds = ('admin', 'adminpw')
+
 
     # TODO: send a DELETE request to the base URL
-    response = requests.delete(url, auth=creds)
+
 
     # TODO: if the response status code is not 204, raise a RuntimeError
-    if response.status_code != 204:
-        raise RuntimeError("Failed to delete user: ", user_id)
+
 
 
 # ----------------------------------------------------------------
