@@ -52,31 +52,17 @@ user_miles = {
     }
 }
 
-# TODO: note the base URL that will be used for all REST requests
-#       (no code change required)
 base_url = 'http://localhost:6544/rest/users'
 creds = ('admin', 'adminpw')
 
 
 def test_get_user_found():
-    # TODO: you'll look up a user with GET request like this:
-    #       GET http://localhost:6544/rest/users/ned.flanders@gmail.com
-    #       The GET request will return JSON data.
-    #       (no code change required)
-
     email = 'ned.flanders@gmail.com'
-
-    # TODO: build the URL for the GET request from base_url and email
     url = f'{base_url}/{email}'
-
-    # TODO: set the HTTP Accept header to 'application/json'
     http_headers = {'Accept': 'application/json'}
 
-    # TODO: send the GET request and store the result in a variable named 'response'
     response = requests.get(url, headers=http_headers, auth=creds)
 
-    # TODO: get the JSON from the response body and assign it to a variable
-    #       named 'actual_result'
     actual_result = response.json()
 
     print(f'GET {url} status {response.status_code}, response = {actual_result}')
@@ -89,8 +75,6 @@ def test_get_user_found():
     user_ned['username'] = actual_user['username']
     user_ned['password'] = actual_user['password']
 
-    # TODO: note the assertions that test the result of the REST request
-    #       (no code change required)
     assert response.status_code == 200
     assert actual_user == user_ned
 
@@ -105,29 +89,16 @@ def test_get_user_not_found():
 
 
 def test_add_user_ok():
-    # TODO: you'll add a new user with a POST request like this:
-    #       POST http://localhost:6544/rest/users
-    #       { "email": "miles@jazz.com", "first_name": "Miles", etc. }
-    #       (no code change required)
-
-    # TODO: set the url to base_url
     url = base_url
-
-    # TODO: set the HTTP Accept header to 'application/json'
-    #       and the Content-Type header to 'application/json'
     http_headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
     }
 
-    # TODO: send the POST request and store the result in a variable named
-    #       `response`. Pass the dictionary named user_miles as the JSON data
     response = requests.post(url, headers=http_headers, json=user_miles, auth=creds)
 
     print(f'POST status {response.status_code}')
 
-    # TODO: note the assertion that tests the result of the REST request
-    #       (no code change required)
     assert response.status_code == 201
 
 
@@ -135,29 +106,16 @@ def test_update_user_ok():
     user_miles['middles'] = 'Dewey'
     user_miles['address']['zipcode'] = '10013'
 
-    # TODO: you'll update an existing user with a PUT request like this:
-    #       PUT http://localhost:6544/rest/users
-    #       { "email": "miles@jazz.com", "first_name": "Miles", etc. }
-    #       (no code change required)
-
-    # TODO: set the url to base_url + '/' + email
     url = f"{base_url}/{user_miles['email']}"
-
-    # TODO: set the HTTP Accept header to 'application/json'
-    #       and the Content-Type header to 'application/json'
     http_headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
     }
 
-    # TODO: send the PUT request and store the result in a variable named 'response'
-    #       Pass the the dictionary named user_miles as the JSON data
     response = requests.put(url, headers=http_headers, json=user_miles, auth=creds)
 
     print(f'PUT status {response.status_code}')
 
-    # TODO: note the assertion that tests the result of the REST request
-    #       (no code change required)
     assert response.status_code == 202
 
 
