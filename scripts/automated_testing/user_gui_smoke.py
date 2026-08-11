@@ -8,8 +8,10 @@ local REST service on port 5001.
 
 from __future__ import annotations
 
+import argparse
 import contextlib
 import shutil
+import sys
 import time
 from pathlib import Path
 
@@ -18,16 +20,19 @@ import tkinter as tk
 from tkinter import messagebox
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-EX09_ROOT = REPO_ROOT / "exercises" / "solution_ex09_rest_services"
-USER_UI_DIR = EX09_ROOT / "user_ui"
-USER_SERVICE_DIR = EX09_ROOT / "user_service"
 BASE_URL = "http://127.0.0.1:5001/rest/users"
 CREDS = ("admin", "adminpw")
 TEMP_DB_NAME = "test_db_gui.sqlite"
-TEMP_DB_PATH = USER_UI_DIR / TEMP_DB_NAME
-SOURCE_DB_PATH = USER_SERVICE_DIR / "test_db_with_miles.sqlite"
-USER_SERVICE_DB_PATH = USER_SERVICE_DIR / "users_db.sqlite"
-USER_UI_DB_PATH = USER_UI_DIR / "users_db.sqlite"
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Run Tk smoke automation for Exercise 9.1.")
+    parser.add_argument(
+        "--ex09-root",
+        default=str(REPO_ROOT / "exercises" / "solution_ex09_rest_services"),
+        help="Exercise 9.1 root directory containing user_service and user_ui",
+    )
+    return parser.parse_args()
 
 
 def wait_for(root: tk.Tk, predicate, timeout: float = 3.0) -> None:
@@ -54,27 +59,36 @@ def cleanup_root(root: tk.Tk) -> None:
             child.destroy()
 
 
-def prepare_test_db() -> None:
-    shutil.copy(SOURCE_DB_PATH, TEMP_DB_PATH)
+def prepare_test_db(source_db_path: Path, temp_db_path: Path) -> None:
+    shutil.copy(source_db_path, temp_db_path)
     response = requests.patch(BASE_URL, auth=CREDS, params={"db_file": TEMP_DB_NAME}, timeout=10)
     response.raise_for_status()
 
 
-def restore_db() -> None:
+def restore_db(user_service_db_path: Path, user_ui_db_path: Path, temp_db_path: Path) -> None:
     try:
         requests.patch(BASE_URL, auth=CREDS, timeout=10)
     except Exception:
         pass
 
-    for db_path in (USER_SERVICE_DB_PATH, USER_UI_DB_PATH):
+    for db_path in (user_service_db_path, user_ui_db_path):
         backup_path = db_path.parent / f"{db_path.name}.backup"
         if backup_path.exists():
             shutil.copy2(backup_path, db_path)
 
-    TEMP_DB_PATH.unlink(missing_ok=True)
+    temp_db_path.unlink(missing_ok=True)
 
 
 def main() -> int:
+    args = parse_args()
+    ex09_root = Path(args.ex09_root).resolve()
+    user_ui_dir = ex09_root / "user_ui"
+    user_service_dir = ex09_root / "user_service"
+    temp_db_path = user_ui_dir / TEMP_DB_NAME
+    source_db_path = user_service_dir / "test_db_with_miles.sqlite"
+    user_service_db_path = user_service_dir / "users_db.sqlite"
+    user_ui_db_path = user_ui_dir / "users_db.sqlite"
+
     root = tk.Tk()
     root.withdraw()
     errors: list[str] = []
@@ -86,11 +100,10 @@ def main() -> int:
     messagebox.askyesno = lambda *args, **kwargs: True
 
     try:
-        prepare_test_db()
+        prepare_test_db(source_db_path, temp_db_path)
 
-        import sys
-        if str(USER_UI_DIR) not in sys.path:
-            sys.path.insert(0, str(USER_UI_DIR))
+        if str(user_ui_dir) not in sys.path:
+            sys.path.insert(0, str(user_ui_dir))
         import user_gui
 
         cleanup_root(root)
@@ -150,7 +163,7 @@ def main() -> int:
         print(f"ERROR: {exc}")
         return 1
     finally:
-        restore_db()
+        restore_db(user_service_db_path, user_ui_db_path, temp_db_path)
         cleanup_root(root)
         with contextlib.suppress(Exception):
             root.destroy()
