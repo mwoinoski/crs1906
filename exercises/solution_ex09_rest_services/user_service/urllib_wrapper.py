@@ -15,7 +15,7 @@ import base64
 
 def get(url, headers = None, creds = None):
     """ Send a GET request """
-    return send_request(url, headers=headers, creds=creds, method='GET')
+    return send_request(url, headers, creds, method='GET')
 
 
 def post(url, headers = None, json = None, creds = None):
@@ -35,19 +35,22 @@ def delete(url, headers = None, json = None, creds = None):
 
 def send_request(url, headers = None, json = None, creds = None, method='GET'):
     if not headers:
-        headers = {}  # Python doesn't allow a dict as a default value for a parameter
+        headers = {}  # Python doesn't allow a dict as default value for a param
 
     request_data = None
     if json:
-        request_data = jsonlib.dumps(json).encode('utf-8')
+        # convert request body to string
+        request_data = jsonlib.dumps(json).encode('utf-8') 
 
     # Create a request object
-    req = urllib.request.Request(url, headers=headers, data=request_data, method=method)
+    req = urllib.request.Request(url, headers=headers, 
+                                 data=request_data, method=method)
 
     # Add basic authentication if required
     if creds:
         credentials = f'{creds[0]}:{creds[1]}'
-        encoded_creds = base64.b64encode(credentials.encode('ascii')).decode('ascii')
+        encoded_creds = base64.b64encode(credentials.encode('ascii'))
+                              .decode('ascii')
         req.add_header('Authorization', f'Basic {encoded_creds}')
 
     try:
@@ -66,7 +69,7 @@ def send_request(url, headers = None, json = None, creds = None, method='GET'):
 
 
 class HttpResponse:
-    """ Mimic the response from a call to a function in the `requests` module """
+    """ Mimic a response from a call to a function in the `requests` module """
     def __init__(self, status_code, data = None):
         self.status_code = status_code
         self.data = data
