@@ -1,0 +1,83 @@
+Course 1906 automated validation workflow
+=======================================
+
+This note describes the internal validation workflow used during course refreshes
+and annual maintenance. It is intentionally kept in the automation folder and is
+not distributed to students.
+
+Overview
+--------
+
+The full course sweep is run from a command prompt with:
+
+    D:/mikew/Software/python-3.14/python.exe scripts/automated_testing/run_full_course_sweep.py
+
+The full sweep runs both of the validation layers used in this repo:
+
+1. Starter exercise validation in run_exercise_validation.py
+2. Slide/demo and solution-oriented validation in run_slide_activities.py
+
+This is the intended annual workflow when revising the course in a fresh scratch
+copy of the repository.
+
+Manual-driven validation strategy
+---------------------------------
+
+The goal is to validate the course materials against the exercise manual and the
+PDF slides, rather than relying only on hard-coded repository assumptions.
+
+Recommended pattern:
+
+- Keep the PDF exercise manual and slide deck as the human-authored source of
+  truth.
+- Generate a structured companion manifest from the PDF at refresh time.
+- Regenerate the companion manifest whenever the PDF has changed.
+- Have the automation scripts read the structured manifest each run.
+- Use the manifest to determine which files are expected to change, what the
+  expected behavior is, and which checks should run.
+- Run the project tests as a second validation pass after the manifest-driven
+  checks.
+
+This keeps the runtime automation independent of brittle PDF parsing while still
+making the manual the source of truth for the annual validation cycle.
+
+Regeneration rule
+-----------------
+
+The companion file should be regenerated when either of the following is true:
+
+- the PDF timestamp is newer than the companion file, or
+- the PDF content has changed since the last generation.
+
+If the PDF is modified recently, the validation runner should re-generate the
+manifest before running the checks.
+
+Placeholder policy
+------------------
+
+The course exercises intentionally use placeholder values like "...." in starter
+(template) files so that the interpreter will fail until a student replaces them
+with the correct code.
+
+That is expected behavior for student templates and should not be treated as a
+validation failure.
+
+The automation should therefore:
+
+- allow "...." placeholders in starter/template files
+- let the interpreter catch unfilled placeholders during normal execution
+- avoid flagging those placeholder lines as errors during the automated checks
+
+If a solution file still contains a placeholder, that is a separate issue and may
+be treated as a defect only if you choose to add an explicit guard for that case.
+
+Annual maintenance notes
+------------------------
+
+- Use a fresh scratch copy of the repository before running the full course sweep.
+- Preserve the same project structure and exercise directories expected by the
+  automation scripts.
+- Rebuild any generated companion manifest after PDF updates before running the
+  sweep.
+- Keep the validation logs to document what changed in the course materials and
+  which automated checks passed or failed.

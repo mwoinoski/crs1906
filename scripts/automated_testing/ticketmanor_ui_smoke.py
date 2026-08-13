@@ -25,7 +25,6 @@ import time
 import urllib.error
 import urllib.request
 from pathlib import Path
-from typing import Any
 
 from playwright.sync_api import sync_playwright
 
@@ -37,42 +36,6 @@ SEARCH_TERM = "Berlin Philharmonic"
 EXPECTED_RESULTS_TEXT = "4 of 4"
 EXPECTED_RESULT_COUNT = 4
 MIN_NEWS_TITLES = 3
-
-SCENARIO_STEPS: dict[str, list[str]] = {
-    "ex01": [
-        "Ex 1.1 steps 18-20: Open TicketManor home page",
-        "Ex 1.1 steps 18-20: Select Concerts module",
-        "Ex 1.1 steps 18-20: Search for Berlin Philharmonic",
-        "Ex 1.1 steps 18-20: Verify 4 of 4 search results",
-    ],
-    "ex02": [
-        "Ex 2.1 steps 8-11: Open TicketManor and navigate to Concerts",
-        "Ex 2.1 steps 8-11: Run Artist search for Berlin Philharmonic",
-        "Ex 2.1 step 15: Confirm results render in Concerts view",
-    ],
-    "ex03": [
-        "Ex 3.1 steps 17-22: Open TicketManor and navigate to Concerts",
-        "Ex 3.1 steps 17-22: Run Artist search for Berlin Philharmonic",
-        "Ex 3.1 steps 17-22: Validate 4-result search response in UI",
-    ],
-    "ex08_1": [
-        "Ex 8.1 steps 12-19: Open TicketManor and navigate to Concerts",
-        "Ex 8.1 steps 12-19: Search for Berlin Philharmonic",
-        "Ex 8.1 steps 12-19: Verify 4 of 4 paged results",
-    ],
-    "ex08_2": [
-        "Ex 8.2 steps 14-17: Open TicketManor and navigate to Concerts",
-        "Ex 8.2 steps 14-17: Search for Berlin Philharmonic",
-        "Ex 8.2 steps 14-17: Verify 4 of 4 paged results",
-        "Ex 8.2 steps 14-17: Verify Concert News section loads",
-    ],
-    "generic": [
-        "Open TicketManor home page",
-        "Navigate to Concerts",
-        "Search for Berlin Philharmonic",
-        "Verify 4 of 4 results",
-    ],
-}
 
 
 def parse_args() -> argparse.Namespace:
@@ -102,22 +65,6 @@ def parse_args() -> argparse.Namespace:
         "--check-all-news",
         action="store_true",
         help="Also verify the Concert News browser flow used by the later exercises.",
-    )
-    parser.add_argument(
-        "--scenario",
-        choices=sorted(SCENARIO_STEPS.keys()),
-        default="generic",
-        help="Lab scenario mapping label used for step-by-step output.",
-    )
-    parser.add_argument(
-        "--browser-channel",
-        default="chrome",
-        help="Playwright browser channel to launch (default: chrome).",
-    )
-    parser.add_argument(
-        "--allow-channel-fallback",
-        action="store_true",
-        help="Fallback to bundled chromium if the requested browser channel is unavailable.",
     )
     return parser.parse_args()
 
@@ -161,36 +108,11 @@ def wait_for_server(base_url: str, server_process: subprocess.Popen[str] | None,
     raise TimeoutError(f"Timed out waiting for TicketManor to start at {base_url}")
 
 
-def log_scenario_steps(scenario: str) -> None:
-    steps = SCENARIO_STEPS.get(scenario, SCENARIO_STEPS["generic"])
-    print("Scenario coverage:")
-    for idx, step in enumerate(steps, start=1):
-        print(f"  {idx}. {step}")
-
-
-def launch_browser(playwright: Any, headed: bool, channel: str, allow_fallback: bool):
-    try:
-        return playwright.chromium.launch(channel=channel, headless=not headed)
-    except Exception:
-        if not allow_fallback:
-            raise
-        print(f"WARN: Could not launch channel '{channel}'. Falling back to bundled chromium.")
-        return playwright.chromium.launch(headless=not headed)
-
-
-def run_ui_check(
-    base_url: str,
-    headed: bool,
-    check_all_news: bool = False,
-    scenario: str = "generic",
-    browser_channel: str = "chrome",
-    allow_channel_fallback: bool = False,
-) -> None:
+def run_ui_check(base_url: str, headed: bool, check_all_news: bool = False) -> None:
     with sync_playwright() as playwright:
-        browser = launch_browser(playwright, headed, browser_channel, allow_channel_fallback)
+        browser = playwright.chromium.launch(headless=not headed)
         page = browser.new_page(viewport={"width": 1440, "height": 1080})
         try:
-            log_scenario_steps(scenario)
             page.goto(base_url, wait_until="domcontentloaded")
             page.locator(".event-pill", has_text="Concerts").first.click()
             page.get_by_role("textbox", name="Which Artist do you want?").fill(SEARCH_TERM)
@@ -248,14 +170,7 @@ def main() -> int:
             server_process = start_server()
             wait_for_server(args.base_url, server_process, args.timeout)
 
-        run_ui_check(
-            args.base_url,
-            args.headed,
-            args.check_all_news,
-            scenario=args.scenario,
-            browser_channel=args.browser_channel,
-            allow_channel_fallback=args.allow_channel_fallback,
-        )
+        run_ui_check(args.base_url, args.headed, args.check_all_news)
         return 0
     except Exception as exc:
         print(f"ERROR: {exc}")

@@ -1,0 +1,16 @@
+Annual validation sweep
+
+When you revise the course and want to run the full automated validation
+sweep on a fresh scratch copy of the project, launch the aggregate runner
+from a normal command prompt:
+	D:/mikew/Software/python-3.14/python.exe scripts/automated_testing/run_full_course_sweep.py
+This runs the starter exercise validations and the demo/slide checks in one
+pass.
+
+Placeholder policy:
+	- Starter template files may intentionally contain "...." placeholders.
+	  These should remain in place until the student replaces them with the
+	  correct code.
+	- Solution files must not contain "...." placeholders. If any solution
+	  file still includes one, the full sweep will fail immediately with the
+	  offending file and line number.
