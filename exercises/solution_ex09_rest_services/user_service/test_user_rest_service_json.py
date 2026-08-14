@@ -55,6 +55,7 @@ user_miles = {
 # TODO: note the base URL that will be used for all REST requests
 #       (no code change required)
 base_url = 'http://localhost:6544/rest/users'
+creds = ('admin', 'adminpw')
 
 
 def test_get_user_found():
@@ -72,7 +73,7 @@ def test_get_user_found():
     http_headers = {'Accept': 'application/json'}
 
     # TODO: send the GET request and store the result in a variable named 'response'
-    response = requests.get(url, headers=http_headers)
+    response = requests.get(url, headers=http_headers, auth=creds)
 
     # TODO: get the JSON from the response body and assign it to a variable
     #       named 'actual_result'
@@ -80,20 +81,25 @@ def test_get_user_found():
 
     print(f'GET {url} status {response.status_code}, response = {actual_result}')
 
-    # update our test user with the id by the database
-    user_ned['id'] = actual_result['id']
+    # The service returns a wrapped payload: {'user': {...}}
+    actual_user = actual_result['user']
+
+    # update our expected user with fields populated by the service
+    user_ned['id'] = actual_user['id']
+    user_ned['username'] = actual_user['username']
+    user_ned['password'] = actual_user['password']
 
     # TODO: note the assertions that test the result of the REST request
     #       (no code change required)
     assert response.status_code == 200
-    assert actual_result == user_ned
+    assert actual_user == user_ned
 
 
 def test_get_user_not_found():
     url = f'{base_url}/nobody@nowhere.com'
     http_headers = {'Accept': 'application/json'}
 
-    response = requests.get(url, headers=http_headers)
+    response = requests.get(url, headers=http_headers, auth=creds)
 
     assert response.status_code == 404
 
@@ -116,7 +122,7 @@ def test_add_user_ok():
 
     # TODO: send the POST request and store the result in a variable named
     #       `response`. Pass the dictionary named user_miles as the JSON data
-    response = requests.post(url, headers=http_headers, json=user_miles)
+    response = requests.post(url, headers=http_headers, json=user_miles, auth=creds)
 
     print(f'POST status {response.status_code}')
 
@@ -134,8 +140,8 @@ def test_update_user_ok():
     #       { "email": "miles@jazz.com", "first_name": "Miles", etc. }
     #       (no code change required)
 
-    # TODO: set the url to base_url
-    url = base_url
+    # TODO: set the url to base_url + '/' + email
+    url = f"{base_url}/{user_miles['email']}"
 
     # TODO: set the HTTP Accept header to 'application/json'
     #       and the Content-Type header to 'application/json'
@@ -146,7 +152,7 @@ def test_update_user_ok():
 
     # TODO: send the PUT request and store the result in a variable named 'response'
     #       Pass the the dictionary named user_miles as the JSON data
-    response = requests.put(url, headers=http_headers, json=user_miles)
+    response = requests.put(url, headers=http_headers, json=user_miles, auth=creds)
 
     print(f'PUT status {response.status_code}')
 
@@ -158,6 +164,6 @@ def test_update_user_ok():
 def test_delete_user_not_found():
     url = f'{base_url}/nobody@nowhere.com'
 
-    response = requests.delete(url)
+    response = requests.delete(url, auth=creds)
 
     assert response.status_code == 404
