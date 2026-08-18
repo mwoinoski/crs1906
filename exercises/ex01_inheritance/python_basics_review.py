@@ -22,7 +22,7 @@
 # TODO: Write a function greet that takes a name and an age as parameters and 
 # returns a greeting string using f-strings. For example, greet("Alice", 30)
 # should return "Hello Alice, you are 30 years old!".
-# HINT: see slide 1-10
+# HINT: see slide 1-8
 
 
 # TODO: Write a function format_product that takes two parameters, product_name 
@@ -57,7 +57,7 @@ title = ['to', 'kill', 'a', 'mockingbird']
 # [15, 30, 45, 60, 75, 90]
 # Generate the list using a list comprehension.
 # HINT: use the built-in range() function to generate a sequence of numbers.
-# See slide 1-12
+# See slide 1-10
 
 
 # TODO: Create a list comprehension that takes a list of strings and generates
