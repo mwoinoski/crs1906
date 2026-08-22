@@ -46,11 +46,11 @@ if __name__ == '__main__':
 
     main()
 
-    from timeit import timeit
-    loops = 50
-    total_time = timeit("main()",
-                       setup="from __main__ import main",
-                       number=loops)
-    avg_time_per_call = total_time / loops
-    print(f'Called main() {loops} times,',
-          f'average time per call was {avg_time_per_call:.3f} seconds')  # noqa
+    # from timeit import timeit
+    # loops = 50
+    # total_time = timeit("main()",
+    #                    setup="from __main__ import main",
+    #                    number=loops)
+    # avg_time_per_call = total_time / loops
+    # print(f'Called main() {loops} times,',
+    #       f'average time per call was {avg_time_per_call:.3f} seconds')  # noqa

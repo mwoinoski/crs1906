@@ -32,17 +32,24 @@ from concurrent.futures import (
     ProcessPoolExecutor,
     ThreadPoolExecutor,
 )
+import multiprocessing
 import concurrent.futures
 import random
 import sys
-
+from functools import cache
+from timeit import timeit
 
 total_samples = 5_000_000  # total number of calculations
 
 
-def calculate_one_sample():
-    x = random.uniform(-1.0, 1.0)
-    y = random.uniform(-1.0, 1.0)
+@cache  # function runs only once with a given set of argument values
+def print_executor_type(class_name, num_workers):
+    print(f" with {class_name} with {num_workers} workers")
+
+
+def calculate_one_sample(rng):
+    x = rng.uniform(-1.0, 1.0)
+    y = rng.uniform(-1.0, 1.0)
     # x and y are the lengths of the sides of a right triangle with apex
     # at (0, 0). If the length of that triangle's hypotenuse is less than 1,
     # the point (x, y) lies within the unit circle with origin (0, 0)
@@ -63,9 +70,10 @@ def calculate_one_sample():
 #       (no code change required)
 def pi_serial():
     """Perform the Monte Carlo technique in a serial fashion"""
+    rng = random.Random()  # serial version uses its own random number generator
     hits = 0
     for _ in range(total_samples):
-        hits += calculate_one_sample()
+        hits += calculate_one_sample(rng)
     # Or, if you prefer the compact generator expression syntax:
     # hits = sum(calculate_one_sample() for _ in range(total_samples))
     pi = 4.0 * hits/total_samples
@@ -76,9 +84,10 @@ def pi_serial():
 #       calculate_one_sample() 250,000 times and adds up all the return values.
 #       (no code change required)
 def sample_multiple(chunk_size):
+    rng = random.Random()  # thread-local random number generator (critical for free-threading)
     hits = 0
     for _ in range(chunk_size):
-        hits += calculate_one_sample()
+        hits += calculate_one_sample(rng)
     return hits
     # Or, generator expression equivalent:
     # return sum(calculate_one_sample() for _ in range(chunk_size))
@@ -107,6 +116,7 @@ def pi_async():
     # TODO: write a `with` statement to use a ProcessPoolExecutor.
     with ProcessPoolExecutor() as executor:
     # with ThreadPoolExecutor(max_workers=ntasks) as executor:
+        print_executor_type(executor.__class__.__name__, ntasks)
 
         # TODO: set up a `for` loop that executes `ntasks` times.
         for _ in range(ntasks):
@@ -129,8 +139,8 @@ def pi_async():
 
     # TODO: set up a `for` loop to get the result of each process as it
     #       completes.
-    # HINT: see slide 8-32
     # HINT: future.result() returns the result of the call to sample_multiple()
+    # HINT: see slide 8-32
     for future in concurrent.futures.as_completed(futures):
 
         # TODO: add the process's result to `hits`
@@ -149,7 +159,7 @@ def pi_async():
 def print_version():
     version = f"{sys.version_info.major}.{sys.version_info.minor}"
     ft = "free-threading" if "free-threading" in sys.version else "GIL"
-    print(f"Running Python {version} ({ft})")
+    print(f"Running Python {version} ({ft})", end='')
 
 
 if __name__ == '__main__':
@@ -162,8 +172,6 @@ if __name__ == '__main__':
     print(f'pi_serial() returned {pi_serial_result}')
 
     # add calls to timeit here
-
-    from timeit import timeit
 
     time = timeit('pi_async()',
                   setup='from __main__ import pi_async',

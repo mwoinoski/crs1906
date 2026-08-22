@@ -32,18 +32,19 @@ from concurrent.futures import (
     ProcessPoolExecutor,
     ThreadPoolExecutor,
 )
+import multiprocessing
 import concurrent.futures
-
 import random
 import sys
+from functools import cache
 
 
 total_samples = 5_000_000  # total number of calculations
 
 
-def calculate_one_sample():
-    x = random.uniform(-1.0, 1.0)
-    y = random.uniform(-1.0, 1.0)
+def calculate_one_sample(rng):
+    x = rng.uniform(-1.0, 1.0)
+    y = rng.uniform(-1.0, 1.0)
     # x and y are the lengths of the sides of a right triangle with apex
     # at (0, 0). If the length of that triangle's hypotenuse is less than 1,
     # the point (x, y) lies within the unit circle with origin (0, 0)
@@ -64,9 +65,10 @@ def calculate_one_sample():
 #       (no code change required)
 def pi_serial():
     """Perform the Monte Carlo technique in a serial fashion"""
+    rng = random.Random()  # serial version uses its own random number generator
     hits = 0
     for _ in range(total_samples):
-        hits += calculate_one_sample()
+        hits += calculate_one_sample(rng)
     # Or, if you prefer the compact generator expression syntax:
     # hits = sum(calculate_one_sample() for _ in range(total_samples))
     pi = 4.0 * hits/total_samples
@@ -77,9 +79,10 @@ def pi_serial():
 #       calculate_one_sample() 250,000 times and adds up all the return values.
 #       (no code change required)
 def sample_multiple(chunk_size):
+    rng = random.Random()  # thread-local random number generator (critical for free-threading)
     hits = 0
     for _ in range(chunk_size):
-        hits += calculate_one_sample()
+        hits += calculate_one_sample(rng)
     return hits
     # Or, generator expression equivalent:
     # return sum(calculate_one_sample() for _ in range(chunk_size))
@@ -94,7 +97,7 @@ def pi_async():
     each chunk.
     """
     ntasks = 4
-    # ntasks = multiprocessing.cpu_count() # number of (virtual) CPU cores
+    # ntasks = multiprocessing.cpu_count()  # number of (virtual) CPU cores
 
     # TODO: note the definition of `chunk_size`. This will be the number of
     #       calculations performed in each call to sample_multiple()
