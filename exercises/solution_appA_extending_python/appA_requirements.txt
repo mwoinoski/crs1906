@@ -1,5 +1,5 @@
 Cython==0.29.13
-Django==2.2.6
+Django==4.2.18
 image==1.5.27
 numpy==1.17.2
 Pillow==6.2.0
